@@ -3,7 +3,6 @@ import React from 'react';
 import { Box, Container } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
-import BlogCards from '../homepage/BlogCards';
 import ESparkButton from '../global/eSparkButton';
 import BlogCardsSlider from '../homepage/BlogCardsSlider';
 

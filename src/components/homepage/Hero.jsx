@@ -2,11 +2,8 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import { useTheme } from '@mui/system';
 
 const Hero = ({ data }) => {
-  const theme = useTheme();
-
   return (
     <>
       <Box
