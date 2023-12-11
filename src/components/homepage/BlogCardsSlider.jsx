@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import { Container, Box, Typography, useMediaQuery } from '@mui/material';
+import React from 'react';
+import { Container, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -24,13 +24,7 @@ import 'swiper/css/autoplay';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
-const BlogCardsSlider = ({ data, smCol }) => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
+const BlogCardsSlider = ({ data }) => {
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 0,

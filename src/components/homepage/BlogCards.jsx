@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -8,7 +8,7 @@ import { Pagination, PaginationItem } from '@mui/material';
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
-const BlogCards = ({ data, smCol }) => {
+const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -18,12 +18,6 @@ const BlogCards = ({ data, smCol }) => {
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <Box sx={{ my: '3%' }}>
