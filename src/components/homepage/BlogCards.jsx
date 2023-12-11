@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -19,6 +19,12 @@ const BlogCards = ({ data, smCol }) => {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
+    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
@@ -26,8 +32,8 @@ const BlogCards = ({ data, smCol }) => {
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
             <Grid
               item
-              xs={smCol == 2 ? '12' : '12'}
-              sm={smCol == 2 ? '12' : '12'}
+              xs={12}
+              sm={6}
               md={4}
               lg={4}
               key={index}
@@ -63,7 +69,7 @@ const BlogCards = ({ data, smCol }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '23.49px',
+                      fontSize:{xs:'18px',sm:'18px',md:'20px',lg:'24px'},
                         fontWeight: 600,
                         lineHeight: '26px',
                       }}
@@ -74,7 +80,7 @@ const BlogCards = ({ data, smCol }) => {
                   <Typography
                     sx={{
                       color: '#6F76A8',
-                      fontSize: '14.455px',
+                      fontSize:{xs:'13px',sm:'13px',md:'15px',lg:'18px'},
                       fontWeight: 400,
                       lineHeight: '27.465px',
                       fontStyle: 'normal',
@@ -93,7 +99,7 @@ const BlogCards = ({ data, smCol }) => {
                           color: '#fff',
                         }}
                       />
-                      <Typography variant="body1">{READ_MORE}</Typography>
+                      <Typography fontSize={{xs:'13px',sm:'13px',md:'15px',lg:'20px'}}>{READ_MORE}</Typography>
                     </Box>
                   </Link>
                 </Box>
