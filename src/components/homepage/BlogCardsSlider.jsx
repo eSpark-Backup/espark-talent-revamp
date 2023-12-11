@@ -26,15 +26,6 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const BlogCardsSlider = ({ data, smCol }) => {
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 6;
-
-  const handleChangePage = (event, value) => {
-    setPage(value);
-  };
-
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
 
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const isMediumScreen = useMediaQuery((theme) =>
@@ -44,7 +35,7 @@ const BlogCardsSlider = ({ data, smCol }) => {
 
     const swiperSettings = {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 0,
     centerMode: true,
     centerPadding: '0',
     loop: true,
@@ -65,7 +56,7 @@ const BlogCardsSlider = ({ data, smCol }) => {
       0: {
         slidesPerView: 1,
       },
-      360: {
+      425: {
         slidesPerView: 1,
       },
       768: {
@@ -89,18 +80,12 @@ const BlogCardsSlider = ({ data, smCol }) => {
         
           <Swiper {...swiperSettings}>
         <Box container spacing={2} sx={{ py: '5%' }}>
-            {data?.slice(startIndex, endIndex)?.map((item, index) => (
+            {data?.slice(0, 3)?.map((item, index) => (
              <SwiperSlide key={index} className="outsourcing-slide">
-            <Box
-              item
-              xs={12}
-              key={index}
-            >
+            
               <Box
                 className="single-blog-post"
-                sx={{
-                  px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
-                }}
+                width={'100%'}
               >
                 <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
@@ -108,20 +93,8 @@ const BlogCardsSlider = ({ data, smCol }) => {
                       <Image
                         src={item?.imageLink}
                         alt={item?.title}
-                        width={ isSmallScreen
-                            ? 100
-                            : isMediumScreen
-                              ? 150
-                              : isLargeScreen
-                                ? 300
-                                : 300}
-                        height={ isSmallScreen
-                            ? 100
-                            : isMediumScreen
-                              ? 150
-                              : isLargeScreen
-                                ? 300
-                                : 300}
+                        width={ 300}
+                        height={100}
                         style={{ borderRadius: '15px' }}
                       />
                     </span>
@@ -173,8 +146,8 @@ const BlogCardsSlider = ({ data, smCol }) => {
                     </Box>
                   </Link>
                 </Box>
-              </Box>
-            </Box></SwiperSlide>
+                </Box>
+              </SwiperSlide>
           ))}
         </Box></Swiper>
       </Container>
