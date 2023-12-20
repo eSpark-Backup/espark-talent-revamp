@@ -1,0 +1,42 @@
+'use client';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import './globals.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import Box from '@mui/material/Box';
+
+import { Provider } from 'react-redux';
+
+import { ThemeProvider } from '@mui/material/styles';
+import { darkTheme, lightTheme } from './theme';
+import store from '@/redux/store';
+
+export default function RootLayout({ children }) {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const currentTheme = isDarkTheme ? darkTheme : lightTheme;
+  const toggleTheme = () => {
+    setIsDarkTheme((prevTheme) => !prevTheme);
+  };
+  return (
+    <html lang="en">
+      <Head>
+        <Link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body>
+        <Provider store={store}>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={currentTheme}>
+              <CssBaseline />
+              <Box toggleTheme={toggleTheme}>{children}</Box>
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+        </Provider>
+      </body>
+    </html>
+  );
+}
