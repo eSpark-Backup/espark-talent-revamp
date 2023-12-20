@@ -12,6 +12,8 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
 import store from '@/redux/store';
+import Footer from '@/components/global/Footer';
+import { FOOTER_DATA } from '@/constants/global/footer';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -33,6 +35,7 @@ export default function RootLayout({ children }) {
             <ThemeProvider theme={currentTheme}>
               <CssBaseline />
               <Box toggleTheme={toggleTheme}>{children}</Box>
+              <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
         </Provider>
