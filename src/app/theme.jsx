@@ -262,7 +262,7 @@ const darkTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1920px',
+          maxWidth: '1440px',
           margin: '0 auto',
         },
       },
