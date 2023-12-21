@@ -9,7 +9,6 @@ import Link from 'next/link';
 import FooterTitle from './FooterTitle';
 import FooterItem from './FooterItem';
 import Rights from './Rights';
-import { LABEL } from '@/constants/global/footer';
 
 const Footer = ({ data }) => {
   return (
@@ -26,7 +25,7 @@ const Footer = ({ data }) => {
             <Image
               src={data?.logo}
               width={120}
-              height={100}
+              height={59}
               alt={data?.alt}
               style={{ marginBottom: '10px' }}
             />
@@ -80,13 +79,13 @@ const Footer = ({ data }) => {
               },
             }}
           >
-            <FooterTitle title={LABEL?.companyTitle} />
+            <FooterTitle title={data?.companyTitle} />
             {data?.company?.map((item, index) => (
               <Box key={index}>
                 <FooterItem href={item.link} label={item.label} />
               </Box>
             ))}
-            <FooterTitle title={LABEL?.solutionTitle} />
+            <FooterTitle title={data?.solutionTitle} />
             {data?.solution?.map((item, index) => (
               <Box key={index}>
                 <FooterItem href={item.link} label={item.label} />
@@ -106,13 +105,13 @@ const Footer = ({ data }) => {
               },
             }}
           >
-            <FooterTitle title={LABEL?.resourceTitle} />
+            <FooterTitle title={data?.resourceTitle} />
             {data?.resource?.map((item, index) => (
               <Box key={index}>
                 <FooterItem href={item.link} label={item.label} />
               </Box>
             ))}
-            <FooterTitle title={LABEL?.partnershipTitle} />
+            <FooterTitle title={data?.partnershipTitle} />
 
             {data?.partnership?.map((item, index) => (
               <Box key={index}>
@@ -121,7 +120,7 @@ const Footer = ({ data }) => {
             ))}
           </Grid>
           <Grid item lg={3} md={6}>
-            <FooterTitle title={LABEL?.contactUsTitle} />
+            <FooterTitle title={data?.contactUsTitle} />
             {data?.contactUs?.map((item, index) => (
               <Box
                 key={index}
@@ -144,7 +143,7 @@ const Footer = ({ data }) => {
       >
         <Divider />
       </Box>
-      <Rights copyRights={LABEL?.copyRight} />
+      <Rights copyRights={data?.copyRight} />
     </Box>
   );
 };

@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { Typography } from '@mui/material';
 
-import { LABEL } from '@/constants/global/footer';
+import { FOOTER_DATA } from '@/constants/global/footer';
 
 const FooterItem = ({ href, label }) => {
   const isBlackLabel =
-    label === LABEL?.infoEmail || label === LABEL?.salesEmail;
+    label === FOOTER_DATA?.infoEmail || label === FOOTER_DATA?.salesEmail;
 
   return (
     <Typography
       sx={{
-        color: isBlackLabel ? 'black' : '#001C63',
+        color: isBlackLabel ? '#000' : '#001C63',
         fontSize: '15px',
         fontStyle: 'normal',
         fontWeight: isBlackLabel ? 500 : 400,
@@ -19,7 +19,11 @@ const FooterItem = ({ href, label }) => {
         my: 2,
       }}
     >
-      <Link href={href} dangerouslySetInnerHTML={{ __html: label }} />
+      {isBlackLabel ? (
+        <Link href={`mailto:${label}`} dangerouslySetInnerHTML={{ __html: label }} />
+      ) : (
+        <Link href={href} dangerouslySetInnerHTML={{ __html: label }} />
+      )}
     </Typography>
   );
 };
