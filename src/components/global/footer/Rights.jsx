@@ -6,8 +6,11 @@ const Rights = ({ copyRights }) => {
   return (
     <Box
       sx={{
+        display: 'flex',
         textAlign: 'center',
-        padding: 1,
+        padding: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <Typography
