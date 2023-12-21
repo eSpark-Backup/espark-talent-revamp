@@ -16,6 +16,9 @@ const lightTheme = createTheme({
     warning: {
       main: '#F7F8FB  ',
     },
+    danger: {
+      main: '#ECECED  ',
+    },
     background: {
       default: '#ffffff',
     },

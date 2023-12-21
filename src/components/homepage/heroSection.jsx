@@ -6,7 +6,6 @@ import Image from 'next/image';
 
 import { HERO_DATA } from '@/constants/home-page/heroSection';
 
-
 const HeroSection = () => {
   return (
     <>
@@ -55,7 +54,16 @@ const HeroSection = () => {
                 </Typography>
               </Button>
             </Grid>
-            <Grid item xs={12} sm={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
               <Image
                 src={HERO_DATA.image}
                 alt={HERO_DATA.imageAlt}

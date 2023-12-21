@@ -11,7 +11,7 @@ const FooterItem = ({ href, label }) => {
   return (
     <Typography
       sx={{
-        color: isBlackLabel ? '#000' : '#001C63',
+        color: isBlackLabel ? '#000' : 'primary',
         fontSize: '15px',
         fontStyle: 'normal',
         fontWeight: isBlackLabel ? 500 : 400,
@@ -20,7 +20,10 @@ const FooterItem = ({ href, label }) => {
       }}
     >
       {isBlackLabel ? (
-        <Link href={`mailto:${label}`} dangerouslySetInnerHTML={{ __html: label }} />
+        <Link
+          href={`mailto:${label}`}
+          dangerouslySetInnerHTML={{ __html: label }}
+        />
       ) : (
         <Link href={href} dangerouslySetInnerHTML={{ __html: label }} />
       )}
