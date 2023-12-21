@@ -5,19 +5,24 @@ import { createTheme } from '@mui/material/styles';
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: '#029E9C',
+      main: '#029894',
     },
     secondary: {
-      main: '#E6F5F4',
+      main: '#001C63',
+    },
+    info: {
+      main: '#5732D6 ',
+    },
+    warning: {
+      main: '#F7F8FB  ',
     },
     background: {
       default: '#ffffff',
     },
     text: {
-      primary: '#000',
-      primaryinvert: '#fff',
+      primary: '#001C63',
       secondary: '#333',
-      secondaryinvert: '#bfbfbf',
+      info: '#ffffff',
     },
   },
   typography: {
@@ -54,12 +59,12 @@ const lightTheme = createTheme({
     },
     link: {
       textDecoration: 'none',
-      color: '#029E9C',
+      color: '#029894',
       '&:hover': {
-        color: '#E6F5F4',
+        color: '#001C63',
       },
       '&:active': {
-        color: '#029E9C',
+        color: '#029894',
       },
     },
   },
@@ -74,24 +79,24 @@ const lightTheme = createTheme({
           props: { variant: 'primary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029E9C !important',
+            backgroundColor: '#029894 !important',
             borderRadius: '5px',
             color: '#fff',
             position: 'relative',
             '&:hover': {
-              backgroundColor: '#E6F5F4',
+              backgroundColor: '#001C63',
               color: '#fff',
             },
           },
         },
         {
-          props: { variant: 'E6F5F4' },
+          props: { variant: '001C63' },
           style: {
             textTransform: 'capitalize',
-            borderColor: '#029E9C',
-            color: '#029E9C',
+            borderColor: '#029894',
+            color: '#029894',
             '&:hover': {
-              backgroundColor: '#029E9C',
+              backgroundColor: '#029894',
               color: '#fff',
             },
           },
@@ -100,10 +105,10 @@ const lightTheme = createTheme({
           props: { variant: 'outlined' },
           style: {
             textTransform: 'capitalize',
-            borderColor: '#029E9C',
-            color: '#029E9C',
+            borderColor: '#029894',
+            color: '#029894',
             '&:hover': {
-              backgroundColor: '#029E9C',
+              backgroundColor: '#029894',
               color: '#fff',
             },
           },
@@ -118,10 +123,10 @@ const lightTheme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: '#029E9C',
+          color: '#029894',
           '&:hover': {
-            backgroundColor: '#E6F5F4',
-            color: '#029E9C',
+            backgroundColor: '#001C63',
+            color: '#029894',
           },
         },
       },
@@ -129,7 +134,7 @@ const lightTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1920px',
+          maxWidth: '1440px',
           margin: '0 auto',
         },
       },
@@ -150,37 +155,42 @@ const lightTheme = createTheme({
 const darkTheme = createTheme({
   palette: {
     primary: {
-      main: '#029E9C',
+      main: '#029894',
     },
     secondary: {
-      main: '#E6F5F4',
+      main: '#001C63',
+    },
+    info: {
+      main: '#5732D6 ',
+    },
+    warning: {
+      main: '#F7F8FB  ',
     },
     background: {
       default: '#ffffff',
     },
     text: {
-      primary: '#000',
-      primaryinvert: '#fff',
+      primary: '#001C63',
       secondary: '#333',
-      secondaryinvert: '#bfbfbf',
+      info: '#ffffff',
     },
   },
   typography: {
     fontFamily: ['Inter', 'sans-serif'].join(','),
     h1: {
-      fontSize: '40px',
+      fontSize: '50px',
       fontWeight: 700,
     },
     h2: {
-      fontSize: '36px',
+      fontSize: '32px',
       fontWeight: 600,
     },
     h3: {
-      fontSize: '30px',
+      fontSize: '28px',
       fontWeight: 600,
     },
     h4: {
-      fontSize: '24px',
+      fontSize: '18px',
       fontWeight: 700,
     },
     h5: {
@@ -192,19 +202,19 @@ const darkTheme = createTheme({
       fontWeight: 700,
     },
     body1: {
-      fontSize: '14px',
+      fontSize: '20px',
     },
     button: {
       textTransform: 'capitalize',
     },
     link: {
       textDecoration: 'none',
-      color: '#029E9C',
+      color: '#029894',
       '&:hover': {
-        color: '#E6F5F4',
+        color: '#001C63',
       },
       '&:active': {
-        color: '#029E9C',
+        color: '#029894',
       },
     },
   },
@@ -219,12 +229,24 @@ const darkTheme = createTheme({
           props: { variant: 'primary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029E9C !important',
+            backgroundColor: '#029894 !important',
             borderRadius: '5px',
             color: '#fff',
             position: 'relative',
             '&:hover': {
-              backgroundColor: '#E6F5F4',
+              backgroundColor: '#001C63',
+              color: '#fff',
+            },
+          },
+        },
+        {
+          props: { variant: '001C63' },
+          style: {
+            textTransform: 'capitalize',
+            borderColor: '#029894',
+            color: '#029894',
+            '&:hover': {
+              backgroundColor: '#029894',
               color: '#fff',
             },
           },
@@ -233,10 +255,10 @@ const darkTheme = createTheme({
           props: { variant: 'outlined' },
           style: {
             textTransform: 'capitalize',
-            borderColor: '#029E9C',
-            color: '#029E9C',
+            borderColor: '#029894',
+            color: '#029894',
             '&:hover': {
-              backgroundColor: '#029E9C',
+              backgroundColor: '#029894',
               color: '#fff',
             },
           },
@@ -251,10 +273,10 @@ const darkTheme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: '#029E9C',
+          color: '#029894',
           '&:hover': {
-            backgroundColor: '#E6F5F4',
-            color: '#029E9C',
+            backgroundColor: '#001C63',
+            color: '#029894',
           },
         },
       },
