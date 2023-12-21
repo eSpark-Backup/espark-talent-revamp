@@ -1,4 +1,8 @@
-export const LABEL = {
+export const FOOTER_DATA = {
+  logo: '/images/footer/logo.png',
+  alt: 'logo',
+  description:
+    'Our guaranteed top-tier service and industry-leading worldwide coverage provides peace of mind for any global team. With eSpark Talent next-level automation and in-house infrastructure, quality always comes first for our customers.',
   companyTitle: 'Our Company',
   solutionTitle: 'Solutions',
   resourceTitle: 'Resource',
@@ -7,12 +11,7 @@ export const LABEL = {
   copyRight: '© 2023 eSpark Talent. All Rights Reserved.',
   infoEmail: 'info@esparktalent.com',
   salesEmail: 'sales@esparktalent.com',
-};
-export const FOOTER_DATA = {
-  logo: '/images/footer/logo.png',
-  alt: 'logo',
-  description:
-    'Our guaranteed top-tier service and industry-leading worldwide coverage provides peace of mind for any global team. With eSpark Talent next-level automation and in-house infrastructure, quality always comes first for our customers.',
+
   socialMedia: [
     {
       img: '/images/footer/social-icons/facebook.svg',
@@ -20,9 +19,9 @@ export const FOOTER_DATA = {
       alt: 'facebook',
     },
     {
-      img: '/images/footer/social-icons/tiwiter.svg',
+      img: '/images/footer/social-icons/twitter.svg',
       link: 'https://twitter.com/eSparkTalent',
-      alt: 'tiwiter',
+      alt: 'twitter',
     },
     {
       img: '/images/footer/social-icons/linkedin.svg',
@@ -37,60 +36,58 @@ export const FOOTER_DATA = {
   ],
   company: [
     {
-      label: 'Why eSpark TaleTitlent',
-      link: '',
+      label: 'Why eSpark Talent',
+      link: '/what-we-do',
     },
     {
       label: 'How it Works',
-      link: '',
+      link: '/how-it-works',
     },
   ],
   solution: [
     {
       label: 'For Start-Ups',
-      link: '',
+      link: '/for-startup',
     },
     {
       label: 'For Enterprise',
-      link: '',
+      link: '/for-enterprise',
     },
   ],
   resource: [
     {
       label: 'Blogs',
-      link: '',
+      link: '/blogs',
     },
     {
       label: 'eSparkWiki',
-      link: '',
+      link: '/wiki',
     },
     {
       label: 'Career',
-      link: '',
+      link: '/careers',
     },
   ],
   partnership: [
     {
       label: 'Partnership Program',
-      link: '',
+      link: '/partnership',
     },
   ],
   contactUs: [
     {
       label: 'Have questions about <span> our features</span>?',
-      link: '',
+      link: '#',
     },
     {
       label: 'sales@esparktalent.com',
-      link: '',
     },
     {
       label: 'Already using our service and need <span> some help</span>?',
-      link: '',
+      link: '#',
     },
     {
       label: 'info@esparktalent.com',
-      link: '',
     },
   ],
 };
