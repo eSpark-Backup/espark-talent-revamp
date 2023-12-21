@@ -144,7 +144,7 @@ const Footer = ({ data }) => {
       >
         <Divider />
       </Box>
-      <Rights copyRights={data?.copyRight} />
+      <Rights copyRights={LABEL?.copyRight} />
     </Box>
   );
 };
