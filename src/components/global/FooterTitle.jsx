@@ -6,7 +6,7 @@ const FooterTitle = ({ title }) => {
     <Typography
       variant="h5"
       sx={{
-        color: '#001C63',
+        color: 'primary',
         fontStyle: 'normal',
         fontWeight: 600,
         lineHeight: 'normal',
