@@ -59,8 +59,8 @@ const Footer = ({ data }) => {
                   },
                 }}
               >
-                {data?.socialMedia?.map((item) => (
-                  <Link href={item.link}>
+                {data?.socialMedia?.map((item, index) => (
+                  <Link key={index} href={item.link}>
                     <Image
                       src={item.img}
                       width={17}
