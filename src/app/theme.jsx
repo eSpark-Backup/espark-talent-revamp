@@ -90,7 +90,7 @@ const lightTheme = createTheme({
           },
         },
         {
-          props: { variant: '001C63' },
+          props: { variant: '#001C63' },
           style: {
             textTransform: 'capitalize',
             borderColor: '#029894',
