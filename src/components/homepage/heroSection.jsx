@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
-import { HERO_DATA } from '@/constants/home-page/heroSection';
+import { HERO_DATA } from '@/constants/home-page/hero-section';
 
 const HeroSection = () => {
   return (
