@@ -23,9 +23,8 @@ const lightTheme = createTheme({
       default: '#ffffff',
     },
     text: {
-      primary: '#001C63',
-      secondary: '#333',
-      info: '#ffffff',
+      primary: '#029894',
+      secondary: '#001C63',
     },
   },
   typography: {
@@ -47,7 +46,7 @@ const lightTheme = createTheme({
       fontWeight: 700,
     },
     h5: {
-      fontSize: '20px',
+      fontSize: '22px',
       fontWeight: 600,
     },
     h6: {
