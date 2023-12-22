@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
 import store from '@/redux/store';
+import Header from '@/components/global/Header';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           <AppRouterCacheProvider>
             <ThemeProvider theme={currentTheme}>
               <CssBaseline />
+              <Header />
               <Box toggleTheme={toggleTheme}>{children}</Box>
             </ThemeProvider>
           </AppRouterCacheProvider>
