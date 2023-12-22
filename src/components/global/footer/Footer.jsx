@@ -31,7 +31,7 @@ const Footer = ({ data }) => {
               />
               <Typography
                 sx={{
-                  color: '#001C63',
+                  color: 'primary',
                   textAlign: 'justify',
                   fontSize: '15px',
                   fontStyle: 'normal',
@@ -169,7 +169,7 @@ const Footer = ({ data }) => {
       </Box>
       <Box
         sx={{
-          paddingX: {
+          px: {
             lg: '120px',
           },
           background: '#ECECED',
