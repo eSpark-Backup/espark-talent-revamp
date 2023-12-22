@@ -2,7 +2,7 @@ export const EXPERTIES_DATA = {
   title: 'Which Experts Will Drive Your Business?',
   buttonText: 'Hire A Talent',
   buttonLink: '/',
-  icon:'/images/homepage/experties/experties-icon.svg',
+  icon: '/images/homepage/experties/experties-icon.svg',
   sections: [
     {
       lists: [

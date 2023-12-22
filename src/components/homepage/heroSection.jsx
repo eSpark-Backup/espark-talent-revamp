@@ -12,7 +12,7 @@ const HeroSection = () => {
       <Box
         sx={{
           py: '5%',
-          backgroundImage: `url(${HERO_DATA.backgroundImage})`,
+          backgroundImage: `url(${HERO_DATA?.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
