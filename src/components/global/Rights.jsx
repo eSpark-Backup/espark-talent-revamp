@@ -10,8 +10,7 @@ const Rights = ({ copyRights }) => {
         textAlign: 'center',
         padding: 2,
         alignItems: 'center',
-        justifyContent:'center',
-
+        justifyContent: 'center',
       }}
     >
       <Typography
