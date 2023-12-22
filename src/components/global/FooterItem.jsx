@@ -20,7 +20,10 @@ const FooterItem = ({ href, label }) => {
       }}
     >
       {isBlackLabel ? (
-        <Link href={`mailto:${label}`} dangerouslySetInnerHTML={{ __html: label }} />
+        <Link
+          href={`mailto:${label}`}
+          dangerouslySetInnerHTML={{ __html: label }}
+        />
       ) : (
         <Link href={href} dangerouslySetInnerHTML={{ __html: label }} />
       )}

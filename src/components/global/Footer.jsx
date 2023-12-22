@@ -19,8 +19,7 @@ const Footer = ({ data }) => {
           pt: 4,
         }}
       >
-        <Container
-        >
+        <Container>
           <Grid container>
             <Grid item lg={5} md={12} sm={12} xs={12}>
               <Image
@@ -60,9 +59,14 @@ const Footer = ({ data }) => {
                   },
                 }}
               >
-                {data?.socialMedia?.map((item) => (
-                  <Link href={item.link}>
-                    <Image src={item.img} width={17} height={17} alt={item.alt} />
+                {data?.socialMedia?.map((item, index) => (
+                  <Link key={index} href={item.link}>
+                    <Image
+                      src={item.img}
+                      width={17}
+                      height={17}
+                      alt={item.alt}
+                    />
                   </Link>
                 ))}
               </Box>
@@ -88,7 +92,6 @@ const Footer = ({ data }) => {
                       <FooterItem href={item.link} label={item.label} />
                     </Box>
                   ))}
-
                 </Grid>
                 <Grid item lg={12} md={6} sm={6} xs={12}>
                   <FooterTitle title={data?.solutionTitle} />
@@ -97,7 +100,6 @@ const Footer = ({ data }) => {
                       <FooterItem href={item.link} label={item.label} />
                     </Box>
                   ))}
-
                 </Grid>
               </Grid>
             </Grid>
@@ -122,7 +124,6 @@ const Footer = ({ data }) => {
                       <FooterItem href={item.link} label={item.label} />
                     </Box>
                   ))}
-
                 </Grid>
                 <Grid item lg={12} md={6} sm={6} xs={12}>
                   <FooterTitle title={data?.partnershipTitle} />
@@ -131,7 +132,6 @@ const Footer = ({ data }) => {
                       <FooterItem href={item.link} label={item.label} />
                     </Box>
                   ))}
-
                 </Grid>
               </Grid>
             </Grid>
@@ -143,19 +143,19 @@ const Footer = ({ data }) => {
                     <Box
                       key={index}
                       sx={{
-                        width: { sm: '60%'}
+                        width: { sm: '60%' },
                       }}
                     >
                       <FooterItem href={item.link} label={item.label} />
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} sm={6} >
+                <Grid item lg={12} sm={6}>
                   {data?.contactUsInfo?.map((item, index) => (
                     <Box
                       key={index}
                       sx={{
-                        width: { sm: '60%'}
+                        width: { sm: '60%' },
                       }}
                     >
                       <FooterItem href={item.link} label={item.label} />
