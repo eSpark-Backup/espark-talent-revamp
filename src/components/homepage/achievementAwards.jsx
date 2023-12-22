@@ -14,7 +14,7 @@ const AchievementAwards = () => {
           <Box sx={{ pb: '30px' }}>
             <Typography
               variant="h2"
-              color="primary"
+              color="secondary"
               sx={{ textAlign: 'center' }}
             >
               {ACHIEVEMENTS_DATA?.title}
