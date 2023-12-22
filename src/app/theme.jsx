@@ -16,6 +16,9 @@ const lightTheme = createTheme({
     warning: {
       main: '#F7F8FB  ',
     },
+    danger: {
+      main: '#ECECED  ',
+    },
     background: {
       default: '#ffffff',
     },
@@ -28,19 +31,19 @@ const lightTheme = createTheme({
   typography: {
     fontFamily: ['Inter', 'sans-serif'].join(','),
     h1: {
-      fontSize: '40px',
+      fontSize: '50px',
       fontWeight: 700,
     },
     h2: {
-      fontSize: '36px',
+      fontSize: '32px',
       fontWeight: 600,
     },
     h3: {
-      fontSize: '30px',
+      fontSize: '28px',
       fontWeight: 600,
     },
     h4: {
-      fontSize: '24px',
+      fontSize: '18px',
       fontWeight: 700,
     },
     h5: {
@@ -52,7 +55,7 @@ const lightTheme = createTheme({
       fontWeight: 700,
     },
     body1: {
-      fontSize: '14px',
+      fontSize: '20px',
     },
     button: {
       textTransform: 'capitalize',
@@ -79,9 +82,9 @@ const lightTheme = createTheme({
           props: { variant: 'primary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029894 !important',
-            borderRadius: '5px',
+            backgroundColor: '#029894',
             color: '#fff',
+            borderRadius: '5px',
             position: 'relative',
             '&:hover': {
               backgroundColor: '#001C63',
@@ -90,13 +93,15 @@ const lightTheme = createTheme({
           },
         },
         {
-          props: { variant: '#001C63' },
+          props: { variant: 'secondary' },
           style: {
             textTransform: 'capitalize',
-            borderColor: '#029894',
-            color: '#029894',
+            backgroundColor: '#029894 ',
+            borderRadius: '5px',
+            color: '#fff',
+            position: 'relative',
             '&:hover': {
-              backgroundColor: '#029894',
+              backgroundColor: '#001C63',
               color: '#fff',
             },
           },
@@ -229,24 +234,24 @@ const darkTheme = createTheme({
           props: { variant: 'primary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029894 !important',
+            backgroundColor: '#001C63 !important',
             borderRadius: '5px',
             color: '#fff',
             position: 'relative',
             '&:hover': {
-              backgroundColor: '#001C63',
-              color: '#fff',
+              borderColor: '#029894',
+              color: '#ffffff',
             },
           },
         },
         {
-          props: { variant: '001C63' },
+          props: { variant: 'secondary' },
           style: {
             textTransform: 'capitalize',
             borderColor: '#029894',
-            color: '#029894',
+            color: '#ffffff',
             '&:hover': {
-              backgroundColor: '#029894',
+              backgroundColor: '#001C63',
               color: '#fff',
             },
           },
@@ -255,10 +260,10 @@ const darkTheme = createTheme({
           props: { variant: 'outlined' },
           style: {
             textTransform: 'capitalize',
-            borderColor: '#029894',
-            color: '#029894',
+            borderColor: '#ffffff',
+            color: '#001C63',
             '&:hover': {
-              backgroundColor: '#029894',
+              backgroundColor: '#001C63',
               color: '#fff',
             },
           },

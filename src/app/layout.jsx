@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
 import store from '@/redux/store';
-import Footer from '@/components/global/Footer';
+import Footer from '@/components/global/footer/Footer';
 import { FOOTER_DATA } from '@/constants/global/footer';
 
 export default function RootLayout({ children }) {
