@@ -1,3 +1,4 @@
+import Faq from '@/components/FAQ/Faq';
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import HeroSection from '@/components/homepage/heroSection';
 
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <HeroSection />
       <AchievementAwards />
+      <Faq />
     </>
   );
 };
