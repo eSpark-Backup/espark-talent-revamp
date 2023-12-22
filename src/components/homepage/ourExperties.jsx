@@ -1,9 +1,15 @@
-'use client';
 import React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { Box, Typography, Button, ListItem, ListItemText, ListItemIcon } from '@mui/material';
-import Image  from 'next/image';
+import {
+  Box,
+  Typography,
+  Button,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+} from '@mui/material';
+import Image from 'next/image';
 
 import { EXPERTIES_DATA } from '@/constants/home-page/our-experties';
 
@@ -21,9 +27,8 @@ const OurExperties = () => {
           </Typography>
         </Box>
         <Grid container spacing={2}>
-          <Grid item xs={1} />
           {EXPERTIES_DATA?.sections.map((section, index) => (
-            <Grid key={index} item xs={2.5}>
+            <Grid key={index} item xs={12} sm={6} md={4} lg={3} xl={2.5}>
               {section.lists.map((list, listIndex) => (
                 <Box item key={listIndex}>
                   <Typography
@@ -58,7 +63,6 @@ const OurExperties = () => {
               ))}
             </Grid>
           ))}
-          <Grid item xs={1} />
         </Grid>
         <Grid
           item
@@ -67,6 +71,7 @@ const OurExperties = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            pt: { xs: '20px', md: '30px' },
           }}
         >
           <Button
