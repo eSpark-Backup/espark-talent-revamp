@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Divider } from '@mui/material';
@@ -119,7 +116,7 @@ const Header = () => {
 
   const handleOpenUserMenu = (event, page) => {
     setAnchorElUser(event.currentTarget);
-    setSubmenuAnchor((prev) => ({ ...prev, [page]: event.currentTarget }));
+    setSubmenuAnchor({ ...submenuAnchor, [page]: event.currentTarget });
     setSelectedMenuItem(null);
   };
 
@@ -128,7 +125,7 @@ const Header = () => {
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Image src={'/logo.png'} width={100} height={49} />
+            <Image src={'/logo.png'} width={100} height={49} alt="logo" />
             <Box
               id="menuResponsive"
               sx={{
