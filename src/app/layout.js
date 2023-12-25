@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
 import store from '@/redux/store';
-import Header from '@/components/global/Header';
+import Header from '@/components/global/Header/Header';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
