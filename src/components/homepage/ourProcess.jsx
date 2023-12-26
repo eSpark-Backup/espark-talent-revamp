@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 import { PROCESS_DATA } from '@/constants/home-page/our-process';
 
 const OurProcess = () => {
@@ -30,9 +32,10 @@ const OurProcess = () => {
             <Grid
               key={index}
               container
+              alignItems="center"
               spacing={2}
               sx={{
-                flexDirection: process.isReverse ? 'row-reverse' : 'row',
+                flexDirection:process.isReverse ? 'row-reverse' : 'row',
               }}
             >
               <Grid item xs={4} sm={3} lg={3} md={3}>
@@ -64,7 +67,7 @@ const OurProcess = () => {
                   {process.text}
                 </Typography>
               </Grid>
-              <Grid item xs={4} sm={3} lg={3} md={3} >
+              <Grid item xs={4} sm={3} lg={3} md={3}>
                 {process.alignment === 'right' ? (
                   <Image
                     src={process.image}

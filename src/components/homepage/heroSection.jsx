@@ -23,7 +23,7 @@ const HeroSection = () => {
             spacing={2}
             sx={{
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column-reverse', sm: 'row' },
             }}
           >
             <Grid item xs={12} sm={6} sx={{ pr: { xs: '0', sm: '10%' } }}>
