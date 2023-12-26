@@ -9,9 +9,10 @@
     
 }
 #menuResponsive .MuiPaper-root{
-    left: 0 !important;
+    /* left: 0 !important;
     max-width: 100% !important;
     width: 100% !important;
+    background-color: blue ; */
 }
 span {
     color: #029894;
@@ -19,4 +20,13 @@ span {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+#menuResponsive .mui-1vv6op5 {
+    background-color: #fff !important;
+    left: 0 !important;
+}
+
+.MuiAccordion-root::before{
+   height: 0 !important;
 }

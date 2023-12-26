@@ -3,14 +3,14 @@ export const SUBMENU_ITEMS = {
     {
       label: 'Why eSpark Talent',
       link: '/what-we-do',
-      icon: '/whyeSpark.svg',
+      icon: '/images/header/whyeSpark.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       label: 'How it Works',
       link: '/how-it-works',
-      icon: '/howItsWork.svg',
+      icon: '/images/header/howItsWork.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
@@ -19,14 +19,14 @@ export const SUBMENU_ITEMS = {
     {
       label: 'Enterprise',
       link: '/for-enterprise',
-      icon: '/enterPrice.svg',
+      icon: '/images/header/enterPrice.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       label: 'Start-Ups',
       link: '/for-startup',
-      icon: '/startup.svg',
+      icon: '/images/header/startup.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
@@ -35,21 +35,21 @@ export const SUBMENU_ITEMS = {
     {
       label: 'Blogs',
       link: '/blogs',
-      icon: '/blogs.svg',
+      icon: '/images/header/blogs.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       label: 'eSparkWiki',
       link: '/wiki',
-      icon: '/esparkWiki.svg',
+      icon: '/images/header/esparkWiki.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       label: 'Career',
       link: '/careers',
-      icon: '/career.svg',
+      icon: '/images/header/career.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
@@ -58,7 +58,7 @@ export const SUBMENU_ITEMS = {
     {
       label: 'Partnership Program',
       link: '/partnership',
-      icon: '/partnership.svg',
+      icon: '/images/header/partnership.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
