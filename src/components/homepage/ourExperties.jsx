@@ -17,6 +17,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { EXPERTIES_DATA } from '@/constants/home-page/our-experties';
+import TitleParagraph from '../global/titleParagraph';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -50,19 +51,11 @@ const OurExperties = () => {
   return (
     <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
       <Container sx={{ px: '5%' }}>
-        <Box sx={{ pb: '30px' }}>
-          <Typography
-            variant="h2"
-            color="secondary"
-            sx={{ textAlign: 'center' }}
-          >
-            {EXPERTIES_DATA?.title}
-          </Typography>
-        </Box>
+        <TitleParagraph title={EXPERTIES_DATA?.title} />
         <Swiper {...swiperSettings}>
           {EXPERTIES_DATA?.sections.map((section, index) => (
-            <Grid container spacing={2} sx={{ mx: 'auto' }}>
-              <SwiperSlide key={index}>
+            <Grid key={index} container spacing={2} sx={{ mx: 'auto' }}>
+              <SwiperSlide>
                 {section.lists.map((list, listIndex) => (
                   <Grid
                     key={listIndex}
@@ -119,13 +112,11 @@ const OurExperties = () => {
             pt: { xs: '20px', md: '30px' },
           }}
         >
-          <Button
-            variant="contained"
-            color="secondary"
-            href={EXPERTIES_DATA?.buttonLink}
-          >
-            {EXPERTIES_DATA?.buttonText}
-          </Button>
+          <Link href={EXPERTIES_DATA?.buttonLink}>
+            <Button variant="contained" color="secondary">
+              {EXPERTIES_DATA?.buttonText}
+            </Button>
+          </Link>
         </Grid>
       </Container>
     </Box>
