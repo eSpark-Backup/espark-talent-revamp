@@ -4,30 +4,18 @@ import { Box, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 import { PROCESS_DATA } from '@/constants/home-page/our-process';
+import TitleParagraph from '../global/titleParagraph';
 
 const OurProcess = () => {
   return (
     <>
       <Box sx={{ py: '4%' }}>
         <Container maxWidth="lg">
-          <Box sx={{ pb: '30px' }}>
-            <Typography
-              variant="h2"
-              color="secondary"
-              sx={{ textAlign: 'center' }}
-            >
-              {PROCESS_DATA?.title}
-            </Typography>
-            <Typography
-              variant="body1"
-              color="secondary"
-              sx={{ textAlign: 'center' }}
-            >
-              {PROCESS_DATA?.subTitle}
-            </Typography>
-          </Box>
+          <TitleParagraph
+            title={PROCESS_DATA?.title}
+            paragraph={PROCESS_DATA?.subTitle}
+          />
           {PROCESS_DATA?.processes.map((process, index) => (
             <Grid
               key={index}

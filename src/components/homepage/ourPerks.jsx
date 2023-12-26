@@ -1,25 +1,29 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
-  Divider,
   Typography,
   ListItem,
   ListItemText,
   ListItemIcon,
+  Button,
 } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { PERKS_DATA } from '@/constants/home-page/our-perks';
 
 const OurPerks = () => {
+  const [selectedCard, setSelectedCard] = useState(0);
+
+  const handleCardClick = (index) => {
+    setSelectedCard(index === selectedCard ? index : index);
+  };
+
   return (
-    <Box
-      sx={{
-        py: '4%',
-      }}
-    >
+    <Box sx={{ py: '4%' }}>
       <Container
         sx={{
           borderRadius: '20px',
@@ -29,65 +33,104 @@ const OurPerks = () => {
       >
         <Grid container sx={{ display: 'flex' }}>
           <Grid item xs={5}>
-            <Box
-              sx={{
-                display: 'flex',
-                borderRadius: '20px',
-                py: '20px',
-                mx: '20px',
-                background:
-                  'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF',
-                boxShadow: '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <Image src={image} height={ } width={ } />
-              <Typography variant="body1" color="initial">
-                title
-              </Typography>
-              <Typography variant="body1" color="initial">
-                sno
-              </Typography>
-               <Image src={hover image} height={} width={}/>
-            </Box>
-          </Grid>
-          <Grid item xs={7} p={'20px'}>
-            <Typography variant="h3" color={'#fff'}>
-              heading
-            </Typography>
-            <Typography variant="body1" color={'#fff'}>
-              paragraph
-            </Typography>
-            <Grid container>
-              <Grid item xs={6}>
-                {list itme map =>
-                
-<ListItem
-                key={itemIndex}
+            {PERKS_DATA?.map((perk, index) => (
+              <Box
+                key={index}
+                onClick={() => handleCardClick(index)}
+                sx={{
+                  display: 'flex',
+                  gap: '10px',
+                  borderRadius: '20px',
+                  mb: '20px',
+                  py: '20px',
+                  px: '20px',
+                  mx: '20px',
+                  background:
+                    index === selectedCard
+                      ? 'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF'
+                      : '#fff',
+                  boxShadow: '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  border: '2px solid #fff',
+                }}
+              >
+                <Image
+                  src={index === selectedCard ? perk?.activeIcon : perk?.icon}
+                  height={30}
+                  width={30}
+                  alt={perk.title}
+                />
+                <Typography
+                  variant="h2"
+                  color={index === selectedCard ? '#FFFFFF' : '#001C63'}
+                  sx={{ flexWrap: 'wrap', pl: '10px' }}
                 >
-                  <ListItemIcon>
-                    
-                    <Image
-                              src={list icon}
-                              alt="List Icon"
-                              width={15}
-                              height={15}
-                            />
-                  </ListItemIcon>
-                  <ListItemText>
-                    <Typography
-                      variant="body1"
-                      sx={{ py: '10px', color: '#001C63' }}
-                    >
-                      list item
-                    </Typography>
-                  </ListItemText>
-                </ListItem>
+                  {perk?.title}
+                </Typography>
+                <Typography variant="h1" color={'#E0DDDDAD'}>
+                  {perk?.sno}
+                </Typography>
+                <Image
+                  src={perk?.hoverIcons}
+                  height={20}
+                  width={20}
+                  alt={perk.title}
+                />
+              </Box>
+            ))}
+          </Grid>
 
-                }
+          <Grid
+            item
+            xs={7}
+            sx={{
+              p: '20px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
+            <>
+              <Typography variant="h3" color={'#fff'}>
+                {PERKS_DATA[selectedCard]?.content?.heading}
+              </Typography>
+              <Typography variant="body1" color={'#fff'}>
+                {PERKS_DATA[selectedCard]?.content?.paragraph}
+              </Typography>
+              <Grid container>
+                {PERKS_DATA[selectedCard]?.content?.list?.map((item, index) => (
+                  <Grid key={index} item xs={6} sx={{ display: 'flex' }}>
+                    <ListItem>
+                      <ListItemIcon>
+                        <Image
+                          src={PERKS_DATA[selectedCard]?.content?.listIcon}
+                          alt="List Icon"
+                          width={15}
+                          height={15}
+                        />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography
+                          variant="body1"
+                          sx={{ py: '10px', color: '#FFF', fontSize: '18px' }}
+                        >
+                          {item?.item}
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                  </Grid>
+                ))}
+                <Grid item xs={12}>
+                  <Link href={PERKS_DATA[selectedCard]?.content?.buttonLink}>
+                    <Button variant="contained" color="secondary">
+                      {PERKS_DATA[selectedCard]?.content?.buttonText}
+                    </Button>
+                  </Link>
+                </Grid>
               </Grid>
-            </Grid>
+            </>
           </Grid>
         </Grid>
       </Container>
