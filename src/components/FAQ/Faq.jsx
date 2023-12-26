@@ -17,7 +17,7 @@ const Faq = () => {
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           {FAQ_DATA?.map((item, index) => {
             return (
-              <Grid item md={6} xs={12} sx={{ display: 'flex' }} key={index}>
+              <Grid item md={6} xs={12} sx={{ display: 'flex', py: 4}} key={index}>
                 <Accordion>
                   <AccordionSummary
                     expandIcon={
