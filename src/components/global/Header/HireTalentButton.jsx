@@ -4,9 +4,9 @@ import { Button } from '@mui/material';
 
 import { HIRE_A_TALENT } from '@/constants/global/header';
 
-const HireTalentButton = ({ handleOpenUserMenu }) => {
+const HireTalentButton = ({ handleOpenUserMenu, display }) => {
   return (
-    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+    <Box sx={{ flexGrow: 0, display }}>
       <Button
         onClick={handleOpenUserMenu}
         size="small"

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Image from 'next/image';
 import { Box } from '@mui/system';
 
@@ -39,11 +38,11 @@ const DesktopHeader = ({
           >
             {page}
             <Image
-              src={'/arrow.svg'}
+              src={'/images/header/arrow.svg'}
               width={13}
               height={7}
               alt="arrow"
-              style={{ marginLeft: '5px' }}
+              style={{ marginLeft: '2px', }}
             />
           </Button>
           <Menu

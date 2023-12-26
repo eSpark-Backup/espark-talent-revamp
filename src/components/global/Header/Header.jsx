@@ -52,13 +52,14 @@ const Header = () => {
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Image src={'/logo.png'} width={100} height={49} alt="logo" />
+            <Image src={'/images/header/logo.png'} width={100} height={49} alt="logo" />
             <ResponsiveHeader
               handleAccordionChange={handleAccordionChange}
               handleOpenNavMenu={handleOpenNavMenu}
               anchorElNav={anchorElNav}
               expandedAccordion={expandedAccordion}
               handleSubmenuItemClicked={handleSubmenuItemClicked}
+              handleOpenUserMenu={handleOpenUserMenu}
             />
 
             <DesktopHeader
@@ -67,7 +68,7 @@ const Header = () => {
               handleSubmenuItemClicked={handleSubmenuItemClicked}
               handleCloseUserMenu={handleCloseUserMenu}
             />
-            <HireTalentButton handleOpenUserMenu={handleOpenUserMenu} />
+            <HireTalentButton handleOpenUserMenu={handleOpenUserMenu}  display={{ xs: 'none', md: 'flex' }}/>
           </Toolbar>
         </Container>
       </AppBar>

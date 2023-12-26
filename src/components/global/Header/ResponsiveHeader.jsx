@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
+import HireTalentButton from './HireTalentButton';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
@@ -20,6 +21,7 @@ const ResponsiveHeader = ({
   anchorElNav,
   expandedAccordion,
   handleSubmenuItemClicked,
+  handleOpenUserMenu
 }) => {
   return (
     <Box
@@ -42,45 +44,62 @@ const ResponsiveHeader = ({
       >
         <MenuIcon sx={{ width: '50px', height: '50px', color: '#001C63' }} />
       </IconButton>
+      
       {Boolean(anchorElNav) && (
-        <Accordion
-          elevation={0}
-          expanded={expandedAccordion['nav']}
-          onChange={handleAccordionChange('nav')}
+        <Box
           sx={{
             position: 'absolute',
-            top: '79px',
+            top: '76px',
             zIndex: 1000,
+            width: '100%',
+            left: 0,
+            backgroundColor: '#fff',
+            borderTop: 'none !important',
+            pb:2
           }}
         >
+
           {PAGES.map((page) => {
             const hasSubmenu = SUBMENU_ITEMS.hasOwnProperty(page);
             return (
-              <Box key={page}>
+              <Accordion
+                key={page}
+                expanded={expandedAccordion[page]}
+                onChange={handleAccordionChange(page)}
+                sx={{
+                  boxShadow: 'none !important',
+                  backgroundColor: 'none !important',
+                  width: '100%',
+                  border: 0,
+                  '.mui-bsh1p3-MuiPaper-root-MuiAccordion-root:before': {
+                    boxShadow: 'none !important',
+                    backgroundColor: 'transparent !important',
+                    left: 0,
+                    border: 0,
+                  },
+                }}
+              >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon sx={{ color: '#222 !important' }} />}
                   aria-controls={`${page}-content`}
                   id={`${page}-header`}
-                  sx={{ width: '100%' }}
+                  sx={{
+                    backgroundColor: 'red #fff ', boxShadow: 'none',
+                  }}
                 >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{ color: '#222', fontSize: '18px', fontWeight: 600, lineHeight: '21px' }}>{page}</Typography>
                 </AccordionSummary>
                 {hasSubmenu && (
-                  <AccordionDetails>
+                  <AccordionDetails sx={{ backgroundColor: '#fff !important ' }}>
                     {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
                       <MenuItem
                         key={submenuItem.label}
                         onClick={() => handleSubmenuItemClicked(submenuItem)}
-                        sx={{
-                          width: '100%',
-                          paddingLeft: '20px',
-                        }}
                       >
                         <Box
                           sx={{
                             display: 'flex',
                             alignItems: 'center',
-                            paddingRight: 19,
                           }}
                         >
                           <Image
@@ -88,7 +107,7 @@ const ResponsiveHeader = ({
                             width={30}
                             height={30}
                             alt="icon"
-                            style={{ marginRight: '10px' }}
+                            style={{ marginRight: '2px' }}
                           />
                           <Box sx={{ mx: 2 }}>
                             <Typography
@@ -110,7 +129,6 @@ const ResponsiveHeader = ({
                                 fontSize: '12px',
                                 fontWeight: 400,
                                 lineHeight: '16px',
-                                width: '240px',
                                 whiteSpace: 'normal',
                               }}
                             >
@@ -122,13 +140,16 @@ const ResponsiveHeader = ({
                     ))}
                   </AccordionDetails>
                 )}
-              </Box>
+              </Accordion>
             );
           })}
-        </Accordion>
+          <HireTalentButton handleOpenUserMenu={handleOpenUserMenu}  display={{ xs: 'flex', md: 'none' }}/>
+        </Box>
       )}
     </Box>
   );
 };
 
 export default ResponsiveHeader;
+
+
