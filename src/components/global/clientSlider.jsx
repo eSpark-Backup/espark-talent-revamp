@@ -38,8 +38,8 @@ const ClientSlider = ({ bgColor, txtColor, title }) => {
       1024: {
         slidesPerView: 4,
       },
-      1025: {
-        slidesPerView: 6,
+      1440: {
+        slidesPerView: 8,
       },
       1920: {
         slidesPerView: 8,
@@ -48,7 +48,7 @@ const ClientSlider = ({ bgColor, txtColor, title }) => {
   };
 
   return (
-    <Box sx={{ background: bgColor, py: '5%' }}>
+    <Box sx={{ background: bgColor, py: '2.5%' }}>
       <Container sx={{ pb: '30px' }}>
         <Typography variant="h2" color={txtColor} sx={{ textAlign: 'center' }}>
           {title}
