@@ -15,8 +15,7 @@ const AchievementAwards = () => {
             <Typography
               variant="h2"
               color="secondary"
-              
-              sx={{ textAlign: 'center',flexWrap: 'wrap'  }}
+              sx={{ textAlign: 'center', flexWrap: 'wrap' }}
             >
               {ACHIEVEMENTS_DATA?.title}
             </Typography>

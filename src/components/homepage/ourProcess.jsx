@@ -35,7 +35,7 @@ const OurProcess = () => {
               alignItems="center"
               spacing={2}
               sx={{
-                flexDirection:process.isReverse ? 'row-reverse' : 'row',
+                flexDirection: process.isReverse ? 'row-reverse' : 'row',
               }}
             >
               <Grid item xs={4} sm={3} lg={3} md={3}>
