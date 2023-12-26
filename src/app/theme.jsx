@@ -174,9 +174,8 @@ const darkTheme = createTheme({
       default: '#ffffff',
     },
     text: {
-      primary: '#001C63',
-      secondary: '#333',
-      info: '#ffffff',
+      primary: '#029894',
+      secondary: '#001C63',
     },
   },
   typography: {
@@ -297,8 +296,8 @@ const darkTheme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
-      md: 960,
+      sm: 768,
+      md: 1024,
       lg: 1440,
       xl: 1920,
     },
