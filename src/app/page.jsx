@@ -1,6 +1,7 @@
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import HeroSection from '@/components/homepage/heroSection';
 import OurExperties from '@/components/homepage/ourExperties';
+import OurPerks from '@/components/homepage/ourPerks';
 import OurProcess from '@/components/homepage/ourProcess';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <AchievementAwards />
       <OurExperties />
       <OurProcess />
+      <OurPerks />
     </>
   );
 };
