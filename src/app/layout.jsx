@@ -13,6 +13,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
 import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
+import Footer from '@/components/global/footer/Footer';
+import { FOOTER_DATA } from '@/constants/global/footer';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
               <CssBaseline />
               <Header />
               <Box toggleTheme={toggleTheme}>{children}</Box>
+              <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
         </Provider>
