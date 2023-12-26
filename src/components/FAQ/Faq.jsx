@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Title from './Title';
 import Image from 'next/image';
 import Accordion from '@mui/material/Accordion';
@@ -10,15 +11,29 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { FAQ_DATA, TITLE } from '@/constants/home-page/faq-section';
 
 const Faq = () => {
+  const [expanded, setExpanded] = React.useState([]);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded((prevExpanded) =>
+      isExpanded
+        ? [...prevExpanded, panel]
+        : prevExpanded.filter((item) => item !== panel)
+    );
+  };
   return (
     <Box sx={{ my: 4 }} id="faq">
       <Container>
         <Title title={TITLE} />
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid container>
           {FAQ_DATA?.map((item, index) => {
+            const panel = `panel${index}`;
             return (
-              <Grid item md={6} xs={12} sx={{ display: 'flex', py: 4}} key={index}>
-                <Accordion>
+              <Grid item md={6} xs={12} sx={{ display: 'flex', height: '160px', px: '30px' }} key={index}>
+                <Accordion
+                  expanded={expanded.includes(panel)}
+                  onChange={handleChange(panel)}
+                  sx={{ mb: 4 }}
+                >
                   <AccordionSummary
                     expandIcon={
                       <Image
@@ -28,22 +43,31 @@ const Faq = () => {
                         alt="icon"
                       />
                     }
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                    aria-controls={`${panel}-content`}
+                    id={`${panel}-header`}
                   >
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '30.833px',
-                        fontWeight: 400,
-                        lineHeight: '73.998px',
+                        fontSize: '25.833px',
+                        fontWeight: expanded.includes(panel) ? 600 : 400,
                       }}
                     >
                       {item?.heading}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>{item?.description}</Typography>
+                    <Typography
+                      sx={{
+                        color: '#09114A',
+                        textAlign: 'justify',
+                        fontWeight: 400,
+                        fontSize: '18px',
+                        lineHeight: '23.69px',
+                      }}
+                    >
+                      {item?.description}
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
               </Grid>
