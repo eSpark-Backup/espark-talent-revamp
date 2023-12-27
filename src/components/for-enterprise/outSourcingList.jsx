@@ -9,9 +9,6 @@ import {
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import Link from 'next/link';
-
-import TitleParagraph from '@/components/global/titleParagraph';
 
 const OutSourcingList = ({ data }) => {
   return (
@@ -27,7 +24,6 @@ const OutSourcingList = ({ data }) => {
                 sm={4}
                 sx={{
                   display: 'flex',
-                  //   alignItems: 'stretch',
                   justifyContent: 'center',
                   p: ['10px', '20px'],
                 }}

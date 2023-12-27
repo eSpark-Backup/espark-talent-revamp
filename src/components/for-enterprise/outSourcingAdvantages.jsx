@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const OutSourcingAdvantages = ({ data }) => {
   return (
@@ -34,20 +27,20 @@ const OutSourcingAdvantages = ({ data }) => {
               </Typography>
               <Grid container sx={{ display: 'flex' }}>
                 {data?.items?.map((list, itemIndex) => (
-                  <Grid item xs={5}>
-                    <Box key={itemIndex} sx={{ display: 'flex', gap:'10px', pb:'10px' }}>
-                        <Image
-                          src={list?.listIcon}
-                          alt="List Icon"
-                          width={15}
-                          height={15}
-                        />
-                        <Typography
-                          variant="body1"
-                          sx={{ color: '#000', fontSize: '17px' }}
-                        >
-                          {list?.title}
-                        </Typography>
+                  <Grid item xs={5} key={itemIndex}>
+                    <Box sx={{ display: 'flex', gap: '10px', pb: '10px' }}>
+                      <Image
+                        src={list?.listIcon}
+                        alt="List Icon"
+                        width={15}
+                        height={15}
+                      />
+                      <Typography
+                        variant="body1"
+                        sx={{ color: '#000', fontSize: '17px' }}
+                      >
+                        {list?.title}
+                      </Typography>
                     </Box>
                   </Grid>
                 ))}
@@ -58,6 +51,7 @@ const OutSourcingAdvantages = ({ data }) => {
                 src={data?.image}
                 height={data?.imageHeight}
                 width={data?.imageWidth}
+                alt={data?.title}
               />
             </Grid>
           </Grid>

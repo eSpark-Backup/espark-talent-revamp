@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Box, Typography, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
@@ -30,7 +30,7 @@ const page = () => {
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
       />
-      <Box sx={{ pt: '2%', px:'10%' }}>
+      <Box sx={{ pt: '2%', px: '10%' }}>
         <TitleParagraph
           title={'How Fast Are Our Outsourcing Services?'}
           paragraph={`At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.`}
