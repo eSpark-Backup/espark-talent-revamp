@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const ClientSlider = ({ bgColor, txtColor, title, data }) => {
+const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
@@ -49,7 +49,11 @@ const ClientSlider = ({ bgColor, txtColor, title, data }) => {
   return (
     <Box sx={{ background: bgColor, py: '2.5%' }}>
       <Container sx={{ pb: '30px' }}>
-        <Typography variant="h2" color={txtColor} sx={{ textAlign: 'center' }}>
+        <Typography
+          variant="h2"
+          color={txtColor}
+          sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
+        >
           {title}
         </Typography>
       </Container>

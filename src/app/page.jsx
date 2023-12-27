@@ -35,7 +35,11 @@ const Home = () => {
       <OurPerks data={PERKS_DATA} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
-      <AchievementAwards data={ACHIEVEMENTS_DATA} design={1} />
+      <AchievementAwards
+        data={ACHIEVEMENTS_DATA}
+        design={1}
+        background={'#F7F8FB'}
+      />
     </>
   );
 };

@@ -17,12 +17,12 @@ export const OUTSOURCE_BENEFITS_DATA = {
       icon: '/images/homepage/outsource-benefits/icon3.svg',
       title: 'Innovation Injection',
       paragraph: `Inject innovation into your projects. Our employees outsourcing services aren't just about tasks; they're a seamless blend of creativity and cutting-edge solutions.`,
-     },
+    },
     {
       icon: '/images/homepage/outsource-benefits/icon4.svg',
       title: 'Friendly Communication',
       paragraph: `Communication shouldn't just be a channel; it should be a conversation. Enjoy a dialogue that fosters understanding, cooperation, and shared success with outsourced HR.`,
-     },
+    },
     {
       icon: '/images/homepage/outsource-benefits/icon5.svg',
       title: 'Smart Professionals',

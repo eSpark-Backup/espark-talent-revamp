@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 
 const TitleParagraph = ({ title, paragraph }) => {
   return (
-    <Box sx={{ pb: '30px' }}>
+    <Box sx={{ pb: '30px', px: '20%' }}>
       <Typography
         variant="h2"
         color="secondary"
