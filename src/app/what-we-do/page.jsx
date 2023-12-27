@@ -1,7 +1,13 @@
 import React from 'react';
 
+import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
+
 const page = () => {
-  return <>Hello world</>;
+  return (
+    <>
+      <WhyChooseOurHr />
+    </>
+  );
 };
 
 export default page;
