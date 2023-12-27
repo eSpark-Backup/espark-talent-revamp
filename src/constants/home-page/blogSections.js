@@ -874,3 +874,5 @@ showcase your workplace with productivity.`,
 export const VIEW_ALL_BLOGS = 'View all blogs';
 export const VIEW_LESS_BLOGS = 'View less blogs';
 export const READ_MORE = 'Read More';
+export const TITLE = 'eSpark Talent Knowledge Junction.'
+export const DESCRIPTIONS = 'Dive into our blogs and gain insights about every modern trend!'
