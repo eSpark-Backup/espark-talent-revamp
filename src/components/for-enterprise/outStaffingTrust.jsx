@@ -2,16 +2,7 @@ import React from 'react';
 import TitleParagraph from '../global/titleParagraph';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Box,
-  Typography,
-  Grid,
-  Button,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Container,
-} from '@mui/material';
+import { Box, Typography, Grid, Button, Container } from '@mui/material';
 
 const OutStaffingTrust = ({ data }) => {
   return (
@@ -26,9 +17,8 @@ const OutStaffingTrust = ({ data }) => {
             container
             sx={{
               justifyContent: 'center',
-              gap: 2,
               alignItems: 'center',
-              justifyContent: 'center',
+              gap: 2,
             }}
           >
             {data?.items?.map((list, itemIndex) => (

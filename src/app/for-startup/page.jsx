@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import TitleParagraph from '@/components/global/titleParagraph';
 import AchievementAwards from '@/components/homepage/achievementAwards';
