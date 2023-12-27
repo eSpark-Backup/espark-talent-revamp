@@ -7,11 +7,10 @@ import Grid from '@mui/material/Grid';
 import { Container, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CLIENTS_SLIDER_DATA } from '@/constants/home-page/client.slider';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const ClientSlider = ({ bgColor, txtColor, title }) => {
+const ClientSlider = ({ bgColor, txtColor, title, data }) => {
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
@@ -56,7 +55,7 @@ const ClientSlider = ({ bgColor, txtColor, title }) => {
       </Container>
       <Swiper {...swiperSettings} sx={{ mx: 'auto' }}>
         <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' }}>
-          {CLIENTS_SLIDER_DATA?.clients.map((item, index) => (
+          {data?.clients.map((item, index) => (
             <SwiperSlide key={index}>
               <Link href={item.link}>
                 <Image

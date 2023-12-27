@@ -4,22 +4,18 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
-import TitleParagraph from '../global/titleParagraph';
-import { BENEFITS_WORKS_DATA } from '@/constants/home-page/benifits-works';
+import TitleParagraph from '@/components/global/titleParagraph';
 
-const BenefitsWorks = () => {
+const BenefitsWorks = ({ data }) => {
   return (
     <>
       <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
         <Container>
           <Box sx={{ px: ['5%', '10%', '15%', '20%'], textAlign: 'center' }}>
-            <TitleParagraph
-              title={BENEFITS_WORKS_DATA?.title}
-              paragraph={BENEFITS_WORKS_DATA?.paragraph}
-            />
+            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2} gap={'10%'} justifyContent="center">
-            {BENEFITS_WORKS_DATA.items.map((item, index) => (
+            {data?.items.map((item, index) => (
               <Grid
                 key={index}
                 item

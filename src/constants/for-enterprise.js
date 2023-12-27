@@ -1,8 +1,5 @@
-// constants.js
-
-export const BENEFITS_WORKS_DATA = {
-  title: 'Here Is How Our Offshore Outsourcing Works',
-  paragraph: `We adhere to professional hiring practices and take care of all legal entities and documentation throughout every outsourcing collaboration.`,
+export const OUTSOURCING_SOLUTIONS_DATA = {
+  title: 'You Called For Us & We Are Here With Best Outsourcing Solutions. ​',
   items: [
     {
       icon: '/images/homepage/outsource-benefits/icon1.svg',

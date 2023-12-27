@@ -4,22 +4,18 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
-import TitleParagraph from '../global/titleParagraph';
-import { OUTSOURCE_BENEFITS_DATA } from '@/constants/home-page/outsource-benifits';
+import TitleParagraph from '@/components/global/titleParagraph';
 
-const OutSourceBenefits = () => {
+const OutSourceBenefits = ({ data }) => {
   return (
     <>
       <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
         <Container>
           <Box sx={{ px: '20%' }}>
-            <TitleParagraph
-              title={OUTSOURCE_BENEFITS_DATA?.title}
-              paragraph={OUTSOURCE_BENEFITS_DATA?.paragraph}
-            />
+            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2}>
-            {OUTSOURCE_BENEFITS_DATA.items.map((item, index) => (
+            {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item
@@ -29,7 +25,7 @@ const OutSourceBenefits = () => {
                 xl={4}
                 sx={{
                   display: 'flex',
-                  alignItems: 'stretch', // Ensure the cards have equal height
+                  alignItems: 'stretch',
                   justifyContent: 'center',
                   p: '20px',
                 }}
