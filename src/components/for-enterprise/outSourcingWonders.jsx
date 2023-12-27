@@ -3,7 +3,12 @@ import React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
-import SwiperCore, { EffectFade,Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore, {
+  EffectFade,
+  Navigation,
+  Pagination,
+  Autoplay,
+} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import TitleParagraph from '@/components/global/titleParagraph';
@@ -14,7 +19,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-SwiperCore.use([EffectFade,Navigation, Pagination, Autoplay]);
+SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonders = ({ data }) => {
   const swiperSettings = {
@@ -23,8 +28,8 @@ const OutSourcingWonders = ({ data }) => {
     centerMode: true,
     centerPadding: '0',
     loop: true,
-    effect:'fade',
-    className:"hero_slider",
+    effect: 'fade',
+    className: 'hero_slider',
     pagination: {
       clickable: true,
       el: '.swiper-pagination', // Add this line to target the pagination container
@@ -62,38 +67,48 @@ const OutSourcingWonders = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
+      <Box sx={{ py: '2%', overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ py: '2.5%', textAlign: 'center' }}>
+          <Box sx={{ textAlign: 'center', px: '10%' }}>
             <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
           </Box>
-          <Swiper {...swiperSettings} >
-            <Grid container sx={{ mx: 'auto',}}>
-            {data?.items.map((item, index) => (
-              <SwiperSlide key={index} >
-                <Grid item xs={4} sm={12} md={6}
-                  sx={{
-                    borderRadius: '30px',
-                    p: '20px',
-                    alignItems: 'center',
-                    background: ' #FFF',
-                    boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
-                  }}
-                >
-                  <Image
-                    src={item?.icon}
-                    alt={item?.title}
-                    height={item?.iconHeight}
-                    width={item?.iconWidth}
-                  />
-                  <Typography variant="h5" color="secondary" sx={{ pr: '10%' }}>
-                    {item?.title}
-                  </Typography>
-                  <Typography variant="body1" sx={{ pr: '10%' }}>{item?.paragraph}</Typography>
-                </Grid>
-              </SwiperSlide>
-            ))}
-              </Grid>
+          <Swiper {...swiperSettings}>
+            <Grid container sx={{ mx: 'auto' }}>
+              {data?.items.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Grid
+                    item
+                    xs={4}
+                    sm={12}
+                    md={6}
+                    sx={{
+                      borderRadius: '30px',
+                      p: '20px',
+                      alignItems: 'center',
+                      background: ' #FFF',
+                      boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+                    }}
+                  >
+                    <Image
+                      src={item?.icon}
+                      alt={item?.title}
+                      height={item?.iconHeight}
+                      width={item?.iconWidth}
+                    />
+                    <Typography
+                      variant="h5"
+                      color="secondary"
+                      sx={{ pr: '10%' }}
+                    >
+                      {item?.title}
+                    </Typography>
+                    <Typography variant="body1" sx={{ pr: '10%' }}>
+                      {item?.paragraph}
+                    </Typography>
+                  </Grid>
+                </SwiperSlide>
+              ))}
+            </Grid>
           </Swiper>
         </Container>
       </Box>
