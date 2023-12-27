@@ -16,12 +16,11 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { EXPERTIES_DATA } from '@/constants/home-page/our-experties';
-import TitleParagraph from '../global/titleParagraph';
+import TitleParagraph from '@/components/global/titleParagraph';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const OurExperties = () => {
+const OurExperties = ({ data }) => {
   const swiperSettings = {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -51,12 +50,12 @@ const OurExperties = () => {
   return (
     <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
       <Container sx={{ px: '5%' }}>
-        <TitleParagraph title={EXPERTIES_DATA?.title} />
+        <TitleParagraph title={data?.title} />
         <Swiper {...swiperSettings}>
-          {EXPERTIES_DATA?.sections.map((section, index) => (
+          {data?.sections?.map((section, index) => (
             <Grid key={index} container spacing={2} sx={{ mx: 'auto' }}>
               <SwiperSlide>
-                {section.lists.map((list, listIndex) => (
+                {section?.lists?.map((list, listIndex) => (
                   <Grid
                     key={listIndex}
                     item
@@ -71,25 +70,25 @@ const OurExperties = () => {
                         variant="h5"
                         sx={{ py: '10px', color: 'secondary' }}
                       >
-                        {list.heading}
+                        {list?.heading}
                       </Typography>
-                      {list.listItems.map((item, itemIndex) => (
+                      {list?.listItems?.map((item, itemIndex) => (
                         <ListItem key={itemIndex}>
                           <ListItemIcon>
                             <Image
-                              src={EXPERTIES_DATA?.icon}
+                              src={data?.icon}
                               alt="List Icon"
                               width={15}
                               height={15}
                             />
                           </ListItemIcon>
                           <ListItemText>
-                            <Link href={item.link}>
+                            <Link href={item?.link}>
                               <Typography
                                 variant="body1"
                                 sx={{ py: '10px', color: '#001C63' }}
                               >
-                                {item.title}
+                                {item?.title}
                               </Typography>
                             </Link>
                           </ListItemText>
@@ -112,9 +111,9 @@ const OurExperties = () => {
             pt: { xs: '20px', md: '30px' },
           }}
         >
-          <Link href={EXPERTIES_DATA?.buttonLink}>
+          <Link href={data?.buttonLink}>
             <Button variant="contained" color="secondary">
-              {EXPERTIES_DATA?.buttonText}
+              {data?.buttonText}
             </Button>
           </Link>
         </Grid>

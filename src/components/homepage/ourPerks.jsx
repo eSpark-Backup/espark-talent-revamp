@@ -13,9 +13,8 @@ import Grid from '@mui/material/Grid';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { PERKS_DATA } from '@/constants/home-page/our-perks';
 
-const OurPerks = () => {
+const OurPerks = ({ data }) => {
   const [selectedCard, setSelectedCard] = useState(0);
 
   const handleCardClick = (index) => {
@@ -33,7 +32,7 @@ const OurPerks = () => {
       >
         <Grid container sx={{ display: 'flex' }}>
           <Grid item xs={5}>
-            {PERKS_DATA?.map((perk, index) => (
+            {data?.map((perk, index) => (
               <Box
                 key={index}
                 onClick={() => handleCardClick(index)}
@@ -94,18 +93,18 @@ const OurPerks = () => {
           >
             <>
               <Typography variant="h3" color={'#fff'}>
-                {PERKS_DATA[selectedCard]?.content?.heading}
+                {data[selectedCard]?.content?.heading}
               </Typography>
               <Typography variant="body1" color={'#fff'}>
-                {PERKS_DATA[selectedCard]?.content?.paragraph}
+                {data[selectedCard]?.content?.paragraph}
               </Typography>
               <Grid container>
-                {PERKS_DATA[selectedCard]?.content?.list?.map((item, index) => (
+                {data[selectedCard]?.content?.list?.map((item, index) => (
                   <Grid key={index} item xs={6} sx={{ display: 'flex' }}>
                     <ListItem>
                       <ListItemIcon>
                         <Image
-                          src={PERKS_DATA[selectedCard]?.content?.listIcon}
+                          src={data[selectedCard]?.content?.listIcon}
                           alt="List Icon"
                           width={15}
                           height={15}
@@ -123,9 +122,9 @@ const OurPerks = () => {
                   </Grid>
                 ))}
                 <Grid item xs={12}>
-                  <Link href={PERKS_DATA[selectedCard]?.content?.buttonLink}>
+                  <Link href={data[selectedCard]?.content?.buttonLink}>
                     <Button variant="contained" color="secondary">
-                      {PERKS_DATA[selectedCard]?.content?.buttonText}
+                      {data[selectedCard]?.content?.buttonText}
                     </Button>
                   </Link>
                 </Grid>
