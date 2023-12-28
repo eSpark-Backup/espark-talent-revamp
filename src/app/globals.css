@@ -17,12 +17,32 @@
     --main-heading-description: 20px;
   }
 
+.menuResponsive .MuiPaper-root{
+    left: 0 !important;
+    max-width: 100% !important;
+    
+}
+#menuResponsive .MuiPaper-root{
+    /* left: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    background-color: blue ; */
+}
 span {
     color: #029894;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+#menuResponsive .mui-1vv6op5 {
+    background-color: #fff !important;
+    left: 0 !important;
+}
+
+.MuiAccordion-root::before{
+   height: 0 !important;
 }
 .default-btn {
     display: inline-block;
