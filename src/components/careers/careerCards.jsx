@@ -1,6 +1,6 @@
 'use client';
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Select,
   MenuItem,
@@ -9,10 +9,10 @@ import {
   Typography,
   Paper,
   Pagination,
-} from "@mui/material";
+} from '@mui/material';
 
 const CareerCards = ({ jobs, jobCategories }) => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
 
@@ -40,7 +40,7 @@ const CareerCards = ({ jobs, jobCategories }) => {
 
   const renderPaginationButtons = () => {
     const buttons = [];
-    let ellipsis = "...";
+    let ellipsis = '...';
 
     for (let page = 1; page <= totalPages; page++) {
       const isSelected = page === currentPage;
