@@ -10,3 +10,6 @@ span {
     font-weight: 500;
     line-height: normal;
 }
+#faq .MuiAccordion-gutters{
+    box-shadow: none !important;
+}
