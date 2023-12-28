@@ -32,7 +32,7 @@ const WhyChooseOurHr = () => {
               {DATA.paragraph}
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={4} sx={{}}>
+          <Grid item xs={12} sm={12} md={4}>
             <Box
               sx={{
                 display: 'flex',
