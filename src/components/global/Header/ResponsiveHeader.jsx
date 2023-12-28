@@ -11,9 +11,9 @@ import Image from 'next/image';
 import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import HireTalentButton from './HireTalentButton';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
-import HireTalentButton from './HireTalentButton';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
