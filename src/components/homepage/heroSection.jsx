@@ -27,7 +27,10 @@ const HeroSection = ({ data }) => {
           >
             <Grid item xs={12} sm={6} sx={{ pr: { xs: '0', sm: '10%' } }}>
               {data?.title && (
-                <Typography variant={data?.titleVariant} color={data?.titleColor}>
+                <Typography
+                  variant={data?.titleVariant}
+                  color={data?.titleColor}
+                >
                   {data?.title}
                 </Typography>
               )}
