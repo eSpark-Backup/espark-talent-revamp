@@ -21,30 +21,34 @@ const WikiCards = ({ data }) => {
           sx={{ display: 'flex', justifyContent: 'center', gap: '20px' }}
         >
           {data.map((item) => (
-            <Grid key={item.id} item xs={3} sx={CARD_STYLE}>
-              <Box sx={{ display: 'flex' }}>
-                <Image
-                  src={item.icon}
-                  height={item.iconHeight}
-                  width={item.iconWidth}
-                  alt={item.title}
-                />
-                <Typography variant="h4" color="#000">
-                  {item.title}
+            // <Link key={item.id} href={`/wiki/${item.id}`}>
+              <Grid key={item.id} item xs={3} sx={CARD_STYLE}>
+                <Box
+                  sx={{ display: 'flex', gap: '10px', alignItems: 'center' }}
+                >
+                  <Image
+                    src={item.icon}
+                    height={item.iconHeight}
+                    width={item.iconWidth}
+                    alt={item.title}
+                  />
+                  <Typography variant="h4" color="#000">
+                    {item.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body1" color="#667170" pb="10px">
+                  {'Average Salary'}
                 </Typography>
-              </Box>
-              <Typography variant="body1" color="#667170" pb="10px">
-                {'Average Salary'}
-              </Typography>
-              <Typography variant="body1" color="secondary" pb="10px">
-                {`USD: ${item.salary} per month`}
-              </Typography>
-              <Link href={`/wiki/${item.id}`}>
-                <Typography variant="body1" color="primary" pb="10px">
-                  {'Job Description >'}
+                <Typography variant="body1" color="secondary" pb="10px">
+                  {`USD: ${item.salary} per month`}
                 </Typography>
-              </Link>
-            </Grid>
+                <Link href={`/wiki/${item.id}`}>
+                  <Typography variant="body1" color="primary" pb="10px">
+                    {'Job Description >'}
+                  </Typography>
+                </Link>
+              </Grid>
+            // </Link>
           ))}
         </Grid>
       </Container>
