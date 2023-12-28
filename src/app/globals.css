@@ -122,3 +122,14 @@ span {
 #faq .MuiAccordion-gutters{
     box-shadow: none !important;
 }
+
+.swiper-image {
+  width: 100px;
+  height: 50px;
+}
+@media (max-width: 600px) {
+  .swiper-image {
+      width: 250px;
+      height: 30px;
+  }
+}
