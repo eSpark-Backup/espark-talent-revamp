@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Title from './Title';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { FAQ_DATA, TITLE } from '@/constants/home-page/faq-section';
 
 const Faq = () => {
-  const [expanded, setExpanded] = React.useState([]);
+  const [expanded, setExpanded] = useState([]);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded((prevExpanded) =>
@@ -28,7 +28,13 @@ const Faq = () => {
           {FAQ_DATA?.map((item, index) => {
             const panel = `panel${index}`;
             return (
-              <Grid item md={6} xs={12} sx={{ display: 'flex', height: '160px', px: '30px' }} key={index}>
+              <Grid
+                item
+                md={6}
+                xs={12}
+                sx={{ display: 'flex', height: '160px', px: '30px' }}
+                key={index}
+              >
                 <Accordion
                   expanded={expanded.includes(panel)}
                   onChange={handleChange(panel)}

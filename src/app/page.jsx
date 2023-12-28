@@ -23,7 +23,6 @@ import {
 const Home = () => {
   return (
     <>
-
       <HeroSection data={HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
