@@ -42,7 +42,7 @@ const DesktopHeader = ({
               width={13}
               height={7}
               alt="arrow"
-              style={{ marginLeft: '2px', }}
+              style={{ marginLeft: '2px' }}
             />
           </Button>
           <Menu

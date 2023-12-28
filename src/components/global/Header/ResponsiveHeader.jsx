@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Accordion,
   AccordionDetails,
@@ -21,8 +21,21 @@ const ResponsiveHeader = ({
   anchorElNav,
   expandedAccordion,
   handleSubmenuItemClicked,
-  handleOpenUserMenu
+  handleOpenUserMenu,
+  handleCloseNavMenu,
 }) => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (anchorElNav && !anchorElNav.contains(event.target)) {
+        handleCloseNavMenu();
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [anchorElNav, handleCloseNavMenu]);
+
   return (
     <Box
       id="menuResponsive"
@@ -44,7 +57,7 @@ const ResponsiveHeader = ({
       >
         <MenuIcon sx={{ width: '50px', height: '50px', color: '#001C63' }} />
       </IconButton>
-      
+
       {Boolean(anchorElNav) && (
         <Box
           sx={{
@@ -55,12 +68,14 @@ const ResponsiveHeader = ({
             left: 0,
             backgroundColor: '#fff',
             borderTop: 'none !important',
-            pb:2
+            pb: 2,
           }}
         >
-
           {PAGES.map((page) => {
-            const hasSubmenu = SUBMENU_ITEMS.hasOwnProperty(page);
+            const hasSubmenu = Object.prototype.hasOwnProperty.call(
+              SUBMENU_ITEMS,
+              page
+            );
             return (
               <Accordion
                 key={page}
@@ -80,18 +95,33 @@ const ResponsiveHeader = ({
                 }}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{ color: '#222 !important' }} />}
+                  expandIcon={
+                    <ExpandMoreIcon sx={{ color: '#222 !important' }} />
+                  }
                   aria-controls={`${page}-content`}
                   id={`${page}-header`}
                   sx={{
-                    backgroundColor: 'red #fff ', boxShadow: 'none',
+                    backgroundColor: 'red #fff ',
+                    boxShadow: 'none',
                   }}
                 >
-                  <Typography textAlign="center" sx={{ color: '#222', fontSize: '18px', fontWeight: 600, lineHeight: '21px' }}>{page}</Typography>
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      color: '#222',
+                      fontSize: '18px',
+                      fontWeight: 600,
+                      lineHeight: '21px',
+                    }}
+                  >
+                    {page}
+                  </Typography>
                 </AccordionSummary>
                 {hasSubmenu && (
-                  <AccordionDetails sx={{ backgroundColor: '#fff !important ' }}>
-                    {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
+                  <AccordionDetails
+                    sx={{ backgroundColor: '#fff !important ' }}
+                  >
+                    {SUBMENU_ITEMS[page]?.map((submenuItem) => (
                       <MenuItem
                         key={submenuItem.label}
                         onClick={() => handleSubmenuItemClicked(submenuItem)}
@@ -143,7 +173,10 @@ const ResponsiveHeader = ({
               </Accordion>
             );
           })}
-          <HireTalentButton handleOpenUserMenu={handleOpenUserMenu}  display={{ xs: 'flex', md: 'none' }}/>
+          <HireTalentButton
+            handleOpenUserMenu={handleOpenUserMenu}
+            display={{ xs: 'flex', md: 'none' }}
+          />
         </Box>
       )}
     </Box>
@@ -151,5 +184,3 @@ const ResponsiveHeader = ({
 };
 
 export default ResponsiveHeader;
-
-
