@@ -99,3 +99,6 @@ span {
     content: '';
     background-color: var(--optionalColor);
   }
+#faq .MuiAccordion-gutters{
+    box-shadow: none !important;
+}

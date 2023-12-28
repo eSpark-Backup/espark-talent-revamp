@@ -1,4 +1,5 @@
 import React from 'react';
+import Faq from '@/components/FAQ/Faq';
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import HeroSection from '@/components/homepage/heroSection';
@@ -41,6 +42,7 @@ const Home = () => {
         background={'#F7F8FB'}
       />
       <BlogCards />
+      <Faq />
     </>
   );
 };
