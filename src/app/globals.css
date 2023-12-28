@@ -1,7 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+    --fontFamily: 'Titillium Web', sans-serif;
+    --fontFamily2: 'Cabin', sans-serif;
+    --mainColor: #029894;
+    --optionalColor: #6f76a8;
+    --whiteColor: #ffffff;
+    --blackColor: #09114a;
+    --fontSize: 16px;
+    --transition: 0.5s;
+    --buttonColor: #029894;
+    --main-heading: 55px;
+    --sub-heading: 40px;
+    --card-heading: 22px;
+    --main-heading-description: 20px;
+  }
 
 span {
     color: #029894;
@@ -10,6 +24,81 @@ span {
     font-weight: 500;
     line-height: normal;
 }
+.default-btn {
+    display: inline-block;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    position: relative;
+    border: none;
+    z-index: 1;
+    text-align: center;
+    background-color: transparent;
+    color: var(--blackColor);
+    border-radius: 5px;
+    padding: 12px 35px 12px 62px;
+    font-family: var(--fontFamily2);
+    font-size: var(--fontSize);
+    font-weight: 500;
+    margin: 5px 5px;
+  }
+  
+  .default-btn span {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    color: var(--whiteColor);
+    display: inline-block;
+    font-size: 35px;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    background-color: var(--mainColor);
+    top: 0;
+  }
+  
+  .default-btn::before {
+    width: 48px;
+    border-radius: 5px;
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    background-color: var(--mainColor);
+  }
+  
+  .default-btn:hover {
+    color: var(--whiteColor);
+  }
+  
+  .default-btn:hover span {
+    left: 15px;
+    background-color: transparent;
+  }
+  
+  .default-btn:hover::before {
+    width: 100%;
+  }
+  .single-blog-post .image .date {
+    display: flex;
+    position: relative;
+    align-items: center;
+    writing-mode: vertical-lr;
+    color: var(--optionalColor);
+    text-orientation: mixed;
+    column-gap: 5px;
+  }
+  .single-blog-post .image .date::before {
+    height: 50px;
+    width: 1px;
+    content: '';
+    background-color: var(--optionalColor);
+  }
 #faq .MuiAccordion-gutters{
     box-shadow: none !important;
 }
