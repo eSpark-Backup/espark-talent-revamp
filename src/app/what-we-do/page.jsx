@@ -5,7 +5,8 @@ import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 
 const page = () => {
   return (
-    <><HeroSection data={HP_HERO_DATA} />
+    <>
+      <HeroSection data={HP_HERO_DATA} />
       <WhyChooseOurHr />
     </>
   );
