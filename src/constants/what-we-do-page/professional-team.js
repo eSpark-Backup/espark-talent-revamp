@@ -1,6 +1,6 @@
 export const TEAM_CARD_DATA = {
   heading:
-    'It’s Our Job to Help You Build an Unbreakable Team of Professionals!',
+    'Our Team With Years of Professional Assistance is Waiting for You to Connect!',
   arrowIcon: '/images/whatwedo/why-choose-our-hr/arrow.svg',
   alt: 'arrow',
   cardData: [
