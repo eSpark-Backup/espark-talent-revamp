@@ -15,7 +15,7 @@ export const SUBMENU_ITEMS = {
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
   ],
-  'Solutions': [
+  Solutions: [
     {
       label: 'Enterprise',
       link: '/for-enterprise',
