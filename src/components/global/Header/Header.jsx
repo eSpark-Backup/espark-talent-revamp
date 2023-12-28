@@ -4,11 +4,11 @@ import { Box } from '@mui/system';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useRouter } from 'next/navigation';
-import DesktopHeader from './desktopHeader';
 import Container from '@mui/material/Container';
 
-import HireTalentButton from './HireTalentButton';
-import ResponsiveHeader from './ResponsiveHeader';
+import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
+import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
+import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
