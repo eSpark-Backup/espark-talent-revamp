@@ -4,15 +4,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
-import { HERO_DATA } from '@/constants/home-page/hero-section';
-
-const HeroSection = () => {
+const HeroSection = ({ data }) => {
   return (
     <>
       <Box
         sx={{
           py: '5%',
-          backgroundImage: `url(${HERO_DATA.backgroundImage})`,
+          backgroundImage: `url(${data?.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -23,15 +21,15 @@ const HeroSection = () => {
             spacing={2}
             sx={{
               alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column-reverse', sm: 'row' },
             }}
           >
             <Grid item xs={12} sm={6} sx={{ pr: { xs: '0', sm: '10%' } }}>
               <Typography variant="h1" color="primary">
-                {HERO_DATA.title}
+                {data?.title}
               </Typography>
               <Typography variant="body1" sx={{ py: '10px' }}>
-                {HERO_DATA.description}
+                {data?.description}
               </Typography>
               <Button
                 variant="secondary"
@@ -50,7 +48,7 @@ const HeroSection = () => {
                     fontSize: '17px',
                   }}
                 >
-                  {HERO_DATA.button.label}
+                  {data?.button?.label}
                 </Typography>
               </Button>
             </Grid>
@@ -65,10 +63,10 @@ const HeroSection = () => {
               }}
             >
               <Image
-                src={HERO_DATA.image}
-                alt={HERO_DATA.imageAlt}
-                width={HERO_DATA.imageWidth}
-                height={HERO_DATA.imageHeight}
+                src={data?.image}
+                alt={data?.imageAlt}
+                width={data?.imageWidth}
+                height={data?.imageHeight}
               />
             </Grid>
           </Grid>
