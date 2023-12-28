@@ -1,12 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 
-import { Container, CardContent, Typography, Button, Box, Grid } from '@mui/material';
-import HeroSection from '@/components/homepage/heroSection';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import { WIKIS_DATA } from '@/constants/wiki';
 import WikiCards from '@/components/wiki/wikiCards';
-import WikisFilter from '@/utils/wikisFilter';
+import WikiFilter from '@/components/wiki/WikiFilter';
+import HeroSection from '@/components/homepage/heroSection';
+
+import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
+import { WIKIS_DATA } from '@/constants/wiki';
 
 const page = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -19,13 +19,13 @@ const page = () => {
 
   return (
     <>
-        <HeroSection data={HP_HERO_DATA} />
-        <WikisFilter
-          categories={categories}
+      <HeroSection data={WIKI_HERO_DATA} />
+      <WikiFilter
+        categories={categories}
         onSelectCategory={setSelectedCategory}
         selectedCategory={selectedCategory}
-        />
-        <WikiCards data={filteredWikis} />
+      />
+      <WikiCards data={filteredWikis} />
     </>
   );
 };
