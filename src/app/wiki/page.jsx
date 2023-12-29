@@ -11,7 +11,10 @@ import { WIKIS_DATA } from '@/constants/wiki';
 const WikiMainPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const categories = [...new Set(WIKIS_DATA.map((wiki) => wiki.category))];
+  const categories = Array.from(
+    new Set(WIKIS_DATA.map((wiki) => wiki.category))
+  );
+
   const filteredWikis =
     selectedCategory === null
       ? WIKIS_DATA
