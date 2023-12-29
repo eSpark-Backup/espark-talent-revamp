@@ -122,3 +122,17 @@ span {
 #faq .MuiAccordion-gutters{
     box-shadow: none !important;
 }
+
+
+.hrFirmResponsive {
+  display: none;
+}
+@media only screen and (max-width: 960px) {
+  .hrFirmResponsive {
+    display: block;
+  }
+  .hrFirmDesktop{
+    display: none !important;
+  }
+ 
+}
