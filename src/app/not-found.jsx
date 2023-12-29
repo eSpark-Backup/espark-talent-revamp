@@ -7,9 +7,22 @@ import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 const NotFound = () => {
   const { image, title, desc, btnLink, btnText } = NOT_FOUND_DATA;
   return (
-    <Box sx={{ py: '5%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <Box
+      sx={{
+        py: '5%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <Container>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Image src={image} alt="404 Error" width={500} height={200} />
         </Box>
 
@@ -17,11 +30,20 @@ const NotFound = () => {
           {title}
         </Typography>
 
-        <Typography variant="body1" sx={{ mb: 4, px: '25%', textAlign: 'center' }}>
+        <Typography
+          variant="body1"
+          sx={{ mb: 4, px: '25%', textAlign: 'center' }}
+        >
           {desc}
         </Typography>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Link href={btnLink}>
             <Button variant="contained" color="primary">
               {btnText}
@@ -30,8 +52,7 @@ const NotFound = () => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default NotFound
-
+export default NotFound;

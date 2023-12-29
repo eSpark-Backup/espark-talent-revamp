@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Box, Typography, Grid, Button, Container } from '@mui/material';
-import { flexbox } from '@mui/system';
+import { Box, Grid, Container } from '@mui/material';
 import WikiSingleRigth from './WikiSingleRigth';
 import WikiSingleLeft from './WikiSingleLeft';
 const WikiSingle = ({ data }) => {

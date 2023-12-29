@@ -8,7 +8,7 @@ import HeroSection from '@/components/homepage/heroSection';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { WIKIS_DATA } from '@/constants/wiki';
 
-const page = () => {
+const WikiMainPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const categories = [...new Set(WIKIS_DATA.map((wiki) => wiki.category))];
@@ -30,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WikiMainPage;
