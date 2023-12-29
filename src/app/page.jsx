@@ -15,16 +15,16 @@ import {
   BENEFITS_WORKS_DATA,
   CLIENTS_SLIDER_DATA,
   EXPERTIES_DATA,
-  HERO_DATA,
   OUTSOURCE_BENEFITS_DATA,
   PERKS_DATA,
   PROCESS_DATA,
 } from '@/constants/homepage';
+import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 
 const Home = () => {
   return (
     <>
-      <HeroSection data={HERO_DATA} />
+      <HeroSection data={HP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#029894'}
