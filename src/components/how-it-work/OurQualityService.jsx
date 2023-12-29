@@ -1,0 +1,54 @@
+import React from 'react';
+import { Box, Container, Grid, Typography } from '@mui/material';
+
+const OurQualityService = ({ ourQualityService }) => {
+  const { card, heading, subHeading } = ourQualityService;
+  return (
+    <Box sx={{ my: 4 }}>
+      <Container>
+        <Grid container>
+          <Grid item md={6}>
+            <Grid container spacing={2}>
+              {card?.map((item, index) => (
+                <Grid item md={6} key={index}>
+                  <Box
+                    sx={{
+                      border: '1px solid #E5E5E5',
+                      borderRadius: '5px',
+                      height: '80px',
+
+                      display: 'flex',
+                      alignItems: 'center',
+                      alignContent: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Typography sx={{}}>{item.content}</Typography>
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+          <Grid item md={6}>
+            <Typography
+              variant="h2"
+              color="secondary"
+              sx={{ textAlign: 'right', flexWrap: 'wrap' }}
+            >
+              {heading}
+            </Typography>
+            <Typography
+              variant="body1"
+              color="secondary"
+              sx={{ textAlign: 'right' }}
+            >
+              {subHeading}
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default OurQualityService;
