@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Box, Typography, Grid, Button, Container } from '@mui/material';
-import { flexbox } from '@mui/system';
+import { Box, Typography, Button } from '@mui/material';
 const WikiSingleRigth = ({ data }) => {
   return (
     <Box
@@ -14,16 +13,16 @@ const WikiSingleRigth = ({ data }) => {
       }}
     >
       <Typography variant="h3" color={'white'} textAlign={'center'} pb="10px">
-        Recruit the top developer.
+        {`Recruit the top developer.`}
       </Typography>
       <Typography variant="body1" color={'white'} fontSize={'16px'}>
-        Let us know about your business requirements on an discovery call, and
-        we'll handle the matchmaking process.
+        {`Let us know about your business requirements on an discovery call, and
+        we'll handle the matchmaking process.`}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', pt: '20px' }}>
         <Link href={data?.hireMeLink}>
           <Button variant="primary" color="secondary">
-            Hire ME
+            {`Hire ME`}
           </Button>
         </Link>
       </Box>

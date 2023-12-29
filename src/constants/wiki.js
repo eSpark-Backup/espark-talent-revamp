@@ -2,7 +2,7 @@ export const WIKIS_DATA = [
   {
     id: 1,
     slug: `android-app-developer`,
-    icon: `/images/wiki/icons/service-icons-11.svg`,
+    icon: `/images/wiki/icons/service-icons-1.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Android App Developer`,
@@ -85,7 +85,7 @@ export const WIKIS_DATA = [
   {
     id: 2,
     slug: `javascript-developer`,
-    icon: `/images/wiki/icons/service-icons-12.svg`,
+    icon: `/images/wiki/icons/service-icons-2.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `JavaScript Developer`,
@@ -168,7 +168,7 @@ export const WIKIS_DATA = [
   {
     id: 3,
     slug: `social-media-manager`,
-    icon: `/images/wiki/icons/service-icons-13.svg`,
+    icon: `/images/wiki/icons/service-icons-3.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Social Media Manager`,
@@ -251,7 +251,7 @@ export const WIKIS_DATA = [
   {
     id: 4,
     slug: `embedded-system-engineer`,
-    icon: `/images/wiki/icons/service-icons-14.svg`,
+    icon: `/images/wiki/icons/service-icons-4.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Embedded System Engineer`,
@@ -334,7 +334,7 @@ export const WIKIS_DATA = [
   {
     id: 5,
     slug: `react-js-developer`,
-    icon: `/images/wiki/icons/service-icons-15.svg`,
+    icon: `/images/wiki/icons/service-icons-5.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `React.js Developer`,
@@ -417,7 +417,7 @@ export const WIKIS_DATA = [
   {
     id: 6,
     slug: `ppc-specialist`,
-    icon: `/images/wiki/icons/service-icons-16.svg`,
+    icon: `/images/wiki/icons/service-icons-6.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `PPC Specialist`,
@@ -500,7 +500,7 @@ export const WIKIS_DATA = [
   {
     id: 7,
     slug: `seo-expert`,
-    icon: `/images/wiki/icons/service-icons-17.svg`,
+    icon: `/images/wiki/icons/service-icons-7.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `SEO Expert`,
@@ -583,7 +583,7 @@ export const WIKIS_DATA = [
   {
     id: 8,
     slug: `angular-developer`,
-    icon: `/images/wiki/icons/service-icons-18.svg`,
+    icon: `/images/wiki/icons/service-icons-8.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Angular Developer`,
@@ -666,7 +666,7 @@ export const WIKIS_DATA = [
   {
     id: 9,
     slug: `performance-marketer`,
-    icon: `/images/wiki/icons/service-icons-19.svg`,
+    icon: `/images/wiki/icons/service-icons-9.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Performance Marketer`,
@@ -749,7 +749,7 @@ export const WIKIS_DATA = [
   {
     id: 10,
     slug: `digital-marketing-expert`,
-    icon: `/images/wiki/icons/service-icons-110.svg`,
+    icon: `/images/wiki/icons/service-icons-10.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Digital Marketing Expert`,
@@ -832,7 +832,7 @@ export const WIKIS_DATA = [
   {
     id: 11,
     slug: `ui-ux-designer`,
-    icon: `/images/wiki/icons/service-icons-111.svg`,
+    icon: `/images/wiki/icons/service-icons-11.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `UI/UX Designer`,
@@ -915,7 +915,7 @@ export const WIKIS_DATA = [
   {
     id: 12,
     slug: `flutter-developer`,
-    icon: `/images/wiki/icons/service-icons-112.svg`,
+    icon: `/images/wiki/icons/service-icons-12.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Flutter Developer`,
@@ -998,7 +998,7 @@ export const WIKIS_DATA = [
   {
     id: 13,
     slug: `wordpress-developer`,
-    icon: `/images/wiki/icons/service-icons-113.svg`,
+    icon: `/images/wiki/icons/service-icons-13.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `WordPress Developer`,
@@ -1081,7 +1081,7 @@ export const WIKIS_DATA = [
   {
     id: 14,
     slug: `asp-net-developer`,
-    icon: `/images/wiki/icons/service-icons-114.svg`,
+    icon: `/images/wiki/icons/service-icons-14.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `ASP .Net Developer`,
@@ -1164,7 +1164,7 @@ export const WIKIS_DATA = [
   {
     id: 15,
     slug: `devops-engineer`,
-    icon: `/images/wiki/icons/service-icons-115.svg`,
+    icon: `/images/wiki/icons/service-icons-15.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `DevOps Engineer`,
@@ -1247,7 +1247,7 @@ export const WIKIS_DATA = [
   {
     id: 16,
     slug: `react-native-developer`,
-    icon: `/images/wiki/icons/service-icons-116.svg`,
+    icon: `/images/wiki/icons/service-icons-16.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `React Native Developer`,
@@ -1330,7 +1330,7 @@ export const WIKIS_DATA = [
   {
     id: 17,
     slug: `fintech-developer`,
-    icon: `/images/wiki/icons/service-icons-117.svg`,
+    icon: `/images/wiki/icons/service-icons-17.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Fintech Developer`,
@@ -1413,7 +1413,7 @@ export const WIKIS_DATA = [
   {
     id: 18,
     slug: `full-stack-developer`,
-    icon: `/images/wiki/icons/service-icons-118.svg`,
+    icon: `/images/wiki/icons/service-icons-18.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Full-Stack Developer`,
@@ -1496,7 +1496,7 @@ export const WIKIS_DATA = [
   {
     id: 19,
     slug: `mern-stack-developer`,
-    icon: `/images/wiki/icons/service-icons-119.svg`,
+    icon: `/images/wiki/icons/service-icons-19.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `MERN Stack Developer`,
@@ -1579,7 +1579,7 @@ export const WIKIS_DATA = [
   {
     id: 20,
     slug: `mean-stack-developer`,
-    icon: `/images/wiki/icons/service-icons-120.svg`,
+    icon: `/images/wiki/icons/service-icons-20.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `MEAN Stack Developer`,
@@ -1662,7 +1662,7 @@ export const WIKIS_DATA = [
   {
     id: 21,
     slug: `pcb-designer`,
-    icon: `/images/wiki/icons/service-icons-121.svg`,
+    icon: `/images/wiki/icons/service-icons-21.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `PCB Designer`,
@@ -1745,7 +1745,7 @@ export const WIKIS_DATA = [
   {
     id: 22,
     slug: `software-developer`,
-    icon: `/images/wiki/icons/service-icons-122.svg`,
+    icon: `/images/wiki/icons/service-icons-22.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Software Developer`,
@@ -1828,7 +1828,7 @@ export const WIKIS_DATA = [
   {
     id: 23,
     slug: `python-developer`,
-    icon: `/images/wiki/icons/service-icons-123.svg`,
+    icon: `/images/wiki/icons/service-icons-23.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Python Developer`,
@@ -1911,7 +1911,7 @@ export const WIKIS_DATA = [
   {
     id: 24,
     slug: `next-js-developer`,
-    icon: `/images/wiki/icons/service-icons-124.svg`,
+    icon: `/images/wiki/icons/service-icons-24.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Next.js Developer`,
@@ -1994,7 +1994,7 @@ export const WIKIS_DATA = [
   {
     id: 25,
     slug: `firmware-developer`,
-    icon: `/images/wiki/icons/service-icons-125.svg`,
+    icon: `/images/wiki/icons/service-icons-25.svg`,
     iconHeight: 30,
     iconWidth: 30,
     title: `Firmware Developer`,
