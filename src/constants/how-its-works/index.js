@@ -33,3 +33,33 @@ export const HR_FIRM_DATA = {
     },
   ],
 };
+
+export const CHOOSE_US = {
+  heading: 'Choose Us If You Want to Hire Professional Talent In Minutes',
+  subHeading:
+    'Dont go anywhere else if you entail the need for a perfect human resource friend. Our team has lined up creative and diligent professionals who have proven themselves in the market. Let’s build trust together and boost your business.',
+  image: '/images/how-its-works/choose.png',
+  list: [
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Hire a Professional in a Few Steps.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Support Your Workplace With Talented Professionals.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Spread Your Network Worldwide.',
+    },
+
+    {
+      icon: '/images/whatwedo/true.svg',
+      content: 'Establish a Strong Team of Outsourced Employees.',
+    },
+    {
+      icon: '/images/whatwedo/true.svg',
+      content: 'Beat the Competition like a Pro.',
+    },
+  ],
+};
