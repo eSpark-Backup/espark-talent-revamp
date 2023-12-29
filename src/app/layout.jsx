@@ -19,9 +19,9 @@ import { FOOTER_DATA } from '@/constants/global/footer';
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const currentTheme = isDarkTheme ? darkTheme : lightTheme;
-  const toggleTheme = () => {
-    setIsDarkTheme((prevTheme) => !prevTheme);
-  };
+  // const toggleTheme = () => {
+  //   setIsDarkTheme((prevTheme) => !prevTheme);
+  // };
   return (
     <html lang="en">
       <Head>
@@ -36,7 +36,11 @@ export default function RootLayout({ children }) {
             <ThemeProvider theme={currentTheme}>
               <CssBaseline />
               <Header />
-              <Box toggleTheme={toggleTheme}>{children}</Box>
+              <Box
+              // toggleTheme={toggleTheme}
+              >
+                {children}
+              </Box>
               <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
