@@ -1,7 +1,10 @@
 import React from 'react';
+
 import { Box, Container, Grid, Typography } from '@mui/material';
-import Title from './Title';
 import Image from 'next/image';
+
+import Title from '@/components/how-it-work/Title.jsx';
+import HRFirmSuccessSlider from '@/components/how-it-work/HRFirmSuccessSlider.jsx';
 
 const HRFirmSuccess = ({ hrFirm }) => {
   const { heading, subHeading, card } = hrFirm;
@@ -9,7 +12,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
     <Box>
       <Container>
         <Title heading={heading} subHeading={subHeading} />
-        <Grid container>
+        <Grid container className="hrFirmDesktop">
           {card?.map((item, index) => (
             <Grid item md={6} key={index}>
               <Box
@@ -17,7 +20,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   borderRadius: '13.764px',
                   border: '0.918px solid #E5E5E5',
                   background: '#FFF',
-                  width: { md: '683.614px', sm: 'auto' },
+                  width: { lg: '683.614px' },
                   height: '218.584px',
                   padding: ' 28.447px 17.435px 35.788px 17.435px',
                   display: 'center',
@@ -74,6 +77,9 @@ const HRFirmSuccess = ({ hrFirm }) => {
             </Grid>
           ))}
         </Grid>
+        <Box className="hrFirmResponsive">
+          <HRFirmSuccessSlider card={card} />
+        </Box>
       </Container>
     </Box>
   );
