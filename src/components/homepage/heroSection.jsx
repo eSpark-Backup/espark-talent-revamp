@@ -4,14 +4,14 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 
-const HeroSection = ({ data }) => {
+const HeroSection = ({ data, innerData }) => {
   return (
     <>
       <Box
         sx={{
-          py: `${data?.spacing}`,
-          background: `${data?.bgColor}`,
-          backgroundImage: `url(${data?.bgImage})`,
+          py: `${innerData?.spacing || data?.spacing}`,
+          background: `${innerData?.bgColor || data?.bgColor}`,
+          backgroundImage: `url(${innerData?.bgImage || data?.bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -25,28 +25,28 @@ const HeroSection = ({ data }) => {
               flexDirection: { xs: 'column-reverse', sm: 'row' },
             }}
           >
-            <Grid item xs={12} sm={6} sx={{ pr: { xs: '0', sm: '10%' } }}>
+            <Grid item xs={12} sm={6} sx={{}}>
               {data?.title && (
                 <Typography
-                  variant={data?.titleVariant}
-                  color={data?.titleColor}
+                  variant={innerData?.titleVariant || data?.titleVariant}
+                  color={innerData?.titleColor || data?.titleColor}
                 >
-                  {data?.title}
+                  {innerData?.title || data?.title}
                 </Typography>
               )}
               {data?.description && (
                 <Typography
-                  variant={data?.descVarient}
-                  color={data?.descColor}
+                  variant={innerData?.descVarient || data?.descVarient}
+                  color={innerData?.descColor || data?.descColor}
                   sx={{ py: '10px' }}
                 >
-                  {data?.description}
+                  {innerData?.description || data?.description}
                 </Typography>
               )}
-              {data?.button && data.button.label && (
+              {data?.button && innerData?.button.label && (
                 <Button
                   variant="secondary"
-                  href={data?.button?.link}
+                  href={innerData?.button?.link || data?.button?.link}
                   sx={{
                     py: '10px',
                     px: '30px',
@@ -62,7 +62,7 @@ const HeroSection = ({ data }) => {
                       fontSize: '17px',
                     }}
                   >
-                    {data?.button?.label}
+                    {innerData?.button?.label || data?.button?.label}
                   </Typography>
                 </Button>
               )}
@@ -79,10 +79,10 @@ const HeroSection = ({ data }) => {
                 }}
               >
                 <Image
-                  src={data?.image}
-                  alt={data?.imageAlt}
-                  width={data?.imageWidth}
-                  height={data?.imageHeight}
+                  src={innerData?.image || data?.image}
+                  alt={innerData?.imageAlt || data?.imageAlt}
+                  width={innerData?.imageWidth || data?.imageWidth}
+                  height={innerData?.imageHeight || data?.imageHeight}
                 />
               </Grid>
             )}
