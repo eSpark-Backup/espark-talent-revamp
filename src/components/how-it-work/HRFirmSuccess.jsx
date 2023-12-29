@@ -1,0 +1,88 @@
+import React from 'react';
+
+import { Box, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+
+import Title from '@/components/how-it-work/Title.jsx';
+import HRFirmSuccessSlider from '@/components/how-it-work/HRFirmSuccessSlider.jsx';
+
+const HRFirmSuccess = ({ hrFirm }) => {
+  const { heading, subHeading, card } = hrFirm;
+  return (
+    <Box>
+      <Container>
+        <Title heading={heading} subHeading={subHeading} />
+        <Grid container className="hrFirmDesktop">
+          {card?.map((item, index) => (
+            <Grid item md={6} key={index}>
+              <Box
+                sx={{
+                  borderRadius: '13.764px',
+                  border: '0.918px solid #E5E5E5',
+                  background: '#FFF',
+                  width: { lg: '683.614px' },
+                  height: '218.584px',
+                  padding: ' 28.447px 17.435px 35.788px 17.435px',
+                  display: 'center',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  m: 1,
+                }}
+              >
+                <Box sx={{ display: 'flex' }}>
+                  <Box
+                    sx={{
+                      width: { lg: '340px', md: '260px' },
+                      height: 'auto',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      mx: 2,
+                    }}
+                  >
+                    <Image
+                      src={item.image}
+                      width={150}
+                      height={100}
+                      alt={item.alt}
+                    />
+                  </Box>
+                  <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
+                    <Typography
+                      sx={{
+                        color: '#09114A',
+                        fontSize: '18.353px',
+                        fontWeight: 600,
+                        fontStyle: 'normal',
+                        lineHeight: '24.225px',
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        color: '#001C63',
+                        textAlign: 'justify',
+                        fontSize: '16.517px',
+                        fontWeight: 400,
+                        fontStyle: 'normal',
+                        lineHeight: { lg: '27.896px', md: '25px' },
+                      }}
+                    >
+                      {item.description}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+        <Box className="hrFirmResponsive">
+          <HRFirmSuccessSlider card={card} />
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+export default HRFirmSuccess;
