@@ -1,9 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Pagination, PaginationItem } from '@mui/material';
 
 import {
   DESCRIPTIONS,
@@ -15,20 +16,22 @@ import {
 } from '@/constants/home-page/blogSections';
 
 const BlogCards = () => {
-  const [visibleItems, setVisibleItems] = useState(3);
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 6;
 
-  const handleShowAllBlogs = () => {
-    setVisibleItems((prevVisibleItems) =>
-      prevVisibleItems === 3 ? blogData.length : 3
-    );
+  const handleChangePage = (event, value) => {
+    setPage(value);
   };
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
 
   return (
     <Box sx={{ my: 4 }}>
       <Container>
         <Grid container columnSpacing={7} rowSpacing={4}>
-          {blogData?.slice(0, visibleItems)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+          {blogData?.slice(startIndex, endIndex)?.map((item, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>\
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
                 <Box className="image" sx={{ display: 'flex' }}>
@@ -91,9 +94,19 @@ const BlogCards = () => {
                   </Link>
                 </Box>
               </Box>
-            </Grid>
+             </Grid>
           ))}
         </Grid>
+        {blogData.length > itemsPerPage && (
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+            <Pagination
+              count={Math.ceil(blogData.length / itemsPerPage)}
+              page={page}
+              onChange={handleChangePage}
+              color="primary"
+            />
+          </Box>
+        )}
       </Container>
     </Box>
   );
