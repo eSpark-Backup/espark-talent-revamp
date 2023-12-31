@@ -37,3 +37,20 @@ export const WIKI_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+
+export const BLOGS_HERO_DATA = {
+  title: 'eSpark Talent Knowledge Junction.',
+  description:
+    'Dive into our blogs and gain insights about every modern trend!.',
+  image: '/images/blog/blogs-main.png',
+  imageAlt: '',
+  imageWidth: 435,
+  imageHeight: 420,
+  // bgColor: '#3B5998, #029894',
+  bgImage: '/images/blog/blogs-main-bg.png',
+  spacing: '2%',
+  titleVariant: 'h1',
+  titleColor: '#fff',
+  descVarient: 'body1',
+  descColor: '#fff',
+};

@@ -25,41 +25,17 @@ const BlogCards = () => {
 
   return (
     <Box sx={{ my: 4 }}>
-      <Box sx={{ my: 4 }}>
-        <Typography
-          sx={{
-            color: '#001C63',
-            textAlign: 'center',
-            fontSize: '32px',
-            fontWeight: 600,
-            lineHeight: '42px',
-          }}
-        >
-          {TITLE}
-        </Typography>
-        <Typography
-          sx={{
-            color: '#001C63',
-            textAlign: 'center',
-            fontSize: '19px',
-            fontWeight: 400,
-            lineHeight: '27.863px',
-          }}
-        >
-          {DESCRIPTIONS}
-        </Typography>
-      </Box>
-
       <Container>
         <Grid container columnSpacing={7} rowSpacing={4}>
           {blogData?.slice(0, visibleItems)?.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <Box className="single-blog-post">
+                <Link href={`/blogs/${item?.id}`}>
                 <Box className="image" sx={{ display: 'flex' }}>
                   <span className="d-block" style={{ marginRight: '30px' }}>
                     <Image
-                      src={item.imageLink}
-                      alt={item.title}
+                      src={item?.imageLink}
+                      alt={item?.title}
                       width={900}
                       height={100}
                       style={{ borderRadius: '15px' }}
@@ -72,8 +48,10 @@ const BlogCards = () => {
                       day: '2-digit',
                     }).format(new Date('2023-09-27T00:36:00.000Z'))}
                   </span>
-                </Box>
+                  </Box>
+                </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
+                  <Link href={`/blogs/${item?.id}`}>
                   <Typography
                     sx={{
                       color: '#09114A',
@@ -83,7 +61,8 @@ const BlogCards = () => {
                     }}
                   >
                     {item?.title}
-                  </Typography>
+                    </Typography>
+                    </Link>
                   <Typography
                     sx={{
                       color: '#6F76A8',
@@ -96,7 +75,7 @@ const BlogCards = () => {
                   >
                     {item?.mainParagraph}
                   </Typography>
-                  <Link href={`/blogs/`}>
+                  <Link href={`/blogs/${item?.id}`}>
                     <span className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
@@ -115,33 +94,6 @@ const BlogCards = () => {
             </Grid>
           ))}
         </Grid>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            my: 5,
-          }}
-        >
-          <Button
-            variant=""
-            size="large"
-            sx={{
-              fontWeight: 700,
-              backgroundColor: '#001C63',
-              color: '#fff',
-              px: '20px',
-              py: '10px',
-              '&:hover': {
-                backgroundColor: '#001C63',
-                color: '#fff',
-              },
-            }}
-            onClick={handleShowAllBlogs}
-          >
-            {visibleItems === 3 ? VIEW_ALL_BLOGS : VIEW_LESS_BLOGS}
-          </Button>
-        </Box>
       </Container>
     </Box>
   );
