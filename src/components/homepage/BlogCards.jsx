@@ -12,10 +12,10 @@ import {
   TITLE,
   VIEW_ALL_BLOGS,
   VIEW_LESS_BLOGS,
-  blogData,
+  data,
 } from '@/constants/home-page/blogSections';
 
-const BlogCards = () => {
+const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -30,42 +30,43 @@ const BlogCards = () => {
     <Box sx={{ my: 4 }}>
       <Container>
         <Grid container columnSpacing={7} rowSpacing={4}>
-          {blogData?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>\
+          {data?.slice(startIndex, endIndex)?.map((item, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              \
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
-                <Box className="image" sx={{ display: 'flex' }}>
-                  <span className="d-block" style={{ marginRight: '30px' }}>
-                    <Image
-                      src={item?.imageLink}
-                      alt={item?.title}
-                      width={900}
-                      height={100}
-                      style={{ borderRadius: '15px' }}
-                    />
-                  </span>
-                  <span className="date">
-                    {Intl.DateTimeFormat('en-US', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: '2-digit',
-                    }).format(new Date('2023-09-27T00:36:00.000Z'))}
-                  </span>
+                  <Box className="image" sx={{ display: 'flex' }}>
+                    <span className="d-block" style={{ marginRight: '30px' }}>
+                      <Image
+                        src={item?.imageLink}
+                        alt={item?.title}
+                        width={900}
+                        height={100}
+                        style={{ borderRadius: '15px' }}
+                      />
+                    </span>
+                    <span className="date">
+                      {Intl.DateTimeFormat('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: '2-digit',
+                      }).format(new Date('2023-09-27T00:36:00.000Z'))}
+                    </span>
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
                   <Link href={`/blogs/${item?.id}`}>
-                  <Typography
-                    sx={{
-                      color: '#09114A',
-                      fontSize: '23.49px',
-                      fontWeight: 600,
-                      lineHeight: '26px',
-                    }}
-                  >
-                    {item?.title}
+                    <Typography
+                      sx={{
+                        color: '#09114A',
+                        fontSize: '23.49px',
+                        fontWeight: 600,
+                        lineHeight: '26px',
+                      }}
+                    >
+                      {item?.title}
                     </Typography>
-                    </Link>
+                  </Link>
                   <Typography
                     sx={{
                       color: '#6F76A8',
@@ -94,13 +95,13 @@ const BlogCards = () => {
                   </Link>
                 </Box>
               </Box>
-             </Grid>
+            </Grid>
           ))}
         </Grid>
-        {blogData.length > itemsPerPage && (
+        {data.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(blogData.length / itemsPerPage)}
+              count={Math.ceil(data.length / itemsPerPage)}
               page={page}
               onChange={handleChangePage}
               color="primary"

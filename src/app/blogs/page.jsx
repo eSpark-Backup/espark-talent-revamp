@@ -3,13 +3,13 @@ import BlogCards from '@/components/homepage/BlogCards';
 import HeroSection from '@/components/homepage/heroSection';
 
 import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
+import { BLOGS_DATA } from '@/constants/blogs';
 
 const page = () => {
   return (
     <>
       <HeroSection data={BLOGS_HERO_DATA} />
-      <BlogCards />
-
+      <BlogCards data={BLOGS_DATA} />
     </>
   );
 };
