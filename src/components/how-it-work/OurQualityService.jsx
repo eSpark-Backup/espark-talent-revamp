@@ -10,40 +10,55 @@ const OurQualityService = ({ ourQualityService }) => {
           <Grid item md={6}>
             <Grid container spacing={2}>
               {card?.map((item, index) => (
-                <Grid item md={6} key={index}>
+                <Grid item xs={12} md={6} key={index}>
                   <Box
                     sx={{
                       border: '1px solid #E5E5E5',
                       borderRadius: '5px',
                       height: '80px',
-
                       display: 'flex',
                       alignItems: 'center',
                       alignContent: 'center',
                       justifyContent: 'center',
+                      flexDirection: 'column',
                     }}
                   >
-                    <Typography sx={{}}>{item.content}</Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{ textAlign: 'center', fontWeight: 600 }}
+                    >
+                      {item.content}
+                    </Typography>
                   </Box>
                 </Grid>
               ))}
             </Grid>
           </Grid>
-          <Grid item md={6}>
-            <Typography
-              variant="h2"
-              color="secondary"
-              sx={{ textAlign: 'right', flexWrap: 'wrap' }}
-            >
-              {heading}
-            </Typography>
-            <Typography
-              variant="body1"
-              color="secondary"
-              sx={{ textAlign: 'right' }}
-            >
-              {subHeading}
-            </Typography>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: 'flex',
+              justifyContent: { lg: 'right', xs: 'center' },
+            }}
+          >
+            <Box sx={{ width: '80%', alignItems: 'center' }}>
+              <Typography
+                variant="h2"
+                color="secondary"
+                sx={{ textAlign: 'right', flexWrap: 'wrap' }}
+              >
+                {heading}
+              </Typography>
+              <Typography
+                variant="body1"
+                color="secondary"
+                sx={{ textAlign: 'right' }}
+              >
+                {subHeading}
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>
