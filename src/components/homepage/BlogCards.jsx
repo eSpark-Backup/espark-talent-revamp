@@ -1,9 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Pagination, PaginationItem } from '@mui/material';
 
 import {
   DESCRIPTIONS,
@@ -11,79 +12,61 @@ import {
   TITLE,
   VIEW_ALL_BLOGS,
   VIEW_LESS_BLOGS,
-  blogData,
+  data,
 } from '@/constants/home-page/blogSections';
 
-const BlogCards = () => {
-  const [visibleItems, setVisibleItems] = useState(3);
+const BlogCards = ({ data }) => {
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 6;
 
-  const handleShowAllBlogs = () => {
-    setVisibleItems((prevVisibleItems) =>
-      prevVisibleItems === 3 ? blogData.length : 3
-    );
+  const handleChangePage = (event, value) => {
+    setPage(value);
   };
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
 
   return (
     <Box sx={{ my: 4 }}>
-      <Box sx={{ my: 4 }}>
-        <Typography
-          sx={{
-            color: '#001C63',
-            textAlign: 'center',
-            fontSize: '32px',
-            fontWeight: 600,
-            lineHeight: '42px',
-          }}
-        >
-          {TITLE}
-        </Typography>
-        <Typography
-          sx={{
-            color: '#001C63',
-            textAlign: 'center',
-            fontSize: '19px',
-            fontWeight: 400,
-            lineHeight: '27.863px',
-          }}
-        >
-          {DESCRIPTIONS}
-        </Typography>
-      </Box>
-
       <Container>
         <Grid container columnSpacing={7} rowSpacing={4}>
-          {blogData?.slice(0, visibleItems)?.map((item, index) => (
+          {data?.slice(startIndex, endIndex)?.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
+              \
               <Box className="single-blog-post">
-                <Box className="image" sx={{ display: 'flex' }}>
-                  <span className="d-block" style={{ marginRight: '30px' }}>
-                    <Image
-                      src={item.imageLink}
-                      alt={item.title}
-                      width={900}
-                      height={100}
-                      style={{ borderRadius: '15px' }}
-                    />
-                  </span>
-                  <span className="date">
-                    {Intl.DateTimeFormat('en-US', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: '2-digit',
-                    }).format(new Date('2023-09-27T00:36:00.000Z'))}
-                  </span>
-                </Box>
+                <Link href={`/blogs/${item?.id}`}>
+                  <Box className="image" sx={{ display: 'flex' }}>
+                    <span className="d-block" style={{ marginRight: '30px' }}>
+                      <Image
+                        src={item?.imageLink}
+                        alt={item?.title}
+                        width={900}
+                        height={100}
+                        style={{ borderRadius: '15px' }}
+                      />
+                    </span>
+                    <span className="date">
+                      {Intl.DateTimeFormat('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: '2-digit',
+                      }).format(new Date('2023-09-27T00:36:00.000Z'))}
+                    </span>
+                  </Box>
+                </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Typography
-                    sx={{
-                      color: '#09114A',
-                      fontSize: '23.49px',
-                      fontWeight: 600,
-                      lineHeight: '26px',
-                    }}
-                  >
-                    {item?.title}
-                  </Typography>
+                  <Link href={`/blogs/${item?.id}`}>
+                    <Typography
+                      sx={{
+                        color: '#09114A',
+                        fontSize: '23.49px',
+                        fontWeight: 600,
+                        lineHeight: '26px',
+                      }}
+                    >
+                      {item?.title}
+                    </Typography>
+                  </Link>
                   <Typography
                     sx={{
                       color: '#6F76A8',
@@ -96,7 +79,7 @@ const BlogCards = () => {
                   >
                     {item?.mainParagraph}
                   </Typography>
-                  <Link href={`/blogs/`}>
+                  <Link href={`/blogs/${item?.id}`}>
                     <span className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
@@ -115,33 +98,16 @@ const BlogCards = () => {
             </Grid>
           ))}
         </Grid>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            my: 5,
-          }}
-        >
-          <Button
-            variant=""
-            size="large"
-            sx={{
-              fontWeight: 700,
-              backgroundColor: '#001C63',
-              color: '#fff',
-              px: '20px',
-              py: '10px',
-              '&:hover': {
-                backgroundColor: '#001C63',
-                color: '#fff',
-              },
-            }}
-            onClick={handleShowAllBlogs}
-          >
-            {visibleItems === 3 ? VIEW_ALL_BLOGS : VIEW_LESS_BLOGS}
-          </Button>
-        </Box>
+        {data.length > itemsPerPage && (
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+            <Pagination
+              count={Math.ceil(data.length / itemsPerPage)}
+              page={page}
+              onChange={handleChangePage}
+              color="primary"
+            />
+          </Box>
+        )}
       </Container>
     </Box>
   );
