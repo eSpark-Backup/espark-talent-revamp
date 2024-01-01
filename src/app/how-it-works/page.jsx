@@ -1,10 +1,9 @@
 import React from 'react';
+import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import { HR_FIRM_DATA, OUR_SERVICE } from '@/constants/how-its-works';
 import HeroSection from '@/components/homepage/heroSection';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
-import { HR_FIRM_DATA, OUR_SERVICE } from '@/constants/how-its-works';
 import OurService from '@/components/how-it-work/OurService';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import { HR_FIRM_DATA } from '@/constants/how-its-works';
 
 const page = () => {
   return (
