@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@mui/system';
+import { Box } from '@mui/material';
 import { Button } from '@mui/material';
 
 import { HIRE_A_TALENT } from '@/constants/global/header';
