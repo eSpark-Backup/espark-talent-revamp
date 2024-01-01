@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Box } from '@mui/system';
+import { Box } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useRouter } from 'next/navigation';
 import Container from '@mui/material/Container';
 
 import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
-import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
+import DesktopHeader from '@/components/global/Header/desktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
 
 const Header = () => {
