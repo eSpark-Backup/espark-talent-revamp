@@ -28,7 +28,7 @@ const BlogCards = ({ data }) => {
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
-                    <span className="d-block" style={{ marginRight: '30px' }}>
+                    <span style={{ marginRight: '30px' }}>
                       <Image
                         src={item?.imageLink}
                         alt={item?.title}

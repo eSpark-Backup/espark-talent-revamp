@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import Container from '@mui/material/Container';
 
 import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
-import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
+import DesktopHeader from '@/components/global/Header/desktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
 
 const Header = () => {
