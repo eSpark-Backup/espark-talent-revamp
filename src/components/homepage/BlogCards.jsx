@@ -1,19 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography, Button } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Pagination, PaginationItem } from '@mui/material';
+import { Pagination } from '@mui/material';
 
-import {
-  DESCRIPTIONS,
-  READ_MORE,
-  TITLE,
-  VIEW_ALL_BLOGS,
-  VIEW_LESS_BLOGS,
-  data,
-} from '@/constants/home-page/blogSections';
+import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
@@ -32,11 +25,10 @@ const BlogCards = ({ data }) => {
         <Grid container columnSpacing={7} rowSpacing={4}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              \
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
-                    <span className="d-block" style={{ marginRight: '30px' }}>
+                    <span style={{ marginRight: '30px' }}>
                       <Image
                         src={item?.imageLink}
                         alt={item?.title}
