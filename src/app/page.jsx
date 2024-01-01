@@ -18,10 +18,12 @@ import {
   OUTSOURCE_BENEFITS_DATA,
   PERKS_DATA,
   PROCESS_DATA,
+  OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
 import HomePageBlogs from '@/components/blogs/homePageBlogs';
 
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import ClientSays from '@/components/homepage/ClientSays';
 
 const Home = () => {
   return (
@@ -44,6 +46,7 @@ const Home = () => {
         background={'#F7F8FB'}
       />
       <HomePageBlogs />
+      <ClientSays data={OUR_CLIENT_SAYS} />
       <Faq />
     </>
   );
