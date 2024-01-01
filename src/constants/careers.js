@@ -1,4 +1,4 @@
-export const JOBS_DATA = [
+export const CAREERS_DATA = [
   {
     heading: 'Senior .Net Developer',
     description:
