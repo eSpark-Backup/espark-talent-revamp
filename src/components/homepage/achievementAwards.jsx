@@ -1,50 +1,89 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import { Box, Container, Grid } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 
-import { ACHIEVEMENTS_DATA } from '@/constants/home-page/achievement-awards';
+import TitleParagraph from '@/components/global/titleParagraph';
 
-const AchievementAwards = () => {
+const AchievementAwards = ({ data, design, background }) => {
   return (
     <>
-      <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
-        <Container sx={{ px: '40%' }}>
-          <Box sx={{ pb: '30px' }}>
-            <Typography
-              variant="h2"
-              color="primary"
-              sx={{ textAlign: 'center' }}
+      {design === 2 ? (
+        <Box sx={{ background: background, py: '2.5%' }}>
+          <Container>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                border: '1px solid rgba(170, 169, 169, 0.41)',
+                py: '30px',
+              }}
             >
-              {ACHIEVEMENTS_DATA?.title}
-            </Typography>
-          </Box>
-          <Grid container spacing={2}>
-            <Grid item xs={2} />
-            {ACHIEVEMENTS_DATA.items.map((item, index) => (
-              <Grid
-                key={index}
-                item
-                xs={2}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Image
-                  src={item.image}
-                  height={150}
-                  width={150}
-                  alt={item.alt}
-                />
+              <Grid item xs={6} md={3} lg={3} xl={3}>
+                <TitleParagraph title={data?.title} />
               </Grid>
-            ))}
-            <Grid item xs={2} />
-          </Grid>
-        </Container>
-      </Box>
+              {data?.items?.map((item, index) => (
+                <Grid
+                  key={index}
+                  item
+                  xs={6}
+                  md={3}
+                  lg={2}
+                  xl={2}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Link href={item?.link}>
+                    <Image
+                      src={item?.image}
+                      height={150}
+                      width={150}
+                      alt={item?.alt}
+                    />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </Box>
+      ) : (
+        <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
+          <Container>
+            <TitleParagraph title={data?.title} />
+            <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
+              {data?.items?.map((item, index) => (
+                <Grid
+                  key={index}
+                  item
+                  xs={6}
+                  md={3}
+                  lg={2}
+                  xl={2}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Link href={item?.link}>
+                    <Image
+                      src={item?.image}
+                      height={150}
+                      width={150}
+                      alt={item?.alt}
+                    />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </Box>
+      )}
     </>
   );
 };
