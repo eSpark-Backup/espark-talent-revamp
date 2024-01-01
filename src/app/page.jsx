@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Faq from '@/components/FAQ/Faq';
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
@@ -20,6 +21,9 @@ import {
   PROCESS_DATA,
 } from '@/constants/homepage';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import TitleParagraph from '@/components/global/titleParagraph';
+import { BLOGS_DATA } from '@/constants/blogs';
+import HomePageBlogs from '@/components/blogs/homePageBlogs';
 
 const Home = () => {
   return (
@@ -41,7 +45,7 @@ const Home = () => {
         design={1}
         background={'#F7F8FB'}
       />
-      <BlogCards />
+      <HomePageBlogs />
       <Faq />
     </>
   );

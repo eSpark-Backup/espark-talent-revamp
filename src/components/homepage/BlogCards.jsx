@@ -32,7 +32,6 @@ const BlogCards = ({ data }) => {
         <Grid container columnSpacing={7} rowSpacing={4}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              \
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
@@ -98,7 +97,7 @@ const BlogCards = ({ data }) => {
             </Grid>
           ))}
         </Grid>
-        {data.length > itemsPerPage && (
+        {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
               count={Math.ceil(data.length / itemsPerPage)}
