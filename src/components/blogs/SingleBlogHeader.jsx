@@ -1,17 +1,13 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Link as Link } from '@mui/material';
+import { Container, Grid, Typography, Box, Link as MuiLink, Avatar, Stack } from '@mui/material';
 import Image from 'next/image';
-
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { borderRadius } from '@mui/system';
 
 const SingleBlogHeader = ({ data }) => {
   return (
-    <Grid container spacing={3} justifyContent="center" pt={'3%'}>
-      <Grid item lg={6} md={12}>
-        <Box pb={'10%'}>
-          <Typography variant="h1" fontSize={'40px'}>
+    <Grid container spacing={3} justifyContent="center" pt={{ xs: '5%', md: '3%' }}>
+      <Grid item lg={6} md={6} sm={12} order={{ xs: 2, sm: 2,  md:1}}>
+        <Box pb={{ xs: '5%', md: '10%' }}>
+          <Typography variant="h1" fontSize={{ xs: '28px', md: '40px' }}>
             {data?.mainHeading}
           </Typography>
           <Typography variant="body1">{data?.mainParagraph}</Typography>
@@ -22,24 +18,24 @@ const SingleBlogHeader = ({ data }) => {
               <Avatar
                 alt={data?.postedBy?.alt}
                 src={data?.postedBy?.image}
-                sx={{ width: 65, height: 65 }}
+                sx={{ width: { xs: 45, md: 65 }, height: { xs: 45, md: 65 } }}
               />
             </Stack>
 
             <Box className="title">
               <Typography variant="body1">
                 By
-                <Link href="#" underline="hover">
+                <MuiLink href="#" underline="hover">
                   {data?.postedBy?.name}
-                </Link>
+                </MuiLink>
               </Typography>
               <Typography variant="body2">{data?.postedBy?.date}</Typography>
             </Box>
           </Box>
         </Box>
       </Grid>
-      <Grid item lg={6} md={12}>
-        <Box className="image" px={'5%'}>
+      <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md:2}}>
+        <Box className="image" px={{ xs: '0', md: '5%' }}>
           <Image
             src={data?.bigImageLink}
             alt={data?.altTag}
