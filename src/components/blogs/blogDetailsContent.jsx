@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-  Typography,
-  Box,
-  Link as MuiLink,
-} from '@mui/material';
+import { Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { borderRadius } from '@mui/system';
-import SingleBlogHeader from './SingleBlogHeader';
+
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 
 const BlogDetailsContent = ({ data }) => {
@@ -36,7 +29,13 @@ const BlogDetailsContent = ({ data }) => {
         />
       </Grid>
       <Grid item xs={12} sm={12} md={2}>
-        <Grid container sx={{ px: { xs: '0%', md: '10%' }, pt: { xs: '5%', sm: '5%',md: '0%', } }}>
+        <Grid
+          container
+          sx={{
+            px: { xs: '0%', md: '10%' },
+            pt: { xs: '5%', sm: '5%', md: '0%' },
+          }}
+        >
           {SOCIAL_LINKS_DATA.map((item, index) => (
             <Grid item xs={2} sm={1} md={12} sx={{ p: '10px' }} key={index}>
               <Box>

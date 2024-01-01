@@ -1,19 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography, Button } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Pagination, PaginationItem } from '@mui/material';
+import { Pagination } from '@mui/material';
 
-import {
-  DESCRIPTIONS,
-  READ_MORE,
-  TITLE,
-  VIEW_ALL_BLOGS,
-  VIEW_LESS_BLOGS,
-  data,
-} from '@/constants/home-page/blogSections';
+import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);

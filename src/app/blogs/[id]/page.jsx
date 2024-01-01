@@ -1,18 +1,11 @@
 'use client';
 import React from 'react';
-
-import {
-  Container,
-  Grid,
-  Typography,
-  Box,
-  Link as MuiLink,
-} from '@mui/material';
+import { Container, Box } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import { BLOGS_DATA } from '@/constants/blogs';
-import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
 import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
 import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
+
+import { BLOGS_DATA } from '@/constants/blogs';
 const Page = () => {
   const pathname = usePathname();
   const segments = pathname.split('/');
