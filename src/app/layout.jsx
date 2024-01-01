@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
   const toggleTheme = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
   };
+  console.log(toggleTheme);
   return (
     <html lang="en">
       <Head>
@@ -36,7 +37,11 @@ export default function RootLayout({ children }) {
             <ThemeProvider theme={currentTheme}>
               <CssBaseline />
               <Header />
-              <Box toggleTheme={toggleTheme}>{children}</Box>
+              <Box
+              // toggleTheme={toggleTheme}
+              >
+                {children}
+              </Box>
               <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
