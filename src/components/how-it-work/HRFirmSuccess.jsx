@@ -49,13 +49,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   </Box>
                   <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
                     <Typography
-                      sx={{
-                        color: '#09114A',
-                        fontSize: '18.353px',
-                        fontWeight: 600,
-                        fontStyle: 'normal',
-                        lineHeight: '24.225px',
-                      }}
+                    variant='h4'
                     >
                       {item.title}
                     </Typography>
