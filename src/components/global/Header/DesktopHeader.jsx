@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { Box } from '@mui/system';
-import { Button, Divider, Menu, MenuItem, Typography } from '@mui/material';
-
 import {
   Button,
   Divider,

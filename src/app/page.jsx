@@ -28,7 +28,6 @@ const Home = () => {
     <>
       <HeroSection />
       <AchievementAwards />
-      <FooterCTA />
       <HeroSection data={HP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
@@ -48,6 +47,7 @@ const Home = () => {
       />
       <HomePageBlogs />
       <Faq />
+      <FooterCTA />
     </>
   );
 };

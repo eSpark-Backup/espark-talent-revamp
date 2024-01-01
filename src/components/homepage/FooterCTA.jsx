@@ -83,12 +83,41 @@ const FooterCTA = () => {
                 alt="images"
                 style={{
                   marginTop: '-61px',
+                  zIndex: 1000,
                 }}
               />
             </Box>
           </Grid>
         </Grid>
       </Container>
+      <Box
+        sx={{
+          '@media (max-width: 1770px)': {
+            display: 'none',
+          },
+        }}
+      >
+        <Box sx={{ position: 'relative' }}>
+          <Box sx={{ position: 'absolute', right: -138, top: -403 }}>
+            <Image
+              src={'/images/footer/circleRight.png'}
+              width={360}
+              height={350}
+              alt="images"
+            />
+          </Box>
+        </Box>
+        <Box sx={{ position: 'relative' }}>
+          <Box sx={{ position: 'absolute', left: -138, top: -291 }}>
+            <Image
+              src={'/images/footer/circleLeft.png'}
+              width={360}
+              height={350}
+              alt="images"
+            />
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
