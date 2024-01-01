@@ -4,7 +4,6 @@ import Faq from '@/components/FAQ/Faq';
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import HeroSection from '@/components/homepage/heroSection';
-import BlogCards from '@/components/homepage/BlogCards';
 import OurExperties from '@/components/homepage/ourExperties';
 import OurPerks from '@/components/homepage/ourPerks';
 import OurProcess from '@/components/homepage/ourProcess';
@@ -20,10 +19,9 @@ import {
   PERKS_DATA,
   PROCESS_DATA,
 } from '@/constants/homepage';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import TitleParagraph from '@/components/global/titleParagraph';
-import { BLOGS_DATA } from '@/constants/blogs';
 import HomePageBlogs from '@/components/blogs/homePageBlogs';
+
+import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 
 const Home = () => {
   return (
