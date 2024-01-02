@@ -33,7 +33,57 @@ export const HR_FIRM_DATA = {
     },
   ],
 };
+export const CHOOSE_US = {
+  heading: 'Choose Us If You Want to Hire Professional Talent In Minutes',
+  subHeading:
+    'Dont go anywhere else if you entail the need for a perfect human resource friend. Our team has lined up creative and diligent professionals who have proven themselves in the market. Let’s build trust together and boost your business.',
+  image: '/images/how-its-works/choose.png',
+  list: [
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Hire a Professional in a Few Steps.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Support Your Workplace With Talented Professionals.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Spread Your Network Worldwide.',
+    },
 
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Establish a Strong Team of Outsourced Employees.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Beat the Competition like a Pro.',
+export const OUR_OFFERED_SERVICES = {
+  heading: 'Our Offered Services Comes With Quality  Benefits',
+  subHeading:
+    'Our global human resource services have helped companies to associate with smart employees. Now you can take this opportunity of a lifetime that comes with various advantages.',
+  card: [
+    {
+      content: '24/7 Active Human Resource Assistance.',
+    },
+    {
+      content: 'Cost-Efficient Hiring Services.',
+    },
+    {
+      content: 'Rapid Customer Service.',
+    },
+    {
+      content: 'Full-Time Support of Proven Professionals.',
+    },
+    {
+      content: 'Open to Confirm All Queries',
+    },
+    {
+      content: 'On-Time HR Managing Support.',
+    },
+  ],
+};
 export const OUR_SERVICE = {
   heading: 'Why Companies Trust Our Services?',
   subHeading:
