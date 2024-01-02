@@ -1,6 +1,7 @@
 import React from 'react';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
+  BEST_OUTSOURCING_SOLUTIONS,
   BUSINESS_START_UP,
   OUR_OUTSOURCE,
   OUTSOURCING_SOLUTIONS_DATA,
@@ -24,6 +25,7 @@ const page = () => {
       />
       <OurOutsourcing data={OUR_OUTSOURCE} />
       <TalentIgnite data={BUSINESS_START_UP} />
+      <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
       <OutSourcingSolutions data={OUTSOURCING_SOLUTIONS_DATA} />
     </>
   );
