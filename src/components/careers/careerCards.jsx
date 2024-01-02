@@ -10,9 +10,9 @@ import {
   MenuItem,
 } from '@mui/material';
 import Link from 'next/link';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-import PaginationItem from '@mui/material/PaginationItem';
+import { Pagination } from '@mui/material';
+import { Stack } from '@mui/material';
+import { PaginationItem } from '@mui/material';
 
 const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');

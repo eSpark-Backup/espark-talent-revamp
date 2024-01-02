@@ -9,7 +9,7 @@ import {
   ListItemIcon,
   Button,
 } from '@mui/material';
-import Grid from '@mui/material/Grid';
+import { Grid } from '@mui/material';
 
 import Image from 'next/image';
 import Link from 'next/link';

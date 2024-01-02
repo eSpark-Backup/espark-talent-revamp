@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
-import Container from '@mui/material/Container';
+import { Container } from '@mui/material';
 import Image from 'next/image';
 import SwiperCore, {
   EffectFade,
