@@ -4,7 +4,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Pagination } from '@mui/material';
+import { Pagination, PaginationItem } from '@mui/material'; // Import PaginationItem
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
@@ -93,11 +93,30 @@ const BlogCards = ({ data }) => {
         {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(data.length / itemsPerPage)}
-              page={page}
+                count={Math.ceil(data.length / itemsPerPage)}
+                page={page}
               onChange={handleChangePage}
-              color="primary"
-            />
+                color="primary"
+                size="large"
+                // showFirstButton
+                // showLastButton
+                sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    {...item}
+                    sx={{
+                      borderRadius: '10px',
+                      color: 'primary.main',
+                      '&.Mui-selected': {
+                        backgroundColor: 'primary.main',
+                        color: 'white',
+                      },
+                    }}
+                  />
+                )}
+                // prevIcon={<KeyboardArrowLeft />}
+                // nextIcon={<KeyboardArrowRight />}
+              />
           </Box>
         )}
       </Container>
