@@ -43,7 +43,7 @@ export const CAREERS_DATA = [
   //     'Senior React Js Developer',
   //   ],
   // },
-   {
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -86,7 +86,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -129,7 +130,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -172,7 +174,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -215,7 +218,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -258,7 +262,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -301,7 +306,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -344,7 +350,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -387,7 +394,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -430,7 +438,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -473,7 +482,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -516,7 +526,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',
@@ -559,7 +570,8 @@ export const CAREERS_DATA = [
       'React Js Developer',
       'Senior React Js Developer',
     ],
-  }, {
+  },
+  {
     heading: 'Senior .Net Developer',
     description:
       'eSpark Talent is looking for a Senior .NET Developer who is a seasoned professional with in -depth knowledge and expertise in developing web applications using ASP.NET, .NET Core, and .NET Entity Framework. They should also be proficient in working with Microservices architecture, Razor Pages, and have experience with various databases, including SQLite.',

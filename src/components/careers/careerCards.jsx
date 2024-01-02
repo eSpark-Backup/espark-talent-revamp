@@ -12,8 +12,6 @@ import {
 import Link from 'next/link';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import PaginationItem from '@mui/material/PaginationItem';
 
 const CareerCards = ({ data }) => {
@@ -21,7 +19,11 @@ const CareerCards = ({ data }) => {
   const [page, setPage] = useState(1);
 
   const jobCategories = Array.from(
-    new Set(data.flatMap((item) => (Array.isArray(item.category) ? item.category : [item.category])))
+    new Set(
+      data.flatMap((item) =>
+        Array.isArray(item.category) ? item.category : [item.category]
+      )
+    )
   );
 
   const filteredData =
@@ -36,7 +38,7 @@ const CareerCards = ({ data }) => {
 
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
-    setPage(1); 
+    setPage(1);
   };
 
   return (
@@ -61,18 +63,26 @@ const CareerCards = ({ data }) => {
             </Select>
           </Box>
           {paginatedData.map((item, index) => (
-             <Grid
+            <Grid
               key={index}
               container
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 borderTop: '.5px solid #ced4da',
-                py: { lg: '3%', xs: '10%', sm: '10%' }, my: { xs: '20px', sm: '20px' },
-                borderRadius: { xs: '10px', sm: '10px' }
+                py: { lg: '3%', xs: '10%', sm: '10%' },
+                my: { xs: '20px', sm: '20px' },
+                borderRadius: { xs: '10px', sm: '10px' },
               }}
             >
-              <Grid item xs={12} sm={6} md={4} lg={3} px={{ xs: '10px', sm: '20px' }}>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                px={{ xs: '10px', sm: '20px' }}
+              >
                 <Typography variant="h3" color="secondary">
                   {item?.heading}
                 </Typography>
@@ -80,13 +90,18 @@ const CareerCards = ({ data }) => {
                   {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6} md={8} lg={7} px={{ xs: '10px', sm: '20px' }}>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={8}
+                lg={7}
+                px={{ xs: '10px', sm: '20px' }}
+              >
                 <Typography variant="h3" color="secondary">
                   Description
                 </Typography>
-                <Typography variant="body1">
-                   {item?.description}
-                </Typography>
+                <Typography variant="body1">{item?.description}</Typography>
               </Grid>
               <Grid
                 item
