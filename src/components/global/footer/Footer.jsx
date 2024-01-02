@@ -2,7 +2,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import { Box, Divider, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import { Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
