@@ -6,8 +6,8 @@ import {
   ListItemText,
   ListItemIcon,
 } from '@mui/material';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import { Container } from '@mui/material';
+import { Grid } from '@mui/material';
 import Image from 'next/image';
 
 const OutSourcingList = ({ data }) => {

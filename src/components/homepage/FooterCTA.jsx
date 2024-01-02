@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
-import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
-
-const FooterCTA = () => {
+const FooterCTA = ({ data }) => {
   return (
     <Box
       sx={{
@@ -32,7 +31,7 @@ const FooterCTA = () => {
                   my: 1,
                 }}
               >
-                {FOOTER_CTA_DATA.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
@@ -43,29 +42,31 @@ const FooterCTA = () => {
                   my: 2,
                 }}
               >
-                {FOOTER_CTA_DATA.description}
+                {data?.description}
               </Typography>
-              <Button
-                sx={{
-                  py: '13px',
-                  px: '15px',
-                  backgroundColor: '#fff',
-                  '&:hover': {
-                    backgroundColor: '#fff',
-                  },
-                }}
-              >
-                <Typography
-                  variant="body1"
+              <Link href={data?.buttonLink}>
+                <Button
                   sx={{
-                    fontWeight: 'bold',
-                    fontSize: '17px',
-                    color: '#09114A',
+                    py: '13px',
+                    px: '15px',
+                    backgroundColor: '#fff',
+                    '&:hover': {
+                      backgroundColor: '#fff',
+                    },
                   }}
                 >
-                  {FOOTER_CTA_DATA.buttonLabel}
-                </Typography>
-              </Button>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontWeight: 'bold',
+                      fontSize: '17px',
+                      color: '#09114A',
+                    }}
+                  >
+                    {data?.buttonLabel}
+                  </Typography>
+                </Button>
+              </Link>
             </Box>
           </Grid>
           <Grid item xs={12} sm={5} sx={{}}>
@@ -73,11 +74,11 @@ const FooterCTA = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: { xs: 'center', lg: 'start' },
+                justifyContent: { xs: 'center', lg: 'end' },
               }}
             >
               <Image
-                src={'/images/footer/footerCta.png'}
+                src={data?.image}
                 width={360}
                 height={350}
                 alt="images"

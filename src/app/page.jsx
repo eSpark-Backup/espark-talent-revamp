@@ -1,6 +1,4 @@
 import React from 'react';
-import FooterCTA from '@/components/homepage/FooterCTA';
-import Faq from '@/components/FAQ/Faq';
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import HeroSection from '@/components/homepage/heroSection';
@@ -9,6 +7,9 @@ import OurPerks from '@/components/homepage/ourPerks';
 import OurProcess from '@/components/homepage/ourProcess';
 import OutSourceBenefits from '@/components/homepage/outSourceBenefits';
 import BenefitsWorks from '@/components/homepage/benefitsWorks';
+import HomePageBlogs from '@/components/blogs/homePageBlogs';
+import ClientSays from '@/components/homepage/ClientSays';
+import Faq from '@/components/FAQ/Faq';
 
 import {
   ACHIEVEMENTS_DATA,
@@ -20,16 +21,13 @@ import {
   PROCESS_DATA,
   OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
-import HomePageBlogs from '@/components/blogs/homePageBlogs';
-
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import ClientSays from '@/components/homepage/ClientSays';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
+import { BLOGS_DATA } from '@/constants/blogs';
 
 const Home = () => {
   return (
     <>
-      <HeroSection />
-      <AchievementAwards />
       <HeroSection data={HP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
@@ -47,10 +45,9 @@ const Home = () => {
         design={1}
         background={'#F7F8FB'}
       />
-      <HomePageBlogs />
+      <HomePageBlogs data={BLOGS_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      <Faq />
-      <FooterCTA />
+      <Faq data={FAQ_DATA} />
     </>
   );
 };

@@ -2,15 +2,13 @@
 import React, { useState } from 'react';
 import Title from './Title';
 import Image from 'next/image';
-import Accordion from '@mui/material/Accordion';
-import Container from '@mui/material/Container';
+import { Accordion } from '@mui/material';
+import { Container } from '@mui/material';
 import { Box, Grid, Typography } from '@mui/material';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
+import { AccordionDetails } from '@mui/material';
+import { AccordionSummary } from '@mui/material';
 
-import { FAQ_DATA, TITLE } from '@/constants/home-page/faq-section';
-
-const Faq = () => {
+const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState([]);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -23,9 +21,9 @@ const Faq = () => {
   return (
     <Box sx={{ mt: 40 }} id="faq">
       <Container>
-        <Title title={TITLE} />
+        <Title title={data?.title} />
         <Grid container>
-          {FAQ_DATA?.map((item, index) => {
+          {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;
             return (
               <Grid
