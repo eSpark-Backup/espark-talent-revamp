@@ -57,8 +57,8 @@ export const OUR_OFFERED_SERVICES = {
     {
       content: 'On-Time HR Managing Support.',
     },
-  ]
-}
+  ],
+};
 export const OUR_SERVICE = {
   heading: 'Why Companies Trust Our Services?',
   subHeading:
