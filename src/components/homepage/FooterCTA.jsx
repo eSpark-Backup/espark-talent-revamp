@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 const FooterCTA = ({ data }) => {
@@ -43,27 +44,28 @@ const FooterCTA = ({ data }) => {
               >
                 {data?.description}
               </Typography>
-              <Button
-                sx={{
-                  py: '13px',
-                  px: '15px',
-                  backgroundColor: '#fff',
-                  '&:hover': {
-                    backgroundColor: '#fff',
-                  },
-                }}
-              >
-                <Typography
-                  variant="body1"
+              <Link href={data?.buttonLink}>
+                <Button
                   sx={{
-                    fontWeight: 'bold',
-                    fontSize: '17px',
-                    color: '#09114A',
+                    py: '13px',
+                    px: '15px',
+                    backgroundColor: '#fff',
+                    '&:hover': {
+                      backgroundColor: '#fff',
+                    },
                   }}
-                >
+                ><Typography
+                    variant="body1"
+                    sx={{
+                      fontWeight: 'bold',
+                      fontSize: '17px',
+                      color: '#09114A',
+                    }}
+                  >
                   {data?.buttonLabel}
                 </Typography>
               </Button>
+              </Link>
             </Box>
           </Grid>
           <Grid item xs={12} sm={5} sx={{}}>
@@ -71,11 +73,11 @@ const FooterCTA = ({ data }) => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: { xs: 'center', lg: 'start' },
+                justifyContent: { xs: 'center', lg: 'end' },
               }}
             >
               <Image
-                src={'/images/footer/footerCta.png'}
+                src={data?.image}
                 width={360}
                 height={350}
                 alt="images"
