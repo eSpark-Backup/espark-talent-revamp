@@ -47,14 +47,26 @@ const OurQualityService = ({ ourQualityService }) => {
               <Typography
                 variant="h2"
                 color="secondary"
-                sx={{ textAlign: 'right', flexWrap: 'wrap', lineHeight: '56px', fontSize: '32px', fontWeight: 700 }}
+                sx={{
+                  textAlign: 'right',
+                  flexWrap: 'wrap',
+                  lineHeight: '56px',
+                  fontSize: '32px',
+                  fontWeight: 700,
+                }}
               >
                 {heading}
               </Typography>
               <Typography
                 variant="body1"
                 color="secondary"
-                sx={{ textAlign: 'right', my: '20px', lineHeight: '30.4px', fontSize: '16px', fontWeight: 400 }}
+                sx={{
+                  textAlign: 'right',
+                  my: '20px',
+                  lineHeight: '30.4px',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                }}
               >
                 {subHeading}
               </Typography>
