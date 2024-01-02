@@ -8,6 +8,10 @@ import {
 import HeroSection from '@/components/homepage/heroSection';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
 import ChooseUs from '@/components/how-it-work/ChooseUs';
+import { HR_FIRM_DATA, OUR_SERVICE, OUR_OFFERED_SERVICES } from '@/constants/how-its-works';
+import HeroSection from '@/components/homepage/heroSection';
+import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';;
+import OurQualityService from '@/components/how-it-work/OurQualityService';
 import OurService from '@/components/how-it-work/OurService';
 
 const page = () => {
@@ -17,6 +21,7 @@ const page = () => {
       <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
       <ChooseUs chooseUs={CHOOSE_US} />
       <OurService ourService={OUR_SERVICE} />
+      <OurQualityService ourQualityService={OUR_OFFERED_SERVICES} />
     </>
   );
 };

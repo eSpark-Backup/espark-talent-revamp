@@ -33,7 +33,6 @@ export const HR_FIRM_DATA = {
     },
   ],
 };
-
 export const CHOOSE_US = {
   heading: 'Choose Us If You Want to Hire Professional Talent In Minutes',
   subHeading:
@@ -60,6 +59,28 @@ export const CHOOSE_US = {
     {
       icon: '/images/how-its-works/true.svg',
       content: 'Beat the Competition like a Pro.',
+export const OUR_OFFERED_SERVICES = {
+  heading: 'Our Offered Services Comes With Quality  Benefits',
+  subHeading:
+    'Our global human resource services have helped companies to associate with smart employees. Now you can take this opportunity of a lifetime that comes with various advantages.',
+  card: [
+    {
+      content: '24/7 Active Human Resource Assistance.',
+    },
+    {
+      content: 'Cost-Efficient Hiring Services.',
+    },
+    {
+      content: 'Rapid Customer Service.',
+    },
+    {
+      content: 'Full-Time Support of Proven Professionals.',
+    },
+    {
+      content: 'Open to Confirm All Queries',
+    },
+    {
+      content: 'On-Time HR Managing Support.',
     },
   ],
 };
