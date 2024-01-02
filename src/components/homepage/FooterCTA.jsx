@@ -2,9 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
-import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
-
-const FooterCTA = () => {
+const FooterCTA = ({ data }) => {
   return (
     <Box
       sx={{
@@ -32,7 +30,7 @@ const FooterCTA = () => {
                   my: 1,
                 }}
               >
-                {FOOTER_CTA_DATA.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
@@ -43,7 +41,7 @@ const FooterCTA = () => {
                   my: 2,
                 }}
               >
-                {FOOTER_CTA_DATA.description}
+                {data?.description}
               </Typography>
               <Button
                 sx={{
@@ -63,7 +61,7 @@ const FooterCTA = () => {
                     color: '#09114A',
                   }}
                 >
-                  {FOOTER_CTA_DATA.buttonLabel}
+                  {data?.buttonLabel}
                 </Typography>
               </Button>
             </Box>

@@ -33,6 +33,7 @@ export const HR_FIRM_DATA = {
     },
   ],
 };
+
 export const CHOOSE_US = {
   heading: 'Choose Us If You Want to Hire Professional Talent In Minutes',
   subHeading:
@@ -59,6 +60,10 @@ export const CHOOSE_US = {
     {
       icon: '/images/how-its-works/true.svg',
       content: 'Beat the Competition like a Pro.',
+    },
+  ],
+};
+
 export const OUR_OFFERED_SERVICES = {
   heading: 'Our Offered Services Comes With Quality  Benefits',
   subHeading:
