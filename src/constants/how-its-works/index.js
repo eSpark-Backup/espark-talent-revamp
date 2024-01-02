@@ -54,15 +54,15 @@ export const CHOOSE_US = {
     },
 
     {
-      icon: '/images/whatwedo/true.svg',
+      icon: '/images/how-its-works/true.svg',
       content: 'Establish a Strong Team of Outsourced Employees.',
     },
     {
-      icon: '/images/whatwedo/true.svg',
+      icon: '/images/how-its-works/true.svg',
       content: 'Beat the Competition like a Pro.',
     },
-  ]
-  }
+  ],
+};
 export const OUR_SERVICE = {
   heading: 'Why Companies Trust Our Services?',
   subHeading:
