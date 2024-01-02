@@ -25,7 +25,7 @@ export const OUTSOURCING_SOLUTIONS_DATA = {
   ],
 };
 
-export const  OUR_OUTSOURCE = {
+export const OUR_OUTSOURCE = {
   heading: 'eSpark Talent Is Here To Boost Start-Ups.',
   subHeading: `Access to the World's Best Talent!`,
   image: '/images/for-startup/boost-startup/boost.svg',
@@ -50,4 +50,11 @@ export const  OUR_OUTSOURCE = {
         'Spread the business network of your company globally with the help of true brand builders.',
     },
   ],
+};
+
+export const BUSINESS_START_UP = {
+  image: '/images/for-startup/business-startup/business.svg',
+  alt: 'business image',
+  title: 'eSpark Talent Ignites Fresh Business Start-Ups.',
+  description: `Time is in your favor, as eSpark Talent, the ultimate outsourcing platform, has touched the global standards. It doesn’t matter if you are new in the market or have been there for years. We are just one call away from offering our outsourced talent. So, be ready to recruit our team of IT professionals effortlessly with a streamlined talent onboarding process.`,
 };
