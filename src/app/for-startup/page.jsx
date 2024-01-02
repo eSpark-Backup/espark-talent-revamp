@@ -1,14 +1,17 @@
 import React from 'react';
-
-import { Box } from '@mui/material';
-
-import TitleParagraph from '@/components/global/titleParagraph';
-import AchievementAwards from '@/components/homepage/achievementAwards';
+import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+import {
+  BEST_OUTSOURCING_SOLUTIONS,
+  BUSINESS_START_UP,
+  CUSTOMIZE_OUTSOURCE,
+  OUR_ADDITIONAL_BENEFITS,
+  OUR_OUTSOURCE,
+  OUTSOURCING_SOLUTIONS_DATA,
+} from '@/constants/for-startup';
 import ClientSlider from '@/components/global/clientSlider';
 import OutSourcingSolutions from '@/components/for-startup/outSourcingSolutions';
-
-import { ACHIEVEMENTS_DATA, CLIENTS_SLIDER_DATA } from '@/constants/homepage';
-import { OUTSOURCING_SOLUTIONS_DATA } from '@/constants/for-startup';
+import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
+import TalentIgnite from '@/components/for-startup/TalentIgnite';
 
 const page = () => {
   return (
@@ -22,15 +25,12 @@ const page = () => {
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
       />
-      <Box sx={{ py: '30px' }}>
-        <TitleParagraph
-          title={'How Fast Are Our Outsourcing Services?'}
-          paragraph={`At eSpark Talent, our services move with the rhythm of urgency,
-          promising a pace that surprises and a speed that advances.`}
-        />
-      </Box>
+      <OurOutsourcing data={OUR_OUTSOURCE} />
+      <TalentIgnite data={BUSINESS_START_UP} />
+      <OurOutsourcing data={OUR_ADDITIONAL_BENEFITS} />
+      <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
+      <OurOutsourcing data={CUSTOMIZE_OUTSOURCE} />
       <OutSourcingSolutions data={OUTSOURCING_SOLUTIONS_DATA} />
-      <AchievementAwards data={ACHIEVEMENTS_DATA} design={2} />
     </>
   );
 };
