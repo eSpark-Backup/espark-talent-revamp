@@ -21,7 +21,7 @@ const Faq = () => {
     );
   };
   return (
-    <Box sx={{ my: 4 }} id="faq">
+    <Box sx={{ mt: 40 }} id="faq">
       <Container>
         <Title title={TITLE} />
         <Grid container>
