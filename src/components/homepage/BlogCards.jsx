@@ -98,7 +98,7 @@ const BlogCards = ({ data }) => {
             </Grid>
           ))}
         </Grid>
-        {data.length > itemsPerPage && (
+        {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
               count={Math.ceil(data.length / itemsPerPage)}
