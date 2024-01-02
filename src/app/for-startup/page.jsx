@@ -3,6 +3,7 @@ import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
   BEST_OUTSOURCING_SOLUTIONS,
   BUSINESS_START_UP,
+  CUSTOMIZE_OUTSOURCE,
   OUR_ADDITIONAL_BENEFITS,
   OUR_OUTSOURCE,
   OUTSOURCING_SOLUTIONS_DATA,
@@ -28,6 +29,7 @@ const page = () => {
       <TalentIgnite data={BUSINESS_START_UP} />
       <OurOutsourcing data={OUR_ADDITIONAL_BENEFITS} />
       <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
+      <OurOutsourcing data={CUSTOMIZE_OUTSOURCE} />
       <OutSourcingSolutions data={OUTSOURCING_SOLUTIONS_DATA} />
     </>
   );
