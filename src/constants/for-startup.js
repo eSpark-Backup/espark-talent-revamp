@@ -24,3 +24,30 @@ export const OUTSOURCING_SOLUTIONS_DATA = {
     },
   ],
 };
+
+export const  OUR_OUTSOURCE = {
+  heading: 'eSpark Talent Is Here To Boost Start-Ups.',
+  subHeading: `Access to the World's Best Talent!`,
+  image: '/images/for-startup/boost-startup/boost.svg',
+  alt: 'boost image',
+  title: 'Our Outsourcing Assistance Save Your Time, Money & Resources.',
+  description:
+    'New startups are great ideas that need the boost by the best supportive hands of renowned outsource companies like eSpark Talent. Be our precious collaborating client and take advantage of our offered IT outsourcing perks',
+  listItem: [
+    {
+      icon: '/images/how-its-works/true.svg',
+      description:
+        'No need to waste your time on arranging office equipment and conducting lengthy hiring processes.​',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      description:
+        'Reduce the risk of investment loss and brace your business to have a name in the industry market.​',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      description:
+        'Spread the business network of your company globally with the help of true brand builders.',
+    },
+  ],
+};
