@@ -62,3 +62,56 @@ export const CHOOSE_US = {
     },
   ],
 };
+export const OUR_OFFERED_SERVICES = {
+  heading: 'Our Offered Services Comes With Quality  Benefits',
+  subHeading:
+    'Our global human resource services have helped companies to associate with smart employees. Now you can take this opportunity of a lifetime that comes with various advantages.',
+  card: [
+    {
+      content: '24/7 Active Human Resource Assistance.',
+    },
+    {
+      content: 'Cost-Efficient Hiring Services.',
+    },
+    {
+      content: 'Rapid Customer Service.',
+    },
+    {
+      content: 'Full-Time Support of Proven Professionals.',
+    },
+    {
+      content: 'Open to Confirm All Queries',
+    },
+    {
+      content: 'On-Time HR Managing Support.',
+    },
+  ],
+};
+export const OUR_SERVICE = {
+  heading: 'Why Companies Trust Our Services?',
+  subHeading:
+    'We are open to offer workable plans that only benefit our respected clients.',
+  card: [
+    {
+      image: '/images/how-its-works/secure.png',
+      alt: 'Secure Plan',
+      title: 'Secure Plan',
+      description:
+        'We offer a plan that suits our clients. Our secure plan does not only benefit the clients but also supports the offered professionals.',
+    },
+    {
+      image: '/images/how-its-works/time.png',
+      alt: 'Timely Plan',
+      title: 'Timely Plan',
+      description:
+        'We are ready to offer a timely plan that starts within a day. Our clients will be able to hire professionals for a day in minutes. ',
+    },
+    {
+      image: '/images/how-its-works/flexible.png',
+      alt: 'Flexible Scheme',
+      title: 'Flexible Scheme ',
+      description:
+        'In this scheme, it is all about our client’s needs. We will design the plan the way they want. This plan is most recommended.',
+    },
+  ],
+};
