@@ -10,9 +10,15 @@ import {
   MenuItem,
 } from '@mui/material';
 import Link from 'next/link';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import PaginationItem from '@mui/material/PaginationItem';
 
 const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [page, setPage] = useState(1);
 
   const jobCategories = Array.from(
     new Set(data.flatMap((item) => (Array.isArray(item.category) ? item.category : [item.category])))
@@ -23,8 +29,14 @@ const CareerCards = ({ data }) => {
       ? data
       : data.filter((item) => item.category.includes(selectedCategory));
 
+  const perPage = 5;
+  const startIndex = (page - 1) * perPage;
+  const endIndex = startIndex + perPage;
+  const paginatedData = filteredData.slice(startIndex, endIndex);
+
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
+    setPage(1); 
   };
 
   return (
@@ -48,8 +60,8 @@ const CareerCards = ({ data }) => {
               ))}
             </Select>
           </Box>
-          {filteredData.map((item, index) => (
-            <Grid
+          {paginatedData.map((item, index) => (
+             <Grid
               key={index}
               container
               sx={{
@@ -95,6 +107,35 @@ const CareerCards = ({ data }) => {
               </Grid>
             </Grid>
           ))}
+          {filteredData.length > perPage && (
+            <Stack spacing={2} sx={{ justifyContent: 'center', mt: 3 }}>
+              <Pagination
+                count={Math.ceil(filteredData.length / perPage)}
+                page={page}
+                onChange={(event, value) => setPage(value)}
+                color="primary"
+                size="large"
+                // showFirstButton
+                // showLastButton
+                sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    {...item}
+                    sx={{
+                      borderRadius: '10px',
+                      color: 'primary.main',
+                      '&.Mui-selected': {
+                        backgroundColor: 'primary.main',
+                        color: 'white',
+                      },
+                    }}
+                  />
+                )}
+                // prevIcon={<KeyboardArrowLeft />}
+                // nextIcon={<KeyboardArrowRight />}
+              />
+            </Stack>
+          )}
         </Container>
       </Box>
     </>
