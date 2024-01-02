@@ -1,11 +1,15 @@
-import HeroSection from '@/components/homepage/heroSection';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 import React from 'react';
+import CareerCards from '@/components/careers/careerCards';
+import HeroSection from '@/components/homepage/heroSection';
+
+import { JOBS_HERO_DATA } from '@/constants/global/hero-sections';
+import { CAREERS_DATA } from '@/constants/careers';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={HP_HERO_DATA} />
+      <HeroSection data={JOBS_HERO_DATA} />
+      <CareerCards data={CAREERS_DATA} />
     </>
   );
 };
