@@ -93,30 +93,30 @@ const BlogCards = ({ data }) => {
         {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-                count={Math.ceil(data.length / itemsPerPage)}
-                page={page}
+              count={Math.ceil(data.length / itemsPerPage)}
+              page={page}
               onChange={handleChangePage}
-                color="primary"
-                size="large"
-                // showFirstButton
-                // showLastButton
-                sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
-                renderItem={(item) => (
-                  <PaginationItem
-                    {...item}
-                    sx={{
-                      borderRadius: '10px',
-                      color: 'primary.main',
-                      '&.Mui-selected': {
-                        backgroundColor: 'primary.main',
-                        color: 'white',
-                      },
-                    }}
-                  />
-                )}
-                // prevIcon={<KeyboardArrowLeft />}
-                // nextIcon={<KeyboardArrowRight />}
-              />
+              color="primary"
+              size="large"
+              // showFirstButton
+              // showLastButton
+              sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
+              renderItem={(item) => (
+                <PaginationItem
+                  {...item}
+                  sx={{
+                    borderRadius: '10px',
+                    color: 'primary.main',
+                    '&.Mui-selected': {
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                    },
+                  }}
+                />
+              )}
+              // prevIcon={<KeyboardArrowLeft />}
+              // nextIcon={<KeyboardArrowRight />}
+            />
           </Box>
         )}
       </Container>
