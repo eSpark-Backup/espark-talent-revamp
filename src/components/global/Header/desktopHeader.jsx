@@ -10,7 +10,6 @@ import {
 } from '@mui/material';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
-import { Button, Divider, Menu, MenuItem, Typography } from '@mui/material';
 
 const DesktopHeader = ({
   submenuAnchor,
