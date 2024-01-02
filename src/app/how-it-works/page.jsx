@@ -1,7 +1,8 @@
 import React from 'react';
+
+import ChooseUs from '@/components/how-it-work/ChooseUs';
 import HeroSection from '@/components/homepage/heroSection';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
-import ChooseUs from '@/components/how-it-work/ChooseUs';
 import OurQualityService from '@/components/how-it-work/OurQualityService';
 import OurService from '@/components/how-it-work/OurService';
 

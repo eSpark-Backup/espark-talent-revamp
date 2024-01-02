@@ -1,12 +1,17 @@
 'use client';
 import React, { useState } from 'react';
-import Title from './Title';
+import {
+  Box,
+  Grid,
+  Typography,
+  Accordion,
+  Container,
+  AccordionDetails,
+  AccordionSummary,
+} from '@mui/material';
 import Image from 'next/image';
-import { Accordion } from '@mui/material';
-import { Container } from '@mui/material';
-import { Box, Grid, Typography } from '@mui/material';
-import { AccordionDetails } from '@mui/material';
-import { AccordionSummary } from '@mui/material';
+
+import Title from './Title';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState([]);

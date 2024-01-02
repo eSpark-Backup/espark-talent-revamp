@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Box } from '@mui/material';
-import { AppBar } from '@mui/material';
-import { Toolbar } from '@mui/material';
-import { useRouter } from 'next/navigation';
-import { Container } from '@mui/material';
 import Link from 'next/link';
+import { Box, Container } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import { useRouter } from 'next/navigation';
 
 import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
 import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
@@ -53,14 +52,14 @@ const Header = () => {
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Link href={'/'}>
-              <Image
-                src={'/images/header/logo.png'}
-                width={100}
-                height={49}
-                alt="logo"
-              />
-            </Link>
+            <Link href={ '/'}>
+               <Image
+              src={'/images/header/logo.png'}
+              width={100}
+              height={49}
+              alt="logo"
+            />
+           </Link>
             <ResponsiveHeader
               handleAccordionChange={handleAccordionChange}
               handleOpenNavMenu={handleOpenNavMenu}

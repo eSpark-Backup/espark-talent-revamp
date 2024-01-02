@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import HeroSection from '@/components/homepage/heroSection';
@@ -22,8 +23,8 @@ import {
   OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { BLOGS_DATA } from '@/constants/blogs';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
 
 const Home = () => {
   return (
