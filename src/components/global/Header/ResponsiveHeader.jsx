@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import Image from 'next/image';
-import { Box } from '@mui/system';
+import { Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
