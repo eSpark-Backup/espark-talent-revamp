@@ -1,7 +1,5 @@
 import React from 'react';
-import {  WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
-import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
-import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
+
 import HeroSection from '@/components/homepage/heroSection';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
@@ -10,6 +8,10 @@ import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard
 import Faq from '@/components/FAQ/Faq';
 import ClientSlider from '@/components/global/clientSlider';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+
+import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
+import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 
 const page = () => {
   return (
