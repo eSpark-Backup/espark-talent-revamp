@@ -10,6 +10,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
+import { usePathname } from 'next/navigation';
 
 import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
@@ -22,6 +23,9 @@ import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const currentTheme = isDarkTheme ? darkTheme : lightTheme;
+  const pathName = usePathname();
+  const bookADemo = '/book-a-demo';
+
   const toggleTheme = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
   };
@@ -39,14 +43,18 @@ export default function RootLayout({ children }) {
           <AppRouterCacheProvider>
             <ThemeProvider theme={currentTheme}>
               <CssBaseline />
-              <Header />
+              {pathName !== bookADemo ? <Header /> : null}
               <Box
               // toggleTheme={toggleTheme}
               >
                 {children}
               </Box>
-              <FooterCTA data={FOOTER_CTA_DATA} />
-              <Footer data={FOOTER_DATA} />
+              {pathName !== bookADemo ? (
+                <>
+                  <FooterCTA data={FOOTER_CTA_DATA} />
+                  <Footer data={FOOTER_DATA} />
+                </>
+              ) : null}
             </ThemeProvider>
           </AppRouterCacheProvider>
         </Provider>
