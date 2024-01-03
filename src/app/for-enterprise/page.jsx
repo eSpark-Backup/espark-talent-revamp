@@ -6,6 +6,9 @@ import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import TitleParagraph from '@/components/global/titleParagraph';
 import OutSourcingWonders from '@/components/for-enterprise/outSourcingWonders';
+import OutSourcingList from '@/components/for-enterprise/outSourcingList';
+import OutStaffingTrust from '@/components/for-enterprise/outStaffingTrust';
+import OutSourcingAdvantages from '@/components/for-enterprise/outSourcingAdvantages';
 
 import { ACHIEVEMENTS_DATA, CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
@@ -14,9 +17,6 @@ import {
   OUTSTAFFING_TRUST_DATA,
   OUTSOURCING_ADVANTAGES_DATA,
 } from '@/constants/for-enterprise';
-import OutSourcingList from '@/components/for-enterprise/outSourcingList';
-import OutStaffingTrust from '@/components/for-enterprise/outStaffingTrust';
-import OutSourcingAdvantages from '@/components/for-enterprise/outSourcingAdvantages';
 
 const page = () => {
   return (
