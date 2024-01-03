@@ -3,8 +3,7 @@ import React from 'react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import Grid from '@mui/material/Grid';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 

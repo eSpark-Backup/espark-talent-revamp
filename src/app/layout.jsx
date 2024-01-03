@@ -3,18 +3,21 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import './globals.css';
+import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
+
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import Box from '@mui/material/Box';
-
 import { Provider } from 'react-redux';
-
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme, lightTheme } from './theme';
+
 import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
 import Footer from '@/components/global/footer/Footer';
+import FooterCTA from '@/components/homepage/FooterCTA';
+
 import { FOOTER_DATA } from '@/constants/global/footer';
+import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -42,6 +45,7 @@ export default function RootLayout({ children }) {
               >
                 {children}
               </Box>
+              <FooterCTA data={FOOTER_CTA_DATA} />
               <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
