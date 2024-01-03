@@ -151,6 +151,7 @@ export const OUTSOURCING_ADVANTAGES_DATA = {
   title: 'Our Outsourcing Works Wonders for Your Business Enterprise',
   paragraph: `Experience a boost in enterprise success with eSpark Talent's open invitation to global talent access and streamlined operations.`,
   image: '/images/for-enterprise/outsourcing-advantages.svg',
+  alt:'Outsourcing advantages with eSpark Talent',
   imageHeight: 360,
   imageWidth: 428,
 

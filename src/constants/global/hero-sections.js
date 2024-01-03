@@ -9,7 +9,7 @@ export const HP_HERO_DATA = {
     btnColor: 'primary',
   },
   image: '/images/homepage/hero-section/hero-section-image.png',
-  imageAlt: '',
+  imageAlt: `Hire world class experts' team for your business with espark talent`,
   imageWidth: 435,
   imageHeight: 420,
   bgColor: '#fff',
@@ -26,7 +26,7 @@ export const WIKI_HERO_DATA = {
   description:
     'Scroll down and learn about average salary packages in our updated corporate job description templates.',
   image: '/images/wiki/wiki-main-image.svg',
-  imageAlt: '',
+  imageAlt: 'Average Salaries with eSpark Wiki',
   imageWidth: 435,
   imageHeight: 420,
   bgColor: '#3B5998, #029894',
@@ -43,7 +43,7 @@ export const BLOGS_HERO_DATA = {
   description:
     'Dive into our blogs and gain insights about every modern trend!.',
   image: '/images/blog/blogs-main.png',
-  imageAlt: '',
+  imageAlt: 'Useful insights with eSpark Blogs ',
   imageWidth: 435,
   imageHeight: 420,
   // bgColor: '#3B5998, #029894',
@@ -60,7 +60,7 @@ export const JOBS_HERO_DATA = {
   description:
     'Explore the corporate world with eSpark Talent, where fulfilling career paths align with the values of excellence and organizational impact.',
   image: '/images/careers/careers-main-image.svg',
-  imageAlt: '',
+  imageAlt: 'Explore the Corporate world with eSpark Talent',
   imageWidth: 435,
   imageHeight: 420,
   // bgColor: '#3B5998, #029894',
