@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CareerCards from '@/components/careers/careerCards';
 import HeroSection from '@/components/homepage/heroSection';
 
