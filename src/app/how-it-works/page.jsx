@@ -1,5 +1,5 @@
 import React from 'react';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import { HOW_WORKS_HERO_DATA} from '@/constants/global/hero-sections';
 import {
   OUR_SERVICE,
   HR_FIRM_DATA,
@@ -15,7 +15,7 @@ import OurService from '@/components/how-it-work/OurService';
 const page = () => {
   return (
     <>
-      <HeroSection data={HP_HERO_DATA} />
+      <HeroSection data={HOW_WORKS_HERO_DATA} />
       <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
       <ChooseUs chooseUs={CHOOSE_US} />
       <OurService ourService={OUR_SERVICE} />
