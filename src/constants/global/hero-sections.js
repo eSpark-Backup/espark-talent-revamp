@@ -77,7 +77,7 @@ export const STARTUP_HERO_DATA = {
   description:
     `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.​​`,
   image: '/images/for-startup/startup-hero-main.png',
-  imageAlt: '',
+  imageAlt: 'Build team for your start up with eSpark Talent',
   imageWidth: 435,
   imageHeight: 420,
   // bgColor: '#3B5998, #029894',
@@ -100,7 +100,7 @@ export const ENTERPRISE_HERO_DATA = {
     btnColor: 'primary',
   },
   image: '/images/for-enterprise/enterprise-hero-main.png',
-  imageAlt: '',
+  imageAlt: 'Global Employment Solution for Enterprises with eSpark Talent',
   imageWidth: 450,
   imageHeight: 450,
   // bgColor: '#3B5998, #029894',
@@ -117,7 +117,7 @@ export const PARTNERSHIP_HERO_DATA = {
   description:
     `Our partners have earned over $1000 by simply making introductions to our team.`,
   image: '/images/partnership/partnership-hero-main.svg',
-  imageAlt: '',
+  imageAlt: 'Partnership Program with eSpark Talent',
   imageWidth: 450,
   imageHeight: 450,
   // bgColor: '#3B5998, #029894',
@@ -135,7 +135,7 @@ export const HOW_WORKS_HERO_DATA = {
   description:
     `Specializing in developer outsourcing solutions, eSpark Talent optimizes talent acquisition for enhanced business success.`,
   image: '/images/how-its-works/how-works-hero-main.svg',
-  imageAlt: '',
+  imageAlt: 'employee outsourcing with eSpark Talent',
   imageWidth: 450,
   imageHeight: 450,
   // bgColor: '#3B5998, #029894',
@@ -152,7 +152,7 @@ export const WHAT_WE_DO_HERO_DATA = {
   description:
     `At eSpark Talent, we revolutionize employee outsourcing, setting new benchmarks for organizational growth and efficiency.`,
   image: '/images/whatwedo/what-we-do-hero-main.svg',
-  imageAlt: '',
+  imageAlt: 'Do employee Outsourcing with eSpark Talent',
   imageWidth: 450,
   imageHeight: 450,
   // bgColor: '#3B5998, #029894',
