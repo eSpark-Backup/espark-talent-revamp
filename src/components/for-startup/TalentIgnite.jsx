@@ -33,7 +33,7 @@ const TalentIgnite = ({ data }) => {
                 textAlign: { xs: 'center', md: 'justify' },
               }}
               dangerouslySetInnerHTML={{ __html: data.description }}
-            ></Typography>
+            />
           </Grid>
           <Grid item xs={12} sm={12} md={5} sx={{ order: { md: 1, xs: 2 } }}>
             <Box
