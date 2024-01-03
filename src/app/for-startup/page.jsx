@@ -4,18 +4,14 @@ import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
 import OutSourcingWonders from '@/components/for-enterprise/outSourcingWonders';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
-import {
-  BEST_OUTSOURCING_SOLUTIONS,
-  BUSINESS_START_UP,
-  CUSTOMIZE_OUTSOURCE,
-  OUR_ADDITIONAL_BENEFITS,
-  OUR_OUTSOURCE,
-  OUTSOURCING_SOLUTIONS_DATA,
-} from '@/constants/for-startup';
+import { BEST_OUTSOURCING_SOLUTIONS, BUSINESS_START_UP, CUSTOMIZE_OUTSOURCE, OUR_ADDITIONAL_BENEFITS, OUR_OUTSOURCE, OUTSOURCING_SOLUTIONS_DATA } from '@/constants/for-startup';
+import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
+import HeroSection from '@/components/homepage/heroSection';
 
 const page = () => {
   return (
     <>
+      <HeroSection data={STARTUP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}
