@@ -3,9 +3,8 @@ import { Box, Button, Container } from '@mui/material';
 import Link from 'next/link';
 import TitleParagraph from '../global/titleParagraph';
 import BlogCards from '../homepage/BlogCards';
-import { BLOGS_DATA } from '@/constants/blogs';
 
-const HomePageBlogs = () => {
+const HomePageBlogs = ({ data }) => {
   return (
     <Container>
       <Box
@@ -20,7 +19,7 @@ const HomePageBlogs = () => {
           title={'eSpark Talent Knowledge Junction'}
           paragraph={`Dive into our blogs and gain insights about every modern trend!`}
         />
-        <BlogCards data={BLOGS_DATA.slice(0, 3)} />
+        <BlogCards data={data?.slice(0, 3)} />
         <Link href={`/blogs`}>
           <Button variant="contained" color="secondary">
             {`View all blogs`}
