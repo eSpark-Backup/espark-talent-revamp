@@ -54,3 +54,20 @@ export const BLOGS_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+
+export const JOBS_HERO_DATA = {
+  title: 'Careers',
+  description:
+    'Explore the corporate world with eSpark Talent, where fulfilling career paths align with the values of excellence and organizational impact.',
+  image: '/images/careers/careers-main-image.svg',
+  imageAlt: '',
+  imageWidth: 435,
+  imageHeight: 420,
+  // bgColor: '#3B5998, #029894',
+  bgImage: '/images/blog/blogs-main-bg.png',
+  spacing: '2%',
+  titleVariant: 'h1',
+  titleColor: '#fff',
+  descVarient: 'body1',
+  descColor: '#fff',
+};

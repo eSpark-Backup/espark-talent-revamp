@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button, Box, Typography } from '@mui/material';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import { Button, Box, Grid, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 
 const HeroSection = ({ data, innerData }) => {
