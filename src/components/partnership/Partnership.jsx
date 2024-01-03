@@ -9,17 +9,18 @@ import {
 } from '@mui/material';
 import React from 'react';
 import RectangleSharpIcon from '@mui/icons-material/RectangleSharp';
+import Form from './Form';
 
 const Partnership = ({ partnership }) => {
-  const { content } = partnership;
+  const { content, formContent } = partnership;
   return (
     <Box sx={{ mt: { lg: '60px', xs: '15px' } }}>
       <Container>
         <Grid container>
-          <Grid item md={7}>
+          <Grid item md={8}>
             <>
               {content.map((item, index) => (
-                <Box key={index}>
+                <Box key={index} sx={{pr:3}}>
                   <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
                     {item.title}
                   </Typography>
@@ -64,7 +65,9 @@ const Partnership = ({ partnership }) => {
               ))}
             </>
           </Grid>
-          <Grid item md={5}></Grid>
+          <Grid item md={4}>
+            <Form formContent={formContent}/>
+          </Grid>
         </Grid>
       </Container>
     </Box>
