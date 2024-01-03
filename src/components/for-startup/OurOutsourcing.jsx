@@ -75,7 +75,7 @@ const OurOutsourcing = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={440} height={300} alt={data.alt} />
+              <Image src={data.image} width={400} height={300} alt={data.alt} />
             </Box>
           </Grid>
         </Grid>
