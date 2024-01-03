@@ -133,6 +133,9 @@ export const EXPERTIES_DATA = {
   buttonText: 'Hire A Talent',
   buttonLink: '/book-a-demo',
   icon: '/images/homepage/experties/experties-icon.svg',
+  otherIcon: '/images/homepage/experties/center.svg',
+  endIcon: '/images/homepage/experties/end.svg',
+  startIcon: '/images/homepage/experties/start.svg',
   sections: [
     {
       lists: [
