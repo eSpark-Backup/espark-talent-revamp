@@ -64,34 +64,35 @@ const QuestionAnswer = () => {
               >
                 {QUESTION_ANSWER.descrioption}
               </Typography>
-              <Box sx={{display:'flex',justifyContent:'end'}}>
-              <Link href={QUESTION_ANSWER.buttonLink}>
-              <Button
-                sx={{
-                  background: '#001C63',
-                  color: '#fff',
-                  borderRadius: '6.448px',
-                  alignSelf: { xs: 'center', sm: 'flex-end' },
-                  px: '25px',
-                  py: '10px',
-                  '&:hover': {
-                    backgroundColor: '#001C63',
-                    color: '#fff',
-                  },
-                }}
-              >
-                <Typography
-                  sx={{
-                    textAlign: 'center',
-                    color: ' #fff',
-                    fontSize: '17px',
-                    fontWeight: 700,
-                    lineHeight: '27px',
-                  }}
-                >
-                  {QUESTION_ANSWER.buttonLabel}
-                </Typography>
-              </Button></Link>
+              <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+                <Link href={QUESTION_ANSWER.buttonLink}>
+                  <Button
+                    sx={{
+                      background: '#001C63',
+                      color: '#fff',
+                      borderRadius: '6.448px',
+                      alignSelf: { xs: 'center', sm: 'flex-end' },
+                      px: '25px',
+                      py: '10px',
+                      '&:hover': {
+                        backgroundColor: '#001C63',
+                        color: '#fff',
+                      },
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        textAlign: 'center',
+                        color: ' #fff',
+                        fontSize: '17px',
+                        fontWeight: 700,
+                        lineHeight: '27px',
+                      }}
+                    >
+                      {QUESTION_ANSWER.buttonLabel}
+                    </Typography>
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Grid>

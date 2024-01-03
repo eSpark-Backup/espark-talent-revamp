@@ -123,7 +123,10 @@ const CareerCards = ({ data }) => {
             </Grid>
           ))}
           {filteredData.length > perPage && (
-            <Box spacing={2} sx={{ display:'flex',justifyContent: 'center', mt: 3 }}>
+            <Box
+              spacing={2}
+              sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}
+            >
               <Pagination
                 count={Math.ceil(filteredData.length / perPage)}
                 page={page}
