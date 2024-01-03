@@ -7,7 +7,7 @@ import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
 
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 
