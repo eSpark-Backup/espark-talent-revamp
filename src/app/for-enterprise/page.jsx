@@ -17,10 +17,13 @@ import {
   OUTSTAFFING_TRUST_DATA,
   OUTSOURCING_ADVANTAGES_DATA,
 } from '@/constants/for-enterprise';
+import HeroSection from '@/components/homepage/heroSection';
+import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 
 const page = () => {
   return (
     <>
+      <HeroSection data={ENTERPRISE_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}

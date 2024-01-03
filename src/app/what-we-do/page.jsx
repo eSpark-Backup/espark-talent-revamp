@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HeroSection from '@/components/homepage/heroSection';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
@@ -13,7 +14,7 @@ import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 const page = () => {
   return (
     <>
-      <HeroSection data={HP_HERO_DATA} />
+      <HeroSection data={WHAT_WE_DO_HERO_DATA } />
       <WhyChooseOurHr />
       <QuestionAnswer />
       <ProfessionalTeamCard teamData={TEAM_CARD_DATA} />
