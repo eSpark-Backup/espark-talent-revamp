@@ -64,7 +64,7 @@ const FooterCTA = ({ data }) => {
                   >
                   {data?.buttonLabel}
                 </Typography>
-              </Button>
+              </Button> 
               </Link>
             </Box>
           </Grid>
