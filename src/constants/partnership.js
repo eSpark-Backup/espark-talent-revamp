@@ -1,4 +1,5 @@
 export const PARTNERSHIP = {
+  listIcon: `/images/wiki/wiki-icon.svg`,
   content: [
     {
       title: 'What Are eSpark Talent Outsourcing Services?',
@@ -17,36 +18,15 @@ export const PARTNERSHIP = {
     },
     {
       title: 'Referral Program Conditions & Policies Note',
-    },
-  ],
-  listData: [
-    {
-      listItem:
+      items: [
         'The referrer must provide accurate and complete information for the referred client.',
-    },
-    {
-      listItem:
         'eSpark Talent reserves the right to disqualify referrals that are suspected of fraudulent or unethical behavior.',
-    },
-    {
-      listItem:
         'Referred clients must sign a contract with eSpark Talent for a minimum duration of three months.',
-    },
-    {
-      listItem:
         'In the case of multiple referrers for the same client, the commission will be awarded to the referrer whose submission was received first.',
-    },
-    {
-      listItem:
         'The client referral program is ongoing and has no predetermined end date.',
-    },
-    {
-      listItem:
         'eSpark Talent may, at its discretion, modify or terminate the program with advance notice.',
-    },
-    {
-      listItem:
         'Referrers must submit client referrals through the official referral submission form on the eSpark Talent website',
+      ],
     },
   ],
 };
