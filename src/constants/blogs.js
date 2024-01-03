@@ -14,7 +14,7 @@ export const BLOGS_DATA = [
     title: 'Benefits of Employee Outsourcing',
     imageLink: '/images/blog/benefits.png',
     altTag:
-      'Employee Outsourcing - Employee outsourcing jobs - Employee outsourcing companies - Staff outsourcing services - Importance of outsourcing - espark Talent',
+      'Benefits of Employee Outsourcing ',
     bigImageLink: '/images/blog/blog1.png',
     mainHeading: `Employee Outsourcing - The Future 
       of Hiring Professional Workforce.`,
@@ -111,7 +111,7 @@ flexibility and productivity at the workplace? Grab the
     bigImageLink: '/images/blog/blog2.png',
     imageLink: '/images/blog/primest-Employee.png',
     altTag:
-      'Employee Recruitment - Employee recruitment in hrm - Recruitment process - Sources of recruitment - Sources of employee recruitment - espark Talent',
+      'Primest Employee Recruitment Strategies for Success',
     mainHeading: `Primest Employee Recruitment
 Strategies for Success.`,
     mainParagraph: `Want to update your recruitment process? Here are the 
@@ -250,7 +250,7 @@ company.`,
     title: '8 Tips Guide for Bringing Positive Work Culture',
     imageLink: '/images/blog/8-Tips-Guide.png',
     altTag:
-      'Positive Work Culture - Positive culture examples - Positive workplace culture examples - espark Talent',
+      '8 Tips Guide for Bringing Positive Work Culture ',
     bigImageLink: '/images/blog/blog3.png',
     mainHeading: `Secret of Bringing Positive Work Culture - A Compressive Guide For 
 Office Workplaces.`,

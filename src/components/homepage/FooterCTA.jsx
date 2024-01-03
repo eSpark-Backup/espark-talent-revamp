@@ -81,7 +81,7 @@ const FooterCTA = ({ data }) => {
                 src={data?.image}
                 width={360}
                 height={350}
-                alt="images"
+                alt={data.alt}
                 style={{
                   marginTop: '-61px',
                   zIndex: 1000,
