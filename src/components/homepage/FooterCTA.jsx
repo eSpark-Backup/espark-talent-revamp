@@ -90,7 +90,7 @@ const FooterCTA = ({ data }) => {
           </Grid>
         </Grid>
       </Container>
-      <Box
+      {/* <Box
         sx={{
           '@media (max-width: 1770px)': {
             display: 'none',
@@ -117,7 +117,7 @@ const FooterCTA = ({ data }) => {
             />
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
