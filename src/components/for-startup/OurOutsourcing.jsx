@@ -17,9 +17,10 @@ const OurOutsourcing = ({ data }) => {
               sx={{
                 color: '#001C63',
                 fontSize: '28px',
-                fontWeight: 500,
+                fontWeight: 600,
                 lineHeight: '41.547px',
                 mr: { lg: '20%', md: '5%' },
+                textAlign: { xs: 'center', md: 'left' },
               }}
             >
               {data.title}
@@ -28,9 +29,9 @@ const OurOutsourcing = ({ data }) => {
               sx={{
                 color: '#001C63',
                 fontSize: '18px',
-                textAlign: 'justify',
                 fontWeight: 400,
                 lineHeight: '27.863px',
+                textAlign: { xs: 'center', md: 'justify' },
                 my: '20px',
                 mr: { lg: '15%', md: '5%' },
               }}
