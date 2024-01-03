@@ -8,7 +8,12 @@ import OurService from '@/components/how-it-work/OurService';
 
 import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
-import { CHOOSE_US, HR_FIRM_DATA, OUR_OFFERED_SERVICES, OUR_SERVICE } from '@/constants/how-its-works';
+import {
+  CHOOSE_US,
+  HR_FIRM_DATA,
+  OUR_OFFERED_SERVICES,
+  OUR_SERVICE,
+} from '@/constants/how-its-works';
 
 const page = () => {
   return (

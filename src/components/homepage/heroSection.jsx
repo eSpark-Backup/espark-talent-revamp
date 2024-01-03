@@ -41,7 +41,7 @@ const HeroSection = ({ data, innerData }) => {
                   {innerData?.description || data?.description}
                 </Typography>
               )}
-              {data?.button  && (
+              {data?.button && (
                 <Button
                   variant="secondary"
                   href={innerData?.button?.link || data?.button?.link}

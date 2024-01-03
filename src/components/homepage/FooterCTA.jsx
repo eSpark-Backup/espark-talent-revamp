@@ -1,23 +1,40 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Box, Button, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 
 const FooterCTA = ({ data }) => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
-  
+
   return (
     <Box
       sx={{
         backgroundColor: '#029894',
-        backgroundImage: ['', '', `url(/images/footer-cta-main-bg.png)`, `url(/images/footer-cta-main-bg.png)`],
+        backgroundImage: [
+          '',
+          '',
+          `url(/images/footer-cta-main-bg.png)`,
+          `url(/images/footer-cta-main-bg.png)`,
+        ],
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <Container>
         <Grid container>
-          <Grid item xs={12} sm={8} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
             <Box>
               <Typography
                 sx={{
@@ -65,7 +82,12 @@ const FooterCTA = ({ data }) => {
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4} sx={{ textAlign: isSmallScreen ? 'center' : 'end' }}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{ textAlign: isSmallScreen ? 'center' : 'end' }}
+          >
             <Box
               sx={{
                 display: 'flex',
