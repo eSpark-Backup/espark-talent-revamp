@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HOW_WORKS_HERO_DATA} from '@/constants/global/hero-sections';
+import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 import {
   OUR_SERVICE,
   HR_FIRM_DATA,
@@ -13,8 +13,6 @@ import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
 import ChooseUs from '@/components/how-it-work/ChooseUs';
 import OurQualityService from '@/components/how-it-work/OurQualityService';
 import OurService from '@/components/how-it-work/OurService';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import { CHOOSE_US, HR_FIRM_DATA, OUR_OFFERED_SERVICES, OUR_SERVICE } from '@/constants/how-its-works';
 
 const page = () => {
   return (
