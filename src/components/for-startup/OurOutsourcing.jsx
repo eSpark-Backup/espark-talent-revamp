@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import { Box, Grid, ListItemIcon, Typography, Container } from '@mui/material';
 import Image from 'next/image';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import TitleParagraph from '@/components/global/titleParagraph.jsx';
 
@@ -13,41 +13,49 @@ const OurOutsourcing = ({ data }) => {
       <Container>
         <Grid container>
           <Grid item sm={12} md={6}>
-            <Typography
+            <Box
               sx={{
-                color: '#001C63',
-                fontSize: '28px',
-                fontWeight: 600,
-                lineHeight: '41.547px',
-                mr: { lg: '20%', md: '5%' },
-                textAlign: { xs: 'center', md: 'left' },
+                display: 'flex',
+                alignContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '50%',
               }}
             >
-              {data.title}
-            </Typography>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '27.863px',
-                textAlign: { xs: 'center', md: 'justify' },
-                my: '20px',
-                mr: { lg: '15%', md: '5%' },
-              }}
-            >
-              {data.description}
-            </Typography>
+              <Box>
+                <Typography
+                  sx={{
+                    color: '#001C63',
+                    fontSize: '28px',
+                    fontWeight: 600,
+                    lineHeight: '41.547px',
+                    mr: { lg: '20%', md: '5%' },
+                    textAlign: { xs: 'center', md: 'left' },
+                  }}
+                >
+                  {data.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: '#001C63',
+                    fontSize: '18px',
+                    fontWeight: 400,
+                    lineHeight: '27.863px',
+                    textAlign: { xs: 'center', md: 'justify' },
+                    my: { xs: '25px', md: '0px' },
+                    mr: { lg: '15%', md: '5%' },
+                  }}
+                >
+                  {data.description}
+                </Typography>
+              </Box>
+            </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
-                <Box sx={{ display: 'flex' }}>
-                  <Box
-                    sx={{
-                      pr: 1,
-                    }}
-                  >
-                    <Image src={item.icon} width={30} height={25} alt="true" />
-                  </Box>
+                <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
+                  <ListItemIcon sx={{ minWidth: '30px' }}>
+                    <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
+                  </ListItemIcon>
                   <Typography
                     sx={{
                       mb: 2,
@@ -69,13 +77,15 @@ const OurOutsourcing = ({ data }) => {
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
+                mt: 2,
                 pt: 1,
+                py: 3,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={400} height={300} alt={data.alt} />
+              <Image src={data.image} width={380} height={300} alt={data.alt} />
             </Box>
           </Grid>
         </Grid>
