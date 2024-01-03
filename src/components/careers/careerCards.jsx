@@ -8,11 +8,11 @@ import {
   Typography,
   Select,
   MenuItem,
+  Pagination,
+  Stack,
+  PaginationItem,
 } from '@mui/material';
 import Link from 'next/link';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-import PaginationItem from '@mui/material/PaginationItem';
 
 const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
