@@ -35,6 +35,7 @@ const Home = () => {
         bgColor={'#029894'}
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
+        length={100}
       />
       <OurProcess data={PROCESS_DATA} />
       <OutSourceBenefits data={OUTSOURCE_BENEFITS_DATA} />

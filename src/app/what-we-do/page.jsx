@@ -14,7 +14,7 @@ import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 const page = () => {
   return (
     <>
-      <HeroSection data={WHAT_WE_DO_HERO_DATA } />
+      <HeroSection data={WHAT_WE_DO_HERO_DATA} />
       <WhyChooseOurHr />
       <QuestionAnswer />
       <ProfessionalTeamCard teamData={TEAM_CARD_DATA} />

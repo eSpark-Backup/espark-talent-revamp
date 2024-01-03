@@ -52,14 +52,14 @@ const Header = () => {
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Link href={ '/'}>
-               <Image
-              src={'/images/header/logo.png'}
-              width={100}
-              height={49}
-              alt="logo"
-            />
-           </Link>
+            <Link href={'/'}>
+              <Image
+                src={'/images/header/logo.png'}
+                width={100}
+                height={49}
+                alt="logo"
+              />
+            </Link>
             <ResponsiveHeader
               handleAccordionChange={handleAccordionChange}
               handleOpenNavMenu={handleOpenNavMenu}
