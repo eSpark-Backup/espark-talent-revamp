@@ -79,12 +79,13 @@ const OurOutsourcing = ({ data }) => {
                 backgroundColor: '#3B59980A',
                 mt: 2,
                 pt: 1,
+                py: 3,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={400} height={300} alt={data.alt} />
+              <Image src={data.image} width={380} height={300} alt={data.alt} />
             </Box>
           </Grid>
         </Grid>

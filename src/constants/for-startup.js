@@ -91,3 +91,21 @@ export const BEST_OUTSOURCING_SOLUTIONS = {
   description: `The global outsourced network of eSpark Talent relieves its partners and all the esteemed clients with the foremost HR outsourcing services. We serve what you demand, and that is the world’s best outsourcing team on fair imposes. <br />
   The hiring process of agile talent becomes effortless here. Because we offer 24/7 active availability of our working team to assist you from searching to onboarding the top remote IT Talent.`,
 };
+
+export const CUSTOMIZE_OUTSOURCE = {
+  image: '/images/for-startup/custom-outsource/customize-outsourcing.svg',
+  alt: 'customize-outsourcing image',
+  title: 'All Set For eSpark Talent’s Customized Outsourcing Benefits?',
+  listItem: [
+    {
+      icon: '/images/how-its-works/true.svg',
+      description:
+        'Let your hired IT outsourced team fill all the requirements of an in-house development firm.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      description:
+        'Showcase your own remote-based digital venue filled with IT development specialists.',
+    },
+  ],
+};
