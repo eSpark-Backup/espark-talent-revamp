@@ -67,3 +67,4 @@ export const SUBMENU_ITEMS = {
 
 export const PAGES = ['Our Company', 'Solutions', 'Resources', 'Partnership'];
 export const HIRE_A_TALENT = 'Hire a Talent';
+export const HIRE_A_TALENT_LINK = '/book-a-demo'
