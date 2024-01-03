@@ -1,9 +1,7 @@
 import React from 'react';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import {
-  EXPERT_TEAM_CARD,
-  TEAM_CARD_DATA,
-} from '@/constants/what-we-do-page/expert-team-card';
+import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
+import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 import HeroSection from '@/components/homepage/heroSection';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
