@@ -83,7 +83,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
   {
@@ -103,7 +103,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
   {
@@ -123,7 +123,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
 ];
@@ -131,7 +131,7 @@ export const PERKS_DATA = [
 export const EXPERTIES_DATA = {
   title: 'Which Experts Will Drive Your Business?',
   buttonText: 'Hire A Talent',
-  buttonLink: '/',
+  buttonLink: '/book-a-demo',
   icon: '/images/homepage/experties/experties-icon.svg',
   sections: [
     {

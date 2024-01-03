@@ -1,13 +1,14 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { Button } from '@mui/material';
-
-import { HIRE_A_TALENT } from '@/constants/global/header';
+import Link from 'next/link';
+import { HIRE_A_TALENT, HIRE_A_TALENT_LINK } from '@/constants/global/header';
 
 const HireTalentButton = ({ handleOpenUserMenu, display }) => {
   return (
-    <Box sx={{ flexGrow: 0, display }}>
-      <Button
+    
+      <Box sx={{ flexGrow: 0, display }}>
+      <Link href={HIRE_A_TALENT_LINK}><Button
         onClick={handleOpenUserMenu}
         size="small"
         sx={{
@@ -29,8 +30,10 @@ const HireTalentButton = ({ handleOpenUserMenu, display }) => {
         }}
       >
         {HIRE_A_TALENT}
-      </Button>
+      </Button>   </Link>
     </Box>
+ 
+ 
   );
 };
 
