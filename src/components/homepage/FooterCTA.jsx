@@ -54,7 +54,8 @@ const FooterCTA = ({ data }) => {
                       backgroundColor: '#fff',
                     },
                   }}
-                ><Typography
+                >
+                  <Typography
                     variant="body1"
                     sx={{
                       fontWeight: 'bold',
@@ -62,9 +63,9 @@ const FooterCTA = ({ data }) => {
                       color: '#09114A',
                     }}
                   >
-                  {data?.buttonLabel}
-                </Typography>
-              </Button>
+                    {data?.buttonLabel}
+                  </Typography>
+                </Button>
               </Link>
             </Box>
           </Grid>
@@ -90,7 +91,7 @@ const FooterCTA = ({ data }) => {
           </Grid>
         </Grid>
       </Container>
-      <Box
+      {/* <Box
         sx={{
           '@media (max-width: 1770px)': {
             display: 'none',
@@ -117,7 +118,7 @@ const FooterCTA = ({ data }) => {
             />
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
