@@ -8,11 +8,22 @@ import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
 import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
+import ClientSlider from '@/components/global/clientSlider';
+import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={WHAT_WE_DO_HERO_DATA } />
+      <HeroSection data={WHAT_WE_DO_HERO_DATA} />
+      <ClientSlider
+        data={CLIENTS_SLIDER_DATA}
+        bgColor={'#3B59980A'}
+        txtColor={'#001C63'}
+        fontWeight={500}
+        title={
+          'Meet our partners who trust our certified tech experts offering 100% business growth results'
+        }
+      />
       <WhyChooseOurHr />
       <QuestionAnswer />
       <ProfessionalTeamCard teamData={TEAM_CARD_DATA} />

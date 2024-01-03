@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
+import Link from 'next/link';
 import { QUESTION_ANSWER } from '@/constants/what-we-do-page/question-answer';
 
 const QuestionAnswer = () => {
@@ -63,6 +64,8 @@ const QuestionAnswer = () => {
               >
                 {QUESTION_ANSWER.descrioption}
               </Typography>
+              <Box sx={{display:'flex',justifyContent:'end'}}>
+              <Link href={QUESTION_ANSWER.buttonLink}>
               <Button
                 sx={{
                   background: '#001C63',
@@ -86,9 +89,10 @@ const QuestionAnswer = () => {
                     lineHeight: '27px',
                   }}
                 >
-                  {QUESTION_ANSWER.buttonLable}
+                  {QUESTION_ANSWER.buttonLabel}
                 </Typography>
-              </Button>
+              </Button></Link>
+              </Box>
             </Box>
           </Grid>
         </Grid>
