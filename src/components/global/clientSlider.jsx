@@ -1,53 +1,36 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { Container, Box, Typography, Grid } from '@mui/material';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { Container, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+const extendClients = (clients, length) => {
+  const extendedClients = Array.from({ length }, (_, index) => ({
+    ...clients[index % clients.length],
+  }));
+  return extendedClients;
+};
 
-const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
-  const swiperSettings = {
-    slidesPerView: 8,
-    spaceBetween: 20,
-    centerMode: true,
-    centerPadding: '0',
-    loop: true,
-    pagination: {
-      clickable: true,
-    },
-    autoplay: {
-      delay: 500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      360: {
-        slidesPerView: 2,
-      },
-      786: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-      1440: {
-        slidesPerView: 8,
-      },
-      1920: {
-        slidesPerView: 8,
-      },
-    },
+const ClientSlider = ({
+  bgColor,
+  txtColor,
+  title,
+  fontWeight,
+  data,
+  length = 1000,
+}) => {
+  const extendedData = {
+    clients: extendClients(data.clients, length),
   };
 
   return (
-    <Box sx={{ background: bgColor, py: '2.5%' }}>
-      <Container sx={{ pb: '30px' }}>
+    <Box sx={{ backgroundColor: bgColor, PY: '2.5%' }}>
+      <Container sx={{ pb: '10px' }}>
         <Typography
           variant="h2"
           color={txtColor}
@@ -56,10 +39,32 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
           {title}
         </Typography>
       </Container>
-      <Swiper {...swiperSettings} sx={{ mx: 'auto' }}>
-        <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' }}>
-          {data?.clients.map((item, index) => (
-            <SwiperSlide key={index}>
+      <Swiper
+        spaceBetween={0}
+        centeredSlides={true}
+        autoplay={{
+          delay: 500,
+          disableOnInteraction: false,
+        }}
+        navigation={false}
+        loop={true}
+        modules={[Autoplay, Navigation]}
+        className="mySwiper"
+        breakpoints={{
+          600: {
+            slidesPerView: 1,
+          },
+          960: {
+            slidesPerView: 6,
+          },
+          1260: {
+            slidesPerView: 8,
+          },
+        }}
+      >
+        {extendedData.clients.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Box sx={{ pb: 5 }}>
               <Link href={item.link}>
                 <Image
                   src={item.image}
@@ -68,9 +73,9 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
                   width={item.imageWidth}
                 />
               </Link>
-            </SwiperSlide>
-          ))}
-        </Grid>
+            </Box>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );
