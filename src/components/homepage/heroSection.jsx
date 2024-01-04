@@ -20,7 +20,7 @@ const HeroSection = ({ data, innerData }) => {
             spacing={2}
             sx={{
               alignItems: 'center',
-              flexDirection: { xs: 'column-reverse', sm: 'row' },
+              flexDirection: { xs: 'column', sm: 'row' },
             }}
           >
             <Grid item xs={12} sm={6} sx={{}}>
@@ -41,7 +41,7 @@ const HeroSection = ({ data, innerData }) => {
                   {innerData?.description || data?.description}
                 </Typography>
               )}
-              {data?.button  && (
+              {data?.button && (
                 <Button
                   variant="secondary"
                   href={innerData?.button?.link || data?.button?.link}

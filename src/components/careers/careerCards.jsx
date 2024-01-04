@@ -43,7 +43,7 @@ const CareerCards = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%', lg: '1%' } }}>
+      <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%', lg: '3%' } }}>
         <Container>
           <Box sx={{ py: '2%' }}>
             <Select
@@ -123,7 +123,10 @@ const CareerCards = ({ data }) => {
             </Grid>
           ))}
           {filteredData.length > perPage && (
-            <Stack spacing={2} sx={{ justifyContent: 'center', mt: 3 }}>
+            <Box
+              spacing={2}
+              sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}
+            >
               <Pagination
                 count={Math.ceil(filteredData.length / perPage)}
                 page={page}
@@ -149,7 +152,7 @@ const CareerCards = ({ data }) => {
                 // prevIcon={<KeyboardArrowLeft />}
                 // nextIcon={<KeyboardArrowRight />}
               />
-            </Stack>
+            </Box>
           )}
         </Container>
       </Box>
