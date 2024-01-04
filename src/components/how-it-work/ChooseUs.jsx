@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
 const ChooseUs = ({ chooseUs }) => {
-  const { list, image, heading, subHeading } = chooseUs;
+  const { list, image, alt, heading, subHeading } = chooseUs;
   return (
     <Box sx={{ my: 2 }}>
       <Container>
@@ -56,7 +56,7 @@ const ChooseUs = ({ chooseUs }) => {
                 px: 2,
               }}
             >
-              <Image src={image} width={430} height={25} alt="true" />
+              <Image src={image} width={430} height={25} alt={alt} />
             </Box>
           </Grid>
         </Grid>

@@ -23,7 +23,7 @@ const QuestionAnswer = () => {
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
                   width={400}
                   height={200}
-                  alt="img"
+                  alt="We make easy for companies to expand their network with eSpark Talent"
                 />
               </Box>
             </Box>
