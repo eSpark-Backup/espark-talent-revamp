@@ -1,5 +1,12 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 // Light Theme
 const lightTheme = createTheme({
@@ -17,7 +24,7 @@ const lightTheme = createTheme({
       main: '#F7F8FB  ',
     },
     danger: {
-      main: '#ECECED  ',
+    main: '#ECECED  ',
     },
     background: {
       default: '#ffffff',
@@ -28,8 +35,8 @@ const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
-    h1: {
+    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
+        h1: {
       fontSize: '50px',
       fontWeight: 700,
     },
