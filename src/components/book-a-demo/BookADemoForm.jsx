@@ -57,7 +57,7 @@ const BookADemoForm = ({ form }) => {
     useFormik({
       initialValues: Book_A_Demo_Keys,
       validationSchema: profileValidationSchema,
-      onSubmit: async (values, action) => {
+      onSubmit: (values, action) => {
         console.log(values, 'values');
         action.resetForm();
       },

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useRouter } from 'next/navigation';
@@ -49,6 +49,13 @@ const Header = () => {
 
   return (
     <Box>
+      <Box backgroundColor={'#029894'}>
+        <Typography color={'#fff'} variant="body1" textAlign={'center'}>
+          {' '}
+          Scale up your business with our exclusive offer! Start with No
+          Management Fee for First Employee. 🚀
+        </Typography>
+      </Box>
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
