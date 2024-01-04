@@ -95,13 +95,27 @@ const lightTheme = createTheme({
           props: { variant: 'secondary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029894 ',
+            backgroundColor: '#001C63 ',
             borderRadius: '5px',
             color: '#fff',
             position: 'relative',
             '&:hover': {
               backgroundColor: '#001C63',
               color: '#fff',
+            },
+          },
+        },
+        {
+          props: { variant: 'default' },
+          style: {
+            textTransform: 'capitalize',
+            backgroundColor: 'red',
+            borderRadius: '5px',
+            color: 'secondary',
+            position: 'relative',
+            '&:hover': {
+              backgroundColor: '#001C63',
+              color: '#secondary',
             },
           },
         },
