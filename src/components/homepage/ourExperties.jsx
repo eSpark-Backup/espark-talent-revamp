@@ -71,32 +71,42 @@ const OurExperties = ({ data }) => {
                   >
                     <Box>
                       <Typography
-                        variant="h5"
-                        sx={{ py: '10px', color: 'secondary' }}
+                        variant="h5" color='primary' fontWeight={700}
+                        sx={{ py: '10px', }}
                       >
                         {list?.heading}
                       </Typography>
                       {list?.listItems?.map((item, itemIndex) => (
-                        <ListItem key={itemIndex}>
-                          <ListItemIcon>
-                            <Image
-                              src={data?.icon}
-                              alt="List Icon"
-                              width={15}
-                              height={15}
-                            />
-                          </ListItemIcon>
-                          <ListItemText>
+                        <Box
+                          key={itemIndex}
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            py: '0px',
+                          }}
+                        ><Box>
+                          <Image
+                            src={
+                              itemIndex === 0
+                                ? data?.startIcon
+                                : itemIndex === list.listItems.length - 1
+                                  ? data?.endIcon
+                                  : data?.otherIcon
+                            }
+                            alt="List Icon"
+                            width={20}
+                            height={60}
+                          /></Box>
                             <Link href={item?.link}>
-                              <Typography
-                                variant="body1"
-                                sx={{ py: '10px', color: '#001C63' }}
-                              >
-                                {item?.title}
-                              </Typography>
-                            </Link>
-                          </ListItemText>
-                        </ListItem>
+                            <Typography
+                              variant="body1"
+                              sx={{ py: '10px', color: '#001C63'}}
+                            >
+                              {item?.title}
+                            </Typography>
+                          </Link>
+                        </Box>
                       ))}
                     </Box>
                   </Grid>

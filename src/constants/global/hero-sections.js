@@ -4,7 +4,7 @@ export const HP_HERO_DATA = {
     'Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.',
   button: {
     label: 'Hire a Talent',
-    link: '/',
+    link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',
   },
@@ -74,7 +74,7 @@ export const JOBS_HERO_DATA = {
 
 export const STARTUP_HERO_DATA = {
   title: 'Live The Dream Of Turning Your Start-Up Into A Business Giant.',
-  description: `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.`,
+  description: `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.​​`,
   image: '/images/for-startup/startup-hero-main.png',
   imageAlt: '',
   imageWidth: 435,
@@ -94,7 +94,7 @@ export const ENTERPRISE_HERO_DATA = {
   description: `Your enterprise demands eSpark Talent’s instant onboarding services. Join the club of our esteemed clients and start your successful business campaign today!`,
   button: {
     label: 'Hire a Talent',
-    link: '/',
+    link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',
   },
