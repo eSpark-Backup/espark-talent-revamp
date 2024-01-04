@@ -23,11 +23,13 @@ const eSparkButton = ({ title, link, color, onClick }) => {
 
   return (
     <Link href={link}>
-      <Button variant="primary"  color={'red'} onClick={onClick} sx={btnSx}>
-        <Typography variant="body1" color={'white'} sx={txtSx}>{title}</Typography>
+      <Button variant="primary" color={'red'} onClick={onClick} sx={btnSx}>
+        <Typography variant="body1" color={'white'} sx={txtSx}>
+          {title}
+        </Typography>
       </Button>
     </Link>
-  ) 
+  );
   // : color === blue ? (
   //   <Link href={link}>
   //     <Button variant="secondary"  color={'red'} onClick={onClick} sx={btnSx}>
@@ -41,10 +43,6 @@ const eSparkButton = ({ title, link, color, onClick }) => {
   //     </Button>
   //   </Link>
   // ): null
-
 };
 
 export default eSparkButton;
-
-
-
