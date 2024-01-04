@@ -1,5 +1,15 @@
 export const PARTNERSHIP = {
   listIcon: `/images/wiki/wiki-icon.svg`,
+  formContent: {
+    title: 'Join Our Program Today',
+    firstName: 'First Name',
+    lastName:'Last Name',
+    emailAddress:' Your Email Address',
+    phoneNumber:'Phone Number',
+    countryLocated: ' Which Country are you Located in?',
+    linkedInProfile: 'Your LinkedIn Profile',
+    buttonName:'Schedule a Meeting'
+  },
   content: [
     {
       title: 'What Are eSpark Talent Outsourcing Services?',
