@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Box, Typography, Button, Grid, Container } from '@mui/material';
@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import TitleParagraph from '@/components/global/titleParagraph';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
