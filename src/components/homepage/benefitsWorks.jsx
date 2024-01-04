@@ -1,8 +1,8 @@
+'use client';
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-
-import TitleParagraph from '@/components/global/titleParagraph';
+// import ParagraphTitle from './ParagraphTitle';
 
 const BenefitsWorks = ({ data }) => {
   return (
@@ -10,7 +10,7 @@ const BenefitsWorks = ({ data }) => {
       <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
         <Container>
           <Box sx={{ px: ['5%', '10%', '15%', '20%'], textAlign: 'center' }}>
-            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
+            {/* <ParagraphTitle title={data?.title} paragraph={data?.paragraph} /> */}
           </Box>
           <Grid container spacing={2} gap={'10%'} justifyContent="center">
             {data?.items.map((item, index) => (

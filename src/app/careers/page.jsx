@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CareerCards from '@/components/careers/careerCards';
-import HeroSection from '@/components/homepage/heroSection';
+import HeroSection from '@/components/homepage/HeroSection';
 
 import { JOBS_HERO_DATA } from '@/constants/global/hero-sections';
 import { CAREERS_DATA } from '@/constants/careers';

@@ -1,28 +1,41 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 
 const FooterCTA = ({ data }) => {
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+
   return (
     <Box
       sx={{
         backgroundColor: '#029894',
-        height: { lg: '357px' },
+        backgroundImage: [
+          '',
+          '',
+          `url(/images/footer-cta-main-bg.png)`,
+          `url(/images/footer-cta-main-bg.png)`,
+        ],
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      <Container sx={{ px: { xs: '0%', lg: '2%' } }}>
+      <Container>
         <Grid container>
-          <Grid item sm={7} sx={{}}>
-            <Box
-              sx={{
-                my: { xs: '45px', sm: '0px' },
-                mt: { sm: '40px' },
-                mx: { xs: '15px', lg: '0px' },
-                pl: { lg: '6%' },
-                width: { lg: '95%' },
-              }}
-            >
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            <Box>
               <Typography
                 sx={{
                   color: '#ECECED',
@@ -69,7 +82,12 @@ const FooterCTA = ({ data }) => {
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={5} sx={{}}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{ textAlign: isSmallScreen ? 'center' : 'end' }}
+          >
             <Box
               sx={{
                 display: 'flex',
@@ -79,11 +97,11 @@ const FooterCTA = ({ data }) => {
             >
               <Image
                 src={data?.image}
-                width={360}
-                height={350}
+                width={isSmallScreen ? 300 : 360}
+                height={isSmallScreen ? 290 : 350}
                 alt="images"
                 style={{
-                  marginTop: '-61px',
+                  marginTop: isSmallScreen ? 0 : '-61px',
                   zIndex: 1000,
                 }}
               />
@@ -91,34 +109,6 @@ const FooterCTA = ({ data }) => {
           </Grid>
         </Grid>
       </Container>
-      <Box
-        sx={{
-          '@media (max-width: 1770px)': {
-            display: 'none',
-          },
-        }}
-      >
-        <Box sx={{ position: 'relative' }}>
-          <Box sx={{ position: 'absolute', right: -138, top: -403 }}>
-            <Image
-              src={'/images/footer/circleRight.png'}
-              width={360}
-              height={350}
-              alt="images"
-            />
-          </Box>
-        </Box>
-        <Box sx={{ position: 'relative' }}>
-          <Box sx={{ position: 'absolute', left: -138, top: -291 }}>
-            <Image
-              src={'/images/footer/circleLeft.png'}
-              width={360}
-              height={350}
-              alt="images"
-            />
-          </Box>
-        </Box>
-      </Box>
     </Box>
   );
 };

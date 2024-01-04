@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --fontFamily: 'Titillium Web', sans-serif;
   --fontFamily2: 'Cabin', sans-serif;
@@ -21,12 +22,14 @@
   left: 0 !important;
   max-width: 100% !important;
 }
+
 #menuResponsive .MuiPaper-root {
   /* left: 0 !important;
     max-width: 100% !important;
     width: 100% !important;
     background-color: blue ; */
 }
+
 span {
   color: #029894;
   font-size: 15px;
@@ -43,6 +46,7 @@ span {
 .MuiAccordion-root::before {
   height: 0 !important;
 }
+
 .default-btn {
   display: inline-block;
   -webkit-transition: var(--transition);
@@ -103,6 +107,7 @@ span {
 .default-btn:hover::before {
   width: 100%;
 }
+
 .single-blog-post .image .date {
   display: flex;
   position: relative;
@@ -112,12 +117,14 @@ span {
   text-orientation: mixed;
   column-gap: 5px;
 }
+
 .single-blog-post .image .date::before {
   height: 50px;
   width: 1px;
   content: '';
   background-color: var(--optionalColor);
 }
+
 #faq .MuiAccordion-gutters {
   box-shadow: none !important;
 }
@@ -196,6 +203,7 @@ span {
     height: 30px;
   }
 }
+
 .hrFirmResponsive {
   display: none;
 }
@@ -204,10 +212,12 @@ span {
   .hrFirmResponsive {
     display: block;
   }
+
   .hrFirmDesktop {
     display: none !important;
   }
 }
+
 .blog-content h1 {
   font-size: 50px;
   font-weight: 700;
@@ -244,6 +254,7 @@ span {
   line-height: 32.3px;
   padding-bottom: 15px;
 }
+
 .blog-content li {
   font-size: 18px;
   font-weight: 400;
@@ -262,18 +273,22 @@ span {
 
 .blog-content li::before {
   content: '\2022';
+  content: '\2022';
   color: black;
   font-size: 20px;
   margin-right: 8px;
   display: inline-block;
 }
+
 .mix-reviews-area {
   position: relative;
   margin-bottom: -167px;
 }
+
 .main-review-area {
   width: 100%;
 }
+
 .reviews-swiper .swiper-slide {
   width: 750px;
   position: relative;
@@ -301,6 +316,7 @@ span {
 .reviews-swiper .swiper-pagination-horizontal {
   bottom: 15px !important;
 }
+
 .reviews-swiper .swiper-button-next::after,
 .reviews-swiper .swiper-button-prev::after {
   content: '';
@@ -341,23 +357,28 @@ span {
   background-image: url('/images/homepage/our-clients/pagination-right.png');
   background-repeat: no-repeat;
 }
+
 .reviews-swiper .swiper-button-next::after,
 .reviews-swiper .swiper-button-prev::after {
   content: '';
 }
+
 .reviews-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
 }
+
 .reviews-swiper .swiper-pagination-bullet-active {
   color: #00718a;
   background-color: #00718a;
 }
+
 .feedback-rating-ul {
   list-style-type: none;
   display: flex;
   padding-left: 0;
 }
+
 .ratings-in .feedback-rating-ul {
   list-style-type: none;
   display: flex;
@@ -371,4 +392,236 @@ span {
 .ratings-in .feedback-rating-ul li img {
   width: 100%;
   object-fit: cover;
+}
+
+.partner-form {
+  border-radius: 7.224px;
+  border: 1px solid #d0d4ea;
+  background: #fff;
+  flex-shrink: 0;
+  padding: 30px 36px;
+}
+
+.partner-form .starick {
+  color: #f00;
+  font-family: Titillium Web;
+  font-size: 14.448px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19.867px;
+  margin-left: 1px;
+}
+
+.partner-form .input {
+  border-radius: 5.418px;
+  padding-left: 10px;
+  border: 0.903px solid #d0d4ea;
+  background: #fff;
+  height: 41.539px;
+  width: 100% !important;
+}
+
+.partner-form .input::placeholder {
+  color: #abb2d9;
+  font-size: 14.448px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* .partner-form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+.partner-form .custom-arrow {
+  width: 17px;
+  height: 11px;
+}
+
+.partner-form .dropdown-options {
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  left: 0;
+  width: 100%;
+  font-size: 14.448px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0px 0px 5.418px 5.418px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.partner-form .custom-dropdown.open .dropdown-options {
+  opacity: 1;
+}
+
+.partner-form .options-container {
+  max-height: 160px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+}
+
+.partner-form .options-container .opt {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.partner-form .options-container .opt:hover {
+  background-color: var(--buttonColor);
+  color: #fff;
+}
+
+.partner-form .options-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.partner-form-phone-number-input-box {
+  display: flex;
+  gap: 20px;
+}
+
+.partner-form .dropdown-header-Flag {
+  cursor: pointer;
+  padding: 10px;
+  width: auto;
+  height: 41.539px;
+  border: 0.903px solid #d0d4ea;
+  color: #abb2d9;
+  border-radius: 5.418px;
+  font-size: 14.448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partner-form .custom-dropdown-flag {
+  width: auto;
+  height: 41.53px;
+  position: relative;
+  display: inline-block;
+}
+
+.partner-form .custom-dropdown-flag .dropdown-options {
+  width: 70px;
+}
+
+.partner-form .custom-dropdown-flag.open .dropdown-options {
+  opacity: 1;
+  z-index: 2;
+}
+
+.dropdown-header-title {
+  width: 55px;
+}
+
+.partner-form .custom-dropdown-flag .opt {
+  max-height: 160px;
+  margin: auto;
+  text-align: center;
+  padding-left: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+}
+
+.partner-form-country-code {
+  padding-left: 10px;
+  padding-right: 12px;
+  text-wrap: nowrap;
+}
+
+.partner-form .partner-form-full-name {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.partner-form .partner-form-firstname,
+.partner-form-lastname,
+.input {
+  width: 92% !important;
+}
+
+.partner-form .partner-form-your-email-adress,
+.partner-form-phone-number,
+.partner-form-Country,
+.partner-form-LinkedIn-Profile {
+  padding-bottom: 15px;
+}
+
+.partner-form-your-email-adress,
+.partner-form-phone-number,
+.partner-form-Country,
+.partner-form-LinkedIn-Profile,
+.input {
+  width: 100%;
+}
+
+.partner-form-button {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.partner-form-button button {
+  width: 260.267px;
+  height: 50.531px;
+  border: 0;
+  border-radius: 15.25px;
+  background: #029894;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20.333px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36.6px;
+}
+
+.partner-form-button button:hover {
+  background-color: var(--blackColor);
+  transition: var(--transition);
+}
+
+.partner-form .error-message {
+  color: #f00;
+  font-family: Titillium Web;
+  font-size: 13.448px;
+}
+
+.partner-country-dropdown {
+  padding: 10px;
+  width: 100%;
+  border: 0.903px solid #d0d4ea;
+  color: var(--blackColor);
+  border-radius: 5.418px;
+  font-size: 14.448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  appearance: none;
+  font-weight: 600;
+  background-image: url(/images/partners/arrow.svg);
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+}
+
+.partner-country-dropdown .default-select {
+  color: #abb2d9;
+}
+
+.partner-country-dropdown option {
+  font-weight: 400;
+  color: var(--blackColor);
 }

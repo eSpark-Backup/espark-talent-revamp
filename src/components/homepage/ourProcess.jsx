@@ -2,14 +2,14 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import TitleParagraph from '@/components/global/titleParagraph';
+import ParagraphTitle from './ParagraphTitle';
 
 const OurProcess = ({ data }) => {
   return (
     <>
       <Box sx={{ py: '4%' }}>
         <Container maxWidth="lg">
-          <TitleParagraph title={data?.title} paragraph={data?.subTitle} />
+          <ParagraphTitle title={data?.title} paragraph={data?.subTitle} />
           {data?.processes?.map((process, index) => (
             <Grid
               key={index}
