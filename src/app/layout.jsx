@@ -16,7 +16,7 @@ import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
 import Footer from '@/components/global/footer/Footer';
 import FooterCTA from '@/components/homepage/FooterCTA';
-import SEO from '@/components/global/seo';
+import SEO from '@/components/global/SEO';
 
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
