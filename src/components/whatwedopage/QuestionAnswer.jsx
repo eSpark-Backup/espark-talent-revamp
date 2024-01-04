@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
+import Link from 'next/link';
 import { QUESTION_ANSWER } from '@/constants/what-we-do-page/question-answer';
 
 const QuestionAnswer = () => {
@@ -63,32 +64,36 @@ const QuestionAnswer = () => {
               >
                 {QUESTION_ANSWER.descrioption}
               </Typography>
-              <Button
-                sx={{
-                  background: '#001C63',
-                  color: '#fff',
-                  borderRadius: '6.448px',
-                  alignSelf: { xs: 'center', sm: 'flex-end' },
-                  px: '25px',
-                  py: '10px',
-                  '&:hover': {
-                    backgroundColor: '#001C63',
-                    color: '#fff',
-                  },
-                }}
-              >
-                <Typography
-                  sx={{
-                    textAlign: 'center',
-                    color: ' #fff',
-                    fontSize: '17px',
-                    fontWeight: 700,
-                    lineHeight: '27px',
-                  }}
-                >
-                  {QUESTION_ANSWER.buttonLable}
-                </Typography>
-              </Button>
+              <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+                <Link href={QUESTION_ANSWER.buttonLink}>
+                  <Button
+                    sx={{
+                      background: '#001C63',
+                      color: '#fff',
+                      borderRadius: '6.448px',
+                      alignSelf: { xs: 'center', sm: 'flex-end' },
+                      px: '25px',
+                      py: '10px',
+                      '&:hover': {
+                        backgroundColor: '#001C63',
+                        color: '#fff',
+                      },
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        textAlign: 'center',
+                        color: ' #fff',
+                        fontSize: '17px',
+                        fontWeight: 700,
+                        lineHeight: '27px',
+                      }}
+                    >
+                      {QUESTION_ANSWER.buttonLabel}
+                    </Typography>
+                  </Button>
+                </Link>
+              </Box>
             </Box>
           </Grid>
         </Grid>

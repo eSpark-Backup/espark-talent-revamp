@@ -4,7 +4,7 @@ export const HP_HERO_DATA = {
     'Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.',
   button: {
     label: 'Hire a Talent',
-    link: '/',
+    link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',
   },
@@ -74,8 +74,7 @@ export const JOBS_HERO_DATA = {
 
 export const STARTUP_HERO_DATA = {
   title: 'Live The Dream Of Turning Your Start-Up Into A Business Giant.',
-  description:
-    `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.​​`,
+  description: `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.​​`,
   image: '/images/for-startup/startup-hero-main.png',
   imageAlt: 'Build team for your start up with eSpark Talent',
   imageWidth: 435,
@@ -90,12 +89,12 @@ export const STARTUP_HERO_DATA = {
 };
 
 export const ENTERPRISE_HERO_DATA = {
-  title: 'Big Dream Needs Premium Outsourcing Support To Conquer The Global Market.',
-  description:
-    `Your enterprise demands eSpark Talent’s instant onboarding services. Join the club of our esteemed clients and start your successful business campaign today!`,
+  title:
+    'Big Dream Needs Premium Outsourcing Support To Conquer The Global Market.',
+  description: `Your enterprise demands eSpark Talent’s instant onboarding services. Join the club of our esteemed clients and start your successful business campaign today!`,
   button: {
     label: 'Hire a Talent',
-    link: '/',
+    link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',
   },
@@ -114,8 +113,7 @@ export const ENTERPRISE_HERO_DATA = {
 
 export const PARTNERSHIP_HERO_DATA = {
   title: 'Make Introductions,Earn Commissions',
-  description:
-    `Our partners have earned over $1000 by simply making introductions to our team.`,
+  description: `Our partners have earned over $1000 by simply making introductions to our team.`,
   image: '/images/partnership/partnership-hero-main.svg',
   imageAlt: 'Partnership Program with eSpark Talent',
   imageWidth: 450,
@@ -129,11 +127,9 @@ export const PARTNERSHIP_HERO_DATA = {
   descColor: '#fff',
 };
 
-
 export const HOW_WORKS_HERO_DATA = {
   title: 'How It Works',
-  description:
-    `Specializing in developer outsourcing solutions, eSpark Talent optimizes talent acquisition for enhanced business success.`,
+  description: `Specializing in developer outsourcing solutions, eSpark Talent optimizes talent acquisition for enhanced business success.`,
   image: '/images/how-its-works/how-works-hero-main.svg',
   imageAlt: 'employee outsourcing with eSpark Talent',
   imageWidth: 450,
@@ -149,8 +145,7 @@ export const HOW_WORKS_HERO_DATA = {
 
 export const WHAT_WE_DO_HERO_DATA = {
   title: 'What We Do?',
-  description:
-    `At eSpark Talent, we revolutionize employee outsourcing, setting new benchmarks for organizational growth and efficiency.`,
+  description: `At eSpark Talent, we revolutionize employee outsourcing, setting new benchmarks for organizational growth and efficiency.`,
   image: '/images/whatwedo/what-we-do-hero-main.svg',
   imageAlt: 'Do employee Outsourcing with eSpark Talent',
   imageWidth: 450,

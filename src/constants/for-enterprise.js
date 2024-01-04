@@ -114,7 +114,7 @@ export const OUTSOURCING_LIST_DATA = {
 export const OUTSTAFFING_TRUST_DATA = {
   title: 'Our Outsourcing Works Wonders for Your Business Enterprise',
   buttonText: 'Book A Demo',
-  buttonLink: '/',
+  buttonLink: '/book-a-demo',
   items: [
     {
       title: `The Right Talent`,
@@ -154,9 +154,6 @@ export const OUTSOURCING_ADVANTAGES_DATA = {
   alt:'Outsourcing advantages with eSpark Talent',
   imageHeight: 360,
   imageWidth: 428,
-
-  // buttonText: 'Book A Demo',
-  // buttonLink: '/',
   items: [
     {
       title: `Cost Efficiency.`,
