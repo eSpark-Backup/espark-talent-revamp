@@ -15,9 +15,12 @@ import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
 import Footer from '@/components/global/footer/Footer';
 import FooterCTA from '@/components/homepage/FooterCTA';
+import SEO from '@/components/global/seo';
 
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
+import { usePathname } from 'next/navigation';
+import { SEO_DATA } from '@/constants/global/seo';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -26,6 +29,12 @@ export default function RootLayout({ children }) {
     setIsDarkTheme((prevTheme) => !prevTheme);
   };
   console.log(toggleTheme);
+
+  const pathname = usePathname();
+  console.log(pathname, `pathname`);
+  const filterMeta = SEO_DATA?.filter((item) => item?.link == pathname);
+  console.log(filterMeta, `filterMeta`);
+  console.log(SEO_DATA[0], `SEO_DATA[0]`);
   return (
     <html lang="en">
       <Head>
@@ -33,6 +42,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <SEO data={filterMeta} alter={SEO_DATA[0]} />
       </Head>
       <body>
         <Provider store={store}>
