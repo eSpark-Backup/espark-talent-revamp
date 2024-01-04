@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Grid, Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';

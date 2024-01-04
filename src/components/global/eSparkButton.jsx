@@ -2,24 +2,24 @@ import React from 'react';
 import { Button, Typography } from '@mui/material';
 import { Link } from 'next/link';
 
-const eSparkButton = ({ title, link, color, onClick }) => {
+const eSparkButton = ({ title, link, onClick }) => {
   const btnSx = {};
   const txtSx = {};
 
-  let variant = 'contained';
-  let textColor = 'inherit';
+  // let variant = 'contained';
+  // let textColor = 'inherit';
 
-  if (color === 'green') {
-    variant = 'contained';
-    textColor = 'white';
-  } else if (color === 'white') {
-    variant = 'outlined';
-    textColor = 'default';
-  } else if (color === 'red') {
-    variant = 'contained';
-    textColor = 'white';
-    btnSx.backgroundColor = 'red';
-  }
+  // if (color === 'green') {
+  //   variant = 'contained';
+  //   textColor = 'white';
+  // } else if (color === 'white') {
+  //   variant = 'outlined';
+  //   textColor = 'default';
+  // } else if (color === 'red') {
+  //   variant = 'contained';
+  //   textColor = 'white';
+  //   btnSx.backgroundColor = 'red';
+  // }
 
   return (
     <Link href={link}>
