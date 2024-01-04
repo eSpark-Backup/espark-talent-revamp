@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import HeroSection from '@/components/homepage/HeroSection';
+import HeroSection from '@/components/homepage/heroSection';
 import WikiSingle from '@/components/wiki/WikiSingle';
 
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
