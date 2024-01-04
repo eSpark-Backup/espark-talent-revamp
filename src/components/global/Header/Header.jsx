@@ -49,8 +49,12 @@ const Header = () => {
 
   return (
     <Box>
-      <Box backgroundColor={'#029894'} >
-        <Typography color={'#fff'} variant='body1' textAlign={'center'}> Scale up your business with our exclusive offer!  Start with No Management Fee for First Employee. 🚀</Typography>
+      <Box backgroundColor={'#029894'}>
+        <Typography color={'#fff'} variant="body1" textAlign={'center'}>
+          {' '}
+          Scale up your business with our exclusive offer! Start with No
+          Management Fee for First Employee. 🚀
+        </Typography>
       </Box>
       <AppBar position="static" sx={{ background: '#fff' }}>
         <Container>
