@@ -1,16 +1,19 @@
 'use client';
 import React, { useState } from 'react';
-import Title from './Title';
+import {
+  Box,
+  Grid,
+  Typography,
+  Accordion,
+  Container,
+  AccordionDetails,
+  AccordionSummary,
+} from '@mui/material';
 import Image from 'next/image';
-import Accordion from '@mui/material/Accordion';
-import Container from '@mui/material/Container';
-import { Box, Grid, Typography } from '@mui/material';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
 
-import { FAQ_DATA, TITLE } from '@/constants/home-page/faq-section';
+import Title from './Title';
 
-const Faq = () => {
+const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState([]);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -21,11 +24,11 @@ const Faq = () => {
     );
   };
   return (
-    <Box sx={{ my: 4 }} id="faq">
+    <Box sx={{ mt: 40 }} id="faq">
       <Container>
-        <Title title={TITLE} />
+        <Title title={data?.title} />
         <Grid container>
-          {FAQ_DATA?.map((item, index) => {
+          {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;
             return (
               <Grid

@@ -3,16 +3,7 @@ import React from 'react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import {
-  Box,
-  Typography,
-  Button,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-} from '@mui/material';
+import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -72,31 +63,45 @@ const OurExperties = ({ data }) => {
                     <Box>
                       <Typography
                         variant="h5"
-                        sx={{ py: '10px', color: 'secondary' }}
+                        color="primary"
+                        fontWeight={700}
+                        sx={{ py: '10px' }}
                       >
                         {list?.heading}
                       </Typography>
                       {list?.listItems?.map((item, itemIndex) => (
-                        <ListItem key={itemIndex}>
-                          <ListItemIcon>
+                        <Box
+                          key={itemIndex}
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            py: '0px',
+                          }}
+                        >
+                          <Box>
                             <Image
-                              src={data?.icon}
+                              src={
+                                itemIndex === 0
+                                  ? data?.startIcon
+                                  : itemIndex === list.listItems.length - 1
+                                    ? data?.endIcon
+                                    : data?.otherIcon
+                              }
                               alt="List Icon"
-                              width={15}
-                              height={15}
+                              width={20}
+                              height={60}
                             />
-                          </ListItemIcon>
-                          <ListItemText>
-                            <Link href={item?.link}>
-                              <Typography
-                                variant="body1"
-                                sx={{ py: '10px', color: '#001C63' }}
-                              >
-                                {item?.title}
-                              </Typography>
-                            </Link>
-                          </ListItemText>
-                        </ListItem>
+                          </Box>
+                          <Link href={item?.link}>
+                            <Typography
+                              variant="body1"
+                              sx={{ py: '10px', color: '#001C63' }}
+                            >
+                              {item?.title}
+                            </Typography>
+                          </Link>
+                        </Box>
                       ))}
                     </Box>
                   </Grid>

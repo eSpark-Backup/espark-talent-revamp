@@ -1,16 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import {} from '@mui/material';
-
-import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import {
-  Box,
   Button,
   Divider,
   Menu,
   MenuItem,
   Typography,
+  Box,
 } from '@mui/material';
+
+import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 
 const DesktopHeader = ({
   submenuAnchor,

@@ -8,8 +8,8 @@ export const SUBMENU_ITEMS = {
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
-      label: 'How it Works',
-      link: '/how-it-works',
+      label: 'How its Work',
+      link: '/how-its-work',
       icon: '/images/header/howItsWork.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -18,14 +18,14 @@ export const SUBMENU_ITEMS = {
   Solutions: [
     {
       label: 'Enterprise',
-      link: '/for-enterprise',
+      link: '/solutions/enterprises',
       icon: '/images/header/enterPrice.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
       label: 'Start-Ups',
-      link: '/for-startup',
+      link: '/solutions/business-startup',
       icon: '/images/header/startup.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -41,13 +41,13 @@ export const SUBMENU_ITEMS = {
     },
     {
       label: 'eSparkWiki',
-      link: '/wiki',
+      link: '/esparkwiki',
       icon: '/images/header/esparkWiki.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
-      label: 'Career',
+      label: 'Careers',
       link: '/careers',
       icon: '/images/header/career.svg',
       description:
@@ -57,7 +57,7 @@ export const SUBMENU_ITEMS = {
   Partnership: [
     {
       label: 'Partnership Program',
-      link: '/partnership',
+      link: '/partnership-program',
       icon: '/images/header/partnership.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -67,3 +67,4 @@ export const SUBMENU_ITEMS = {
 
 export const PAGES = ['Our Company', 'Solutions', 'Resources', 'Partnership'];
 export const HIRE_A_TALENT = 'Hire a Talent';
+export const HIRE_A_TALENT_LINK = '/book-a-demo';

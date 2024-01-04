@@ -1,14 +1,16 @@
 import React from 'react';
-import Faq from '@/components/FAQ/Faq';
+
 import AchievementAwards from '@/components/homepage/achievementAwards';
 import ClientSlider from '@/components/global/clientSlider';
 import HeroSection from '@/components/homepage/heroSection';
-import BlogCards from '@/components/homepage/BlogCards';
 import OurExperties from '@/components/homepage/ourExperties';
 import OurPerks from '@/components/homepage/ourPerks';
 import OurProcess from '@/components/homepage/ourProcess';
 import OutSourceBenefits from '@/components/homepage/outSourceBenefits';
 import BenefitsWorks from '@/components/homepage/benefitsWorks';
+import HomePageBlogs from '@/components/blogs/homePageBlogs';
+import ClientSays from '@/components/homepage/ClientSays';
+import Faq from '@/components/FAQ/Faq';
 
 import {
   ACHIEVEMENTS_DATA,
@@ -18,8 +20,11 @@ import {
   OUTSOURCE_BENEFITS_DATA,
   PERKS_DATA,
   PROCESS_DATA,
+  OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import { BLOGS_DATA } from '@/constants/blogs';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
 
 const Home = () => {
   return (
@@ -30,6 +35,7 @@ const Home = () => {
         bgColor={'#029894'}
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
+        length={100}
       />
       <OurProcess data={PROCESS_DATA} />
       <OutSourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
@@ -41,8 +47,9 @@ const Home = () => {
         design={1}
         background={'#F7F8FB'}
       />
-      <BlogCards />
-      <Faq />
+      <HomePageBlogs data={BLOGS_DATA} />
+      <ClientSays data={OUR_CLIENT_SAYS} />
+      <Faq data={FAQ_DATA} />
     </>
   );
 };
