@@ -3,6 +3,7 @@ import ClientSlider from '@/components/global/clientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
 import OutSourcingWonders from '@/components/for-enterprise/outSourcingWonders';
+
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
   BEST_OUTSOURCING_SOLUTIONS,
@@ -13,6 +14,7 @@ import {
   OUTSOURCING_SOLUTIONS_DATA,
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
+
 import HeroSection from '@/components/homepage/heroSection';
 
 const page = () => {
