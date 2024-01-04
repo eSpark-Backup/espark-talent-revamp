@@ -40,18 +40,18 @@ export const FOOTER_DATA = {
       link: '/what-we-do',
     },
     {
-      label: 'How it Works',
-      link: '/how-it-works',
+      label: 'How its Work',
+      link: '/how-its-work',
     },
   ],
   solution: [
     {
       label: 'For Start-Ups',
-      link: '/for-startup',
+      link: '/solutions/business-startup',
     },
     {
       label: 'For Enterprise',
-      link: '/for-enterprise',
+      link: '/solutions/enterprises',
     },
   ],
   resource: [
@@ -61,7 +61,7 @@ export const FOOTER_DATA = {
     },
     {
       label: 'eSparkWiki',
-      link: '/wiki',
+      link: '/esparkwiki',
     },
     {
       label: 'Career',
@@ -71,7 +71,7 @@ export const FOOTER_DATA = {
   partnership: [
     {
       label: 'Partnership Program',
-      link: '/partnership',
+      link: '/partnership-program',
     },
   ],
   contactUsSales: [
