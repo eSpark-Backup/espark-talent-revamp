@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 
 import SourceBenefits from '@/components/homepage/SourceBenefits';

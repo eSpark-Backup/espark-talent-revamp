@@ -6,7 +6,7 @@ import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
 import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 
 import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
