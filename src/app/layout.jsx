@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+// import Head from 'next/head';
+// import Link from 'next/link';
 import './globals.css';
 import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,11 +16,11 @@ import store from '@/redux/store';
 import Header from '@/components/global/Header/Header';
 import Footer from '@/components/global/footer/Footer';
 import FooterCTA from '@/components/homepage/FooterCTA';
-import SEO from '@/components/global/seo';
+// import SEO from '@/components/global/seo';
 
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
-import { SEO_DATA } from '@/constants/global/seo';
+// import { SEO_DATA } from '@/constants/global/seo';
 
 export default function RootLayout({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -33,19 +33,19 @@ export default function RootLayout({ children }) {
   };
   console.log(toggleTheme);
 
-  const filterMeta = SEO_DATA?.filter((item) => item?.link == pathName);
-  console.log(filterMeta, `filterMeta`);
-  console.log(SEO_DATA[0], `SEO_DATA[0]`);
+  // const filterMeta = SEO_DATA?.filter((item) => item?.link == pathName);
+  // console.log(filterMeta, `filterMeta`);
+  // console.log(SEO_DATA[0], `SEO_DATA[0]`);
 
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <Link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <SEO data={filterMeta} alter={SEO_DATA[0]} />
-      </Head>
+      </Head> */}
       <body>
         <Provider store={store}>
           <AppRouterCacheProvider>
