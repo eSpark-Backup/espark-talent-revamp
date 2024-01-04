@@ -71,8 +71,10 @@ const OurExperties = ({ data }) => {
                   >
                     <Box>
                       <Typography
-                        variant="h5" color='primary' fontWeight={700}
-                        sx={{ py: '10px', }}
+                        variant="h5"
+                        color="primary"
+                        fontWeight={700}
+                        sx={{ py: '10px' }}
                       >
                         {list?.heading}
                       </Typography>
@@ -85,23 +87,25 @@ const OurExperties = ({ data }) => {
                             gap: '10px',
                             py: '0px',
                           }}
-                        ><Box>
-                          <Image
-                            src={
-                              itemIndex === 0
-                                ? data?.startIcon
-                                : itemIndex === list.listItems.length - 1
-                                  ? data?.endIcon
-                                  : data?.otherIcon
-                            }
-                            alt="List Icon"
-                            width={20}
-                            height={60}
-                          /></Box>
-                            <Link href={item?.link}>
+                        >
+                          <Box>
+                            <Image
+                              src={
+                                itemIndex === 0
+                                  ? data?.startIcon
+                                  : itemIndex === list.listItems.length - 1
+                                    ? data?.endIcon
+                                    : data?.otherIcon
+                              }
+                              alt="List Icon"
+                              width={20}
+                              height={60}
+                            />
+                          </Box>
+                          <Link href={item?.link}>
                             <Typography
                               variant="body1"
-                              sx={{ py: '10px', color: '#001C63'}}
+                              sx={{ py: '10px', color: '#001C63' }}
                             >
                               {item?.title}
                             </Typography>

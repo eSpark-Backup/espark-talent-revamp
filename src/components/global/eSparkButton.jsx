@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Typography } from '@mui/material';
 import { Link } from 'next/link';
 
-const EsparkButton = ({ title, link, color, onClick }) => {
+const eSparkButton = ({ title, link, color, onClick }) => {
   const btnSx = {};
   const txtSx = {};
 
@@ -27,19 +27,20 @@ const EsparkButton = ({ title, link, color, onClick }) => {
         <Typography variant="body1" color={'white'} sx={txtSx}>{title}</Typography>
       </Button>
     </Link>
-  ) : color === blue ? (
-    <Link href={link}>
-      <Button variant="secondary"  color={'red'} onClick={onClick} sx={btnSx}>
-        <Typography variant="body1" color={'white'} sx={txtSx}>{title}</Typography>
-      </Button>
-    </Link>
-  ) : color === white ?(
-    <Link href={link}>
-      <Button variant={btnVariant}  color={'red'} onClick={onClick} sx={btnSx}>
-        <Typography variant={btnVariant} color={'white'} sx={txtSx}>{title}</Typography>
-      </Button>
-    </Link>
-  ): null
+  ) 
+  // : color === blue ? (
+  //   <Link href={link}>
+  //     <Button variant="secondary"  color={'red'} onClick={onClick} sx={btnSx}>
+  //       <Typography variant="body1" color={'white'} sx={txtSx}>{title}</Typography>
+  //     </Button>
+  //   </Link>
+  // ) : color === white ?(
+  //   <Link href={link}>
+  //     <Button variant={btnVariant}  color={'red'} onClick={onClick} sx={btnSx}>
+  //       <Typography variant={btnVariant} color={'white'} sx={txtSx}>{title}</Typography>
+  //     </Button>
+  //   </Link>
+  // ): null
 
 };
 
