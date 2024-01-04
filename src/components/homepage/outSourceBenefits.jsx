@@ -3,16 +3,17 @@ import { Box, Typography, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 
 import TitleParagraph from '@/components/global/titleParagraph';
+import OutSourceBenefitsSlider from './OutSourceBenefitsSlider';
 
 const OutSourceBenefits = ({ data }) => {
   return (
     <>
       <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
         <Container>
-          <Box sx={{ px: '20%' }}>
+          <Box>
             <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
           </Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="hrFirmDesktop">
             {data?.items?.map((item, index) => (
               <Grid
                 key={index}
@@ -64,6 +65,9 @@ const OutSourceBenefits = ({ data }) => {
               </Grid>
             ))}
           </Grid>
+          <Box className="hrFirmResponsive">
+            <OutSourceBenefitsSlider items = {data?.items} />
+          </Box>
         </Container>
       </Box>
     </>
