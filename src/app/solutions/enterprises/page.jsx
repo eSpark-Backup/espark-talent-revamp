@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Box } from '@mui/material';
 
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';

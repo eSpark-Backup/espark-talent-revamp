@@ -1,17 +1,18 @@
 'use client';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 
-import { Button, Box, Grid, Typography, Container } from '@mui/material';
-import Image from 'next/image';
-
 const Hero = ({ data, innerData }) => {
+  const hero = innerData || data;
+
   return (
     <>
       <Box
         sx={{
-          py: `${innerData?.spacing || data?.spacing}`,
-          background: `${innerData?.bgColor || data?.bgColor}`,
-          backgroundImage: `url(${innerData?.bgImage || data?.bgImage})`,
+          py: hero?.spacing,
+          background: hero?.bgColor,
+          backgroundImage: `url(${hero?.bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -26,27 +27,27 @@ const Hero = ({ data, innerData }) => {
             }}
           >
             <Grid item xs={12} sm={6} sx={{}}>
-              {data?.title && (
+              {hero?.title && (
                 <Typography
-                  variant={innerData?.titleVariant || data?.titleVariant}
-                  color={innerData?.titleColor || data?.titleColor}
+                  variant={hero?.titleVariant}
+                  color={hero?.titleColor}
                 >
-                  {innerData?.title || data?.title}
+                  {hero?.title}
                 </Typography>
               )}
-              {data?.description && (
+              {hero?.description && (
                 <Typography
-                  variant={innerData?.descVarient || data?.descVarient}
-                  color={innerData?.descColor || data?.descColor}
+                  variant={hero?.descVariant}
+                  color={hero?.descColor}
                   sx={{ py: '10px' }}
                 >
-                  {innerData?.description || data?.description}
+                  {hero?.description}
                 </Typography>
               )}
-              {data?.button && (
+              {hero?.button && (
                 <Button
                   variant="secondary"
-                  href={innerData?.button?.link || data?.button?.link}
+                  href={hero?.button?.link}
                   sx={{
                     py: '10px',
                     px: '30px',
@@ -57,17 +58,14 @@ const Hero = ({ data, innerData }) => {
                 >
                   <Typography
                     variant="body1"
-                    sx={{
-                      fontWeight: 'bold',
-                      fontSize: '17px',
-                    }}
+                    sx={{ fontWeight: 'bold', fontSize: '17px' }}
                   >
-                    {innerData?.button?.label || data?.button?.label}
+                    {hero?.button?.label}
                   </Typography>
                 </Button>
               )}
             </Grid>
-            {data?.image && (
+            {hero?.image && (
               <Grid
                 item
                 xs={12}
@@ -79,10 +77,10 @@ const Hero = ({ data, innerData }) => {
                 }}
               >
                 <Image
-                  src={innerData?.image || data?.image}
-                  alt={innerData?.imageAlt || data?.imageAlt}
-                  width={innerData?.imageWidth || data?.imageWidth}
-                  height={innerData?.imageHeight || data?.imageHeight}
+                  src={hero?.image}
+                  alt={hero?.imageAlt}
+                  width={hero?.imageWidth}
+                  height={hero?.imageHeight}
                 />
               </Grid>
             )}

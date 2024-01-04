@@ -14,7 +14,7 @@ import {
   OUR_OFFERED_SERVICES,
   OUR_SERVICE,
 } from '@/constants/how-its-works';
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import Hero from '@/components/homepage/Hero';
 
 const page = () => {

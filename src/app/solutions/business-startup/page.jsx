@@ -1,5 +1,5 @@
 import React from 'react';
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
 
