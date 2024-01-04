@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
@@ -5,7 +6,7 @@ import Image from 'next/image';
 
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 
-const page = () => {
+const Page = () => {
   const { image, title, desc, btnLink, btnText } = NOT_FOUND_DATA;
   return (
     <Box
@@ -56,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
