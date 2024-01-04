@@ -2,9 +2,10 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
+
 import ParagraphTitle from './ParagraphTitle';
 
-const OurProcess = ({ data }) => {
+const Process = ({ data }) => {
   return (
     <>
       <Box sx={{ py: '4%' }}>
@@ -67,4 +68,4 @@ const OurProcess = ({ data }) => {
   );
 };
 
-export default OurProcess;
+export default Process;

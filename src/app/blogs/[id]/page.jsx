@@ -27,7 +27,7 @@ const Page = () => {
         <SingleBlogHeader data={data} />
         <BlogDetailsContent data={data} />
       </Container>
-      {/* <HeroSection data={BLOGS_HERO_DATA} innerData={data} /> */}
+      {/* <Hero data={BLOGS_HERO_DATA} innerData={data} /> */}
       {/* <WikiSingle data={data} /> */}
     </Box>
   );

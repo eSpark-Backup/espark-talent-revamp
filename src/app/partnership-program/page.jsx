@@ -1,15 +1,15 @@
 import React from 'react';
 
-import HeroSection from '@/components/homepage/HeroSection';
 import Partnership from '@/components/partnership/Partnership';
 
 import { PARTNERSHIP_HERO_DATA } from '@/constants/global/hero-sections';
 import { PARTNERSHIP } from '@/constants/partnership';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={PARTNERSHIP_HERO_DATA} />
+      <Hero data={PARTNERSHIP_HERO_DATA} />
       <Partnership partnership={PARTNERSHIP} />
     </>
   );
