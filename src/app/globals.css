@@ -16,6 +16,7 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
+ font-family: 'Poppins', sans-serif;
 }
 
 .menuResponsive .MuiPaper-root {
