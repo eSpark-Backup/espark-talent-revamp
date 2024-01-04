@@ -83,7 +83,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
   {
@@ -103,7 +103,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
   {
@@ -123,7 +123,7 @@ export const PERKS_DATA = [
       ],
       listIcon: '/images/homepage/our-perks/list-icon.svg',
       buttonText: 'Book A Demo',
-      buttonLink: '/',
+      buttonLink: '/book-a-demo',
     },
   },
 ];
@@ -131,8 +131,11 @@ export const PERKS_DATA = [
 export const EXPERTIES_DATA = {
   title: 'Which Experts Will Drive Your Business?',
   buttonText: 'Hire A Talent',
-  buttonLink: '/',
+  buttonLink: '/book-a-demo',
   icon: '/images/homepage/experties/experties-icon.svg',
+  otherIcon: '/images/homepage/experties/center.svg',
+  endIcon: '/images/homepage/experties/end.svg',
+  startIcon: '/images/homepage/experties/start.svg',
   sections: [
     {
       lists: [
@@ -348,6 +351,42 @@ export const ACHIEVEMENTS_DATA = {
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
+    },
+  ],
+};
+export const OUR_CLIENT_SAYS = {
+  heading: 'What Our Client Says',
+  subHeading: `Clients express gratitude for the outstanding service, highlighting the team's unwavering dedication and expertise.`,
+  slider: [
+    {
+      image: '/images/homepage/our-clients/dfrbot.png',
+      title: 'Ricky Ye',
+      subTitle: 'CEO',
+      description: `We engaged eSpark Talent for PCB and embedded development, aiming to enhance system functionality. Navigating this complex field demanded precision, and eSpark Talent demonstrated unmatched professionalism. Their expert team not only understood technical details but also swiftly addressed urgent needs.`,
+    },
+    {
+      image: '/images/homepage/our-clients/konoozi.png',
+      title: 'Imran Khan',
+      subTitle: 'CEO',
+      description: `eSpark Talent's skill in .NET development and UI/UX design completely transformed our projects. Their quick response and dedicated team ensured tasks were completed smoothly. Surpassing expectations with efficiency and expertise, they've become our top choice. Enthusiastically recommending eSpark Talent for setting a new standard in reliability and excellence.`,
+    },
+    {
+      image: '/images/homepage/our-clients/equip.png',
+      title: 'Clarie Dennis',
+      subTitle: 'CEO',
+      description: `Choosing eSpark Talent for outsourcing was transformative. Their WordPress developer and performance marketer showcased exceptional speed and agility. Partnering with eSpark Talent was the right decision; the outstanding service ensures my return for future projects. Highly recommended for those who want to avail top-notch outsourcing services!`,
+    },
+    {
+      image: '/images/homepage/our-clients/project.png',
+      title: 'Jawad Ali',
+      subTitle: 'CEO',
+      description: `eSpark Talent is the dream team for digital excellence! From a WordPress Developer shaping my online presence to a Performance Marketer driving results, a Social Media Expert creating buzz, and a UI/UX Designer adding aesthetic magic – they nailed every role. Fully satisfied with their service, I'm excited for more collaborations. They're not just outsourcing; they're elevating my brand to new heights.`,
+    },
+    {
+      image: '/images/homepage/our-clients/robot.png',
+      title: 'Cole Benson',
+      subTitle: 'Director',
+      description: `Cheers to the tech experts at eSpark Talent! They've skillfully blended the latest tech into our online venture, making innovation smooth sailing. Affordable support aligns perfectly with our business goals, making groundbreaking ideas flow effortlessly. Thanks to eSpark Talent, success in Embedded System Engineering and Firmware Development is just within reach!`,
     },
   ],
 };

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button, Box, Typography } from '@mui/material';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import { Button, Box, Grid, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 
 const HeroSection = ({ data, innerData }) => {
@@ -22,7 +20,7 @@ const HeroSection = ({ data, innerData }) => {
             spacing={2}
             sx={{
               alignItems: 'center',
-              flexDirection: { xs: 'column-reverse', sm: 'row' },
+              flexDirection: { xs: 'column', sm: 'row' },
             }}
           >
             <Grid item xs={12} sm={6} sx={{}}>
@@ -43,7 +41,7 @@ const HeroSection = ({ data, innerData }) => {
                   {innerData?.description || data?.description}
                 </Typography>
               )}
-              {data?.button && innerData?.button.label && (
+              {data?.button && (
                 <Button
                   variant="secondary"
                   href={innerData?.button?.link || data?.button?.link}
