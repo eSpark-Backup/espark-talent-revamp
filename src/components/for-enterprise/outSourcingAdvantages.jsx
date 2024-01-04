@@ -5,7 +5,7 @@ import Image from 'next/image';
 const OutSourcingAdvantages = ({ data }) => {
   return (
     <>
-      <Box sx={{ pt: '2%', background: '#3B59980A' }}>
+      <Box sx={{ pt: '2%', mb:'2%', background: '#3B59980A' }}>
         <Container>
           <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} sm={6} sx={{}}>

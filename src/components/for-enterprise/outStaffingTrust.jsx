@@ -7,7 +7,7 @@ import { Box, Typography, Grid, Button, Container } from '@mui/material';
 const OutStaffingTrust = ({ data }) => {
   return (
     <>
-      <Box sx={{ background: '#F7F8FB', py: '3%' }}>
+      <Box sx={{ background: '#F7F8FB', py: '3%', my:'2%' }}>
         <Container>
           <TitleParagraph
             title={`Trust eSpark Talent's Outstaffing Services`}

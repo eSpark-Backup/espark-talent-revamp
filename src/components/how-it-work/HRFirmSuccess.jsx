@@ -9,7 +9,7 @@ import HRFirmSuccessSlider from '@/components/how-it-work/HRFirmSuccessSlider.js
 const HRFirmSuccess = ({ hrFirm }) => {
   const { heading, subHeading, card } = hrFirm;
   return (
-    <Box>
+    <Box sx={{ my: '4%' }}>
       <Container>
         <Title heading={heading} subHeading={subHeading} />
         <Grid container className="hrFirmDesktop">
