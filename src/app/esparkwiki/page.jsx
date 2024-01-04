@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 
 import WikiCards from '@/components/wiki/wikiCards';
 import WikiFilter from '@/components/wiki/WikiFilter';
-import HeroSection from '@/components/homepage/HeroSection';
 
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { WIKIS_DATA } from '@/constants/wiki';
+import Hero from '@/components/homepage/Hero';
 
 const WikiMainPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -22,7 +22,7 @@ const WikiMainPage = () => {
 
   return (
     <>
-      <HeroSection data={WIKI_HERO_DATA} />
+      <Hero data={WIKI_HERO_DATA} />
       <WikiFilter
         categories={categories}
         onSelectCategory={setSelectedCategory}

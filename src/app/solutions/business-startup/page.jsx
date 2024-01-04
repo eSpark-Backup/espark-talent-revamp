@@ -14,13 +14,13 @@ import {
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 
-import HeroSection from '@/components/homepage/HeroSection';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={STARTUP_HERO_DATA} />
+      <Hero data={STARTUP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}

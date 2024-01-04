@@ -3,11 +3,9 @@ import React from 'react';
 
 import ClientSlider from '@/components/global/clientSlider';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import HeroSection from '@/components/homepage/HeroSection';
-import OurProcess from '@/components/homepage/OurProcess';
 
 import SourceBenefits from '@/components/homepage/SourceBenefits';
-import OurPerks from '@/components/homepage/OurPerks';
+
 import BenefitsWorks from '@/components/homepage/BenefitsWorks';
 import { BLOGS_DATA } from '@/constants/blogs';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
@@ -27,11 +25,14 @@ import {
   PERKS_DATA,
   PROCESS_DATA,
 } from '@/constants/homepage';
+import Hero from '@/components/homepage/Hero';
+import Process from '@/components/homepage/Process';
+import Perks from '@/components/homepage/Perks';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={HP_HERO_DATA} />
+      <Hero data={HP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#029894'}
@@ -39,9 +40,9 @@ const page = () => {
         title={'Meet our partners who trust our certified tech experts'}
         length={100}
       />
-      <OurProcess data={PROCESS_DATA} />
+      <Process data={PROCESS_DATA} />
       <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
-      <OurPerks data={PERKS_DATA} />
+      <Perks data={PERKS_DATA} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <AwardAchievement

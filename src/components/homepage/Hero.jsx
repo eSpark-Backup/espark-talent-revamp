@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
+
 import { Button, Box, Grid, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 
-const HeroSection = ({ data, innerData }) => {
+const Hero = ({ data, innerData }) => {
   return (
     <>
       <Box
@@ -91,4 +93,4 @@ const HeroSection = ({ data, innerData }) => {
   );
 };
 
-export default HeroSection;
+export default Hero;

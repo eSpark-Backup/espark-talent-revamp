@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 
-import HeroSection from '@/components/homepage/HeroSection';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
 import ChooseUs from '@/components/how-it-work/ChooseUs';
 import OurQualityService from '@/components/how-it-work/OurQualityService';
@@ -16,11 +15,12 @@ import {
   OUR_SERVICE,
 } from '@/constants/how-its-works';
 import ClientSlider from '@/components/global/clientSlider';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={HOW_WORKS_HERO_DATA} />
+      <Hero data={HOW_WORKS_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}
