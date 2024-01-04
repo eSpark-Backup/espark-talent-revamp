@@ -9,7 +9,7 @@ const AchievementAwards = ({ data, design, background }) => {
   return (
     <>
       {design === 2 ? (
-        <Box sx={{ background: background, py: '2.5%' }}>
+        <Box sx={{ background: background, py: '2.5%', mb: '2%' }}>
           <Container>
             <Grid
               container

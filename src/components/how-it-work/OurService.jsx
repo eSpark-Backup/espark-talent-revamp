@@ -13,7 +13,7 @@ import TitleParagraph from '@/components/global/titleParagraph.jsx';
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <TitleParagraph title={heading} paragraph={subHeading} />
         <Swiper

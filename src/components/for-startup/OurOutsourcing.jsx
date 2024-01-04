@@ -8,7 +8,7 @@ import TitleParagraph from '@/components/global/titleParagraph.jsx';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ pb: '2%' }}>
       <TitleParagraph title={heading} paragraph={subHeading} />
       <Container>
         <Grid container>

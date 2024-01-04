@@ -43,7 +43,7 @@ const CareerCards = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%', lg: '3%' } }}>
+      <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
         <Container>
           <Box sx={{ py: '2%' }}>
             <Select
