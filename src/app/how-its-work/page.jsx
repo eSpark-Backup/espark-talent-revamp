@@ -7,7 +7,10 @@ import OurQualityService from '@/components/how-it-work/OurQualityService';
 import OurService from '@/components/how-it-work/OurService';
 
 import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
-import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+import {
+  CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
+} from '@/constants/homepage';
 import {
   CHOOSE_US,
   HR_FIRM_DATA,
@@ -23,6 +26,7 @@ const page = () => {
       <Hero data={HOW_WORKS_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
+        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}

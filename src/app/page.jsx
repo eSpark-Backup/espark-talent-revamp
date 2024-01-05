@@ -19,6 +19,7 @@ import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,
   CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
   EXPERTIES_DATA,
   OUR_CLIENT_SAYS,
   OUTSOURCE_BENEFITS_DATA,
@@ -36,6 +37,7 @@ const page = () => {
       <Hero data={HP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
+        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#029894'}
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
