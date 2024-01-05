@@ -1,15 +1,17 @@
+'use client';
 import React from 'react';
-import TitleParagraph from '../global/titleParagraph';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Box, Typography, Grid, Button, Container } from '@mui/material';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
-const OutStaffingTrust = ({ data }) => {
+const OutStaffings = ({ data }) => {
   return (
     <>
-      <Box sx={{ background: '#F7F8FB', py: '3%' }}>
+      <Box sx={{ background: '#F7F8FB', py: '3%', my: '2%' }}>
         <Container>
-          <TitleParagraph
+          <ParagraphTitle
             title={`Trust eSpark Talent's Outstaffing Services`}
             paragraph={`Partnering With Us Is Remarkable.`}
           />
@@ -65,4 +67,4 @@ const OutStaffingTrust = ({ data }) => {
   );
 };
 
-export default OutStaffingTrust;
+export default OutStaffings;

@@ -16,12 +16,12 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .menuResponsive .MuiPaper-root {
   left: 0 !important;
   max-width: 100% !important;
-
 }
 
 #menuResponsive .MuiPaper-root {
@@ -135,6 +135,69 @@ span {
   height: 50px;
 }
 
+/* ---------------------------- */
+/* country Input styling */
+/* ---------------------------- */
+
+.PhoneInput {
+  display: flex;
+  padding-top: 4px;
+}
+.PhoneInputCountry {
+  width: 57px;
+  display: flex;
+  gap: 5px;
+}
+.PhoneInputCountrySelect {
+  width: 100%;
+}
+.PhoneInputCountrySelectArrow {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+.PhoneInputCountrySelect option {
+  font-size: 14.448px;
+}
+.PhoneInputCountryIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.PhoneInputCountryIcon img {
+  width: 70px;
+  height: 70px;
+}
+
+.PhoneInputInput {
+  font-size: 14px;
+  padding-left: 9px;
+  border-radius: 5.418px;
+  padding-left: 10px;
+  border: 0.903px solid #bcbfc0;
+  background: #f5f8fa;
+  height: 40px;
+  width: 100%;
+}
+.PhoneInputInput::-webkit-inner-spin-button {
+  display: none;
+}
+
+.PhoneInputInput:hover {
+  border-color: black;
+}
+.PhoneInputInput:focus {
+  outline-color: #029894;
+}
+.PhoneInputInput::placeholder {
+  color: #b8c1d4;
+}
+
+.PhoneInputCountryIconImg {
+  width: 40px;
+}
+
 @media (max-width: 600px) {
   .swiper-image {
     width: 250px;
@@ -210,7 +273,8 @@ span {
 }
 
 .blog-content li::before {
-  content: "\2022";
+  content: '\2022';
+  content: '\2022';
   color: black;
   font-size: 20px;
   margin-right: 8px;
@@ -233,8 +297,10 @@ span {
   background-size: cover;
   filter: blur(2.9px);
   height: 320px;
-  box-shadow: 0px -1px 0px rgba(50, 50, 50, 0.75),
-    rgba(0, 0, 0, 0.16) 1px 4px 36px -15px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
+  box-shadow:
+    0px -1px 0px rgba(50, 50, 50, 0.75),
+    rgba(0, 0, 0, 0.16) 1px 4px 36px -15px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.1) 0px 15px 1px 0px;
 }
 
@@ -254,7 +320,7 @@ span {
 
 .reviews-swiper .swiper-button-next::after,
 .reviews-swiper .swiper-button-prev::after {
-  content: "";
+  content: '';
 }
 
 .reviews-swiper .swiper-pagination-bullet {
@@ -279,7 +345,7 @@ span {
   left: 40%;
   right: 0px;
   margin-top: 0px;
-  background-image: url("/images/homepage/our-clients/pagination-left.png");
+  background-image: url('/images/homepage/our-clients/pagination-left.png');
   background-repeat: no-repeat;
 }
 
@@ -289,13 +355,13 @@ span {
   right: 0%;
   left: 58.6%;
   margin-top: 0px;
-  background-image: url("/images/homepage/our-clients/pagination-right.png");
+  background-image: url('/images/homepage/our-clients/pagination-right.png');
   background-repeat: no-repeat;
 }
 
 .reviews-swiper .swiper-button-next::after,
 .reviews-swiper .swiper-button-prev::after {
-  content: "";
+  content: '';
 }
 
 .reviews-swiper .swiper-pagination-bullet {
@@ -354,6 +420,7 @@ span {
   background: #fff;
   height: 41.539px;
   width: 100% !important;
+  color: var(--blackColor);
 }
 
 .partner-form .input::placeholder {

@@ -1,5 +1,12 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
 
 // Light Theme
 const lightTheme = createTheme({
@@ -23,12 +30,12 @@ const lightTheme = createTheme({
       default: '#ffffff',
     },
     text: {
-      primary: '#001C63',
-      secondary: '#029894',
+      primary: '#029894',
+      secondary: '#001C63',
     },
   },
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
+    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
       fontSize: '50px',
       fontWeight: 700,
@@ -95,13 +102,27 @@ const lightTheme = createTheme({
           props: { variant: 'secondary' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: '#029894 ',
+            backgroundColor: '#001C63 ',
             borderRadius: '5px',
             color: '#fff',
             position: 'relative',
             '&:hover': {
               backgroundColor: '#001C63',
               color: '#fff',
+            },
+          },
+        },
+        {
+          props: { variant: 'default' },
+          style: {
+            textTransform: 'capitalize',
+            backgroundColor: 'red',
+            borderRadius: '5px',
+            color: 'secondary',
+            position: 'relative',
+            '&:hover': {
+              backgroundColor: '#001C63',
+              color: '#secondary',
             },
           },
         },
