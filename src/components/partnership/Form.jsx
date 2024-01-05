@@ -1,11 +1,9 @@
-
 'use client';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 
 import emailjs from '@emailjs/browser';
-
 
 // import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
@@ -15,15 +13,18 @@ import { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
 
-const userid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || "hyXwjEdPoM5uV-RK8";
-const templeteid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID  || "template_6y49v0k";
-const serviceid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID  || "service_ac1wtgmmm";
+const userid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
+const templeteid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID || 'template_6y49v0k';
+const serviceid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID || 'service_ac1wtgmmm';
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState(false);
-  // const [PhoneError, setPhoneError] = useState();
+  const [PhoneError, setPhoneError] = useState();
 
   const PartnerFormData = {
     first_name: '',
@@ -166,9 +167,9 @@ const Form = ({ formContent }) => {
               value={values.first_name}
               onChange={handleChange}
             />
-           {touched?.first_name && errors?.first_name && (
-                            <span className="error-message">{errors?.first_name}</span>
-                        )} 
+            {touched?.first_name && errors?.first_name && (
+              <span className="error-message">{errors?.first_name}</span>
+            )}
           </Box>
           <Box className="partner-form-lastname">
             <Typography
@@ -191,9 +192,9 @@ const Form = ({ formContent }) => {
               value={values.last_name}
               onChange={handleChange}
             />
-           {touched?.last_name && errors?.last_name && (
-                            <span className="error-message">{errors?.last_name}</span>
-                        )} 
+            {touched?.last_name && errors?.last_name && (
+              <span className="error-message">{errors?.last_name}</span>
+            )}
           </Box>
         </Box>
         <Box className="partner-form-your-email-adress">
@@ -217,9 +218,9 @@ const Form = ({ formContent }) => {
             value={values.email}
             onChange={handleChange}
           />
-         {touched?.email && errors?.email && (
-                        <span className="error-message">{errors?.email}</span>
-                    )} 
+          {touched?.email && errors?.email && (
+            <span className="error-message">{errors?.email}</span>
+          )}
         </Box>
         <Box className="partner-form-your-email-adress">
           <Typography
@@ -235,14 +236,21 @@ const Form = ({ formContent }) => {
             <span className="starick">*</span>
           </Typography>
 
-          <Box className="">
-            <input
+          <Box>
+            {/* <input
               type="number"
               className="input"
               placeholder="+00 00000000"
               name="phone"
               value={values.email}
               onChange={handleChange}
+            /> */}
+            <PhoneInput
+              placeholder="Enter phone number"
+              value={values.phone_number}
+              id={'phone_number'}
+              defaultCountry={'PK'}
+              onChange={handlePhoneChange}
             />
           </Box>
         </Box>
@@ -287,18 +295,14 @@ const Form = ({ formContent }) => {
             placeholder="Enter your LinkedIn profile URL"
             onChange={handleChange}
           />
-         {touched?.linkedin_profile_link &&
-                        errors?.linkedin_profile_link && (
-                            <span className="error-message">
-                                {errors?.linkedin_profile_link}
-                            </span>
-                        )} 
+          {touched?.linkedin_profile_link && errors?.linkedin_profile_link && (
+            <span className="error-message">
+              {errors?.linkedin_profile_link}
+            </span>
+          )}
         </Box>
         <Box className="partner-form-button">
-          <Button
-             onClick={handleSubmit}
-            type="button"
-          >
+          <Button onClick={handleSubmit} type="button">
             {formContent.buttonName}
           </Button>
         </Box>
