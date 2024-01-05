@@ -138,7 +138,6 @@ const BookADemoForm = ({ form }) => {
           <Typography
             sx={{
               color: '#001C63',
-              fontFamily: 'Poppins',
               fontSize: '32px',
               fontStyle: 'normal',
               fontWeight: 600,
@@ -150,7 +149,6 @@ const BookADemoForm = ({ form }) => {
           <Typography
             sx={{
               color: '#001C63',
-              fontFamily: 'Poppins',
               fontSize: '16px',
               fontStyle: 'normal',
               fontWeight: 400,
@@ -168,7 +166,6 @@ const BookADemoForm = ({ form }) => {
                   sx={{
                     mb: 0.5,
                     color: '#029894',
-                    fontFamily: 'Titillium Web',
                     fontSize: '14.448px',
                     fontStyle: 'normal',
                     fontWeight: 600,
@@ -241,7 +238,6 @@ const BookADemoForm = ({ form }) => {
           <Typography
             sx={{
               color: '#001C63',
-              fontFamily: 'Poppins',
               fontSize: '16px',
               fontStyle: 'normal',
               fontWeight: 400,

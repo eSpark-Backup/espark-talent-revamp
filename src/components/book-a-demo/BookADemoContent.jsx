@@ -34,7 +34,6 @@ const BookADemoContent = ({ content }) => {
               sx={{
                 color: '#FFF',
                 textAlign: 'center',
-                fontFamily: 'Poppins',
                 fontStyle: 'normal',
                 fontWeight: 600,
                 lineHeight: { xs: '30px', sm: '42.289px' },
@@ -47,7 +46,6 @@ const BookADemoContent = ({ content }) => {
                 width: { xs: '100%', sm: '540px' },
                 color: '#FFF',
                 textAlign: 'center',
-                fontFamily: 'Poppins',
                 fontSize: '16px',
                 fontStyle: 'normal',
                 fontWeight: 400,

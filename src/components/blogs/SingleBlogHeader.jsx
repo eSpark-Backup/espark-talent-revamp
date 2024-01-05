@@ -13,10 +13,16 @@ const SingleBlogHeader = ({ data }) => {
     >
       <Grid item lg={6} md={6} sm={12} order={{ xs: 2, sm: 2, md: 1 }}>
         <Box pb={{ xs: '5%', md: '10%' }}>
-          <Typography variant="h1" fontSize={{ xs: '28px', md: '40px' }}>
+          <Typography
+            variant="h1"
+            color={'#001C63'}
+            fontSize={{ xs: '28px', md: '40px' }}
+          >
             {data?.mainHeading}
           </Typography>
-          <Typography variant="body1">{data?.mainParagraph}</Typography>
+          <Typography variant="body1" color={'#000'}>
+            {data?.mainParagraph}
+          </Typography>
         </Box>
         <Box className="post-author-meta">
           <Box style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
@@ -28,13 +34,23 @@ const SingleBlogHeader = ({ data }) => {
               />
             </Stack>
             <Box className="title">
-              <Typography variant="body1">
-                By
-                <Link href="#" underline="hover">
-                  {data?.postedBy?.name}
-                </Link>
+              <Box display="flex" gap="2px">
+                
+                  <Link href="#" underline="hover">
+                   <Typography variant="body1" color={'black'}>
+                  By <Typography
+                      variant="body1"
+                      color="#001C63"
+                      fontWeight={600}
+                    >
+                      {data?.postedBy?.name}
+                    </Typography>
+                </Typography>
+                  </Link>
+              </Box>
+              <Typography variant="body1" color={'black'}>
+                {data?.postedBy?.date}
               </Typography>
-              <Typography variant="body2">{data?.postedBy?.date}</Typography>
             </Box>
           </Box>
         </Box>

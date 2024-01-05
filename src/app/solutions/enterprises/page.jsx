@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Box } from '@mui/material';
 
+import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle';
@@ -10,8 +11,7 @@ import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
 import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
-
-import Hero from '@/components/homepage/Hero';
+import Faq from '@/components/FAQ/Faq';
 
 import {
   ACHIEVEMENTS_DATA,
@@ -25,6 +25,7 @@ import {
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
 
 const page = () => {
   return (
@@ -51,6 +52,7 @@ const page = () => {
       <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
       <OutStaffings data={OUTSTAFFING_TRUST_DATA} />
       <AwardAchievement data={ACHIEVEMENTS_DATA} design={2} />
+      <Faq data={FAQ_DATA} />
     </>
   );
 };
