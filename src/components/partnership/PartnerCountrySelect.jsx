@@ -14,7 +14,7 @@ const PartnerCountrySelect = ({
   return (
     <div>
       <select
-        className="partner-country-dropdown"
+        className="partner-country-dropdown partner-form input"
         value={selectedOption}
         onChange={handleSelectChange}
       >

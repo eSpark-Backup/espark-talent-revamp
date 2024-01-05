@@ -23,8 +23,8 @@ const serviceid =
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [showModal, setShowModal] = useState(false);
-  // const [modalTitle, setModalTitle] = useState(false);
-  // const [PhoneError, setPhoneError] = useState();
+  const [modalTitle, setModalTitle] = useState(false);
+  const [PhoneError, setPhoneError] = useState();
 
   const PartnerFormData = {
     first_name: '',
@@ -236,14 +236,21 @@ const Form = ({ formContent }) => {
             <span className="starick">*</span>
           </Typography>
 
-          <Box className="">
-            <input
+          <Box>
+            {/* <input
               type="number"
               className="input"
               placeholder="+00 00000000"
               name="phone"
               value={values.email}
               onChange={handleChange}
+            /> */}
+            <PhoneInput
+              placeholder="Enter phone number"
+              value={values.phone_number}
+              id={'phone_number'}
+              defaultCountry={'PK'}
+              onChange={handlePhoneChange}
             />
           </Box>
         </Box>
