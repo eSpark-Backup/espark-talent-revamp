@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
   return (
-    <Box>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Typography

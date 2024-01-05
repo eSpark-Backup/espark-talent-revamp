@@ -5,7 +5,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 const ChooseUs = ({ chooseUs }) => {
   const { list, image, alt, heading, subHeading } = chooseUs;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <Grid container>
           <Grid item sm={12} md={8} sx={{ px: '20px' }}>

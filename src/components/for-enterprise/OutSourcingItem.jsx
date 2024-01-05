@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+
 import {
   Box,
   Typography,
@@ -10,10 +12,10 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 
-const OutSourcingList = ({ data }) => {
+const OutSourcingItem = ({ data }) => {
   return (
     <>
-      <Box sx={{ py: '2%' }}>
+      <Box sx={{ pt: '2%', pb: '4%' }}>
         <Container>
           <Grid container spacing={2} justifyContent="center">
             {data?.items.map((item, index) => (
@@ -69,4 +71,4 @@ const OutSourcingList = ({ data }) => {
   );
 };
 
-export default OutSourcingList;
+export default OutSourcingItem;

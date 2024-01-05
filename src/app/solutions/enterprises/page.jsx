@@ -1,31 +1,37 @@
+'use client';
 import React from 'react';
 
 import { Box } from '@mui/material';
 
-import AchievementAwards from '@/components/homepage/achievementAwards';
-import ClientSlider from '@/components/global/clientSlider';
-import TitleParagraph from '@/components/global/titleParagraph';
-import OutSourcingWonders from '@/components/for-enterprise/outSourcingWonders';
-import OutSourcingList from '@/components/for-enterprise/outSourcingList';
-import OutStaffingTrust from '@/components/for-enterprise/outStaffingTrust';
-import OutSourcingAdvantages from '@/components/for-enterprise/outSourcingAdvantages';
+import ClientSlider from '@/components/global/ClientSlider';
+import AwardAchievement from '@/components/homepage/AwardAchiefment';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
+import OutStaffings from '@/components/for-enterprise/OutStaffings';
+import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
+import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
 
-import { ACHIEVEMENTS_DATA, CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
+  ACHIEVEMENTS_DATA,
+  CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
+} from '@/constants/homepage';
+import {
+  OUTSOURCING_ADVANTAGES_DATA,
   OUTSOURCING_LIST_DATA,
   OUTSOURCING_WONDERS_DATA,
   OUTSTAFFING_TRUST_DATA,
-  OUTSOURCING_ADVANTAGES_DATA,
 } from '@/constants/for-enterprise';
-import HeroSection from '@/components/homepage/heroSection';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={ENTERPRISE_HERO_DATA} />
+      <Hero data={ENTERPRISE_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
+        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
@@ -34,16 +40,16 @@ const page = () => {
         }
       />
       <Box sx={{ pt: '2%', px: '10%' }}>
-        <TitleParagraph
+        <ParagraphTitle
           title={'How Fast Are Our Outsourcing Services?'}
           paragraph={`At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.`}
         />
       </Box>
-      <OutSourcingList data={OUTSOURCING_LIST_DATA} />
-      <OutSourcingAdvantages data={OUTSOURCING_ADVANTAGES_DATA} />
-      <OutSourcingWonders data={OUTSOURCING_WONDERS_DATA} />
-      <OutStaffingTrust data={OUTSTAFFING_TRUST_DATA} />
-      <AchievementAwards data={ACHIEVEMENTS_DATA} design={2} />
+      <OutSourcingItem data={OUTSOURCING_LIST_DATA} />
+      <OutSourcingAdvantage data={OUTSOURCING_ADVANTAGES_DATA} />
+      <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
+      <OutStaffings data={OUTSTAFFING_TRUST_DATA} />
+      <AwardAchievement data={ACHIEVEMENTS_DATA} design={2} />
     </>
   );
 };
