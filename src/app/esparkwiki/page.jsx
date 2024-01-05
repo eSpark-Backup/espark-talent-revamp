@@ -1,12 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 
+import Hero from '@/components/homepage/Hero';
 import WikiCards from '@/components/wiki/wikiCards';
 import WikiFilter from '@/components/wiki/WikiFilter';
 
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { WIKIS_DATA } from '@/constants/wiki';
-import Hero from '@/components/homepage/Hero';
 
 const WikiMainPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);

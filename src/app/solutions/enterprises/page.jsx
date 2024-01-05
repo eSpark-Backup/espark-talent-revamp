@@ -11,6 +11,8 @@ import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
 
+import Hero from '@/components/homepage/Hero';
+
 import {
   ACHIEVEMENTS_DATA,
   CLIENTS_SLIDER_DATA,
@@ -23,7 +25,6 @@ import {
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
-import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (

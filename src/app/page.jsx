@@ -2,18 +2,17 @@
 import React from 'react';
 
 import ClientSlider from '@/components/global/ClientSlider';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-
 import SourceBenefits from '@/components/homepage/SourceBenefits';
-
 import BenefitsWorks from '@/components/homepage/BenefitsWorks';
-import { BLOGS_DATA } from '@/constants/blogs';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import OurExperties from '@/components/homepage/OurExperties';
 import HomeBlogs from '@/components/blogs/HomeBlogs';
 import ClientSays from '@/components/homepage/ClientSays';
+import Hero from '@/components/homepage/Hero';
+import Process from '@/components/homepage/Process';
+import Perks from '@/components/homepage/Perks';
 import Faq from '@/components/FAQ/Faq';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
+// import Faqs from '@/components/Faqs';
 
 import {
   ACHIEVEMENTS_DATA,
@@ -26,10 +25,10 @@ import {
   PERKS_DATA,
   PROCESS_DATA,
 } from '@/constants/homepage';
-import Hero from '@/components/homepage/Hero';
-import Process from '@/components/homepage/Process';
-import Perks from '@/components/homepage/Perks';
-// import Faqs from '@/components/Faqs';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
+import { BLOGS_DATA } from '@/constants/blogs';
+import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+
 
 const page = () => {
   return (

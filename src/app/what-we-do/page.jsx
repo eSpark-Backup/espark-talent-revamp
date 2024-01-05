@@ -1,18 +1,18 @@
 'use client';
 import React from 'react';
 
+import Hero from '@/components/homepage/Hero';
+import ClientSlider from '@/components/global/ClientSlider';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
 import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
-import ClientSlider from '@/components/global/ClientSlider';
-import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 
+import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
-import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
