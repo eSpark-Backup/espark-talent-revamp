@@ -1,10 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { DATA } from '@/constants/what-we-do-page/why-choose-hr';
-
-const WhyChooseOurHr = () => {
+const WhyChooseOurHr = ({ data }) => {
+  const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <Box sx={{ my: '4%' }}>
       <Container>
@@ -18,7 +23,7 @@ const WhyChooseOurHr = () => {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              {DATA.title}
+              {data.title}
             </Typography>
             <Typography
               sx={{
@@ -29,88 +34,127 @@ const WhyChooseOurHr = () => {
                 textAlign: { xs: 'center', md: 'justify' },
               }}
             >
-              {DATA.paragraph}
+              {data.paragraph}
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: { xs: 'center' },
-                justifyContent: 'center',
+            <Swiper
+              spaceBetween={1}
+              freeMode={true}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+              breakpoints={{
+                600: {
+                  slidesPerView: 1,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                  },
+                  containerClass: 'swiper-container',
+                  wrapperClass: 'swiper-wrapper',
+                  slideClass: 'swiper-slide',
+                },
+                960: {
+                  slidesPerView: 1,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                  },
+                  containerClass: 'swiper-container',
+                  wrapperClass: 'swiper-wrapper',
+                  slideClass: 'swiper-slide',
+                },
               }}
             >
-              <Box
-                sx={{
-                  backgroundColor: '#fff',
-                  boxShadow: '0px 2px 11.6px 0px rgba(0, 0, 0, 0.30)',
-                  padding: 3,
-                  borderRadius: '15px',
-                  width: { sm: '450px', md: '100%' },
-                }}
-              >
-                <Box
-                  sx={{
-                    display: 'flex',
-                  }}
-                >
+              {data?.card?.map((item, index) => (
+                <SwiperSlide key={index}>
                   <Box
                     sx={{
-                      mr: 2,
-                      mt: { xs: 2, sm: 0 },
+                      display: 'flex',
+                      alignItems: { xs: 'center' },
+                      justifyContent: 'center',
+                      margin: 0.5,
                     }}
                   >
-                    <Image
-                      src={DATA.card.icon}
-                      width={300}
-                      height={65}
-                      alt={DATA.card.alt}
-                    />
-                  </Box>
-                  <Box>
-                    <Typography
+                    <Box
                       sx={{
-                        color: '#001C63',
-                        fontSize: '20px',
-                        fontWeight: 700,
-                        fontStyle: 'normal',
-                        lineHeight: '26.4px',
+                        backgroundColor: '#fff',
+                        boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
+                        padding: 3,
+                        borderRadius: '15px',
+                        width: { sm: '450px', md: '100%' },
+                        height: {
+                          xs: 'auto',
+                          sm: '150px',
+                          md: '240px',
+                          lg: 'auto',
+                        },
                       }}
                     >
-                      {DATA.card.title}
-                    </Typography>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            mr: 2,
+                            mt: { xs: 2, sm: 0 },
+                          }}
+                        >
+                          <Image
+                            src={item.icon}
+                            width={isXsOrSm ? 200 : 300}
+                            height={65}
+                            alt={item.alt}
+                          />
+                        </Box>
+                        <Box>
+                          <Typography
+                            sx={{
+                              color: '#001C63',
+                              fontSize: '20px',
+                              fontWeight: 700,
+                              fontStyle: 'normal',
+                              lineHeight: '26.4px',
+                            }}
+                          >
+                            {item.title}
+                          </Typography>
 
-                    <Typography
-                      sx={{
-                        color: '#000',
-                        fontSize: '15px',
-                        fontWeight: 400,
-                        lineHeight: '23.4px',
-                        fontStyle: 'normal',
-                      }}
-                    >
-                      {DATA.card.description}
-                    </Typography>
+                          <Typography
+                            sx={{
+                              color: '#000',
+                              fontSize: '15px',
+                              fontWeight: 400,
+                              lineHeight: '23.4px',
+                              fontStyle: 'normal',
+                            }}
+                          >
+                            {item.description}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Box>
                   </Box>
-                </Box>
+                </SwiperSlide>
+              ))}
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  my: 2,
+                }}
+              >
+                <Image
+                  src={data?.arrowIcon}
+                  width={50}
+                  height={65}
+                  alt={data?.alt}
+                />
               </Box>
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                my: 2,
-              }}
-            >
-              <Image
-                src={DATA.card.arrowIcon}
-                width={50}
-                height={65}
-                alt={DATA.card.alt}
-                style={{}}
-              />
-            </Box>
+            </Swiper>
           </Grid>
         </Grid>
       </Container>
