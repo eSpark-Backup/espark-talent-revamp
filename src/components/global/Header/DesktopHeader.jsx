@@ -17,6 +17,11 @@ const DesktopHeader = ({
   handleCloseUserMenu,
   handleSubmenuItemClicked,
 }) => {
+  const handleSubmenuItemClickedAndClose = (submenuItem, page) => {
+    handleSubmenuItemClicked(submenuItem);
+    handleCloseUserMenu(page);
+  };
+
   return (
     <Box
       sx={{
@@ -25,7 +30,7 @@ const DesktopHeader = ({
         ml: { lg: '46px' },
       }}
     >
-      {PAGES?.map((page, index) => (
+      {PAGES?.map((page) => (
         <Box key={page}>
           <Button
             onClick={(event) => handleOpenUserMenu(event, page)}
@@ -61,7 +66,9 @@ const DesktopHeader = ({
               <Box key={submenuItem.label}>
                 <MenuItem
                   key={submenuItem.label}
-                  onClick={() => handleSubmenuItemClicked(submenuItem)}
+                  onClick={() =>
+                    handleSubmenuItemClickedAndClose(submenuItem, page)
+                  }
                   sx={{
                     width: '341px',
                     height: '105px',
@@ -117,7 +124,6 @@ const DesktopHeader = ({
               </Box>
             ))}
           </Menu>
-          {index < PAGES.length - 1 && <Divider />}
         </Box>
       ))}
     </Box>

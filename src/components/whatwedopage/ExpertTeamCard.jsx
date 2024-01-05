@@ -11,7 +11,7 @@ import Image from 'next/image';
 const ExpertTeamCard = ({ teamData }) => {
   const { heading, card } = teamData;
   return (
-    <Box sx={{ mb: '4%' }}>
+    <Box>
       <Box>
         <Container>
           <Box

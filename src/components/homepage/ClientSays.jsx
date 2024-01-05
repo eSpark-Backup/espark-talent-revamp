@@ -20,7 +20,7 @@ import ParagraphTitle from './ParagraphTitle';
 const ClientSays = ({ data }) => {
   const { slider, heading, subHeading } = data;
   return (
-    <Box sx={{ my: 10 }}>
+    <Box sx={{ my: 10, mb: '13%' }}>
       <Container>
         <ParagraphTitle title={heading} paragraph={subHeading} />
         <Box className="mix-reviews-area">
