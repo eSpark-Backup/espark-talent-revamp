@@ -51,6 +51,7 @@ const Hero = ({ data, innerData }) => {
                   sx={{
                     py: '10px',
                     px: '30px',
+                    backgroundColor: '#029894',
                     '&:hover': {
                       backgroundColor: '#029894',
                     },
