@@ -1,15 +1,13 @@
 import React from 'react';
 
-import HeroSection from '@/components/homepage/heroSection';
+import BookADemo from '@/components/book-a-demo/BookADemo';
 
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-
-const page = () => {
+const Page = () => {
   return (
     <>
-      <HeroSection data={HP_HERO_DATA} />
+      <BookADemo />
     </>
   );
 };
 
-export default page;
+export default Page;

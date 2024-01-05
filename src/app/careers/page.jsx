@@ -1,15 +1,15 @@
 import React from 'react';
 
-import CareerCards from '@/components/careers/careerCards';
-import HeroSection from '@/components/homepage/heroSection';
+import CareerCards from '@/components/careers/CareerCards';
 
 import { JOBS_HERO_DATA } from '@/constants/global/hero-sections';
 import { CAREERS_DATA } from '@/constants/careers';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={JOBS_HERO_DATA} />
+      <Hero data={JOBS_HERO_DATA} />
       <CareerCards data={CAREERS_DATA} />
     </>
   );

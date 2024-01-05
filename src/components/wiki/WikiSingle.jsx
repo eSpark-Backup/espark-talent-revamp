@@ -3,7 +3,6 @@ import { Box, Grid, Container } from '@mui/material';
 import WikiSingleRigth from './WikiSingleRigth';
 import WikiSingleLeft from './WikiSingleLeft';
 const WikiSingle = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Box sx={{ my: '3%' }}>
