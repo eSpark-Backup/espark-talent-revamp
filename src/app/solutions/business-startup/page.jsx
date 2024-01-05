@@ -20,7 +20,8 @@ import {
   OUTSOURCING_SOLUTIONS_DATA,
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
+import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
+
 
 const page = () => {
   return (
@@ -42,7 +43,8 @@ const page = () => {
       <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
       <OurOutsourcing data={CUSTOMIZE_OUTSOURCE} />
       <OutSourcingWonder data={OUTSOURCING_SOLUTIONS_DATA} />
-      <Faq data={FAQ_DATA} />
+      <Faq data={STARTUP_FAQ_DATA} />
+
     </>
   );
 };

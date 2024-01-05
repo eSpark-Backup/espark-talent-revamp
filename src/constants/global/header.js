@@ -17,16 +17,16 @@ export const SUBMENU_ITEMS = {
   ],
   Solutions: [
     {
-      label: 'Enterprise',
-      link: '/solutions/enterprises',
-      icon: '/images/header/enterPrice.svg',
+      label: 'Start-Ups',
+      link: '/solutions/business-startup',
+      icon: '/images/header/startup.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
-      label: 'Start-Ups',
-      link: '/solutions/business-startup',
-      icon: '/images/header/startup.svg',
+      label: 'Enterprise',
+      link: '/solutions/enterprises',
+      icon: '/images/header/enterPrice.svg',
       description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
