@@ -9,7 +9,7 @@ const SingleBlogHeader = ({ data }) => {
       container
       spacing={3}
       justifyContent="center"
-      pt={{ xs: '5%', md: '3%' }}
+      pt={{ xs: '5%', md: '6%' }}
     >
       <Grid item lg={6} md={6} sm={12} order={{ xs: 2, sm: 2, md: 1 }}>
         <Box pb={{ xs: '5%', md: '10%' }}>

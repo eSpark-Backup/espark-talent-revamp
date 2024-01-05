@@ -13,7 +13,7 @@ import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <ParagraphTitle title={heading} paragraph={subHeading} />
         <Swiper
