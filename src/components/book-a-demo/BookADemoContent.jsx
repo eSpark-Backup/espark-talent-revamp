@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import ClientSlider from '../global/ClientSlider';
+import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+import { CLIENT_SLIDER_BREAK_POINTS } from '@/constants/book-a-demo';
 
 const BookADemoContent = ({ content }) => {
-  const { title, description, image, alt } = content;
+  const { title, text, description, image, alt } = content;
   return (
     <>
       <Box sx={{ width: '100%', height: '100%', backgroundColor: '#029894' }}>
@@ -67,13 +70,15 @@ const BookADemoContent = ({ content }) => {
             }}
             alt={alt}
           />
-          {/* <ClientSlider
+          <ClientSlider
             data={CLIENTS_SLIDER_DATA}
+            breakPoints={CLIENT_SLIDER_BREAK_POINTS}
             txtColor={'#fff'}
-            hvariant={'h6'}
+            variant={'h6'}
             fontWeight={500}
             title={text}
-          /> */}
+            pb={'0px'}
+          />
         </Box>
       </Box>
     </>

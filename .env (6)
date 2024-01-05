@@ -1,0 +1,62 @@
+# .env
+
+# Host configuration
+HOSTNAME=localhost
+PORT=3000
+HOST=http://$HOSTNAME:$PORT
+
+# use port 3000 for local developemnt
+
+# Node.js environment (development or production)
+NODE_ENV=development
+
+# Sanity.io Configuration
+NEXT_PUBLIC_SANITY_USERID=93d1bm1e
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2021-10-21
+NEXT_PUBLIC_SANITY_USE_CDN=true
+
+# Contect US Email.js
+NEXT_PUBLIC_CONTECT_US_EMAILJS_USER_ID=hyXwjEdPoM5uV-RK8
+NEXT_PUBLIC_CONTECT_US_EMAILJS_TEMPLATE_ID=template_6y49v0k
+NEXT_PUBLIC_CONTECT_US_EMAILJS_SERVICE_ID=service_6qzxeqp
+
+# Partners US Email.js
+NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID=hyXwjEdPoM5uV-RK8
+NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID=template_6y49v0k
+NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID=service_ac1wtgmmm
+
+# Book A Meeting Email.js
+NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_USER_ID=i97Hmgobdw1yJilSn
+NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_TEMPLATE_ID=template_tpktgz5
+NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_SERVICE_ID=service_h5qpxbn
+
+# Database configuration
+# DB_HOST=localhost
+# DB_PORT=5432
+# DB_USER=myuser
+# DB_PASSWORD=mypassword
+# DB_NAME=mydatabase
+
+# API configuration
+# API_URL=https://api.example.com
+# API_KEY=your_api_key
+
+# Authentication
+# JWT_SECRET=your_jwt_secret
+# SESSION_SECRET=your_session_secret
+
+# Third-party services
+# SENDGRID_API_KEY=your_sendgrid_api_key
+# AWS_ACCESS_KEY_ID=your_aws_access_key_id
+# AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+
+# Analytics
+# GOOGLE_ANALYTICS_ID=your_google_analytics_id
+
+# Logging
+# LOG_LEVEL=info
+
+# Custom application settings
+# CUSTOM_SETTING_1=value1
+# CUSTOM_SETTING_2=value2

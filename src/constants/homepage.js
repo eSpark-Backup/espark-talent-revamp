@@ -1,3 +1,15 @@
+export const CLIENT_SLIDER_BREAK_POINTS = {
+  600: {
+    slidesPerView: 1,
+  },
+  960: {
+    slidesPerView: 6,
+  },
+  1260: {
+    slidesPerView: 8,
+  },
+};
+
 export const OUTSOURCE_BENEFITS_DATA = {
   title:
     'Our Offshore Outsourcing Benefits Are Applauded By Global Business Brands​',
@@ -236,14 +248,14 @@ export const CLIENTS_SLIDER_DATA = {
       imageHeight: 40,
     },
     {
-      image: '/images/homepage/clients-slider/client3.svg',
+      image: '/images/homepage/clients-slider/client3_dark.svg',
       imageAlt: 'Description for image 1',
       link: '/',
       imageWidth: 185,
       imageHeight: 40,
     },
     {
-      image: '/images/homepage/clients-slider/client4.svg',
+      image: '/images/homepage/clients-slider/client4_dark.svg',
       imageAlt: 'Description for image 1',
       link: '/',
       imageWidth: 185,
