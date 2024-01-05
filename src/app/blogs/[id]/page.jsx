@@ -14,7 +14,6 @@ const Page = () => {
   const segments = pathname.split('/');
   const id = segments[segments.length - 1];
   const data = BLOGS_DATA[id - 1];
-  console.log(data, 'data');
 
   return (
     <Box
@@ -27,8 +26,6 @@ const Page = () => {
         <SingleBlogHeader data={data} />
         <BlogDetailsContent data={data} />
       </Container>
-      {/* <Hero data={BLOGS_HERO_DATA} innerData={data} /> */}
-      {/* <WikiSingle data={data} /> */}
     </Box>
   );
 };

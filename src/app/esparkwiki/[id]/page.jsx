@@ -13,7 +13,6 @@ const Page = () => {
   const segments = pathname.split('/');
   const id = segments[segments.length - 1];
   const data = WIKIS_DATA[id - 1];
-  console.log(data, 'data');
 
   return (
     <>
