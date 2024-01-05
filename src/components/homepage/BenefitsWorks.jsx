@@ -9,10 +9,15 @@ const BenefitsWorks = ({ data }) => {
     <>
       <Box sx={{ py: ['2%'], overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ px: ['5%', '10%', '15%', '5%'], textAlign: 'center' }}>
+          <Box sx={{ textAlign: 'center' }}>
             <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
-          <Grid container spacing={2} gap={'10%'} justifyContent="center">
+          <Grid
+            container
+            spacing={2}
+            gap={{ lg: '10%', sm: '1%' }}
+            justifyContent="center"
+          >
             {data?.items.map((item, index) => (
               <Grid
                 key={index}
@@ -30,10 +35,12 @@ const BenefitsWorks = ({ data }) => {
                   sx={{
                     display: 'flex',
                     borderRadius: '30px',
-                    p: '20px',
+                    p: '15px',
                     alignItems: 'center',
                     background: ' #FFF',
                     boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+                    height: '162.569px',
+                    width: { lg: '489.938px', xs: '489.938px' },
                   }}
                 >
                   <Image
@@ -42,7 +49,11 @@ const BenefitsWorks = ({ data }) => {
                     height={45}
                     width={45}
                   />
-                  <Typography variant="h4" color="secondary" sx={{ ml: 2 }}>
+                  <Typography
+                    variant="h7"
+                    color="#000"
+                    sx={{ ml: 2, fontSize: { md: '20px', xs: '15px' } }}
+                  >
                     {item?.paragraph}
                   </Typography>
                 </Box>

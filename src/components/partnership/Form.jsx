@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 // import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
 import {} from 'react-phone-number-input';
-import PhoneInput from 'react-phone-number-input';
+// import PhoneInput from 'react-phone-number-input';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
@@ -58,7 +58,7 @@ const Form = ({ formContent }) => {
     linkedin_profile_link: Yup.string()
       .required('LinkedIn Profile is required')
       .matches(
-        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
+        // /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
         'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
       ),
     phone_number: Yup.string()
@@ -74,8 +74,8 @@ const Form = ({ formContent }) => {
     touched,
     handleChange,
     handleSubmit,
-    setFieldError,
-    setFieldValue,
+    // setFieldError,
+    // setFieldValue,
   } = useFormik({
     initialValues: PartnerFormData,
     validationSchema: profileValidationSchema,
@@ -99,7 +99,7 @@ const Form = ({ formContent }) => {
           values.phone_number = '';
           setTimeout(() => {
             setShowModal(!showModal);
-            setModalTitle('Your data has been successfully submitted');
+            // setModalTitle('Your data has been successfully submitted');
             setTimeout(() => {
               window.open('https://calendly.com/esparktalents/', 'blank');
               setShowModal(showModal);
@@ -111,7 +111,7 @@ const Form = ({ formContent }) => {
         values.phone_number = '';
         setTimeout(() => {
           setShowModal(!showModal);
-          setModalTitle('Unfortunately, your data could not be submitted');
+          // setModalTitle('Unfortunately, your data could not be submitted');
           setTimeout(() => {
             window.open('https://calendly.com/esparktalents/', 'blank');
             setShowModal(showModal);
@@ -120,14 +120,14 @@ const Form = ({ formContent }) => {
 
         console.error('Error submitting the form:', error);
       } finally {
-        setSubmitting(false);
+        // setSubmitting(false);
       }
     },
   });
 
-  const handlePhoneChange = (event) => {
-    setFieldValue((values.phone_number = event));
-  };
+  // const handlePhoneChange = (event) => {
+  //   setFieldValue((values.phone_number = event));
+  // };
 
   return (
     <Box className="partner-form">
