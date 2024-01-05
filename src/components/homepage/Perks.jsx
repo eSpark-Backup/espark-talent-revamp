@@ -30,10 +30,16 @@ const Perks = ({ data }) => {
         }}
       >
         <Grid container sx={{ display: 'flex' }}>
-          <Grid item xs={12} sm={12} md={5} sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={5}
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             <Box sx={{ margin: '0px auto' }}>
               {data?.map((perk, index) => (
                 <Box
@@ -56,7 +62,6 @@ const Perks = ({ data }) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     border: '2px solid #fff',
-
                   }}
                 >
                   <Image
@@ -74,7 +79,8 @@ const Perks = ({ data }) => {
                   </Typography>
                   <Typography
                     variant={isXsOrSm ? 'h4' : 'h2'}
-                    color={'#E0DDDDAD'}>
+                    color={'#E0DDDDAD'}
+                  >
                     {perk?.sno}
                   </Typography>
                   <Image
@@ -85,13 +91,13 @@ const Perks = ({ data }) => {
                   />
                 </Box>
               ))}
-
             </Box>
           </Grid>
 
           <Grid
             item
-            xs={12} md={7}
+            xs={12}
+            md={7}
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -105,31 +111,55 @@ const Perks = ({ data }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                textAlign: { xs: 'center', md: 'justify' }
-              }}>
-              <Typography variant={isXsOrSm ? 'h4' : 'h3'} color={'#fff'} sx={{
-                mb: { xs: '10px', md: '20px' },
-                mt: { md: '-15px' }
-              }}>
+                textAlign: { xs: 'center', md: 'justify' },
+              }}
+            >
+              <Typography
+                variant={isXsOrSm ? 'h4' : 'h3'}
+                color={'#fff'}
+                sx={{
+                  mb: { xs: '10px', md: '20px' },
+                  mt: { md: '-15px' },
+                }}
+              >
                 {data[selectedCard]?.content?.heading}
               </Typography>
-              <Typography variant="body1" color={'#fff'} sx={{
-                fontSize: isXsOrSm ? '15px' : '20px',
-                mb: { xs: '20px', md: '40px' },
-              }}>
+              <Typography
+                variant="body1"
+                color={'#fff'}
+                sx={{
+                  fontSize: isXsOrSm ? '15px' : '20px',
+                  mb: { xs: '20px', md: '40px' },
+                }}
+              >
                 {data[selectedCard]?.content?.paragraph}
               </Typography>
               <Grid container>
                 {data[selectedCard]?.content?.list?.map((item, index) => (
-                  <Grid key={index} item xs={6} >
+                  <Grid key={index} item xs={6}>
                     <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
-                      <ListItemIcon sx={{ minWidth: { xs: '20px', md: '35px' } }}>
-                        <TaskAltIcon fontSize="small" sx={{ color: '#fff', fontSize: { xs: '12px', sm: '15px', md: '20px', } }} />
+                      <ListItemIcon
+                        sx={{ minWidth: { xs: '20px', md: '35px' } }}
+                      >
+                        <TaskAltIcon
+                          fontSize="small"
+                          sx={{
+                            color: '#fff',
+                            fontSize: { xs: '12px', sm: '15px', md: '20px' },
+                          }}
+                        />
                       </ListItemIcon>
                       <Typography
                         variant="body1"
                         sx={{
-                          mb: 2, color: '#FFF', fontSize: { xs: '11px', sm: '13px', md: '15px', lg: '18px' },
+                          mb: 2,
+                          color: '#FFF',
+                          fontSize: {
+                            xs: '11px',
+                            sm: '13px',
+                            md: '15px',
+                            lg: '18px',
+                          },
                         }}
                       >
                         {item?.item}
