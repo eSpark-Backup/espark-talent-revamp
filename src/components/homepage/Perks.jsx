@@ -14,7 +14,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-const OurPerks = ({ data }) => {
+const Perks = ({ data }) => {
   const [selectedCard, setSelectedCard] = useState(0);
 
   const handleCardClick = (index) => {
@@ -137,4 +137,4 @@ const OurPerks = ({ data }) => {
   );
 };
 
-export default OurPerks;
+export default Perks;
