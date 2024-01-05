@@ -20,6 +20,7 @@
     "*.js": "eslint --cache --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -33,6 +34,7 @@
     "formik": "^2.4.5",
     "next": "^14.0",
     "react": "^18",
+    "react-accessible-accordion": "^5.0.0",
     "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18",
     "react-modern-drawer": "^1.2.2",

@@ -28,6 +28,7 @@ import {
 import Hero from '@/components/homepage/Hero';
 import Process from '@/components/homepage/Process';
 import Perks from '@/components/homepage/Perks';
+// import Faqs from '@/components/Faqs';
 
 const page = () => {
   return (
@@ -53,6 +54,7 @@ const page = () => {
       <HomeBlogs data={BLOGS_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <Faq data={FAQ_DATA} />
+      {/* <Faqs data={FAQ_DATA} /> */}
     </>
   );
 };
