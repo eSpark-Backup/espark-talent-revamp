@@ -4,7 +4,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 const OurQualityService = ({ ourQualityService }) => {
   const { card, heading, subHeading } = ourQualityService;
   return (
-    <Box sx={{ my: 4 }}>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <Grid container>
           <Grid item md={6}>
