@@ -7,9 +7,7 @@ import emailjs from '@emailjs/browser';
 
 // import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
-import {} from 'react-phone-number-input';
-import PhoneInput from 'react-phone-number-input';
-import { isValidPhoneNumber } from 'react-phone-number-input';
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
 
@@ -23,8 +21,11 @@ const serviceid =
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  console.log(submitting);
   const [modalTitle, setModalTitle] = useState(false);
-  const [PhoneError, setPhoneError] = useState();
+  console.log(modalTitle);
+  // const [PhoneError, setPhoneError] = useState();
 
   const PartnerFormData = {
     first_name: '',
@@ -58,7 +59,7 @@ const Form = ({ formContent }) => {
     linkedin_profile_link: Yup.string()
       .required('LinkedIn Profile is required')
       .matches(
-        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
+        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
         'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
       ),
     phone_number: Yup.string()
@@ -74,7 +75,7 @@ const Form = ({ formContent }) => {
     touched,
     handleChange,
     handleSubmit,
-    setFieldError,
+    // setFieldError,
     setFieldValue,
   } = useFormik({
     initialValues: PartnerFormData,
