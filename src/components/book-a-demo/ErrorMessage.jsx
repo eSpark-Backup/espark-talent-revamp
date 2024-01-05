@@ -6,7 +6,6 @@ const ErrorMessage = ({ message }) => {
     <Typography
       sx={{
         color: 'red',
-        fontFamily: 'Titillium Web',
         fontSize: '13px',
         fontStyle: 'normal',
         fontWeight: 400,
