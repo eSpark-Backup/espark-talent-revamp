@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
@@ -6,23 +5,25 @@ import { useFormik } from 'formik';
 
 import emailjs from '@emailjs/browser';
 
-
 // import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
 import {} from 'react-phone-number-input';
-import PhoneInput from 'react-phone-number-input';
+// import PhoneInput from 'react-phone-number-input';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
 
-const userid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || "hyXwjEdPoM5uV-RK8";
-const templeteid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID  || "template_6y49v0k";
-const serviceid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID  || "service_ac1wtgmmm";
+const userid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
+const templeteid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID || 'template_6y49v0k';
+const serviceid =
+  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID || 'service_ac1wtgmmm';
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [modalTitle, setModalTitle] = useState(false);
+  // const [modalTitle, setModalTitle] = useState(false);
   // const [PhoneError, setPhoneError] = useState();
 
   const PartnerFormData = {
@@ -57,7 +58,7 @@ const Form = ({ formContent }) => {
     linkedin_profile_link: Yup.string()
       .required('LinkedIn Profile is required')
       .matches(
-        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
+        // /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
         'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
       ),
     phone_number: Yup.string()
@@ -73,8 +74,8 @@ const Form = ({ formContent }) => {
     touched,
     handleChange,
     handleSubmit,
-    setFieldError,
-    setFieldValue,
+    // setFieldError,
+    // setFieldValue,
   } = useFormik({
     initialValues: PartnerFormData,
     validationSchema: profileValidationSchema,
@@ -98,7 +99,7 @@ const Form = ({ formContent }) => {
           values.phone_number = '';
           setTimeout(() => {
             setShowModal(!showModal);
-            setModalTitle('Your data has been successfully submitted');
+            // setModalTitle('Your data has been successfully submitted');
             setTimeout(() => {
               window.open('https://calendly.com/esparktalents/', 'blank');
               setShowModal(showModal);
@@ -110,7 +111,7 @@ const Form = ({ formContent }) => {
         values.phone_number = '';
         setTimeout(() => {
           setShowModal(!showModal);
-          setModalTitle('Unfortunately, your data could not be submitted');
+          // setModalTitle('Unfortunately, your data could not be submitted');
           setTimeout(() => {
             window.open('https://calendly.com/esparktalents/', 'blank');
             setShowModal(showModal);
@@ -119,14 +120,14 @@ const Form = ({ formContent }) => {
 
         console.error('Error submitting the form:', error);
       } finally {
-        setSubmitting(false);
+        // setSubmitting(false);
       }
     },
   });
 
-  const handlePhoneChange = (event) => {
-    setFieldValue((values.phone_number = event));
-  };
+  // const handlePhoneChange = (event) => {
+  //   setFieldValue((values.phone_number = event));
+  // };
 
   return (
     <Box className="partner-form">
@@ -166,9 +167,9 @@ const Form = ({ formContent }) => {
               value={values.first_name}
               onChange={handleChange}
             />
-           {touched?.first_name && errors?.first_name && (
-                            <span className="error-message">{errors?.first_name}</span>
-                        )} 
+            {touched?.first_name && errors?.first_name && (
+              <span className="error-message">{errors?.first_name}</span>
+            )}
           </Box>
           <Box className="partner-form-lastname">
             <Typography
@@ -191,9 +192,9 @@ const Form = ({ formContent }) => {
               value={values.last_name}
               onChange={handleChange}
             />
-           {touched?.last_name && errors?.last_name && (
-                            <span className="error-message">{errors?.last_name}</span>
-                        )} 
+            {touched?.last_name && errors?.last_name && (
+              <span className="error-message">{errors?.last_name}</span>
+            )}
           </Box>
         </Box>
         <Box className="partner-form-your-email-adress">
@@ -217,9 +218,9 @@ const Form = ({ formContent }) => {
             value={values.email}
             onChange={handleChange}
           />
-         {touched?.email && errors?.email && (
-                        <span className="error-message">{errors?.email}</span>
-                    )} 
+          {touched?.email && errors?.email && (
+            <span className="error-message">{errors?.email}</span>
+          )}
         </Box>
         <Box className="partner-form-your-email-adress">
           <Typography
@@ -287,18 +288,14 @@ const Form = ({ formContent }) => {
             placeholder="Enter your LinkedIn profile URL"
             onChange={handleChange}
           />
-         {touched?.linkedin_profile_link &&
-                        errors?.linkedin_profile_link && (
-                            <span className="error-message">
-                                {errors?.linkedin_profile_link}
-                            </span>
-                        )} 
+          {touched?.linkedin_profile_link && errors?.linkedin_profile_link && (
+            <span className="error-message">
+              {errors?.linkedin_profile_link}
+            </span>
+          )}
         </Box>
         <Box className="partner-form-button">
-          <Button
-             onClick={handleSubmit}
-            type="button"
-          >
+          <Button onClick={handleSubmit} type="button">
             {formContent.buttonName}
           </Button>
         </Box>
