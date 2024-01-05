@@ -1,26 +1,17 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import {
-  Box,
-  Typography,
-  Button,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Grid,
-  Container,
-} from '@mui/material';
+import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-import TitleParagraph from '@/components/global/titleParagraph';
+import ParagraphTitle from './ParagraphTitle';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -54,7 +45,7 @@ const OurExperties = ({ data }) => {
   return (
     <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
       <Container sx={{ px: '5%' }}>
-        <TitleParagraph title={data?.title} />
+        <ParagraphTitle title={data?.title} />
         <Swiper {...swiperSettings}>
           {data?.sections?.map((section, index) => (
             <Grid key={index} container spacing={2} sx={{ mx: 'auto' }}>
@@ -71,8 +62,10 @@ const OurExperties = ({ data }) => {
                   >
                     <Box>
                       <Typography
-                        variant="h5" color='primary' fontWeight={700}
-                        sx={{ py: '10px', }}
+                        variant="h5"
+                        color="primary"
+                        fontWeight={700}
+                        sx={{ py: '10px' }}
                       >
                         {list?.heading}
                       </Typography>
@@ -85,23 +78,25 @@ const OurExperties = ({ data }) => {
                             gap: '10px',
                             py: '0px',
                           }}
-                        ><Box>
-                          <Image
-                            src={
-                              itemIndex === 0
-                                ? data?.startIcon
-                                : itemIndex === list.listItems.length - 1
-                                  ? data?.endIcon
-                                  : data?.otherIcon
-                            }
-                            alt="List Icon"
-                            width={20}
-                            height={60}
-                          /></Box>
-                            <Link href={item?.link}>
+                        >
+                          <Box>
+                            <Image
+                              src={
+                                itemIndex === 0
+                                  ? data?.startIcon
+                                  : itemIndex === list.listItems.length - 1
+                                    ? data?.endIcon
+                                    : data?.otherIcon
+                              }
+                              alt="List Icon"
+                              width={20}
+                              height={60}
+                            />
+                          </Box>
+                          <Link href={item?.link}>
                             <Typography
                               variant="body1"
-                              sx={{ py: '10px', color: '#001C63'}}
+                              sx={{ py: '10px', color: '#001C63' }}
                             >
                               {item?.title}
                             </Typography>

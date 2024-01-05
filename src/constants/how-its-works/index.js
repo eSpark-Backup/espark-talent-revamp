@@ -39,7 +39,7 @@ export const CHOOSE_US = {
   subHeading:
     'Dont go anywhere else if you entail the need for a perfect human resource friend. Our team has lined up creative and diligent professionals who have proven themselves in the market. Let’s build trust together and boost your business.',
   image: '/images/how-its-works/choose.png',
-  alt:'Choose eSpark Talent if you want to hire professional talent in minutes',
+  alt: 'Choose eSpark Talent if you want to hire professional talent in minutes',
   list: [
     {
       icon: '/images/how-its-works/true.svg',

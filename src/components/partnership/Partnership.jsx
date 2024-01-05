@@ -20,7 +20,7 @@ const Partnership = ({ partnership }) => {
           <Grid item md={8}>
             <>
               {content.map((item, index) => (
-                <Box key={index} sx={{pr:3}}>
+                <Box key={index} sx={{ pr: 3 }}>
                   <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
                     {item.title}
                   </Typography>
@@ -66,7 +66,7 @@ const Partnership = ({ partnership }) => {
             </>
           </Grid>
           <Grid item md={4}>
-            <Form formContent={formContent}/>
+            <Form formContent={formContent} />
           </Grid>
         </Grid>
       </Container>

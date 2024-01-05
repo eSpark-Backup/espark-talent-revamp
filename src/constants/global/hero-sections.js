@@ -74,7 +74,7 @@ export const JOBS_HERO_DATA = {
 
 export const STARTUP_HERO_DATA = {
   title: 'Live The Dream Of Turning Your Start-Up Into A Business Giant.',
-  description: `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.​​`,
+  description: `Your start-up idea executed by our top-notch team of professional heads! What you Say? Let's build your dream company together.`,
   image: '/images/for-startup/startup-hero-main.png',
   imageAlt: 'Build team for your start up with eSpark Talent',
   imageWidth: 435,

@@ -1,15 +1,16 @@
+'use client';
 import React from 'react';
-import { Box, Container, Grid } from '@mui/material';
+
+import { Box, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import ParagraphTitle from './ParagraphTitle';
 
-import TitleParagraph from '@/components/global/titleParagraph';
-
-const AchievementAwards = ({ data, design, background }) => {
+const AwardAchievement = ({ data, design, background }) => {
   return (
     <>
       {design === 2 ? (
-        <Box sx={{ background: background, py: '2.5%', mb: '2%' }}>
+        <Box sx={{ background: `${background}`, py: '2.5%' }}>
           <Container>
             <Grid
               container
@@ -22,7 +23,7 @@ const AchievementAwards = ({ data, design, background }) => {
               }}
             >
               <Grid item xs={6} md={3} lg={3} xl={3}>
-                <TitleParagraph title={data?.title} />
+                <ParagraphTitle title={data?.title} />
               </Grid>
               {data?.items?.map((item, index) => (
                 <Grid
@@ -54,7 +55,7 @@ const AchievementAwards = ({ data, design, background }) => {
       ) : (
         <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
           <Container>
-            <TitleParagraph title={data?.title} />
+            <ParagraphTitle title={data?.title} />
             <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
               {data?.items?.map((item, index) => (
                 <Grid
@@ -88,4 +89,4 @@ const AchievementAwards = ({ data, design, background }) => {
   );
 };
 
-export default AchievementAwards;
+export default AwardAchievement;
