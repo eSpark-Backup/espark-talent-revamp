@@ -3,7 +3,10 @@ import ClientSlider from '@/components/global/ClientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
 
-import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+import {
+  CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
+} from '@/constants/homepage';
 import {
   BEST_OUTSOURCING_SOLUTIONS,
   BUSINESS_START_UP,
@@ -23,6 +26,7 @@ const page = () => {
       <Hero data={STARTUP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
+        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}

@@ -7,7 +7,7 @@ const ErrorMessage = ({ message }) => {
       sx={{
         color: 'red',
         fontFamily: 'Titillium Web',
-        fontSize: '12px',
+        fontSize: '13px',
         fontStyle: 'normal',
         fontWeight: 400,
         pt: 1,
