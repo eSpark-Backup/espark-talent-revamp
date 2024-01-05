@@ -14,7 +14,7 @@ import Form from './Form';
 const Partnership = ({ partnership }) => {
   const { content, formContent } = partnership;
   return (
-    <Box sx={{ mt: '4%', mb:'6%' }}>
+    <Box sx={{ mt: '4%', mb: '6%' }}>
       <Container>
         <Grid container>
           <Grid item md={8}>

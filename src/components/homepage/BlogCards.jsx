@@ -20,7 +20,7 @@ const BlogCards = ({ data }) => {
   const endIndex = startIndex + itemsPerPage;
 
   return (
-    <Box sx={{ my:'3%'}}>
+    <Box sx={{ my: '3%' }}>
       <Container>
         <Grid container columnSpacing={7} rowSpacing={4}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (

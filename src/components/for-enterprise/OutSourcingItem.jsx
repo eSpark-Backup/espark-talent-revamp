@@ -15,7 +15,7 @@ import Image from 'next/image';
 const OutSourcingItem = ({ data }) => {
   return (
     <>
-      <Box sx={{ pt: '2%', pb:'4%' }}>
+      <Box sx={{ pt: '2%', pb: '4%' }}>
         <Container>
           <Grid container spacing={2} justifyContent="center">
             {data?.items.map((item, index) => (
