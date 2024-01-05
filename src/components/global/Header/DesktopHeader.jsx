@@ -11,7 +11,6 @@ import {
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 
-
 const DesktopHeader = ({
   submenuAnchor,
   handleOpenUserMenu,

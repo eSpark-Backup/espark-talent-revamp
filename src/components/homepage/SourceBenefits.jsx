@@ -1,24 +1,25 @@
 import React from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 
-import TitleParagraph from '@/components/global/titleParagraph';
+import OutSourceBenefitsSlider from '@/components/homepage/OutSourceBenefitsSlider.jsx';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle.jsx';
 
-const OutSourceBenefits = ({ data }) => {
+const SourceBenefits = ({ data }) => {
   return (
     <>
       <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
         <Container>
-          <Box sx={{ px: '20%' }}>
-            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
+          <Box>
+            <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="hrFirmDesktop">
             {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item
-                xs={12}
-                md={6}
+                xs={4}
+                md={4}
                 lg={4}
                 xl={4}
                 sx={{
@@ -64,10 +65,13 @@ const OutSourceBenefits = ({ data }) => {
               </Grid>
             ))}
           </Grid>
+          <Box className="hrFirmResponsive">
+            <OutSourceBenefitsSlider items={data?.items} />
+          </Box>
         </Container>
       </Box>
     </>
   );
 };
 
-export default OutSourceBenefits;
+export default SourceBenefits;

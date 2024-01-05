@@ -1,18 +1,19 @@
+'use client';
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 
-import TitleParagraph from '@/components/global/titleParagraph';
+import ParagraphTitle from '../homepage/ParagraphTitle';
 
-const BenefitsWorks = ({ data }) => {
+const OutSourcingSolution = ({ data }) => {
   return (
     <>
       <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ px: ['5%', '10%', '15%', '20%'], textAlign: 'center' }}>
-            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
+          <Box sx={{ py: '2.5%', textAlign: 'center' }}>
+            <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
-          <Grid container spacing={2} gap={'10%'} justifyContent="center">
+          <Grid container spacing={2} justifyContent="center">
             {data?.items.map((item, index) => (
               <Grid
                 key={index}
@@ -28,7 +29,7 @@ const BenefitsWorks = ({ data }) => {
               >
                 <Box
                   sx={{
-                    display: 'flex',
+                    // display: 'flex',
                     borderRadius: '30px',
                     p: '20px',
                     alignItems: 'center',
@@ -39,12 +40,13 @@ const BenefitsWorks = ({ data }) => {
                   <Image
                     src={item?.icon}
                     alt={item?.title}
-                    height={45}
-                    width={45}
+                    height={item?.iconHeight}
+                    width={item?.iconWidth}
                   />
-                  <Typography variant="h4" color="secondary" sx={{ ml: 2 }}>
-                    {item?.paragraph}
+                  <Typography variant="h5" color="secondary" sx={{ pr: '10%' }}>
+                    {item?.title}
                   </Typography>
+                  <Typography variant="body1">{item?.paragraph}</Typography>
                 </Box>
               </Grid>
             ))}
@@ -55,4 +57,4 @@ const BenefitsWorks = ({ data }) => {
   );
 };
 
-export default BenefitsWorks;
+export default OutSourcingSolution;

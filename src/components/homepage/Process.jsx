@@ -2,14 +2,15 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import TitleParagraph from '@/components/global/titleParagraph';
 
-const OurProcess = ({ data }) => {
+import ParagraphTitle from './ParagraphTitle';
+
+const Process = ({ data }) => {
   return (
     <>
       <Box sx={{ py: '4%' }}>
         <Container maxWidth="lg">
-          <TitleParagraph title={data?.title} paragraph={data?.subTitle} />
+          <ParagraphTitle title={data?.title} paragraph={data?.subTitle} />
           {data?.processes?.map((process, index) => (
             <Grid
               key={index}
@@ -67,4 +68,4 @@ const OurProcess = ({ data }) => {
   );
 };
 
-export default OurProcess;
+export default Process;
