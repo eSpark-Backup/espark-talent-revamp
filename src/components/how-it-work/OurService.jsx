@@ -8,14 +8,14 @@ import { Box, Container, Typography } from '@mui/material';
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import TitleParagraph from '@/components/global/titleParagraph.jsx';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;
   return (
     <Box sx={{ my: 2 }}>
       <Container>
-        <TitleParagraph title={heading} paragraph={subHeading} />
+        <ParagraphTitle title={heading} paragraph={subHeading} />
         <Swiper
           spaceBetween={0}
           freeMode={true}

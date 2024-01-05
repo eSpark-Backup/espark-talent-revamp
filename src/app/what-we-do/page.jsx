@@ -1,22 +1,23 @@
+'use client';
 import React from 'react';
 
-import HeroSection from '@/components/homepage/heroSection';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
 import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 
 import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={WHAT_WE_DO_HERO_DATA} />
+      <Hero data={WHAT_WE_DO_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}

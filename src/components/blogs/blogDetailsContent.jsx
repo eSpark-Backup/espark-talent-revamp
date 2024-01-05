@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 
 const BlogDetailsContent = ({ data }) => {
-  console.log('SingleBlogsData', data);
   return (
     <Grid
       container
