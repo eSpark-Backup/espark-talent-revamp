@@ -100,7 +100,7 @@ const Form = ({ formContent }) => {
           values.phone_number = '';
           setTimeout(() => {
             setShowModal(!showModal);
-            setModalTitle('Your data has been successfully submitted');
+            // setModalTitle('Your data has been successfully submitted');
             setTimeout(() => {
               window.open('https://calendly.com/esparktalents/', 'blank');
               setShowModal(showModal);
@@ -112,7 +112,7 @@ const Form = ({ formContent }) => {
         values.phone_number = '';
         setTimeout(() => {
           setShowModal(!showModal);
-          setModalTitle('Unfortunately, your data could not be submitted');
+          // setModalTitle('Unfortunately, your data could not be submitted');
           setTimeout(() => {
             window.open('https://calendly.com/esparktalents/', 'blank');
             setShowModal(showModal);
@@ -121,14 +121,14 @@ const Form = ({ formContent }) => {
 
         console.error('Error submitting the form:', error);
       } finally {
-        setSubmitting(false);
+        // setSubmitting(false);
       }
     },
   });
 
-  const handlePhoneChange = (event) => {
-    setFieldValue((values.phone_number = event));
-  };
+  // const handlePhoneChange = (event) => {
+  //   setFieldValue((values.phone_number = event));
+  // };
 
   return (
     <Box className="partner-form">

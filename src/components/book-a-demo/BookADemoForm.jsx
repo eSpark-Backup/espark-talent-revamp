@@ -7,9 +7,15 @@ import ErrorMessage from './ErrorMessage';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { isValidPhoneNumber } from 'react-phone-number-input';
+import emailjs from '@emailjs/browser';
+import BasicModal from './BookADemoModal';
 
 const BookADemoForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
+  const [open, setOpen] = React.useState(false);
+  const [modalText, setModalText] = React.useState('');
+  const handleClose = () => setOpen(false);
+
   const Book_A_Demo_Keys = {
     first_name: '',
     last_name: '',
@@ -18,6 +24,18 @@ const BookADemoForm = ({ form }) => {
     web_url: '',
     no_of_employees: '',
   };
+
+  const userid =
+    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_USER_ID ||
+    'i97Hmgobdw1yJilSn';
+  const templeteid =
+    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_TEMPLATE_ID ||
+    'template_tpktgz5';
+  const serviceid =
+    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_SERVICE_ID ||
+    'service_h5qpxbn';
+
+  emailjs.init(userid);
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()
@@ -57,9 +75,45 @@ const BookADemoForm = ({ form }) => {
     useFormik({
       initialValues: Book_A_Demo_Keys,
       validationSchema: profileValidationSchema,
-      onSubmit: (values, action) => {
+      onSubmit: async (values, action) => {
         console.log(values, 'values');
-        action.resetForm();
+
+        try {
+          const emailResult = await emailjs.send(serviceid, templeteid, {
+            first_name: values.first_name,
+            last_name: values.last_name,
+            email: values.email,
+            phone_number: values.phone_number,
+            web_url: values.web_url,
+            no_of_employees: values.no_of_employees,
+          });
+
+          if (emailResult.status === 200) {
+            action.resetForm();
+            values.phone_number = '';
+            setTimeout(() => {
+              setOpen(!open);
+              setModalText('Your data has been successfully submitted');
+              setTimeout(() => {
+                // window.open('https://calendly.com/esparktalents/', 'blank');
+                setOpen(open);
+              }, 2000);
+            }, 2000);
+          }
+        } catch (error) {
+          action.resetForm();
+          values.phone_number = '';
+          setTimeout(() => {
+            setOpen(!open);
+            setModalText('Unfortunately, your data could not be submitted');
+            setTimeout(() => {
+              // window.open('https://calendly.com/esparktalents/', 'blank');
+              setOpen(!open);
+            }, 2000);
+          }, 2000);
+
+          console.error('Error submitting the form:', error);
+        }
       },
     });
 
@@ -143,8 +197,12 @@ const BookADemoForm = ({ form }) => {
                       borderRadius: '5.418px',
                       background: '#F5F8FA',
                       '& .MuiInputBase-input': {
-                        height: '10px',
                         fontSize: '14px',
+                        paddingBottom: 1.3,
+                        paddingTop: 1.7,
+                        '&:active': {
+                          backgroundColor: 'transparent',
+                        },
                       },
                       '& input[type=number]::-webkit-inner-spin-button': {
                         '-webkit-appearance': 'none',
@@ -192,6 +250,7 @@ const BookADemoForm = ({ form }) => {
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </Box>
+        <BasicModal text={modalText} open={open} handleClose={handleClose} />
       </Box>
     </>
   );

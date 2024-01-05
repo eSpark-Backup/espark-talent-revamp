@@ -1,3 +1,24 @@
+export const CLIENT_SLIDER_BREAK_POINTS = {
+  300: {
+    slidesPerView: 1,
+  },
+  600: {
+    slidesPerView: 3,
+  },
+  960: {
+    slidesPerView: 5,
+  },
+  1200: {
+    slidesPerView: 5,
+  },
+  1440: {
+    slidesPerView: 3,
+  },
+  1550: {
+    slidesPerView: 4,
+  },
+};
+
 export const Book_A_Demo_Data = {
   content: {
     title: `Book a meeting with our experts and <br /> onboard the world’s best talent in minutes.`,
