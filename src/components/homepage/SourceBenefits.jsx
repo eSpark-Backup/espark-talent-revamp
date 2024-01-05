@@ -1,11 +1,9 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
-
 import Image from 'next/image';
-// import ParagraphTitle from './ParagraphTitle';
 
-import TitleParagraph from '@/components/global/titleParagraph';
-import OutSourceBenefitsSlider from './OutSourceBenefitsSlider';
+import OutSourceBenefitsSlider from '@/components/homepage/OutSourceBenefitsSlider.jsx';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle.jsx';
 
 const SourceBenefits = ({ data }) => {
   return (
@@ -20,8 +18,8 @@ const SourceBenefits = ({ data }) => {
               <Grid
                 key={index}
                 item
-                xs={12}
-                md={6}
+                xs={4}
+                md={4}
                 lg={4}
                 xl={4}
                 sx={{
@@ -68,7 +66,7 @@ const SourceBenefits = ({ data }) => {
             ))}
           </Grid>
           <Box className="hrFirmResponsive">
-            <OutSourceBenefitsSlider items = {data?.items} />
+            <OutSourceBenefitsSlider items={data?.items} />
           </Box>
         </Container>
       </Box>

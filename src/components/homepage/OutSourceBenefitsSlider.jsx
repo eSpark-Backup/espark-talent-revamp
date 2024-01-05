@@ -1,7 +1,6 @@
-'use client'
+'use client';
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
@@ -42,34 +41,33 @@ const OutSourceBenefitsSlider = ({ items }) => {
       >
         {items?.map((item, index) => (
           <SwiperSlide key={index}>
+            <Grid
+              container
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
               <Grid
-                container
+                item
+                xs={12}
+                sm={12}
                 sx={{
                   display: 'flex',
-                  justifyContent: 'center',
                   alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '140px',
+                  m: 1,
                 }}
               >
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
+                <Box
                   sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '140px',
-                  m:1
-
-                  }}
-                >
-                  <Box
-                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
                   }}
-                  >
-                    <Box
+                >
+                  <Box
                     sx={{
                       display: 'flex',
                       borderRadius: '20px 20px 0 0 ',
@@ -88,16 +86,21 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       {item?.title}
                     </Typography>
                   </Box>
-                  <Box sx={{ p: '20px', borderRadius: '0 0 20px 20px', backgroundColor:'#fff',
-                    height: {sm:'150px'}
-                }}>
-                    <Typography variant="body1" color="initial" >
+                  <Box
+                    sx={{
+                      p: '20px',
+                      borderRadius: '0 0 20px 20px',
+                      backgroundColor: '#fff',
+                      height: { sm: '150px' },
+                    }}
+                  >
+                    <Typography variant="body1" color="initial">
                       {item?.paragraph}
                     </Typography>
                   </Box>
-                  </Box>
-                </Grid>
+                </Box>
               </Grid>
+            </Grid>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -105,4 +108,4 @@ const OutSourceBenefitsSlider = ({ items }) => {
   );
 };
 
-export default OutSourceBenefitsSlider
+export default OutSourceBenefitsSlider;
