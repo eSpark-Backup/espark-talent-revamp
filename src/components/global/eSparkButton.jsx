@@ -17,17 +17,19 @@ const ESparkButton = ({ title, link, color, onClick, size, hover }) => {
 
   return (
     <Link href={link}>
-      <Button variant={btnVariant} onClick={onClick} sx={{
-        width: size,
-        py: '8px',
-        px: '15px',
-        '&:hover': {
-          backgroundColor: hover && hover ? hover : '#029894',
-        },
-      }}>
-        <Typography variant="body1">
-          {title}
-        </Typography>
+      <Button
+        variant={btnVariant}
+        onClick={onClick}
+        sx={{
+          width: size,
+          py: '8px',
+          px: '15px',
+          '&:hover': {
+            backgroundColor: hover && hover ? hover : '#029894',
+          },
+        }}
+      >
+        <Typography variant="body1">{title}</Typography>
       </Button>
     </Link>
   );
