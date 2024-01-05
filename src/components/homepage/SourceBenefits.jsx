@@ -1,16 +1,16 @@
 import React from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
+
 import Image from 'next/image';
+// import ParagraphTitle from './ParagraphTitle';
 
-import TitleParagraph from '@/components/global/titleParagraph';
-
-const OutSourceBenefits = ({ data }) => {
+const SourceBenefits = ({ data }) => {
   return (
     <>
       <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
         <Container>
           <Box sx={{ px: '20%' }}>
-            <TitleParagraph title={data?.title} paragraph={data?.paragraph} />
+            {/* <ParagraphTitle title={data?.title} paragraph={data?.paragraph} /> */}
           </Box>
           <Grid container spacing={2}>
             {data?.items?.map((item, index) => (
@@ -70,4 +70,4 @@ const OutSourceBenefits = ({ data }) => {
   );
 };
 
-export default OutSourceBenefits;
+export default SourceBenefits;

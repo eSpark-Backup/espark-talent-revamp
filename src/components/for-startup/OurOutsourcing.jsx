@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
 import { Box, Grid, ListItemIcon, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
-
-import TitleParagraph from '@/components/global/titleParagraph.jsx';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
     <Box sx={{ my: 2 }}>
-      <TitleParagraph title={heading} paragraph={subHeading} />
+      <ParagraphTitle title={heading} paragraph={subHeading} />
       <Container>
         <Grid container>
           <Grid item sm={12} md={6}>
