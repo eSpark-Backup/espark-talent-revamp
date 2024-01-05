@@ -11,7 +11,11 @@ import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
 
-import { ACHIEVEMENTS_DATA, CLIENTS_SLIDER_DATA } from '@/constants/homepage';
+import {
+  ACHIEVEMENTS_DATA,
+  CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
+} from '@/constants/homepage';
 import {
   OUTSOURCING_ADVANTAGES_DATA,
   OUTSOURCING_LIST_DATA,
@@ -27,6 +31,7 @@ const page = () => {
       <Hero data={ENTERPRISE_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
+        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
