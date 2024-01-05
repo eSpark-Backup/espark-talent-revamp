@@ -9,7 +9,7 @@ import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 const OutStaffings = ({ data }) => {
   return (
     <>
-      <Box sx={{ background: '#F7F8FB', py: '3%', my:'2%' }}>
+      <Box sx={{ background: '#F7F8FB', py: '3%', my: '2%' }}>
         <Container>
           <ParagraphTitle
             title={`Trust eSpark Talent's Outstaffing Services`}
