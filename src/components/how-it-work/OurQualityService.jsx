@@ -24,7 +24,8 @@ const OurQualityService = ({ ourQualityService }) => {
                     }}
                   >
                     <Typography
-                      variant="h4" color={'secondary'}
+                      variant="h4"
+                      color={'secondary'}
                       sx={{ textAlign: 'center', fontWeight: 600 }}
                     >
                       {item.content}

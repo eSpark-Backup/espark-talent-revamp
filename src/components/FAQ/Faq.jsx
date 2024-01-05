@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 
-import Title from './Title';
+import ParagraphTitle from '../homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState([]);
@@ -26,7 +26,7 @@ const Faq = ({ data }) => {
   return (
     <Box sx={{ py: '1%' }} id="faq">
       <Container>
-        <Title title={data?.title} />
+        <ParagraphTitle title={data?.title} />
         <Grid container>
           {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;

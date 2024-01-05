@@ -85,7 +85,7 @@ const CareerCards = ({ data }) => {
                 <Typography variant="h3" color="secondary">
                   {item?.heading}
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" color="#000">
                   {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
@@ -100,7 +100,9 @@ const CareerCards = ({ data }) => {
                 <Typography variant="h3" color="secondary">
                   Description
                 </Typography>
-                <Typography variant="body1">{item?.description}</Typography>
+                <Typography variant="body1" color="#000">
+                  {item?.description}
+                </Typography>
               </Grid>
               <Grid
                 item
