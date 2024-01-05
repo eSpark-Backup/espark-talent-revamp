@@ -30,7 +30,7 @@ const Footer = ({ data }) => {
               />
               <Typography
                 sx={{
-                  color: 'primary',
+                  color: '#001C63',
                   textAlign: 'justify',
                   fontSize: '15px',
                   fontStyle: 'normal',
