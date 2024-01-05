@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --fontFamily: 'Titillium Web', sans-serif;
-  --fontFamily2: 'Cabin', sans-serif;
   --mainColor: #029894;
   --optionalColor: #6f76a8;
   --whiteColor: #ffffff;
@@ -16,7 +14,6 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .menuResponsive .MuiPaper-root {
@@ -60,7 +57,6 @@ span {
   color: var(--blackColor);
   border-radius: 5px;
   padding: 12px 35px 12px 62px;
-  font-family: var(--fontFamily2);
   font-size: var(--fontSize);
   font-weight: 500;
   margin: 5px 5px;
@@ -221,38 +217,39 @@ span {
 
 .blog-content h1 {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 700;color: #001C63;
 }
 
 .blog-content h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 600;color: #001C63;
 }
 
 .blog-content h3 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 600;color: #001C63;
 }
 
 .blog-content h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700;color: #001C63;
 }
 
 .blog-content h5 {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 600;color: #001C63;
 }
 
 .blog-content h6 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 700;color: #001C63;
 }
 
 .blog-content p {
   font-size: 18px;
   font-weight: 400;
   line-height: 32.3px;
+  color: black;
   padding-bottom: 15px;
 }
 
@@ -260,11 +257,13 @@ span {
   font-size: 18px;
   font-weight: 400;
   line-height: 32.3px;
+  color: black;
 }
 
 .blog-content ul {
   list-style-type: none;
   padding: 0;
+  color: black;
 }
 
 .blog-content li {
