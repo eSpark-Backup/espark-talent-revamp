@@ -29,7 +29,6 @@ import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { BLOGS_DATA } from '@/constants/blogs';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 
-
 const page = () => {
   return (
     <>
