@@ -1,21 +1,132 @@
+
+'use client';
 import React, { useState } from 'react';
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
+import emailjs from '@emailjs/browser';
+
+
+// import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
+import {} from 'react-phone-number-input';
+import PhoneInput from 'react-phone-number-input';
+import { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
+import { CountryCode } from '@/constants/global/CountryCodes';
+
+const userid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || "hyXwjEdPoM5uV-RK8";
+const templeteid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID  || "template_6y49v0k";
+const serviceid = process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID  || "service_ac1wtgmmm";
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
-  // const [showModal, setShowModal] = useState(false);
-  // const [modalTitle, setModalTitle] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState(false);
   // const [PhoneError, setPhoneError] = useState();
 
-  // const PartnerFormData = {
-  //     first_name: '',
-  //     last_name: '',
-  //     email: '',
-  //     phone_number: '',
-  //     country: '',
-  //     linkedin_profile_link: '',
-  // };
+  const PartnerFormData = {
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone_number: '',
+    country: '',
+    linkedin_profile_link: '',
+  };
+
+  emailjs.init(userid);
+
+  const options = CountryCode?.map((opt) => opt?.name);
+
+  const profileValidationSchema = Yup.object().shape({
+    first_name: Yup.string()
+      .min(3, 'First name must be at least 3 characters')
+      .max(25, 'First name must be at most 25 characters')
+      .required('First Name is required'),
+    last_name: Yup.string()
+      .min(3, 'Last name must be at least 3 characters')
+      .max(25, 'Last name must be at most 25 characters')
+      .required('Last Name is required'),
+    email: Yup.string()
+      .email('Invalid email')
+      .matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        'Invalid email address format'
+      )
+      .required('Email is required'),
+    linkedin_profile_link: Yup.string()
+      .required('LinkedIn Profile is required')
+      .matches(
+        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
+        'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
+      ),
+    phone_number: Yup.string()
+      .test('phone', 'Invalid phone number', (value) =>
+        value ? isValidPhoneNumber(value) : true
+      )
+      .required('Phone number is required'),
+  });
+
+  const {
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleSubmit,
+    setFieldError,
+    setFieldValue,
+  } = useFormik({
+    initialValues: PartnerFormData,
+    validationSchema: profileValidationSchema,
+    onSubmit: async (values, action) => {
+      console.log(values, 'values');
+
+      try {
+        values.country = selectedOption;
+
+        const emailResult = await emailjs.send(serviceid, templeteid, {
+          first_name: values.first_name,
+          last_name: values.last_name,
+          email: values.email,
+          phone_number: values.phone_number,
+          country: values.country,
+          linkedin_profile_link: values.linkedin_profile_link,
+        });
+
+        if (emailResult.status === 200) {
+          action.resetForm();
+          values.phone_number = '';
+          setTimeout(() => {
+            setShowModal(!showModal);
+            setModalTitle('Your data has been successfully submitted');
+            setTimeout(() => {
+              window.open('https://calendly.com/esparktalents/', 'blank');
+              setShowModal(showModal);
+            }, 2000);
+          }, 2000);
+        }
+      } catch (error) {
+        action.resetForm();
+        values.phone_number = '';
+        setTimeout(() => {
+          setShowModal(!showModal);
+          setModalTitle('Unfortunately, your data could not be submitted');
+          setTimeout(() => {
+            window.open('https://calendly.com/esparktalents/', 'blank');
+            setShowModal(showModal);
+          }, 2000);
+        }, 2000);
+
+        console.error('Error submitting the form:', error);
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
+
+  const handlePhoneChange = (event) => {
+    setFieldValue((values.phone_number = event));
+  };
 
   return (
     <Box className="partner-form">
@@ -52,12 +163,12 @@ const Form = ({ formContent }) => {
               className="input"
               name="first_name"
               placeholder="First Name"
-              // value={values.first_name}
-              // onChange={handleChange}
+              value={values.first_name}
+              onChange={handleChange}
             />
-            {/* {touched?.first_name && errors?.first_name && (
+           {touched?.first_name && errors?.first_name && (
                             <span className="error-message">{errors?.first_name}</span>
-                        )} */}
+                        )} 
           </Box>
           <Box className="partner-form-lastname">
             <Typography
@@ -77,12 +188,12 @@ const Form = ({ formContent }) => {
               className="input"
               placeholder="Last Name"
               name="last_name"
-              // value={values.last_name}
-              // onChange={handleChange}
+              value={values.last_name}
+              onChange={handleChange}
             />
-            {/* {touched?.last_name && errors?.last_name && (
+           {touched?.last_name && errors?.last_name && (
                             <span className="error-message">{errors?.last_name}</span>
-                        )} */}
+                        )} 
           </Box>
         </Box>
         <Box className="partner-form-your-email-adress">
@@ -103,12 +214,12 @@ const Form = ({ formContent }) => {
             className="input"
             placeholder="Email"
             name="email"
-            // value={values.email}
-            // onChange={handleChange}
+            value={values.email}
+            onChange={handleChange}
           />
-          {/* {touched?.email && errors?.email && (
+         {touched?.email && errors?.email && (
                         <span className="error-message">{errors?.email}</span>
-                    )} */}
+                    )} 
         </Box>
         <Box className="partner-form-your-email-adress">
           <Typography
@@ -130,8 +241,8 @@ const Form = ({ formContent }) => {
               className="input"
               placeholder="+00 00000000"
               name="phone"
-              // value={values.email}
-              // onChange={handleChange}
+              value={values.email}
+              onChange={handleChange}
             />
           </Box>
         </Box>
@@ -148,7 +259,7 @@ const Form = ({ formContent }) => {
             {formContent.countryLocated}
           </Typography>
           <PartnerCountrySelect
-            // options={options}
+            options={options}
             selectedOption={selectedOption}
             setSelectedOption={setSelectedOption}
           />
@@ -171,22 +282,21 @@ const Form = ({ formContent }) => {
           <input
             type="text"
             className="input"
-            placeholder="necessary"
             name="linkedin_profile_link"
-            // value={values.linkedin_profile_link}
-            // placeholder="Enter your LinkedIn profile URL"
-            // onChange={handleChange}
+            value={values.linkedin_profile_link}
+            placeholder="Enter your LinkedIn profile URL"
+            onChange={handleChange}
           />
-          {/* {touched?.linkedin_profile_link &&
+         {touched?.linkedin_profile_link &&
                         errors?.linkedin_profile_link && (
                             <span className="error-message">
                                 {errors?.linkedin_profile_link}
                             </span>
-                        )} */}
+                        )} 
         </Box>
         <Box className="partner-form-button">
           <Button
-            //  onClick={handleSubmit}
+             onClick={handleSubmit}
             type="button"
           >
             {formContent.buttonName}
