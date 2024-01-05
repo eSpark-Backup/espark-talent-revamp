@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
@@ -21,45 +20,127 @@ const Process = ({ data }) => {
                 flexDirection: process?.isReverse ? 'row-reverse' : 'row',
               }}
             >
-              <Grid item xs={4} sm={3} lg={3} md={3}>
-                {process?.alignment === 'left' ? (
+              {process?.alignment === 'left' && (
+                <Grid item xs={3} sm={3} lg={2} md={3}>
                   <Image
                     src={process?.image}
                     height={250}
                     width={250}
                     alt={process?.title}
                   />
-                ) : null}
-              </Grid>
+                </Grid>
+              )}
               <Grid
                 item
-                xs={12}
-                sm={6}
+                xs={9}
+                sm={9}
+                lg={10}
                 sx={{
-                  p: '20px',
+                  p: { lg: '20px' },
                   textAlign: process?.alignment === 'right' ? 'right' : 'left',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                 }}
               >
-                <Typography variant="h2" color="secondary" sx={{ pb: '20px' }}>
+                {/* <Typography
+                  variant="h2"
+                  color="secondary"
+                  sx={{
+                    pb: '20px',
+                    fontSize: { xs: '17px', sm: '18px', md: '32px' },
+                  }}
+                >
                   {process?.title}
-                </Typography>
-                <Typography variant="body1" color="secondary">
+                </Typography> */}
+                {/* <Typography
+                  variant="body1"
+                  color="secondary"
+                  sx={{ fontSize: { xs: '17px', sm: '18px', md: '25px' }, pb: '20px', width:{lg:'700px'} }}
+                >
                   {process?.text}
-                </Typography>
+                </Typography> */}
+                {process?.alignment === 'left' && (
+                  <>
+                    <Typography
+                      variant="h2"
+                      color="secondary"
+                      sx={{
+                        pb: '20px',
+                        fontSize: { xs: '17px', sm: '18px', md: '32px' },
+                      }}
+                    >
+                      {process?.title}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="secondary"
+                      sx={{
+                        fontSize: { xs: '17px', sm: '18px', md: '25px' },
+                        pb: '20px',
+                        width: { lg: '700px' },
+                        display: 'flex',
+                        mr: { lg: '35%', sm: '20%' },
+                      }}
+                    >
+                      {process?.text}
+                    </Typography>
+                  </>
+                )}
+                {process?.alignment === 'right' && (
+                  <>
+                    <Typography
+                      variant="h2"
+                      color="secondary"
+                      sx={{
+                        pb: '20px',
+                        fontSize: { xs: '17px', sm: '18px', md: '32px' },
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        textAlign: 'right',
+                        alignItems: 'right',
+                        alignContent: 'right',
+                      }}
+                    >
+                      {process?.title}
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      color="secondary"
+                      sx={{
+                        fontSize: { xs: '17px', sm: '18px', md: '25px' },
+                        pb: '20px',
+                        width: { xs: 'auto', lg: '700px' },
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        textAlign: 'right',
+                        alignItems: 'right',
+                        alignContent: 'right',
+                        ml: { lg: '39%', sm: '20%' },
+                      }}
+                    >
+                      {process?.text}
+                    </Typography>
+                  </>
+                )}
               </Grid>
-              <Grid item xs={4} sm={3} lg={3} md={3}>
-                {process?.alignment === 'right' ? (
+              {process?.alignment === 'right' && (
+                <Grid
+                  item
+                  xs={3}
+                  sm={3}
+                  lg={2}
+                  md={3}
+                  sx={{ display: 'flex', justifyContent: 'flex-end' }}
+                >
                   <Image
                     src={process?.image}
                     height={250}
                     width={250}
                     alt={process?.title}
                   />
-                ) : null}
-              </Grid>
+                </Grid>
+              )}
             </Grid>
           ))}
         </Container>
