@@ -30,8 +30,8 @@ const lightTheme = createTheme({
       default: '#ffffff',
     },
     text: {
-      primary: '#001C63',
-      secondary: '#029894',
+      primary: '#029894',
+      secondary: '#001C63',
     },
   },
   typography: {

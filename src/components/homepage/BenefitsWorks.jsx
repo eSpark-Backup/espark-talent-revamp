@@ -7,7 +7,7 @@ import ParagraphTitle from './ParagraphTitle';
 const BenefitsWorks = ({ data }) => {
   return (
     <>
-      <Box sx={{ pb: ['2.5%', '5%'], overflow: 'hidden' }}>
+      <Box sx={{ py: ['2%'], overflow: 'hidden' }}>
         <Container>
           <Box sx={{ textAlign: 'center' }}>
             <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
