@@ -24,7 +24,7 @@ const Faq = ({ data }) => {
     );
   };
   return (
-    <Box sx={{ mt: 40 }} id="faq">
+    <Box sx={{ mt: '5%' }} id="faq">
       <Container>
         <Title title={data?.title} />
         <Grid container>

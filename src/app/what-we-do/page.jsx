@@ -17,6 +17,7 @@ import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
 import { WHY_CHOOSE_OUR_HR_DATA } from '@/constants/what-we-do-page/why-choose-hr';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
 
 const page = () => {
   return (
@@ -36,7 +37,7 @@ const page = () => {
       <QuestionAnswer />
       <ProfessionalTeamCard teamData={TEAM_CARD_DATA} />
       <ExpertTeamCard teamData={EXPERT_TEAM_CARD} />
-      <Faq />
+      <Faq data={FAQ_DATA} />
     </>
   );
 };
