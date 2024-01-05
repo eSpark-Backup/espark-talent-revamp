@@ -23,16 +23,27 @@ const ClientSlider = ({
   fontWeight,
   data,
   length = 1000,
+  breakPoints,
+  pb,
+  variant,
 }) => {
   const extendedData = {
     clients: extendClients(data.clients, length),
   };
 
+  const getImagePath = (originalImagePath) => {
+    if (bgColor == '#029894' || !bgColor) {
+      return originalImagePath.replace('_dark', '_light');
+    } else {
+      return originalImagePath.replace('_light', '_dark');
+    }
+  };
+
   return (
-    <Box sx={{ backgroundColor: bgColor, PY: '2.5%' }}>
-      <Container sx={{ pb: '10px' }}>
+    <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
+      <Container sx={{ pb: pb || '10px' }}>
         <Typography
-          variant="h2"
+          variant={variant || 'h2'}
           color={txtColor}
           sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
         >
@@ -50,29 +61,21 @@ const ClientSlider = ({
         loop={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
-        breakpoints={{
-          600: {
-            slidesPerView: 1,
-          },
-          960: {
-            slidesPerView: 6,
-          },
-          1260: {
-            slidesPerView: 8,
-          },
-        }}
+        breakpoints={breakPoints}
       >
         {extendedData.clients.map((item, index) => (
           <SwiperSlide key={index}>
-            <Box sx={{ pb: 5 }}>
-              <Link href={item.link}>
-                <Image
-                  src={item.image}
-                  alt={item.image}
-                  height={item.imageHeight}
-                  width={item.imageWidth}
-                />
-              </Link>
+            <Box sx={{ pb: pb || 5 }}>
+              {
+                <Link href={item.link}>
+                  <Image
+                    src={getImagePath(item.image)}
+                    alt={item.image}
+                    height={item.imageHeight}
+                    width={item.imageWidth}
+                  />
+                </Link>
+              }
             </Box>
           </SwiperSlide>
         ))}

@@ -16,7 +16,7 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
- font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .menuResponsive .MuiPaper-root {
@@ -177,7 +177,7 @@ span {
   padding-left: 10px;
   border: 0.903px solid #bcbfc0;
   background: #f5f8fa;
-  height: 42px;
+  height: 40px;
   width: 100%;
 }
 .PhoneInputInput::-webkit-inner-spin-button {
