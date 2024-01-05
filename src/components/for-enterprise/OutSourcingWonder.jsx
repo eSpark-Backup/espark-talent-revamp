@@ -37,10 +37,6 @@ const OutSourcingWonder = ({ data }) => {
         }; width: 20px; height: 20px;"></span>`;
       },
     },
-    autoplay: {
-      delay: 500,
-      disableOnInteraction: false,
-    },
     breakpoints: {
       0: {
         slidesPerView: 1,

@@ -32,7 +32,7 @@ const OutStaffings = ({ data }) => {
                     width={15}
                     height={15}
                   />
-                  <Typography variant="h4" sx={{ color: 'primary' }}>
+                  <Typography variant="h4" color="secondary" sx={{}}>
                     {list?.title}
                   </Typography>
                 </Box>

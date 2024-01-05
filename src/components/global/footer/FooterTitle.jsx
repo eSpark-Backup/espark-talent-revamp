@@ -4,9 +4,9 @@ import { Typography } from '@mui/material';
 const FooterTitle = ({ title }) => {
   return (
     <Typography
-      variant="h5"
+      variant="h4"
+      color="secondary"
       sx={{
-        color: 'primary',
         fontStyle: 'normal',
         fontWeight: 600,
         lineHeight: 'normal',
