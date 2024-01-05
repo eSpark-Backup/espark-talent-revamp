@@ -7,7 +7,7 @@ import { QUESTION_ANSWER } from '@/constants/what-we-do-page/question-answer';
 
 const QuestionAnswer = () => {
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ mb: '4%' }}>
       <Container>
         <Grid container>
           <Grid item xs={12} sm={5}>

@@ -6,7 +6,7 @@ import { DATA } from '@/constants/what-we-do-page/why-choose-hr';
 
 const WhyChooseOurHr = () => {
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: '4%' }}>
       <Container>
         <Grid container>
           <Grid item xs={12} sm={12} md={8}>
