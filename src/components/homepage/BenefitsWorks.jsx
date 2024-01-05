@@ -2,15 +2,15 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-// import ParagraphTitle from './ParagraphTitle';
+import ParagraphTitle from './ParagraphTitle';
 
 const BenefitsWorks = ({ data }) => {
   return (
     <>
-      <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
+      <Box sx={{ py: ['2%' ], overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ px: ['5%', '10%', '15%', '20%'], textAlign: 'center' }}>
-            {/* <ParagraphTitle title={data?.title} paragraph={data?.paragraph} /> */}
+          <Box sx={{ px: ['5%', '10%', '15%', '5%'], textAlign: 'center' }}>
+            <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2} gap={'10%'} justifyContent="center">
             {data?.items.map((item, index) => (

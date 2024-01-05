@@ -21,7 +21,7 @@ const Perks = ({ data }) => {
   };
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
-    <Box sx={{ py: '4%' }}>
+    <Box sx={{ py: '2%' }}>
       <Container
         sx={{
           borderRadius: '20px',
