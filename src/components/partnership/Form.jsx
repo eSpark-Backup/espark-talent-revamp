@@ -21,11 +21,6 @@ const serviceid =
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  console.log(submitting);
-  const [modalTitle, setModalTitle] = useState(false);
-  console.log(modalTitle);
-  // const [PhoneError, setPhoneError] = useState();
 
   const PartnerFormData = {
     first_name: '',
@@ -126,9 +121,9 @@ const Form = ({ formContent }) => {
     },
   });
 
-  // const handlePhoneChange = (event) => {
-  //   setFieldValue((values.phone_number = event));
-  // };
+  const handlePhoneChange = (event) => {
+    setFieldValue((values.phone_number = event));
+  };
 
   return (
     <Box className="partner-form">
