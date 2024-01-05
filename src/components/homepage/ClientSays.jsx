@@ -15,15 +15,14 @@ import {
   EffectFade,
 } from 'swiper/modules';
 import StarRating from './StarRating';
-
-import TitleParagraph from '@/components/global/titleParagraph.jsx';
+import ParagraphTitle from './ParagraphTitle';
 
 const ClientSays = ({ data }) => {
   const { slider, heading, subHeading } = data;
   return (
     <Box sx={{ my: 10 }}>
       <Container>
-        <TitleParagraph title={heading} paragraph={subHeading} />
+        <ParagraphTitle title={heading} paragraph={subHeading} />
         <Box className="mix-reviews-area">
           <Box className="main-review-area">
             <Box className="reviews-swiper">
