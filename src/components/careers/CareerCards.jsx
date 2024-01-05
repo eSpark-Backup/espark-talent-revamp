@@ -9,7 +9,6 @@ import {
   Select,
   MenuItem,
   Pagination,
-  Stack,
   PaginationItem,
 } from '@mui/material';
 import Link from 'next/link';

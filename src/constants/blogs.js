@@ -13,8 +13,7 @@ export const BLOGS_DATA = [
     slug: 'benefits-employee-outsourcing',
     title: 'Benefits of Employee Outsourcing',
     imageLink: '/images/blog/benefits.png',
-    altTag:
-      'Benefits of Employee Outsourcing ',
+    altTag: 'Benefits of Employee Outsourcing ',
     bigImageLink: '/images/blog/blog1.png',
     mainHeading: `Employee Outsourcing - The Future 
       of Hiring Professional Workforce.`,
@@ -110,8 +109,7 @@ flexibility and productivity at the workplace? Grab the
     title: 'Primest Employee Recruitment Strategies for Success',
     bigImageLink: '/images/blog/blog2.png',
     imageLink: '/images/blog/primest-Employee.png',
-    altTag:
-      'Primest Employee Recruitment Strategies for Success',
+    altTag: 'Primest Employee Recruitment Strategies for Success',
     mainHeading: `Primest Employee Recruitment
 Strategies for Success.`,
     mainParagraph: `Want to update your recruitment process? Here are the 
@@ -249,8 +247,7 @@ company.`,
     slug: 'positive-work-culture',
     title: '8 Tips Guide for Bringing Positive Work Culture',
     imageLink: '/images/blog/8-Tips-Guide.png',
-    altTag:
-      '8 Tips Guide for Bringing Positive Work Culture ',
+    altTag: '8 Tips Guide for Bringing Positive Work Culture ',
     bigImageLink: '/images/blog/blog3.png',
     mainHeading: `Secret of Bringing Positive Work Culture - A Compressive Guide For 
 Office Workplaces.`,

@@ -1,11 +1,11 @@
 // import { CountryCode } from 'constants/CountryCodes';
-import React, { useState } from 'react';
+import React from 'react';
 
 const PartnerCountrySelect = ({
   options,
   selectedOption,
   setSelectedOption,
-  setSelectedFlag,
+  // setSelectedFlag,
 }) => {
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
@@ -16,7 +16,7 @@ const PartnerCountrySelect = ({
       <select
         className="partner-country-dropdown"
         value={selectedOption}
-        // onChange={handleSelectChange}
+        onChange={handleSelectChange}
       >
         {options?.map((option, i) => (
           <option key={i} value={option}>
