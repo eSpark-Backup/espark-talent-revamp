@@ -9,11 +9,13 @@ import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
 import Faq from '@/components/FAQ/Faq';
 
-import { CLIENTS_SLIDER_DATA, CLIENT_SLIDER_BREAK_POINTS } from '@/constants/homepage';
+import {
+  CLIENTS_SLIDER_DATA,
+  CLIENT_SLIDER_BREAK_POINTS,
+} from '@/constants/homepage';
 import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';
-import Hero from '@/components/homepage/Hero';
 import { WHY_CHOOSE_OUR_HR_DATA } from '@/constants/what-we-do-page/why-choose-hr';
 
 const page = () => {
