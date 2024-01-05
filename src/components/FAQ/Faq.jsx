@@ -34,7 +34,7 @@ const Faq = ({ data }) => {
               <Grid
                 item
                 md={6}
-                xs={12}
+                sm={12}
                 sx={{ display: 'flex', height: '160px', px: '30px' }}
                 key={index}
               >
