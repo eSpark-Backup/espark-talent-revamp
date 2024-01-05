@@ -1,7 +1,10 @@
 import React from 'react';
+
+import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
+import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 
 import {
   CLIENTS_SLIDER_DATA,
@@ -16,9 +19,6 @@ import {
   OUTSOURCING_SOLUTIONS_DATA,
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
-
-import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
-import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
