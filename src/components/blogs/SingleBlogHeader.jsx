@@ -35,18 +35,18 @@ const SingleBlogHeader = ({ data }) => {
             </Stack>
             <Box className="title">
               <Box display="flex" gap="2px">
-                
-                  <Link href="#" underline="hover">
-                   <Typography variant="body1" color={'black'}>
-                  By <Typography
+                <Link href="#" underline="hover">
+                  <Typography variant="body1" color={'black'}>
+                    By{' '}
+                    <Typography
                       variant="body1"
                       color="#001C63"
                       fontWeight={600}
                     >
                       {data?.postedBy?.name}
                     </Typography>
-                </Typography>
-                  </Link>
+                  </Typography>
+                </Link>
               </Box>
               <Typography variant="body1" color={'black'}>
                 {data?.postedBy?.date}

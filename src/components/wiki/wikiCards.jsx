@@ -40,7 +40,7 @@ const WikiCards = ({ data }) => {
               <Typography variant="body1" color="secondary" pb="10px">
                 {`USD: ${item.salary} per month`}
               </Typography>
-              <Link href={`/wiki/${item.id}`}>
+              <Link href={`/esparkwiki/${item.id}`}>
                 <Typography variant="body1" color="primary" pb="10px">
                   {'Job Description >'}
                 </Typography>

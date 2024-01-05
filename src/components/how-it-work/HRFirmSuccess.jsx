@@ -48,7 +48,9 @@ const HRFirmSuccess = ({ hrFirm }) => {
                     />
                   </Box>
                   <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
-                    <Typography variant="h4">{item.title}</Typography>
+                    <Typography variant="h4" color="secondary">
+                      {item.title}
+                    </Typography>
                     <Typography
                       sx={{
                         color: '#001C63',
