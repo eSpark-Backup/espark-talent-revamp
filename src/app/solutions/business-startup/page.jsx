@@ -1,8 +1,7 @@
 import React from 'react';
-import ClientSlider from '@/components/global/clientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
 import TalentIgnite from '@/components/for-startup/TalentIgnite';
-import OutSourcingWonders from '@/components/for-enterprise/outSourcingWonders';
 
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import {
@@ -15,12 +14,13 @@ import {
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 
-import HeroSection from '@/components/homepage/heroSection';
+import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
+import Hero from '@/components/homepage/Hero';
 
 const page = () => {
   return (
     <>
-      <HeroSection data={STARTUP_HERO_DATA} />
+      <Hero data={STARTUP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         bgColor={'#3B59980A'}
@@ -35,7 +35,7 @@ const page = () => {
       <OurOutsourcing data={OUR_ADDITIONAL_BENEFITS} />
       <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
       <OurOutsourcing data={CUSTOMIZE_OUTSOURCE} />
-      <OutSourcingWonders data={OUTSOURCING_SOLUTIONS_DATA} />
+      <OutSourcingWonder data={OUTSOURCING_SOLUTIONS_DATA} />
     </>
   );
 };

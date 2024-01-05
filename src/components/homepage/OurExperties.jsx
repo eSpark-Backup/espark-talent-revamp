@@ -10,8 +10,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-import TitleParagraph from '@/components/global/titleParagraph';
+import ParagraphTitle from './ParagraphTitle';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -46,7 +45,7 @@ const OurExperties = ({ data }) => {
   return (
     <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
       <Container sx={{ px: '5%' }}>
-        <TitleParagraph title={data?.title} />
+        <ParagraphTitle title={data?.title} />
         <Swiper {...swiperSettings}>
           {data?.sections?.map((section, index) => (
             <Grid key={index} container spacing={2} sx={{ mx: 'auto' }}>
