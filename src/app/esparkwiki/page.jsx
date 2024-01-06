@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { Box } from '@mui/material';
 
 import Hero from '@/components/homepage/Hero';
 import WikiCards from '@/components/wiki/wikiCards';
@@ -23,12 +24,16 @@ const WikiMainPage = () => {
   return (
     <>
       <Hero data={WIKI_HERO_DATA} />
-      <WikiFilter
-        categories={categories}
-        onSelectCategory={setSelectedCategory}
-        selectedCategory={selectedCategory}
-      />
-      <WikiCards data={filteredWikis} />
+      <Box sx={{ background: '#3b59980f' }}>
+        <WikiFilter
+          categories={categories}
+          onSelectCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+        <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
+          <WikiCards data={filteredWikis} />
+        </Box>
+      </Box>
     </>
   );
 };
