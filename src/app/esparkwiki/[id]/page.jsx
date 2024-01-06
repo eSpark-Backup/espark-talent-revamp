@@ -4,7 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 
 import WikiSingle from '@/components/wiki/WikiSingle';
-import Hero from '@/components/homepage/Hero';
+import InnerHero from '@/components/homepage/InnerHero';
 
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { WIKIS_DATA } from '@/constants/wiki';
@@ -17,7 +17,7 @@ const Page = () => {
 
   return (
     <>
-      <Hero data={WIKI_HERO_DATA} innerData={data} />
+      <InnerHero data={WIKI_HERO_DATA} innerData={data} />
       <WikiSingle data={data} />
     </>
   );

@@ -28,12 +28,11 @@ const FooterCTA = ({ data }) => {
       }}
     >
       <Container>
-        <Grid container>
+        <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           <Grid
             item
-            xs={12}
-            sm={8}
-            sx={{ display: 'flex', alignItems: 'center' }}
+            xs={7}
+            sx={{ display: 'flex', alignItems: 'center', py: '1%' }}
           >
             <Box>
               <Typography
@@ -84,15 +83,14 @@ const FooterCTA = ({ data }) => {
           </Grid>
           <Grid
             item
-            xs={12}
-            sm={4}
+            xs={4}
             sx={{ textAlign: isSmallScreen ? 'center' : 'end' }}
           >
             <Box
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: { xs: 'center', lg: 'end' },
+                justifyContent: { xs: 'center', lg: 'start' },
               }}
             >
               <Image
