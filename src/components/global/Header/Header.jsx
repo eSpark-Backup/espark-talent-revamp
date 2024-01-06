@@ -56,7 +56,12 @@ const Header = () => {
           Management Fee for First Employee. 🚀
         </Typography>
       </Box>
-      <AppBar position="static" sx={{ background: '#fff' }}>
+      <AppBar
+        position="static"
+        sx={{
+          background: '#F7F7F7',
+        }}
+      >
         <Container>
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
             <Link href={'/'}>
