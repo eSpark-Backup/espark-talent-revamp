@@ -34,34 +34,148 @@ const lightTheme = createTheme({
       secondary: '#001C63',
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
   typography: {
     fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
-      fontSize: '50px',
+      fontSize: '20px',
       fontWeight: 700,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h2: {
       fontSize: '32px',
       fontWeight: 600,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h3: {
       fontSize: '28px',
       fontWeight: 600,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h4: {
       fontSize: '18px',
       fontWeight: 700,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h5: {
       fontSize: '22px',
       fontWeight: 600,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h6: {
       fontSize: '16px',
       fontWeight: 700,
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     body1: {
       fontSize: '20px',
+      [lightTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [lightTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     button: {
       textTransform: 'capitalize',
@@ -165,15 +279,6 @@ const lightTheme = createTheme({
       },
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1440,
-      xl: 1920,
-    },
-  },
 });
 
 // Dark Theme
@@ -199,34 +304,149 @@ const darkTheme = createTheme({
       secondary: '#001C63',
     },
   },
+
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
+    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
-      fontSize: '50px',
+      fontSize: '20px',
       fontWeight: 700,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h2: {
       fontSize: '32px',
       fontWeight: 600,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h3: {
       fontSize: '28px',
       fontWeight: 600,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h4: {
       fontSize: '18px',
       fontWeight: 700,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h5: {
-      fontSize: '20px',
+      fontSize: '22px',
       fontWeight: 600,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     h6: {
       fontSize: '16px',
       fontWeight: 700,
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     body1: {
       fontSize: '20px',
+      [darkTheme.breakpoints.up('xl')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('lg')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('md')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.up('sm')]: {
+        fontSize: '',
+      },
+      [darkTheme.breakpoints.down('xs')]: {
+        fontSize: '',
+      },
     },
     button: {
       textTransform: 'capitalize',
@@ -312,15 +532,6 @@ const darkTheme = createTheme({
           margin: '0 auto',
         },
       },
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 768,
-      md: 1024,
-      lg: 1440,
-      xl: 1920,
     },
   },
 });

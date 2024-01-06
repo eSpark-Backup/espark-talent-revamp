@@ -404,7 +404,7 @@ span {
 
 .partner-form .starick {
   color: #f00;
-  font-family: Titillium Web;
+  
   font-size: 14.448px;
   font-style: normal;
   font-weight: 600;
@@ -583,7 +583,7 @@ input::-webkit-inner-spin-button {
   background: #029894;
   color: #fff;
   text-align: center;
-  font-family: Poppins;
+ 
   font-size: 20.333px;
   font-style: normal;
   font-weight: 600;
@@ -597,7 +597,7 @@ input::-webkit-inner-spin-button {
 
 .partner-form .error-message {
   color: #f00;
-  font-family: Titillium Web;
+  
   font-size: 13.448px;
 }
 
