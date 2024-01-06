@@ -24,6 +24,7 @@ const BlogDetailsContent = ({ data }) => {
             p: { xs: '20px', md: '30px' },
             borderRadius: '10px',
             boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+            textAlign: 'justify',
           }}
         />
       </Grid>
