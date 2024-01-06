@@ -34,6 +34,15 @@ const lightTheme = createTheme({
       secondary: '#001C63',
     },
   },
+breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
   typography: {
     fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
@@ -165,16 +174,7 @@ const lightTheme = createTheme({
       },
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1440,
-      xl: 1920,
-    },
-  },
-});
+  });
 
 // Dark Theme
 const darkTheme = createTheme({
@@ -199,8 +199,18 @@ const darkTheme = createTheme({
       secondary: '#001C63',
     },
   },
+
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
+    },
+  },
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
+    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
       fontSize: '50px',
       fontWeight: 700,
@@ -314,15 +324,6 @@ const darkTheme = createTheme({
       },
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 768,
-      md: 1024,
-      lg: 1440,
-      xl: 1920,
-    },
-  },
-});
+  });
 
 export { darkTheme, lightTheme };
