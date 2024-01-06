@@ -34,7 +34,7 @@ const lightTheme = createTheme({
       secondary: '#001C63',
     },
   },
-breakpoints: {
+  breakpoints: {
     values: {
       xs: 0,
       sm: 768,
@@ -174,7 +174,7 @@ breakpoints: {
       },
     },
   },
-  });
+});
 
 // Dark Theme
 const darkTheme = createTheme({
@@ -324,6 +324,6 @@ const darkTheme = createTheme({
       },
     },
   },
-  });
+});
 
 export { darkTheme, lightTheme };
