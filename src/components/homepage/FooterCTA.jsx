@@ -29,7 +29,11 @@ const FooterCTA = ({ data }) => {
     >
       <Container>
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Grid item xs={7} sx={{ display: 'flex', alignItems: 'center', py:'1%' }}>
+          <Grid
+            item
+            xs={7}
+            sx={{ display: 'flex', alignItems: 'center', py: '1%' }}
+          >
             <Box>
               <Typography
                 sx={{
