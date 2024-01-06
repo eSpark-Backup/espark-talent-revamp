@@ -12,12 +12,13 @@ const BenefitsWorks = ({ data }) => {
             <Typography
               sx={{
                 color: '#001C63',
-                fontSize: '32px',
+                fontSize: { md: '32px', xs: '20px' },
                 fontFamily: 'Poppins',
                 fontWeight: 600,
-                lineHeight: '42.289px',
+                lineHeight: { lg: '42.289px', xs: '23.289px' },
                 textAlign: 'center',
                 flexWrap: 'wrap',
+                pb: { xs: '15px' },
               }}
             >
               {data?.title}
@@ -27,13 +28,13 @@ const BenefitsWorks = ({ data }) => {
                 color: '#001C63',
                 textAlign: 'center',
                 fontFamily: 'Poppins',
-                fontSize: '18px',
+                fontSize: { md: '18px', xs: '11px' },
                 fontStyle: 'normal',
                 fontWeight: 400,
-                lineHeight: '27.863px',
+                lineHeight: { md: '27.863px', xs: '16.363px' },
                 flexWrap: 'wrap',
                 px: '35px',
-                pb: '10px',
+                pb: { md: '10px', xs: '0px' },
               }}
             >
               {data?.paragraph}
