@@ -217,17 +217,18 @@ span {
 
 .blog-content h1 {
   font-size: 50px;
-  font-weight: 700;color: #001C63;
+  font-weight: 700;
+  color: #001C63;
 }
 
 .blog-content h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;color: #001C63;
 }
 
 .blog-content h3 {
-  font-size: 28px;
-  font-weight: 600;color: #001C63;
+  font-size: 20px;
+  font-weight: 400;color: #001C63;
 }
 
 .blog-content h4 {
@@ -246,24 +247,24 @@ span {
 }
 
 .blog-content p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color: black;
+  color:  #6F76A8;
   padding-bottom: 15px;
 }
 
 .blog-content li {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color: black;
+  color: #6F76A8;
 }
 
 .blog-content ul {
   list-style-type: none;
   padding: 0;
-  color: black;
+  color: #6F76A8;
 }
 
 .blog-content li {
@@ -274,8 +275,8 @@ span {
 .blog-content li::before {
   content: '\2022';
   content: '\2022';
-  color: black;
-  font-size: 20px;
+  color: #6F76A8;
+  font-size: 17px;
   margin-right: 8px;
   display: inline-block;
 }
