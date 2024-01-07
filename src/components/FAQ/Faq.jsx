@@ -1,4 +1,4 @@
-'use client';
+'use strict';
 import React, { useState } from 'react';
 import {
   Box,
@@ -14,20 +14,17 @@ import Image from 'next/image';
 import ParagraphTitle from '../homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {
-  const [expanded, setExpanded] = useState([]);
+  const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded((prevExpanded) =>
-      isExpanded
-        ? [...prevExpanded, panel]
-        : prevExpanded.filter((item) => item !== panel)
-    );
+    setExpanded(isExpanded ? panel : null);
   };
+
   return (
     <Box sx={{ py: '1%' }} id="faq">
       <Container>
         <ParagraphTitle title={data?.title} />
-        <Grid container>
+        <Grid container spacing={4}>
           {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;
             return (
@@ -35,11 +32,10 @@ const Faq = ({ data }) => {
                 item
                 md={6}
                 sm={12}
-                sx={{ display: 'flex',  px: '30px' }}
                 key={index}
               >
                 <Accordion
-                  expanded={expanded.includes(panel)}
+                  expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{ mb: 4 }}
                 >
@@ -58,8 +54,8 @@ const Faq = ({ data }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '25.833px',
-                        fontWeight: expanded.includes(panel) ? 600 : 400,
+                        fontSize: '1.5rem',
+                        fontWeight: expanded === panel ? 600 : 400,
                       }}
                     >
                       {item?.heading}
