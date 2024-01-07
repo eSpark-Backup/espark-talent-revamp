@@ -22,14 +22,16 @@ const ESparkButton = ({ title, link, color, onClick, size, hover }) => {
         onClick={onClick}
         sx={{
           width: size,
-          py: '8px',
+          py: '12px',
           px: '15px',
           '&:hover': {
             backgroundColor: hover && hover ? hover : '#029894',
           },
         }}
       >
-        <Typography variant="body1">{title}</Typography>
+        <Typography variant="body1" sx={{ fontWeight: 600 }}>
+          {title}
+        </Typography>
       </Button>
     </Link>
   );

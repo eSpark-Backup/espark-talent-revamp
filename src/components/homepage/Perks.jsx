@@ -1,17 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  ListItemIcon,
-  Button,
-  Grid,
-} from '@mui/material';
+import { Box, Container, Typography, ListItemIcon, Grid } from '@mui/material';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import Image from 'next/image';
-import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ESparkButton from '../global/eSparkButton';
 
 const Perks = ({ data }) => {
   const [selectedCard, setSelectedCard] = useState(0);
@@ -181,11 +174,14 @@ const Perks = ({ data }) => {
                     </Grid>
                   ))}
                   <Grid item xs={12}>
-                    <Link href={data[selectedCard]?.content?.buttonLink}>
-                      <Button variant="contained" color="secondary">
-                        {data[selectedCard]?.content?.buttonText}
-                      </Button>
-                    </Link>
+                    <Box sx={{ my: 2 }}>
+                      <ESparkButton
+                        title={data[selectedCard]?.content?.buttonText}
+                        link={data[selectedCard]?.content?.buttonLink}
+                        color={'primary'}
+                        size={'170px'}
+                      />
+                    </Box>
                   </Grid>
                 </Grid>
               </Box>
