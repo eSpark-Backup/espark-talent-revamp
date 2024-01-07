@@ -13,7 +13,7 @@ const TalentIgnite = ({ data }) => {
               sx={{
                 color: '#001C63',
                 fontSize: '28px',
-                fontWeight: 600,
+                fontWeight: 500,
                 lineHeight: '41.547px',
                 ml: { lg: '10%', md: '5%' },
                 mr: { lg: '25%', md: '5%' },
@@ -30,7 +30,7 @@ const TalentIgnite = ({ data }) => {
                 fontWeight: 400,
                 lineHeight: '36.863px',
                 ml: { lg: '10%', md: '5%' },
-                my: { md: '10px', lg: '40px' },
+                my: { md: '10px', lg: '20px' },
                 textAlign: { xs: 'center', md: 'justify' },
               }}
               dangerouslySetInnerHTML={{ __html: data.description }}
