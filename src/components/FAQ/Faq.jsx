@@ -35,7 +35,7 @@ const Faq = ({ data }) => {
                 item
                 md={6}
                 sm={12}
-                sx={{ display: 'flex', height: '160px', px: '30px' }}
+                sx={{ display: 'flex',  px: '30px' }}
                 key={index}
               >
                 <Accordion
