@@ -3,14 +3,21 @@ import { Box, Typography } from '@mui/material';
 
 const Title = ({ heading, subHeading }) => {
   return (
-    <Box>
+    <Box
+      sx={{
+        width: { md: '70%' },
+        textAlign: 'center',
+        margin: '0px auto',
+      }}
+    >
       <Typography
         sx={{
           color: '#09114A',
           textAlign: 'center',
-          fontSize: '32px',
+          fontSize: { md: '32px', xs: '20px' },
+          lineHeight: { lg: '48px', xs: '26px' },
+          fontFamily: 'Poppins',
           fontWeight: 700,
-          lineHeight: '48px',
           fontStyle: 'normal',
         }}
       >
@@ -18,6 +25,8 @@ const Title = ({ heading, subHeading }) => {
       </Typography>
       <Typography
         sx={{
+          px: { md: '180px' },
+          fontFamily: 'Poppins',
           color: '#001C63',
           textAlign: 'center',
           fontSize: '18px',
