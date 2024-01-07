@@ -1,4 +1,4 @@
-'use strict';
+'use client';
 import React, { useState } from 'react';
 import {
   Box,
@@ -28,12 +28,7 @@ const Faq = ({ data }) => {
           {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;
             return (
-              <Grid
-                item
-                md={6}
-                sm={12}
-                key={index}
-              >
+              <Grid item md={6} sm={12} key={index}>
                 <Accordion
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
