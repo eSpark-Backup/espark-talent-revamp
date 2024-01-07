@@ -32,7 +32,7 @@ import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 const page = () => {
   return (
     <>
-      <Hero data={HP_HERO_DATA} />
+      <Hero data={HP_HERO_DATA} color="primary" />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -46,13 +46,13 @@ const page = () => {
       <Perks data={PERKS_DATA} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
+      <ClientSays data={OUR_CLIENT_SAYS} />
+      <HomeBlogs data={BLOGS_DATA} />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}
         background={'#F7F8FB'}
       />
-      <HomeBlogs data={BLOGS_DATA} />
-      <ClientSays data={OUR_CLIENT_SAYS} />
       <Faq data={FAQ_DATA} />
       {/* <Faqs data={FAQ_DATA} /> */}
     </>
