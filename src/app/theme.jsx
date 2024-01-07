@@ -29,6 +29,9 @@ const lightTheme = createTheme({
     background: {
       default: '#ffffff',
     },
+    default: {
+      main: '#ffffff',
+    },
     text: {
       primary: '#029894',
       secondary: '#001C63',
@@ -125,9 +128,10 @@ const lightTheme = createTheme({
           props: { variant: 'default' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: 'red',
+            backgroundColor: '#fff !important',
+
             borderRadius: '5px',
-            color: 'secondary',
+            color: '#fff',
             position: 'relative',
             '&:hover': {
               backgroundColor: '#001C63',
@@ -282,6 +286,20 @@ const darkTheme = createTheme({
             '&:hover': {
               backgroundColor: '#001C63',
               color: '#fff',
+            },
+          },
+        },
+        {
+          props: { variant: 'default' },
+          style: {
+            textTransform: 'capitalize',
+            backgroundColor: '#fff !important',
+            borderRadius: '5px',
+            color: '#001C63',
+            position: 'relative',
+            '&:hover': {
+              backgroundColor: '#001C63',
+              color: 'secondary',
             },
           },
         },
