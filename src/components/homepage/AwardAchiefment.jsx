@@ -22,7 +22,7 @@ const AwardAchievement = ({ data, design, background }) => {
                 py: '30px',
               }}
             >
-              <Grid item xs={6} md={3} lg={3} xl={3}>
+              <Grid item xs={12} md={12} lg={4} xl={4}>
                 <ParagraphTitle title={data?.title} />
               </Grid>
               {data?.items?.map((item, index) => (
