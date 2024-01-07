@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Button, Container } from '@mui/material';
-import Link from 'next/link';
+import { Box, Container } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 import BlogCards from '../homepage/BlogCards';
+import ESparkButton from '../global/eSparkButton';
 
 const HomeBlogs = ({ data }) => {
   return (
@@ -23,11 +23,12 @@ const HomeBlogs = ({ data }) => {
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}
           />
           <BlogCards data={data?.slice(0, 3)} />
-          <Link href={`/blogs`}>
-            <Button variant="contained" color="secondary">
-              {`View all blogs`}
-            </Button>
-          </Link>
+          <ESparkButton
+            title={`View all blogs`}
+            link={`/blogs`}
+            color={'primary'}
+            size={'170px'}
+          />
         </Box>
       </Container>
     </>

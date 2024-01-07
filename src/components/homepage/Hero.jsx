@@ -1,9 +1,12 @@
 'use client';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
+import ESparkButton from '../global/eSparkButton';
 
-const Hero = ({ data }) => {
+const Hero = ({ data, innerData, color }) => {
+  const hero = innerData || data;
+
   return (
     <>
       <Box
@@ -42,27 +45,12 @@ const Hero = ({ data }) => {
                   {data?.description}
                 </Typography>
               )}
-              {data?.button && (
-                <Button
-                  variant="secondary"
-                  href={data?.button?.link}
-                  sx={{
-                    py: '10px',
-                    px: '30px',
-                    backgroundColor: '#029894',
-                    '&:hover': {
-                      backgroundColor: '#029894',
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="body1"
-                    sx={{ fontWeight: 'bold', fontSize: '17px' }}
-                  >
-                    {data?.button?.label}
-                  </Typography>
-                </Button>
-              )}
+              <ESparkButton
+                title={hero?.button?.label}
+                link={hero?.button?.link}
+                color={color}
+                size={'180px'}
+              />
             </Grid>
             {data?.image && (
               <Grid

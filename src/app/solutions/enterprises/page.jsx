@@ -30,7 +30,7 @@ import { FAQ_DATA } from '@/constants/home-page/faq-section';
 const page = () => {
   return (
     <>
-      <Hero data={ENTERPRISE_HERO_DATA} />
+      <Hero data={ENTERPRISE_HERO_DATA} color="default" />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}

@@ -21,6 +21,8 @@ import {
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
+import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
+import BusinessVenture from '@/components/for-startup/ BusinessVenture';
 
 const page = () => {
   return (
@@ -38,9 +40,9 @@ const page = () => {
       />
       <OurOutsourcing data={OUR_OUTSOURCE} />
       <TalentIgnite data={BUSINESS_START_UP} />
-      <OurOutsourcing data={OUR_ADDITIONAL_BENEFITS} />
+      <BusinessVenture data={OUR_ADDITIONAL_BENEFITS} />
       <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
-      <OurOutsourcing data={CUSTOMIZE_OUTSOURCE} />
+      <CustomizeOutsource data={CUSTOMIZE_OUTSOURCE} />
       <OutSourcingWonder data={OUTSOURCING_SOLUTIONS_DATA} />
       <Faq data={STARTUP_FAQ_DATA} />
     </>
