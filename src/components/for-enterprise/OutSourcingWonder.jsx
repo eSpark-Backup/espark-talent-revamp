@@ -15,7 +15,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import Title from '@/components/how-it-work/Title.jsx';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
@@ -64,7 +64,7 @@ const OutSourcingWonder = ({ data }) => {
       <Box sx={{ py: '3%', overflow: 'hidden' }}>
         <Container>
           <Box sx={{ textAlign: 'center', px: '10%' }}>
-            <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
+            <Title heading={data?.title} />
           </Box>
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
@@ -93,10 +93,22 @@ const OutSourcingWonder = ({ data }) => {
                       height={50}
                       width={50}
                     />
-                    <Typography variant="h5" color="secondary">
+                    <Typography
+                      variant="h5"
+                      color="secondary"
+                      sx={{
+                        fontFamily: 'Poppins',
+                      }}
+                    >
                       {item?.title}
                     </Typography>
-                    <Typography variant="body1" color={'#000'}>
+                    <Typography
+                      variant="body1"
+                      color={'#000'}
+                      sx={{
+                        fontFamily: 'Poppins',
+                      }}
+                    >
                       {item?.paragraph}
                     </Typography>
                   </Grid>

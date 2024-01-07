@@ -26,6 +26,7 @@ const BusinessVenture = ({ data }) => {
                     lineHeight: '41.547px',
                     mr: { lg: '20%', md: '5%' },
                     textAlign: { xs: 'center', md: 'left' },
+                    fontFamily: 'Poppins',
                   }}
                 >
                   {data.title}
@@ -47,6 +48,7 @@ const BusinessVenture = ({ data }) => {
                       fontWeight: 600,
                       fontStyle: 'normal',
                       lineHeight: '23.741px',
+                      fontFamily: 'Poppins',
                     }}
                   >
                     {item.description}

@@ -48,13 +48,20 @@ const HRFirmSuccess = ({ hrFirm }) => {
                     />
                   </Box>
                   <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
-                    <Typography variant="h4" color="secondary">
+                    <Typography
+                      variant="h4"
+                      color="secondary"
+                      sx={{
+                        fontFamily: 'Poppins',
+                      }}
+                    >
                       {item.title}
                     </Typography>
                     <Typography
                       sx={{
                         color: '#001C63',
                         textAlign: 'justify',
+                        fontFamily: 'Poppins',
                         fontSize: '16.517px',
                         fontWeight: 400,
                         fontStyle: 'normal',

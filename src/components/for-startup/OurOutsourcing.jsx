@@ -18,6 +18,7 @@ const OurOutsourcing = ({ data }) => {
             textAlign: 'center',
             flexWrap: 'wrap',
             pb: { xs: '7px' },
+            fontFamily: 'Poppins',
           }}
         >
           {heading}
@@ -31,6 +32,7 @@ const OurOutsourcing = ({ data }) => {
             fontWeight: 400,
             lineHeight: { md: '27.863px', xs: '16.363px' },
             flexWrap: 'wrap',
+            fontFamily: 'Poppins',
             px: '35px',
             pb: { md: '10px', xs: '0px' },
           }}
@@ -48,9 +50,11 @@ const OurOutsourcing = ({ data }) => {
                   fontSize: '28px',
                   fontWeight: 500,
                   lineHeight: '41.547px',
-                  mr: { lg: '20%', md: '5%' },
+                  mr: { lg: '30%', md: '5%' },
                   mb: { md: '15px' },
+                  mt: '20px',
                   textAlign: { xs: 'center', md: 'left' },
+                  fontFamily: 'Poppins',
                 }}
               >
                 {data.title}
@@ -65,6 +69,7 @@ const OurOutsourcing = ({ data }) => {
                   fontStyle: 'normal',
                   my: { xs: '25px', md: '22px' },
                   mr: { lg: '10%', md: '5%' },
+                  fontFamily: 'Poppins',
                 }}
               >
                 {data.description}
@@ -84,6 +89,7 @@ const OurOutsourcing = ({ data }) => {
                       textAlign: 'justify',
                       fontWeight: 600,
                       lineHeight: '27.23.741px',
+                      fontFamily: 'Poppins',
                     }}
                   >
                     {item.description}
