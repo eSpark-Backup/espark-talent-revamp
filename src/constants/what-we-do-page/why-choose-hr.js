@@ -4,7 +4,7 @@ export const WHY_CHOOSE_OUR_HR_DATA = {
     'We provide what you dream for your company. Our team offers those services that fill out your requirements. A friendly collaboration with our team saves your time and frees you from hiring, managing and training your talented workforce.',
   card: [
     {
-      icon: '/images/whatwedo/why-choose-our-hr/setting.png',
+      icon: '/images/whatwedo/why-choose-our-hr/setting.svg',
       alt: 'settionsIcon',
       title: 'Offer Productive Employees ',
       description:
@@ -12,7 +12,7 @@ export const WHY_CHOOSE_OUR_HR_DATA = {
       arrowIcon: '/images/whatwedo/why-choose-our-hr/arrow.svg',
     },
     {
-      icon: '/images/whatwedo/why-choose-our-hr/arrow.png',
+      icon: '/images/whatwedo/why-choose-our-hr/setting.svg',
       alt: 'settionsIcon',
       title: 'Handle Management Issues ',
       description:

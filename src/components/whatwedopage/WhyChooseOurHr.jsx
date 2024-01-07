@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
@@ -14,30 +14,41 @@ const WhyChooseOurHr = ({ data }) => {
     <Box sx={{ my: '4%' }}>
       <Container>
         <Grid container>
-          <Grid item xs={12} sm={12} md={8}>
-            <Typography
+          <Grid item xs={12} sm={12} md={7}>
+            <Box
               sx={{
-                color: '#001C63',
-                fontSize: '32px',
-                fontWeight: 600,
-                textAlign: { xs: 'center', md: 'left' },
+                mt: 5,
               }}
             >
-              {data.title}
-            </Typography>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '18px',
-                fontWeight: 400,
-                pr: { md: 15 },
-                textAlign: { xs: 'center', md: 'justify' },
-              }}
-            >
-              {data.paragraph}
-            </Typography>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: { md: '32px', xs: '20px' },
+                  fontFamily: 'Poppins',
+                  fontStyle: 'normal',
+                  fontWeight: { xs: 700, sm: 600 },
+                  lineHeight: { md: '42.289px', xs: '27px' },
+                  textAlign: { xs: 'center', md: 'left' },
+                }}
+              >
+                {data.title}
+              </Typography>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: { sm: '18px', xs: '10px' },
+                  fontFamily: 'Poppins',
+                  fontWeight: { xs: 700, sm: 400 },
+                  lineHeight: { md: '31.863px', xs: '20px' },
+                  pr: { md: 10 },
+                  textAlign: { xs: 'center', md: 'justify' },
+                }}
+              >
+                {data.paragraph}
+              </Typography>
+            </Box>
           </Grid>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={5}>
             <Swiper
               spaceBetween={1}
               freeMode={true}
@@ -82,13 +93,13 @@ const WhyChooseOurHr = ({ data }) => {
                         boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
                         padding: 3,
                         borderRadius: '15px',
-                        width: { sm: '450px', md: '100%' },
+                        width: { xs: '294.31px', md: '100%' },
                         height: {
-                          xs: 'auto',
+                          xs: '143.884px',
                           sm: '150px',
-                          md: '240px',
-                          lg: 'auto',
+                          md: '170px',
                         },
+                        mt: { xs: 1, md: 0 },
                       }}
                     >
                       <Box
@@ -99,24 +110,26 @@ const WhyChooseOurHr = ({ data }) => {
                         <Box
                           sx={{
                             mr: 2,
-                            mt: { xs: 2, sm: 0 },
                           }}
                         >
-                          <Image
-                            src={item.icon}
-                            width={isXsOrSm ? 200 : 300}
-                            height={65}
-                            alt={item.alt}
-                          />
+                          <ListItemIcon sx={{ minWidth: '30px' }}>
+                            <Image
+                              src={item.icon}
+                              width={isXsOrSm ? 100 : 200}
+                              height={65}
+                              alt={item.alt}
+                            />
+                          </ListItemIcon>
                         </Box>
                         <Box>
                           <Typography
                             sx={{
-                              color: '#001C63',
-                              fontSize: '20px',
+                              color: '#09114A',
+                              fontSize: { md: '20px', xs: '13.08px' },
                               fontWeight: 700,
                               fontStyle: 'normal',
-                              lineHeight: '26.4px',
+                              lineHeight: { lg: '26.4px', xs: '17.266px' },
+                              py: { md: 1 },
                             }}
                           >
                             {item.title}
@@ -125,10 +138,19 @@ const WhyChooseOurHr = ({ data }) => {
                           <Typography
                             sx={{
                               color: '#000',
-                              fontSize: '15px',
-                              fontWeight: 400,
-                              lineHeight: '23.4px',
+                              fontFamily: 'Poppins',
+                              fontSize: {
+                                md: '15px',
+                                sm: '15px',
+                                xs: '9.81px',
+                              },
                               fontStyle: 'normal',
+                              fontWeight: { xs: 700, sm: 400 },
+                              lineHeight: {
+                                lg: '23.4px',
+                                sm: '23px',
+                                xs: '15.304px',
+                              },
                             }}
                           >
                             {item.description}
