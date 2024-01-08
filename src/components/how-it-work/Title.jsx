@@ -16,7 +16,7 @@ const Title = ({ heading, subHeading }) => {
           textAlign: 'center',
           fontSize: { md: '32px', xs: '20px' },
           lineHeight: { lg: '48px', xs: '26px' },
-          fontFamily: 'Poppins',
+
           fontWeight: 700,
           fontStyle: 'normal',
         }}
@@ -26,7 +26,7 @@ const Title = ({ heading, subHeading }) => {
       <Typography
         sx={{
           px: { md: '180px' },
-          fontFamily: 'Poppins',
+
           color: '#001C63',
           textAlign: 'center',
           fontSize: '18px',

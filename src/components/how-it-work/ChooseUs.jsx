@@ -17,7 +17,7 @@ const ChooseUs = ({ chooseUs }) => {
                     width: { md: '70%' },
                     color: '#001C63',
                     fontSize: { md: '32px', xs: '20px' },
-                    fontFamily: 'Poppins',
+
                     fontStyle: 'normal',
                     fontWeight: { xs: 700, sm: 600 },
                     lineHeight: { md: '42.289px', xs: '27px' },
@@ -30,7 +30,7 @@ const ChooseUs = ({ chooseUs }) => {
                   sx={{
                     py: 3,
                     color: '#001C63',
-                    fontFamily: 'Poppins',
+
                     fontSize: '16.517px',
                     fontWeight: 400,
                     fontStyle: 'normal',
@@ -57,7 +57,7 @@ const ChooseUs = ({ chooseUs }) => {
                         <Typography
                           sx={{
                             color: '#001C63',
-                            fontFamily: 'Poppins',
+
                             fontSize: '16.517px',
                             fontStyle: 'normal',
                             fontWeight: 400,

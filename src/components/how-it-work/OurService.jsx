@@ -99,7 +99,7 @@ const OurService = ({ ourService }) => {
                         fontSize: { xs: '19.197px', md: '22.187px' },
                         fontStyle: 'normal',
                         fontWeight: 600,
-                        fontFamily: 'Poppins',
+
                         lineHeight: { xs: '20.272px', md: '23.43px' },
                         mt: { lg: 1 },
                       }}
@@ -111,7 +111,7 @@ const OurService = ({ ourService }) => {
                         color: '#001C63',
                         fontSize: '14.2px',
                         textAlign: 'justify',
-                        fontFamily: 'Poppins',
+
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '25.4px', md: '26.979px' },

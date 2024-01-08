@@ -93,22 +93,10 @@ const OutSourcingWonder = ({ data }) => {
                       height={50}
                       width={50}
                     />
-                    <Typography
-                      variant="h5"
-                      color="secondary"
-                      sx={{
-                        fontFamily: 'Poppins',
-                      }}
-                    >
+                    <Typography variant="h5" color="secondary" sx={{}}>
                       {item?.title}
                     </Typography>
-                    <Typography
-                      variant="body1"
-                      color={'#000'}
-                      sx={{
-                        fontFamily: 'Poppins',
-                      }}
-                    >
+                    <Typography variant="body1" color={'#000'} sx={{}}>
                       {item?.paragraph}
                     </Typography>
                   </Grid>
