@@ -25,7 +25,11 @@ export default function BasicModal({ text, open, handleClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography
+            variant="body1"
+            id="modal-modal-description"
+            sx={{ mt: 2 }}
+          >
             {text}
           </Typography>
         </Box>

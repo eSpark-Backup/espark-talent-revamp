@@ -10,6 +10,7 @@ const OurOutsourcing = ({ data }) => {
     <Box sx={{ my: 2 }}>
       <Box sx={{ py: '2%' }}>
         <Typography
+          variant="h2"
           sx={{
             color: '#001C63',
             fontSize: { md: '32px', xs: '20px' },
@@ -23,6 +24,7 @@ const OurOutsourcing = ({ data }) => {
           {heading}
         </Typography>
         <Typography
+          variant="body1"
           sx={{
             color: '#001C63',
             textAlign: 'center',
@@ -43,6 +45,7 @@ const OurOutsourcing = ({ data }) => {
           <Grid item sm={12} md={6}>
             <Box>
               <Typography
+                variant="h3"
                 sx={{
                   color: '#001C63',
                   fontSize: '28px',
@@ -56,6 +59,7 @@ const OurOutsourcing = ({ data }) => {
                 {data.title}
               </Typography>
               <Typography
+                variant="body1"
                 sx={{
                   color: '#001C63',
                   fontSize: '18px',
@@ -77,6 +81,7 @@ const OurOutsourcing = ({ data }) => {
                     <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
                   </ListItemIcon>
                   <Typography
+                    variant="body1"
                     sx={{
                       mb: 2,
                       color: '#001C63',

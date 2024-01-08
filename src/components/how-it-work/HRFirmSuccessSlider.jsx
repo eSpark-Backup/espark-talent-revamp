@@ -96,6 +96,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                   <Box>
                     <Box>
                       <Typography
+                        variant="body1"
                         sx={{
                           color: '#09114A',
                           fontSize: '18.353px',
@@ -107,6 +108,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                         {item.title}
                       </Typography>
                       <Typography
+                        variant="body1"
                         sx={{
                           color: '#001C63',
                           textAlign: 'justify',

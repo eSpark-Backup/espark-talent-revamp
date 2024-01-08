@@ -14,6 +14,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
       <Container>
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Typography
+            variant="h2"
             sx={{
               width: '55%',
               color: '#001C63',
@@ -85,6 +86,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
 
                 <Box sx={{ px: 3 }}>
                   <Typography
+                    variant="body1"
                     sx={{
                       color: '#09114A',
                       fontSize: '20.325px',
@@ -97,6 +99,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     {item.title}
                   </Typography>
                   <Typography
+                    variant="body1"
                     sx={{
                       color: '#6F76A8',
                       fontSize: '18px',
