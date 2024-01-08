@@ -35,9 +35,9 @@ const FooterCTA = ({ data }) => {
           >
             <Box>
               <Typography
-                variant="h1"
                 sx={{
                   color: '#ECECED',
+                  fontSize: { lg: '54px', md: '50px', sm: '20px' },
                   fontWeight: 700,
                   my: 1,
                 }}
@@ -45,7 +45,6 @@ const FooterCTA = ({ data }) => {
                 {data?.title}
               </Typography>
               <Typography
-                variant="body1"
                 sx={{
                   color: '#ECECED',
                   fontSize: { lg: '24px', md: '20px', sm: '16px' },
