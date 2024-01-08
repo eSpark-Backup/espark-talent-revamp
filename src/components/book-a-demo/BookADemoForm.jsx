@@ -136,6 +136,7 @@ const BookADemoForm = ({ form }) => {
       >
         <Box sx={{ mb: 4, textAlign: 'center' }}>
           <Typography
+            variant="h2"
             sx={{
               color: '#001C63',
               fontSize: '32px',
@@ -147,6 +148,7 @@ const BookADemoForm = ({ form }) => {
             {title}
           </Typography>
           <Typography
+            variant="body1"
             sx={{
               color: '#001C63',
               fontSize: '16px',
@@ -163,6 +165,7 @@ const BookADemoForm = ({ form }) => {
             fields?.map((item, index) => (
               <Box sx={{ width: '100%', mb: 2 }} key={index}>
                 <Typography
+                  variant="body1"
                   sx={{
                     mb: 0.5,
                     color: '#029894',
@@ -236,6 +239,7 @@ const BookADemoForm = ({ form }) => {
 
         <Box>
           <Typography
+            variant="body1"
             sx={{
               color: '#001C63',
               fontSize: '16px',

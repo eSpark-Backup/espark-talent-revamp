@@ -123,7 +123,6 @@ const ExpertTeamCard = ({ teamData }) => {
                         color: '#000',
                         fontSize: { md: '16px', sx: '13.024px' },
                         textAlign: 'justify',
-
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '25.4px', md: '30.4px' },
