@@ -19,7 +19,6 @@ const CustomizeOutsource = ({ data }) => {
             >
               <Box>
                 <Typography
-                  variant="h3"
                   sx={{
                     color: '#001C63',
                     fontSize: '28px',
@@ -40,7 +39,6 @@ const CustomizeOutsource = ({ data }) => {
                     <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
                   </ListItemIcon>
                   <Typography
-                    variant="body1"
                     sx={{
                       mb: 2,
                       color: '#001C63',

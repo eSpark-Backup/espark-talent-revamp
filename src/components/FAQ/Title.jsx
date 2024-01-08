@@ -5,7 +5,6 @@ const Title = ({ title }) => {
   return (
     <Box>
       <Typography
-        variant="h2"
         sx={{
           fontSize: '32px',
           fontWeight: 700,

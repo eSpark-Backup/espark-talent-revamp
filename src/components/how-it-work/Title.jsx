@@ -11,7 +11,6 @@ const Title = ({ heading, subHeading }) => {
       }}
     >
       <Typography
-        variant="h2"
         sx={{
           color: '#09114A',
           textAlign: 'center',
@@ -25,7 +24,6 @@ const Title = ({ heading, subHeading }) => {
         {heading}
       </Typography>
       <Typography
-        variant="body1"
         sx={{
           px: { md: '180px' },
 

@@ -47,7 +47,6 @@ const Faq = ({ data }) => {
                     id={`${panel}-header`}
                   >
                     <Typography
-                      variant="h4"
                       sx={{
                         color: '#09114A',
                         fontSize: '1.5rem',
@@ -59,7 +58,6 @@ const Faq = ({ data }) => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
-                      variant="body1"
                       sx={{
                         color: '#09114A',
                         textAlign: 'justify',
