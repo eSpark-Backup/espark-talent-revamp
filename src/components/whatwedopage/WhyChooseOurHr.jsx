@@ -24,7 +24,7 @@ const WhyChooseOurHr = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   fontSize: { md: '32px', xs: '20px' },
-                  fontFamily: 'Poppins',
+
                   fontStyle: 'normal',
                   fontWeight: { xs: 700, sm: 600 },
                   lineHeight: { md: '42.289px', xs: '27px' },
@@ -37,7 +37,7 @@ const WhyChooseOurHr = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   fontSize: { sm: '18px', xs: '10px' },
-                  fontFamily: 'Poppins',
+
                   fontWeight: { xs: 700, sm: 400 },
                   lineHeight: { md: '31.863px', xs: '20px' },
                   pr: { md: 10 },
@@ -138,7 +138,7 @@ const WhyChooseOurHr = ({ data }) => {
                           <Typography
                             sx={{
                               color: '#000',
-                              fontFamily: 'Poppins',
+
                               fontSize: {
                                 md: '15px',
                                 sm: '15px',
