@@ -10,7 +10,6 @@ const BenefitsWorks = ({ data }) => {
         <Container>
           <Box sx={{ pb: '30px', px: { md: '20%', sm: '10%', xs: '2%' } }}>
             <Typography
-              variant="h2"
               sx={{
                 color: '#001C63',
                 fontSize: { md: '32px', xs: '20px' },
@@ -24,7 +23,6 @@ const BenefitsWorks = ({ data }) => {
               {data?.title}
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
@@ -84,7 +82,6 @@ const BenefitsWorks = ({ data }) => {
                     width={40}
                   />
                   <Typography
-                    variant="h2"
                     color="#000"
                     sx={{
                       color: '#000',

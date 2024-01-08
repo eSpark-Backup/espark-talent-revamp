@@ -10,7 +10,6 @@ const TalentIgnite = ({ data }) => {
         <Grid container sx={{ flexDirection: { md: 'row', xs: 'row' } }}>
           <Grid item xs={12} sm={12} md={7} sx={{ order: { md: 2, xs: 1 } }}>
             <Typography
-              variant="h3"
               sx={{
                 color: '#001C63',
                 fontSize: '28px',
@@ -25,7 +24,6 @@ const TalentIgnite = ({ data }) => {
               {data?.title}
             </Typography>
             <Typography
-              variant="body1"
               sx={{
                 color: '#001C63',
                 fontSize: '18px',

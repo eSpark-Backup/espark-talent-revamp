@@ -106,7 +106,6 @@ const ResponsiveHeader = ({
                   }}
                 >
                   <Typography
-                    variant="body1"
                     textAlign="center"
                     sx={{
                       color: '#222',
@@ -142,7 +141,6 @@ const ResponsiveHeader = ({
                           />
                           <Box sx={{ mx: 2 }}>
                             <Typography
-                              variant="body1"
                               variant="subtitle1"
                               sx={{
                                 color: '#222',
@@ -155,7 +153,7 @@ const ResponsiveHeader = ({
                               {submenuItem.label}
                             </Typography>
                             <Typography
-                              variant="body1"
+                              variant="body2"
                               sx={{
                                 color: '#000',
                                 fontSize: '12px',

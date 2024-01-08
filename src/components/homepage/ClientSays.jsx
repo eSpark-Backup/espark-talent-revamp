@@ -120,7 +120,6 @@ const ClientSays = ({ data }) => {
                             {items?.subTitle}
                           </Typography>
                           <Typography
-                            variant="body1"
                             sx={{
                               fontSize: { md: '15px ', xs: '11px' },
                               color: ' #525252',

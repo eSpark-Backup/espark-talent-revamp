@@ -38,7 +38,6 @@ const QuestionAnswer = () => {
               }}
             >
               <Typography
-                variant="h2"
                 sx={{
                   color: '#09114A',
                   fontSize: { lg: '32px', md: '25px', sm: '22px', xs: '18' },
@@ -52,7 +51,6 @@ const QuestionAnswer = () => {
                 {QUESTION_ANSWER.title}
               </Typography>
               <Typography
-                variant="body1"
                 sx={{
                   color: '#001C63',
                   fontSize: '18px',

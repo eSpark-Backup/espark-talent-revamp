@@ -4,7 +4,6 @@ import React from 'react';
 const ErrorMessage = ({ message }) => {
   return (
     <Typography
-      variant="body1"
       sx={{
         color: 'red',
         fontSize: '13px',
