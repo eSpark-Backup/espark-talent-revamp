@@ -130,6 +130,7 @@ const Form = ({ formContent }) => {
       <form>
         <Box>
           <Typography
+            variant="body1"
             sx={{
               color: '#265579',
               fontWeight: 600,
@@ -144,6 +145,7 @@ const Form = ({ formContent }) => {
         <Box className="partner-form-full-name">
           <Box className="partner-form-firstname">
             <Typography
+              variant="body1"
               sx={{
                 color: '#265579',
                 fontWeight: 600,
@@ -169,6 +171,7 @@ const Form = ({ formContent }) => {
           </Box>
           <Box className="partner-form-lastname">
             <Typography
+              variant="body1"
               sx={{
                 color: '#265579',
                 fontWeight: 600,
@@ -195,6 +198,7 @@ const Form = ({ formContent }) => {
         </Box>
         <Box className="partner-form-your-email-adress">
           <Typography
+            variant="body1"
             sx={{
               color: '#265579',
               fontWeight: 600,
@@ -220,6 +224,7 @@ const Form = ({ formContent }) => {
         </Box>
         <Box className="partner-form-your-email-adress">
           <Typography
+            variant="body1"
             sx={{
               color: '#265579',
               fontWeight: 600,
@@ -252,6 +257,7 @@ const Form = ({ formContent }) => {
         </Box>
         <Box className="partner-form-Country">
           <Typography
+            variant="body1"
             sx={{
               color: '#265579',
               fontWeight: 600,
@@ -270,6 +276,7 @@ const Form = ({ formContent }) => {
         </Box>
         <Box className="partner-form-LinkedIn-Profile">
           <Typography
+            variant="body1"
             sx={{
               color: '#265579',
               fontWeight: 600,

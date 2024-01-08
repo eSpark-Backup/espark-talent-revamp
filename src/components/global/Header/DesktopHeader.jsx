@@ -91,6 +91,7 @@ const DesktopHeader = ({
                     />
                     <Box sx={{ mx: 2 }}>
                       <Typography
+                        variant="body1"
                         variant="subtitle1"
                         sx={{
                           color: '#222',
@@ -103,7 +104,7 @@ const DesktopHeader = ({
                         {submenuItem.label}
                       </Typography>
                       <Typography
-                        variant="body2"
+                        variant="body1"
                         sx={{
                           color: '#000',
                           fontSize: '12px',
