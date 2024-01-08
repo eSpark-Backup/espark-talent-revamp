@@ -1,7 +1,6 @@
 import { styled } from '@mui/material/styles';
 
 const Root = styled('div')(({ theme }) => ({
-  padding: theme.spacing(1),
   [theme.breakpoints.up('xs')]: {
     h1: {
       fontSize: `calc(50px * 0.6)`,
@@ -72,7 +71,7 @@ const Root = styled('div')(({ theme }) => ({
     },
   },
   [theme.breakpoints.up('lg')]: {
-   h1: {
+    h1: {
       fontSize: `calc(50px * 0.9)`,
     },
     h2: {
