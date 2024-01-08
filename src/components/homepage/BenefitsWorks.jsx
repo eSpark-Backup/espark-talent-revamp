@@ -12,9 +12,9 @@ const BenefitsWorks = ({ data }) => {
             <Typography
               sx={{
                 color: '#001C63',
-                fontSize: { md: '32px', xs: '20px' },
+                fontSize: { xs: '20px', md: '32px' },
                 fontWeight: 600,
-                lineHeight: { lg: '42.289px', xs: '23.289px' },
+                lineHeight: { xs: 'auto', lg: '42.289px' },
                 textAlign: 'center',
                 flexWrap: 'wrap',
                 pb: { xs: '15px' },
@@ -40,10 +40,68 @@ const BenefitsWorks = ({ data }) => {
           </Box>
           <Grid
             container
-            spacing={2}
-            gap={{ md: '13%', lg: '10%', sm: '1%' }}
+            spacing={[5, 6, 2, 2]}
+            gap={{ md: '13%', lg: '7.3%', sm: '1%' }}
             justifyContent="center"
+            position={'relative'}
           >
+            <Box
+              sx={{
+                width: '172.076px',
+                height: '33.708px',
+                position: 'absolute',
+                transform: {
+                  xs: 'rotate(152.607deg)',
+                  sm: 'rotate(149.607deg)',
+                  md: 'none',
+                },
+                zIndex: 0,
+                top: { xs: 141, sm: 187, md: 90 },
+              }}
+              src="/images/homepage/outsource-benefits/line1.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: '210.021px',
+                height: '68.83px',
+                position: 'absolute',
+                zIndex: 0,
+                display: { xs: 'none', sm: 'none', md: 'block' },
+                top: { sm: 370, md: 160 },
+              }}
+              src="/images/homepage/outsource-benefits/line2.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: '210.021px',
+                height: '68.83px',
+                position: 'absolute',
+                zIndex: 0,
+                display: { xs: 'block', sm: 'block', md: 'none' },
+                top: { xs: 280, sm: 350, md: 160 },
+              }}
+              src="/images/homepage/outsource-benefits/line4.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: '192.958px',
+                height: '48.005px',
+                position: 'absolute',
+                display: { xs: 'block', md: 'block' },
+                transform: {
+                  xs: 'rotate(152.607deg)',
+                  sm: 'rotate(142.607deg)',
+                  md: 'none',
+                },
+                zIndex: 0,
+                top: { xs: 444, sm: 560, md: 260 },
+              }}
+              src="/images/homepage/outsource-benefits/line3.svg"
+              component={'img'}
+            />
             {data?.items.map((item, index) => (
               <Grid
                 key={index}
@@ -56,12 +114,14 @@ const BenefitsWorks = ({ data }) => {
                   alignItems: 'stretch',
                   justifyContent: 'center',
                   p: ['10px', '20px'],
+                  position: 'relative',
+                  zIndex: 1,
                 }}
               >
                 <Box
                   sx={{
                     display: 'flex',
-                    borderRadius: '53px',
+                    borderRadius: { xs: '32.809px', md: '53px' },
                     p: '20px',
                     alignItems: 'center',
                     background: ' #FFF',
