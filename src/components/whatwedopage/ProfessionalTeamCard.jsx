@@ -20,7 +20,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               width: { md: '55%' },
               color: '#001C63',
               textAlign: 'center',
-              fontFamily: 'Poppins',
+
               fontSize: { md: '32px', xs: '20px' },
               fontWeight: 700,
               fontStyle: 'normal',
@@ -88,7 +88,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       color: '#09114A',
                       fontSize: { md: '20.325px', sm: '15px', xs: '11.72px' },
                       fontStyle: 'normal',
-                      fontFamily: 'Poppins',
+
                       fontWeight: 600,
                       lineHeight: { md: '24.39px', xs: '14.064px' },
                       mt: { lg: 1 },
@@ -102,7 +102,6 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       fontSize: { md: '18px', sm: '15px', xs: '10.38px' },
                       textAlign: 'justify',
                       fontStyle: 'normal',
-                      fontFamily: 'Puppins',
                       fontWeight: { xs: 700, sm: 400 },
                       lineHeight: {
                         md: '32.085px',
