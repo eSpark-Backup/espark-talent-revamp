@@ -13,7 +13,6 @@ const BenefitsWorks = ({ data }) => {
               sx={{
                 color: '#001C63',
                 fontSize: { md: '32px', xs: '20px' },
-                fontFamily: 'Poppins',
                 fontWeight: 600,
                 lineHeight: { lg: '42.289px', xs: '23.289px' },
                 textAlign: 'center',
@@ -27,7 +26,6 @@ const BenefitsWorks = ({ data }) => {
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontFamily: 'Poppins',
                 fontSize: { md: '18px', xs: '11px' },
                 fontStyle: 'normal',
                 fontWeight: 400,
