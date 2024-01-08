@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -9,19 +9,22 @@ import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
+  const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
     <Box sx={{ mb: '4%' }}>
       <Container>
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Typography
             sx={{
-              width: '55%',
+              width: { md: '55%' },
               color: '#001C63',
               textAlign: 'center',
-              fontSize: '32px',
-              fontWeight: 600,
+              fontFamily: 'Poppins',
+              fontSize: { md: '32px', xs: '20px' },
+              fontWeight: 700,
               fontStyle: 'normal',
-              lineHeight: '48px',
+              lineHeight: { md: '48px', xs: '30px' },
             }}
           >
             {teamData.heading}
@@ -43,7 +46,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               wrapperClass: 'swiper-wrapper',
               slideClass: 'swiper-slide',
             },
-            960: {
+            768: {
               slidesPerView: 2,
               pagination: {
                 el: '.swiper-pagination',
@@ -59,7 +62,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
             <SwiperSlide key={index}>
               <Box
                 sx={{
-                  height: { lg: '175px', xs: 'auto' },
+                  height: { lg: '175px', xs: '100.986px', sm: '150px' },
                   display: 'flex',
                   padding: 2,
                   margin: 2,
@@ -69,14 +72,10 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     '0px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
                 }}
               >
-                <Box
-                  sx={{
-                    mt: { xs: 3, sm: 2 },
-                  }}
-                >
+                <Box>
                   <Image
                     src={item?.icon}
-                    width={100}
+                    width={isXsOrSm ? 40 : 100}
                     height={200}
                     alt={item.alt}
                     className="swiper-image"
@@ -87,10 +86,11 @@ const ProfessionalTeamCard = ({ teamData }) => {
                   <Typography
                     sx={{
                       color: '#09114A',
-                      fontSize: '20.325px',
+                      fontSize: { md: '20.325px', sm: '15px', xs: '11.72px' },
                       fontStyle: 'normal',
+                      fontFamily: 'Poppins',
                       fontWeight: 600,
-                      lineHeight: '24.39px',
+                      lineHeight: { md: '24.39px', xs: '14.064px' },
                       mt: { lg: 1 },
                     }}
                   >
@@ -99,11 +99,16 @@ const ProfessionalTeamCard = ({ teamData }) => {
                   <Typography
                     sx={{
                       color: '#6F76A8',
-                      fontSize: '18px',
+                      fontSize: { md: '18px', sm: '15px', xs: '10.38px' },
                       textAlign: 'justify',
                       fontStyle: 'normal',
-                      fontWeight: 400,
-                      lineHeight: '32.085px',
+                      fontFamily: 'Puppins',
+                      fontWeight: { xs: 700, sm: 400 },
+                      lineHeight: {
+                        md: '32.085px',
+                        sm: '25.263px',
+                        xs: '13.263px',
+                      },
                       mt: { lg: 1 },
                     }}
                   >
