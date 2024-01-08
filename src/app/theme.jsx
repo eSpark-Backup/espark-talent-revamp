@@ -42,7 +42,7 @@ const lightTheme = createTheme({
       xs: 0,
       sm: 768,
       md: 1024,
-      lg: 1440,
+      lg: 1366,
       xl: 1920,
     },
   },
@@ -172,7 +172,7 @@ const lightTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1440px',
+          maxWidth: '1200px',
           margin: '0 auto',
         },
       },
@@ -209,7 +209,7 @@ const darkTheme = createTheme({
       xs: 0,
       sm: 768,
       md: 1024,
-      lg: 1440,
+      lg: 1366,
       xl: 1920,
     },
   },
@@ -336,7 +336,7 @@ const darkTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1440px',
+          maxWidth: '1200px',
           margin: '0 auto',
         },
       },
