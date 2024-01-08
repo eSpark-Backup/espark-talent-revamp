@@ -35,7 +35,7 @@ const OurQualityService = ({ ourQualityService }) => {
                       sx={{
                         textAlign: 'center',
                         fontWeight: 600,
-                        fontFamily: 'Poppins',
+
                         fontSize: '16px',
                         lineHeight: '24px',
                       }}
@@ -64,7 +64,7 @@ const OurQualityService = ({ ourQualityService }) => {
                 sx={{
                   textAlign: 'right',
                   flexWrap: 'wrap',
-                  fontFamily: 'Poppins',
+
                   lineHeight: { md: '56px', xs: '32px' },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
@@ -78,7 +78,7 @@ const OurQualityService = ({ ourQualityService }) => {
                 sx={{
                   textAlign: 'right',
                   my: '20px',
-                  fontFamily: 'Poppins',
+
                   lineHeight: '30.4px',
                   fontSize: '16px',
                   fontWeight: 400,
