@@ -22,9 +22,9 @@ const BlogCards = ({ data }) => {
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
-        <Grid container columnSpacing={7} rowSpacing={4}>
+        <Grid container spacing={2}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={6} sm={6} md={4} lg={4} key={index}>
               <Box className="single-blog-post">
                 <Link href={`/blogs/${item?.id}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
@@ -36,7 +36,7 @@ const BlogCards = ({ data }) => {
                         height={100}
                         style={{ borderRadius: '15px' }}
                       />
-                    </span>
+                    </span> 
                     <span className="date">
                       {Intl.DateTimeFormat('en-US', {
                         year: 'numeric',
@@ -72,7 +72,7 @@ const BlogCards = ({ data }) => {
                     {item?.mainParagraph}
                   </Typography>
                   <Link href={`/blogs/${item?.id}`}>
-                    <span className="default-btn" sx={{ position: 'relative' }}>
+                    <Box className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
                           position: 'absolute',
@@ -81,9 +81,11 @@ const BlogCards = ({ data }) => {
                           color: '#fff',
                         }}
                       />
-
+                      <Typography variant='body1'>
+                        
                       {READ_MORE}
-                    </span>
+</Typography>
+                    </Box>
                   </Link>
                 </Box>
               </Box>
