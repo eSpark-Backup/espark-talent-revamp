@@ -94,6 +94,7 @@ const OurService = ({ ourService }) => {
 
                   <Box>
                     <Typography
+                      variant="body1"
                       sx={{
                         color: '#09114A',
                         fontSize: { xs: '19.197px', md: '22.187px' },
@@ -107,6 +108,7 @@ const OurService = ({ ourService }) => {
                       {item?.title}
                     </Typography>
                     <Typography
+                      variant="body1"
                       sx={{
                         color: '#001C63',
                         fontSize: '14.2px',

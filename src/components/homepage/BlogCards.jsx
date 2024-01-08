@@ -49,6 +49,7 @@ const BlogCards = ({ data }) => {
                 <Box sx={{ width: '90%', my: 2 }}>
                   <Link href={`/blogs/${item?.id}`}>
                     <Typography
+                      variant="body1"
                       sx={{
                         color: '#09114A',
                         fontSize: '23.49px',
@@ -60,6 +61,7 @@ const BlogCards = ({ data }) => {
                     </Typography>
                   </Link>
                   <Typography
+                    variant="body1"
                     sx={{
                       color: '#6F76A8',
                       fontSize: '14.455px',
