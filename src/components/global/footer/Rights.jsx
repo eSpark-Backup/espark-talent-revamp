@@ -14,6 +14,7 @@ const Rights = ({ copyRights }) => {
       }}
     >
       <Typography
+        variant="body1"
         sx={{
           color: '#0E0F1D',
           fontSize: '15px',

@@ -16,6 +16,7 @@ const WhyChooseOurHr = ({ data }) => {
         <Grid container>
           <Grid item xs={12} sm={12} md={8}>
             <Typography
+              variant="h2"
               sx={{
                 color: '#001C63',
                 fontSize: '32px',
@@ -26,6 +27,7 @@ const WhyChooseOurHr = ({ data }) => {
               {data.title}
             </Typography>
             <Typography
+              variant="body1"
               sx={{
                 color: '#001C63',
                 fontSize: '18px',
@@ -111,6 +113,7 @@ const WhyChooseOurHr = ({ data }) => {
                         </Box>
                         <Box>
                           <Typography
+                            variant="body1"
                             sx={{
                               color: '#001C63',
                               fontSize: '20px',
@@ -123,6 +126,7 @@ const WhyChooseOurHr = ({ data }) => {
                           </Typography>
 
                           <Typography
+                            variant="body1"
                             sx={{
                               color: '#000',
                               fontSize: '15px',

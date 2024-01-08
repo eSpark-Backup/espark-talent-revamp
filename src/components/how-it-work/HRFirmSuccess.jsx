@@ -52,6 +52,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                       {item.title}
                     </Typography>
                     <Typography
+                      variant="body1"
                       sx={{
                         color: '#001C63',
                         textAlign: 'justify',

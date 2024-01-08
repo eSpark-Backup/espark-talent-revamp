@@ -69,7 +69,7 @@ const Perks = ({ data }) => {
                       alt={perk.title}
                     />
                     <Typography
-                      variant={isXsOrSm ? 'h7' : 'h2'}
+                      variant={isXsOrSm ? 'h4' : 'h2'}
                       color={index === selectedCard ? '#FFFFFF' : '#001C63'}
                       sx={{ flexWrap: 'wrap', pl: '10px' }}
                     >

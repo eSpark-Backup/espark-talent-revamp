@@ -31,6 +31,7 @@ const BookADemoContent = ({ content }) => {
             }}
           >
             <Typography
+              variant="h2"
               sx={{
                 color: '#FFF',
                 textAlign: 'center',
@@ -42,6 +43,7 @@ const BookADemoContent = ({ content }) => {
               dangerouslySetInnerHTML={{ __html: title }}
             />
             <Typography
+              variant="body1"
               sx={{
                 width: { xs: '100%', sm: '540px' },
                 color: '#FFF',

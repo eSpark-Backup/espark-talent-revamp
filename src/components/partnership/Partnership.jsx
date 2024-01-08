@@ -25,6 +25,7 @@ const Partnership = ({ partnership }) => {
                     {item.title}
                   </Typography>
                   <Typography
+                    variant="body1"
                     sx={{
                       color: '#263238',
                       textAlign: 'justify',
@@ -48,6 +49,7 @@ const Partnership = ({ partnership }) => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography
+                          variant="body1"
                           sx={{
                             color: '#263238',
                             textAlign: 'justify',
