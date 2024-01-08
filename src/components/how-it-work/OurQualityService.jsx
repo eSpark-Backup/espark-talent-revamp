@@ -10,7 +10,13 @@ const OurQualityService = ({ ourQualityService }) => {
           <Grid item md={6}>
             <Grid container spacing={2}>
               {card?.map((item, index) => (
-                <Grid item xs={12} md={6} key={index}>
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  key={index}
+                  sx={{ order: { md: 2, xs: 1 } }}
+                >
                   <Box
                     sx={{
                       border: '1px solid #E5E5E5',
@@ -26,7 +32,13 @@ const OurQualityService = ({ ourQualityService }) => {
                     <Typography
                       variant="h4"
                       color={'secondary'}
-                      sx={{ textAlign: 'center', fontWeight: 600 }}
+                      sx={{
+                        textAlign: 'center',
+                        fontWeight: 600,
+
+                        fontSize: '16px',
+                        lineHeight: '24px',
+                      }}
                     >
                       {item.content}
                     </Typography>
@@ -40,6 +52,7 @@ const OurQualityService = ({ ourQualityService }) => {
             xs={12}
             md={6}
             sx={{
+              order: { smDown: 1, md: 2 },
               display: 'flex',
               justifyContent: { lg: 'right', xs: 'center' },
             }}
@@ -51,8 +64,9 @@ const OurQualityService = ({ ourQualityService }) => {
                 sx={{
                   textAlign: 'right',
                   flexWrap: 'wrap',
-                  lineHeight: '56px',
-                  fontSize: '32px',
+
+                  lineHeight: { md: '56px', xs: '32px' },
+                  fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
                 }}
               >
@@ -64,6 +78,7 @@ const OurQualityService = ({ ourQualityService }) => {
                 sx={{
                   textAlign: 'right',
                   my: '20px',
+
                   lineHeight: '30.4px',
                   fontSize: '16px',
                   fontWeight: 400,

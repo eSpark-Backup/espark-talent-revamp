@@ -36,8 +36,8 @@ const page = () => {
         }
       />
       <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
-      <ChooseUs chooseUs={CHOOSE_US} />
       <OurService ourService={OUR_SERVICE} />
+      <ChooseUs chooseUs={CHOOSE_US} />
       <OurQualityService ourQualityService={OUR_OFFERED_SERVICES} />
     </>
   );

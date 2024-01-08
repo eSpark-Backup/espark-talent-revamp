@@ -87,6 +87,7 @@ const BenefitsWorks = ({ data }) => {
                       color: '#000',
                       fontWeight: 400,
                       fontStyle: 'normal',
+
                       lineHeight: { md: '30px', xs: '18.571px' },
                       ml: 3,
                       fontSize: { md: '20px', xs: '12px' },
