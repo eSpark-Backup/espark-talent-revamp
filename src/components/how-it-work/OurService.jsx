@@ -8,14 +8,14 @@ import { Box, Container, Typography } from '@mui/material';
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import Title from './Title';
 
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;
   return (
     <Box sx={{ mb: '4%' }}>
       <Container>
-        <ParagraphTitle title={heading} paragraph={subHeading} />
+        <Title heading={heading} subHeading={subHeading} />
         <Swiper
           spaceBetween={0}
           freeMode={true}
@@ -96,10 +96,11 @@ const OurService = ({ ourService }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: { xs: '21px', md: '22.187px' },
+                        fontSize: { xs: '19.197px', md: '22.187px' },
                         fontStyle: 'normal',
                         fontWeight: 600,
-                        lineHeight: { xs: '24.4px', md: '23.43px' },
+
+                        lineHeight: { xs: '20.272px', md: '23.43px' },
                         mt: { lg: 1 },
                       }}
                     >
@@ -110,6 +111,7 @@ const OurService = ({ ourService }) => {
                         color: '#001C63',
                         fontSize: '14.2px',
                         textAlign: 'justify',
+
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '25.4px', md: '26.979px' },
