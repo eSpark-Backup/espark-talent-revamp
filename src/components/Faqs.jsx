@@ -42,6 +42,7 @@ const Faqs = ({ data }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography
+                    variant="body1"
                     sx={{
                       fontSize: '16px',
                       fontWeight: '400',
