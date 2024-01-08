@@ -29,7 +29,6 @@ const Footer = ({ data }) => {
                 style={{ marginBottom: '10px' }}
               />
               <Typography
-                variant="body1"
                 sx={{
                   color: '#001C63',
                   textAlign: 'justify',

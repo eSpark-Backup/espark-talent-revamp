@@ -113,7 +113,6 @@ const WhyChooseOurHr = ({ data }) => {
                         </Box>
                         <Box>
                           <Typography
-                            variant="body1"
                             sx={{
                               color: '#001C63',
                               fontSize: '20px',
@@ -126,7 +125,6 @@ const WhyChooseOurHr = ({ data }) => {
                           </Typography>
 
                           <Typography
-                            variant="body1"
                             sx={{
                               color: '#000',
                               fontSize: '15px',

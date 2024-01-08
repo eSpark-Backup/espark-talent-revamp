@@ -5,7 +5,6 @@ const Title = ({ heading, subHeading }) => {
   return (
     <Box>
       <Typography
-        variant="h2"
         sx={{
           color: '#09114A',
           textAlign: 'center',
@@ -18,7 +17,6 @@ const Title = ({ heading, subHeading }) => {
         {heading}
       </Typography>
       <Typography
-        variant="body1"
         sx={{
           color: '#001C63',
           textAlign: 'center',
