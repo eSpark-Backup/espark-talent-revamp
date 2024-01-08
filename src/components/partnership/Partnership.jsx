@@ -17,13 +17,20 @@ const Partnership = ({ partnership }) => {
     <Box sx={{ mt: '4%', mb: '6%' }}>
       <Container>
         <Grid container>
-          <Grid item md={8}>
+          <Grid item xs={12} md={8}>
             <>
               {content.map((item, index) => (
                 <Box key={index} sx={{ pr: 3 }}>
-                  <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
-                    {item.title}
-                  </Typography>
+                  <Typography
+                    variant="h2"
+                    color="secondary"
+                    sx={{
+                      py: '5px',
+                      fontWeight: 700,
+                      fontSize: '32px',
+                    }}
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  />
                   <Typography
                     sx={{
                       color: '#263238',
@@ -31,6 +38,7 @@ const Partnership = ({ partnership }) => {
                       fontSize: '18px',
                       fontWeight: 400,
                       lineHeight: '45.766px',
+                      mb: '30px',
                     }}
                   >
                     {item.description}
@@ -38,7 +46,11 @@ const Partnership = ({ partnership }) => {
                   {item.items?.map((list, itemIndex) => (
                     <Box
                       key={itemIndex}
-                      sx={{ display: 'flex', textAlign: 'baseline' }}
+                      sx={{
+                        display: 'flex',
+                        textAlign: 'baseline',
+                        pt: '-90px',
+                      }}
                     >
                       <ListItemIcon sx={{ minWidth: '30px', ml: '14px' }}>
                         <RectangleSharpIcon
@@ -65,7 +77,7 @@ const Partnership = ({ partnership }) => {
               ))}
             </>
           </Grid>
-          <Grid item md={4}>
+          <Grid item xs={12} md={4}>
             <Form formContent={formContent} />
           </Grid>
         </Grid>

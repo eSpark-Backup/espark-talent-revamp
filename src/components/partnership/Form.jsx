@@ -297,7 +297,7 @@ const Form = ({ formContent }) => {
             </span>
           )}
         </Box>
-        <Box className="partner-form-button">
+        <Box className="partner-form-button" sx={{ width: { xs: '40px' } }}>
           <Button onClick={handleSubmit} type="button">
             {formContent.buttonName}
           </Button>

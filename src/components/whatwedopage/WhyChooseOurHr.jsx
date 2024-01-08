@@ -17,7 +17,7 @@ const WhyChooseOurHr = ({ data }) => {
           <Grid item xs={12} sm={12} md={7}>
             <Box
               sx={{
-                mt: 5,
+                mt: { md: 2, lg: 3 },
               }}
             >
               <Typography

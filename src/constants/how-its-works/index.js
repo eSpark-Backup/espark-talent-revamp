@@ -4,28 +4,28 @@ export const HR_FIRM_DATA = {
     'Work with us and unlock the fastest professional hiring Services! Here is How we pick a worthy professionals',
   card: [
     {
-      image: '/images/how-its-works/recruit.png',
+      image: '/images/how-its-works/recruit.svg',
       alt: 'Recruit employee – espark Talent',
       title: 'Recruit',
       description:
         'Exploration of the candidate is the first step in our recruitment process. Picking up outsourced talents is the day-to-day practice of our expert recruiters.',
     },
     {
-      image: '/images/how-its-works/shortlist.png',
+      image: '/images/how-its-works/shortlist.svg',
       alt: 'Shortlist employee – eSpark Talent',
       title: 'Shortlist',
       description:
         'Selecting the top candidates comes under the prime expertise of our clever hiring team. They know how to test the talent and pick the foremost candidates.',
     },
     {
-      image: '/images/how-its-works/hire.png',
+      image: '/images/how-its-works/hire.svg',
       alt: 'Hire employee with eSpark Talent ',
       title: 'Hire',
       description:
         'Hiring is the final step in the process of selecting the worthy talent that is decided after proper discussion with our specialist.',
     },
     {
-      image: '/images/how-its-works/train.png',
+      image: '/images/how-its-works/train.svg',
       alt: 'Train employee – eSpark Talent',
       title: 'Train',
       description:
