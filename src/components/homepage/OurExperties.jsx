@@ -3,7 +3,7 @@ import React from 'react';
 import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box, Typography, Button, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ParagraphTitle from './ParagraphTitle';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import ESparkButton from '../global/eSparkButton';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -120,11 +121,12 @@ const OurExperties = ({ data }) => {
             pt: { xs: '20px', md: '30px' },
           }}
         >
-          <Link href={data?.buttonLink}>
-            <Button variant="contained" color="secondary">
-              {data?.buttonText}
-            </Button>
-          </Link>
+          <ESparkButton
+            title={data?.buttonText}
+            link={data?.buttonLink}
+            color={'primary'}
+            size={'180px'}
+          />
         </Grid>
       </Container>
     </Box>

@@ -21,10 +21,14 @@ const WikiSingleLeft = ({ data }) => {
     >
       {data.content?.map((item, index) => (
         <Box key={index}>
-          <Typography variant="h3" sx={{ color: '#3B5998', py: '5px' }}>
+          <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
             {item.title}
           </Typography>
-          <Typography variant="body1" sx={{ fontSize: '18px', py: '5px' }}>
+          <Typography
+            variant="body1"
+            color="#000"
+            sx={{ fontSize: '18px', py: '5px' }}
+          >
             {item.description}
           </Typography>
           {item.items?.map((list, itemIndex) => (
@@ -39,7 +43,11 @@ const WikiSingleLeft = ({ data }) => {
                   />
                 </ListItemIcon>
                 <ListItemText>
-                  <Typography variant="body1" sx={{ fontSize: '18px' }}>
+                  <Typography
+                    variant="body1"
+                    color="#000"
+                    sx={{ fontSize: '18px' }}
+                  >
                     {list}
                   </Typography>
                 </ListItemText>

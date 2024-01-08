@@ -26,6 +26,8 @@ export default function RootLayout({ children }) {
   const currentTheme = isDarkTheme ? darkTheme : lightTheme;
   const pathName = usePathname();
   const bookADemo = '/book-a-demo';
+  const careers = '/careers';
+  const partnership = '/partnership-program';
 
   const toggleTheme = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
@@ -48,7 +50,9 @@ export default function RootLayout({ children }) {
               <Box>{children}</Box>
               {pathName !== bookADemo ? (
                 <>
-                  <FooterCTA data={FOOTER_CTA_DATA} />
+                  {pathName !== careers && pathName !== partnership ? (
+                    <FooterCTA data={FOOTER_CTA_DATA} />
+                  ) : null}
                   <Footer data={FOOTER_DATA} />
                 </>
               ) : null}

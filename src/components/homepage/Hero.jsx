@@ -1,18 +1,19 @@
 'use client';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
+import ESparkButton from '../global/eSparkButton';
 
-const Hero = ({ data, innerData }) => {
+const Hero = ({ data, innerData, color }) => {
   const hero = innerData || data;
 
   return (
     <>
       <Box
         sx={{
-          py: hero?.spacing,
-          background: hero?.bgColor,
-          backgroundImage: `url(${hero?.bgImage})`,
+          py: data?.spacing,
+          background: data?.bgColor,
+          backgroundImage: `url(${data?.bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -27,45 +28,31 @@ const Hero = ({ data, innerData }) => {
             }}
           >
             <Grid item xs={12} sm={6} sx={{}}>
-              {hero?.title && (
+              {data?.title && (
                 <Typography
-                  variant={hero?.titleVariant}
-                  color={hero?.titleColor}
+                  variant={data?.titleVariant}
+                  color={data?.titleColor}
                 >
-                  {hero?.title}
+                  {data?.title}
                 </Typography>
               )}
-              {hero?.description && (
+              {data?.description && (
                 <Typography
-                  variant={hero?.descVariant}
-                  color={hero?.descColor}
+                  variant={data?.descVariant}
+                  color={data?.descColor}
                   sx={{ py: '10px' }}
                 >
-                  {hero?.description}
+                  {data?.description}
                 </Typography>
               )}
-              {hero?.button && (
-                <Button
-                  variant="secondary"
-                  href={hero?.button?.link}
-                  sx={{
-                    py: '10px',
-                    px: '30px',
-                    '&:hover': {
-                      backgroundColor: '#029894',
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="body1"
-                    sx={{ fontWeight: 'bold', fontSize: '17px' }}
-                  >
-                    {hero?.button?.label}
-                  </Typography>
-                </Button>
-              )}
+              <ESparkButton
+                title={hero?.button?.label}
+                link={hero?.button?.link}
+                color={color}
+                size={'180px'}
+              />
             </Grid>
-            {hero?.image && (
+            {data?.image && (
               <Grid
                 item
                 xs={12}
@@ -77,10 +64,10 @@ const Hero = ({ data, innerData }) => {
                 }}
               >
                 <Image
-                  src={hero?.image}
-                  alt={hero?.imageAlt}
-                  width={hero?.imageWidth}
-                  height={hero?.imageHeight}
+                  src={data?.image}
+                  alt={data?.imageAlt}
+                  width={data?.imageWidth}
+                  height={data?.imageHeight}
                 />
               </Grid>
             )}

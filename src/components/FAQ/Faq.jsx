@@ -11,35 +11,26 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 
-import Title from './Title';
+import ParagraphTitle from '../homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {
-  const [expanded, setExpanded] = useState([]);
+  const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded((prevExpanded) =>
-      isExpanded
-        ? [...prevExpanded, panel]
-        : prevExpanded.filter((item) => item !== panel)
-    );
+    setExpanded(isExpanded ? panel : null);
   };
+
   return (
-    <Box sx={{ mt: 40 }} id="faq">
+    <Box sx={{ py: '1%' }} id="faq">
       <Container>
-        <Title title={data?.title} />
-        <Grid container>
+        <ParagraphTitle title={data?.title} />
+        <Grid container spacing={4}>
           {data?.questions?.map((item, index) => {
             const panel = `panel${index}`;
             return (
-              <Grid
-                item
-                md={6}
-                sm={12}
-                sx={{ display: 'flex', height: '160px', px: '30px' }}
-                key={index}
-              >
+              <Grid item md={6} sm={12} key={index}>
                 <Accordion
-                  expanded={expanded.includes(panel)}
+                  expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{ mb: 4 }}
                 >
@@ -58,8 +49,8 @@ const Faq = ({ data }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '25.833px',
-                        fontWeight: expanded.includes(panel) ? 600 : 400,
+                        fontSize: '1.5rem',
+                        fontWeight: expanded === panel ? 600 : 400,
                       }}
                     >
                       {item?.heading}

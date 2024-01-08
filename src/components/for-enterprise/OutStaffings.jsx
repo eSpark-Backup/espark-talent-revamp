@@ -2,9 +2,9 @@
 import React from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { Box, Typography, Grid, Button, Container } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import ESparkButton from '../global/eSparkButton';
 
 const OutStaffings = ({ data }) => {
   return (
@@ -32,7 +32,7 @@ const OutStaffings = ({ data }) => {
                     width={15}
                     height={15}
                   />
-                  <Typography variant="h4" sx={{ color: 'primary' }}>
+                  <Typography variant="h4" color="secondary" sx={{}}>
                     {list?.title}
                   </Typography>
                 </Box>
@@ -51,15 +51,16 @@ const OutStaffings = ({ data }) => {
             item
             xs={12}
             sx={{
-              py: '30px',
+              pt: '40px',
               textAlign: 'center',
             }}
           >
-            <Link href={data?.buttonLink}>
-              <Button variant="contained" color="secondary">
-                {data?.buttonText}
-              </Button>
-            </Link>
+            <ESparkButton
+              title={data?.buttonText}
+              link={data?.buttonLink}
+              color={'primary'}
+              size={'170px'}
+            />
           </Box>
         </Container>
       </Box>

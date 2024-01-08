@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
   Box,
   Container,
-  Button,
   Grid,
   Typography,
   Select,
@@ -11,7 +10,7 @@ import {
   Pagination,
   PaginationItem,
 } from '@mui/material';
-import Link from 'next/link';
+import ESparkButton from '../global/eSparkButton';
 
 const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -85,7 +84,7 @@ const CareerCards = ({ data }) => {
                 <Typography variant="h3" color="secondary">
                   {item?.heading}
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" color="#000">
                   {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
@@ -100,7 +99,9 @@ const CareerCards = ({ data }) => {
                 <Typography variant="h3" color="secondary">
                   Description
                 </Typography>
-                <Typography variant="body1">{item?.description}</Typography>
+                <Typography variant="body1" color="#000">
+                  {item?.description}
+                </Typography>
               </Grid>
               <Grid
                 item
@@ -113,11 +114,12 @@ const CareerCards = ({ data }) => {
                 justifyContent={'center'}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <Link href={item?.link}>
-                  <Button variant="primary" color="secondary">
-                    {`Apply Now >`}
-                  </Button>
-                </Link>
+                <ESparkButton
+                  title={`Apply Now >`}
+                  link={item?.link}
+                  color={'primary'}
+                  size={'170px'}
+                />
               </Grid>
             </Grid>
           ))}
