@@ -19,7 +19,7 @@ const ExpertTeamCard = ({ teamData }) => {
               width: { md: '55%' },
               color: '#001C63',
               fontSize: { md: '32px', xs: '20px' },
-              fontFamily: 'Poppins',
+
               fontStyle: 'normal',
               fontWeight: { xs: 700, sm: 600 },
               lineHeight: { md: '42.289px', xs: '27px' },
@@ -123,7 +123,7 @@ const ExpertTeamCard = ({ teamData }) => {
                         color: '#000',
                         fontSize: { md: '16px', sx: '13.024px' },
                         textAlign: 'justify',
-                        fontFamily: 'Poppins',
+
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '25.4px', md: '30.4px' },

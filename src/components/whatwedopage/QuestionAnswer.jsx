@@ -42,7 +42,6 @@ const QuestionAnswer = () => {
                 sx={{
                   color: '#09114A',
                   textAlign: { xs: 'center', sm: 'right' },
-                  fontFamily: { md: 'Cabin', xs: 'Poppins' },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -59,7 +58,6 @@ const QuestionAnswer = () => {
                   color: '#001C63',
                   fontSize: { md: '18px', xs: '10px' },
                   fontWeight: { xs: 700, sm: 400 },
-                  fontFamily: 'Puppins',
                   fontStyle: 'normal',
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
