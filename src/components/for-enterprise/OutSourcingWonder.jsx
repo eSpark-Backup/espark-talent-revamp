@@ -15,7 +15,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import Title from '@/components/how-it-work/Title.jsx';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
@@ -37,16 +37,12 @@ const OutSourcingWonder = ({ data }) => {
         }; width: 20px; height: 20px;"></span>`;
       },
     },
-    autoplay: {
-      delay: 500,
-      disableOnInteraction: false,
-    },
     breakpoints: {
       0: {
         slidesPerView: 1,
       },
       360: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       786: {
         slidesPerView: 2,
@@ -65,10 +61,10 @@ const OutSourcingWonder = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: '2%', overflow: 'hidden' }}>
+      <Box sx={{ py: '3%', overflow: 'hidden' }}>
         <Container>
           <Box sx={{ textAlign: 'center', px: '10%' }}>
-            <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
+            <Title heading={data?.title} />
           </Box>
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
@@ -81,26 +77,26 @@ const OutSourcingWonder = ({ data }) => {
                     md={6}
                     sx={{
                       borderRadius: '30px',
-                      p: '20px',
+                      p: '30px',
+                      pr: '15%',
                       alignItems: 'center',
+                      minHeight: '250px',
                       background: ' #FFF',
-                      boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+                      border: '1px rgba(0, 0, 0, 0.25) solid',
+                      boxShadow: '2px 2px 2px  rgba(0, 0, 0, 0.25)',
+                      // filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))',
                     }}
                   >
                     <Image
                       src={item?.icon}
                       alt={item?.title}
-                      height={item?.iconHeight}
-                      width={item?.iconWidth}
+                      height={50}
+                      width={50}
                     />
-                    <Typography
-                      variant="h5"
-                      color="secondary"
-                      sx={{ pr: '10%' }}
-                    >
+                    <Typography variant="h5" color="secondary" sx={{}}>
                       {item?.title}
                     </Typography>
-                    <Typography variant="body1" sx={{ pr: '10%' }}>
+                    <Typography variant="body1" color={'#000'} sx={{}}>
                       {item?.paragraph}
                     </Typography>
                   </Grid>

@@ -29,9 +29,21 @@ const lightTheme = createTheme({
     background: {
       default: '#ffffff',
     },
+    default: {
+      main: '#ffffff',
+    },
     text: {
       primary: '#029894',
       secondary: '#001C63',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1366,
+      xl: 1920,
     },
   },
   typography: {
@@ -116,9 +128,10 @@ const lightTheme = createTheme({
           props: { variant: 'default' },
           style: {
             textTransform: 'capitalize',
-            backgroundColor: 'red',
+            backgroundColor: '#fff !important',
+
             borderRadius: '5px',
-            color: 'secondary',
+            color: '#fff',
             position: 'relative',
             '&:hover': {
               backgroundColor: '#001C63',
@@ -159,19 +172,10 @@ const lightTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1440px',
+          maxWidth: '1200px',
           margin: '0 auto',
         },
       },
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1440,
-      xl: 1920,
     },
   },
 });
@@ -199,8 +203,18 @@ const darkTheme = createTheme({
       secondary: '#001C63',
     },
   },
+
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1366,
+      xl: 1920,
+    },
+  },
   typography: {
-    fontFamily: ['Inter', 'sans-serif'].join(','),
+    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
     h1: {
       fontSize: '50px',
       fontWeight: 700,
@@ -276,6 +290,20 @@ const darkTheme = createTheme({
           },
         },
         {
+          props: { variant: 'default' },
+          style: {
+            textTransform: 'capitalize',
+            backgroundColor: '#fff !important',
+            borderRadius: '5px',
+            color: '#001C63',
+            position: 'relative',
+            '&:hover': {
+              backgroundColor: '#001C63',
+              color: 'secondary',
+            },
+          },
+        },
+        {
           props: { variant: 'outlined' },
           style: {
             textTransform: 'capitalize',
@@ -308,19 +336,10 @@ const darkTheme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1440px',
+          maxWidth: '1200px',
           margin: '0 auto',
         },
       },
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 768,
-      md: 1024,
-      lg: 1440,
-      xl: 1920,
     },
   },
 });

@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --fontFamily: 'Titillium Web', sans-serif;
-  --fontFamily2: 'Cabin', sans-serif;
   --mainColor: #029894;
   --optionalColor: #6f76a8;
   --whiteColor: #ffffff;
@@ -16,19 +14,11 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .menuResponsive .MuiPaper-root {
   left: 0 !important;
   max-width: 100% !important;
-}
-
-#menuResponsive .MuiPaper-root {
-  /* left: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    background-color: blue ; */
 }
 
 span {
@@ -60,7 +50,6 @@ span {
   color: var(--blackColor);
   border-radius: 5px;
   padding: 12px 35px 12px 62px;
-  font-family: var(--fontFamily2);
   font-size: var(--fontSize);
   font-weight: 500;
   margin: 5px 5px;
@@ -209,7 +198,7 @@ span {
   display: none;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
   .hrFirmResponsive {
     display: block;
   }
@@ -222,49 +211,53 @@ span {
 .blog-content h1 {
   font-size: 50px;
   font-weight: 700;
+  color: #001C63;
 }
 
 .blog-content h2 {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 600;color: #001C63;
 }
 
 .blog-content h3 {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;color: #001C63;
 }
 
 .blog-content h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700;color: #001C63;
 }
 
 .blog-content h5 {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 600;color: #001C63;
 }
 
 .blog-content h6 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 700;color: #001C63;
 }
 
 .blog-content p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
+  color:  #6F76A8;
   padding-bottom: 15px;
 }
 
 .blog-content li {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
+  color: #6F76A8;
 }
 
 .blog-content ul {
   list-style-type: none;
   padding: 0;
+  color: #6F76A8;
 }
 
 .blog-content li {
@@ -275,8 +268,8 @@ span {
 .blog-content li::before {
   content: '\2022';
   content: '\2022';
-  color: black;
-  font-size: 20px;
+  color: #6F76A8;
+  font-size: 17px;
   margin-right: 8px;
   display: inline-block;
 }
@@ -405,7 +398,7 @@ span {
 
 .partner-form .starick {
   color: #f00;
-  font-family: Titillium Web;
+  
   font-size: 14.448px;
   font-style: normal;
   font-weight: 600;
@@ -584,7 +577,7 @@ input::-webkit-inner-spin-button {
   background: #029894;
   color: #fff;
   text-align: center;
-  font-family: Poppins;
+ 
   font-size: 20.333px;
   font-style: normal;
   font-weight: 600;
@@ -598,7 +591,7 @@ input::-webkit-inner-spin-button {
 
 .partner-form .error-message {
   color: #f00;
-  font-family: Titillium Web;
+  
   font-size: 13.448px;
 }
 

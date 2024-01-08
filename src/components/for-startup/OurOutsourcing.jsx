@@ -3,52 +3,74 @@ import React from 'react';
 import { Box, Grid, ListItemIcon, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
     <Box sx={{ my: 2 }}>
-      <ParagraphTitle title={heading} paragraph={subHeading} />
+      <Box sx={{ py: '2%' }}>
+        <Typography
+          sx={{
+            color: '#001C63',
+            fontSize: { md: '32px', xs: '20px' },
+            fontWeight: 600,
+            lineHeight: { lg: '42.289px', xs: '23.289px' },
+            textAlign: 'center',
+            flexWrap: 'wrap',
+            pb: { xs: '7px' },
+          }}
+        >
+          {heading}
+        </Typography>
+        <Typography
+          sx={{
+            color: '#001C63',
+            textAlign: 'center',
+            fontSize: { md: '18px', xs: '11px' },
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: { md: '27.863px', xs: '16.363px' },
+            flexWrap: 'wrap',
+
+            px: '35px',
+            pb: { md: '10px', xs: '0px' },
+          }}
+        >
+          {subHeading}
+        </Typography>
+      </Box>
       <Container>
         <Grid container>
           <Grid item sm={12} md={6}>
-            <Box
-              sx={{
-                display: 'flex',
-                alignContent: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '50%',
-              }}
-            >
-              <Box>
-                <Typography
-                  sx={{
-                    color: '#001C63',
-                    fontSize: '28px',
-                    fontWeight: 600,
-                    lineHeight: '41.547px',
-                    mr: { lg: '20%', md: '5%' },
-                    textAlign: { xs: 'center', md: 'left' },
-                  }}
-                >
-                  {data.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    color: '#001C63',
-                    fontSize: '18px',
-                    fontWeight: 400,
-                    lineHeight: '27.863px',
-                    textAlign: { xs: 'center', md: 'justify' },
-                    my: { xs: '25px', md: '0px' },
-                    mr: { lg: '15%', md: '5%' },
-                  }}
-                >
-                  {data.description}
-                </Typography>
-              </Box>
+            <Box>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: '28px',
+                  fontWeight: 500,
+                  lineHeight: '41.547px',
+                  mr: { lg: '30%', md: '5%' },
+                  mb: { md: '15px' },
+                  mt: '20px',
+                  textAlign: { xs: 'center', md: 'left' },
+                }}
+              >
+                {data.title}
+              </Typography>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: '18px',
+                  fontWeight: 400,
+                  lineHeight: '27.863px',
+                  textAlign: { xs: 'center', md: 'justify' },
+                  fontStyle: 'normal',
+                  my: { xs: '25px', md: '22px' },
+                  mr: { lg: '10%', md: '5%' },
+                }}
+              >
+                {data.description}
+              </Typography>
             </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
@@ -77,9 +99,7 @@ const OurOutsourcing = ({ data }) => {
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
-                mt: 2,
                 pt: 1,
-                py: 3,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

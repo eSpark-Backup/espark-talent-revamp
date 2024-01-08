@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 
+import Hero from '@/components/homepage/Hero';
+import ClientSlider from '@/components/global/Client';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
 import ChooseUs from '@/components/how-it-work/ChooseUs';
 import OurQualityService from '@/components/how-it-work/OurQualityService';
 import OurService from '@/components/how-it-work/OurService';
 
-import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
@@ -17,8 +18,8 @@ import {
   OUR_OFFERED_SERVICES,
   OUR_SERVICE,
 } from '@/constants/how-its-works';
-import ClientSlider from '@/components/global/ClientSlider';
-import Hero from '@/components/homepage/Hero';
+
+import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 
 const page = () => {
   return (
@@ -35,8 +36,8 @@ const page = () => {
         }
       />
       <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
-      <ChooseUs chooseUs={CHOOSE_US} />
       <OurService ourService={OUR_SERVICE} />
+      <ChooseUs chooseUs={CHOOSE_US} />
       <OurQualityService ourQualityService={OUR_OFFERED_SERVICES} />
     </>
   );

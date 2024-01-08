@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Box,
@@ -28,18 +27,17 @@ const FooterCTA = ({ data }) => {
       }}
     >
       <Container>
-        <Grid container>
+        <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           <Grid
             item
-            xs={12}
-            sm={8}
-            sx={{ display: 'flex', alignItems: 'center' }}
+            xs={8.5}
+            sx={{ display: 'flex', alignItems: 'center', py: '1%' }}
           >
             <Box>
               <Typography
                 sx={{
                   color: '#ECECED',
-                  fontSize: { lg: '34px', md: '30px', sm: '20px' },
+                  fontSize: { lg: '54px', md: '50px', sm: '20px' },
                   fontWeight: 700,
                   my: 1,
                 }}
@@ -84,21 +82,20 @@ const FooterCTA = ({ data }) => {
           </Grid>
           <Grid
             item
-            xs={12}
-            sm={4}
-            sx={{ textAlign: isSmallScreen ? 'center' : 'end' }}
+            xs={3.5}
+            sx={{ textAlign: isSmallScreen ? 'center' : 'start' }}
           >
             <Box
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: { xs: 'center', lg: 'end' },
+                justifyContent: 'start',
               }}
             >
-              <Image
+              <img
                 src={data?.image}
-                width={isSmallScreen ? 300 : 360}
-                height={isSmallScreen ? 290 : 350}
+                // width={isSmallScreen ? 300 : 360}
+                // height={isSmallScreen ? 290 : 350}
                 alt="images"
                 style={{
                   marginTop: isSmallScreen ? 0 : '-61px',

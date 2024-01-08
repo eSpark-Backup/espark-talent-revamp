@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 
+import { usePathname } from 'next/navigation';
+
 import WikiSingle from '@/components/wiki/WikiSingle';
+import InnerHero from '@/components/homepage/InnerHero';
 
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
-import { usePathname } from 'next/navigation';
 import { WIKIS_DATA } from '@/constants/wiki';
-import Hero from '@/components/homepage/Hero';
 
 const Page = () => {
   const pathname = usePathname();
@@ -16,7 +17,7 @@ const Page = () => {
 
   return (
     <>
-      <Hero data={WIKI_HERO_DATA} innerData={data} />
+      <InnerHero data={WIKI_HERO_DATA} innerData={data} />
       <WikiSingle data={data} />
     </>
   );
