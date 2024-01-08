@@ -57,7 +57,12 @@ const Header = () => {
           fontSize={{ xs: '10px', sm: '14px', md: '17px', lg: '20px' }}
         >
           Scale up your business with our exclusive offer! Start with No
-          Management Fee for First Employee. 🚀
+          Management Fee for First Employee.
+          <Box
+            src="/images/homepage/rocket.svg"
+            sx={{ mx: 0.5, width: '16px', height: '100%' }}
+            component={'img'}
+          />
         </Typography>
       </Box>
       <AppBar

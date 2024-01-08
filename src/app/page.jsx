@@ -28,6 +28,7 @@ import {
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { BLOGS_DATA } from '@/constants/blogs';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import HeroSection from '@/components/for-enterprise/HeroSection';
 
 const page = () => {
   return (
