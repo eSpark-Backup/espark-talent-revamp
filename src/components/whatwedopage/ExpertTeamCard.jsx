@@ -11,19 +11,25 @@ import Image from 'next/image';
 const ExpertTeamCard = ({ teamData }) => {
   const { heading, card } = teamData;
   return (
-    <>
+    <Box sx={{ mb: '6%' }}>
       <Container>
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            pb: { md: '45px', xs: '10px' },
+          }}
+        >
           <Typography
             sx={{
-              width: { md: '55%' },
+              mx: '20%',
               color: '#001C63',
               fontSize: { md: '32px', xs: '20px' },
-
               fontStyle: 'normal',
               fontWeight: { xs: 700, sm: 600 },
               lineHeight: { md: '42.289px', xs: '27px' },
-              textAlign: { xs: 'center', md: 'left' },
+              textAlign: 'center',
             }}
           >
             {heading}
@@ -139,7 +145,7 @@ const ExpertTeamCard = ({ teamData }) => {
           ))}
         </Swiper>
       </Container>
-    </>
+    </Box>
   );
 };
 
