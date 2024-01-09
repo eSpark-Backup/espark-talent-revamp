@@ -9,17 +9,17 @@ const ChooseUs = ({ chooseUs }) => {
     <Box sx={{ mb: '4%' }}>
       <Container>
         <Grid container>
-          <Grid item sm={12} md={8} sx={{ px: '20px' }}>
+          <Grid item sm={12} md={8} sx={{ px: { md: '20px' } }}>
             <Box sx={{ mt: { lg: '20px' } }}>
               <Box>
                 <Typography
                   sx={{
-                    pr: '120px',
+                    pr: { md: '120px' },
                     color: '#001C63',
                     fontSize: { md: '32px', xs: '20px' },
                     fontStyle: 'normal',
                     fontWeight: 700,
-                    lineHeight: { md: '56px', xs: '27px' },
+                    lineHeight: { md: '56px', xs: '29px' },
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
@@ -27,14 +27,14 @@ const ChooseUs = ({ chooseUs }) => {
                 </Typography>
                 <Typography
                   sx={{
-                    py: 3,
+                    py: { xs: 1, md: 3 },
+                    px: { xs: '10px' },
                     color: '#001C63',
-
-                    fontSize: '16.517px',
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    lineHeight: { lg: '22.896px', md: '25px' },
                     textAlign: { xs: 'center', md: 'left' },
+                    fontSize: { xs: '10px', sm: '12px', md: '16.517px' },
+                    fontStyle: 'normal',
+                    fontWeight: 400,
+                    lineHeight: { xs: '22.9px', lg: '22.896px', md: '25px' },
                   }}
                 >
                   {subHeading}
@@ -43,12 +43,17 @@ const ChooseUs = ({ chooseUs }) => {
               <Grid container>
                 {list?.map((item, index) => (
                   <Grid item xs={12} md={6} key={index}>
-                    <Box sx={{ display: 'flex' }}>
+                    <Box
+                      sx={{ display: 'flex', pl: { xs: '18px', md: '0px' } }}
+                    >
                       <Box>
                         <ListItemIcon sx={{ minWidth: '30px' }}>
                           <TaskAltIcon
                             fontSize="small"
-                            sx={{ color: '#029894', fontSize: '17px' }}
+                            sx={{
+                              color: '#029894',
+                              fontSize: { md: '17px', xs: '17px' },
+                            }}
                           />
                         </ListItemIcon>
                       </Box>
@@ -56,11 +61,16 @@ const ChooseUs = ({ chooseUs }) => {
                         <Typography
                           sx={{
                             color: '#001C63',
-                            fontSize: '16.517px',
+                            fontSize: {
+                              xs: '11.704px',
+                              sm: '12px',
+                              md: '16.517px',
+                            },
                             fontStyle: 'normal',
                             fontWeight: 400,
                             lineHeight: { md: '24px' },
                             mb: { lg: '2px' },
+                            mt: { xs: '6px', md: '0px' },
                           }}
                         >
                           {item.content}
