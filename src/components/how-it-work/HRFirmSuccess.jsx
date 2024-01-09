@@ -14,7 +14,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
         <Title heading={heading} subHeading={subHeading} />
         <Grid container className="hrFirmDesktop">
           {card?.map((item, index) => (
-            <Grid item md={6} key={index} sx={{}}>
+            <Grid item sm={6} key={index} sx={{}}>
               <Box
                 sx={{
                   borderRadius: '13.764px',
@@ -33,8 +33,6 @@ const HRFirmSuccess = ({ hrFirm }) => {
                 <Box sx={{ display: 'flex' }}>
                   <Box
                     sx={{
-                      // width: { lg: '20px', md: '260px' },
-                      // height: 'auto',
                       display: 'flex',
                       justifyContent: 'center',
                       mx: 2,
