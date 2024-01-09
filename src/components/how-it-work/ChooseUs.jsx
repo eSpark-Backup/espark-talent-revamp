@@ -10,17 +10,16 @@ const ChooseUs = ({ chooseUs }) => {
       <Container>
         <Grid container>
           <Grid item sm={12} md={8} sx={{ px: '20px' }}>
-            <Box sx={{ mt: { lg: '40px' } }}>
+            <Box sx={{ mt: { lg: '20px' } }}>
               <Box>
                 <Typography
                   sx={{
-                    width: { md: '70%' },
+                    pr: '120px',
                     color: '#001C63',
                     fontSize: { md: '32px', xs: '20px' },
-
                     fontStyle: 'normal',
-                    fontWeight: { xs: 700, sm: 600 },
-                    lineHeight: { md: '42.289px', xs: '27px' },
+                    fontWeight: 700,
+                    lineHeight: { md: '56px', xs: '27px' },
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
@@ -57,13 +56,11 @@ const ChooseUs = ({ chooseUs }) => {
                         <Typography
                           sx={{
                             color: '#001C63',
-
                             fontSize: '16.517px',
                             fontStyle: 'normal',
                             fontWeight: 400,
                             lineHeight: { md: '24px' },
-                            pt: { xs: '2px' },
-                            mb: { lg: '20px' },
+                            mb: { lg: '2px' },
                           }}
                         >
                           {item.content}
@@ -80,6 +77,7 @@ const ChooseUs = ({ chooseUs }) => {
             sm={12}
             md={4}
             sx={{
+              display: 'flex',
               margin: '0px auto !important',
             }}
           >
@@ -88,7 +86,9 @@ const ChooseUs = ({ chooseUs }) => {
                 backgroundColor: '#3B59980A',
                 borderRadius: '17.311px',
                 display: 'flex',
-                justifyContent: { xs: 'center', md: 'left' },
+                justifyContent: { xs: 'center', md: 'center' },
+                alignItems: 'center',
+                alignContent: 'center',
                 margin: '0px auto !important',
                 py: 2,
                 px: 2,

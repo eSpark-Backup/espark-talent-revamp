@@ -126,15 +126,15 @@ const Form = ({ formContent }) => {
   };
 
   return (
-    <Box className="partner-form">
+    <Box className="partner-form" sx={{ mt: { xs: '12%', md: '12%' } }}>
       <form>
         <Box>
           <Typography
             sx={{
               color: '#265579',
-              fontWeight: 600,
-              fontSize: '25.292px',
-              lineHeight: '32.509px',
+              fontWeight: 700,
+              fontSize: { xs: '20px !important', lg: '25.292px !important' },
+              lineHeight: { xs: '29px ', md: '32.509px ' },
               mb: 1,
             }}
           >
@@ -297,7 +297,16 @@ const Form = ({ formContent }) => {
             </span>
           )}
         </Box>
-        <Box className="partner-form-button">
+        <Box
+          className="partner-form-button"
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            py: '15px',
+          }}
+        >
           <Button onClick={handleSubmit} type="button">
             {formContent.buttonName}
           </Button>

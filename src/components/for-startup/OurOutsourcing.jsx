@@ -7,7 +7,7 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, pb: '45px' }}>
       <Box sx={{ py: '2%' }}>
         <Typography
           sx={{
@@ -49,9 +49,9 @@ const OurOutsourcing = ({ data }) => {
                   fontSize: '28px',
                   fontWeight: 500,
                   lineHeight: '41.547px',
-                  mr: { lg: '30%', md: '5%' },
+                  mr: { lg: '10%', md: '5%' },
                   mb: { md: '15px' },
-                  mt: '20px',
+                  mt: '10px',
                   textAlign: { xs: 'center', md: 'left' },
                 }}
               >
@@ -94,7 +94,16 @@ const OurOutsourcing = ({ data }) => {
               </Grid>
             ))}
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            sx={{
+              display: { md: 'flex', lg: 'block' },
+              justifyContent: { md: 'center' },
+            }}
+          >
             <Box
               sx={{
                 borderRadius: '17.311px',

@@ -15,7 +15,6 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import Title from '@/components/how-it-work/Title.jsx';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
@@ -30,7 +29,7 @@ const OutSourcingWonder = ({ data }) => {
     className: 'hero_slider',
     pagination: {
       clickable: true,
-      el: '.swiper-pagination', // Add this line to target the pagination container
+      el: '.swiper-pagination',
       renderBullet: function (index, className) {
         return `<span class="${className}" style="background-color: ${
           index === this.activeIndex ? 'darkgreen' : 'green'
@@ -63,8 +62,21 @@ const OutSourcingWonder = ({ data }) => {
     <>
       <Box sx={{ py: '3%', overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ textAlign: 'center', px: '10%' }}>
-            <Title heading={data?.title} />
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography
+              sx={{
+                color: '#09114A',
+                textAlign: 'center',
+                fontSize: { md: '32px', xs: '20px' },
+                lineHeight: { lg: '48px', xs: '26px' },
+                px: { lg: '360px' },
+                fontWeight: 700,
+                fontStyle: 'normal',
+                mb: '40px',
+              }}
+            >
+              {data?.title}
+            </Typography>
           </Box>
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
@@ -75,28 +87,43 @@ const OutSourcingWonder = ({ data }) => {
                     xs={4}
                     sm={12}
                     md={6}
+                    lg={4}
                     sx={{
-                      borderRadius: '30px',
+                      borderRadius: '23.172px',
                       p: '30px',
-                      pr: '15%',
                       alignItems: 'center',
-                      minHeight: '250px',
+                      minHeight: { md: '300px', lg: '247.469px' },
+                      width: { lg: '406.656px' },
                       background: ' #FFF',
-                      border: '1px rgba(0, 0, 0, 0.25) solid',
-                      boxShadow: '2px 2px 2px  rgba(0, 0, 0, 0.25)',
-                      // filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))',
+                      border: '2px rgba(0, 0, 0, 0.25) solid',
                     }}
                   >
                     <Image
                       src={item?.icon}
                       alt={item?.title}
-                      height={50}
-                      width={50}
+                      height={40}
+                      width={40}
                     />
-                    <Typography variant="h5" color="secondary" sx={{}}>
+                    <Typography
+                      sx={{
+                        color: '#001C63',
+                        fontSize: '18.887px',
+                        lineHeight: { md: '26.737px' },
+                        fontWeight: 600,
+                        fontStyle: 'normal',
+                      }}
+                    >
                       {item?.title}
                     </Typography>
-                    <Typography variant="body1" color={'#000'} sx={{}}>
+                    <Typography
+                      sx={{
+                        color: '#000',
+                        fontSize: '18.887px',
+                        lineHeight: { md: '26.737px' },
+                        fontWeight: 400,
+                        fontStyle: 'normal',
+                      }}
+                    >
                       {item?.paragraph}
                     </Typography>
                   </Grid>
