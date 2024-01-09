@@ -15,7 +15,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
         modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
-          600: {
+          300: {
             slidesPerView: 1,
             pagination: {
               el: '.swiper-pagination',
@@ -25,8 +25,8 @@ const OutSourceBenefitsSlider = ({ items }) => {
             wrapperClass: 'swiper-wrapper',
             slideClass: 'swiper-slide',
           },
-          960: {
-            slidesPerView: 1,
+          768: {
+            slidesPerView: 2,
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
@@ -63,12 +63,17 @@ const OutSourceBenefitsSlider = ({ items }) => {
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    width: '100%',
+                    height: '200.635px',
+                    borderRadius: '13.57px',
+                    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
                   }}
                 >
                   <Box
                     sx={{
                       display: 'flex',
-                      borderRadius: '20px 20px 0 0 ',
+                      height: '70.972px',
+                      borderRadius: '10px 10px 0 0 ',
                       backgroundColor: 'rgba(0, 28, 99, 0.04) !important',
                       p: '20px',
                       alignItems: 'center',
@@ -89,7 +94,8 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       p: '20px',
                       borderRadius: '0 0 20px 20px',
                       backgroundColor: '#fff',
-                      height: { sm: '150px' },
+                      height: '100%',
+                      // height: { sm: '79.028px' },
                     }}
                   >
                     <Typography variant="body1" color="initial">

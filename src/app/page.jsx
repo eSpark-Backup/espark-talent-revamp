@@ -34,6 +34,7 @@ const page = () => {
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
+      {/* <HeroSection /> */}
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
