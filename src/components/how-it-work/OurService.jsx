@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Title from './Title';
@@ -18,8 +17,7 @@ const OurService = ({ ourService }) => {
         <Title heading={heading} subHeading={subHeading} />
         <Swiper
           spaceBetween={0}
-          freeMode={true}
-          modules={[FreeMode, Pagination]}
+          modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
             600: {

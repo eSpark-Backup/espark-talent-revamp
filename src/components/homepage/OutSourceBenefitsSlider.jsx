@@ -2,9 +2,8 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
@@ -13,8 +12,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
     <Box>
       <Swiper
         spaceBetween={1}
-        freeMode={true}
-        modules={[FreeMode, Pagination]}
+        modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
           600: {
