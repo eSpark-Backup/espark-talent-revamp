@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {  Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
@@ -12,8 +12,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
     <Box>
       <Swiper
         spaceBetween={1}
-        
-        modules={[ Pagination]}
+        modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
           600: {
