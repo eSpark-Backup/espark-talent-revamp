@@ -69,12 +69,12 @@ export const STARTUP_FAQ_DATA = {
   ],
 };
 
-
 export const FAQ_DATA_ENTERPRISE = {
   title: 'Frequently Asked Questions​',
   questions: [
     {
-      heading: 'Does outsourcing offer better services than in-house development firms?',
+      heading:
+        'Does outsourcing offer better services than in-house development firms?',
       description:
         'eSpark Talent specializes in outsourcing, offering tech expertise and innovation to ensure superior prolect outcomes.',
     },
@@ -84,7 +84,8 @@ export const FAQ_DATA_ENTERPRISE = {
         'Yes, We ensures a creative and skilled workforce to drive successful and impactful campaigns for your enterprise.',
     },
     {
-      heading: 'Does eSpark Talent also collaborate with successful companies as well?',
+      heading:
+        'Does eSpark Talent also collaborate with successful companies as well?',
       description:
         'Yes! eSpark Talent is the go-to choice for successful collaborations, providing transformative workforce solutions to elevate your business.',
     },

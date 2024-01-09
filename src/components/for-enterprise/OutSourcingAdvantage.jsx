@@ -18,8 +18,10 @@ const OutSourcingAdvantage = ({ data }) => {
                 variant="h3"
                 color="secondary"
                 sx={{
-                  pr: '10%', py: '10px', [theme.breakpoints.down('sm')]: {
-                    textAlign: "center"
+                  pr: '10%',
+                  py: '10px',
+                  [theme.breakpoints.down('sm')]: {
+                    textAlign: 'center',
                   },
                 }}
               >
@@ -29,8 +31,10 @@ const OutSourcingAdvantage = ({ data }) => {
                 variant="body1"
                 color="secondary"
                 sx={{
-                  pr: '10%', py: '10px', [theme.breakpoints.down('sm')]: {
-                    textAlign: "center"
+                  pr: '10%',
+                  py: '10px',
+                  [theme.breakpoints.down('sm')]: {
+                    textAlign: 'center',
                   },
                 }}
               >
@@ -48,7 +52,11 @@ const OutSourcingAdvantage = ({ data }) => {
                       />
                       <Typography
                         variant="body1"
-                        sx={{ color: '#000', fontSize: '15px !important', fontWeight:"400" }}
+                        sx={{
+                          color: '#000',
+                          fontSize: '15px !important',
+                          fontWeight: '400',
+                        }}
                       >
                         {list?.title}
                       </Typography>

@@ -1,15 +1,7 @@
 'use client';
 import React from 'react';
 
-import {
-  Box,
-  Typography,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Container,
-  Grid,
-} from '@mui/material';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 
 const OutSourcingItem = ({ data }) => {
@@ -42,14 +34,21 @@ const OutSourcingItem = ({ data }) => {
                     {item?.title}
                   </Typography>
                   {item?.items?.map((list, itemIndex) => (
-                    <Box key={itemIndex} sx={{display:"flex", columnGap:"3px", marginTop:"10px"}}>
+                    <Box
+                      key={itemIndex}
+                      sx={{
+                        display: 'flex',
+                        columnGap: '3px',
+                        marginTop: '10px',
+                      }}
+                    >
                       <Box>
                         <Image
                           src={item?.listIcon}
                           alt="List Icon"
                           width={25}
                           height={25}
-                          style={{marginTop:"8px"}}
+                          style={{ marginTop: '8px' }}
                         />
                       </Box>
                       <Box>
