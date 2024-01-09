@@ -35,6 +35,7 @@ const FooterCTA = ({ data }) => {
           >
             <Box>
               <Typography
+                variant="h1"
                 sx={{
                   color: '#ECECED',
                   fontSize: { lg: '54px', md: '50px', sm: '20px' },

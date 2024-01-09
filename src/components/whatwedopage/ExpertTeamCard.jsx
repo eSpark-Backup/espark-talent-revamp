@@ -2,9 +2,8 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import {  Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
@@ -37,8 +36,8 @@ const ExpertTeamCard = ({ teamData }) => {
         </Box>
         <Swiper
           spaceBetween={0}
-          freeMode={true}
-          modules={[FreeMode, Pagination]}
+          
+          modules={[ Pagination]}
           className="mySwiper"
           breakpoints={{
             600: {
