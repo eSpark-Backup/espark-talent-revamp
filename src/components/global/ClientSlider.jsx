@@ -54,8 +54,8 @@ const ClientSlider = ({
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 500,
-          disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: true,
         }}
         navigation={false}
         loop={true}
