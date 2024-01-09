@@ -22,7 +22,12 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
           justifyContent: 'center',
           alignItems: 'end',
           pt: '5%',
-          gap: 2,
+          gap: {
+            xs: 1,
+            sm: 1,
+            md: 1.5,
+            lg: 2,
+          },
         }}
       >
         <Button
@@ -41,7 +46,12 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
           sx={{ borderRadius: '50px' }}
         >
           <Typography
-            variant="body1"
+            fontSize={{
+              xs: '10px',
+              sm: '12px',
+              md: '15px',
+              lg: '20px',
+            }}
             color={selectedCategory === null ? 'white' : '#001C63'}
             fontWeight="600"
           >
@@ -57,7 +67,12 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             sx={{ borderRadius: '50px', fontWeight: 600 }}
           >
             <Typography
-              variant="body1"
+              fontSize={{
+                xs: '10px',
+                sm: '12px',
+                md: '15px',
+                lg: '20px',
+              }}
               color={selectedCategory === category ? 'white' : '#001C63'}
               fontWeight="600"
             >

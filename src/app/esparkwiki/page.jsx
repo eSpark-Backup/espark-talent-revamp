@@ -24,7 +24,7 @@ const WikiMainPage = () => {
   return (
     <>
       <Hero data={WIKI_HERO_DATA} />
-      <Box sx={{ background: '#3b59980f'}}>
+      <Box sx={{ background: '#3b59980f' }}>
         <WikiFilter
           categories={categories}
           onSelectCategory={setSelectedCategory}

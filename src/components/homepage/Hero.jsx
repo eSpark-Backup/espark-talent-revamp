@@ -20,6 +20,8 @@ const Hero = ({ data, innerData, color }) => {
       >
         <Container>
           <Grid
+            pt="50px"
+            pb="30px"
             container
             spacing={2}
             sx={{
@@ -27,7 +29,12 @@ const Hero = ({ data, innerData, color }) => {
               flexDirection: { xs: 'column', sm: 'row' },
             }}
           >
-            <Grid item xs={12} sm={6} sx={{}}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              sx={{ display: 'flex', flexDirection: 'column' }}
+            >
               {data?.title && (
                 <Typography
                   variant={data?.titleVariant}
@@ -60,7 +67,7 @@ const Hero = ({ data, innerData, color }) => {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  justifyContent: 'right',
                 }}
               >
                 <Image
