@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 
-const Root = styled('div')(({ theme }) => ({
+export const Root = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('xs')]: {
     h1: {
       fontSize: `calc(50px * 0.6)`,

@@ -9,7 +9,6 @@ import {
   MenuItem,
   Pagination,
   PaginationItem,
-  Divider,
   useMediaQuery,
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
@@ -36,10 +35,11 @@ const CareerCards = ({ data }) => {
   const endIndex = startIndex + perPage;
   const paginatedData = filteredData.slice(startIndex, endIndex);
 
-const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.between('sm', 'md'));
-const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -78,7 +78,7 @@ const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
                 py: { lg: '3%', sm: '3%' },
                 my: { xs: '20px', sm: '20px' },
                 borderRadius: { xs: '10px', sm: '20px' },
-                boxShadow: {md:'none',  sm:`5px 5px 15px rgba(0,0,0,.3)`}
+                boxShadow: { md: 'none', sm: `5px 5px 15px rgba(0,0,0,.3)` },
               }}
             >
               <Grid
@@ -104,7 +104,12 @@ const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
                 lg={7}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <Typography variant="h3" color="secondary" borderTop={{ md:'none',sm: '.5px solid #ced4da' }} pt="10px">
+                <Typography
+                  variant="h3"
+                  color="secondary"
+                  borderTop={{ md: 'none', sm: '.5px solid #ced4da' }}
+                  pt="10px"
+                >
                   Description
                 </Typography>
                 <Typography variant="body1" color="#000">
@@ -121,15 +126,15 @@ const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
                 alignItems={'center'}
                 justifyContent={'center'}
                 px={{ xs: '10px', sm: '20px' }}
-              ><Box py={{ xs: '10px',sm: '10px'}}>
+              >
+                <Box py={{ xs: '10px', sm: '10px' }}>
                   <ESparkButton
-                  title={`Apply Now >`}
-                  link={item?.link}
-                  color={'primary'}
-                  size={'170px'}
-                />
-              </Box>
-                
+                    title={`Apply Now >`}
+                    link={item?.link}
+                    color={'primary'}
+                    size={'170px'}
+                  />
+                </Box>
               </Grid>
             </Grid>
           ))}
@@ -143,12 +148,14 @@ const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
                 page={page}
                 onChange={(event, value) => setPage(value)}
                 color="primary"
-
                 size={
-    isSmallScreen ? 'small' :
-    isMediumScreen ? 'medium' :
-    isLargeScreen ? 'large' :
-    'medium' 
+                  isSmallScreen
+                    ? 'small'
+                    : isMediumScreen
+                      ? 'medium'
+                      : isLargeScreen
+                        ? 'large'
+                        : 'medium'
                 }
                 // showFirstButton
                 // showLastButton

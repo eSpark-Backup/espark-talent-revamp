@@ -3,9 +3,8 @@ import React from 'react';
 import { Box, Container, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import {  Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
@@ -32,8 +31,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
         </Box>
         <Swiper
           spaceBetween={1}
-          freeMode={true}
-          modules={[FreeMode, Pagination]}
+          
+          modules={[ Pagination]}
           className="mySwiper"
           breakpoints={{
             600: {

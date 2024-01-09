@@ -9,7 +9,8 @@ const BenefitsWorks = ({ data }) => {
       <Box sx={{ py: ['2%'], mb: '55px', overflow: 'hidden' }}>
         <Container>
           <Box sx={{ pb: '30px', px: { md: '20%', sm: '10%', xs: '2%' } }}>
-            <Typography variant='h2'
+            <Typography
+              variant="h2"
               sx={{
                 color: '#001C63',
                 fontSize: { xs: '20px', md: '32px' },
