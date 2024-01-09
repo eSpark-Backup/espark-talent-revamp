@@ -41,7 +41,7 @@ const BlogDetailsContent = ({ data }) => {
             <Grid item xs={2} sm={1} md={12} sx={{ p: '10px' }} key={index}>
               <Box>
                 <Link
-                  href={item.link}
+                  href={item?.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -5,7 +5,7 @@ import React from 'react';
 import { useTheme } from '@mui/system';
 
 const Hero = ({ data }) => {
-  console.log(data.button.label);
+  console.log(data.button?.label);
   const theme = useTheme();
 
   return (
@@ -89,7 +89,7 @@ const Hero = ({ data }) => {
                     fontWeight: '700',
                   }}
                 >
-                  {data.button.label}
+                  {data.button?.label}
                 </Button>
               </Box>
             </Grid>
