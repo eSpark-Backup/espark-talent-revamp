@@ -5,9 +5,10 @@ const Title = ({ heading, subHeading }) => {
   return (
     <Box
       sx={{
-        width: { md: '70%' },
+        width: { md: '100%' },
         textAlign: 'center',
         margin: '0px auto',
+        pb: '25px',
       }}
     >
       <Typography
@@ -25,7 +26,7 @@ const Title = ({ heading, subHeading }) => {
       </Typography>
       <Typography
         sx={{
-          px: { md: '180px' },
+          px: { md: '300px' },
 
           color: '#001C63',
           textAlign: 'center',
