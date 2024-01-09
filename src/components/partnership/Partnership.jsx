@@ -18,7 +18,7 @@ const Partnership = ({ partnership }) => {
     <Box
       sx={{
         mt: '1.5%',
-        mb: '6%'
+        mb: '6%',
       }}
     >
       <Container>
@@ -26,7 +26,8 @@ const Partnership = ({ partnership }) => {
           <Grid item xs={12} md={8}>
             <>
               {content.map((item, index) => (
-                <Box key={index}
+                <Box
+                  key={index}
                   sx={{
                     pr: { md: 4 },
                   }}
@@ -39,7 +40,10 @@ const Partnership = ({ partnership }) => {
                       px: { xs: '40px', sm: 0 },
                       py: '5px',
                       pt: { xs: '25px', md: '40px' },
-                      fontSize: { xs: '20px !important', md: '32px !important' },
+                      fontSize: {
+                        xs: '20px !important',
+                        md: '32px !important',
+                      },
                       lineHeight: { xs: '29px', md: '56.266px' },
                       fontStyle: 'normal',
                       fontWeight: 700,
@@ -66,14 +70,24 @@ const Partnership = ({ partnership }) => {
                         textAlign: 'baseline',
                       }}
                     >
-                      <ListItemIcon sx={{ minWidth: { xs: '15px', md: '22px' }, ml:{md: '27px'} }}>
+                      <ListItemIcon
+                        sx={{
+                          minWidth: { xs: '15px', md: '22px' },
+                          ml: { md: '27px' },
+                        }}
+                      >
                         <CircleIcon
                           sx={{
                             color: '#000',
                             fontSize: { xs: '5px', md: '9px' },
                             width: '10px',
                             mt: { xs: '10px', md: '23px' },
-                            display: { xs: 'initial', sm: 'initial', md: 'none', lg: 'none' }, 
+                            display: {
+                              xs: 'initial',
+                              sm: 'initial',
+                              md: 'none',
+                              lg: 'none',
+                            },
                           }}
                         />
                         <RectangleSharpIcon
@@ -83,7 +97,12 @@ const Partnership = ({ partnership }) => {
                             fontSize: { xs: '5px', md: '9px' },
                             width: '10px',
                             mt: { xs: '10px', md: '23px' },
-                            display: { xs: 'none', sm: 'none', md: 'initial', lg: 'initial' }, 
+                            display: {
+                              xs: 'none',
+                              sm: 'none',
+                              md: 'initial',
+                              lg: 'initial',
+                            },
                           }}
                         />
                       </ListItemIcon>
