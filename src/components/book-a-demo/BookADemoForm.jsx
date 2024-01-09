@@ -174,7 +174,7 @@ const BookADemoForm = ({ form }) => {
                 >
                   {item?.label}
                 </Typography>
-                {item.label == 'Phone Number*' ? (
+                {item?.label == 'Phone Number*' ? (
                   <PhoneInput
                     placeholder="Enter phone number"
                     value={values?.phone_number}
