@@ -4,11 +4,11 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Pagination, PaginationItem } from '@mui/material'; // Import PaginationItem
+import { Pagination, PaginationItem } from '@mui/material';
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
-const BlogCards = ({ data }) => {
+const BlogCards = ({ data, smCol }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -22,10 +22,22 @@ const BlogCards = ({ data }) => {
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
-        <Grid container columnSpacing={7} rowSpacing={4}>
+        <Grid container spacing={2} sx={{ py: '5%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Box className="single-blog-post">
+            <Grid
+              item
+              xs={smCol == 2 ? '12' : '12'}
+              sm={smCol == 2 ? '12' : '12'}
+              md={4}
+              lg={4}
+              key={index}
+            >
+              <Box
+                className="single-blog-post"
+                sx={{
+                  px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
+                }}
+              >
                 <Link href={`/blogs/${item?.id}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
@@ -72,7 +84,7 @@ const BlogCards = ({ data }) => {
                     {item?.mainParagraph}
                   </Typography>
                   <Link href={`/blogs/${item?.id}`}>
-                    <span className="default-btn" sx={{ position: 'relative' }}>
+                    <Box className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
                           position: 'absolute',
@@ -81,9 +93,8 @@ const BlogCards = ({ data }) => {
                           color: '#fff',
                         }}
                       />
-
-                      {READ_MORE}
-                    </span>
+                      <Typography variant="body1">{READ_MORE}</Typography>
+                    </Box>
                   </Link>
                 </Box>
               </Box>
