@@ -32,7 +32,7 @@ const OutStaffings = ({ data }) => {
                     width={15}
                     height={15}
                   />
-                  <Typography variant="h4" color="secondary" sx={{}}>
+                  <Typography variant="h4" color="secondary">
                     {list?.title}
                   </Typography>
                 </Box>
@@ -58,7 +58,7 @@ const OutStaffings = ({ data }) => {
             <ESparkButton
               title={data?.buttonText}
               link={data?.buttonLink}
-              color={'primary'}
+              color={'secondary'}
               size={'170px'}
             />
           </Box>

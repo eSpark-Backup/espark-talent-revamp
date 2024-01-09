@@ -25,7 +25,7 @@ import {
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
+import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
 const page = () => {
   return (
@@ -52,7 +52,7 @@ const page = () => {
       <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
       <OutStaffings data={OUTSTAFFING_TRUST_DATA} />
       <AwardAchievement data={ACHIEVEMENTS_DATA} design={2} />
-      <Faq data={FAQ_DATA} />
+      <Faq data={FAQ_DATA_ENTERPRISE} />
     </>
   );
 };

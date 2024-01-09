@@ -123,7 +123,7 @@ const ResponsiveHeader = ({
                   >
                     {SUBMENU_ITEMS[page]?.map((submenuItem) => (
                       <MenuItem
-                        key={submenuItem.label}
+                        key={submenuItem?.label}
                         onClick={() => handleSubmenuItemClicked(submenuItem)}
                       >
                         <Box
@@ -150,7 +150,7 @@ const ResponsiveHeader = ({
                                 mb: 1,
                               }}
                             >
-                              {submenuItem.label}
+                              {submenuItem?.label}
                             </Typography>
                             <Typography
                               variant="body2"
