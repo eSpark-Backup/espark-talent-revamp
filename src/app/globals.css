@@ -29,14 +29,6 @@ span {
   line-height: normal;
 }
 
-.partnerSpan {
-  color: #0C3C3A;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 56.266px;
-}
-
 #menuResponsive .mui-1vv6op5 {
   background-color: #fff !important;
   left: 0 !important;
@@ -232,7 +224,7 @@ span {
   }
   .partnerSpan {
     color: #0C3C3A;
-    font-size: 32px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 29px;
@@ -424,12 +416,34 @@ span {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .partner-form {
+    border-radius: 7.224px;
+    border: 1px solid #d0d4ea;
+    background: #fff;
+    flex-shrink: 0;
+    padding: 10px 16px !important;
+  }
+  .partner-form-button button {
+    width: 220.267px !important;
+    height: 50.531px;
+    border: 0;
+    border-radius: 15.25px;
+    background: #029894;
+    color: #fff;
+    text-align: center;
+    font-size: 13.333px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23.684px !important;
+  }
+}
 .partner-form {
   border-radius: 7.224px;
   border: 1px solid #d0d4ea;
   background: #fff;
   flex-shrink: 0;
-  padding: 30px 36px;
+  padding: 30px 26px;
 }
 
 .partner-form .starick {

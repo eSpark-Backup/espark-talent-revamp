@@ -23,13 +23,13 @@ export const PARTNERSHIP = {
     },
     {
       title:
-        'Here Is Your Reward- <span class="partnerSpan"> Our Way Of Saying Thank You! </span>',
+        'Here Is Your Reward-<span class="partnerSpan">Our Way Of Saying Thank You! </span>',
       description:
         'All the enthusiastic and energetic individuals ready to offer referrals will earn around 5% of the total contract value for each successfully acquired client. It is all about truthful connection at eSpark Talent. Hence, commissions will be paid once the referred client is contract with eSpark Talent reaches a minimum duration of three months. ',
     },
     {
       title:
-        'Referral Program <span class="partnerSpan"> Conditions & Policies </span> Note',
+        'Referral Program <span class="partnerSpan">Conditions & Policies </span> Note',
       items: [
         'The referrer must provide accurate and complete information for the referred client.',
         'eSpark Talent reserves the right to disqualify referrals that are suspected of fraudulent or unethical behavior.',
