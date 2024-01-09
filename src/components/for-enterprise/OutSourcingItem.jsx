@@ -42,24 +42,25 @@ const OutSourcingItem = ({ data }) => {
                     {item?.title}
                   </Typography>
                   {item?.items?.map((list, itemIndex) => (
-                    <ListItem key={itemIndex}>
-                      <ListItemIcon>
+                    <Box key={itemIndex} sx={{display:"flex", columnGap:"3px", marginTop:"10px"}}>
+                      <Box>
                         <Image
                           src={item?.listIcon}
                           alt="List Icon"
-                          width={15}
-                          height={15}
+                          width={25}
+                          height={25}
+                          style={{marginTop:"8px"}}
                         />
-                      </ListItemIcon>
-                      <ListItemText>
+                      </Box>
+                      <Box>
                         <Typography
                           variant="body1"
                           sx={{ color: '#000', fontSize: '17px' }}
                         >
                           {list?.title}
                         </Typography>
-                      </ListItemText>
-                    </ListItem>
+                      </Box>
+                    </Box>
                   ))}
                 </Box>
               </Grid>

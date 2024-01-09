@@ -19,6 +19,7 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonder = ({ data }) => {
+  
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 50,
@@ -67,7 +68,7 @@ const OutSourcingWonder = ({ data }) => {
               sx={{
                 color: '#09114A',
                 textAlign: 'center',
-                fontSize: { md: '32px', xs: '20px' },
+                fontSize: { md: '32px !important', xs: '20px !important' },
                 lineHeight: { lg: '48px', xs: '26px' },
                 px: { lg: '360px' },
                 fontWeight: 700,
@@ -92,7 +93,7 @@ const OutSourcingWonder = ({ data }) => {
                       borderRadius: '23.172px',
                       p: '30px',
                       alignItems: 'center',
-                      minHeight: { md: '300px', lg: '247.469px' },
+                      minHeight: { md: '300px', lg: '270.469px' },
                       width: { lg: '406.656px' },
                       background: ' #FFF',
                       border: '2px rgba(0, 0, 0, 0.25) solid',

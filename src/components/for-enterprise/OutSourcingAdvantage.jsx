@@ -3,8 +3,11 @@ import React from 'react';
 
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
+import { useTheme } from '@mui/system';
 
 const OutSourcingAdvantage = ({ data }) => {
+  const theme = useTheme();
+
   return (
     <>
       <Box sx={{ pt: '2%', mb: '2%', background: '#3B59980A' }}>
@@ -14,20 +17,28 @@ const OutSourcingAdvantage = ({ data }) => {
               <Typography
                 variant="h3"
                 color="secondary"
-                sx={{ pr: '10%', py: '10px' }}
+                sx={{
+                  pr: '10%', py: '10px', [theme.breakpoints.down('sm')]: {
+                    textAlign: "center"
+                  },
+                }}
               >
                 {data?.title}
               </Typography>
               <Typography
                 variant="body1"
                 color="secondary"
-                sx={{ pr: '10%', py: '10px' }}
+                sx={{
+                  pr: '10%', py: '10px', [theme.breakpoints.down('sm')]: {
+                    textAlign: "center"
+                  },
+                }}
               >
                 {data?.paragraph}
               </Typography>
               <Grid container sx={{ display: 'flex' }}>
                 {data?.items?.map((list, itemIndex) => (
-                  <Grid item xs={5} key={itemIndex}>
+                  <Grid item xs={12} md={5} key={itemIndex}>
                     <Box sx={{ display: 'flex', gap: '10px', pb: '10px' }}>
                       <Image
                         src={list?.listIcon}
@@ -37,7 +48,7 @@ const OutSourcingAdvantage = ({ data }) => {
                       />
                       <Typography
                         variant="body1"
-                        sx={{ color: '#000', fontSize: '17px' }}
+                        sx={{ color: '#000', fontSize: '15px !important', fontWeight:"400" }}
                       >
                         {list?.title}
                       </Typography>
