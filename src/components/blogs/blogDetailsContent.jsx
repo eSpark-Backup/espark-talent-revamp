@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import { Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';

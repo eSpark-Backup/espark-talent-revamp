@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
-import {  Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Title from './Title';
@@ -17,8 +17,7 @@ const OurService = ({ ourService }) => {
         <Title heading={heading} subHeading={subHeading} />
         <Swiper
           spaceBetween={0}
-          
-          modules={[ Pagination]}
+          modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
             600: {

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {  Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -50,8 +50,7 @@ const WhyChooseOurHr = ({ data }) => {
           <Grid item xs={12} sm={12} md={5}>
             <Swiper
               spaceBetween={1}
-              
-              modules={[ Pagination]}
+              modules={[Pagination]}
               className="mySwiper"
               breakpoints={{
                 600: {

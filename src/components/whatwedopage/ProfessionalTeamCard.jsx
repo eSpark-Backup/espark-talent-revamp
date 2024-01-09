@@ -4,7 +4,7 @@ import { Box, Container, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {  Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
@@ -31,8 +31,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
         </Box>
         <Swiper
           spaceBetween={1}
-          
-          modules={[ Pagination]}
+          modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
             600: {

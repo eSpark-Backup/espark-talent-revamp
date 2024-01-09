@@ -3,50 +3,121 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 const CARD_STYLE = {
   borderRadius: '10px',
-  // border: '1px solid #000',
   background: '#FFF',
-  // boxShadow: '0px 4px 4px 4px rgba(0, 0, 0, 0.25)',
   px: '30px',
   py: '20px',
   m: '10px',
+  boxShadow: `4px 4px 15px rgba(0,0,0,.3)`,
 };
 
 const WikiCards = ({ data }) => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+
   return (
     <Box sx={{ py: '3%' }}>
       <Container>
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           {data.map((item) => (
-            <Grid key={item.id} item xs={6} lg={4} md={4} sm={6}>
+            <Grid key={item.id} item xs={12} lg={4} md={4} sm={6} gap="10px">
               <Box sx={CARD_STYLE}>
-                {/* <Link key={item.id} href={`/wiki/${item.id}`}> */}
                 <Box
-                  sx={{ display: 'flex', gap: '10px', alignItems: 'center' }}
+                  sx={{
+                    display: 'flex',
+                    gap: '10px',
+                    alignItems: 'center',
+                    pb: '15px',
+                  }}
                 >
                   <Image
                     src={item.icon}
-                    height={item.iconHeight}
-                    width={item.iconWidth}
+                    height={
+                      isSmallScreen
+                        ? 15
+                        : isMediumScreen
+                          ? 20
+                          : isLargeScreen
+                            ? 30
+                            : 30
+                    }
+                    width={
+                      isSmallScreen
+                        ? 15
+                        : isMediumScreen
+                          ? 20
+                          : isLargeScreen
+                            ? 30
+                            : 30
+                    }
                     alt={item.title}
                   />
-                  <Typography variant="h4" color="#000">
+                  <Typography
+                    color="#000"
+                    variant="body1"
+                    fontWeight={600}
+                    fontSize={{
+                      xs: '15px',
+                      sm: '12px',
+                      md: '15px',
+                      lg: '20px',
+                    }}
+                  >
                     {item.title}
                   </Typography>
                 </Box>
-                <Typography variant="body1" color="#667170" pb="10px">
-                  {'Average Salary'}
-                </Typography>
-                <Typography variant="body1" color="secondary" pb="10px">
-                  {`USD: ${item.salary} per month`}
-                </Typography>
-                <Link href={`/esparkwiki/${item.id}`}>
-                  <Typography variant="body1" color="primary" pb="10px">
-                    {'Job Description >'}
+                <Box sx={{ pb: '15px' }}>
+                  <Typography
+                    variant="body1"
+                    color="#667170"
+                    fontWeight={600}
+                    fontSize={{
+                      xs: '10px',
+                      sm: '12px',
+                      md: '12px',
+                      lg: '15px',
+                    }}
+                  >
+                    {'Average Salary'}
                   </Typography>
-                </Link>
-                {/* </Link> */}
+                  <Typography
+                    variant="body1"
+                    color="secondary"
+                    fontSize={{
+                      xs: '17px',
+                      sm: '17px',
+                      md: '20px',
+                      lg: '20px',
+                    }}
+                    fontWeight={600}
+                  >
+                    {`USD: ${item.salary} per month`}
+                  </Typography>
+                </Box>
+                <Box>
+                  {' '}
+                  <Link href={`/esparkwiki/${item.id}`}>
+                    <Typography
+                      variant="body1"
+                      color="#029894"
+                      fontWeight={600}
+                      fontSize={{
+                        xs: '15px',
+                        sm: '15px',
+                        md: '20px',
+                        lg: '20px',
+                      }}
+                    >
+                      {'Job Description >'}
+                    </Typography>
+                  </Link>
+                </Box>
               </Box>
             </Grid>
           ))}

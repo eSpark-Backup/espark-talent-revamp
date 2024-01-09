@@ -20,9 +20,6 @@ export const Root = styled('div')(({ theme }) => ({
     h6: {
       fontSize: `calc(16px * 0.6)`,
     },
-    p: {
-      fontSize: `calc(20px * 0.6)`,
-    },
   },
   [theme.breakpoints.up('sm')]: {
     h1: {
@@ -42,9 +39,6 @@ export const Root = styled('div')(({ theme }) => ({
     },
     h6: {
       fontSize: `calc(16px * 0.7)`,
-    },
-    p: {
-      fontSize: `calc(20px * 0.7)`,
     },
   },
   [theme.breakpoints.up('md')]: {
@@ -66,9 +60,6 @@ export const Root = styled('div')(({ theme }) => ({
     h6: {
       fontSize: `calc(16px * 0.8)`,
     },
-    p: {
-      fontSize: `calc(20px * 0.8)`,
-    },
   },
   [theme.breakpoints.up('lg')]: {
     h1: {
@@ -88,9 +79,6 @@ export const Root = styled('div')(({ theme }) => ({
     },
     h6: {
       fontSize: `calc(16px * 0.9)`,
-    },
-    p: {
-      fontSize: `calc(20px * 0.9)`,
     },
   },
   [theme.breakpoints.up('xl')]: {
