@@ -19,7 +19,6 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonder = ({ data }) => {
-  
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 50,

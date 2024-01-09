@@ -21,12 +21,9 @@ const ClientSlider = ({
   bgColor,
   txtColor,
   title,
-  fontWeight,
   data,
   length = 1000,
-  breakPoints,
   pb,
-  variant,
 }) => {
   const extendedData = {
     clients: extendClients(data.clients, length),
@@ -41,15 +38,18 @@ const ClientSlider = ({
   };
   const theme = useTheme();
 
-
   return (
     <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
       <Container sx={{ pb: pb || '10px' }}>
         <Typography
           color={txtColor}
           sx={{
-            textAlign: 'center', fontWeight: "500 !important", py: '30px', fontSize: "24px !important", [theme.breakpoints.down('sm')]: {
-              fontSize: "13px !important",
+            textAlign: 'center',
+            fontWeight: '500 !important',
+            py: '30px',
+            fontSize: '24px !important',
+            [theme.breakpoints.down('sm')]: {
+              fontSize: '13px !important',
             },
           }}
         >

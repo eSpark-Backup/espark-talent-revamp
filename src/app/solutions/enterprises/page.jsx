@@ -25,7 +25,7 @@ import {
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA, FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
+import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
 const page = () => {
   return (

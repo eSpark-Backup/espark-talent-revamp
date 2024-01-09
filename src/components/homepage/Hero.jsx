@@ -2,12 +2,10 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import ESparkButton from '../global/eSparkButton';
 import { useTheme } from '@mui/system';
 
-const Hero = ({ data, innerData, color }) => {
-  const hero = innerData || data;
-  console.log(data.button.label)
+const Hero = ({ data }) => {
+  console.log(data.button.label);
   const theme = useTheme();
 
   return (
@@ -37,8 +35,8 @@ const Hero = ({ data, innerData, color }) => {
                   color={data?.titleColor}
                   sx={{
                     [theme.breakpoints.down('sm')]: {
-                      textAlign: "center",
-                      fontSize: "23px !important"
+                      textAlign: 'center',
+                      fontSize: '23px !important',
                     },
                   }}
                 >
@@ -52,32 +50,38 @@ const Hero = ({ data, innerData, color }) => {
                   sx={{
                     py: '10px',
                     [theme.breakpoints.down('sm')]: {
-                      textAlign: "center",
-                    }
+                      textAlign: 'center',
+                    },
                   }}
                 >
                   {data?.description}
                 </Typography>
               )}
-              <Box sx={{
-                [theme.breakpoints.down('sm')]: {
-                  display: "none"
-                }
-              }}>
+              <Box
+                sx={{
+                  [theme.breakpoints.down('sm')]: {
+                    display: 'none',
+                  },
+                }}
+              >
                 {/* <ESparkButton
                   title={data.button.label}
                   link={data.button.link}
                   color={data.button.btnColor}
                   size={'180px'}
                 /> */}
-                <Button sx={{
-                  backgroundColor: "#fff", '&:hover': {
+                <Button
+                  sx={{
                     backgroundColor: '#fff',
-                  },
-                  height:"50px",
-                  width:"160px", color:"#001C63",
-                  fontWeight:"700"
-                }}>
+                    '&:hover': {
+                      backgroundColor: '#fff',
+                    },
+                    height: '50px',
+                    width: '160px',
+                    color: '#001C63',
+                    fontWeight: '700',
+                  }}
+                >
                   {data.button.label}
                 </Button>
               </Box>

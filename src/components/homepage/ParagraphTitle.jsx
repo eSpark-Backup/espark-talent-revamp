@@ -3,7 +3,6 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/system';
 
-
 const ParagraphTitle = ({
   title,
   paragraph,
@@ -23,8 +22,11 @@ const ParagraphTitle = ({
           variant={hVar || 'h2'}
           color={hColor || 'secondary'}
           sx={{
-            textAlign: hAlign || 'center', flexWrap: 'wrap', fontSize:"32px !important", [theme.breakpoints.down('sm')]: {
-              fontSize: "20px !important",
+            textAlign: hAlign || 'center',
+            flexWrap: 'wrap',
+            fontSize: '32px !important',
+            [theme.breakpoints.down('sm')]: {
+              fontSize: '20px !important',
             },
           }}
         >
