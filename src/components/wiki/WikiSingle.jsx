@@ -8,10 +8,10 @@ const WikiSingle = ({ data }) => {
       <Box sx={{ my: '3%' }}>
         <Container>
           <Grid container spacing={4}>
-            <Grid item xs={8}>
+            <Grid item lg={8} md={8} xs={12} sm={12}>
               <WikiSingleLeft data={data} />
             </Grid>
-            <Grid item xs={3.5}>
+            <Grid item lg={3.5} md={3.5} xs={12} sm={12}>
               <WikiSingleRigth data={data} />
             </Grid>
           </Grid>
