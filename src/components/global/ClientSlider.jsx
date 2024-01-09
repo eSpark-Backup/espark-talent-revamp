@@ -80,7 +80,7 @@ const ClientSlider = ({
           <SwiperSlide key={index}>
             <Box sx={{ pb: pb || 5 }}>
               {
-                <Link href={item.link}>
+                <Link href={item?.link}>
                   <Image
                     src={getImagePath(item.image)}
                     alt={item.image}
