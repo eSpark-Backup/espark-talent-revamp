@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation';
 
 import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
 import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
+import NotFound from '@/app/not-found';
 
 import { BLOGS_DATA } from '@/constants/blogs';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
-import NotFound from '@/app/not-found';
 
 const Page = () => {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ const Page = () => {
     data = BLOGS_DATA?.filter((item) => item?.slug === lastSegment);
   }
 
-  if (data.length === 0) {
+  if (data?.length === 0) {
     return <NotFound data={BLOGS_NOT_FOUND_DATA} />;
   }
   return (
