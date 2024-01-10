@@ -60,9 +60,9 @@ const Partnership = ({ partnership }) => {
                       lineHeight: { xs: '17px', md: '45.766px' },
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
-                  {item.items?.map((list, itemIndex) => (
+                  {item?.items?.map((list, itemIndex) => (
                     <Box
                       key={itemIndex}
                       sx={{

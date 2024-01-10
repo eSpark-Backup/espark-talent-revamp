@@ -1,11 +1,12 @@
 'use client';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import ESparkButton from '../global/eSparkButton';
+import { useTheme } from '@mui/system';
 
-const Hero = ({ data, innerData, color }) => {
-  const hero = innerData || data;
+const Hero = ({ data }) => {
+  console.log(data.button?.label);
+  const theme = useTheme();
 
   return (
     <>
@@ -39,6 +40,12 @@ const Hero = ({ data, innerData, color }) => {
                 <Typography
                   variant={data?.titleVariant}
                   color={data?.titleColor}
+                  sx={{
+                    [theme.breakpoints.down('sm')]: {
+                      textAlign: 'center',
+                      fontSize: '23px !important',
+                    },
+                  }}
                 >
                   {data?.title}
                 </Typography>
@@ -47,17 +54,44 @@ const Hero = ({ data, innerData, color }) => {
                 <Typography
                   variant={data?.descVariant}
                   color={data?.descColor}
-                  sx={{ py: '10px' }}
+                  sx={{
+                    py: '10px',
+                    [theme.breakpoints.down('sm')]: {
+                      textAlign: 'center',
+                    },
+                  }}
                 >
                   {data?.description}
                 </Typography>
               )}
-              <ESparkButton
-                title={hero?.button?.label}
-                link={hero?.button?.link}
-                color={color}
-                size={'180px'}
-              />
+              <Box
+                sx={{
+                  [theme.breakpoints.down('sm')]: {
+                    display: 'none',
+                  },
+                }}
+              >
+                {/* <ESparkButton
+                  title={data.button.label}
+                  link={data.button.link}
+                  color={data.button.btnColor}
+                  size={'180px'}
+                /> */}
+                <Button
+                  sx={{
+                    backgroundColor: '#fff',
+                    '&:hover': {
+                      backgroundColor: '#fff',
+                    },
+                    height: '50px',
+                    width: '160px',
+                    color: '#001C63',
+                    fontWeight: '700',
+                  }}
+                >
+                  {data.button?.label}
+                </Button>
+              </Box>
             </Grid>
             {data?.image && (
               <Grid

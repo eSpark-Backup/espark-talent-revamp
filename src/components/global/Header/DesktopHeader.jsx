@@ -63,9 +63,9 @@ const DesktopHeader = ({
             onClose={() => handleCloseUserMenu(page)}
           >
             {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
-              <Box key={submenuItem.label}>
+              <Box key={submenuItem?.label}>
                 <MenuItem
-                  key={submenuItem.label}
+                  key={submenuItem?.label}
                   onClick={() =>
                     handleSubmenuItemClickedAndClose(submenuItem, page)
                   }
@@ -100,7 +100,7 @@ const DesktopHeader = ({
                           mb: 1,
                         }}
                       >
-                        {submenuItem.label}
+                        {submenuItem?.label}
                       </Typography>
                       <Typography
                         variant="body2"

@@ -10,16 +10,18 @@ const SingleBlogHeader = ({ data }) => {
         <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 1 }}>
           <Box pb={{ xs: '5%', md: '10%' }} sx={{}}>
             <Typography
-              variant="h1"
+              // variant="h1"
               color={'#001C63'}
-              fontSize={{ xs: '28px', md: '40px' }}
+              fontSize={{ xs: '25px', sm: '25px', md: '30px', lg: '40px' }}
+              fontWeight={600}
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
             >
               {data?.mainHeading}
             </Typography>
             <Typography
               variant="body1"
-              color={'#000'}
+              color={' #6F76A8'}
+              fontSize={{ xs: '12px', sm: '13px', md: '14px', lg: '17px' }}
               sx={{ textAlign: { xs: 'center', md: 'left' } }}
             >
               {data?.mainParagraph}
