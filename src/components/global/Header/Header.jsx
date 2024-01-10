@@ -50,8 +50,12 @@ const Header = () => {
   return (
     <Box>
       <Box backgroundColor={'#029894'}>
-        <Typography color={'#fff'} variant="body1" textAlign={'center'}
-        fontSize={{xs:'10px',sm:'14px',md:'17px',lg:'20px',}}>
+        <Typography
+          color={'#fff'}
+          variant="body1"
+          textAlign={'center'}
+          fontSize={{ xs: '10px', sm: '14px', md: '17px', lg: '20px' }}
+        >
           Scale up your business with our exclusive offer! Start with No
           Management Fee for First Employee. 🚀
         </Typography>

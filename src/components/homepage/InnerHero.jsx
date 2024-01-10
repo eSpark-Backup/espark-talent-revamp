@@ -45,8 +45,8 @@ const InnerHero = ({ data, innerData }) => {
                   sx={{
                     fontSize: {
                       xs: '23px',
-                      xs: '23px',
-                      xs: '25px',
+                      sm: '23px',
+                      md: '25px',
                       lg: '30px',
                       xl: '50px',
                     },
@@ -64,8 +64,8 @@ const InnerHero = ({ data, innerData }) => {
                     py: '10px',
                     fontSize: {
                       xs: '13px',
-                      xs: '13px',
-                      xs: '15px',
+                      sm: '13px',
+                      md: '15px',
                       lg: '20px',
                       xl: '20px',
                     },

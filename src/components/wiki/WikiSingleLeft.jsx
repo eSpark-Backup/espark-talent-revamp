@@ -1,17 +1,12 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  useMediaQuery,
-} from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 
 import Image from 'next/image';
 
 const WikiSingleLeft = ({ data }) => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.between('xs', 'sm'));
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
   const isMediumScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('sm', 'md')
   );
@@ -27,10 +22,13 @@ const WikiSingleLeft = ({ data }) => {
       }}
     >
       {data?.content?.map((item, index) => (
-        <Box key={index} sx={{
-          pb: { xs: '10px', sm: '5px', md: '0px', lg: '0px' },
-          // pt: { xs: '5px', sm: '5px', md: '0px', lg: '0px' }
-        }}>
+        <Box
+          key={index}
+          sx={{
+            pb: { xs: '10px', sm: '5px', md: '0px', lg: '0px' },
+            // pt: { xs: '5px', sm: '5px', md: '0px', lg: '0px' }
+          }}
+        >
           <Typography
             color="secondary"
             sx={{
