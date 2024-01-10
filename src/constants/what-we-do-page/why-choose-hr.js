@@ -5,7 +5,6 @@ export const WHY_CHOOSE_OUR_HR_DATA = {
   arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
   arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
   arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
-  alt: 'arrow',
 
   card: [
     {
