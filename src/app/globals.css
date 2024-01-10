@@ -119,10 +119,11 @@ span {
   box-shadow: none !important;
 }
 
-.swiper-image {
+/* .swiper-image {
   width: 100px;
   height: 50px;
-}
+} */
+
 
 /* ---------------------------- */
 /* country Input styling */
@@ -195,10 +196,20 @@ span {
   width: 40px;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .swiper-image {
     width: 250px;
     height: 30px;
+  }
+} */
+@media (max-width: 768px) {
+  .swiper-controller-icon {
+    width: 12px;
+    height: 15px;
+  }
+  .its-our-job-card-image{
+    width: 33px !important;
+    height: 33px !important;
   }
 }
 
@@ -412,6 +423,19 @@ line-height: 17px;
     rgba(0, 0, 0, 0.16) 1px 4px 36px -15px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.1) 0px 15px 1px 0px;
+}
+.swiper-slide {
+  max-width: 556px !important;
+  width: 100%;
+}
+.mySwiper {
+  max-width: 1115px !important;
+}
+.mySwiper-its-our-job {
+  max-width: 1200px !important;
+}
+.why-choose-hr-Swiper {
+  max-width: 450px !important;
 }
 
 .swiper-3d .swiper-slide-shadow-left,

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Box, Container, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import 'swiper/css';
@@ -9,6 +9,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const swiperRef = useRef(null);
+
+  const handleControlSwiper = (type) => {
+    switch (type) {
+      case 'next':
+        swiperRef?.current?.swiper?.slidePrev();
+        break;
+      case 'prev':
+        swiperRef?.current?.swiper?.slideNext();
+        break;
+
+      default:
+        break;
+    }
+  };
 
   return (
     <Box sx={{ mb: '4%' }}>
@@ -36,6 +51,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
           </Typography>
         </Box>
         <Swiper
+          ref={swiperRef}
           spaceBetween={1}
           modules={[Pagination]}
           className="mySwiper"
@@ -68,25 +84,32 @@ const ProfessionalTeamCard = ({ teamData }) => {
                 sx={{
                   height: { lg: '175px', xs: '100.986px', sm: '175px' },
                   display: 'flex',
-                  padding: 2,
-                  margin: 2,
+                  padding: {
+                    xs: '8px 16px 0px 17px',
+                    md: '15px 28px 31px 30px',
+                  },
+                  margin: { xs: '5px', md: '15px 7.5px' },
                   backgroundColor: '#fff',
                   borderRadius: '13.858px',
                   boxShadow:
                     '0px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
                 }}
               >
-                <Box>
+                <Box
+                  sx={{
+                    minWidth: { xs: '28px', md: '49px' },
+                    height: { xs: '28px', md: '49px' },
+                  }}
+                >
                   <Image
                     src={item?.icon}
-                    width={isXsOrSm ? 40 : 100}
-                    height={200}
-                    alt={item?.alt}
+                    width={isXsOrSm ? 40 : 49}
+                    height={49}
+                    alt={item.alt}
                     className="swiper-image"
                   />
                 </Box>
-
-                <Box sx={{ px: 3 }}>
+                <Box sx={{ pl: { xs: '18px', md: '31px' } }}>
                   <Typography
                     sx={{
                       color: '#09114A',
@@ -95,7 +118,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
 
                       fontWeight: 600,
                       lineHeight: { md: '24.39px', xs: '14.064px' },
-                      mt: { lg: 1 },
+                      mt: { lg: '1px' },
                     }}
                   >
                     {item?.title}
@@ -112,7 +135,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                         sm: '25.263px',
                         xs: '13.263px',
                       },
-                      mt: { lg: 1 },
+                      p: { xs: '8px 0 0 0', md: '19px 0 0 0' },
                     }}
                   >
                     {item?.paragraph}
@@ -130,12 +153,61 @@ const ProfessionalTeamCard = ({ teamData }) => {
             my: 2,
           }}
         >
-          <Image
-            src={teamData.arrowIcon}
-            width={50}
-            height={65}
-            alt={teamData.alt}
-          />
+          <Box
+            sx={{
+              minWidth: { xs: '12px', md: '23px' },
+              height: { xs: '15px', md: '23px' },
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              onClick={() => {
+                handleControlSwiper('next');
+              }}
+              src={teamData.arrowIconLeft}
+              width={17}
+              height={17}
+              alt={teamData.alt}
+              className="swiper-controller-icon"
+            />
+          </Box>
+          <Box
+            sx={{
+              minWidth: { xs: '12px', md: '23px' },
+              height: { xs: '15px', md: '23px' },
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              src={teamData.arrowIconCircle}
+              width={17}
+              height={17}
+              alt={teamData.alt}
+              className="swiper-controller-icon"
+            />
+          </Box>
+          <Box
+            sx={{
+              minWidth: { xs: '12px', md: '23px' },
+              height: { xs: '15px', md: '23px' },
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              onClick={() => handleControlSwiper('prev')}
+              src={teamData.arrowIconRight}
+              width={17}
+              height={17}
+              alt={teamData.alt}
+              className="swiper-controller-icon"
+            />
+          </Box>
         </Box>
       </Container>
     </Box>

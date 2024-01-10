@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import 'swiper/css';
@@ -9,6 +9,20 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const WhyChooseOurHr = ({ data }) => {
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const swiperRef = useRef(null);
+  const handleControlSwiper = (type) => {
+    switch (type) {
+      case 'next':
+        swiperRef?.current?.swiper?.slidePrev();
+        break;
+      case 'prev':
+        swiperRef?.current?.swiper?.slideNext();
+        break;
+
+      default:
+        break;
+    }
+  };
   return (
     <Box sx={{ my: '4%' }}>
       <Container>
@@ -39,8 +53,9 @@ const WhyChooseOurHr = ({ data }) => {
 
                   fontWeight: { xs: 700, sm: 400 },
                   lineHeight: { md: '31.863px', xs: '20px' },
-                  pr: { md: 10 },
+                  // pr: { md: 10 },
                   textAlign: { xs: 'center', md: 'justify' },
+                  p: { xs: '5px', md: '0px' },
                 }}
               >
                 {data?.paragraph}
@@ -49,9 +64,10 @@ const WhyChooseOurHr = ({ data }) => {
           </Grid>
           <Grid item xs={12} sm={12} md={5}>
             <Swiper
+              ref={swiperRef}
               spaceBetween={1}
               modules={[Pagination]}
-              className="mySwiper"
+              className="why-choose-hr-Swiper"
               breakpoints={{
                 600: {
                   slidesPerView: 1,
@@ -89,13 +105,13 @@ const WhyChooseOurHr = ({ data }) => {
                       sx={{
                         backgroundColor: '#fff',
                         boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
-                        padding: 3,
+                        padding: { xs: '18px 10px', md: '25px 25px' },
                         borderRadius: '15px',
                         width: { xs: '294.31px', md: '100%' },
-                        height: {
+                        maxHeight: {
                           xs: '143.884px',
                           sm: '150px',
-                          md: '170px',
+                          md: '220px',
                         },
                         mt: { xs: 1, md: 0 },
                       }}
@@ -107,7 +123,7 @@ const WhyChooseOurHr = ({ data }) => {
                       >
                         <Box
                           sx={{
-                            mr: 2,
+                            mr: { xs: '13px', md: '20px' },
                           }}
                         >
                           <ListItemIcon sx={{ minWidth: '30px' }}>
@@ -127,7 +143,7 @@ const WhyChooseOurHr = ({ data }) => {
                               fontWeight: 700,
                               fontStyle: 'normal',
                               lineHeight: { lg: '26.4px', xs: '17.266px' },
-                              py: { md: 1 },
+                              pb: { xs: '5px', md: '7px' },
                             }}
                           >
                             {item?.title}
@@ -167,12 +183,61 @@ const WhyChooseOurHr = ({ data }) => {
                   my: 2,
                 }}
               >
-                <Image
-                  src={data?.arrowIcon}
-                  width={50}
-                  height={65}
-                  alt={data?.alt}
-                />
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Image
+                    onClick={() => {
+                      handleControlSwiper('next');
+                    }}
+                    src={data.arrowIconLeft}
+                    width={17}
+                    height={17}
+                    alt={data.alt}
+                    className="swiper-controller-icon"
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Image
+                    src={data.arrowIconCircle}
+                    width={17}
+                    height={17}
+                    alt={data.alt}
+                    className="swiper-controller-icon"
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Image
+                    onClick={() => handleControlSwiper('prev')}
+                    src={data.arrowIconRight}
+                    width={17}
+                    height={17}
+                    alt={data.alt}
+                    className="swiper-controller-icon"
+                  />
+                </Box>
               </Box>
             </Swiper>
           </Grid>
