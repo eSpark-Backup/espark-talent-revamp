@@ -10,11 +10,11 @@ import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
 import { BLOGS_DATA } from '@/constants/blogs';
 
 const Page = () => {
+
   const pathname = usePathname();
   const segments = pathname.split('/');
-  const id = segments[segments.length - 1];
-  const data = BLOGS_DATA[id - 1];
-
+  const path = segments[segments.length - 1];
+  const data = BLOGS_DATA.filter((item) => item.slug === path);
   return (
     <Box
       sx={{
@@ -23,11 +23,11 @@ const Page = () => {
       }}
     >
       <Container>
-        <SingleBlogHeader data={data} />
-        <BlogDetailsContent data={data} />
+        <SingleBlogHeader data={data[0]} />
+        <BlogDetailsContent data={data[0]} />
       </Container>
     </Box>
   );
 };
 
-export default Page;
+export default Page;  

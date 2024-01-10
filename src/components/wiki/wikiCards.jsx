@@ -11,7 +11,7 @@ const CARD_STYLE = {
   px: '30px',
   py: '20px',
   m: '10px',
-  boxShadow: `4px 4px 15px rgba(0,0,0,.3)`,
+  // boxShadow: {lg:'none',sm:`4px 4px 15px rgba(0,0,0,.3)`},
 };
 
 const WikiCards = ({ data }) => {
@@ -102,7 +102,7 @@ const WikiCards = ({ data }) => {
                 </Box>
                 <Box>
                   {' '}
-                  <Link href={`/esparkwiki/${item.id}`}>
+                  <Link href={`/esparkwiki/${item.path}`}>
                     <Typography
                       variant="body1"
                       color="#029894"

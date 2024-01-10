@@ -12,13 +12,12 @@ import { WIKIS_DATA } from '@/constants/wiki';
 const Page = () => {
   const pathname = usePathname();
   const segments = pathname.split('/');
-  const id = segments[segments.length - 1];
-  const data = WIKIS_DATA[id - 1];
-
+  const path = segments[segments.length - 1];
+  const data = WIKIS_DATA.filter((item) => item.slug === path);
   return (
     <>
-      <InnerHero data={WIKI_HERO_DATA} innerData={data} />
-      <WikiSingle data={data} />
+      <InnerHero data={WIKI_HERO_DATA} innerData={data[0]} />
+      <WikiSingle data={data[0]} />
     </>
   );
 };

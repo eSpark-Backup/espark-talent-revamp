@@ -38,7 +38,7 @@ const BlogCards = ({ data, smCol }) => {
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
                 }}
               >
-                <Link href={`/blogs/${item?.id}`}>
+                <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
@@ -59,7 +59,7 @@ const BlogCards = ({ data, smCol }) => {
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Link href={`/blogs/${item?.id}`}>
+                  <Link href={`/blogs/${item?.slug}`}>
                     <Typography
                       sx={{
                         color: '#09114A',
@@ -83,7 +83,7 @@ const BlogCards = ({ data, smCol }) => {
                   >
                     {item?.mainParagraph}
                   </Typography>
-                  <Link href={`/blogs/${item?.id}`}>
+                  <Link href={`/blogs/${item?.slug}`}>
                     <Box className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
