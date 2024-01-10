@@ -25,11 +25,11 @@ const SourceBenefits = ({ data }) => {
                 },
                 '@media(min-width: 425px) and (max-width: 569px)': {
                   pt: 2,
-                  width: '360px'
+                  width: '360px',
                 },
                 '@media(min-width: 300px) and (max-width: 424px)': {
                   pt: 2,
-                  width: '300px'
+                  width: '300px',
                 },
                 mb: 4,
                 gap: 2,
@@ -72,7 +72,7 @@ const SourceBenefits = ({ data }) => {
                 <Box
                   sx={{
                     width: { md: '311.696px', lg: '401.696px' },
-                    height: { md: '214.641px', lg: '214.641px' },
+                    height: { md: '214.641px', lg: '240.641px' },
                     display: 'flex',
                     flexDirection: 'column',
                     borderRadius: '20px',
