@@ -104,7 +104,7 @@ const BlogCards = ({ data, smCol }) => {
         {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(data.length / itemsPerPage)}
+              count={Math.ceil(data?.length / itemsPerPage)}
               page={page}
               onChange={handleChangePage}
               color="primary"

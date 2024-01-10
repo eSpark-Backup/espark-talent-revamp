@@ -68,7 +68,7 @@ const OutSourcingWonder = ({ data }) => {
           </Box>
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
-              {data?.items.map((item, index) => (
+              {data?.items?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Grid
                     item

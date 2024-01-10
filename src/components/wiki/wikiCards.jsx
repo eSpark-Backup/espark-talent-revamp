@@ -25,8 +25,8 @@ const WikiCards = ({ data }) => {
     <Box sx={{ py: '3%' }}>
       <Container>
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
-          {data.map((item) => (
-            <Grid key={item.id} item xs={12} lg={4} md={4} sm={6} gap="10px">
+          {data?.map((item) => (
+            <Grid key={item?.id} item xs={12} lg={4} md={4} sm={6} gap="10px">
               <Box sx={CARD_STYLE}>
                 <Box
                   sx={{
@@ -37,7 +37,7 @@ const WikiCards = ({ data }) => {
                   }}
                 >
                   <Image
-                    src={item.icon}
+                    src={item?.icon}
                     height={
                       isSmallScreen
                         ? 15
@@ -56,7 +56,7 @@ const WikiCards = ({ data }) => {
                             ? 30
                             : 30
                     }
-                    alt={item.title}
+                    alt={item?.title}
                   />
                   <Typography
                     color="#000"
@@ -69,7 +69,7 @@ const WikiCards = ({ data }) => {
                       lg: '20px',
                     }}
                   >
-                    {item.title}
+                    {item?.title}
                   </Typography>
                 </Box>
                 <Box sx={{ pb: '15px' }}>
@@ -97,12 +97,12 @@ const WikiCards = ({ data }) => {
                     }}
                     fontWeight={600}
                   >
-                    {`USD: ${item.salary} per month`}
+                    {`USD: ${item?.salary} per month`}
                   </Typography>
                 </Box>
                 <Box>
                   {' '}
-                  <Link href={`/esparkwiki/${item.path}`}>
+                  <Link href={`/esparkwiki/${item?.slug}`}>
                     <Typography
                       variant="body1"
                       color="#029894"

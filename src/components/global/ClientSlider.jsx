@@ -28,7 +28,7 @@ const ClientSlider = ({
   variant,
 }) => {
   const extendedData = {
-    clients: extendClients(data.clients, length),
+    clients: extendClients(data?.clients, length),
   };
 
   const getImagePath = (originalImagePath) => {
@@ -67,12 +67,12 @@ const ClientSlider = ({
           <SwiperSlide key={index}>
             <Box sx={{ pb: pb || 5 }}>
               {
-                <Link href={item.link}>
+                <Link href={item?.link}>
                   <Image
-                    src={getImagePath(item.image)}
-                    alt={item.image}
-                    height={item.imageHeight}
-                    width={item.imageWidth}
+                    src={getImagePath(item?.image)}
+                    alt={item?.image}
+                    height={item?.imageHeight}
+                    width={item?.imageWidth}
                   />
                 </Link>
               }

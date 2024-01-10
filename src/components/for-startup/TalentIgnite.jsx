@@ -33,7 +33,7 @@ const TalentIgnite = ({ data }) => {
                 my: { md: '10px', lg: '20px' },
                 textAlign: { xs: 'center', md: 'justify' },
               }}
-              dangerouslySetInnerHTML={{ __html: data.description }}
+              dangerouslySetInnerHTML={{ __html: data?.description }}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={5} sx={{ order: { md: 1, xs: 2 } }}>
@@ -48,7 +48,7 @@ const TalentIgnite = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={400} height={300} alt={data.alt} />
+              <Image src={data?.image} width={400} height={300} alt={data?.alt} />
             </Box>
           </Grid>
         </Grid>

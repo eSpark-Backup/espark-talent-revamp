@@ -19,8 +19,8 @@ const CareerCards = ({ data }) => {
 
   const jobCategories = Array.from(
     new Set(
-      data.flatMap((item) =>
-        Array.isArray(item.category) ? item.category : [item.category]
+      data?.flatMap((item) =>
+        Array.isArray(item?.category) ? item?.category : [item?.category]
       )
     )
   );
@@ -28,7 +28,7 @@ const CareerCards = ({ data }) => {
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data.filter((item) => item.category.includes(selectedCategory));
+      : data?.filter((item) => item?.category.includes(selectedCategory));
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
