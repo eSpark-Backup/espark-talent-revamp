@@ -42,6 +42,14 @@ const page = () => {
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
         length={100}
+        fontSize={{
+          xs: '19px !important',
+          sm: '20px !important',
+          md: '22px !important',
+          lg: '28px !important',
+        }}
+        lineHeight={{ xs: '30px !important', sm: '20px !important' }}
+        fontWeight={500}
       />
       <Process data={PROCESS_DATA} />
       <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
