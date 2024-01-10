@@ -201,7 +201,24 @@ span {
     height: 30px;
   }
 }
-
+@media (min-width: 835px) and (max-width: 1050px) {
+  .whatWeBox {
+    height: 170px !important;
+  }
+}
+@media (min-width: 1051) and (max-width: 1365px) {
+  .whatWeBox {
+    height: 150px !important;
+  }
+}
+@media (max-width: 315px) {
+  .whatWeBox {
+    height: 190px !important;
+  }
+  .imageBox{
+    padding-top: 30px;
+  }
+}
 .partnerSpan {
   color: #0C3C3A;
   font-size: 32px;

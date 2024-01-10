@@ -15,13 +15,14 @@ const HRFirmSuccess = ({ hrFirm }) => {
         <Grid container className="hrFirmDesktop">
           {card?.map((item, index) => (
             <Grid item sm={6} key={index} sx={{}}>
-              <Box
+              <Grid
+                container
                 sx={{
                   borderRadius: '13.764px',
                   border: '0.918px solid #E5E5E5',
                   background: '#FFF',
                   width: { lg: '643.614px', md: 'auto' },
-                  height: '238.584px',
+                  height: { md: '310.584px', lg: '238.584px' },
                   padding: ' 28.447px 17.435px 35.788px 17.435px',
                   display: 'center',
                   alignItems: 'center',
@@ -30,22 +31,32 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   m: 1,
                 }}
               >
-                <Box sx={{ display: 'flex' }}>
+                <Grid item md={4} sx={{}}>
                   <Box
                     sx={{
                       display: 'flex',
                       justifyContent: 'center',
-                      mx: 2,
+                      ml: 1,
                     }}
                   >
                     <Image
                       src={item.image}
-                      width={400}
+                      width={900}
                       height={100}
                       alt={item.alt}
                     />
                   </Box>
-                  <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
+                </Grid>
+                <Grid item md={8} sx={{ px: '10px' }}>
+                  <Box
+                    sx={{
+                      mx: { lg: 1 },
+                      height: 'auto',
+                      width: 'auto',
+                      pt: '10px',
+                      pl: '10px',
+                    }}
+                  >
                     <Typography variant="h4" color="secondary" sx={{}}>
                       {item.title}
                     </Typography>
@@ -53,18 +64,17 @@ const HRFirmSuccess = ({ hrFirm }) => {
                       sx={{
                         color: '#001C63',
                         textAlign: 'justify',
-
                         fontSize: '16.517px',
                         fontWeight: 400,
                         fontStyle: 'normal',
-                        lineHeight: { lg: '27.896px', md: '25px' },
+                        lineHeight: { lg: '27.896px', md: '27.896px' },
                       }}
                     >
                       {item.description}
                     </Typography>
                   </Box>
-                </Box>
-              </Box>
+                </Grid>
+              </Grid>
             </Grid>
           ))}
         </Grid>
