@@ -22,13 +22,36 @@ const InnerHero = ({ data, innerData }) => {
             sx={{
               alignItems: 'center',
               flexDirection: { xs: 'column', sm: 'row' },
+              pt: { sm: '10%', xs: '10%', md: '5%', lg: '3%' },
+              pb: { sm: '10%', xs: '10%', md: '5%', lg: '3%' },
             }}
           >
-            <Grid item xs={12} sm={6} sx={{}}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={6}
+              md={6}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                textAlign: { sm: 'left', xs: 'center', md: 'left', lg: 'left' },
+              }}
+            >
               {data?.title && (
                 <Typography
-                  variant={data?.titleVariant}
+                  // variant={data?.titleVariant}
                   color={data?.titleColor}
+                  sx={{
+                    fontSize: {
+                      xs: '23px',
+                      xs: '23px',
+                      xs: '25px',
+                      lg: '30px',
+                      xl: '50px',
+                    },
+                    fontWeight: 600,
+                  }}
                 >
                   {innerData?.title}
                 </Typography>
@@ -37,7 +60,16 @@ const InnerHero = ({ data, innerData }) => {
                 <Typography
                   variant={data?.descVariant}
                   color={data?.descColor}
-                  sx={{ py: '10px' }}
+                  sx={{
+                    py: '10px',
+                    fontSize: {
+                      xs: '13px',
+                      xs: '13px',
+                      xs: '15px',
+                      lg: '20px',
+                      xl: '20px',
+                    },
+                  }}
                 >
                   {data?.description}
                 </Typography>
@@ -69,6 +101,8 @@ const InnerHero = ({ data, innerData }) => {
                 item
                 xs={12}
                 sm={6}
+                lg={6}
+                md={6}
                 style={{
                   display: 'flex',
                   alignItems: 'center',

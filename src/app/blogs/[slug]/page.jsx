@@ -11,7 +11,7 @@ import { BLOGS_DATA } from '@/constants/blogs';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFound from '@/app/not-found';
 
- const Page = () => {
+const Page = () => {
   const pathname = usePathname();
   const segments = pathname.split('/');
   const lastSegment = segments[segments.length - 1];
@@ -22,10 +22,10 @@ import NotFound from '@/app/not-found';
     data = BLOGS_DATA?.filter((item) => item?.id === id);
   } else {
     data = BLOGS_DATA?.filter((item) => item?.slug === lastSegment);
-   }
-   
- if (data.length === 0) {
-    return <NotFound data={BLOGS_NOT_FOUND_DATA}  />;
+  }
+
+  if (data.length === 0) {
+    return <NotFound data={BLOGS_NOT_FOUND_DATA} />;
   }
   return (
     <Box
@@ -42,4 +42,4 @@ import NotFound from '@/app/not-found';
   );
 };
 
-export default Page;  
+export default Page;

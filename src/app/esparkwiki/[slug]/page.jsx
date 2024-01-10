@@ -15,15 +15,15 @@ const Page = () => {
   const pathname = usePathname();
   const segments = pathname.split('/');
   const lastSegment = segments[segments.length - 1];
- let data;
+  let data;
   if (!isNaN(lastSegment)) {
     const id = parseInt(lastSegment, 10);
     data = WIKIS_DATA?.filter((item) => item?.id === id);
   } else {
     data = WIKIS_DATA?.filter((item) => item?.slug === lastSegment);
   }
- if (data.length === 0) {
-    return <NotFound data={WIKIS_NOT_FOUND_DATA}  />;
+  if (data.length === 0) {
+    return <NotFound data={WIKIS_NOT_FOUND_DATA} />;
   }
   return (
     <>

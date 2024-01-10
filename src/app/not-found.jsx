@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 
-const NotFound = ({data}) => {
+const NotFound = ({ data }) => {
   return (
     <Box
       sx={{
@@ -22,7 +22,12 @@ const NotFound = ({data}) => {
             justifyContent: 'center',
           }}
         >
-          <Image src={data?.image || NOT_FOUND_DATA.image} alt="404 Error" width={500} height={200} />
+          <Image
+            src={data?.image || NOT_FOUND_DATA.image}
+            alt="404 Error"
+            width={500}
+            height={200}
+          />
         </Box>
 
         <Typography variant="h2" sx={{ mt: 4, mb: 3, textAlign: 'center' }}>

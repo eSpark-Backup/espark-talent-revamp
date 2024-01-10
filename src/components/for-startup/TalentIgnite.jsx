@@ -58,7 +58,12 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data?.image} width={400} height={300} alt={data?.alt} />
+              <Image
+                src={data?.image}
+                width={400}
+                height={300}
+                alt={data?.alt}
+              />
             </Box>
           </Grid>
         </Grid>
