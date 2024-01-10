@@ -13,13 +13,19 @@ const ProfessionalTeamCard = ({ teamData }) => {
   return (
     <Box sx={{ mb: '4%' }}>
       <Container>
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            pb: { md: '45px', xs: '10px' },
+          }}
+        >
           <Typography
             sx={{
-              width: { md: '55%' },
+              px: { md: '20.22%' },
               color: '#001C63',
               textAlign: 'center',
-
               fontSize: { md: '32px', xs: '20px' },
               fontWeight: 700,
               fontStyle: 'normal',
@@ -60,7 +66,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
             <SwiperSlide key={index}>
               <Box
                 sx={{
-                  height: { lg: '175px', xs: '100.986px', sm: '150px' },
+                  height: { lg: '175px', xs: '100.986px', sm: '175px' },
                   display: 'flex',
                   padding: 2,
                   margin: 2,

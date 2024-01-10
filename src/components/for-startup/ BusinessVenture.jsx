@@ -13,7 +13,7 @@ const BusinessVenture = ({ data }) => {
           <Grid item sm={12} md={6}>
             <Box
               sx={{
-                mt: { md: '72px' },
+                mt: { md: '52px', lg: '72px' },
                 pb: '12px',
               }}
             >

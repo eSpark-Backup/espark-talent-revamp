@@ -35,7 +35,6 @@ const OurQualityService = ({ ourQualityService }) => {
                       sx={{
                         textAlign: 'center',
                         fontWeight: 600,
-
                         fontSize: '16px',
                         lineHeight: '24px',
                       }}
@@ -57,14 +56,14 @@ const OurQualityService = ({ ourQualityService }) => {
               justifyContent: { lg: 'right', xs: 'center' },
             }}
           >
-            <Box sx={{ width: '80%', alignItems: 'center' }}>
+            <Box sx={{ alignItems: 'center' }}>
               <Typography
                 variant="h2"
                 color="secondary"
                 sx={{
                   textAlign: 'right',
                   flexWrap: 'wrap',
-
+                  pl: { md: '20px', lg: '118px' },
                   lineHeight: { md: '56px', xs: '32px' },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
@@ -73,13 +72,13 @@ const OurQualityService = ({ ourQualityService }) => {
                 {heading}
               </Typography>
               <Typography
-                variant="body1"
                 color="secondary"
                 sx={{
                   textAlign: 'right',
                   my: '20px',
-
+                  pl: { md: '10px', lg: '40px' },
                   lineHeight: '30.4px',
+                  fontStyle: 'normal',
                   fontSize: '16px',
                   fontWeight: 400,
                 }}

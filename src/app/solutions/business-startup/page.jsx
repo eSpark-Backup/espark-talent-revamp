@@ -41,7 +41,10 @@ const page = () => {
       <OurOutsourcing data={OUR_OUTSOURCE} />
       <TalentIgnite data={BUSINESS_START_UP} />
       <BusinessVenture data={OUR_ADDITIONAL_BENEFITS} />
-      <TalentIgnite data={BEST_OUTSOURCING_SOLUTIONS} />
+      <TalentIgnite
+        data={BEST_OUTSOURCING_SOLUTIONS}
+        isBestOutsourceComponent={'true'}
+      />
       <CustomizeOutsource data={CUSTOMIZE_OUTSOURCE} />
       <OutSourcingWonder data={OUTSOURCING_SOLUTIONS_DATA} />
       <Faq data={STARTUP_FAQ_DATA} />

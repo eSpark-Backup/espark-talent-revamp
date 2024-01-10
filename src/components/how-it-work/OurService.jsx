@@ -57,6 +57,7 @@ const OurService = ({ ourService }) => {
             <SwiperSlide key={index}>
               <Box
                 sx={{
+                  width: '395.643px',
                   height: '232.671px',
                   borderRadius: '8.875px',
                   backgroundColor: '#fff',
@@ -78,7 +79,6 @@ const OurService = ({ ourService }) => {
                   <Box
                     sx={{
                       mt: { xs: 1, sm: 2 },
-
                       p: 1,
                     }}
                   >

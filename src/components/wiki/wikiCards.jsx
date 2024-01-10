@@ -26,7 +26,7 @@ const WikiCards = ({ data }) => {
       <Container>
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           {data?.map((item) => (
-            <Grid key={item?.id} item xs={12} lg={4} md={4} sm={6} gap="10px">
+            <Grid key={item?.id} item lg={4} md={4} sm={6} xs={12} gap="10px">
               <Box sx={CARD_STYLE}>
                 <Box
                   sx={{
