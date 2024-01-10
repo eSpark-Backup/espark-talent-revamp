@@ -79,9 +79,9 @@ const ExpertTeamCard = ({ teamData }) => {
                   borderRadius: '11px',
                   backgroundColor: '#fff',
                   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
-                  p: {xs:"39px 28px 20px 28px",md:"48px 31px 24px 31px"},
+                  p: { xs: '39px 28px 20px 28px', md: '48px 31px 24px 31px' },
                   m: 1,
-                  height: {xs:'auto',md:"250px"},
+                  height: { xs: 'auto', md: '250px' },
                 }}
               >
                 <Box
@@ -90,7 +90,7 @@ const ExpertTeamCard = ({ teamData }) => {
                     //   md: '320px',
                     //   sm: '258.036px',
                     // },
-                    
+
                     margin: '0px auto',
                   }}
                 >
@@ -99,7 +99,7 @@ const ExpertTeamCard = ({ teamData }) => {
                       // mt: { xs: 1, sm: 2 },
                       display: 'flex',
                       justifyContent: 'center',
-                      mb:{xs:"12px",md:"15px"}
+                      mb: { xs: '12px', md: '15px' },
                       // p: 1,
                     }}
                   >
@@ -108,7 +108,7 @@ const ExpertTeamCard = ({ teamData }) => {
                       width={65}
                       height={65}
                       alt={item.alt}
-                      className='its-our-job-card-image'
+                      className="its-our-job-card-image"
                     />
                   </Box>
 
@@ -120,7 +120,7 @@ const ExpertTeamCard = ({ teamData }) => {
                         fontStyle: 'normal',
                         fontWeight: 600,
                         lineHeight: { xs: '24.4px', md: '26.4px' },
-                        mb:{xs:"9px",md:"11px"},
+                        mb: { xs: '9px', md: '11px' },
                         // letterSpacing:index > 0 && "0.65px"
                         // mt: { lg: 1 },
                       }}
