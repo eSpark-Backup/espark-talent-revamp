@@ -41,16 +41,12 @@ const Process = ({ data }) => {
             component={'h2'}
             sx={{
               color: '#001C63',
-              fontSize: '32px !important',
+              fontSize: { sm: '28px !important', md: '32px !important' },
               fontStyle: 'normal',
               fontWeight: 600,
               lineHeight: { sm: '35px', md: '40.106px' },
-              '@media (min-width: 720px) and (max-width: 767px)': {
-                fontSize: '35px !important',
-                lineHeight: '35px',
-              },
-              '@media (min-width: 600px) and (max-width: 719px)': {
-                fontSize: '28px !important',
+              '@media (min-width: 600px) and (max-width: 767px)': {
+                fontSize: '23px !important',
                 lineHeight: '35px',
               },
               '@media (min-width: 360px) and (max-width: 599px)': {
@@ -69,7 +65,7 @@ const Process = ({ data }) => {
             component={'p'}
             sx={{
               color: '#001C63',
-              fontSize: { xs: '18px !important' },
+              fontSize: { sm: '15px !important', md: '18px !important' },
               fontStyle: 'normal',
               fontWeight: 400,
               lineHeight: '39.602px',
