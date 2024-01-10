@@ -103,7 +103,7 @@ const BenefitsWorks = ({ data }) => {
               src="/images/homepage/outsource-benefits/line3.svg"
               component={'img'}
             />
-            {data?.items.map((item, index) => (
+            {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item

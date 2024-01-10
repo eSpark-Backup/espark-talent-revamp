@@ -61,10 +61,10 @@ const Footer = ({ data }) => {
                 {data?.socialMedia?.map((item, index) => (
                   <Link key={index} href={item?.link}>
                     <Image
-                      src={item.img}
+                      src={item?.img}
                       width={17}
                       height={17}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Link>
                 ))}

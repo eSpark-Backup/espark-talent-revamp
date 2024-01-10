@@ -63,7 +63,7 @@ const ChooseUs = ({ chooseUs }) => {
                             mb: { lg: '2px' },
                           }}
                         >
-                          {item.content}
+                          {item?.content}
                         </Typography>
                       </Box>
                     </Box>

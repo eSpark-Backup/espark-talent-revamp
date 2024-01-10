@@ -86,7 +86,7 @@ const OurService = ({ ourService }) => {
                       src={item?.image}
                       width={40}
                       height={50}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Box>
 

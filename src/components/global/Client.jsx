@@ -62,10 +62,10 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
             <SwiperSlide key={index}>
               <Link href={item?.link}>
                 <Image
-                  src={item.image}
-                  alt={item.image}
-                  height={item.imageHeight}
-                  width={item.imageWidth}
+                  src={item?.image}
+                  alt={item?.image}
+                  height={item?.imageHeight}
+                  width={item?.imageWidth}
                 />
               </Link>
             </SwiperSlide>

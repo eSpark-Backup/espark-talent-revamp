@@ -44,12 +44,12 @@ const HRFirmSuccess = ({ hrFirm }) => {
                       src={item.image}
                       width={400}
                       height={100}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Box>
                   <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
                     <Typography variant="h4" color="secondary" sx={{}}>
-                      {item.title}
+                      {item?.title}
                     </Typography>
                     <Typography
                       sx={{
@@ -62,7 +62,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                         lineHeight: { lg: '27.896px', md: '25px' },
                       }}
                     >
-                      {item.description}
+                      {item?.description}
                     </Typography>
                   </Box>
                 </Box>
