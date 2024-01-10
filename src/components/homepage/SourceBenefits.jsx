@@ -18,7 +18,19 @@ const SourceBenefits = ({ data }) => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 flexDirection: 'column',
-                width: { xs: 'auto', sm: '700px', lg: '900px' },
+                width: { sm: '600px', md: '700px', lg: '800px' },
+                '@media(min-width: 570px) and (max-width: 767px)': {
+                  width: '550px',
+                  pt: 2,
+                },
+                '@media(min-width: 425px) and (max-width: 569px)': {
+                  pt: 2,
+                  width: '360px'
+                },
+                '@media(min-width: 300px) and (max-width: 424px)': {
+                  pt: 2,
+                  width: '300px'
+                },
                 mb: 4,
                 gap: 2,
               }}
@@ -115,10 +127,11 @@ const SourceBenefits = ({ data }) => {
                       sx={{
                         fontSize: {
                           sm: '11px !important',
+                          md: '13px !important',
                           lg: '16px !important',
                         },
                         fontWeight: 400,
-                        lineHeight: '23px',
+                        lineHeight: { md: '20px', lg: '23px' },
                       }}
                       color="initial"
                     >

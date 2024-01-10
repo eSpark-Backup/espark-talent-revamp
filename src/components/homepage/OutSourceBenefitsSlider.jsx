@@ -64,28 +64,34 @@ const OutSourceBenefitsSlider = ({ items }) => {
                     display: 'flex',
                     flexDirection: 'column',
                     width: '100%',
-                    height: '200.635px',
+                    height: '218.635px',
                     borderRadius: '13.57px',
+                    border: '1px solid lightGray',
                     boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+                    '@media (min-width: 767px) and (max-width: 767px)': {
+                      width: '100%'
+                    },
                   }}
                 >
                   <Box
                     sx={{
                       display: 'flex',
                       height: '70.972px',
-                      borderRadius: '10px 10px 0 0 ',
-                      backgroundColor: 'rgba(0, 28, 99, 0.04) !important',
+                      borderRadius: '13.57px',
+                      background: '#F7F8FB',
+                      borderTop: '1px solid lightGray',
                       p: '20px',
                       alignItems: 'center',
+
                     }}
                   >
                     <Image
                       src={item?.icon}
                       alt={item?.title}
-                      height={45}
-                      width={45}
+                      height={43}
+                      width={43}
                     />
-                    <Typography variant="h4" color="secondary" sx={{ ml: 2 }}>
+                    <Typography component="h4" color="secondary" sx={{ fontSize: '20px !important', fontWeight: 600, ml: 2 }}>
                       {item?.title}
                     </Typography>
                   </Box>
@@ -95,10 +101,9 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       borderRadius: '0 0 20px 20px',
                       backgroundColor: '#fff',
                       height: '100%',
-                      // height: { sm: '79.028px' },
                     }}
                   >
-                    <Typography variant="body1" color="initial">
+                    <Typography  variant="body1" color="initial">
                       {item?.paragraph}
                     </Typography>
                   </Box>
@@ -108,7 +113,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Box>
+    </Box >
   );
 };
 

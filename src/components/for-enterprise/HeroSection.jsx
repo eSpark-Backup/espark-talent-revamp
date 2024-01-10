@@ -23,7 +23,7 @@ const HeroSection = ({ data, Content, image }) => {
               width: '100%',
               py: 7,
             },
-            '@media (min-width: 300px) and (max-width: 599px)': {
+            '@media (min-width: 300px) and (max-width: 625px)': {
               textAlign: 'center',
               width: '100%',
               py: 5,
@@ -38,9 +38,12 @@ const HeroSection = ({ data, Content, image }) => {
               flexDirection: 'row',
               justifyContent: 'center',
               gap: { sm: 7, md: 9 },
-              '@media (min-width: 300px) and (max-width: 767px)': {
+              '@media (min-width: 300px) and (max-width: 626px)': {
                 flexDirection: 'column',
                 gap: 5,
+              },
+              '@media (min-width: 600px) and (max-width: 700px)': {
+                px: 4,
               },
             }}
           >
@@ -131,8 +134,8 @@ const HeroSection = ({ data, Content, image }) => {
                     width: { sm: '300px', md: '400px', lg: '435.2px' },
                     height: { sm: '290px', md: '390px', lg: '418.607px' },
                     '@media (min-width: 600px) and (max-width: 767px)': {
-                      width: '300px',
-                      height: '290px',
+                      width: '250px',
+                      height: '246px',
                     },
                     '@media (min-width: 300px) and (max-width: 599px)': {
                       width: '200px',
