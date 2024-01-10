@@ -6,7 +6,10 @@ const OurQualityService = ({ ourQualityService }) => {
   return (
     <Box sx={{ mb: '4%' }}>
       <Container>
-        <Grid container>
+        <Grid
+          container
+          direction={{ xs: 'column-reverse', sm: 'column-reverse', md: 'row' }}
+        >
           <Grid item md={6}>
             <Grid container spacing={2}>
               {card?.map((item, index) => (
@@ -57,7 +60,7 @@ const OurQualityService = ({ ourQualityService }) => {
               justifyContent: { lg: 'right', xs: 'center' },
             }}
           >
-            <Box sx={{ alignItems: 'center' }}>
+            <Box sx={{ alignItems: 'center', pt: { xs: '30px', md: '0px' } }}>
               <Typography
                 sx={{
                   color: '#001C63',
@@ -75,13 +78,13 @@ const OurQualityService = ({ ourQualityService }) => {
                 sx={{
                   color: '#001C63',
                   textAlign: { xs: 'center', md: 'right' },
-                  my: '20px',
-                  pl: { md: '10px', lg: '40px' },
+                  my: { xs: '20px', md: '20px' },
+                  ml: { md: '10px ', lg: '40px' },
                   lineHeight: { xs: '17px', md: '30.4px' },
                   fontStyle: 'normal',
                   fontSize: { xs: '10px', sm: '12px', md: '16px' },
                   fontWeight: 400,
-                  px: { xs: '13px' },
+                  px: { xs: '13px', md: '0px' },
                 }}
               >
                 {subHeading}

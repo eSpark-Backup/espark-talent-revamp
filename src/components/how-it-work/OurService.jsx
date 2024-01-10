@@ -59,15 +59,15 @@ const OurService = ({ ourService }) => {
                 sx={{
                   maxWidth: {
                     xs: '316.31px',
-                    md: 'auto !important',
-                    lg: '365.643px !important',
+                    md: 'auto ',
+                    lg: '405.643px ',
                   },
                   height: { xs: '201.32px', sm: '232.671px' },
                   borderRadius: '8.875px',
                   backgroundColor: '#fff',
                   boxShadow: ' 0px 0px 31.062px 0px rgba(0, 0, 0, 0.07)',
                   py: '20px',
-                  margin: { xs: '10px auto !important', md: '7px !important' },
+                  margin: { xs: '10px auto !important', md: '7px ' },
                 }}
               >
                 <Box>
@@ -90,7 +90,7 @@ const OurService = ({ ourService }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: { xs: '19.197px !important', md: '22.187px' },
+                        fontSize: { xs: '19.197px ', md: '22.187px' },
                         fontStyle: 'normal',
                         fontWeight: 600,
                         lineHeight: { xs: '20.272px', md: '23.43px' },
