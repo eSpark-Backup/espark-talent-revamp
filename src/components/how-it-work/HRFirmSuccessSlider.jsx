@@ -74,10 +74,10 @@ const HRFirmSuccessSlider = ({ card }) => {
                   }}
                 >
                   <Image
-                    src={item.image}
+                    src={item?.image}
                     width={150}
                     height={100}
-                    alt={item.alt}
+                    alt={item?.alt}
                   />
                 </Grid>
                 <Grid
@@ -102,7 +102,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                           lineHeight: '24.225px',
                         }}
                       >
-                        {item.title}
+                        {item?.title}
                       </Typography>
                       <Typography
                         sx={{
@@ -118,7 +118,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                           },
                         }}
                       >
-                        {item.description}
+                        {item?.description}
                       </Typography>
                     </Box>
                   </Box>

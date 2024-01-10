@@ -19,8 +19,8 @@ const CareerCards = ({ data }) => {
 
   const jobCategories = Array.from(
     new Set(
-      data.flatMap((item) =>
-        Array.isArray(item.category) ? item.category : [item.category]
+      data?.flatMap((item) =>
+        Array.isArray(item?.category) ? item?.category : [item?.category]
       )
     )
   );
@@ -28,7 +28,7 @@ const CareerCards = ({ data }) => {
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data.filter((item) => item.category.includes(selectedCategory));
+      : data?.filter((item) => item?.category.includes(selectedCategory));
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
@@ -58,6 +58,12 @@ const CareerCards = ({ data }) => {
               value={selectedCategory}
               onChange={handleJobCategoryChange}
               fullWidth
+              fontSize={{
+                xs: '13px',
+                sm: '13px',
+                md: '15px',
+                lg: '20px',
+              }}
             >
               <MenuItem value="all">All</MenuItem>
               {jobCategories.map((category, index) => (
@@ -75,10 +81,14 @@ const CareerCards = ({ data }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 borderTop: '.5px solid #ced4da',
-                py: { lg: '3%', sm: '3%' },
+                py: { lg: '3%', sm: '3%', xs: '20px' },
                 my: { xs: '20px', sm: '20px' },
                 borderRadius: { xs: '10px', sm: '20px' },
-                boxShadow: { md: 'none', sm: `5px 5px 15px rgba(0,0,0,.3)` },
+                boxShadow: {
+                  md: 'none',
+                  sm: `5px 5px 15px rgba(0,0,0,.3)`,
+                  xs: `5px 5px 15px rgba(0,0,0,.3)`,
+                },
               }}
             >
               <Grid
@@ -92,7 +102,16 @@ const CareerCards = ({ data }) => {
                 <Typography variant="h3" color="secondary">
                   {item?.heading}
                 </Typography>
-                <Typography variant="body1" color="#000">
+                <Typography
+                  variant="body1"
+                  fontSize={{
+                    xs: '12px',
+                    sm: '12px',
+                    md: '15px',
+                    lg: '20px',
+                  }}
+                  color="#000"
+                >
                   {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
@@ -112,7 +131,16 @@ const CareerCards = ({ data }) => {
                 >
                   Description
                 </Typography>
-                <Typography variant="body1" color="#000">
+                <Typography
+                  variant="body1"
+                  fontSize={{
+                    xs: '12px',
+                    sm: '12px',
+                    md: '15px',
+                    lg: '20px',
+                  }}
+                  color="#000"
+                >
                   {item?.description}
                 </Typography>
               </Grid>
@@ -132,7 +160,6 @@ const CareerCards = ({ data }) => {
                     title={`Apply Now >`}
                     link={item?.link}
                     color={'primary'}
-                    size={'170px'}
                   />
                 </Box>
               </Grid>
