@@ -99,7 +99,7 @@ const ExpertTeamCard = ({ teamData }) => {
                       src={item?.icon}
                       width={50}
                       height={50}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Box>
 

@@ -75,7 +75,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     src={item?.icon}
                     width={isXsOrSm ? 40 : 100}
                     height={200}
-                    alt={item.alt}
+                    alt={item?.alt}
                     className="swiper-image"
                   />
                 </Box>
@@ -92,7 +92,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       mt: { lg: 1 },
                     }}
                   >
-                    {item.title}
+                    {item?.title}
                   </Typography>
                   <Typography
                     sx={{
@@ -109,7 +109,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       mt: { lg: 1 },
                     }}
                   >
-                    {item.paragraph}
+                    {item?.paragraph}
                   </Typography>
                 </Box>
               </Box>

@@ -28,7 +28,7 @@ const BusinessVenture = ({ data }) => {
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
-                  {data.title}
+                  {data?.title}
                 </Typography>
               </Box>
             </Box>
@@ -49,7 +49,7 @@ const BusinessVenture = ({ data }) => {
                       lineHeight: '23.741px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
@@ -68,7 +68,7 @@ const BusinessVenture = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={data.alt} />
+              <Image src={data?.image} width={380} height={300} alt={data?.alt} />
             </Box>
           </Grid>
         </Grid>

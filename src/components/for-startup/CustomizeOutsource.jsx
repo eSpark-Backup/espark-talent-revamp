@@ -28,7 +28,7 @@ const CustomizeOutsource = ({ data }) => {
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
-                  {data.title}
+                  {data?.title}
                 </Typography>
               </Box>
             </Box>
@@ -48,7 +48,7 @@ const CustomizeOutsource = ({ data }) => {
                       lineHeight: '27.23.741px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
@@ -67,7 +67,7 @@ const CustomizeOutsource = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={data.alt} />
+              <Image src={data?.image} width={380} height={300} alt={data?.alt} />
             </Box>
           </Grid>
         </Grid>

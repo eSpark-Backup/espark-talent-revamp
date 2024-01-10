@@ -1,7 +1,25 @@
-export const NOT_FOUND_DATA = {
+const NOT_FOUND_DATA = {
   image: '/images/404Error.png',
   title: 'Error 404: Page Not Found!',
   desc: 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.',
   btnLink: '/',
   btnText: 'Back to Homepage',
 };
+
+const WIKIS_NOT_FOUND_DATA = {
+  image: '/images/404Error.png',
+  title: 'Oops: This Wiki Not Found',
+  desc: 'Please check your link and ensure that you are on the correct page.',
+  btnLink: '/wikis',
+  btnText: 'Back to eSpark Wiki',
+};
+
+const BLOGS_NOT_FOUND_DATA = {
+  image: '/images/404Error.png',
+  title: 'Oops: This Blog Not Found',
+  desc: 'Please check your link and make sure that you are on the right page.',
+  btnLink: '/blogs',
+  btnText: 'Back to Blogs',
+};
+
+export { NOT_FOUND_DATA, WIKIS_NOT_FOUND_DATA, BLOGS_NOT_FOUND_DATA };

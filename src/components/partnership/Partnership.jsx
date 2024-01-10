@@ -22,7 +22,7 @@ const Partnership = ({ partnership }) => {
               {content.map((item, index) => (
                 <Box key={index} sx={{ pr: 3 }}>
                   <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
-                    {item.title}
+                    {item?.title}
                   </Typography>
                   <Typography
                     sx={{
@@ -33,9 +33,9 @@ const Partnership = ({ partnership }) => {
                       lineHeight: '45.766px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
-                  {item.items?.map((list, itemIndex) => (
+                  {item?.items?.map((list, itemIndex) => (
                     <Box
                       key={itemIndex}
                       sx={{ display: 'flex', textAlign: 'baseline' }}

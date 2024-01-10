@@ -2,11 +2,9 @@ import React from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 
-const NotFound = () => {
-  const { image, title, desc, btnLink, btnText } = NOT_FOUND_DATA;
+const NotFound = ({data}) => {
   return (
     <Box
       sx={{
@@ -24,18 +22,18 @@ const NotFound = () => {
             justifyContent: 'center',
           }}
         >
-          <Image src={image} alt="404 Error" width={500} height={200} />
+          <Image src={data?.image || NOT_FOUND_DATA.image} alt="404 Error" width={500} height={200} />
         </Box>
 
         <Typography variant="h2" sx={{ mt: 4, mb: 3, textAlign: 'center' }}>
-          {title}
+          {data?.title || NOT_FOUND_DATA.title}
         </Typography>
 
         <Typography
           variant="body1"
           sx={{ mb: 4, px: '25%', textAlign: 'center' }}
         >
-          {desc}
+          {data?.desc || NOT_FOUND_DATA.desc}
         </Typography>
 
         <Box
@@ -45,9 +43,9 @@ const NotFound = () => {
             justifyContent: 'center',
           }}
         >
-          <Link href={btnLink}>
+          <Link href={data?.btnLink || NOT_FOUND_DATA.btnLink}>
             <Button variant="contained" color="primary">
-              {btnText}
+              {data?.btnText || NOT_FOUND_DATA.btnText}
             </Button>
           </Link>
         </Box>
