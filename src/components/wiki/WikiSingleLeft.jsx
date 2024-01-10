@@ -19,24 +19,24 @@ const WikiSingleLeft = ({ data }) => {
         boxShadow: '0px 0px 7.8px 0px rgba(0, 0, 0, 0.25)',
       }}
     >
-      {data.content?.map((item, index) => (
+      {data?.content?.map((item, index) => (
         <Box key={index}>
           <Typography variant="h3" color="secondary" sx={{ py: '5px' }}>
-            {item.title}
+            {item?.title}
           </Typography>
           <Typography
             variant="body1"
             color="#000"
             sx={{ fontSize: '18px', py: '5px' }}
           >
-            {item.description}
+            {item?.description}
           </Typography>
-          {item.items?.map((list, itemIndex) => (
+          {item?.items?.map((list, itemIndex) => (
             <Box key={itemIndex} py={'1%'}>
               <ListItem sx={{ py: '0' }}>
                 <ListItemIcon>
                   <Image
-                    src={data.listIcon}
+                    src={data?.listIcon}
                     alt="List Icon"
                     width={15}
                     height={15}
