@@ -44,7 +44,7 @@ const WhyChooseOurHr = ({ data }) => {
                   textAlign: { xs: 'center', md: 'left' },
                 }}
               >
-                {data.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
@@ -58,7 +58,7 @@ const WhyChooseOurHr = ({ data }) => {
                   p: { xs: '5px', md: '0px' },
                 }}
               >
-                {data.paragraph}
+                {data?.paragraph}
               </Typography>
             </Box>
           </Grid>
@@ -128,10 +128,10 @@ const WhyChooseOurHr = ({ data }) => {
                         >
                           <ListItemIcon sx={{ minWidth: '30px' }}>
                             <Image
-                              src={item.icon}
+                              src={item?.icon}
                               width={isXsOrSm ? 100 : 200}
                               height={65}
-                              alt={item.alt}
+                              alt={item?.alt}
                             />
                           </ListItemIcon>
                         </Box>
@@ -146,7 +146,7 @@ const WhyChooseOurHr = ({ data }) => {
                               pb: { xs: '5px', md: '7px' },
                             }}
                           >
-                            {item.title}
+                            {item?.title}
                           </Typography>
 
                           <Typography
@@ -167,7 +167,7 @@ const WhyChooseOurHr = ({ data }) => {
                               },
                             }}
                           >
-                            {item.description}
+                            {item?.description}
                           </Typography>
                         </Box>
                       </Box>

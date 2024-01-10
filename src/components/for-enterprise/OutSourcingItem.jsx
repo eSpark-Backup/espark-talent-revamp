@@ -10,7 +10,7 @@ const OutSourcingItem = ({ data }) => {
       <Box sx={{ pt: '2%', pb: '4%' }}>
         <Container>
           <Grid container spacing={2} justifyContent="center">
-            {data?.items.map((item, index) => (
+            {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item

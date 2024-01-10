@@ -121,7 +121,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       mt: { lg: '1px' },
                     }}
                   >
-                    {item.title}
+                    {item?.title}
                   </Typography>
                   <Typography
                     sx={{
@@ -138,7 +138,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       p: { xs: '8px 0 0 0', md: '19px 0 0 0' },
                     }}
                   >
-                    {item.paragraph}
+                    {item?.paragraph}
                   </Typography>
                 </Box>
               </Box>
