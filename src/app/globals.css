@@ -119,10 +119,11 @@ span {
   box-shadow: none !important;
 }
 
-.swiper-image {
+/* .swiper-image {
   width: 100px;
   height: 50px;
-}
+} */
+
 
 /* ---------------------------- */
 /* country Input styling */
@@ -195,10 +196,20 @@ span {
   width: 40px;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .swiper-image {
     width: 250px;
     height: 30px;
+  }
+} */
+@media (max-width: 768px) {
+  .swiper-controller-icon {
+    width: 12px;
+    height: 15px;
+  }
+  .its-our-job-card-image{
+    width: 33px !important;
+    height: 33px !important;
   }
 }
 
@@ -241,39 +252,39 @@ span {
 }
 
 .blog-content h1 {
-  font-size: 50px;
+  font-size: 25px;
   font-weight: 700;
   color: #001C63;
 }
 
 .blog-content h2 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
-  color: #001C63;
+  color: #001C63;text-align: left;
 }
 
 .blog-content h3 {
   font-size: 20px;
   font-weight: 400;
-  color: #001C63;
+  color: #001C63;text-align: left;
 }
 
 .blog-content h4 {
   font-size: 18px;
   font-weight: 700;
-  color: #001C63;
+  color: #001C63;text-align: left;
 }
 
 .blog-content h5 {
   font-size: 22px;
   font-weight: 600;
-  color: #001C63;
+  color: #001C63;text-align: left;
 }
 
 .blog-content h6 {
   font-size: 16px;
   font-weight: 700;
-  color: #001C63;
+  color: #001C63;text-align: left;
 }
 
 .blog-content p {
@@ -281,25 +292,25 @@ span {
   font-weight: 400;
   line-height: 32.3px;
   color: #6F76A8;
-  padding-bottom: 15px;
+  padding-bottom: 15px;text-align: left;
 }
 
 .blog-content li {
   font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color: #6F76A8;
+  color: #6F76A8;text-align: left;
 }
 
 .blog-content ul {
   list-style-type: none;
   padding: 0;
-  color: #6F76A8;
+  color: #6F76A8;text-align: left;
 }
 
 .blog-content li {
   margin-bottom: 10px;
-  position: relative;
+  position: relative;text-align: left;
 }
 
 .blog-content li::before {
@@ -308,10 +319,99 @@ span {
   color: #6F76A8;
   font-size: 17px;
   margin-right: 8px;
-  display: inline-block;
+  display: inline-block;text-align: left;
+}
+@media only screen and (max-width: 1024px) {
+  .blog-content h2 {
+  font-size: 22px;
 }
 
-.mix-reviews-area {
+.blog-content h3 {
+  font-size: 22px;
+}
+
+.blog-content p {
+  font-size: 14px;
+  text-align: justify;
+line-height: 20px;
+}
+.blog-content li {
+  font-size: 14px;
+  text-align: justify;
+line-height: 20px;
+}
+}
+@media only screen and (max-width: 768px) {
+  .blog-content h2 {
+  font-size: 22px;
+}
+
+.blog-content h3 {
+  font-size: 22px;
+}
+.blog-content p {
+  font-size: 13px;
+  text-align: justify;
+line-height: 20px;
+}
+.blog-content li {
+  font-size: 13px ;
+  text-align: justify;
+line-height: 20px;
+}
+}
+@media only screen and (max-width: 425px) {
+  .blog-content h2 {
+  font-size: 17px;
+}
+
+.blog-content h3 {
+  font-size: 14px;
+}
+.blog-content p {
+  font-size: 11px;text-align: justify;
+line-height: 17px;
+}
+.blog-content li {
+  font-size: 11px;
+}
+}
+@media only screen and (max-width: 360px) {
+  .blog-content h2 {
+  font-size: 17px;
+}
+
+.blog-content h3 {
+  font-size: 14px;
+}
+.blog-content p {
+  font-size: 11px;
+  text-align: justify;
+line-height: 17px;
+}
+.blog-content li {
+  font-size: 11px;
+}
+}
+@media only screen and (max-width: 360px) {
+  .blog-content h2 {
+  font-size: 17px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 14px;
+}
+.blog-content p {
+  font-size: 11px;
+  text-align: justify;
+line-height: 17px;
+}
+.blog-content li {
+  font-size: 11px;
+}
+}
+.mix-reviews-area { 
   position: relative;
   margin-bottom: -167px;
 }
@@ -332,6 +432,19 @@ span {
     rgba(0, 0, 0, 0.16) 1px 4px 36px -15px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.1) 0px 15px 1px 0px;
+}
+.swiper-slide {
+  max-width: 556px !important;
+  width: 100%;
+}
+.mySwiper {
+  max-width: 1115px !important;
+}
+.mySwiper-its-our-job {
+  max-width: 1200px !important;
+}
+.why-choose-hr-Swiper {
+  max-width: 450px !important;
 }
 
 .swiper-3d .swiper-slide-shadow-left,

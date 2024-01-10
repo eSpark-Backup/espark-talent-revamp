@@ -55,7 +55,7 @@ const OurOutsourcing = ({ data }) => {
                   textAlign: { xs: 'center', md: 'left' },
                 }}
               >
-                {data.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
@@ -69,7 +69,7 @@ const OurOutsourcing = ({ data }) => {
                   mr: { lg: '10%', md: '5%' },
                 }}
               >
-                {data.description}
+                {data?.description}
               </Typography>
             </Box>
             {listItem?.map((item, index) => (
@@ -88,7 +88,7 @@ const OurOutsourcing = ({ data }) => {
                       lineHeight: '27.23.741px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
@@ -114,7 +114,12 @@ const OurOutsourcing = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={data.alt} />
+              <Image
+                src={data?.image}
+                width={380}
+                height={300}
+                alt={data?.alt}
+              />
             </Box>
           </Grid>
         </Grid>

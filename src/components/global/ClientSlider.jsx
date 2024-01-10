@@ -8,6 +8,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTheme } from '@mui/system';
 
 const extendClients = (clients, length) => {
   const extendedClients = Array.from({ length }, (_, index) => ({
@@ -20,15 +21,12 @@ const ClientSlider = ({
   bgColor,
   txtColor,
   title,
-  fontWeight,
   data,
   length = 1000,
-  breakPoints,
   pb,
-  variant,
 }) => {
   const extendedData = {
-    clients: extendClients(data.clients, length),
+    clients: extendClients(data?.clients, length),
   };
 
   const getImagePath = (originalImagePath) => {
@@ -38,20 +36,28 @@ const ClientSlider = ({
       return originalImagePath.replace('_light', '_dark');
     }
   };
+  const theme = useTheme();
 
   return (
     <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
       <Container sx={{ pb: pb || '10px' }}>
         <Typography
-          variant={variant || 'h2'}
           color={txtColor}
-          sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
+          sx={{
+            textAlign: 'center',
+            fontWeight: '500 !important',
+            py: '30px',
+            fontSize: '24px !important',
+            [theme.breakpoints.down('sm')]: {
+              fontSize: '13px !important',
+            },
+          }}
         >
           {title}
         </Typography>
       </Container>
       <Swiper
-        spaceBetween={0}
+        spaceBetween={10}
         centeredSlides={true}
         autoplay={{
           delay: 3000,
@@ -61,18 +67,25 @@ const ClientSlider = ({
         loop={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
-        breakpoints={breakPoints}
+        speed={1500}
+        breakpoints={{
+          320: { slidesPerView: 2 },
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
+        slidesPerView={1} // Default value, will be overridden by breakpoints
       >
         {extendedData.clients.map((item, index) => (
           <SwiperSlide key={index}>
             <Box sx={{ pb: pb || 5 }}>
               {
-                <Link href={item.link}>
+                <Link href={item?.link}>
                   <Image
-                    src={getImagePath(item.image)}
-                    alt={item.image}
-                    height={item.imageHeight}
-                    width={item.imageWidth}
+                    src={getImagePath(item?.image)}
+                    alt={item?.image}
+                    height={item?.imageHeight}
+                    width={item?.imageWidth}
                   />
                 </Link>
               }
