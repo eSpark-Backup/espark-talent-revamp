@@ -2,6 +2,11 @@ export const WHY_CHOOSE_OUR_HR_DATA = {
   title: 'Why Choose Our HR Hiring Service?',
   paragraph:
     'We provide what you dream for your company. Our team offers those services that fill out your requirements. A friendly collaboration with our team saves your time and frees you from hiring, managing and training your talented workforce.',
+  arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
+  arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
+  arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
+  alt: 'arrow',
+
   card: [
     {
       icon: '/images/whatwedo/why-choose-our-hr/setting.svg',
