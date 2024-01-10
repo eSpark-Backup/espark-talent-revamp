@@ -5,7 +5,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProfessionalTeamCard = ({ teamData }) => {
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
