@@ -132,14 +132,17 @@ span {
   display: flex;
   padding-top: 4px;
 }
+
 .PhoneInputCountry {
   width: 57px;
   display: flex;
   gap: 5px;
 }
+
 .PhoneInputCountrySelect {
   width: 100%;
 }
+
 .PhoneInputCountrySelectArrow {
   width: 7px !important;
   height: 7px !important;
@@ -148,12 +151,14 @@ span {
 .PhoneInputCountrySelect option {
   font-size: 14.448px;
 }
+
 .PhoneInputCountryIcon {
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
 }
+
 .PhoneInputCountryIcon img {
   width: 70px;
   height: 70px;
@@ -169,6 +174,7 @@ span {
   height: 40px;
   width: 100%;
 }
+
 .PhoneInputInput::-webkit-inner-spin-button {
   display: none;
 }
@@ -176,9 +182,11 @@ span {
 .PhoneInputInput:hover {
   border-color: black;
 }
+
 .PhoneInputInput:focus {
   outline-color: #029894;
 }
+
 .PhoneInputInput::placeholder {
   color: #b8c1d4;
 }
@@ -194,17 +202,32 @@ span {
   }
 }
 
+.partnerSpan {
+  color: #0C3C3A;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56.266px;
+}
+
 .hrFirmResponsive {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .hrFirmResponsive {
     display: block;
   }
 
   .hrFirmDesktop {
     display: none !important;
+  }
+  .partnerSpan {
+    color: #0C3C3A;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
   }
 }
 
@@ -216,34 +239,39 @@ span {
 
 .blog-content h2 {
   font-size: 25px;
-  font-weight: 600;color: #001C63;
+  font-weight: 600;
+  color: #001C63;
 }
 
 .blog-content h3 {
   font-size: 20px;
-  font-weight: 400;color: #001C63;
+  font-weight: 400;
+  color: #001C63;
 }
 
 .blog-content h4 {
   font-size: 18px;
-  font-weight: 700;color: #001C63;
+  font-weight: 700;
+  color: #001C63;
 }
 
 .blog-content h5 {
   font-size: 22px;
-  font-weight: 600;color: #001C63;
+  font-weight: 600;
+  color: #001C63;
 }
 
 .blog-content h6 {
   font-size: 16px;
-  font-weight: 700;color: #001C63;
+  font-weight: 700;
+  color: #001C63;
 }
 
 .blog-content p {
   font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color:  #6F76A8;
+  color: #6F76A8;
   padding-bottom: 15px;
 }
 
@@ -388,17 +416,39 @@ span {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .partner-form {
+    border-radius: 7.224px;
+    border: 1px solid #d0d4ea;
+    background: #fff;
+    flex-shrink: 0;
+    padding: 10px 16px !important;
+  }
+  .partner-form-button button {
+    width: 220.267px !important;
+    height: 50.531px;
+    border: 0;
+    border-radius: 15.25px;
+    background: #029894;
+    color: #fff;
+    text-align: center;
+    font-size: 13.333px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23.684px !important;
+  }
+}
 .partner-form {
   border-radius: 7.224px;
   border: 1px solid #d0d4ea;
   background: #fff;
   flex-shrink: 0;
-  padding: 30px 36px;
+  padding: 30px 26px;
 }
 
 .partner-form .starick {
   color: #f00;
-  
+
   font-size: 14.448px;
   font-style: normal;
   font-weight: 600;
@@ -577,7 +627,7 @@ input::-webkit-inner-spin-button {
   background: #029894;
   color: #fff;
   text-align: center;
- 
+
   font-size: 20.333px;
   font-style: normal;
   font-weight: 600;
@@ -591,7 +641,7 @@ input::-webkit-inner-spin-button {
 
 .partner-form .error-message {
   color: #f00;
-  
+
   font-size: 13.448px;
 }
 

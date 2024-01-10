@@ -93,7 +93,7 @@ export const ENTERPRISE_HERO_DATA = {
     'Big Dream Needs Premium Outsourcing Support To Conquer The Global Market.',
   description: `Your enterprise demands eSpark Talent’s instant onboarding services. Join the club of our esteemed clients and start your successful business campaign today!`,
   button: {
-    label: 'Hire a Talent',
+    label: 'Book a Demo',
     link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',

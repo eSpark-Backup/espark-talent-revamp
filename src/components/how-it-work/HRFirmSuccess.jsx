@@ -14,14 +14,14 @@ const HRFirmSuccess = ({ hrFirm }) => {
         <Title heading={heading} subHeading={subHeading} />
         <Grid container className="hrFirmDesktop">
           {card?.map((item, index) => (
-            <Grid item md={6} key={index}>
+            <Grid item md={6} key={index} sx={{}}>
               <Box
                 sx={{
                   borderRadius: '13.764px',
                   border: '0.918px solid #E5E5E5',
                   background: '#FFF',
-                  width: { lg: '683.614px' },
-                  height: '218.584px',
+                  width: { lg: '643.614px', md: 'auto' },
+                  height: '238.584px',
                   padding: ' 28.447px 17.435px 35.788px 17.435px',
                   display: 'center',
                   alignItems: 'center',
@@ -33,16 +33,16 @@ const HRFirmSuccess = ({ hrFirm }) => {
                 <Box sx={{ display: 'flex' }}>
                   <Box
                     sx={{
-                      width: { lg: '340px', md: '260px' },
-                      height: 'auto',
+                      // width: { lg: '20px', md: '260px' },
+                      // height: 'auto',
                       display: 'flex',
                       justifyContent: 'center',
                       mx: 2,
                     }}
                   >
                     <Image
-                      src={item?.image}
-                      width={150}
+                      src={item.image}
+                      width={400}
                       height={100}
                       alt={item?.alt}
                     />

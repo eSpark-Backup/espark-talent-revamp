@@ -3,12 +3,20 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-const TalentIgnite = ({ data }) => {
+const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
   return (
     <Box sx={{ my: 4 }}>
       <Container>
         <Grid container sx={{ flexDirection: { md: 'row', xs: 'row' } }}>
-          <Grid item xs={12} sm={12} md={7} sx={{ order: { md: 2, xs: 1 } }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={7}
+            alignItems="center"
+            justifyContent="center"
+            sx={{ order: { md: 2, xs: 1 } }}
+          >
             <Typography
               sx={{
                 color: '#001C63',
@@ -16,8 +24,10 @@ const TalentIgnite = ({ data }) => {
                 fontWeight: 500,
                 lineHeight: '41.547px',
                 ml: { lg: '10%', md: '5%' },
-                mr: { lg: '35%', md: '5%' },
-                mt: { md: '30px', lg: '90px' },
+                mr: { lg: '15%', md: '5%' },
+                mt: isBestOutsourceComponent
+                  ? { md: '40px', lg: '50px' }
+                  : { md: '30px', lg: '60px' },
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
