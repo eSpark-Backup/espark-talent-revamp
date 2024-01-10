@@ -83,7 +83,7 @@ const CareerCards = ({ data }) => {
                 borderTop: '.5px solid #ced4da',
                 py: { lg: '3%', sm: '3%', xs: '20px' },
                 my: { xs: '20px', sm: '20px' },
-                borderRadius: { xs: '10px', sm: '20px', sm: '20px' },
+                borderRadius: { xs: '10px', sm: '20px' },
                 boxShadow: {
                   md: 'none',
                   sm: `5px 5px 15px rgba(0,0,0,.3)`,

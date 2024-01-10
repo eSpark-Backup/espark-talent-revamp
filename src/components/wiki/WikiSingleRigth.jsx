@@ -12,23 +12,36 @@ const WikiSingleRigth = () => {
         boxShadow: '0px 0px 7.8px 0px rgba(0, 0, 0, 0.25)',
       }}
     >
-      <Typography  color={'white'} variant='h2' pb="10px" sx={{fontSize:{xs: '23px',
-                      sm: '23px',
-                      md: '28px',
-                      lg: '35px',
-                      xl: '35px'}}}>
+      <Typography
+        color={'white'}
+        variant="h2"
+        pb="10px"
+        sx={{
+          fontSize: {
+            xs: '23px',
+            sm: '23px',
+            md: '28px',
+            lg: '35px',
+            xl: '35px',
+          },
+        }}
+      >
         {`Recruit the top developer.`}
       </Typography>
-      <Typography variant="body1" color={'white'} fontSize={'16px'}
+      <Typography
+        variant="body1"
+        color={'white'}
+        fontSize={'16px'}
         sx={{
           fontSize: {
             xs: '12px',
-                      sm: '13px',
-                      md: '16px',
-                      lg: '22px',
-            xl: '23px'
-          }
-        }}>
+            sm: '13px',
+            md: '16px',
+            lg: '22px',
+            xl: '23px',
+          },
+        }}
+      >
         {`Let us know about your business requirements on an discovery call, and
         we'll handle the matchmaking process.`}
       </Typography>
