@@ -9,20 +9,20 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const WhyChooseOurHr = ({ data }) => {
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const swiperRef = useRef(null)
+  const swiperRef = useRef(null);
   const handleControlSwiper = (type) => {
     switch (type) {
-      case "next":
-        swiperRef?.current?.swiper?.slidePrev()
+      case 'next':
+        swiperRef?.current?.swiper?.slidePrev();
         break;
-      case "prev":
-        swiperRef?.current?.swiper?.slideNext()
+      case 'prev':
+        swiperRef?.current?.swiper?.slideNext();
         break;
 
       default:
         break;
     }
-  }
+  };
   return (
     <Box sx={{ my: '4%' }}>
       <Container>
@@ -55,7 +55,7 @@ const WhyChooseOurHr = ({ data }) => {
                   lineHeight: { md: '31.863px', xs: '20px' },
                   // pr: { md: 10 },
                   textAlign: { xs: 'center', md: 'justify' },
-                  p:{xs:"5px", md:"0px"}
+                  p: { xs: '5px', md: '0px' },
                 }}
               >
                 {data.paragraph}
@@ -105,7 +105,7 @@ const WhyChooseOurHr = ({ data }) => {
                       sx={{
                         backgroundColor: '#fff',
                         boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
-                        padding: {xs:"18px 10px",md:"25px 25px"},
+                        padding: { xs: '18px 10px', md: '25px 25px' },
                         borderRadius: '15px',
                         width: { xs: '294.31px', md: '100%' },
                         maxHeight: {
@@ -123,7 +123,7 @@ const WhyChooseOurHr = ({ data }) => {
                       >
                         <Box
                           sx={{
-                            mr: {xs:'13px',md:"20px"},
+                            mr: { xs: '13px', md: '20px' },
                           }}
                         >
                           <ListItemIcon sx={{ minWidth: '30px' }}>
@@ -143,7 +143,7 @@ const WhyChooseOurHr = ({ data }) => {
                               fontWeight: 700,
                               fontStyle: 'normal',
                               lineHeight: { lg: '26.4px', xs: '17.266px' },
-                              pb: { xs: "5px", md: "7px" },
+                              pb: { xs: '5px', md: '7px' },
                             }}
                           >
                             {item.title}
@@ -183,53 +183,59 @@ const WhyChooseOurHr = ({ data }) => {
                   my: 2,
                 }}
               >
-                <Box sx={{
-                  minWidth: { xs: "12px", md: "23px" },
-                  height: { xs: "15px", md: "23px" },
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}>
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
                   <Image
                     onClick={() => {
-                      handleControlSwiper("next")
+                      handleControlSwiper('next');
                     }}
                     src={data.arrowIconLeft}
                     width={17}
                     height={17}
                     alt={data.alt}
-                    className='swiper-controller-icon'
+                    className="swiper-controller-icon"
                   />
                 </Box>
-                <Box sx={{
-                  minWidth: { xs: "12px", md: "23px" },
-                  height: { xs: "15px", md: "23px" },
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}>
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
                   <Image
                     src={data.arrowIconCircle}
                     width={17}
                     height={17}
                     alt={data.alt}
-                    className='swiper-controller-icon'
+                    className="swiper-controller-icon"
                   />
                 </Box>
-                <Box sx={{
-                  minWidth: { xs: "12px", md: "23px" },
-                  height: { xs: "15px", md: "23px" },
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}>
+                <Box
+                  sx={{
+                    minWidth: { xs: '12px', md: '23px' },
+                    height: { xs: '15px', md: '23px' },
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
                   <Image
-                    onClick={() => handleControlSwiper("prev")}
+                    onClick={() => handleControlSwiper('prev')}
                     src={data.arrowIconRight}
                     width={17}
                     height={17}
                     alt={data.alt}
-                    className='swiper-controller-icon'
+                    className="swiper-controller-icon"
                   />
                 </Box>
               </Box>
