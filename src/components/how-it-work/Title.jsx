@@ -8,7 +8,8 @@ const Title = ({ heading, subHeading }) => {
         width: { md: '100%' },
         textAlign: 'center',
         margin: '0px auto',
-        pb: '25px',
+        pb: { xs: '20px', md: '25px' },
+        pt: { xs: '25px', md: '0px' },
       }}
     >
       <Typography
@@ -17,22 +18,21 @@ const Title = ({ heading, subHeading }) => {
           textAlign: 'center',
           fontSize: { md: '32px', xs: '20px' },
           lineHeight: { lg: '48px', xs: '26px' },
-
           fontWeight: 700,
           fontStyle: 'normal',
+          pb: { xs: '5px' },
         }}
       >
         {heading}
       </Typography>
       <Typography
         sx={{
-          px: { md: '300px' },
-
+          px: { xs: '10px', lg: '300px' },
           color: '#001C63',
           textAlign: 'center',
-          fontSize: '18px',
+          fontSize: { xs: '10px', sm: '12px', md: '18px' },
           fontWeight: 400,
-          lineHeight: '30px',
+          lineHeight: { xs: '18px', md: '30px' },
           fontStyle: 'normal',
         }}
       >
