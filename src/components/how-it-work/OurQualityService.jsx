@@ -13,15 +13,16 @@ const OurQualityService = ({ ourQualityService }) => {
                 <Grid
                   item
                   xs={12}
-                  md={6}
+                  md={12}
+                  lg={6}
                   key={index}
-                  sx={{ order: { md: 2, xs: 1 } }}
+                  sx={{ order: { sm: 1, xs: 2 } }}
                 >
                   <Box
                     sx={{
                       border: '1px solid #E5E5E5',
                       borderRadius: '5px',
-                      height: '80px',
+                      py: '18px',
                       display: 'flex',
                       alignItems: 'center',
                       alignContent: 'center',
@@ -30,9 +31,9 @@ const OurQualityService = ({ ourQualityService }) => {
                     }}
                   >
                     <Typography
-                      variant="h4"
-                      color={'secondary'}
                       sx={{
+                        color: '#001C63',
+                        px: { xs: '34px', md: '0' },
                         textAlign: 'center',
                         fontWeight: 600,
                         fontSize: '16px',
@@ -51,17 +52,16 @@ const OurQualityService = ({ ourQualityService }) => {
             xs={12}
             md={6}
             sx={{
-              order: { smDown: 1, md: 2 },
+              order: { sm: 2, xs: 1 },
               display: 'flex',
               justifyContent: { lg: 'right', xs: 'center' },
             }}
           >
             <Box sx={{ alignItems: 'center' }}>
               <Typography
-                variant="h2"
-                color="secondary"
                 sx={{
-                  textAlign: 'right',
+                  color: '#001C63',
+                  textAlign: { xs: 'center', md: 'right' },
                   flexWrap: 'wrap',
                   pl: { md: '20px', lg: '118px' },
                   lineHeight: { md: '56px', xs: '32px' },
@@ -72,15 +72,16 @@ const OurQualityService = ({ ourQualityService }) => {
                 {heading}
               </Typography>
               <Typography
-                color="secondary"
                 sx={{
-                  textAlign: 'right',
+                  color: '#001C63',
+                  textAlign: { xs: 'center', md: 'right' },
                   my: '20px',
                   pl: { md: '10px', lg: '40px' },
-                  lineHeight: '30.4px',
+                  lineHeight: { xs: '17px', md: '30.4px' },
                   fontStyle: 'normal',
-                  fontSize: '16px',
+                  fontSize: { xs: '10px', sm: '12px', md: '16px' },
                   fontWeight: 400,
+                  px: { xs: '13px' },
                 }}
               >
                 {subHeading}
