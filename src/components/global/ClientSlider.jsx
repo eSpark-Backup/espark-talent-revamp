@@ -59,22 +59,24 @@ const ClientSlider = ({
       <Swiper
         spaceBetween={10}
         centeredSlides={true}
+        slidesPerView={8}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
         }}
         navigation={false}
         loop={true}
+        speed={2000}
+        effect="slide"
         modules={[Autoplay, Navigation]}
         className="mySwiper"
-        speed={1500}
         breakpoints={{
           320: { slidesPerView: 2 },
           480: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
-        slidesPerView={1} // Default value, will be overridden by breakpoints
+        // Default value, will be overridden by breakpoints
       >
         {extendedData.clients.map((item, index) => (
           <SwiperSlide key={index}>
