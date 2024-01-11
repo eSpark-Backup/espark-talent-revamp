@@ -9,13 +9,13 @@ const CustomizeOutsource = ({ data }) => {
   return (
     <Box sx={{ my: 2 }}>
       <Container>
-        <Grid container>
+        <Grid container display={'flex'} alignItems={'center'}>
           <Grid item sm={12} md={6}>
             <Box
-              sx={{
-                mt: { md: '140px' },
-                pb: '12px',
-              }}
+            // sx={{
+            //   mt: { md: '140px' },
+            //   pb: '12px',
+            // }}
             >
               <Box>
                 <Typography
@@ -24,7 +24,8 @@ const CustomizeOutsource = ({ data }) => {
                     fontSize: '28px',
                     fontWeight: 500,
                     lineHeight: '41.547px',
-                    mr: { lg: '20%', md: '5%' },
+                    // mr: { lg: '20%', md: '5%' },
+                    mb: { xs: '17px', lg: '20px' },
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >

@@ -32,14 +32,20 @@ const Hero = ({ data }) => {
             <Grid
               item
               xs={12}
-              sm={6}
-              sx={{ display: 'flex', flexDirection: 'column' }}
+              sm={8}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                p: { xs: 'auto', lg: '0 130px 0 20px' },
+              }}
             >
               {data?.title && (
                 <Typography
                   variant={data?.titleVariant}
                   color={data?.titleColor}
                   sx={{
+                    fontSize: '50px !important',
+                    lineHeight: { xs: '30px', lg: '62px !important' },
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
                       fontSize: '23px !important',
@@ -54,9 +60,12 @@ const Hero = ({ data }) => {
                   variant={data?.descVariant}
                   color={data?.descColor}
                   sx={{
+                    lineHeight: { xs: '20px', lg: '42px !important' },
+                    padding: { xs: '0px', lg: '0 10px 0 0' },
                     py: '10px',
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
+                      fontSize: '13px',
                     },
                   }}
                 >
@@ -98,7 +107,7 @@ const Hero = ({ data }) => {
               <Grid
                 item
                 xs={12}
-                sm={6}
+                sm={4}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
