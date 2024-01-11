@@ -1,13 +1,15 @@
 'use client';
-import React from 'react';
-import { Grid, Box, Typography, Container } from '@mui/material';
+import React, { useState } from 'react';
+import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
+
 import SwiperCore, {
   EffectFade,
   Navigation,
   Pagination,
   Autoplay,
 } from 'swiper';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -19,23 +21,38 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonder = ({ data }) => {
+  const [selectedCard, setSelectedCard] = useState(0);
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+
+  const handleCardClick = (index) => {
+    setSelectedCard(index === selectedCard ? index : index);
+  };
+
   const swiperSettings = {
     slidesPerView: 3,
-    spaceBetween: 50,
+    spaceBetween: 20,
     centerMode: true,
     centerPadding: '0',
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
+
     pagination: {
       clickable: true,
       el: '.swiper-pagination',
       renderBullet: function (index, className) {
         return `<span class="${className}" style="background-color: ${
-          index === this.activeIndex ? 'darkgreen' : 'green'
+          index === this.activeIndex ? 'darkgreen' : 'lightgreen'
         }; width: 20px; height: 20px;"></span>`;
       },
     },
+
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -43,7 +60,7 @@ const OutSourcingWonder = ({ data }) => {
       360: {
         slidesPerView: 1,
       },
-      786: {
+      768: {
         slidesPerView: 2,
       },
       1024: {
@@ -60,16 +77,16 @@ const OutSourcingWonder = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: '3%', overflow: 'hidden' }}>
+      <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
         <Container>
           <Box sx={{ textAlign: 'center' }}>
             <Typography
               sx={{
-                color: '#09114A',
+                color: '#001C63',
                 textAlign: 'center',
-                fontSize: { md: '32px !important', xs: '20px !important' },
-                lineHeight: { lg: '48px', xs: '26px' },
-                px: { lg: '360px' },
+                fontSize: { lg: '32px', md: '28px', sm: '20px', xs: '20px' },
+                lineHeight: 1.3,
+                px: { lg: '20%' },
                 fontWeight: 700,
                 fontStyle: 'normal',
                 mb: '40px',
@@ -83,32 +100,59 @@ const OutSourcingWonder = ({ data }) => {
               {data?.items?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Grid
-                    item
-                    xs={4}
-                    sm={12}
-                    md={6}
-                    lg={4}
                     sx={{
-                      borderRadius: '23.172px',
-                      p: '30px',
-                      alignItems: 'center',
-                      minHeight: { md: '300px', lg: '270.469px' },
-                      width: { lg: '406.656px' },
+                      borderRadius: '20px',
+                      px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
+                      py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
+                      // alignItems: 'center',
+                      minHeight: {
+                        lg: '250px',
+                        md: '250px',
+                        sm: '200px',
+                        xs: '150px',
+                      },
+                      width: { lg: '100%' },
                       background: ' #FFF',
                       border: '2px rgba(0, 0, 0, 0.25) solid',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      flexDirection: 'column',
                     }}
                   >
                     <Image
                       src={item?.icon}
                       alt={item?.title}
-                      height={40}
-                      width={40}
+                      height={
+                        isSmallScreen
+                          ? 30
+                          : isMediumScreen
+                            ? 30
+                            : isLargeScreen
+                              ? 40
+                              : 40
+                      }
+                      width={
+                        isSmallScreen
+                          ? 30
+                          : isMediumScreen
+                            ? 30
+                            : isLargeScreen
+                              ? 40
+                              : 40
+                      }
+                      pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
                     />
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '18.887px',
-                        lineHeight: { md: '26.737px' },
+                        fontSize: {
+                          lg: '20px',
+                          md: '17px',
+                          sm: '13px',
+                          xs: '13px',
+                        },
+                        lineHeight: 1.3,
+                        pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}
@@ -118,10 +162,14 @@ const OutSourcingWonder = ({ data }) => {
                     <Typography
                       sx={{
                         color: '#000',
-                        fontSize: '18.887px',
-                        lineHeight: { md: '26.737px' },
+                        fontSize: {
+                          lg: '16px',
+                          md: '14px',
+                          sm: '13px',
+                          xs: '13px',
+                        },
+                        lineHeight: 1.3,
                         fontWeight: 400,
-                        fontStyle: 'normal',
                       }}
                     >
                       {item?.paragraph}
