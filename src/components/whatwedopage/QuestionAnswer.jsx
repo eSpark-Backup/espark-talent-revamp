@@ -9,31 +9,40 @@ const QuestionAnswer = ({ data }) => {
     <Box sx={{ mb: { md: '4%', xs: '10%' } }}>
       <Container>
         <Grid container>
-          <Grid item xs={12} sm={6} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid item xs={12} md={6} sx={{ order: { md: 2, xs: 2, sm: 2 } }}>
             <Box
               sx={{
                 backgroundColor: 'rgba(59, 89, 152, 0.04)',
                 borderRadius: '17.311px',
-                width: { lg: '564.66px' },
+                width: { lg: '594.66px' },
+                mt: { xs: '40px', md: '0px' },
               }}
             >
               <Box sx={{ display: 'flex', justifyContent: 'center', pt: 5 }}>
                 <Image
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
-                  width={413}
+                  width={440}
                   height={200}
                   alt="We make easy for companies to expand their network with eSpark Talent"
                 />
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              order: { md: 2, xs: 1, sm: 1 },
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                mt: { lg: 6, md: 2 },
               }}
             >
               <Typography
@@ -44,7 +53,8 @@ const QuestionAnswer = ({ data }) => {
                   fontWeight: 700,
                   fontStyle: 'normal',
                   lineHeight: { md: '48px', xs: '36px' },
-                  ml: { lg: '11px' },
+                  ml: { md: '5px', lg: '11px' },
+                  px: { xs: '5px', md: '0px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                 }}
               >
@@ -54,13 +64,14 @@ const QuestionAnswer = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   fontSize: { md: '18px', xs: '10px' },
-                  fontWeight: { xs: 700, sm: 400 },
+                  fontWeight: { xs: 700, md: 400 },
                   fontStyle: 'normal',
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                   textAlign: { xs: 'center', sm: 'right' },
-                  my: 2,
-                  ml: '10px',
+                  my: 2.5,
+                  ml: { md: '5px', lg: '30px' },
+                  px: { xs: '10px', md: '0px' },
                 }}
               >
                 {data?.descrioption}
@@ -74,8 +85,8 @@ const QuestionAnswer = ({ data }) => {
                 <ESparkButton
                   title={data?.buttonLabel}
                   link={data?.buttonLink}
-                  color={'primary'}
-                  size={'170px'}
+                  color={'secondary'}
+                  size={{ xs: '140px', lg: '190px' }}
                 />
               </Box>
             </Box>
