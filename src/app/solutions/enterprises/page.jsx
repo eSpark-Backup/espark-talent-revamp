@@ -41,12 +41,6 @@ const page = () => {
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
       />
-      <Box sx={{ pt: '2%', px: '10%' }}>
-        <ParagraphTitle
-          title={'How Fast Are Our Outsourcing Services?'}
-          paragraph={`At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.`}
-        />
-      </Box>
       <OutSourcingItem data={OUTSOURCING_LIST_DATA} />
       <OutSourcingAdvantage data={OUTSOURCING_ADVANTAGES_DATA} />
       <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
