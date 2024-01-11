@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Typography, Container, Grid, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
 import SwiperCore, {
@@ -21,6 +21,18 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingItem = ({ data }) => {
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+
+  const handleCardClick = (index) => {
+    setSelectedCard(index === selectedCard ? index : index);
+  };
+
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -58,7 +70,7 @@ const OutSourcingItem = ({ data }) => {
         pb: { lg: '25px', md: '25px', sm: '15px', xs: '15px' }
       }}>
         <Container>
-          <Box sx={{  px: { md: '20%', sm: '10%', xs: '2%' } }}>
+          <Box sx={{  px: { md: '20%', sm: '10%', xs: '2%' }, pb: { lg: '25px', md: '25px', sm: '15px', xs: '15px' } }}>
             <Typography
               color={'secondary'}
               sx={{
@@ -100,24 +112,22 @@ const OutSourcingItem = ({ data }) => {
                     xs={12}
                     sm={4}
                     sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
+                       borderRadius: '20px',
                       px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
                       py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
+                      // alignItems: 'center',
                       minHeight: {
-                        lg: '250px',
-                        md: '250px',
+                        lg: '300px',
+                        md: '270px',
                         sm: '200px',
                         xs: '150px',
                       },
                       width: { lg: '100%' },
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        borderRadius: '20px',
-                        p: '20px',
-                        background: ' #FFF',
+                      background: ' #FFF',
+                      border: '2px rgba(0, 0, 0, 0.25) solid',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      flexDirection: 'column',
                         border: '1px solid #029894',
                       }}
                     >
@@ -159,8 +169,24 @@ const OutSourcingItem = ({ data }) => {
                             <Image
                               src={item?.listIcon}
                               alt="List Icon"
-                              width={25}
-                              height={25}
+                              width={
+                        isSmallScreen
+                          ? 15
+                          : isMediumScreen
+                            ? 20
+                            : isLargeScreen
+                              ? 25
+                              : 25
+                      }
+                              height={
+                        isSmallScreen
+                          ? 15
+                          : isMediumScreen
+                            ? 20
+                            : isLargeScreen
+                              ? 25
+                              : 25
+                      }
                               style={{ marginTop: '8px' }}
                             />
                           </Box>
@@ -184,7 +210,7 @@ const OutSourcingItem = ({ data }) => {
                           </Box>
                         </Box>
                       ))}
-                    </Box>
+                    {/* </Box> */}
                   </Grid>
                 </SwiperSlide>
               ))}
