@@ -5,7 +5,6 @@ import React from 'react';
 import { useTheme } from '@mui/system';
 
 const Hero = ({ data }) => {
-  console.log(data.button?.label);
   const theme = useTheme();
 
   return (

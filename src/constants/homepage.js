@@ -87,6 +87,7 @@ export const PERKS_DATA = [
     icon: '/images/homepage/our-perks/icon1.svg',
     activeIcon: '/images/homepage/our-perks/icon1a.svg',
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
+    listIcon: '/images/homepage/our-perks/list-icon.svg',
     content: {
       heading: 'Hire Full-Time Salaried Employees',
       paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
@@ -96,7 +97,7 @@ export const PERKS_DATA = [
         { item: 'High-Value Contract Partnership,' },
         { item: 'Work-Life Balance Focus,' },
       ],
-      listIcon: '/images/homepage/our-perks/list-icon.svg',
+
       buttonText: 'Book A Demo',
       buttonLink: '/book-a-demo',
     },
