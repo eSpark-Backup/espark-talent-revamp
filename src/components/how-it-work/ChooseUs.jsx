@@ -42,7 +42,7 @@ const ChooseUs = ({ chooseUs }) => {
               </Box>
               <Grid container>
                 {list?.map((item, index) => (
-                  <Grid item xs={12} md={6} key={index}>
+                  <Grid item xs={12} md={12} lg={6} key={index}>
                     <Box
                       sx={{ display: 'flex', pl: { xs: '18px', md: '0px' } }}
                     >
