@@ -81,7 +81,7 @@ const ExpertTeamCard = ({ teamData }) => {
                   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
                   p: { xs: '39px 28px 20px 28px', md: '48px 31px 24px 31px' },
                   m: 1,
-                  height: { xs: 'auto', md: '250px' },
+                  height: { xs: '250px', md: '250px' },
                 }}
               >
                 <Box
