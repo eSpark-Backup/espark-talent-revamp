@@ -69,6 +69,7 @@ const Header = () => {
         position="static"
         sx={{
           background: '#F7F7F7',
+          px: 45,
         }}
       >
         <Container>

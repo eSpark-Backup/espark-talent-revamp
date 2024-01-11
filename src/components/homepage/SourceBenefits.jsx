@@ -18,7 +18,7 @@ const SourceBenefits = ({ data }) => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 flexDirection: 'column',
-                width: { sm: '600px', md: '700px', lg: '800px' },
+                width: { sm: '600px', md: '700px', lg: '900px' },
                 '@media(min-width: 570px) and (max-width: 767px)': {
                   width: '550px',
                   pt: 2,

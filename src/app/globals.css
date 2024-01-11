@@ -149,8 +149,13 @@ span {
 }
 
 .PhoneInputCountry {
-  width: 67px;
+  width: 100px;
+  border: 0.903px solid #bcbfc0;
+  background: #fff;
+  border-radius: 5.418px;
   display: flex;
+  justify-content: space-around;
+  /* gap: 7px; */
 }
 
 .PhoneInputCountrySelect {
@@ -164,6 +169,7 @@ span {
 
 .PhoneInputCountrySelect option {
   font-size: 14.448px;
+  color: black;
 }
 
 .PhoneInputCountryIcon {
@@ -184,7 +190,8 @@ span {
   border-radius: 5.418px;
   padding-left: 10px;
   border: 0.903px solid #bcbfc0;
-  background: #f5f8fa;
+  background: #fff;
+  color: black;
   height: 40px;
   width: 100%;
 }
@@ -194,7 +201,7 @@ span {
 }
 
 .PhoneInputInput:hover {
-  border-color: black;
+  border-color: #029894;
 }
 
 .PhoneInputInput:focus {
@@ -203,7 +210,7 @@ span {
 }
 
 .PhoneInputInput::placeholder {
-  color: #b8c1d4;
+  color: #9c9c9cbc;
 }
 
 .PhoneInputCountryIconImg {
@@ -343,7 +350,7 @@ span {
 .blog-content h1 {
   font-size: 25px;
   font-weight: 700;
-  color: #001C63;
+  color: #001c63;
 }
 
 .blog-content h2 {
@@ -405,7 +412,7 @@ span {
 .blog-content li::before {
   content: '\2022';
   content: '\2022';
-  color: #6F76A8;
+  color: #6f76a8;
   font-size: 17px;
   margin-right: 8px;
   display: inline-block;text-align: left;
