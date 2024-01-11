@@ -1,43 +1,59 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Typography, ListItemIcon, Grid } from '@mui/material';
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { Box, Container, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ESparkButton from '../global/eSparkButton';
 
 const Perks = ({ data }) => {
   const [selectedCard, setSelectedCard] = useState(0);
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const handleCardClick = (index) => {
     setSelectedCard(index === selectedCard ? index : index);
   };
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
-    <Box sx={{ py: '4%' }}>
+    <Box sx={{ py: '5%', px: '3%' }}>
       <Container>
         <Box
           sx={{
             borderRadius: '20px',
             background:
               'linear-gradient(97deg, #029894 0.53%, #036764 102.09%)',
-            py: '3%',
+            // py: '3%',
           }}
         >
-          <Grid container sx={{ display: 'flex' }}>
+          <Grid
+            container
+            sx={{
+              display: 'flex',
+              p: { lg: '20px', md: '20px', sm: '20px', xs: '20px' },
+              alignItems: ' center',
+            }}
+          >
             <Grid
               item
               xs={12}
               sm={12}
-              md={5}
+              md={6}
+              lg={5}
+              xl={5}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
               }}
             >
-              <Box sx={{ margin: '0px auto' }}>
+              <Box sx={{ mx: { lg: '20px', md: '20px' }, py: { sm: '20px' } }}>
                 {data?.map((perk, index) => (
                   <Box
+                    container
                     key={index}
                     onClick={() => handleCardClick(index)}
                     sx={{
@@ -46,8 +62,8 @@ const Perks = ({ data }) => {
                       borderRadius: '20px',
                       mb: '20px',
                       py: '20px',
-                      px: { xs: '15px', md: '20px' },
-                      mx: { xs: '15px', md: '20px' },
+                      px: { xs: '20px', md: '20px' },
+                      // mx: { xs: '15px', md: '20px' },
                       background:
                         index === selectedCard
                           ? 'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF'
@@ -69,15 +85,24 @@ const Perks = ({ data }) => {
                       alt={perk.title}
                     />
                     <Typography
-                      variant={isXsOrSm ? 'h7' : 'h2'}
                       color={index === selectedCard ? '#FFFFFF' : '#001C63'}
-                      sx={{ flexWrap: 'wrap', pl: '10px' }}
+                      sx={{
+                        flexWrap: 'wrap',
+                        pl: '10px',
+                        fontWeight: 500,
+                        fontSize: {
+                          lg: '20px',
+                          xl: '20px',
+                          sm: '15px',
+                          xs: '13px',
+                        },
+                      }}
                     >
                       {perk?.title}
                     </Typography>
                     <Typography
-                      variant={isXsOrSm ? 'h4' : 'h2'}
-                      color={'#E0DDDDAD'}
+                      fontSize={'30px'}
+                      color={'rgba(224, 221, 221, 0.68)'}
                     >
                       {perk?.sno}
                     </Typography>
@@ -91,11 +116,13 @@ const Perks = ({ data }) => {
                 ))}
               </Box>
             </Grid>
-
             <Grid
               item
               xs={12}
-              md={7}
+              sm={12}
+              md={6}
+              lg={7}
+              xl={7}
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -105,29 +132,36 @@ const Perks = ({ data }) => {
             >
               <Box
                 sx={{
-                  p: { lg: '20px' },
+                  pt: { lg: '20px' },
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'center',
-                  textAlign: { xs: 'center', md: 'justify' },
+                  justifyContent: ' space-between',
                 }}
               >
                 <Typography
-                  variant={isXsOrSm ? 'h4' : 'h3'}
                   color={'#fff'}
-                  sx={{
-                    mb: { xs: '10px', md: '20px' },
-                    mt: { md: '-15px' },
+                  fontWeight={700}
+                  pb={1}
+                  textAlign={{
+                    lg: 'start',
+                    md: 'start',
+                    sm: 'center',
+                    xs: 'center',
                   }}
+                  fontSize={{ lg: '27px', md: '22px', sm: '18px', xs: '18px' }}
                 >
                   {data[selectedCard]?.content?.heading}
                 </Typography>
                 <Typography
-                  variant="body1"
                   color={'#fff'}
                   sx={{
-                    fontSize: isXsOrSm ? '15px' : '20px',
-                    mb: { xs: '20px', md: '40px' },
+                    fontSize: {
+                      xs: '10px',
+                      sm: '10px',
+                      md: '13px',
+                      lg: '16px',
+                    },
+                    mb: { xs: '10px', md: '30px' },
                     pr: { xs: '2px', md: '15px', lg: '0px' },
                   }}
                 >
@@ -135,36 +169,52 @@ const Perks = ({ data }) => {
                 </Typography>
                 <Grid container>
                   {data[selectedCard]?.content?.list?.map((item, index) => (
-                    <Grid key={index} item xs={6}>
+                    <Grid item xs={6} key={index} py={'1%'}>
                       <Box
                         sx={{
-                          display: 'flex',
-                          textAlign: 'baseline',
-                          px: { xs: '2px', md: '0px' },
-                          justifyContent: { xs: 'center', md: 'left' },
+                          py: '0',
+                          display: `flex`,
+                          alignItems: `center`,
+                          gap: {
+                            xs: '10px',
+                            sm: '10px',
+                            md: '10px',
+                            lg: '20px',
+                          },
                         }}
                       >
-                        <ListItemIcon
-                          sx={{ minWidth: { xs: '20px', md: '35px' } }}
-                        >
-                          <TaskAltIcon
-                            fontSize="small"
-                            sx={{
-                              color: '#fff',
-                              fontSize: { xs: '12px', sm: '15px', md: '20px' },
-                            }}
-                          />
-                        </ListItemIcon>
+                        <Image
+                          src={`/images/homepage/our-perks/list-icon.svg`}
+                          alt="List Icon"
+                          height={
+                            isSmallScreen
+                              ? 12
+                              : isMediumScreen
+                                ? 12
+                                : isLargeScreen
+                                  ? 15
+                                  : 15
+                          }
+                          width={
+                            isSmallScreen
+                              ? 10
+                              : isMediumScreen
+                                ? 12
+                                : isLargeScreen
+                                  ? 15
+                                  : 15
+                          }
+                        />
                         <Typography
                           variant="body1"
+                          color="#fff"
+                          textAlign={`left`}
                           sx={{
-                            mb: 2,
-                            color: '#FFF',
                             fontSize: {
-                              xs: '11px',
-                              sm: '13px',
-                              md: '15px',
-                              lg: '18px',
+                              xs: '10px',
+                              sm: '10px',
+                              md: '13px',
+                              lg: '16px',
                             },
                           }}
                         >
@@ -173,13 +223,23 @@ const Perks = ({ data }) => {
                       </Box>
                     </Grid>
                   ))}
-                  <Grid item xs={12}>
+                  <Grid
+                    item
+                    xs={12}
+                    display={'flex'}
+                    justifyContent={{
+                      lg: 'start',
+                      md: 'start',
+                      sm: 'center',
+                      xs: 'center',
+                    }}
+                  >
                     <Box sx={{ my: 2 }}>
                       <ESparkButton
                         title={data[selectedCard]?.content?.buttonText}
                         link={data[selectedCard]?.content?.buttonLink}
-                        color={'primary'}
-                        size={'170px'}
+                        color={'secondary'}
+                        // size={{sm:'60px', md:'90px', lg:'120px', xl:'120px'}}
                       />
                     </Box>
                   </Grid>

@@ -32,7 +32,13 @@ const Footer = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   textAlign: 'justify',
-                  fontSize: '15px',
+                  fontSize: {
+                    xs: '10px',
+                    sm: '10px',
+                    md: '13px',
+                    lg: '15px',
+                    xl: '20px',
+                  },
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: '24.319px',
@@ -84,7 +90,7 @@ const Footer = ({ data }) => {
               }}
             >
               <Grid container>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.companyTitle} />
                   {data?.company?.map((item, index) => (
                     <Box key={index}>
@@ -92,7 +98,7 @@ const Footer = ({ data }) => {
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.solutionTitle} />
                   {data?.solution?.map((item, index) => (
                     <Box key={index}>
@@ -116,7 +122,7 @@ const Footer = ({ data }) => {
               }}
             >
               <Grid container>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.resourceTitle} />
                   {data?.resource?.map((item, index) => (
                     <Box key={index}>
@@ -124,7 +130,7 @@ const Footer = ({ data }) => {
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.partnershipTitle} />
                   {data?.partnership?.map((item, index) => (
                     <Box key={index}>
