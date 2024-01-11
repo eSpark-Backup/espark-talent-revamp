@@ -63,34 +63,36 @@ const Hero = ({ data }) => {
                   {data?.description}
                 </Typography>
               )}
-              <Box
-                sx={{
-                  [theme.breakpoints.down('sm')]: {
-                    display: 'none',
-                  },
-                }}
-              >
-                {/* <ESparkButton
+              {data?.button && (
+                <Box
+                  sx={{
+                    [theme.breakpoints.down('sm')]: {
+                      display: 'none',
+                    },
+                  }}
+                >
+                  {/* <ESparkButton
                   title={data.button.label}
                   link={data.button.link}
                   color={data.button.btnColor}
                   size={'180px'}
                 /> */}
-                <Button
-                  sx={{
-                    backgroundColor: '#fff',
-                    '&:hover': {
+                  <Button
+                    sx={{
                       backgroundColor: '#fff',
-                    },
-                    height: '50px',
-                    width: '160px',
-                    color: '#001C63',
-                    fontWeight: '700',
-                  }}
-                >
-                  {data.button?.label}
-                </Button>
-              </Box>
+                      '&:hover': {
+                        backgroundColor: '#fff',
+                      },
+                      height: '50px',
+                      width: '160px',
+                      color: '#001C63 ',
+                      fontWeight: '700',
+                    }}
+                  >
+                    {data.button?.label}
+                  </Button>
+                </Box>
+              )}
             </Grid>
             {data?.image && (
               <Grid

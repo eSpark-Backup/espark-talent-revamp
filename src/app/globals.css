@@ -211,7 +211,44 @@ span {
     height: 33px !important;
   }
 }
-
+@media (min-width: 1051px) and (max-width: 1365px) {
+  .whatWeBox {
+    height: 150px !important;
+  }
+}
+@media (min-width: 990px) and (max-width: 1050px) {
+  .whatWeBox {
+    height: 150px !important;
+  }
+}
+@media (min-width: 835px) and (max-width: 950px) {
+  .whatWeBox {
+    height: 180px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 834px) {
+  .whatWeBox {
+    height: 215px !important;
+  }
+}
+@media (min-width: 363px) and (max-width: 440px) {
+  .whatWeBox {
+    height: 130px !important;
+  }
+}
+@media (min-width: 316px) and (max-width: 340px) {
+  .whatWeBox {
+    height: 130px !important;
+  }
+}
+@media (max-width: 315px) {
+  .whatWeBox {
+    height: 190px !important;
+  }
+  .imageBox{
+    padding-top: 30px;
+  }
+}
 .partnerSpan {
   color: #0C3C3A;
   font-size: 32px;
@@ -432,13 +469,13 @@ line-height: 17px;
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.1) 0px 15px 1px 0px;
 }
-.swiper-slide {
+/* .swiper-slide {
   max-width: 556px !important;
   width: 100%;
 }
 .mySwiper {
   max-width: 1115px !important;
-}
+} */
 .mySwiper-its-our-job {
   max-width: 1200px !important;
 }
