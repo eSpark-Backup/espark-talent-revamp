@@ -58,6 +58,7 @@ const OurQualityService = ({ ourQualityService }) => {
               order: { sm: 2, xs: 1 },
               display: 'flex',
               justifyContent: { lg: 'right', xs: 'center' },
+              alignItems: 'center',
             }}
           >
             <Box sx={{ alignItems: 'center', pt: { xs: '30px', md: '0px' } }}>

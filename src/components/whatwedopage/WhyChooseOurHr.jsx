@@ -10,7 +10,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const WhyChooseOurHr = ({ data }) => {
   const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const swiperRef = useRef(null);
+
   const handleControlSwiper = (type) => {
+    console.log(type, 'type');
     switch (type) {
       case 'next':
         swiperRef?.current?.swiper?.slidePrev();
@@ -23,6 +25,7 @@ const WhyChooseOurHr = ({ data }) => {
         break;
     }
   };
+
   return (
     <Box sx={{ my: '4%' }}>
       <Container>
@@ -44,9 +47,10 @@ const WhyChooseOurHr = ({ data }) => {
                   pt: { xs: '10px', lg: '15px' },
                   py: { xs: '10px' },
                   px: { xs: '30px', sm: '0' },
+                  pr: { md: '5px' },
                 }}
               >
-                {data?.title}
+                {data.title}
               </Typography>
               <Typography
                 sx={{
@@ -58,10 +62,9 @@ const WhyChooseOurHr = ({ data }) => {
                   px: { xs: '5px', sm: '0' },
 
                   textAlign: { xs: 'center', md: 'justify' },
-                  p: { xs: '5px', md: '0px' },
                 }}
               >
-                {data?.paragraph}
+                {data.paragraph}
               </Typography>
             </Box>
           </Grid>
@@ -70,7 +73,7 @@ const WhyChooseOurHr = ({ data }) => {
               ref={swiperRef}
               spaceBetween={1}
               modules={[Pagination]}
-              // className="why-choose-hr-Swiper"
+              className="mySwiper"
               breakpoints={{
                 600: {
                   slidesPerView: 1,
@@ -144,7 +147,7 @@ const WhyChooseOurHr = ({ data }) => {
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
-                              alt={item?.alt}
+                              alt={item.alt}
                             />
                           </ListItemIcon>
                         </Box>
@@ -164,7 +167,7 @@ const WhyChooseOurHr = ({ data }) => {
                               px: { lg: '14px' },
                             }}
                           >
-                            {item?.title}
+                            {item.title}
                           </Typography>
 
                           <Typography
@@ -188,7 +191,7 @@ const WhyChooseOurHr = ({ data }) => {
                               px: { lg: '14px' },
                             }}
                           >
-                            {item?.description}
+                            {item.description}
                           </Typography>
                         </Box>
                       </Box>

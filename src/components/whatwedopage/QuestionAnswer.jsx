@@ -21,20 +21,28 @@ const QuestionAnswer = ({ data }) => {
               <Box sx={{ display: 'flex', justifyContent: 'center', pt: 5 }}>
                 <Image
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
-                  width={450}
+                  width={440}
                   height={200}
                   alt="We make easy for companies to expand their network with eSpark Talent"
                 />
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ order: { md: 2, xs: 1, sm: 1 } }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              order: { md: 2, xs: 1, sm: 1 },
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                mt: { lg: 6, md: 2 },
               }}
             >
               <Typography
@@ -61,7 +69,7 @@ const QuestionAnswer = ({ data }) => {
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                   textAlign: { xs: 'center', sm: 'right' },
-                  my: 2,
+                  my: 2.5,
                   ml: { md: '5px', lg: '30px' },
                   px: { xs: '10px', md: '0px' },
                 }}
