@@ -73,7 +73,7 @@ const ChooseUs = ({ chooseUs }) => {
                             mt: { xs: '6px', md: '0px' },
                           }}
                         >
-                          {item.content}
+                          {item?.content}
                         </Typography>
                       </Box>
                     </Box>

@@ -58,7 +58,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             All
           </Typography>
         </Button>
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <Button
             key={category}
             onClick={() => onSelectCategory(category)}
@@ -76,7 +76,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
               color={selectedCategory === category ? 'white' : '#001C63'}
               fontWeight="600"
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category?.charAt(0)?.toUpperCase() + category?.slice(1)}
             </Typography>
           </Button>
         ))}
