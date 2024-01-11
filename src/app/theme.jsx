@@ -172,7 +172,7 @@ const theme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1200px',
+          maxWidth: '1260px !important',
           margin: '0 auto',
         },
       },
