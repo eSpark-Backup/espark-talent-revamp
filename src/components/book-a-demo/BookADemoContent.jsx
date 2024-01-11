@@ -17,6 +17,7 @@ const BookADemoContent = ({ content }) => {
             alignItems: 'center',
             justifyContent: 'space-evenly',
             flexDirection: 'column',
+            pb: { xs: 3, sm: 4, md: 4, lg: 0 },
           }}
         >
           <Box
@@ -25,7 +26,7 @@ const BookADemoContent = ({ content }) => {
               alignItems: 'center',
               flexDirection: 'column',
               pt: { xs: 3, sm: 5, md: 7, lg: 7, xl: 10 },
-              px: { xs: 3, sm: 0 },
+              px: { xs: 0, sm: 0 },
               mb: { xs: 2, lg: 0 },
               gap: 1,
             }}
@@ -36,20 +37,50 @@ const BookADemoContent = ({ content }) => {
                 textAlign: 'center',
                 fontStyle: 'normal',
                 fontWeight: 600,
+                textWrap: 'balance',
                 lineHeight: { xs: '30px', sm: '42.289px' },
-                fontSize: { xs: '27px', sm: '30px', md: '32px' },
+                fontSize: {
+                  xs: '27px !important',
+                  sm: '30px !important',
+                  md: '32px !important',
+                },
+                '@media (min-width:600px) and (max-width:767px)': {
+                  width: '550px',
+                  fontSize: '24px !important',
+                },
+                '@media (min-width:425px) and (max-width:599px)': {
+                  width: '390px',
+                  fontSize: '20px !important',
+                },
+                '@media (min-width:300px) and (max-width:424px)': {
+                  width: '280px',
+                  fontSize: '20px !important',
+                  lineHeight: '29px',
+                },
               }}
               dangerouslySetInnerHTML={{ __html: title }}
             />
             <Typography
               sx={{
-                width: { xs: '100%', sm: '540px' },
+                width: { xs: '100%', sm: '640px' },
                 color: '#FFF',
                 textAlign: 'center',
-                fontSize: '16px',
+                fontSize: '16px !important',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: '24.863px',
+                '@media (min-width:600px) and (max-width:767px)': {
+                  width: '550px',
+                  fontSize: '15px !important',
+                },
+                '@media (min-width:425px) and (max-width:599px)': {
+                  width: '390px',
+                  fontSize: '14px !important',
+                },
+                '@media (min-width:300px) and (max-width:424px)': {
+                  width: '280px',
+                  fontSize: '13px !important',
+                },
               }}
             >
               {description}
@@ -73,7 +104,8 @@ const BookADemoContent = ({ content }) => {
             breakPoints={CLIENT_SLIDER_BREAK_POINTS}
             txtColor={'#fff'}
             variant={'h6'}
-            fontWeight={500}
+            fontSize={{ sm: '15px !important', md: '16px !important' }}
+            fontWeight={600}
             title={text}
             pb={'0px'}
           />

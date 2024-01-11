@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from '@mui/system';
 
@@ -79,15 +78,48 @@ const ClientSlider = ({
         // Default value, will be overridden by breakpoints
       >
         {extendedData.clients.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             <Box sx={{ pb: pb || 5 }}>
               {
-                <Link href={item?.link}>
-                  <Image
-                    src={getImagePath(item?.image)}
-                    alt={item?.image}
-                    height={item?.imageHeight}
-                    width={item?.imageWidth}
+                <Link href={item.link}>
+                  <Box
+                    component={'img'}
+                    src={getImagePath(item.image)}
+                    alt={item.image}
+                    height={'37px'}
+                    sx={{
+                      width: {
+                        // xs: '150px',
+                        sm: '184px',
+                        md: '184px',
+                        lg: '186px',
+                      },
+                      height: {
+                        // xs: '30px',
+                        sm: '35px',
+                        md: '35px',
+                        lg: '37px',
+                      },
+                      '@media (min-width: 550px) and (max-width: 767px)': {
+                        width: '140px',
+                        height: '25px',
+                      },
+                      '@media (min-width: 375px) and (max-width: 549px)': {
+                        width: '100px',
+                        height: '20px',
+                      },
+                      '@media (min-width: 300px) and (max-width: 374px)': {
+                        width: '80px',
+                        height: '18px',
+                      },
+                    }}
                   />
                 </Link>
               }

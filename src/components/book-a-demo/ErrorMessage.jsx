@@ -6,10 +6,10 @@ const ErrorMessage = ({ message }) => {
     <Typography
       sx={{
         color: 'red',
-        fontSize: '13px',
+        fontSize: '11px !important',
         fontStyle: 'normal',
         fontWeight: 400,
-        pt: 1,
+        mt: 0.5,
       }}
     >
       {message}
