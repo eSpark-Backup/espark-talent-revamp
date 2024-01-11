@@ -43,7 +43,7 @@ const OurQualityService = ({ ourQualityService }) => {
                         lineHeight: '24px',
                       }}
                     >
-                      {item.content}
+                      {item?.content}
                     </Typography>
                   </Box>
                 </Grid>

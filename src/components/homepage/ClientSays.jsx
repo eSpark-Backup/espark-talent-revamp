@@ -79,7 +79,7 @@ const ClientSays = ({ data }) => {
                         >
                           <Box>
                             <Image
-                              src={items.image}
+                              src={items?.image}
                               width={160}
                               height={370}
                               alt="logo"
