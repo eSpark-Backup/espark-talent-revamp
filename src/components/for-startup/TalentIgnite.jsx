@@ -7,7 +7,10 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
   return (
     <Box sx={{ my: 4 }}>
       <Container>
-        <Grid container sx={{ flexDirection: { md: 'row', xs: 'row' } }}>
+        <Grid
+          container
+          sx={{ flexDirection: { md: 'row', xs: 'row', alignItems: 'center' } }}
+        >
           <Grid
             item
             xs={12}
@@ -15,7 +18,10 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
             md={7}
             alignItems="center"
             justifyContent="center"
-            sx={{ order: { md: 2, xs: 1 } }}
+            sx={{
+              order: { md: 2, xs: 1 },
+              pl: { xs: '0px', md: '23px', lg: '35px' },
+            }}
           >
             <Typography
               sx={{
@@ -23,11 +29,11 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
                 fontSize: '28px',
                 fontWeight: 500,
                 lineHeight: '41.547px',
-                ml: { lg: '10%', md: '5%' },
-                mr: { lg: '15%', md: '5%' },
-                mt: isBestOutsourceComponent
-                  ? { md: '40px', lg: '50px' }
-                  : { md: '30px', lg: '60px' },
+                // ml: { lg: '10%', md: '5%' },
+                // mr: { lg: '15%', md: '5%' },
+                // mt: isBestOutsourceComponent
+                //   ? { md: '40px', lg: '50px' }
+                //   : { md: '30px', lg: '60px' },
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
@@ -39,8 +45,8 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
                 fontSize: '18px',
                 fontWeight: 400,
                 lineHeight: '36.863px',
-                ml: { lg: '10%', md: '5%' },
-                my: { md: '10px', lg: '20px' },
+                // ml: { lg: '10%', md: '5%' },
+                // my: { md: '10px', lg: '20px' },
                 textAlign: { xs: 'center', md: 'justify' },
               }}
               dangerouslySetInnerHTML={{ __html: data?.description }}

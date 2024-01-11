@@ -93,7 +93,7 @@ const OutSourcingWonder = ({ data }) => {
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
               {data?.items?.map((item, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="outsourcing-slide">
                   <Grid
                     sx={{
                       borderRadius: '20px',
@@ -114,29 +114,37 @@ const OutSourcingWonder = ({ data }) => {
                       flexDirection: 'column',
                     }}
                   >
-                    <Image
-                      src={item?.icon}
-                      alt={item?.title}
-                      height={
-                        isSmallScreen
-                          ? 30
-                          : isMediumScreen
+                    <Box
+                      sx={{
+                        mb: '10px',
+                        width: { xs: '30px', md: '40px' },
+                        height: { xs: '30px', md: '40px' },
+                      }}
+                    >
+                      <Image
+                        src={item?.icon}
+                        alt={item?.title}
+                        height={
+                          isSmallScreen
                             ? 30
-                            : isLargeScreen
-                              ? 40
-                              : 40
-                      }
-                      width={
-                        isSmallScreen
-                          ? 30
-                          : isMediumScreen
+                            : isMediumScreen
+                              ? 30
+                              : isLargeScreen
+                                ? 40
+                                : 40
+                        }
+                        width={
+                          isSmallScreen
                             ? 30
-                            : isLargeScreen
-                              ? 40
-                              : 40
-                      }
-                      pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
-                    />
+                            : isMediumScreen
+                              ? 30
+                              : isLargeScreen
+                                ? 40
+                                : 40
+                        }
+                        pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
+                      />
+                    </Box>
                     <Typography
                       sx={{
                         color: '#001C63',

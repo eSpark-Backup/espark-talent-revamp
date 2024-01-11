@@ -81,7 +81,7 @@ const ExpertTeamCard = ({ teamData }) => {
                   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
                   p: { xs: '39px 28px 20px 28px', md: '48px 31px 24px 31px' },
                   m: 1,
-                  height: { xs: '250px', md: '250px' },
+                  // minHeight: { xs: '250px', md: '250px' },
                 }}
               >
                 <Box
@@ -100,6 +100,8 @@ const ExpertTeamCard = ({ teamData }) => {
                       display: 'flex',
                       justifyContent: 'center',
                       mb: { xs: '12px', md: '15px' },
+                      width: { xs: '39px', md: '49px' },
+                      height: { xs: '39px', md: '49px' },
                       // p: 1,
                     }}
                   >
@@ -116,7 +118,7 @@ const ExpertTeamCard = ({ teamData }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: { xs: '17px', md: '22px' },
+                        fontSize: { xs: '17px', lg: '22px' },
                         fontStyle: 'normal',
                         fontWeight: 600,
                         lineHeight: { xs: '24.4px', md: '26.4px' },
@@ -130,7 +132,7 @@ const ExpertTeamCard = ({ teamData }) => {
                     <Typography
                       sx={{
                         color: '#000',
-                        fontSize: { md: '17px', xs: '13.024px' },
+                        fontSize: { lg: '17px', xs: '13.024px' },
                         textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,

@@ -54,7 +54,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
           ref={swiperRef}
           spaceBetween={1}
           modules={[Pagination]}
-          className="mySwiper"
+          className="professional-team-card-Swiper"
           breakpoints={{
             600: {
               slidesPerView: 1,
@@ -64,7 +64,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               },
               containerClass: 'swiper-container',
               wrapperClass: 'swiper-wrapper',
-              slideClass: 'swiper-slide',
+              slideClass: 'swiper-slide-team-card',
             },
             768: {
               slidesPerView: 2,
@@ -74,18 +74,18 @@ const ProfessionalTeamCard = ({ teamData }) => {
               },
               containerClass: 'swiper-container',
               wrapperClass: 'swiper-wrapper',
-              slideClass: 'swiper-slide',
+              slideClass: 'swiper-slide-team-card',
             },
           }}
         >
           {teamData?.cardData?.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className="swiper-slide-team-card" key={index}>
               <Box
                 sx={{
-                  height: { lg: '175px', xs: '100.986px', sm: '175px' },
+                  height: { xs: '90.986px', sm: 'auto' },
                   display: 'flex',
                   padding: {
-                    xs: '8px 16px 0px 17px',
+                    xs: '8px 16px 8px 17px',
                     md: '15px 28px 31px 30px',
                   },
                   margin: { xs: '5px', md: '15px 7.5px' },
@@ -97,8 +97,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
               >
                 <Box
                   sx={{
-                    minWidth: { xs: '28px', md: '49px' },
-                    height: { xs: '28px', md: '49px' },
+                    minWidth: { xs: '28px', md: '35px', lg: '49px' },
+                    height: { xs: '28px', md: '35px', lg: '49px' },
                   }}
                 >
                   <Image
@@ -106,10 +106,10 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     width={isXsOrSm ? 40 : 49}
                     height={49}
                     alt={item.alt}
-                    className="swiper-image"
+                    className="our-team-swiper-image"
                   />
                 </Box>
-                <Box sx={{ pl: { xs: '18px', md: '31px' } }}>
+                <Box sx={{ pl: { xs: '18px', md: '22px', lg: '31px' } }}>
                   <Typography
                     sx={{
                       color: '#09114A',
@@ -117,7 +117,11 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       fontStyle: 'normal',
 
                       fontWeight: 600,
-                      lineHeight: { md: '24.39px', xs: '14.064px' },
+                      lineHeight: {
+                        lg: '24.39px',
+                        md: '18.39px',
+                        xs: '14.064px',
+                      },
                       mt: { lg: '1px' },
                     }}
                   >
@@ -126,13 +130,19 @@ const ProfessionalTeamCard = ({ teamData }) => {
                   <Typography
                     sx={{
                       color: '#6F76A8',
-                      fontSize: { md: '18px', sm: '15px', xs: '10.38px' },
+                      fontSize: {
+                        lg: '18px',
+                        md: '15px',
+                        sm: '12px',
+                        xs: '10.38px',
+                      },
                       textAlign: 'justify',
                       fontStyle: 'normal',
                       fontWeight: { xs: 700, sm: 400 },
                       lineHeight: {
-                        md: '32.085px',
-                        sm: '25.263px',
+                        lg: '32.085px',
+                        md: '22.085px',
+                        sm: '15.263px',
                         xs: '13.263px',
                       },
                       p: { xs: '8px 0 0 0', md: '19px 0 0 0' },

@@ -7,8 +7,8 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ my: 2, pb: '45px' }}>
-      <Box sx={{ py: '2%' }}>
+    <Box sx={{ mb: { xs: '26px', md: '88px' } }}>
+      <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>
         <Typography
           sx={{
             color: '#001C63',
