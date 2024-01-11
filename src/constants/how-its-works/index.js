@@ -47,20 +47,19 @@ export const CHOOSE_US = {
     },
     {
       icon: '/images/how-its-works/true.svg',
+      content: 'Support Your Workplace With Talented Professionals.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
       content: 'Spread Your Network Worldwide.',
     },
     {
       icon: '/images/how-its-works/true.svg',
-      content: 'Beat the Competition like a Pro.',
-    },
-    {
-      icon: '/images/how-its-works/true.svg',
-      content: 'Support Your Workplace With Talented Professionals.',
-    },
-
-    {
-      icon: '/images/how-its-works/true.svg',
       content: 'Establish a Strong Team of Outsourced Employees.',
+    },
+    {
+      icon: '/images/how-its-works/true.svg',
+      content: 'Beat the Competition like a Pro.',
     },
   ],
 };
@@ -74,16 +73,16 @@ export const OUR_OFFERED_SERVICES = {
       content: '24/7 Active Human Resource Assistance.',
     },
     {
-      content: 'Rapid Customer Service.',
-    },
-    {
-      content: 'Open to Confirm All Queries',
-    },
-    {
       content: 'Cost-Efficient Hiring Services.',
     },
     {
+      content: 'Rapid Customer Service.',
+    },
+    {
       content: 'Full-Time Support of Proven Professionals.',
+    },
+    {
+      content: 'Open to Confirm All Queries',
     },
     {
       content: 'On-Time HR Managing Support.',
