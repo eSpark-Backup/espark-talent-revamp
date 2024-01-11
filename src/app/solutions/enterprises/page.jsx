@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
 
-import { Box } from '@mui/material';
-
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
 import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';

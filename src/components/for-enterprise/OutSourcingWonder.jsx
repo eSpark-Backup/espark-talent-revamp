@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
@@ -21,7 +21,6 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonder = ({ data }) => {
-  const [selectedCard, setSelectedCard] = useState(0);
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
   );
@@ -29,10 +28,6 @@ const OutSourcingWonder = ({ data }) => {
     theme.breakpoints.between('sm', 'md')
   );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
-  const handleCardClick = (index) => {
-    setSelectedCard(index === selectedCard ? index : index);
-  };
 
   const swiperSettings = {
     slidesPerView: 3,
