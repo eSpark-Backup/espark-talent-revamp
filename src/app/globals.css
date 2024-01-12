@@ -981,3 +981,13 @@ input::-webkit-inner-spin-button {
   }
 
 }
+@media (min-width: 270px) and (max-width: 400px) {
+  .footerCta{
+    margin-top: 50px !important;
+  }
+}
+@media (min-width: 420px) and (max-width: 500px) {
+  .footerCta{
+    margin-top: 50px !important;
+  }
+}
