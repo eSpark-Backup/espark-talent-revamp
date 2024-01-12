@@ -9,7 +9,14 @@ const ChooseUs = ({ chooseUs }) => {
     <Box sx={{ mb: '4%' }}>
       <Container>
         <Grid container>
-          <Grid item sm={12} md={7} sx={{ px: { md: '20px' } }}>
+          <Grid
+            item
+            sm={12}
+            md={8}
+            sx={{
+              px: { md: '8px' },
+            }}
+          >
             <Box sx={{ mt: { lg: '20px' } }}>
               <Box>
                 <Typography
@@ -28,7 +35,7 @@ const ChooseUs = ({ chooseUs }) => {
                   sx={{
                     py: { xs: 1, md: 3 },
                     px: { xs: '10px', md: '0px' },
-                    // pr: {lg:'60px'},
+                    pr: { lg: '50px' },
                     color: '#001C63',
                     textAlign: { xs: 'center', md: 'left' },
                     fontSize: { xs: '10px', sm: '12px', md: '16.517px' },
@@ -85,7 +92,7 @@ const ChooseUs = ({ chooseUs }) => {
           <Grid
             item
             sm={12}
-            md={5}
+            md={4}
             sx={{
               display: 'flex',
               margin: '0px auto !important',

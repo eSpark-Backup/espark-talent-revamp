@@ -127,16 +127,30 @@ span {
 /* ---------------------------- */
 /* country Input styling */
 /* ---------------------------- */
+.PhoneInputCountrySelect {
+  padding: 10px;
+  width: 7% !important;
+  border: 0;
+  font-size: 0px;
+  appearance: none;
+  font-weight: 600;
+  background-image: url(/images/partners/arrow.svg);
+  background-position: right 0.2rem center;
+  background-repeat: no-repeat;
+  order: 1;
+  color: black;
+  border: none !important;
+}
 
 .PhoneInput {
   display: flex;
   padding-top: 4px;
+  color: black;
 }
 
 .PhoneInputCountry {
-  width: 57px;
+  width: 67px;
   display: flex;
-  gap: 5px;
 }
 
 .PhoneInputCountrySelect {
@@ -184,7 +198,8 @@ span {
 }
 
 .PhoneInputInput:focus {
-  outline-color: #029894;
+  outline-color: black !important;
+
 }
 
 .PhoneInputInput::placeholder {
@@ -215,13 +230,13 @@ span {
   .swiper-controller-icon {
     width: 12px;
     height: 15px;
-  }
+}
   
-}
-.its-our-job-card-image{
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
+  }
+  .its-our-job-card-image{
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
 @media (min-width: 1051px) and (max-width: 1365px) {
   .whatWeBox {
     height: 150px !important;
@@ -258,6 +273,33 @@ span {
   }
   .imageBox{
     padding-top: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 806px) {
+  .HrBox {
+    height: 230px !important;
+    padding-top: 10px !important;
+  }
+  .typoDescription{
+    line-height: 23px !important ;
+    font-size: 14px !important;
+
+  }
+}
+@media (min-width: 807px) and (max-width: 925px) {
+  .HrBox {
+    height: 230px !important;
+    padding-top: 10px !important;
+  }
+  .typoDescription{
+    line-height: 23px !important ;
+    font-size: 14px !important;
+
+  }
+}
+@media (min-width: 925px) and (max-width: 960px) {
+  .HrBox {
+    padding-top: 10px !important;
   }
 }
 .partnerSpan {
@@ -754,7 +796,7 @@ input::-webkit-inner-spin-button {
 }
 
 .partner-form .custom-dropdown-flag .opt {
-  max-height: 160px;
+  max-height: 10px;
   margin: auto;
   text-align: center;
   padding-left: 0;
@@ -831,7 +873,7 @@ input::-webkit-inner-spin-button {
 
 .partner-country-dropdown {
   padding: 10px;
-  width: 100%;
+  width: 100% !important;
   border: 0.903px solid #d0d4ea;
   color: var(--blackColor);
   border-radius: 5.418px;

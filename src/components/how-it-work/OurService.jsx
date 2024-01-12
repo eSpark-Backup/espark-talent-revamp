@@ -16,7 +16,7 @@ const OurService = ({ ourService }) => {
       <Container>
         <Title heading={heading} subHeading={subHeading} />
         <Swiper
-          spaceBetween={0}
+          // spaceBetween={20}
           modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
@@ -60,9 +60,9 @@ const OurService = ({ ourService }) => {
                   maxWidth: {
                     xs: '316.31px',
                     md: 'auto ',
-                    lg: '405.643px ',
+                    lg: '365.643px ',
                   },
-                  height: { xs: '201.32px', sm: '232.671px' },
+                  height: { xs: '201.32px', sm: '232.671px', lg: '222.671px' },
                   borderRadius: '8.875px',
                   backgroundColor: '#fff',
                   boxShadow: ' 0px 0px 31.062px 0px rgba(0, 0, 0, 0.07)',
@@ -86,7 +86,7 @@ const OurService = ({ ourService }) => {
                     />
                   </Box>
 
-                  <Box sx={{ px: { xs: '24px', md: '50px' } }}>
+                  <Box sx={{ px: { xs: '24px', md: '22px' } }}>
                     <Typography
                       sx={{
                         color: '#09114A',
@@ -103,7 +103,7 @@ const OurService = ({ ourService }) => {
                       sx={{
                         color: '#001C63',
                         fontSize: { xs: '12.286px', md: '14.2px' },
-                        textAlign: 'justify',
+                        // textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '23.344px', md: '26.979px' },

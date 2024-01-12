@@ -9,12 +9,12 @@ const QuestionAnswer = ({ data }) => {
     <Box sx={{ mb: { md: '4%', xs: '10%' } }}>
       <Container>
         <Grid container>
-          <Grid item xs={12} md={6} sx={{ order: { md: 2, xs: 2, sm: 2 } }}>
+          <Grid item xs={12} md={5} sx={{ order: { md: 2, xs: 2, sm: 2 } }}>
             <Box
               sx={{
                 backgroundColor: 'rgba(59, 89, 152, 0.04)',
                 borderRadius: '17.311px',
-                width: { lg: '594.66px' },
+                // width: { lg: '594.66px' },
                 mt: { xs: '40px', md: '0px' },
               }}
             >
@@ -31,7 +31,7 @@ const QuestionAnswer = ({ data }) => {
           <Grid
             item
             xs={12}
-            md={6}
+            md={7}
             sx={{
               order: { md: 2, xs: 1, sm: 1 },
               display: 'flex',
@@ -53,7 +53,7 @@ const QuestionAnswer = ({ data }) => {
                   fontWeight: 700,
                   fontStyle: 'normal',
                   lineHeight: { md: '48px', xs: '36px' },
-                  ml: { md: '5px', lg: '11px' },
+                  ml: { md: '5px', lg: '60px' },
                   px: { xs: '5px', md: '0px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                 }}
@@ -70,7 +70,7 @@ const QuestionAnswer = ({ data }) => {
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                   textAlign: { xs: 'center', sm: 'right' },
                   my: 2.5,
-                  ml: { md: '5px', lg: '30px' },
+                  ml: { md: '5px', lg: '85px' },
                   px: { xs: '10px', md: '0px' },
                 }}
               >

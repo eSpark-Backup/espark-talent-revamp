@@ -30,15 +30,7 @@ const WhyChooseOurHr = ({ data }) => {
     <Box sx={{ my: '4%' }}>
       <Container>
         <Grid container>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={7}
-            sx={{
-              pr: { xs: '0px', md: '30px' },
-            }}
-          >
+          <Grid item xs={12} sm={12} md={7} lg={7}>
             <Box
               sx={{
                 mt: { md: 2, lg: 3 },
@@ -122,16 +114,15 @@ const WhyChooseOurHr = ({ data }) => {
                         boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
                         padding: '15px',
                         borderRadius: '15px',
-                        width: { xs: '294.31px', md: '100%' },
-                        // maxHeight: {
-                        //   xs: '143.884px',
-                        //   sm: '150px',
-                        //   md: '220px',
-                        // },
-                        minHeight: {
+                        width: {
+                          xs: '294.309px',
+                          sm: '314.309px',
+                          md: '390px',
+                          lg: '485px',
+                        },
+                        height: {
                           xs: 'auto',
-                          sm: 'auto',
-                          md: '175px',
+                          lg: '180px',
                         },
                         mt: { xs: 1, md: 0 },
                         margin: '10px auto !important',
@@ -146,9 +137,9 @@ const WhyChooseOurHr = ({ data }) => {
                         <Box
                           className="imageBox"
                           sx={{
-                            width: { xs: '32px', md: '49px' },
-                            height: { xs: '32px', md: '49px' },
-                            mr: { xs: '13px', md: '20px' },
+                            mr: 2,
+                            pl: { xs: 1, lg: 0.5 },
+                            pt: { md: '15px', lg: '12px' },
                           }}
                         >
                           <ListItemIcon sx={{ minWidth: '30px' }}>
@@ -156,8 +147,7 @@ const WhyChooseOurHr = ({ data }) => {
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
-                              alt={item?.alt}
-                              className="why-choose-our-hr-slide-icon"
+                              alt={item.alt}
                             />
                           </ListItemIcon>
                         </Box>
