@@ -28,11 +28,13 @@ import {
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { BLOGS_DATA } from '@/constants/blogs';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+import HeroSection from '@/components/for-enterprise/HeroSection';
 
 const page = () => {
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
+      {/* <HeroSection /> */}
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -40,6 +42,14 @@ const page = () => {
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
         length={100}
+        fontSize={{
+          xs: '19px !important',
+          sm: '20px !important',
+          md: '22px !important',
+          lg: '28px !important',
+        }}
+        lineHeight={{ xs: '30px !important', sm: '20px !important' }}
+        fontWeight={500}
       />
       <Process data={PROCESS_DATA} />
       <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />

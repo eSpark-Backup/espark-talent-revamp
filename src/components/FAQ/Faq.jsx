@@ -44,26 +44,14 @@ const Faq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <Image
+                      <img
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 23
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        height={
-                          isSmallScreen
-                            ? 8
-                            : isMediumScreen
-                              ? 10
-                              : isLargeScreen
-                                ? 15
-                                : 15
-                        }
+                        width={{lg: '30px',
+                          md: '23px',
+                          sm: '15px',
+                          xs: '12px'
+                        }}
+                        height={'auto'}
                         alt="icon"
                       />
                     }
@@ -120,26 +108,14 @@ const Faq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <Image
+                      <img
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 24
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        height={
-                          isSmallScreen
-                            ? 8
-                            : isMediumScreen
-                              ? 10
-                              : isLargeScreen
-                                ? 15
-                                : 15
-                        }
+                        width={{lg: '30px',
+                          md: '23px',
+                          sm: '15px',
+                          xs: '12px'
+                        }}
+                        height={'auto'}
                         alt="icon"
                       />
                     }

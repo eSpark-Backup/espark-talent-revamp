@@ -25,6 +25,11 @@ const Perks = ({ data }) => {
         <Box
           sx={{
             borderRadius: '20px',
+            mx: 'auto',
+            width: { md: '980px', lg: '1250px' },
+            // '@media (min-width: 768px) and (max-width: 1023px)': {
+            //   width: '90%',
+            // },
             background:
               'linear-gradient(97deg, #029894 0.53%, #036764 102.09%)',
             // py: '3%',
@@ -57,6 +62,13 @@ const Perks = ({ data }) => {
                     key={index}
                     onClick={() => handleCardClick(index)}
                     sx={{
+                      // width: { md: 'auto' },
+                      // '@media (min-width: 768px) and (max-width: 1023px)': {
+                      //   width: '251px',
+                      // },
+                      // '@media (min-width: 600px) and (max-width: 767px)': {
+                      //   width: '100%',
+                      // },
                       display: 'flex',
                       gap: '10px',
                       borderRadius: '20px',
@@ -73,15 +85,17 @@ const Perks = ({ data }) => {
                       flexDirection: 'row',
                       alignItems: 'center',
                       cursor: 'pointer',
-                      border: '2px solid #fff',
                     }}
                   >
-                    <Image
+                    <Box
+                      component={'img'}
                       src={
                         index === selectedCard ? perk?.activeIcon : perk?.icon
                       }
-                      height={30}
-                      width={isXsOrSm ? 15 : 30}
+                      sx={{
+                        width: { sm: 24, lg: 38 },
+                        height: { sm: 24, lg: 38 },
+                      }}
                       alt={perk.title}
                     />
                     <Typography
@@ -106,10 +120,19 @@ const Perks = ({ data }) => {
                     >
                       {perk?.sno}
                     </Typography>
-                    <Image
+                    <Box
+                      component={'img'}
                       src={perk?.hoverIcons}
-                      height={20}
-                      width={isXsOrSm ? 12 : 20}
+                      sx={{
+                        width: {
+                          sm: 18,
+                          lg: 24,
+                        },
+                        height: {
+                          sm: 18,
+                          lg: 24,
+                        },
+                      }}
                       alt={perk.title}
                     />
                   </Box>
