@@ -27,7 +27,7 @@ const Title = ({ heading, subHeading }) => {
       </Typography>
       <Typography
         sx={{
-          px: { xs: '10px', lg: '300px' },
+          px: { xs: '10px', lg: '240px' },
           color: '#001C63',
           textAlign: 'center',
           fontSize: { xs: '10px', sm: '12px', md: '18px' },

@@ -12,7 +12,12 @@ const HRFirmSuccess = ({ hrFirm }) => {
     <Box sx={{ my: '4%' }}>
       <Container>
         <Title heading={heading} subHeading={subHeading} />
-        <Grid container className="hrFirmDesktop">
+        <Grid
+          container
+          rowSpacing={2}
+          columnSpacing={1}
+          className="hrFirmDesktop"
+        >
           {card?.map((item, index) => (
             <Grid item sm={6} key={index} sx={{}}>
               <Grid
@@ -21,8 +26,8 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   borderRadius: '13.764px',
                   border: '0.918px solid #E5E5E5',
                   background: '#FFF',
-                  width: { lg: '643.614px', md: 'auto' },
-                  height: { md: '310.584px', lg: '238.584px' },
+                  width: { lg: '583.614px', md: 'auto' },
+                  height: { md: '238.584px', lg: '238.584px' },
                   padding: ' 28.447px 17.435px 35.788px 17.435px',
                   display: 'center',
                   alignItems: 'center',
@@ -30,8 +35,9 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   flexShrink: 0,
                   m: 1,
                 }}
+                className="HrBox"
               >
-                <Grid item md={4} sx={{}}>
+                <Grid item md={5} lg={5} sx={{}}>
                   <Box
                     sx={{
                       display: 'flex',
@@ -41,13 +47,13 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   >
                     <Image
                       src={item.image}
-                      width={900}
+                      width={200}
                       height={100}
                       alt={item?.alt}
                     />
                   </Box>
                 </Grid>
-                <Grid item md={8} sx={{ px: '10px' }}>
+                <Grid item md={7} lg={7} sx={{ px: '15px' }}>
                   <Box
                     sx={{
                       mx: { lg: 1 },
@@ -61,6 +67,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                       {item?.title}
                     </Typography>
                     <Typography
+                      className="typoDescription"
                       sx={{
                         color: '#001C63',
                         textAlign: 'justify',

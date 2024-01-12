@@ -11,7 +11,13 @@ const OurQualityService = ({ ourQualityService }) => {
           direction={{ xs: 'column-reverse', sm: 'column-reverse', md: 'row' }}
         >
           <Grid item md={6}>
-            <Grid container spacing={2}>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                mb: { xs: '50px', md: '0px' },
+              }}
+            >
               {card?.map((item, index) => (
                 <Grid
                   item
@@ -80,7 +86,7 @@ const OurQualityService = ({ ourQualityService }) => {
                   color: '#001C63',
                   textAlign: { xs: 'center', md: 'right' },
                   my: { xs: '20px', md: '20px' },
-                  ml: { md: '10px ', lg: '40px' },
+                  ml: { md: '10px ', lg: '70px' },
                   lineHeight: { xs: '17px', md: '30.4px' },
                   fontStyle: 'normal',
                   fontSize: { xs: '10px', sm: '12px', md: '16px' },

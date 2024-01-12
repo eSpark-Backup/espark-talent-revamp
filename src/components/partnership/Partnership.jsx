@@ -23,7 +23,7 @@ const Partnership = ({ partnership }) => {
     >
       <Container>
         <Grid container>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={7}>
             <>
               {content.map((item, index) => (
                 <Box
@@ -47,7 +47,7 @@ const Partnership = ({ partnership }) => {
                       lineHeight: { xs: '29px', md: '56.266px' },
                       fontStyle: 'normal',
                       fontWeight: 700,
-                      textAlign: { xs: 'center', md: 'justify' },
+                      textAlign: { xs: 'center', md: 'left' },
                     }}
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
@@ -126,7 +126,7 @@ const Partnership = ({ partnership }) => {
               ))}
             </>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={5}>
             <Form formContent={formContent} />
           </Grid>
         </Grid>
