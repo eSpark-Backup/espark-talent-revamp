@@ -25,7 +25,7 @@ const Perks = ({ data }) => {
           sx={{
             borderRadius: '20px',
             mx: 'auto',
-            width: { md: '980px', lg: '1250px' },
+            // width: { md: '980px', lg: '1250px' },
             // '@media (min-width: 768px) and (max-width: 1023px)': {
             //   width: '90%',
             // },
