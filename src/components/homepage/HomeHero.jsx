@@ -136,7 +136,7 @@ const Hero = ({ data }) => {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'right',
+                  justifyContent: "center",
                 }}
               >
                 <Box
