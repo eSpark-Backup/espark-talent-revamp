@@ -47,24 +47,24 @@ const BookADemoForm = ({ form }) => {
       .max(25, 'Last name must be at most 25 characters')
       .required('Last Name is required'),
     email: Yup.string()
-      .email('Invalid email')
+      .email('Invalid Email')
       .matches(
         /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
-        'Invalid email address format'
+        'Invalid Email Address Format'
       )
       .required('Email is required'),
     web_url: Yup.string()
       .matches(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/, 'Invalid Url')
       .required('Url is required'),
     no_of_employees: Yup.number()
-      .min(1, 'minimum 1 employees')
-      .max(10, 'maximum 10 employees')
-      .required('no of emp is required'),
+      .min(1, 'Minimum 1 employees')
+      .max(10, 'Maximum 10 employees')
+      .required('No of emp is required'),
     phone_number: Yup.string()
-      .test('phone', 'Invalid phone number', (value) =>
+      .test('phone', 'Invalid Phone Number', (value) =>
         value ? isValidPhoneNumber(value) : true
       )
-      .required('Phone number is required'),
+      .required('Phone Number is required'),
   });
 
   const handlePhoneChange = (event) => {
@@ -125,7 +125,8 @@ const BookADemoForm = ({ form }) => {
           height: { xs: 'auto', sm: '100%' },
           display: 'flex',
           flexDirection: 'column',
-          my: { xs: 7, md: 5, lg: 0 },
+          mt: { xs: 7, sm: 10, md: 10, lg: 0 },
+          mb: { xs: 7, sm: 0, md: 0, lg: 0 },
           px: { xs: 7 },
           alignItems: { sm: 'center' },
           justifyContent: { xs: 'auto', lg: 'center' },
@@ -134,11 +135,11 @@ const BookADemoForm = ({ form }) => {
           },
         }}
       >
-        <Box sx={{ mb: 4, textAlign: 'center' }}>
+        <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
           <Typography
             sx={{
               color: '#001C63',
-              fontSize: '32px',
+              fontSize: '32px !important',
               fontStyle: 'normal',
               fontWeight: 600,
               lineHeight: '42.289px',
@@ -149,10 +150,10 @@ const BookADemoForm = ({ form }) => {
           <Typography
             sx={{
               color: '#001C63',
-              fontSize: '16px',
+              fontSize: '15px !important',
               fontStyle: 'normal',
               fontWeight: 400,
-              lineHeight: '27.863px',
+              lineHeight: { xs: '25px', sm: '27.863px' },
             }}
           >
             {subTitle}
@@ -161,12 +162,12 @@ const BookADemoForm = ({ form }) => {
         <Box component={'form'}>
           {fields &&
             fields?.map((item, index) => (
-              <Box sx={{ width: '100%', mb: 2 }} key={index}>
+              <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
                 <Typography
                   sx={{
                     mb: 0.5,
                     color: '#029894',
-                    fontSize: '14.448px',
+                    fontSize: '14.448px !important',
                     fontStyle: 'normal',
                     fontWeight: 600,
                     lineHeight: '19.867px',
@@ -192,8 +193,8 @@ const BookADemoForm = ({ form }) => {
                     sx={{
                       width: { xs: '100%', sm: '436.277px' },
                       borderRadius: '5.418px',
-                      background: '#F5F8FA',
                       '& .MuiInputBase-input': {
+                        color: 'black',
                         fontSize: '14px',
                         paddingBottom: 1.3,
                         paddingTop: 1.7,
@@ -203,7 +204,6 @@ const BookADemoForm = ({ form }) => {
                       },
                       '& input[type=number]::-webkit-inner-spin-button': {
                         '-webkit-appearance': 'none',
-                        margin: 0,
                       },
                     }}
                     id="outlined-basic"
@@ -232,19 +232,19 @@ const BookADemoForm = ({ form }) => {
           >
             Submit
           </Button>
-        </Box>
-
-        <Box>
-          <Typography
-            sx={{
-              color: '#001C63',
-              fontSize: '16px',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              linehHeight: '27.863px',
-            }}
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
+          <Box>
+            <Typography
+              sx={{
+                color: '#001C63',
+                fontSize: '15px !important',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                linehHeight: '27.863px',
+                width: { xs: '280', sm: '430px', md: '430px' },
+              }}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          </Box>
         </Box>
         <BasicModal text={modalText} open={open} handleClose={handleClose} />
       </Box>
