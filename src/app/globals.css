@@ -156,6 +156,7 @@ span {
   display: flex;
   justify-content: space-around;
   /* gap: 7px; */
+  margin-right: 10px;
 }
 
 .PhoneInputCountrySelect {
@@ -180,8 +181,8 @@ span {
 }
 
 .PhoneInputCountryIcon img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 
 .PhoneInputInput {
@@ -953,4 +954,30 @@ input::-webkit-inner-spin-button {
 .partner-country-dropdown option {
   font-weight: 400;
   color: var(--blackColor);
+}
+.hireTalentResponsiveBtnNav {
+  display: block !important;
+}
+
+.hireTalentBtnNav {
+  display: block !important;
+}
+
+@media (max-width: 987px) {
+  .desktopNav {
+    display: none !important;
+  }
+
+  .responsiveNav {
+    display: block !important;
+  }
+
+  .hireTalentBtnNav {
+    display: none !important;
+  }
+
+  .hireTalentResponsiveBtnNav {
+    display: block !important;
+  }
+
 }
