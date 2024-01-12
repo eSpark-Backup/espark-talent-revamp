@@ -20,7 +20,7 @@ import {
   OUTSOURCING_SOLUTIONS_DATA,
 } from '@/constants/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA, STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/ BusinessVenture';
 

@@ -126,12 +126,23 @@ const Form = ({ formContent }) => {
   };
 
   return (
-    <Box className="partner-form" sx={{ mt: { xs: '12%', md: '12%' },maxWidth:'450px',  margin: '30px auto !important' }}>
-      <Box sx={{ margin: '0px auto !important'}}>
+    <Box
+      className="partner-form"
+      sx={{
+        mt: { xs: '12%', md: '12%' },
+        maxWidth: '450px',
+        margin: '30px auto !important',
+      }}
+    >
+      <Box sx={{ margin: '0px auto !important' }}>
         <form>
-          <Box sx={{
-            display: 'flex', alignItems: 'center', mt: { xs: '10px', md: '0px' }
-          }}>
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              mt: { xs: '10px', md: '0px' },
+            }}
+          >
             <Typography
               sx={{
                 color: '#265579',
@@ -239,7 +250,7 @@ const Form = ({ formContent }) => {
               <span className="starick">*</span>
             </Typography>
 
-            <Box >
+            <Box>
               {/* <input
               type="number"
               className="input"
@@ -300,11 +311,12 @@ const Form = ({ formContent }) => {
               placeholder="Enter your LinkedIn profile URL"
               onChange={handleChange}
             />
-            {touched?.linkedin_profile_link && errors?.linkedin_profile_link && (
-              <span className="error-message">
-                {errors?.linkedin_profile_link}
-              </span>
-            )}
+            {touched?.linkedin_profile_link &&
+              errors?.linkedin_profile_link && (
+                <span className="error-message">
+                  {errors?.linkedin_profile_link}
+                </span>
+              )}
           </Box>
           <Box
             className="partner-form-button"
@@ -321,7 +333,6 @@ const Form = ({ formContent }) => {
             </Button>
           </Box>
         </form>
-
       </Box>
     </Box>
   );

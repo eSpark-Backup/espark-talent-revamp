@@ -12,7 +12,8 @@ export const TEAM_CARD_DATA = {
       alt: 'Observant Recruiters',
       title: 'Observant Recruiters',
       paragraph:
-        'Research is the backbone of our HRM team, as we never miss any skillful and accomplished professionals. We have a team with eagle-eye instincts pick candidates.',  },
+        'Research is the backbone of our HRM team, as we never miss any skillful and accomplished professionals. We have a team with eagle-eye instincts pick candidates.',
+    },
     {
       icon: '/images/whatwedo/professional-team/team.svg',
       alt: 'Clever Hiring Team',
