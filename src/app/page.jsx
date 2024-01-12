@@ -8,7 +8,7 @@ import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import OurExperties from '@/components/homepage/OurExperties';
 import HomeBlogs from '@/components/blogs/HomeBlogs';
 import ClientSays from '@/components/homepage/ClientSays';
-import Hero from '@/components/homepage/Hero';
+import Hero from '@/components/homepage/HomeHero';
 import Process from '@/components/homepage/Process';
 import Perks from '@/components/homepage/Perks';
 import Faq from '@/components/FAQ/Faq';
@@ -63,6 +63,7 @@ const page = () => {
         background={'#F7F8FB'}
       />
       <Faq data={FAQ_DATA} />
+
       {/* <Faqs data={FAQ_DATA} /> */}
     </>
   );

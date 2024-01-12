@@ -57,7 +57,10 @@ const OurExperties = ({ data }) => {
         '@media (min-width: 600px)': { background: '#F7F8FB', py: 6 },
       }}
     >
-      <Container sx={{ width: { md: '1020px', lg: '1250px' } }}>
+      <Container 
+      sx={{
+        //  width: { md: '1020px', lg: '1250px' }
+          }}>
         <ParagraphTitle title={data?.title} />
         <Box
           sx={{

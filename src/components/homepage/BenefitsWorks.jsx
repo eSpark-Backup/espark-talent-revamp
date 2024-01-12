@@ -232,7 +232,7 @@ const BenefitsWorks = ({ data }) => {
 
                       lineHeight: { md: '30px', xs: '18.571px' },
                       ml: 1,
-                      fontSize: { md: '20px', xs: '12px' },
+                      fontSize: { lg: '20px', xs: '12px' },
                     }}
                   >
                     {item?.paragraph}
