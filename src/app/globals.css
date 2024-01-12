@@ -533,9 +533,6 @@ line-height: 17px;
   max-width: 100% !important;
   max-height: 100% !important;
 }
-.mySwiper {
-  max-width: 1115px !important;
-}
 .professional-team-card-Swiper {
   max-width: 1115px !important;
 }
@@ -699,7 +696,14 @@ line-height: 17px;
   font-weight: 400;
   line-height: normal;
 }
-
+@media (max-width: 768px) {
+  .partner-form .input::placeholder {
+    font-size: 13px;
+}
+.PhoneInputInput::placeholder {
+  font-size: 13px;
+}
+}
 /* .partner-form input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -883,7 +887,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   appearance: none;
   font-weight: 600;
-  background-image: url(/images/partners/arrow.svg);
+  background-image: url('/images/partners/arrow.svg');
   background-position: right 0.75rem center;
   background-repeat: no-repeat;
 }

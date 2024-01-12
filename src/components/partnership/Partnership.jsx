@@ -126,7 +126,7 @@ const Partnership = ({ partnership }) => {
               ))}
             </>
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} sm={12} md={5}>
             <Form formContent={formContent} />
           </Grid>
         </Grid>
