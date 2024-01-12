@@ -954,3 +954,29 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   color: var(--blackColor);
 }
+.hireTalentResponsiveBtnNav {
+  display: block !important;
+}
+
+.hireTalentBtnNav {
+  display: block !important;
+}
+
+@media (max-width: 987px) {
+  .desktopNav {
+    display: none !important;
+  }
+
+  .responsiveNav {
+    display: block !important;
+  }
+
+  .hireTalentBtnNav {
+    display: none !important;
+  }
+
+  .hireTalentResponsiveBtnNav {
+    display: block !important;
+  }
+
+}
