@@ -7,7 +7,7 @@ const Process = ({ data }) => {
       <Box
         sx={{
           mx: 'auto',
-          // width: { xs: 'auto', md: '1000px', lg: '1100px' },
+          maxWidth: { xs: 'auto', md: '1000px', lg: '1100px' },
           py: { sm: 9, md: 10 },
           px: { sm: 5, md: 4, lg: 0 },
           '@media (min-width: 720px) and (max-width: 767px)': {
