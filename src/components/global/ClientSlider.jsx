@@ -1,76 +1,127 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { Container, Box, Typography, Grid } from '@mui/material';
-import Image from 'next/image';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { Container, Box, Typography } from '@mui/material';
 import Link from 'next/link';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+const extendClients = (clients, length) => {
+  const extendedClients = Array.from({ length }, (_, index) => ({
+    ...clients[index % clients.length],
+  }));
+  return extendedClients;
+};
 
-const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
-  const swiperSettings = {
-    slidesPerView: 8,
-    spaceBetween: 20,
-    // centerMode: true,
-    centerPadding: '0',
-    loop: true,
-    pagination: {
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      360: {
-        slidesPerView: 2,
-      },
-      786: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-      1440: {
-        slidesPerView: 8,
-      },
-      1920: {
-        slidesPerView: 8,
-      },
-    },
+const ClientSlider = ({
+  bgColor,
+  txtColor,
+  title,
+  fontWeight,
+  data,
+  length = 1000,
+  breakPoints,
+  fontSize,
+  lineHeight,
+  pb,
+  variant,
+}) => {
+  const extendedData = {
+    clients: extendClients(data.clients, length),
+  };
+
+  const getImagePath = (originalImagePath) => {
+    if (bgColor == '#029894' || !bgColor) {
+      return originalImagePath.replace('_dark', '_light');
+    } else {
+      return originalImagePath.replace('_light', '_dark');
+    }
   };
 
   return (
-    <Box sx={{ background: bgColor, py: '2.5%' }}>
-      <Container sx={{ pb: '30px' }}>
+    <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
+      <Container sx={{ pb: pb || '10px' }}>
         <Typography
-          variant="h2"
+          variant={variant || 'h2'}
           color={txtColor}
-          sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
+          sx={{
+            textAlign: 'center',
+            fontWeight: fontWeight,
+            py: '30px',
+            fontSize: fontSize,
+            lineHeight: lineHeight,
+          }}
         >
           {title}
         </Typography>
       </Container>
-      <Swiper {...swiperSettings} sx={{ mx: 'auto' }}>
-        <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' }}>
-          {data?.clients.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Link href={item?.link}>
-                <Image
-                  src={item?.image}
-                  alt={item?.image}
-                  height={item?.imageHeight}
-                  width={item?.imageWidth}
-                />
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Grid>
+      <Swiper
+        spaceBetween={0}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        autoplay={{
+          delay: 500,
+          disableOnInteraction: false,
+        }}
+        navigation={false}
+        loop={true}
+        speed={2000}
+        effect="slide"
+        modules={[Autoplay, Navigation]}
+        className="mySwiper"
+        breakpoints={breakPoints}
+      >
+        {extendedData.clients.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Box sx={{ pb: pb || 5 }}>
+              {
+                <Link href={item.link}>
+                  <Box
+                    component={'img'}
+                    src={getImagePath(item.image)}
+                    alt={item.image}
+                    height={'37px'}
+                    sx={{
+                      width: {
+                        // xs: '150px',
+                        sm: '184px',
+                        md: '184px',
+                        lg: '186px',
+                      },
+                      height: {
+                        // xs: '30px',
+                        sm: '35px',
+                        md: '35px',
+                        lg: '37px',
+                      },
+                      '@media (min-width: 550px) and (max-width: 767px)': {
+                        width: '140px',
+                        height: '25px',
+                      },
+                      '@media (min-width: 375px) and (max-width: 549px)': {
+                        width: '100px',
+                        height: '20px',
+                      },
+                      '@media (min-width: 300px) and (max-width: 374px)': {
+                        width: '80px',
+                        height: '18px',
+                      },
+                    }}
+                  />
+                </Link>
+              }
+            </Box>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );
