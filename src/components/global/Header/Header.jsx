@@ -6,7 +6,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useRouter } from 'next/navigation';
 
-import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
 import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
 
@@ -49,12 +48,28 @@ const Header = () => {
 
   return (
     <Box>
-      <Box backgroundColor={'#029894'}>
+      <Box
+        backgroundColor={'#029894'}
+        sx={{
+          height: { lg: '26px', md: '40px' },
+          display: { xs: 'none', md: 'flex' },
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         <Typography
           color={'#fff'}
-          variant="body1"
-          textAlign={'center'}
-          fontSize={{ xs: '10px', sm: '14px', md: '17px', lg: '20px' }}
+          sx={{
+            fontSize: {
+              xs: '3px',
+              sm: '15px !important',
+            },
+            fontWeight: 400,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          }}
         >
           Scale up your business with our exclusive offer! Start with No
           Management Fee for First Employee.
@@ -98,10 +113,6 @@ const Header = () => {
               handleCloseUserMenu={handleCloseUserMenu}
               anchorElUser={anchorElUser}
               selectedMenuItem={selectedMenuItem}
-            />
-            <HireTalentButton
-              handleOpenUserMenu={handleOpenUserMenu}
-              display={{ xs: 'none', md: 'flex' }}
             />
           </Toolbar>
         </Container>
