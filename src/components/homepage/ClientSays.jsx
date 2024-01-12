@@ -122,7 +122,7 @@ const ClientSays = ({ data }) => {
                           justifyContent: 'center',
                           alignItems: 'center',
                           pt: 4,
-                          px: { xs: 2, sm: 0 },
+                          px: { xs: 2 },
                         }}
                       >
                         <Box
@@ -173,7 +173,7 @@ const ClientSays = ({ data }) => {
                         <Box
                           sx={{
                             width: { xs: '100%', sm: '440px' },
-                            px: { xs: 2, sm: 0 },
+                            px: { xs: 2 },
                           }}
                         >
                           <Typography
