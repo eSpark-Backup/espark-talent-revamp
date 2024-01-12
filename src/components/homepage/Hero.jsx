@@ -1,10 +1,8 @@
 'use client';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
-import Image from 'next/image';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useTheme } from '@mui/system';
 import ESparkButton from '../global/eSparkButton';
-import Link from 'next/link';
 
 const Hero = ({ data }) => {
   const theme = useTheme();
@@ -83,11 +81,11 @@ const Hero = ({ data }) => {
                   }}
                 >
                   <ESparkButton
-                  title={data.button.label}
-                  link={data.button.link}
-                  color={data.button.btnColor}
-                  size={'180px'}
-                />
+                    title={data.button.label}
+                    link={data.button.link}
+                    color={data.button.btnColor}
+                    size={'180px'}
+                  />
                   {/* <Button
                     sx={{
                       backgroundColor: '#fff',

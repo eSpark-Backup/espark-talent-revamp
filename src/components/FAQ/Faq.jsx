@@ -10,7 +10,6 @@ import {
   AccordionSummary,
   useMediaQuery,
 } from '@mui/material';
-import Image from 'next/image';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 
@@ -26,6 +25,7 @@ const Faq = ({ data }) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
+  console.log(isSmallScreen, isMediumScreen, isLargeScreen);
 
   return (
     <Box sx={{ py: '1%' }} id="faq">
@@ -46,10 +46,11 @@ const Faq = ({ data }) => {
                     expandIcon={
                       <img
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={{lg: '30px',
+                        width={{
+                          lg: '30px',
                           md: '23px',
                           sm: '15px',
-                          xs: '12px'
+                          xs: '12px',
                         }}
                         height={'auto'}
                         alt="icon"
@@ -110,10 +111,11 @@ const Faq = ({ data }) => {
                     expandIcon={
                       <img
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={{lg: '30px',
+                        width={{
+                          lg: '30px',
                           md: '23px',
                           sm: '15px',
-                          xs: '12px'
+                          xs: '12px',
                         }}
                         height={'auto'}
                         alt="icon"
