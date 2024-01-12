@@ -44,8 +44,18 @@ const Hero = ({ data }) => {
                   variant={data?.titleVariant}
                   color={data?.titleColor}
                   sx={{
-                    fontSize: {xs:"25px !important", sm:"30px !important", md:"40px !important", lg:"50px !important"},
-                    lineHeight: { xs: '31px', sm:"40px", md:"50px", lg: '66.07px !important' },
+                    fontSize: {
+                      xs: '25px !important',
+                      sm: '30px !important',
+                      md: '40px !important',
+                      lg: '50px !important',
+                    },
+                    lineHeight: {
+                      xs: '31px',
+                      sm: '40px',
+                      md: '50px',
+                      lg: '66.07px !important',
+                    },
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
                       // fontSize: '23px !important',
@@ -60,8 +70,18 @@ const Hero = ({ data }) => {
                   variant={data?.descVariant}
                   color={data?.descColor}
                   sx={{
-                    lineHeight: { xs: '20px',sm:"27px",md:"35px", lg: '42px !important' },
-                    fontSize:{xs:"13px",sm:"15px",md:"18px",lg:"20px"},
+                    lineHeight: {
+                      xs: '20px',
+                      sm: '27px',
+                      md: '35px',
+                      lg: '42px !important',
+                    },
+                    fontSize: {
+                      xs: '13px',
+                      sm: '15px',
+                      md: '18px',
+                      lg: '20px',
+                    },
                     padding: { xs: '0px', lg: '0 10px 0 0' },
                     py: '10px',
                     [theme.breakpoints.down('sm')]: {
@@ -76,10 +96,10 @@ const Hero = ({ data }) => {
               {data?.button && (
                 <Box
                   sx={{
-                    mt:"20px",
-                    display:"flex",
-                    flexDirection:{xs:"column", sm:"row"},
-                    alignItems:"center",
+                    mt: '20px',
+                    display: 'flex',
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    alignItems: 'center',
                     // [theme.breakpoints.down('sm')]: {
                     //   display: 'none',
                     // },
@@ -123,7 +143,7 @@ const Hero = ({ data }) => {
                   component={'img'}
                   src={data?.image}
                   alt={data?.imageAlt}
-                  sx={{maxWidth:{xs:"100%", sm:"50%", md:"100%"}}}
+                  sx={{ maxWidth: { xs: '100%', sm: '50%', md: '100%' } }}
                   // sx={{ width: '435.2px', height: '418.607px' }}
                 />
               </Grid>
