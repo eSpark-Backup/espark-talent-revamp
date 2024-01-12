@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
+const TalentIgnite = ({ data }) => {
   return (
     <Box sx={{ my: 4 }}>
       <Container>

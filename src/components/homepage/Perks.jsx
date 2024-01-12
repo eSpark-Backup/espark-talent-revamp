@@ -18,7 +18,6 @@ const Perks = ({ data }) => {
   const handleCardClick = (index) => {
     setSelectedCard(index === selectedCard ? index : index);
   };
-  const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <Box sx={{ py: '5%', px: '3%' }}>
       <Container>

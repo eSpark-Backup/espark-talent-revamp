@@ -16,7 +16,7 @@ const OurService = ({ ourService }) => {
       <Container>
         <Title heading={heading} subHeading={subHeading} />
         <Swiper
-          // spaceBetween={20}
+          spaceBetween={0}
           modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
