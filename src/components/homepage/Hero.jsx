@@ -1,12 +1,9 @@
 'use client';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
-import { useTheme } from '@mui/system';
-import ESparkButton from '../global/eSparkButton';
 
 const Hero = ({ data }) => {
-  const theme = useTheme();
-
   return (
     <>
       <Box
@@ -32,24 +29,27 @@ const Hero = ({ data }) => {
             <Grid
               item
               xs={12}
-              sm={8}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                p: { xs: 'auto', lg: '0 130px 0 20px' },
-              }}
+              sm={7}
+              sx={{ display: 'flex', flexDirection: 'column' }}
             >
               {data?.title && (
                 <Typography
-                  variant={data?.titleVariant}
+                  // variant={data?.titleVariant}
                   color={data?.titleColor}
-                  sx={{
-                    fontSize: '50px !important',
-                    lineHeight: { xs: '30px', lg: '62px !important' },
-                    [theme.breakpoints.down('sm')]: {
-                      textAlign: 'center',
-                      fontSize: '23px !important',
-                    },
+                  fontSize={{
+                    xs: '22px',
+                    sm: '24px',
+                    md: '30x',
+                    lg: '40px',
+                    xl: '40px',
+                  }}
+                  fontWeight={600}
+                  textAlign={{
+                    xs: 'center',
+                    sm: 'left',
+                    md: 'left',
+                    lg: 'left',
+                    xl: 'left',
                   }}
                 >
                   {data?.title}
@@ -57,16 +57,20 @@ const Hero = ({ data }) => {
               )}
               {data?.description && (
                 <Typography
-                  variant={data?.descVariant}
                   color={data?.descColor}
-                  sx={{
-                    lineHeight: { xs: '20px', lg: '42px !important' },
-                    padding: { xs: '0px', lg: '0 10px 0 0' },
-                    py: '10px',
-                    [theme.breakpoints.down('sm')]: {
-                      textAlign: 'center',
-                      fontSize: '13px',
-                    },
+                  fontSize={{
+                    xs: '14px',
+                    sm: '14px',
+                    md: '16px',
+                    lg: '20px',
+                    xl: '20px',
+                  }}
+                  textAlign={{
+                    xs: 'center',
+                    sm: 'left',
+                    md: 'left',
+                    lg: 'left',
+                    xl: 'left',
                   }}
                 >
                   {data?.description}
@@ -74,32 +78,37 @@ const Hero = ({ data }) => {
               )}
               {data?.button && (
                 <Box
-                  sx={{
-                    [theme.breakpoints.down('sm')]: {
-                      display: 'none',
-                    },
+                  py={{
+                    xs: '14px',
+                    sm: '14px',
+                    md: '16px',
+                    lg: '20px',
+                    xl: '20px',
                   }}
                 >
-                  <ESparkButton
-                    title={data.button.label}
-                    link={data.button.link}
-                    color={data.button.btnColor}
-                    size={'180px'}
-                  />
-                  {/* <Button
+                  {/* <ESparkButton
+                  title={data.button.label}
+                  link={data.button.link}
+                  color={data.button.btnColor}
+                  size={'180px'}
+                /> */}
+                  <Button
                     sx={{
                       backgroundColor: '#fff',
                       '&:hover': {
                         backgroundColor: '#fff',
                       },
+
+                      py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                      px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
                       height: '50px',
                       width: '160px',
-                      color: '#001C63 ',
+                      color: '#001C63',
                       fontWeight: '700',
                     }}
                   >
                     {data.button?.label}
-                  </Button> */}
+                  </Button>
                 </Box>
               )}
             </Grid>
@@ -107,18 +116,18 @@ const Hero = ({ data }) => {
               <Grid
                 item
                 xs={12}
-                sm={4}
+                sm={5}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'right',
                 }}
               >
-                <Box
-                  component={'img'}
+                <Image
                   src={data?.image}
                   alt={data?.imageAlt}
-                  sx={{ width: '435.2px', height: '418.607px' }}
+                  width={data?.imageWidth}
+                  height={data?.imageHeight}
                 />
               </Grid>
             )}

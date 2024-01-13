@@ -8,7 +8,7 @@ import { Pagination, PaginationItem } from '@mui/material';
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
-const BlogCards = ({ data, smCol }) => {
+const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -24,14 +24,7 @@ const BlogCards = ({ data, smCol }) => {
       <Container>
         <Grid container spacing={2} sx={{ py: '5%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid
-              item
-              xs={smCol == 2 ? '12' : '12'}
-              sm={smCol == 2 ? '12' : '12'}
-              md={4}
-              lg={4}
-              key={index}
-            >
+            <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
                 sx={{
@@ -63,7 +56,12 @@ const BlogCards = ({ data, smCol }) => {
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '23.49px',
+                        fontSize: {
+                          xs: '18px',
+                          sm: '18px',
+                          md: '20px',
+                          lg: '24px',
+                        },
                         fontWeight: 600,
                         lineHeight: '26px',
                       }}
@@ -74,7 +72,12 @@ const BlogCards = ({ data, smCol }) => {
                   <Typography
                     sx={{
                       color: '#6F76A8',
-                      fontSize: '14.455px',
+                      fontSize: {
+                        xs: '13px',
+                        sm: '13px',
+                        md: '15px',
+                        lg: '18px',
+                      },
                       fontWeight: 400,
                       lineHeight: '27.465px',
                       fontStyle: 'normal',
@@ -93,7 +96,16 @@ const BlogCards = ({ data, smCol }) => {
                           color: '#fff',
                         }}
                       />
-                      <Typography variant="body1">{READ_MORE}</Typography>
+                      <Typography
+                        fontSize={{
+                          xs: '13px',
+                          sm: '13px',
+                          md: '15px',
+                          lg: '20px',
+                        }}
+                      >
+                        {READ_MORE}
+                      </Typography>
                     </Box>
                   </Link>
                 </Box>
