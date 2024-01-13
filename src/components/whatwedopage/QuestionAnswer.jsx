@@ -2,40 +2,47 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-import { QUESTION_ANSWER } from '@/constants/what-we-do-page/question-answer';
 import ESparkButton from '../global/eSparkButton';
 
-const QuestionAnswer = () => {
+const QuestionAnswer = ({ data }) => {
   return (
     <Box sx={{ mb: { md: '4%', xs: '10%' } }}>
       <Container>
         <Grid container>
-          <Grid item xs={12} sm={5} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid item xs={12} md={5} sx={{ order: { md: 2, xs: 2, sm: 2 } }}>
             <Box
               sx={{
                 backgroundColor: 'rgba(59, 89, 152, 0.04)',
                 borderRadius: '17.311px',
-                width: { lg: '504px' },
+                // width: { lg: '594.66px' },
+                mt: { xs: '40px', md: '0px' },
               }}
             >
               <Box sx={{ display: 'flex', justifyContent: 'center', pt: 5 }}>
                 <Image
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
-                  width={400}
+                  width={440}
                   height={200}
                   alt="We make easy for companies to expand their network with eSpark Talent"
                 />
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={7} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            sx={{
+              order: { md: 2, xs: 1, sm: 1 },
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Box
               sx={{
-                ml: { sm: '7%' },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                mt: { sm: 10 },
               }}
             >
               <Typography
@@ -46,26 +53,28 @@ const QuestionAnswer = () => {
                   fontWeight: 700,
                   fontStyle: 'normal',
                   lineHeight: { md: '48px', xs: '36px' },
-                  ml: { lg: '210px' },
-
+                  ml: { md: '5px', lg: '60px' },
+                  px: { xs: '5px', md: '0px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                 }}
               >
-                {QUESTION_ANSWER.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
                   color: '#001C63',
                   fontSize: { md: '18px', xs: '10px' },
-                  fontWeight: { xs: 700, sm: 400 },
+                  fontWeight: { xs: 700, md: 400 },
                   fontStyle: 'normal',
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                   textAlign: { xs: 'center', sm: 'right' },
-                  my: 2,
+                  my: 2.5,
+                  ml: { md: '5px', lg: '85px' },
+                  px: { xs: '10px', md: '0px' },
                 }}
               >
-                {QUESTION_ANSWER.descrioption}
+                {data?.descrioption}
               </Typography>
               <Box
                 sx={{
@@ -74,10 +83,10 @@ const QuestionAnswer = () => {
                 }}
               >
                 <ESparkButton
-                  title={QUESTION_ANSWER.buttonLabel}
-                  link={QUESTION_ANSWER.buttonLink}
-                  color={'primary'}
-                  size={'170px'}
+                  title={data?.buttonLabel}
+                  link={data?.buttonLink}
+                  color={'secondary'}
+                  size={{ xs: '140px', lg: '190px' }}
                 />
               </Box>
             </Box>

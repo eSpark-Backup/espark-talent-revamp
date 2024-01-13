@@ -1,11 +1,23 @@
 export const CLIENT_SLIDER_BREAK_POINTS = {
-  600: {
-    slidesPerView: 1,
+  300: {
+    slidesPerView: 2,
   },
-  960: {
+  425: {
+    slidesPerView: 3,
+  },
+  600: {
+    slidesPerView: 4,
+  },
+  768: {
+    slidesPerView: 4,
+  },
+  1024: {
     slidesPerView: 6,
   },
-  1260: {
+  1440: {
+    slidesPerView: 7,
+  },
+  1920: {
     slidesPerView: 8,
   },
 };
@@ -16,22 +28,22 @@ export const OUTSOURCE_BENEFITS_DATA = {
   paragraph: `Flexible and easy service offering is the secret of our success in the IT outsourcing market. Hire us and fill out all your HR outstaffing requirements today!`,
   items: [
     {
-      icon: '/images/homepage/outsource-benefits/icon1.svg',
+      icon: '/images/homepage/outsource-benefits/active_service.svg',
       title: '24/7 Active Service',
       paragraph: `Experience an unwavering commitment to your needs with 24/7 active HR outsourcing. It's not just a solution; it's an around-the-clock partner in success.`,
     },
     {
-      icon: '/images/homepage/outsource-benefits/icon2.svg',
+      icon: '/images/homepage/outsource-benefits/trustful_connection.svg',
       title: 'Trustful Connection',
       paragraph: `Forge a bond built on trust. eSpark Talent goes beyond transactions; we cultivate lasting relationships based on reliability and mutual confidence.`,
     },
     {
-      icon: '/images/homepage/outsource-benefits/icon3.svg',
+      icon: '/images/homepage/outsource-benefits/innovation.svg',
       title: 'Innovation Injection',
       paragraph: `Inject innovation into your projects. Our employees outsourcing services aren't just about tasks; they're a seamless blend of creativity and cutting-edge solutions.`,
     },
     {
-      icon: '/images/homepage/outsource-benefits/icon4.svg',
+      icon: '/images/homepage/outsource-benefits/friendly.svg',
       title: 'Friendly Communication',
       paragraph: `Communication shouldn't just be a channel; it should be a conversation. Enjoy a dialogue that fosters understanding, cooperation, and shared success with outsourced HR.`,
     },
@@ -84,6 +96,7 @@ export const PERKS_DATA = [
     icon: '/images/homepage/our-perks/icon1.svg',
     activeIcon: '/images/homepage/our-perks/icon1a.svg',
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
+    listIcon: '/images/homepage/our-perks/list-icon.svg',
     content: {
       heading: 'Hire Full-Time Salaried Employees',
       paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
@@ -93,7 +106,7 @@ export const PERKS_DATA = [
         { item: 'High-Value Contract Partnership,' },
         { item: 'Work-Life Balance Focus,' },
       ],
-      listIcon: '/images/homepage/our-perks/list-icon.svg',
+
       buttonText: 'Book A Demo',
       buttonLink: '/book-a-demo',
     },

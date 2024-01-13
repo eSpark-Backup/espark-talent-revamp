@@ -7,8 +7,8 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ my: 2 }}>
-      <Box sx={{ py: '2%' }}>
+    <Box sx={{ mb: { xs: '26px', md: '88px' } }}>
+      <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>
         <Typography
           sx={{
             color: '#001C63',
@@ -49,13 +49,13 @@ const OurOutsourcing = ({ data }) => {
                   fontSize: '28px',
                   fontWeight: 500,
                   lineHeight: '41.547px',
-                  mr: { lg: '30%', md: '5%' },
+                  mr: { lg: '10%', md: '5%' },
                   mb: { md: '15px' },
-                  mt: '20px',
+                  mt: '10px',
                   textAlign: { xs: 'center', md: 'left' },
                 }}
               >
-                {data.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
@@ -69,7 +69,7 @@ const OurOutsourcing = ({ data }) => {
                   mr: { lg: '10%', md: '5%' },
                 }}
               >
-                {data.description}
+                {data?.description}
               </Typography>
             </Box>
             {listItem?.map((item, index) => (
@@ -88,13 +88,22 @@ const OurOutsourcing = ({ data }) => {
                       lineHeight: '27.23.741px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
             ))}
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            sx={{
+              display: { md: 'flex', lg: 'block' },
+              justifyContent: { md: 'center' },
+            }}
+          >
             <Box
               sx={{
                 borderRadius: '17.311px',
@@ -105,7 +114,12 @@ const OurOutsourcing = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={data.alt} />
+              <Image
+                src={data?.image}
+                width={380}
+                height={300}
+                alt={data?.alt}
+              />
             </Box>
           </Grid>
         </Grid>

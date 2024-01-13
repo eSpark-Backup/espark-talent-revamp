@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Title from './Title';
@@ -18,12 +17,11 @@ const OurService = ({ ourService }) => {
         <Title heading={heading} subHeading={subHeading} />
         <Swiper
           spaceBetween={0}
-          freeMode={true}
-          modules={[FreeMode, Pagination]}
+          modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
-            600: {
-              slidesPerView: 1,
+            768: {
+              slidesPerView: 2,
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -32,8 +30,8 @@ const OurService = ({ ourService }) => {
               wrapperClass: 'swiper-wrapper',
               slideClass: 'swiper-slide',
             },
-            860: {
-              slidesPerView: 2,
+            1024: {
+              slidesPerView: 3,
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -59,47 +57,42 @@ const OurService = ({ ourService }) => {
             <SwiperSlide key={index}>
               <Box
                 sx={{
-                  height: '232.671px',
+                  maxWidth: {
+                    xs: '316.31px',
+                    md: 'auto ',
+                    lg: '365.643px ',
+                  },
+                  height: { xs: '201.32px', sm: '232.671px', lg: '222.671px' },
                   borderRadius: '8.875px',
                   backgroundColor: '#fff',
                   boxShadow: ' 0px 0px 31.062px 0px rgba(0, 0, 0, 0.07)',
-                  p: 1,
-                  m: 1,
+                  py: '20px',
+                  margin: { xs: '10px auto !important', md: '7px ' },
                 }}
               >
-                <Box
-                  sx={{
-                    width: {
-                      md: '320px',
-                      sm: '360px',
-                    },
-                    height: '280px',
-                    margin: '0px auto',
-                  }}
-                >
+                <Box>
                   <Box
                     sx={{
                       mt: { xs: 1, sm: 2 },
-
-                      p: 1,
+                      my: '25px',
+                      px: { xs: '24px', md: '50px' },
                     }}
                   >
                     <Image
                       src={item?.image}
                       width={40}
                       height={50}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Box>
 
-                  <Box>
+                  <Box sx={{ px: { xs: '24px', md: '22px' } }}>
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: { xs: '19.197px', md: '22.187px' },
+                        fontSize: { xs: '19.197px ', md: '22.187px' },
                         fontStyle: 'normal',
                         fontWeight: 600,
-
                         lineHeight: { xs: '20.272px', md: '23.43px' },
                         mt: { lg: 1 },
                       }}
@@ -109,12 +102,11 @@ const OurService = ({ ourService }) => {
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '14.2px',
-                        textAlign: 'justify',
-
+                        fontSize: { xs: '12.286px', md: '14.2px' },
+                        // textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
-                        lineHeight: { xs: '25.4px', md: '26.979px' },
+                        lineHeight: { xs: '23.344px', md: '26.979px' },
                         mt: { lg: 1 },
                       }}
                     >

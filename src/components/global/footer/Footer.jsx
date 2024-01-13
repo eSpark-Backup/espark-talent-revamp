@@ -32,7 +32,13 @@ const Footer = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   textAlign: 'justify',
-                  fontSize: '15px',
+                  fontSize: {
+                    xs: '10px',
+                    sm: '10px',
+                    md: '13px',
+                    lg: '15px',
+                    xl: '20px',
+                  },
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: '24.319px',
@@ -59,12 +65,12 @@ const Footer = ({ data }) => {
                 }}
               >
                 {data?.socialMedia?.map((item, index) => (
-                  <Link key={index} href={item.link}>
+                  <Link key={index} href={item?.link}>
                     <Image
-                      src={item.img}
+                      src={item?.img}
                       width={17}
                       height={17}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Link>
                 ))}
@@ -84,19 +90,19 @@ const Footer = ({ data }) => {
               }}
             >
               <Grid container>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.companyTitle} />
                   {data?.company?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.solutionTitle} />
                   {data?.solution?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
@@ -116,19 +122,19 @@ const Footer = ({ data }) => {
               }}
             >
               <Grid container>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.resourceTitle} />
                   {data?.resource?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} md={12} sm={6} xs={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <FooterTitle title={data?.partnershipTitle} />
                   {data?.partnership?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
@@ -145,7 +151,7 @@ const Footer = ({ data }) => {
                         width: { sm: '60%' },
                       }}
                     >
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
@@ -157,7 +163,7 @@ const Footer = ({ data }) => {
                         width: { sm: '60%' },
                       }}
                     >
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>

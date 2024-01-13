@@ -9,6 +9,7 @@ import {
   MenuItem,
   Pagination,
   PaginationItem,
+  useMediaQuery,
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 
@@ -18,8 +19,8 @@ const CareerCards = ({ data }) => {
 
   const jobCategories = Array.from(
     new Set(
-      data.flatMap((item) =>
-        Array.isArray(item.category) ? item.category : [item.category]
+      data?.flatMap((item) =>
+        Array.isArray(item?.category) ? item?.category : [item?.category]
       )
     )
   );
@@ -27,12 +28,18 @@ const CareerCards = ({ data }) => {
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data.filter((item) => item.category.includes(selectedCategory));
+      : data?.filter((item) => item?.category.includes(selectedCategory));
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
   const endIndex = startIndex + perPage;
   const paginatedData = filteredData.slice(startIndex, endIndex);
+
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -51,6 +58,12 @@ const CareerCards = ({ data }) => {
               value={selectedCategory}
               onChange={handleJobCategoryChange}
               fullWidth
+              fontSize={{
+                xs: '13px',
+                sm: '13px',
+                md: '15px',
+                lg: '20px',
+              }}
             >
               <MenuItem value="all">All</MenuItem>
               {jobCategories.map((category, index) => (
@@ -68,38 +81,66 @@ const CareerCards = ({ data }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 borderTop: '.5px solid #ced4da',
-                py: { lg: '3%', xs: '10%', sm: '10%' },
+                py: { lg: '3%', sm: '3%', xs: '20px' },
                 my: { xs: '20px', sm: '20px' },
-                borderRadius: { xs: '10px', sm: '10px' },
+                borderRadius: { xs: '10px', sm: '20px' },
+                boxShadow: {
+                  md: 'none',
+                  sm: `5px 5px 15px rgba(0,0,0,.3)`,
+                  xs: `5px 5px 15px rgba(0,0,0,.3)`,
+                },
               }}
             >
               <Grid
                 item
                 xs={12}
-                sm={6}
-                md={4}
+                sm={12}
+                md={3}
                 lg={3}
                 px={{ xs: '10px', sm: '20px' }}
               >
                 <Typography variant="h3" color="secondary">
                   {item?.heading}
                 </Typography>
-                <Typography variant="body1" color="#000">
+                <Typography
+                  variant="body1"
+                  fontSize={{
+                    xs: '12px',
+                    sm: '12px',
+                    md: '15px',
+                    lg: '20px',
+                  }}
+                  color="#000"
+                >
                   {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
               <Grid
                 item
                 xs={12}
-                sm={6}
-                md={8}
+                sm={12}
+                md={7}
                 lg={7}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <Typography variant="h3" color="secondary">
+                <Typography
+                  variant="h3"
+                  color="secondary"
+                  borderTop={{ md: 'none', sm: '.5px solid #ced4da' }}
+                  pt="10px"
+                >
                   Description
                 </Typography>
-                <Typography variant="body1" color="#000">
+                <Typography
+                  variant="body1"
+                  fontSize={{
+                    xs: '12px',
+                    sm: '12px',
+                    md: '15px',
+                    lg: '20px',
+                  }}
+                  color="#000"
+                >
                   {item?.description}
                 </Typography>
               </Grid>
@@ -107,19 +148,20 @@ const CareerCards = ({ data }) => {
                 item
                 xs={12}
                 sm={12}
-                md={12}
+                md={2}
                 lg={2}
                 display="flex"
                 alignItems={'center'}
                 justifyContent={'center'}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <ESparkButton
-                  title={`Apply Now >`}
-                  link={item?.link}
-                  color={'primary'}
-                  size={'170px'}
-                />
+                <Box py={{ xs: '10px', sm: '10px' }}>
+                  <ESparkButton
+                    title={`Apply Now >`}
+                    link={item?.link}
+                    color={'primary'}
+                  />
+                </Box>
               </Grid>
             </Grid>
           ))}
@@ -133,7 +175,15 @@ const CareerCards = ({ data }) => {
                 page={page}
                 onChange={(event, value) => setPage(value)}
                 color="primary"
-                size="large"
+                size={
+                  isSmallScreen
+                    ? 'small'
+                    : isMediumScreen
+                      ? 'medium'
+                      : isLargeScreen
+                        ? 'large'
+                        : 'medium'
+                }
                 // showFirstButton
                 // showLastButton
                 sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}

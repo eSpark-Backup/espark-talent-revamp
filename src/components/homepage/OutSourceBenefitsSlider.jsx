@@ -2,22 +2,19 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
 
 const OutSourceBenefitsSlider = ({ items }) => {
   return (
     <Box>
       <Swiper
         spaceBetween={1}
-        freeMode={true}
-        modules={[FreeMode, Pagination]}
+        modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
-          600: {
+          300: {
             slidesPerView: 1,
             pagination: {
               el: '.swiper-pagination',
@@ -27,8 +24,8 @@ const OutSourceBenefitsSlider = ({ items }) => {
             wrapperClass: 'swiper-wrapper',
             slideClass: 'swiper-slide',
           },
-          960: {
-            slidesPerView: 1,
+          768: {
+            slidesPerView: 2,
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
@@ -65,24 +62,56 @@ const OutSourceBenefitsSlider = ({ items }) => {
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    width: '100%',
+                    height: '218.635px',
+                    borderRadius: '13.57px',
+                    border: '1px solid lightGray',
+                    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+                    '@media (min-width: 767px) and (max-width: 767px)': {
+                      width: '100%',
+                    },
                   }}
                 >
                   <Box
                     sx={{
                       display: 'flex',
-                      borderRadius: '20px 20px 0 0 ',
-                      backgroundColor: 'rgba(0, 28, 99, 0.04) !important',
+                      height: '70.972px',
+                      borderRadius: '13.57px',
+                      background: '#F7F8FB',
+                      borderTop: '1px solid lightGray',
                       p: '20px',
                       alignItems: 'center',
                     }}
                   >
-                    <Image
+                    <Box
+                      component={'img'}
                       src={item?.icon}
                       alt={item?.title}
-                      height={45}
-                      width={45}
+                      sx={{
+                        width: 43,
+                        height: 43,
+                        '@media (min-width: 300px) and (max-width: 424px)': {
+                          width: 27,
+                          height: 27,
+                        },
+                      }}
                     />
-                    <Typography variant="h4" color="secondary" sx={{ ml: 2 }}>
+                    <Typography
+                      component="h4"
+                      color="secondary"
+                      sx={{
+                        fontSize: '20px !important',
+                        fontWeight: 600,
+                        ml: 2,
+                        '@media (min-width: 375px) and (max-width: 424px)': {
+                          fontSize: '18px !important',
+                        },
+                        '@media (min-width: 300px) and (max-width: 374px)': {
+                          ml: 1,
+                          fontSize: '15px !important',
+                        },
+                      }}
+                    >
                       {item?.title}
                     </Typography>
                   </Box>
@@ -91,10 +120,21 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       p: '20px',
                       borderRadius: '0 0 20px 20px',
                       backgroundColor: '#fff',
-                      height: { sm: '150px' },
+                      height: '100%',
                     }}
                   >
-                    <Typography variant="body1" color="initial">
+                    <Typography
+                      component={'p'}
+                      sx={{
+                        fontSize: '14px !important',
+                        '@media (min-width: 300px) and (max-width: 374px)': {
+                          fontSize: '12px !important',
+                        },
+                        fontWeight: 400,
+                        color: '#000',
+                      }}
+                      color="initial"
+                    >
                       {item?.paragraph}
                     </Typography>
                   </Box>

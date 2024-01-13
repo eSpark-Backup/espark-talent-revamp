@@ -13,19 +13,19 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
-    centerMode: true,
+    // centerMode: true,
     centerPadding: '0',
     loop: true,
     pagination: {
       clickable: true,
     },
     autoplay: {
-      delay: 500,
-      disableOnInteraction: false,
+      delay: 3000,
+      disableOnInteraction: true,
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       360: {
         slidesPerView: 2,
@@ -60,12 +60,12 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
         <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' }}>
           {data?.clients.map((item, index) => (
             <SwiperSlide key={index}>
-              <Link href={item.link}>
+              <Link href={item?.link}>
                 <Image
-                  src={item.image}
-                  alt={item.image}
-                  height={item.imageHeight}
-                  width={item.imageWidth}
+                  src={item?.image}
+                  alt={item?.image}
+                  height={item?.imageHeight}
+                  width={item?.imageWidth}
                 />
               </Link>
             </SwiperSlide>

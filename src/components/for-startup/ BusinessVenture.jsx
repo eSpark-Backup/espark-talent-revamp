@@ -9,12 +9,13 @@ const BusinessVenture = ({ data }) => {
   return (
     <Box sx={{ my: 2 }}>
       <Container>
-        <Grid container>
+        <Grid container display={'flex'} alignItems={'center'}>
           <Grid item sm={12} md={6}>
             <Box
               sx={{
-                mt: { md: '72px' },
-                pb: '12px',
+                // mt: { md: '52px', lg: '72px' },
+                // pb: '12px',
+                mr: { xs: '', md: '25px', lg: '35px' },
               }}
             >
               <Box>
@@ -24,11 +25,11 @@ const BusinessVenture = ({ data }) => {
                     fontSize: '28px',
                     fontWeight: 500,
                     lineHeight: '41.547px',
-                    mr: { lg: '20%', md: '5%' },
+                    // mr: { lg: '35px', xs:"0" },
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
-                  {data.title}
+                  {data?.title}
                 </Typography>
               </Box>
             </Box>
@@ -42,14 +43,14 @@ const BusinessVenture = ({ data }) => {
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: '14.838px',
+                      fontSize: '14px',
                       textAlign: 'justify',
                       fontWeight: 600,
                       fontStyle: 'normal',
                       lineHeight: '23.741px',
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
@@ -68,7 +69,12 @@ const BusinessVenture = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={data.alt} />
+              <Image
+                src={data?.image}
+                width={380}
+                height={300}
+                alt={data?.alt}
+              />
             </Box>
           </Grid>
         </Grid>

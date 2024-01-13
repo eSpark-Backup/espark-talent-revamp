@@ -4,32 +4,32 @@ export const HR_FIRM_DATA = {
     'Work with us and unlock the fastest professional hiring Services! Here is How we pick a worthy professionals',
   card: [
     {
-      image: '/images/how-its-works/recruit.png',
+      image: '/images/how-its-works/recruit.svg',
       alt: 'Recruit employee – espark Talent',
       title: 'Recruit',
       description:
-        'Exploration of the candidate is the first step in our recruitment process. Picking up outsourced talents is the day-to-day practice of our expert recruiters.',
+        'Our recruitment initiates with in-depth candidate exploration, expertly identifying outsourced talents for an efficient  process.',
     },
     {
-      image: '/images/how-its-works/shortlist.png',
+      image: '/images/how-its-works/shortlist.svg',
       alt: 'Shortlist employee – eSpark Talent',
       title: 'Shortlist',
       description:
-        'Selecting the top candidates comes under the prime expertise of our clever hiring team. They know how to test the talent and pick the foremost candidates.',
+        'Our adept hiring team excels at selecting top talent, employing savvy testing methods to identify and pick the best candidates.',
     },
     {
-      image: '/images/how-its-works/hire.png',
+      image: '/images/how-its-works/hire.svg',
       alt: 'Hire employee with eSpark Talent ',
       title: 'Hire',
       description:
         'Hiring is the final step in the process of selecting the worthy talent that is decided after proper discussion with our specialist.',
     },
     {
-      image: '/images/how-its-works/train.png',
+      image: '/images/how-its-works/train.svg',
       alt: 'Train employee – eSpark Talent',
       title: 'Train',
       description:
-        'Training is our extended and updated service that helps the top-picked talent to utilize their earned skills and get ready to work for our outsourced clients.',
+        'Training is our extended and updated service that helps the top-picked talent to utilize their earned skills and get ready to work.',
     },
   ],
 };
@@ -53,7 +53,6 @@ export const CHOOSE_US = {
       icon: '/images/how-its-works/true.svg',
       content: 'Spread Your Network Worldwide.',
     },
-
     {
       icon: '/images/how-its-works/true.svg',
       content: 'Establish a Strong Team of Outsourced Employees.',
@@ -96,21 +95,21 @@ export const OUR_SERVICE = {
     'We are open to offer workable plans that only benefit our respected clients.',
   card: [
     {
-      image: '/images/how-its-works/secure.png',
+      image: '/images/how-its-works/secure.svg',
       alt: 'Secure Plan',
       title: 'Secure Plan',
       description:
         'We offer a plan that suits our clients. Our secure plan does not only benefit the clients but also supports the offered professionals.',
     },
     {
-      image: '/images/how-its-works/time.png',
+      image: '/images/how-its-works/time.svg',
       alt: 'Timely Plan',
       title: 'Timely Plan',
       description:
-        'We are ready to offer a timely plan that starts within a day. Our clients will be able to hire professionals for a day in minutes. ',
+        'We are ready to offer a timely plan that starts within a day. Our clients will be able to hire professionals for a day in minutes.',
     },
     {
-      image: '/images/how-its-works/flexible.png',
+      image: '/images/how-its-works/flexible.svg',
       alt: 'Flexible Scheme',
       title: 'Flexible Scheme ',
       description:

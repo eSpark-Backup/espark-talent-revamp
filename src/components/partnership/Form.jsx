@@ -126,114 +126,132 @@ const Form = ({ formContent }) => {
   };
 
   return (
-    <Box className="partner-form">
-      <form>
-        <Box>
-          <Typography
+    <Box
+      className="partner-form"
+      sx={{
+        mt: { xs: '12%', md: '12%' },
+        maxWidth: '450px',
+        margin: '30px auto !important',
+      }}
+    >
+      <Box sx={{ margin: '0px auto !important' }}>
+        <form>
+          <Box
             sx={{
-              color: '#265579',
-              fontWeight: 600,
-              fontSize: '25.292px',
-              lineHeight: '32.509px',
-              mb: 1,
+              display: 'flex',
+              alignItems: 'center',
+              mt: { xs: '10px', md: '0px' },
             }}
           >
-            {formContent.title}
-          </Typography>
-        </Box>
-        <Box className="partner-form-full-name">
-          <Box className="partner-form-firstname">
             <Typography
               sx={{
                 color: '#265579',
-                fontWeight: 600,
-                fontSize: '14.448px',
-                lineHeight: '19.867px',
+                fontWeight: { xs: 600, md: 700 },
+                fontSize: { xs: '20px !important', lg: '25.292px !important' },
+                lineHeight: { xs: '29px ', md: '32.509px ' },
                 mb: 1,
               }}
             >
-              {formContent.firstName}
-              <span className="starick">*</span>
+              {formContent.title}
             </Typography>
-            <input
-              type="text"
-              className="input"
-              name="first_name"
-              placeholder="First Name"
-              value={values.first_name}
-              onChange={handleChange}
-            />
-            {touched?.first_name && errors?.first_name && (
-              <span className="error-message">{errors?.first_name}</span>
-            )}
           </Box>
-          <Box className="partner-form-lastname">
-            <Typography
-              sx={{
-                color: '#265579',
-                fontWeight: 600,
-                fontSize: '14.448px',
-                lineHeight: '19.867px',
-                mb: 1,
-              }}
-            >
-              {formContent.lastName}
-              <span className="starick">*</span>
-            </Typography>
-            <input
-              type="text"
-              className="input"
-              placeholder="Last Name"
-              name="last_name"
-              value={values.last_name}
-              onChange={handleChange}
-            />
-            {touched?.last_name && errors?.last_name && (
-              <span className="error-message">{errors?.last_name}</span>
-            )}
-          </Box>
-        </Box>
-        <Box className="partner-form-your-email-adress">
-          <Typography
-            sx={{
-              color: '#265579',
-              fontWeight: 600,
-              fontSize: '14.448px',
-              lineHeight: '19.867px',
-              mb: 1,
-            }}
-          >
-            {formContent.emailAddress}
-            <span className="starick">*</span>
-          </Typography>
-          <input
-            type="email"
-            className="input"
-            placeholder="Email"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-          />
-          {touched?.email && errors?.email && (
-            <span className="error-message">{errors?.email}</span>
-          )}
-        </Box>
-        <Box className="partner-form-your-email-adress">
-          <Typography
-            sx={{
-              color: '#265579',
-              fontWeight: 600,
-              fontSize: '14.448px',
-              lineHeight: '19.867px',
-              mb: 1,
-            }}
-          >
-            {formContent.phoneNumber}
-            <span className="starick">*</span>
-          </Typography>
+          <Box className="partner-form-full-name">
+            <Box className="partner-form-firstname">
+              <Typography
+                sx={{
+                  color: '#265579',
+                  fontWeight: { xs: 400, md: 600 },
 
-          <Box>
-            {/* <input
+                  fontSize: '14.448px',
+                  lineHeight: '19.867px',
+                  mb: 1,
+                }}
+              >
+                {formContent.firstName}
+                <span className="starick">*</span>
+              </Typography>
+              <input
+                type="text"
+                className="input"
+                name="first_name"
+                placeholder="First Name"
+                value={values.first_name}
+                onChange={handleChange}
+              />
+              {touched?.first_name && errors?.first_name && (
+                <span className="error-message">{errors?.first_name}</span>
+              )}
+            </Box>
+            <Box className="partner-form-lastname">
+              <Typography
+                sx={{
+                  color: '#265579',
+                  fontWeight: { xs: 400, md: 600 },
+
+                  fontSize: '14.448px',
+                  lineHeight: '19.867px',
+                  mb: 1,
+                }}
+              >
+                {formContent.lastName}
+                <span className="starick">*</span>
+              </Typography>
+              <input
+                type="text"
+                className="input"
+                placeholder="Last Name"
+                name="last_name"
+                value={values.last_name}
+                onChange={handleChange}
+              />
+              {touched?.last_name && errors?.last_name && (
+                <span className="error-message">{errors?.last_name}</span>
+              )}
+            </Box>
+          </Box>
+          <Box className="partner-form-your-email-adress">
+            <Typography
+              sx={{
+                color: '#265579',
+                fontWeight: { xs: 400, md: 600 },
+
+                fontSize: '14.448px',
+                lineHeight: '19.867px',
+                mb: 1,
+              }}
+            >
+              {formContent.emailAddress}
+              <span className="starick">*</span>
+            </Typography>
+            <input
+              type="email"
+              className="input"
+              placeholder="Email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+            />
+            {touched?.email && errors?.email && (
+              <span className="error-message">{errors?.email}</span>
+            )}
+          </Box>
+          <Box className="partner-form-your-email-adress">
+            <Typography
+              sx={{
+                color: '#265579',
+                fontWeight: { xs: 400, md: 600 },
+
+                fontSize: '14.448px',
+                lineHeight: '19.867px',
+                mb: 1,
+              }}
+            >
+              {formContent.phoneNumber}
+              <span className="starick">*</span>
+            </Typography>
+
+            <Box>
+              {/* <input
               type="number"
               className="input"
               placeholder="+00 00000000"
@@ -241,68 +259,81 @@ const Form = ({ formContent }) => {
               value={values.email}
               onChange={handleChange}
             /> */}
-            <PhoneInput
-              placeholder="Enter phone number"
-              value={values.phone_number}
-              id={'phone_number'}
-              defaultCountry={'PK'}
-              onChange={handlePhoneChange}
+              <PhoneInput
+                placeholder="Enter phone number"
+                value={values.phone_number}
+                // className='input'
+                id={'phone_number'}
+                defaultCountry={'PK'}
+                onChange={handlePhoneChange}
+              />
+            </Box>
+          </Box>
+          <Box className="partner-form-Country">
+            <Typography
+              sx={{
+                color: '#265579',
+                fontWeight: { xs: 400, md: 600 },
+
+                fontSize: '14.448px',
+                lineHeight: '19.867px',
+                mb: 1,
+              }}
+            >
+              {formContent.countryLocated}
+            </Typography>
+            <PartnerCountrySelect
+              options={options}
+              selectedOption={selectedOption}
+              setSelectedOption={setSelectedOption}
             />
           </Box>
-        </Box>
-        <Box className="partner-form-Country">
-          <Typography
-            sx={{
-              color: '#265579',
-              fontWeight: 600,
-              fontSize: '14.448px',
-              lineHeight: '19.867px',
-              mb: 1,
-            }}
-          >
-            {formContent.countryLocated}
-          </Typography>
-          <PartnerCountrySelect
-            options={options}
-            selectedOption={selectedOption}
-            setSelectedOption={setSelectedOption}
-          />
-        </Box>
-        <Box className="partner-form-LinkedIn-Profile">
-          <Typography
-            sx={{
-              color: '#265579',
-              fontWeight: 600,
-              fontSize: '14.448px',
-              lineHeight: '19.867px',
-              mb: 1,
-            }}
-          >
-            {formContent.linkedInProfile}{' '}
-            <Typography component="span" className="starick">
-              *
+          <Box className="partner-form-LinkedIn-Profile">
+            <Typography
+              sx={{
+                color: '#265579',
+                fontWeight: { xs: 400, md: 600 },
+                fontSize: '14.448px',
+                lineHeight: '19.867px',
+                mb: 1,
+              }}
+            >
+              {formContent.linkedInProfile}{' '}
+              <Typography component="span" className="starick">
+                *
+              </Typography>
             </Typography>
-          </Typography>
-          <input
-            type="text"
-            className="input"
-            name="linkedin_profile_link"
-            value={values.linkedin_profile_link}
-            placeholder="Enter your LinkedIn profile URL"
-            onChange={handleChange}
-          />
-          {touched?.linkedin_profile_link && errors?.linkedin_profile_link && (
-            <span className="error-message">
-              {errors?.linkedin_profile_link}
-            </span>
-          )}
-        </Box>
-        <Box className="partner-form-button">
-          <Button onClick={handleSubmit} type="button">
-            {formContent.buttonName}
-          </Button>
-        </Box>
-      </form>
+            <input
+              type="text"
+              className="input"
+              name="linkedin_profile_link"
+              value={values.linkedin_profile_link}
+              placeholder="Enter your LinkedIn profile URL"
+              onChange={handleChange}
+            />
+            {touched?.linkedin_profile_link &&
+              errors?.linkedin_profile_link && (
+                <span className="error-message">
+                  {errors?.linkedin_profile_link}
+                </span>
+              )}
+          </Box>
+          <Box
+            className="partner-form-button"
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              py: '15px',
+            }}
+          >
+            <Button onClick={handleSubmit} type="button">
+              {formContent.buttonName}
+            </Button>
+          </Box>
+        </form>
+      </Box>
     </Box>
   );
 };
