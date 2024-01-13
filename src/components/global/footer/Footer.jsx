@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import Grid from '@mui/material/Grid';
-import { Box, Divider, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import { Box, Divider, Typography, Grid } from '@mui/material';
+import { Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -21,7 +20,7 @@ const Footer = ({ data }) => {
       >
         <Container>
           <Grid container>
-            <Grid item lg={5} md={12} sm={12} xs={12}>
+            <Grid item lg={5} md={5} sm={12} xs={12}>
               <Image
                 src={data?.logo}
                 width={120}
@@ -31,9 +30,15 @@ const Footer = ({ data }) => {
               />
               <Typography
                 sx={{
-                  color: 'primary',
+                  color: '#001C63',
                   textAlign: 'justify',
-                  fontSize: '15px',
+                  fontSize: {
+                    xs: '10px',
+                    sm: '10px',
+                    md: '13px',
+                    lg: '15px',
+                    xl: '20px',
+                  },
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: '24.319px',
@@ -60,12 +65,12 @@ const Footer = ({ data }) => {
                 }}
               >
                 {data?.socialMedia?.map((item, index) => (
-                  <Link key={index} href={item.link}>
+                  <Link key={index} href={item?.link}>
                     <Image
-                      src={item.img}
+                      src={item?.img}
                       width={17}
                       height={17}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Link>
                 ))}
@@ -74,40 +79,8 @@ const Footer = ({ data }) => {
             <Grid
               item
               lg={2}
-              md={12}
-              sm={12}
-              xs={12}
-              sx={{
-                mb: {
-                  xs: '40px',
-                  lg: '0px',
-                },
-              }}
-            >
-              <Grid container>
-                <Grid item lg={12} md={6} sm={6} xs={12}>
-                  <FooterTitle title={data?.companyTitle} />
-                  {data?.company?.map((item, index) => (
-                    <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
-                    </Box>
-                  ))}
-                </Grid>
-                <Grid item lg={12} md={6} sm={6} xs={12}>
-                  <FooterTitle title={data?.solutionTitle} />
-                  {data?.solution?.map((item, index) => (
-                    <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
-                    </Box>
-                  ))}
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid
-              item
-              lg={2}
-              md={12}
-              sm={12}
+              md={2}
+              sm={6}
               xs={6}
               sx={{
                 mb: {
@@ -117,28 +90,60 @@ const Footer = ({ data }) => {
               }}
             >
               <Grid container>
-                <Grid item lg={12} md={6} sm={6} xs={12}>
-                  <FooterTitle title={data?.resourceTitle} />
-                  {data?.resource?.map((item, index) => (
+                <Grid item lg={12} md={12} sm={12} xs={12}>
+                  <FooterTitle title={data?.companyTitle} />
+                  {data?.company?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} md={6} sm={6} xs={12}>
-                  <FooterTitle title={data?.partnershipTitle} />
-                  {data?.partnership?.map((item, index) => (
+                <Grid item lg={12} md={12} sm={12} xs={12}>
+                  <FooterTitle title={data?.solutionTitle} />
+                  {data?.solution?.map((item, index) => (
                     <Box key={index}>
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item lg={3} md={12} sm={12}>
+            <Grid
+              item
+              lg={2}
+              md={2}
+              sm={6}
+              xs={6}
+              sx={{
+                mb: {
+                  xs: '40px',
+                  lg: '0px',
+                },
+              }}
+            >
+              <Grid container>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
+                  <FooterTitle title={data?.resourceTitle} />
+                  {data?.resource?.map((item, index) => (
+                    <Box key={index}>
+                      <FooterItem href={item?.link} label={item?.label} />
+                    </Box>
+                  ))}
+                </Grid>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
+                  <FooterTitle title={data?.partnershipTitle} />
+                  {data?.partnership?.map((item, index) => (
+                    <Box key={index}>
+                      <FooterItem href={item?.link} label={item?.label} />
+                    </Box>
+                  ))}
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item lg={3} md={3} sm={12} xs={12}>
               <FooterTitle title={data?.contactUsTitle} />
               <Grid container>
-                <Grid item lg={12} sm={6} md={6}>
+                <Grid item lg={12} md={12} sm={6} xs={6}>
                   {data?.contactUsSales?.map((item, index) => (
                     <Box
                       key={index}
@@ -146,11 +151,11 @@ const Footer = ({ data }) => {
                         width: { sm: '60%' },
                       }}
                     >
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>
-                <Grid item lg={12} sm={6}>
+                <Grid item lg={12} md={12} sm={6} xs={6}>
                   {data?.contactUsInfo?.map((item, index) => (
                     <Box
                       key={index}
@@ -158,7 +163,7 @@ const Footer = ({ data }) => {
                         width: { sm: '60%' },
                       }}
                     >
-                      <FooterItem href={item.link} label={item.label} />
+                      <FooterItem href={item?.link} label={item?.label} />
                     </Box>
                   ))}
                 </Grid>

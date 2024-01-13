@@ -11,8 +11,14 @@ const FooterItem = ({ href, label }) => {
   return (
     <Typography
       sx={{
-        color: isBlackLabel ? '#000' : 'primary',
-        fontSize: '15px',
+        color: isBlackLabel ? '#000' : '#001C63',
+        fontSize: {
+          xs: '10px',
+          sm: '10px',
+          md: '13px',
+          lg: '15px',
+          xl: '20px',
+        },
         fontStyle: 'normal',
         fontWeight: isBlackLabel ? 500 : 400,
         lineHeight: 'normal',
