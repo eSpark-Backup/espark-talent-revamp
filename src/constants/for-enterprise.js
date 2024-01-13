@@ -3,43 +3,29 @@ export const OUTSOURCING_WONDERS_DATA = {
   items: [
     {
       icon: '/images/for-enterprise/outsourcing-wonders/icon1.svg',
-      title: `Diverse Business Development Approaches.`,
+      title: `Flawless Profit Prowess`,
       paragraph: `Our professionals offer a 100% success ratio in profit generation, ensuring consistent and remarkable financial success.`,
       iconHeight: 40,
       iconWidth: 40,
     },
     {
       icon: '/images/for-enterprise/outsourcing-wonders/icon2.svg',
-      title: `Seamless Business Success Performance.`,
+      title: `Eternal Talent Availability`,
       paragraph: `Enjoy perpetual access to a team of exceptional talent, offering continuous innovation and expertise in all endeavours.`,
       iconHeight: 40,
       iconWidth: 40,
     },
     {
       icon: '/images/for-enterprise/outsourcing-wonders/icon3.svg',
-      title: `Multiple Outsourced Backup Plans.`,
+      title: `Perks Galore for Employers`,
       paragraph: `Delight your team with a multitude of employer benefits, creating a work environment that champions well-being and job satisfaction.`,
       iconHeight: 40,
       iconWidth: 40,
     },
     {
       icon: '/images/for-enterprise/outsourcing-wonders/icon1.svg',
-      title: `Diverse Business Development Approaches.`,
-      paragraph: `Our professionals offer a 100% success ratio in profit generation, ensuring consistent and remarkable financial success.`,
-      iconHeight: 40,
-      iconWidth: 40,
-    },
-    {
-      icon: '/images/for-enterprise/outsourcing-wonders/icon2.svg',
-      title: `Seamless Business Success Performance.`,
-      paragraph: `Enjoy perpetual access to a team of exceptional talent, offering continuous innovation and expertise in all endeavours.`,
-      iconHeight: 40,
-      iconWidth: 40,
-    },
-    {
-      icon: '/images/for-enterprise/outsourcing-wonders/icon3.svg',
-      title: `Multiple Outsourced Backup Plans.`,
-      paragraph: `Delight your team with a multitude of employer benefits, creating a work environment that champions well-being and job satisfaction.`,
+      title: `Innovative Business Brilliance`,
+      paragraph: `Accelerate your business growth with constant flow of creative and ground breaking ideas, propelling your development initiatives to new heights.`,
       iconHeight: 40,
       iconWidth: 40,
     },
@@ -148,7 +134,8 @@ export const OUTSTAFFING_TRUST_DATA = {
 };
 
 export const OUTSOURCING_ADVANTAGES_DATA = {
-  title: 'Our Outsourcing Works Wonders for Your Business Enterprise',
+  title:
+    'eSpark Talents Outsourcing Advantages for Business Success of Enterprises',
   paragraph: `Experience a boost in enterprise success with eSpark Talent's open invitation to global talent access and streamlined operations.`,
   image: '/images/for-enterprise/outsourcing-advantages.svg',
   alt: 'Outsourcing advantages with eSpark Talent',

@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
-import HireTalentButton from '@/components/global/Header/HireTalentButton.jsx';
+import HireTalentResponsiveButton from './HireTalentResponsiveButton';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
@@ -39,6 +39,7 @@ const ResponsiveHeader = ({
   return (
     <Box
       id="menuResponsive"
+      className="responsiveNav"
       sx={{
         display: { xs: 'flex', md: 'none' },
         order: { xs: 2, md: 1 },
@@ -173,9 +174,9 @@ const ResponsiveHeader = ({
               </Accordion>
             );
           })}
-          <HireTalentButton
+          <HireTalentResponsiveButton
             handleOpenUserMenu={handleOpenUserMenu}
-            display={{ xs: 'flex', md: 'none' }}
+            // display={{ xs: 'flex', md: 'none' }}
           />
         </Box>
       )}

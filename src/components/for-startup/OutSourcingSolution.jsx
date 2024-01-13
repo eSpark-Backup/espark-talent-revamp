@@ -14,7 +14,7 @@ const OutSourcingSolution = ({ data }) => {
             <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2} justifyContent="center">
-            {data?.items.map((item, index) => (
+            {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item

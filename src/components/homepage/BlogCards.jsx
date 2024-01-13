@@ -4,7 +4,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Pagination, PaginationItem } from '@mui/material'; // Import PaginationItem
+import { Pagination, PaginationItem } from '@mui/material';
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
@@ -22,11 +22,16 @@ const BlogCards = ({ data }) => {
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
-        <Grid container columnSpacing={7} rowSpacing={4}>
+        <Grid container spacing={2} sx={{ py: '5%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Box className="single-blog-post">
-                <Link href={`/blogs/${item?.id}`}>
+            <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
+              <Box
+                className="single-blog-post"
+                sx={{
+                  px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
+                }}
+              >
+                <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
@@ -47,11 +52,16 @@ const BlogCards = ({ data }) => {
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Link href={`/blogs/${item?.id}`}>
+                  <Link href={`/blogs/${item?.slug}`}>
                     <Typography
                       sx={{
                         color: '#09114A',
-                        fontSize: '23.49px',
+                        fontSize: {
+                          xs: '18px',
+                          sm: '18px',
+                          md: '20px',
+                          lg: '24px',
+                        },
                         fontWeight: 600,
                         lineHeight: '26px',
                       }}
@@ -62,7 +72,12 @@ const BlogCards = ({ data }) => {
                   <Typography
                     sx={{
                       color: '#6F76A8',
-                      fontSize: '14.455px',
+                      fontSize: {
+                        xs: '13px',
+                        sm: '13px',
+                        md: '15px',
+                        lg: '18px',
+                      },
                       fontWeight: 400,
                       lineHeight: '27.465px',
                       fontStyle: 'normal',
@@ -71,8 +86,8 @@ const BlogCards = ({ data }) => {
                   >
                     {item?.mainParagraph}
                   </Typography>
-                  <Link href={`/blogs/${item?.id}`}>
-                    <span className="default-btn" sx={{ position: 'relative' }}>
+                  <Link href={`/blogs/${item?.slug}`}>
+                    <Box className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
                           position: 'absolute',
@@ -81,9 +96,17 @@ const BlogCards = ({ data }) => {
                           color: '#fff',
                         }}
                       />
-
-                      {READ_MORE}
-                    </span>
+                      <Typography
+                        fontSize={{
+                          xs: '13px',
+                          sm: '13px',
+                          md: '15px',
+                          lg: '20px',
+                        }}
+                      >
+                        {READ_MORE}
+                      </Typography>
+                    </Box>
                   </Link>
                 </Box>
               </Box>
@@ -93,7 +116,7 @@ const BlogCards = ({ data }) => {
         {data?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(data.length / itemsPerPage)}
+              count={Math.ceil(data?.length / itemsPerPage)}
               page={page}
               onChange={handleChangePage}
               color="primary"

@@ -10,7 +10,9 @@ import {
 } from '@mui/material';
 
 const FooterCTA = ({ data }) => {
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const is600Screen = useMediaQuery('(max-width:600px)');
+  const is425Screen = useMediaQuery('(max-width:425px)');
+  const is375Screen = useMediaQuery('(max-width:375px)');
 
   return (
     <Box
@@ -30,16 +32,26 @@ const FooterCTA = ({ data }) => {
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           <Grid
             item
-            xs={8.5}
-            sx={{ display: 'flex', alignItems: 'center', py: '1%' }}
+            lg={8.5}
+            md={8.5}
+            sm={7}
+            xs={7}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              py: { lg: '1%', md: '1%', sm: '5%', xs: '5%' },
+            }}
           >
             <Box>
               <Typography
+                // variant="h1"
                 sx={{
                   color: '#ECECED',
-                  fontSize: { lg: '54px', md: '50px', sm: '20px' },
+                  fontSize: { lg: '50px', md: '32px', sm: '20px', xs: '14px' },
+                  lineHeight: 1.3,
                   fontWeight: 700,
-                  my: 1,
+                  py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
+                  pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
                 }}
               >
                 {data?.title}
@@ -47,10 +59,11 @@ const FooterCTA = ({ data }) => {
               <Typography
                 sx={{
                   color: '#ECECED',
-                  fontSize: { lg: '24px', md: '20px', sm: '16px' },
+                  fontSize: { lg: '24px', md: '20px', sm: '10px', xs: '10px' },
+                  lineHeight: 1.3,
                   fontWeight: 400,
-                  lineHeight: ' 36.523px',
-                  my: 2,
+                  py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
+                  pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
                 }}
               >
                 {data?.description}
@@ -58,8 +71,8 @@ const FooterCTA = ({ data }) => {
               <Link href={data?.buttonLink}>
                 <Button
                   sx={{
-                    py: '13px',
-                    px: '15px',
+                    py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                    px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
                     backgroundColor: '#fff',
                     '&:hover': {
                       backgroundColor: '#fff',
@@ -70,7 +83,12 @@ const FooterCTA = ({ data }) => {
                     variant="body1"
                     sx={{
                       fontWeight: 'bold',
-                      fontSize: '17px',
+                      fontSize: {
+                        xs: '8px',
+                        sm: '10px',
+                        md: '14px',
+                        lg: '17px',
+                      },
                       color: '#09114A',
                     }}
                   >
@@ -82,8 +100,11 @@ const FooterCTA = ({ data }) => {
           </Grid>
           <Grid
             item
-            xs={3.5}
-            sx={{ textAlign: isSmallScreen ? 'center' : 'start' }}
+            lg={3.5}
+            md={3.5}
+            sm={5}
+            xs={5}
+            sx={{ textAlign: is600Screen ? 'center' : 'start' }}
           >
             <Box
               sx={{
@@ -94,11 +115,18 @@ const FooterCTA = ({ data }) => {
             >
               <img
                 src={data?.image}
-                // width={isSmallScreen ? 300 : 360}
-                // height={isSmallScreen ? 290 : 350}
+                width={is600Screen ? 300 : 360}
+                height={is600Screen ? 290 : 350}
                 alt="images"
+                className="footerCta"
                 style={{
-                  marginTop: isSmallScreen ? 0 : '-61px',
+                  // position: 'absolute',
+                  bottom: 0,
+                  marginTop: is375Screen
+                    ? `-25px`
+                    : is425Screen
+                      ? `-30px`
+                      : `-60px`,
                   zIndex: 1000,
                 }}
               />

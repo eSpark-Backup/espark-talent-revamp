@@ -8,7 +8,7 @@ import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import OurExperties from '@/components/homepage/OurExperties';
 import HomeBlogs from '@/components/blogs/HomeBlogs';
 import ClientSays from '@/components/homepage/ClientSays';
-import Hero from '@/components/homepage/Hero';
+import Hero from '@/components/homepage/HomeHero';
 import Process from '@/components/homepage/Process';
 import Perks from '@/components/homepage/Perks';
 import Faq from '@/components/FAQ/Faq';
@@ -33,6 +33,7 @@ const page = () => {
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
+      {/* <HeroSection /> */}
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -40,6 +41,14 @@ const page = () => {
         txtColor={'#ffffff'}
         title={'Meet our partners who trust our certified tech experts'}
         length={100}
+        fontSize={{
+          xs: '19px !important',
+          sm: '20px !important',
+          md: '22px !important',
+          lg: '28px !important',
+        }}
+        lineHeight={{ xs: '30px !important', sm: '20px !important' }}
+        fontWeight={500}
       />
       <Process data={PROCESS_DATA} />
       <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
@@ -54,6 +63,7 @@ const page = () => {
         background={'#F7F8FB'}
       />
       <Faq data={FAQ_DATA} />
+
       {/* <Faqs data={FAQ_DATA} /> */}
     </>
   );

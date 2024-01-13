@@ -16,7 +16,13 @@ const Rights = ({ copyRights }) => {
       <Typography
         sx={{
           color: '#0E0F1D',
-          fontSize: '15px',
+          fontSize: {
+            xs: '10px',
+            sm: '10px',
+            md: '13px',
+            lg: '15px',
+            xl: '20px',
+          },
           fontStyle: 'normal',
           fontWeight: 400,
           lineHeight: 'normal',

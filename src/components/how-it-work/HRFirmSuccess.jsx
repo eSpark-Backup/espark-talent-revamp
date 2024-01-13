@@ -12,16 +12,22 @@ const HRFirmSuccess = ({ hrFirm }) => {
     <Box sx={{ my: '4%' }}>
       <Container>
         <Title heading={heading} subHeading={subHeading} />
-        <Grid container className="hrFirmDesktop">
+        <Grid
+          container
+          rowSpacing={2}
+          columnSpacing={1}
+          className="hrFirmDesktop"
+        >
           {card?.map((item, index) => (
-            <Grid item md={6} key={index}>
-              <Box
+            <Grid item sm={6} key={index} sx={{}}>
+              <Grid
+                container
                 sx={{
                   borderRadius: '13.764px',
                   border: '0.918px solid #E5E5E5',
                   background: '#FFF',
-                  width: { lg: '683.614px' },
-                  height: '218.584px',
+                  width: { lg: '583.614px', md: 'auto' },
+                  height: { md: '238.584px', lg: '238.584px' },
                   padding: ' 28.447px 17.435px 35.788px 17.435px',
                   display: 'center',
                   alignItems: 'center',
@@ -29,44 +35,53 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   flexShrink: 0,
                   m: 1,
                 }}
+                className="HrBox"
               >
-                <Box sx={{ display: 'flex' }}>
+                <Grid item md={5} lg={5} sx={{}}>
                   <Box
                     sx={{
-                      width: { lg: '340px', md: '260px' },
-                      height: 'auto',
                       display: 'flex',
                       justifyContent: 'center',
-                      mx: 2,
+                      ml: 1,
                     }}
                   >
                     <Image
                       src={item.image}
-                      width={150}
+                      width={200}
                       height={100}
-                      alt={item.alt}
+                      alt={item?.alt}
                     />
                   </Box>
-                  <Box sx={{ mx: { lg: 1 }, height: 'auto', width: 'auto' }}>
+                </Grid>
+                <Grid item md={7} lg={7} sx={{ px: '15px' }}>
+                  <Box
+                    sx={{
+                      mx: { lg: 1 },
+                      height: 'auto',
+                      width: 'auto',
+                      pt: '10px',
+                      pl: '10px',
+                    }}
+                  >
                     <Typography variant="h4" color="secondary" sx={{}}>
-                      {item.title}
+                      {item?.title}
                     </Typography>
                     <Typography
+                      className="typoDescription"
                       sx={{
                         color: '#001C63',
                         textAlign: 'justify',
-
                         fontSize: '16.517px',
                         fontWeight: 400,
                         fontStyle: 'normal',
-                        lineHeight: { lg: '27.896px', md: '25px' },
+                        lineHeight: { lg: '27.896px', md: '27.896px' },
                       }}
                     >
-                      {item.description}
+                      {item?.description}
                     </Typography>
                   </Box>
-                </Box>
-              </Box>
+                </Grid>
+              </Grid>
             </Grid>
           ))}
         </Grid>

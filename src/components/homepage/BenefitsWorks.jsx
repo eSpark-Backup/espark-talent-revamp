@@ -1,20 +1,43 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import Image from 'next/image';
 
 const BenefitsWorks = ({ data }) => {
   return (
     <>
-      <Box sx={{ py: ['2%'], mb: '55px', overflow: 'hidden' }}>
+      <Box sx={{ py: { xs: 4, sm: 5, md: 6 }, overflow: 'hidden' }}>
         <Container>
-          <Box sx={{ pb: '30px', px: { md: '20%', sm: '10%', xs: '2%' } }}>
+          <Box
+            sx={{
+              mx: 'auto',
+              pb: '50px',
+              width: { sm: '750px', md: '950px' },
+              '@media (min-width: 600px) and (max-width:767px)': {
+                width: '500px',
+                pb: '30px',
+              },
+              '@media (min-width: 425px) and (max-width:599px)': {
+                width: '400px',
+                pb: '30px',
+              },
+              '@media (min-width: 300px) and (max-width:424px)': {
+                pb: '30px',
+              },
+            }}
+          >
             <Typography
+              variant="h2"
               sx={{
                 color: '#001C63',
-                fontSize: { md: '32px', xs: '20px' },
+                fontSize: { sm: '24px !important', md: '32px !important' },
                 fontWeight: 600,
-                lineHeight: { lg: '42.289px', xs: '23.289px' },
+                lineHeight: { sm: 'auto', lg: '42.289px' },
+                '@media (min-width: 425px) and (max-width:767px)': {
+                  fontSize: '19px !important',
+                },
+                '@media (min-width: 300px) and (max-width:424px)': {
+                  fontSize: '20px !important',
+                },
                 textAlign: 'center',
                 flexWrap: 'wrap',
                 pb: { xs: '15px' },
@@ -23,13 +46,17 @@ const BenefitsWorks = ({ data }) => {
               {data?.title}
             </Typography>
             <Typography
+              component={'p'}
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontSize: { md: '18px', xs: '11px' },
+                fontSize: { sm: '16px !important', md: '18px !important' },
+                '@media (min-width: 300px) and (max-width:424px)': {
+                  px: '25px',
+                },
                 fontStyle: 'normal',
                 fontWeight: 400,
-                lineHeight: { md: '27.863px', xs: '16.363px' },
+                lineHeight: { sm: '27.863px' },
                 flexWrap: 'wrap',
                 px: '35px',
                 pb: { md: '10px', xs: '0px' },
@@ -40,11 +67,96 @@ const BenefitsWorks = ({ data }) => {
           </Box>
           <Grid
             container
-            spacing={2}
-            gap={{ md: '13%', lg: '10%', sm: '1%' }}
+            spacing={[5, 6, 2, 2]}
+            gap={{ md: '13%', lg: '7.3%', sm: '1%' }}
             justifyContent="center"
+            position={'relative'}
           >
-            {data?.items.map((item, index) => (
+            <Box
+              sx={{
+                width: { xs: '180.076px', md: '200.076px' },
+                height: { xs: '35.708px', md: '40.708px' },
+                position: 'absolute',
+                transform: {
+                  xs: 'rotate(152.607deg)',
+                  sm: 'rotate(149.607deg)',
+                  md: 'none',
+                },
+                zIndex: 0,
+                top: { sm: 230, md: 90 },
+                '@media (min-width:600px) and (max-width: 767px)': {
+                  top: 190,
+                },
+                '@media (min-width:425px) and (max-width: 599px)': {
+                  top: 175,
+                },
+                '@media (min-width:300px) and (max-width: 424px)': {
+                  top: 157,
+                },
+              }}
+              src="/images/homepage/outsource-benefits/line1.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: { xs: '210.021px', md: '230.021px' },
+                height: { xs: '70.83px', md: '85.83px' },
+                position: 'absolute',
+                zIndex: 0,
+                display: { xs: 'none', sm: 'none', md: 'block' },
+                top: { md: 160 },
+              }}
+              src="/images/homepage/outsource-benefits/line2.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: '210.021px',
+                height: '68.83px',
+                position: 'absolute',
+                zIndex: 0,
+                display: { xs: 'block', sm: 'block', md: 'none' },
+                top: { sm: 455, md: 160 },
+                '@media (min-width:600px) and (max-width: 767px)': {
+                  top: 360,
+                },
+                '@media (min-width:425px) and (max-width: 599px)': {
+                  top: 320,
+                },
+                '@media (min-width:300px) and (max-width: 424px)': {
+                  top: 280,
+                },
+              }}
+              src="/images/homepage/outsource-benefits/line4.svg"
+              component={'img'}
+            />
+            <Box
+              sx={{
+                width: { xs: '192.958px', md: '210.958px' },
+                height: { xs: '50.005px', md: '80.005px' },
+                position: 'absolute',
+                display: { xs: 'block', md: 'block' },
+                transform: {
+                  xs: 'rotate(152.607deg)',
+                  sm: 'rotate(142.607deg)',
+                  md: 'none',
+                },
+                zIndex: 0,
+                top: { sm: 708, md: 260 },
+                '@media (min-width:600px) and (max-width: 767px)': {
+                  top: 570,
+                },
+                '@media (min-width:425px) and (max-width: 599px)': {
+                  top: 510,
+                },
+                '@media (min-width:300px) and (max-width: 424px)': {
+                  top: 442,
+                },
+              }}
+              src="/images/homepage/outsource-benefits/line3.svg"
+              component={'img'}
+            />
+            {data?.items?.map((item, index) => (
               <Grid
                 key={index}
                 item
@@ -55,31 +167,61 @@ const BenefitsWorks = ({ data }) => {
                   display: 'flex',
                   alignItems: 'stretch',
                   justifyContent: 'center',
-                  p: ['10px', '20px'],
+                  p: ['10px', '30px'],
+                  position: 'relative',
+                  zIndex: 1,
                 }}
               >
                 <Box
                   sx={{
                     display: 'flex',
-                    borderRadius: '53px',
+                    borderRadius: { xs: '32.809px', md: '53px' },
                     p: '20px',
                     alignItems: 'center',
                     background: ' #FFF',
                     boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
                     height: {
-                      xs: '100.637px',
-                      sm: '120.637px',
-                      md: '160.637px',
+                      sm: '162.637px',
                       lg: '162.569px',
                     },
-                    width: { lg: '489.938px', xs: '489.938px' },
+                    width: {
+                      sm: '489.938px',
+                      lg: '489.938px',
+                    },
+                    '@media (min-width: 600px) and (max-width: 767px)': {
+                      width: '450.938px',
+                      height: '142.637px',
+                    },
+                    '@media (min-width: 425px) and (max-width: 599px)': {
+                      width: '400.938px',
+                      height: '122.637px',
+                    },
+                    '@media (min-width: 300px) and (max-width: 424px)': {
+                      width: '303.292px',
+                      height: '100.637px',
+                    },
                   }}
                 >
-                  <Image
+                  <Box
+                    component={'img'}
                     src={item?.icon}
                     alt={item?.title}
-                    height={45}
-                    width={40}
+                    sx={{
+                      width: 59,
+                      height: 59,
+                      '@media (min-width: 600px) and (max-width: 767px)': {
+                        width: 40,
+                        height: 40,
+                      },
+                      '@media (min-width: 425px) and (max-width: 767px)': {
+                        width: 45,
+                        height: 45,
+                      },
+                      '@media (min-width: 300px) and (max-width: 424px)': {
+                        width: 36,
+                        height: 36,
+                      },
+                    }}
                   />
                   <Typography
                     color="#000"
@@ -89,8 +231,8 @@ const BenefitsWorks = ({ data }) => {
                       fontStyle: 'normal',
 
                       lineHeight: { md: '30px', xs: '18.571px' },
-                      ml: 3,
-                      fontSize: { md: '20px', xs: '12px' },
+                      ml: 1,
+                      fontSize: { lg: '20px', xs: '12px' },
                     }}
                   >
                     {item?.paragraph}

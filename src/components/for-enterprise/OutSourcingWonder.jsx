@@ -1,13 +1,15 @@
 'use client';
 import React from 'react';
-import { Grid, Box, Typography, Container } from '@mui/material';
+import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
+
 import SwiperCore, {
   EffectFade,
   Navigation,
   Pagination,
   Autoplay,
 } from 'swiper';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -15,28 +17,37 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import Title from '@/components/how-it-work/Title.jsx';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingWonder = ({ data }) => {
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+
   const swiperSettings = {
     slidesPerView: 3,
-    spaceBetween: 50,
+    spaceBetween: 20,
     centerMode: true,
     centerPadding: '0',
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
+
     pagination: {
       clickable: true,
-      el: '.swiper-pagination', // Add this line to target the pagination container
+      el: '.swiper-pagination',
       renderBullet: function (index, className) {
         return `<span class="${className}" style="background-color: ${
-          index === this.activeIndex ? 'darkgreen' : 'green'
+          index === this.activeIndex ? 'darkgreen' : 'lightgreen'
         }; width: 20px; height: 20px;"></span>`;
       },
     },
+
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -44,7 +55,7 @@ const OutSourcingWonder = ({ data }) => {
       360: {
         slidesPerView: 1,
       },
-      786: {
+      768: {
         slidesPerView: 2,
       },
       1024: {
@@ -61,42 +72,109 @@ const OutSourcingWonder = ({ data }) => {
 
   return (
     <>
-      <Box sx={{ py: '3%', overflow: 'hidden' }}>
+      <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
         <Container>
-          <Box sx={{ textAlign: 'center', px: '10%' }}>
-            <Title heading={data?.title} />
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography
+              sx={{
+                color: '#001C63',
+                textAlign: 'center',
+                fontSize: { lg: '32px', md: '28px', sm: '20px', xs: '20px' },
+                lineHeight: 1.3,
+                px: { lg: '20%' },
+                fontWeight: 700,
+                fontStyle: 'normal',
+                mb: '40px',
+              }}
+            >
+              {data?.title}
+            </Typography>
           </Box>
           <Swiper {...swiperSettings}>
             <Grid container sx={{ mx: 'auto' }}>
-              {data?.items.map((item, index) => (
-                <SwiperSlide key={index}>
+              {data?.items?.map((item, index) => (
+                <SwiperSlide key={index} className="outsourcing-slide">
                   <Grid
-                    item
-                    xs={4}
-                    sm={12}
-                    md={6}
                     sx={{
-                      borderRadius: '30px',
-                      p: '30px',
-                      pr: '15%',
-                      alignItems: 'center',
-                      minHeight: '250px',
+                      borderRadius: '20px',
+                      px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
+                      py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
+                      // alignItems: 'center',
+                      minHeight: {
+                        lg: '250px',
+                        md: '250px',
+                        sm: '200px',
+                        xs: '150px',
+                      },
+                      width: { lg: '100%' },
                       background: ' #FFF',
-                      border: '1px rgba(0, 0, 0, 0.25) solid',
-                      boxShadow: '2px 2px 2px  rgba(0, 0, 0, 0.25)',
-                      // filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))',
+                      border: '2px rgba(0, 0, 0, 0.25) solid',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      flexDirection: 'column',
                     }}
                   >
-                    <Image
-                      src={item?.icon}
-                      alt={item?.title}
-                      height={50}
-                      width={50}
-                    />
-                    <Typography variant="h5" color="secondary" sx={{}}>
+                    <Box
+                      sx={{
+                        mb: '10px',
+                        width: { xs: '30px', md: '40px' },
+                        height: { xs: '30px', md: '40px' },
+                      }}
+                    >
+                      <Image
+                        src={item?.icon}
+                        alt={item?.title}
+                        height={
+                          isSmallScreen
+                            ? 30
+                            : isMediumScreen
+                              ? 30
+                              : isLargeScreen
+                                ? 40
+                                : 40
+                        }
+                        width={
+                          isSmallScreen
+                            ? 30
+                            : isMediumScreen
+                              ? 30
+                              : isLargeScreen
+                                ? 40
+                                : 40
+                        }
+                        pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
+                      />
+                    </Box>
+                    <Typography
+                      sx={{
+                        color: '#001C63',
+                        fontSize: {
+                          lg: '20px',
+                          md: '17px',
+                          sm: '13px',
+                          xs: '13px',
+                        },
+                        lineHeight: 1.3,
+                        pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
+                        fontWeight: 600,
+                        fontStyle: 'normal',
+                      }}
+                    >
                       {item?.title}
                     </Typography>
-                    <Typography variant="body1" color={'#000'} sx={{}}>
+                    <Typography
+                      sx={{
+                        color: '#000',
+                        fontSize: {
+                          lg: '16px',
+                          md: '14px',
+                          sm: '13px',
+                          xs: '13px',
+                        },
+                        lineHeight: 1.3,
+                        fontWeight: 400,
+                      }}
+                    >
                       {item?.paragraph}
                     </Typography>
                   </Grid>

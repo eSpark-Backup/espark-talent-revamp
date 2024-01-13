@@ -6,7 +6,8 @@ export const HP_HERO_DATA = {
     label: 'Hire a Talent',
     link: '/book-a-demo',
     btnVarient: 'primary',
-    btnColor: 'primary',
+    // btnColor: 'primary',
+    btnColor: 'secondary',
   },
   image: '/images/homepage/hero-section/hero-section-image.png',
   imageAlt: `Hire world class experts' team for your business with espark talent`,
@@ -93,7 +94,7 @@ export const ENTERPRISE_HERO_DATA = {
     'Big Dream Needs Premium Outsourcing Support To Conquer The Global Market.',
   description: `Your enterprise demands eSpark Talent’s instant onboarding services. Join the club of our esteemed clients and start your successful business campaign today!`,
   button: {
-    label: 'Hire a Talent',
+    label: 'Book a Demo',
     link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'primary',
