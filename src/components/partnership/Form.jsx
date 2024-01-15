@@ -10,6 +10,7 @@ import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
+import 'react-phone-number-input/style.css';
 
 const userid =
   process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
@@ -128,10 +129,11 @@ const Form = ({ formContent }) => {
   return (
     <Box
       className="partner-form"
+      id="partnership-form"
       sx={{
         mt: { xs: '12%', md: '12%' },
         maxWidth: '450px',
-        margin: '30px auto !important',
+        margin: '47px auto !important',
       }}
     >
       <Box sx={{ margin: '0px auto !important' }}>
@@ -209,7 +211,7 @@ const Form = ({ formContent }) => {
               )}
             </Box>
           </Box>
-          <Box className="partner-form-your-email-adress">
+          <Box className="partner-form-your-email-adress-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -235,7 +237,7 @@ const Form = ({ formContent }) => {
               <span className="error-message">{errors?.email}</span>
             )}
           </Box>
-          <Box className="partner-form-your-email-adress">
+          <Box className="partner-form-your-email-adress-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -250,7 +252,7 @@ const Form = ({ formContent }) => {
               <span className="starick">*</span>
             </Typography>
 
-            <Box>
+            <Box className="parnership-form">
               {/* <input
               type="number"
               className="input"
@@ -269,7 +271,7 @@ const Form = ({ formContent }) => {
               />
             </Box>
           </Box>
-          <Box className="partner-form-Country">
+          <Box className="partner-form-Country-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -288,7 +290,7 @@ const Form = ({ formContent }) => {
               setSelectedOption={setSelectedOption}
             />
           </Box>
-          <Box className="partner-form-LinkedIn-Profile">
+          <Box className="partner-form-LinkedIn-Profile-partnership">
             <Typography
               sx={{
                 color: '#265579',
