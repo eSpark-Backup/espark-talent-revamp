@@ -333,31 +333,31 @@ span {
 @media (min-width: 600px) and (max-width: 767px) {
   .reviews-swiper .swiper-slide {
     width: 495px !important;
-    height: 270px !important;
+    height: 320px !important;
   }
 }
 @media (min-width: 425px) and (max-width: 599px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
-    height: 340px !important;
+    height: 360px !important;
   }
   .reviews-swiper .swiper-button-prev {
-    top: 320px !important;
+    top: 340px !important;
   }
   .reviews-swiper .swiper-button-next {
-    top: 320px !important;
+    top: 340px !important;
   }
 }
 @media (min-width: 300px) and (max-width: 424px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
-    height: 340px !important;
+    height: 370px !important;
   }
   .reviews-swiper .swiper-button-prev {
-    top: 320px !important;
+    top: 360px !important;
   }
   .reviews-swiper .swiper-button-next {
-    top: 320px !important;
+    top: 360px !important;
   }
 }
 
