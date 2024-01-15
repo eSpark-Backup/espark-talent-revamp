@@ -63,8 +63,8 @@ const OutSourcingItem = ({ data }) => {
     <>
       <Box
         sx={{
-          pt: { lg: '30px', md: '25px', sm: '20px', xs: '20px' },
-          pb: { lg: '25px', md: '25px', sm: '15px', xs: '15px' },
+          pt: { lg: '70px', md: '60px', sm: '40px', xs: '30px' },
+          pb: { lg: '80px', md: '60px', sm: '40px', xs: '30px' },
         }}
       >
         <Container>
@@ -120,9 +120,9 @@ const OutSourcingItem = ({ data }) => {
                       py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
                       // alignItems: 'center',
                       minHeight: {
-                        lg: '300px',
+                        lg: '345px',
                         md: '270px',
-                        sm: '200px',
+                        sm: '228px',
                         xs: '150px',
                       },
                       width: { lg: '100%' },

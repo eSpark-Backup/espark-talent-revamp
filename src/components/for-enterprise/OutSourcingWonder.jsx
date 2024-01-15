@@ -79,12 +79,12 @@ const OutSourcingWonder = ({ data }) => {
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontSize: { lg: '32px', md: '28px', sm: '20px', xs: '20px' },
+                fontSize: { lg: '32px', md: '25px', sm: '24px', xs: '20px' },
                 lineHeight: 1.3,
-                px: { lg: '20%' },
+                px: { xs: '3%', sm: '20%', md: '20%' },
                 fontWeight: 700,
                 fontStyle: 'normal',
-                mb: '40px',
+                mb: { xs: '25px', sm: '40px' },
               }}
             >
               {data?.title}
