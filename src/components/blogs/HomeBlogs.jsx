@@ -4,7 +4,7 @@ import { Box, Container } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
-import BlogCardsSlider from '../homepage/BlogCardsSlider';
+import BlogCards from '../homepage/BlogCards';
 
 const HomeBlogs = ({ data }) => {
   return (
@@ -22,7 +22,7 @@ const HomeBlogs = ({ data }) => {
             title={'eSpark Talent Knowledge Junction'}
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}
           />
-          <BlogCardsSlider data={data?.slice(0, 3)} smCol={2} />
+          <BlogCards data={data?.slice(0, 3)} smCol={2} />
           <ESparkButton
             title={`View all blogs`}
             link={`/blogs`}
