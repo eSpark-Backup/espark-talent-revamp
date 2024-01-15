@@ -1,9 +1,11 @@
 'use client';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Hero = ({ data }) => {
+  const pathName = usePathname();
   return (
     <>
       <Box
@@ -97,8 +99,17 @@ const Hero = ({ data }) => {
                   <Button
                     sx={{
                       backgroundColor: '#fff',
+                      display: { xs: 'none', sm: 'flex' },
                       '&:hover': {
-                        backgroundColor: '#fff',
+                        color:
+                          pathName == '/solutions/enterprises'
+                            ? '#fff'
+                            : '#001C63',
+                        backgroundColor: `${
+                          pathName == '/solutions/enterprises'
+                            ? '#001C63'
+                            : '#fff'
+                        }`,
                       },
 
                       py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },

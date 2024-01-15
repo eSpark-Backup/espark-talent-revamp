@@ -37,6 +37,12 @@ const page = () => {
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        fontSize={{
+          xs: '19px !important',
+          sm: '20px !important',
+          md: '22px !important',
+          lg: '24px !important',
+        }}
       />
       <OutSourcingItem data={OUTSOURCING_LIST_DATA} />
       <OutSourcingAdvantage data={OUTSOURCING_ADVANTAGES_DATA} />

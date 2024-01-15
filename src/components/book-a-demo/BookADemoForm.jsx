@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -184,7 +184,8 @@ const BookADemoForm = ({ form }) => {
                     onChange={handlePhoneChange}
                   />
                 ) : (
-                  <TextField
+                  <Box
+                    component={'input'}
                     name={item?.key}
                     placeholder={item?.placeHolder}
                     value={values[item?.key]}
@@ -193,21 +194,21 @@ const BookADemoForm = ({ form }) => {
                     sx={{
                       width: { xs: '100%', sm: '436.277px' },
                       borderRadius: '5.418px',
-                      '& .MuiInputBase-input': {
-                        color: 'black',
-                        fontSize: '14px',
-                        paddingBottom: 1.3,
-                        paddingTop: 1.7,
-                        '&:active': {
-                          backgroundColor: 'transparent',
+                      height: '41px',
+                      border: ' 0.903px solid #D0D4EA',
+                      background: '#F5F8FA',
+                      fontSize: '14px',
+                      pl: 1.5,
+                      color: 'black',
+                      '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
+                        {
+                          '-webkit-appearance': 'none',
+                          margin: 0,
                         },
-                      },
-                      '& input[type=number]::-webkit-inner-spin-button': {
-                        '-webkit-appearance': 'none',
+                      '&:focus': {
+                        outline: 'none',
                       },
                     }}
-                    id="outlined-basic"
-                    variant="outlined"
                   />
                 )}
                 {touched[item?.key] && errors[item?.key] && (
