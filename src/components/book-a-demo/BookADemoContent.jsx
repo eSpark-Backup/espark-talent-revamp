@@ -57,6 +57,11 @@ const BookADemoContent = ({ content }) => {
                   fontSize: '20px !important',
                   lineHeight: '29px',
                 },
+                '@media (min-width:280px) and (max-width:299px)': {
+                  width: '280px',
+                  fontSize: '19px !important',
+                  lineHeight: '29px',
+                },
               }}
               dangerouslySetInnerHTML={{ __html: title }}
             />
@@ -80,6 +85,9 @@ const BookADemoContent = ({ content }) => {
                 '@media (min-width:300px) and (max-width:424px)': {
                   width: '280px',
                   fontSize: '13px !important',
+                },
+                '@media (min-width:280px) and (max-width:299px)': {
+                  fontSize: '12px !important',
                 },
               }}
             >
