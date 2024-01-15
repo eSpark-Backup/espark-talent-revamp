@@ -106,7 +106,7 @@ const InnerHero = ({ data, innerData }) => {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  justifyContent: 'right',
                 }}
               >
                 <Image
