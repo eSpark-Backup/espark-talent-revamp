@@ -12,21 +12,21 @@ export const TEAM_CARD_DATA = {
       alt: 'Observant Recruiters',
       title: 'Observant Recruiters',
       paragraph:
-        'Research is the backbone of our HRM team, as we never miss any skillful and accomplished professionals. We have a team with eagle-eye instincts pick candidates.',
+        'Our HRM never misses any accomplished professional and picks candidates with sharp eagle-eye instincts.',
     },
     {
       icon: '/images/whatwedo/professional-team/team.svg',
       alt: 'Clever Hiring Team',
       title: 'Clever Hiring Team',
       paragraph:
-        'Our hiring process goes through a professional recruitment cycle. And that’s how we have a strong team of smart executives who select employees with sharp hunches.',
+        'The hiring process goes through a professional recruitment cycle, as we select employees with sharp hunches.',
     },
     {
       icon: '/images/whatwedo/professional-team/managment.svg',
       alt: 'Dynamic Management Trainers',
       title: 'Dynamic Management Trainers',
       paragraph:
-        'We find, select, and train our top-picked professionals for you. Through an easy hiring process, companies  can get hard-working professionals at hand.',
+        'We find, select, and train our top-picked professionals so that you can get your intended talent without any hurdles.',
     },
   ],
 };

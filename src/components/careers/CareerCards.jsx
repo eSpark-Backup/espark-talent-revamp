@@ -50,7 +50,7 @@ const CareerCards = ({ data }) => {
     <>
       <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
         <Container>
-          <Box sx={{ py: '2%' }}>
+          <Box>
             <Select
               labelId="job-category-label"
               id="job-category"
@@ -83,7 +83,7 @@ const CareerCards = ({ data }) => {
                 borderTop: '.5px solid #ced4da',
                 py: { lg: '3%', sm: '3%', xs: '20px' },
                 my: { xs: '20px', sm: '20px' },
-                borderRadius: { xs: '10px', sm: '20px' },
+                borderRadius: { xs: '10px', sm: '20px', lg: '0', md: '0' },
                 boxShadow: {
                   md: 'none',
                   sm: `5px 5px 15px rgba(0,0,0,.3)`,
@@ -126,7 +126,11 @@ const CareerCards = ({ data }) => {
                 <Typography
                   variant="h3"
                   color="secondary"
-                  borderTop={{ md: 'none', sm: '.5px solid #ced4da' }}
+                  borderTop={{
+                    md: 'none',
+                    sm: '.5px solid #ced4da',
+                    xs: '.5px solid #ced4da',
+                  }}
                   pt="10px"
                 >
                   Description
