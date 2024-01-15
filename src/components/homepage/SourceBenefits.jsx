@@ -31,6 +31,10 @@ const SourceBenefits = ({ data }) => {
                   pt: 2,
                   width: '300px',
                 },
+                '@media(min-width: 280px) and (max-width: 299px)': {
+                  pt: 2,
+                  width: '240px',
+                },
                 mb: 4,
                 gap: 2,
               }}

@@ -42,7 +42,6 @@ const ClientSays = ({ data }) => {
       }}
     >
       <Container>
-        {/* <ParagraphTitle title={heading} paragraph={subHeading} /> */}
         <Box
           sx={{
             mb: { sm: '55px', md: '40px' },
@@ -191,6 +190,7 @@ const ClientSays = ({ data }) => {
                             sx={{
                               fontSize: '18px !important',
                               fontWeight: 400,
+
                               color: '#525252',
                               '@media (min-width: 300px) and (max-width: 599px) ':
                                 {
@@ -201,7 +201,7 @@ const ClientSays = ({ data }) => {
                             {items?.subTitle}
                             <Box
                               sx={{
-                                display: 'flex',
+                                display: 'none',
                                 '@media (min-width: 300px) and (max-width: 599px) ':
                                   {
                                     display: 'flex',
