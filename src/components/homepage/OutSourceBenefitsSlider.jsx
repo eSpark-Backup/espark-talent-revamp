@@ -14,7 +14,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
         modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
-          300: {
+          280: {
             slidesPerView: 1,
             pagination: {
               el: '.swiper-pagination',
@@ -90,7 +90,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       sx={{
                         width: 43,
                         height: 43,
-                        '@media (min-width: 300px) and (max-width: 424px)': {
+                        '@media (min-width: 280px) and (max-width: 424px)': {
                           width: 27,
                           height: 27,
                         },
@@ -106,7 +106,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
                         '@media (min-width: 375px) and (max-width: 424px)': {
                           fontSize: '18px !important',
                         },
-                        '@media (min-width: 300px) and (max-width: 374px)': {
+                        '@media (min-width: 280px) and (max-width: 374px)': {
                           ml: 1,
                           fontSize: '15px !important',
                         },
@@ -127,7 +127,7 @@ const OutSourceBenefitsSlider = ({ items }) => {
                       component={'p'}
                       sx={{
                         fontSize: '14px !important',
-                        '@media (min-width: 300px) and (max-width: 374px)': {
+                        '@media (min-width: 280px) and (max-width: 374px)': {
                           fontSize: '12px !important',
                         },
                         fontWeight: 400,
