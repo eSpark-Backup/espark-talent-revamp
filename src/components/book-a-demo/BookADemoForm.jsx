@@ -184,32 +184,34 @@ const BookADemoForm = ({ form }) => {
                     onChange={handlePhoneChange}
                   />
                 ) : (
-                  <Box
-                    component={'input'}
-                    name={item?.key}
-                    placeholder={item?.placeHolder}
-                    value={values[item?.key]}
-                    type={item?.type}
-                    onChange={handleChange}
-                    sx={{
-                      width: { xs: '100%', sm: '436.277px' },
-                      borderRadius: '5.418px',
-                      height: '41px',
-                      border: ' 0.903px solid #D0D4EA',
-                      background: '#F5F8FA',
-                      fontSize: '14px',
-                      pl: 1.5,
-                      color: 'black',
-                      '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
-                        {
-                          '-webkit-appearance': 'none',
-                          margin: 0,
+                  <Box>
+                    <Box
+                      component={'input'}
+                      name={item?.key}
+                      placeholder={item?.placeHolder}
+                      value={values[item?.key]}
+                      type={item?.type}
+                      onChange={handleChange}
+                      sx={{
+                        width: { xs: '100%', sm: '436.277px' },
+                        borderRadius: '5.418px',
+                        height: '41px',
+                        border: ' 0.903px solid #D0D4EA',
+                        background: '#F5F8FA',
+                        fontSize: '14px',
+                        pl: 1.5,
+                        color: 'black',
+                        '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
+                          {
+                            '-webkit-appearance': 'none',
+                            margin: 0,
+                          },
+                        '&:focus': {
+                          outline: 'none',
                         },
-                      '&:focus': {
-                        outline: 'none',
-                      },
-                    }}
-                  />
+                      }}
+                    />
+                  </Box>
                 )}
                 {touched[item?.key] && errors[item?.key] && (
                   <ErrorMessage message={errors[item?.key]} />

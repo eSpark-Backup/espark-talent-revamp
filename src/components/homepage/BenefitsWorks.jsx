@@ -11,7 +11,7 @@ const BenefitsWorks = ({ data }) => {
             sx={{
               mx: 'auto',
               pb: '50px',
-              width: { sm: '750px', md: '950px' },
+              width: { sm: '750px', md: '750px' },
               '@media (min-width: 600px) and (max-width:767px)': {
                 width: '500px',
                 pb: '30px',
@@ -29,11 +29,11 @@ const BenefitsWorks = ({ data }) => {
               variant="h2"
               sx={{
                 color: '#001C63',
-                fontSize: { sm: '24px !important', md: '32px !important' },
+                fontSize: { sm: '24px !important', md: '24px !important' },
                 fontWeight: 600,
                 lineHeight: { sm: 'auto', lg: '42.289px' },
                 '@media (min-width: 425px) and (max-width:767px)': {
-                  fontSize: '19px !important',
+                  fontSize: '26px !important',
                 },
                 '@media (min-width: 300px) and (max-width:424px)': {
                   fontSize: '20px !important',
@@ -50,7 +50,10 @@ const BenefitsWorks = ({ data }) => {
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontSize: { sm: '16px !important', md: '18px !important' },
+                fontSize: {
+                  xs: '16px !important',
+                  md: '18px !important',
+                },
                 '@media (min-width: 300px) and (max-width:424px)': {
                   px: '25px',
                 },
@@ -85,10 +88,10 @@ const BenefitsWorks = ({ data }) => {
                 zIndex: 0,
                 top: { sm: 230, md: 90 },
                 '@media (min-width:600px) and (max-width: 767px)': {
-                  top: 190,
+                  top: 210,
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
-                  top: 175,
+                  top: 190,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 157,
@@ -118,10 +121,10 @@ const BenefitsWorks = ({ data }) => {
                 display: { xs: 'block', sm: 'block', md: 'none' },
                 top: { sm: 455, md: 160 },
                 '@media (min-width:600px) and (max-width: 767px)': {
-                  top: 360,
+                  top: 415,
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
-                  top: 320,
+                  top: 380,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 280,
@@ -144,10 +147,10 @@ const BenefitsWorks = ({ data }) => {
                 zIndex: 0,
                 top: { sm: 708, md: 260 },
                 '@media (min-width:600px) and (max-width: 767px)': {
-                  top: 570,
+                  top: 650,
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
-                  top: 510,
+                  top: 590,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 442,
@@ -230,7 +233,7 @@ const BenefitsWorks = ({ data }) => {
                       fontWeight: 400,
                       fontStyle: 'normal',
 
-                      lineHeight: { md: '30px', xs: '18.571px' },
+                      lineHeight: { xs: '18.571px', md: '23px', lg: '30px' },
                       ml: 1,
                       fontSize: { lg: '20px', xs: '12px' },
                     }}

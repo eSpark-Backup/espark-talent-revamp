@@ -111,7 +111,7 @@ const ClientSlider = ({
                         width: '100px',
                         height: '20px',
                       },
-                      '@media (min-width: 300px) and (max-width: 374px)': {
+                      '@media (min-width: 280px) and (max-width: 374px)': {
                         width: '80px',
                         height: '18px',
                       },
