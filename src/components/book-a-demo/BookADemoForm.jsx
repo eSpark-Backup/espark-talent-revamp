@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import React, { useState, useRef } from 'react';
+import { Box, Button, Typography } from '@mui/material';
 
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -17,6 +17,7 @@ const BookADemoForm = ({ form }) => {
   const [modalText, setModalText] = React.useState('');
   const handleClose = () => setOpen(false);
   const [isOpen, setIsOpen] = useState(false);
+  const partnersRef = useRef(null);
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -107,12 +108,11 @@ const BookADemoForm = ({ form }) => {
           }, 2000);
 
           console.error('Error submitting the form:', error);
+        } finally {
+          setTimeout(() => {
+            setIsOpen(true);
+          }, 2000);
         }
-        finally {
-        setTimeout(() => {
-          setIsOpen(true);
-        }, 2000);
-      }
       },
     });
 
@@ -247,13 +247,14 @@ const BookADemoForm = ({ form }) => {
           </Box>
         </Box>
         <BasicModal text={modalText} open={open} handleClose={handleClose} />
-       <div id="partners"></div>
+
+        <div id="partners" ref={partnersRef} />
         <PopupModal
-        url="https://calendly.com/esparktalents/60min"
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={document.getElementById("partners")}
-      />
+          url="https://calendly.com/esparktalents/60min"
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={partnersRef.current}
+        />
       </Box>
     </>
   );
