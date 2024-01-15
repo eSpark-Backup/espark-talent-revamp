@@ -123,13 +123,12 @@ span {
   height: 50px;
 } */
 
-
 /* ---------------------------- */
 /* country Input styling */
 /* ---------------------------- */
 .PhoneInputCountrySelect {
   padding: 10px;
-  width: 7% !important;
+  width: 7%;
   border: 0;
   font-size: 0px;
   appearance: none;
@@ -152,6 +151,7 @@ span {
   width: 100px;
   border: 0.903px solid #bcbfc0;
   background: #fff;
+  background: #f5f8fa;
   border-radius: 5.418px;
   display: flex;
   justify-content: space-around;
@@ -191,7 +191,7 @@ span {
   border-radius: 5.418px;
   padding-left: 10px;
   border: 0.903px solid #bcbfc0;
-  background: #fff;
+  background: #f5f8fa;
   color: black;
   height: 40px;
   width: 100%;
@@ -201,13 +201,9 @@ span {
   display: none;
 }
 
-.PhoneInputInput:hover {
-  border-color: #029894;
-}
-
 .PhoneInputInput:focus {
-  outline-color: black !important;
-
+  outline: none !important;
+  /* outline-color: black !important; */
 }
 
 .PhoneInputInput::placeholder {
@@ -230,7 +226,8 @@ span {
     height: 32px;
   }
 }
-.our-team-swiper-image,.why-choose-our-hr-slide-icon{
+.our-team-swiper-image,
+.why-choose-our-hr-slide-icon {
   width: 100%;
   height: 100%;
 }
@@ -238,13 +235,12 @@ span {
   .swiper-controller-icon {
     width: 12px;
     height: 15px;
+  }
 }
-  
-  }
-  .its-our-job-card-image{
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
+.its-our-job-card-image {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
 @media (min-width: 1051px) and (max-width: 1365px) {
   .whatWeBox {
     height: 150px !important;
@@ -279,7 +275,7 @@ span {
   .whatWeBox {
     height: 190px !important;
   }
-  .imageBox{
+  .imageBox {
     padding-top: 30px;
   }
 }
@@ -288,10 +284,9 @@ span {
     height: 230px !important;
     padding-top: 10px !important;
   }
-  .typoDescription{
+  .typoDescription {
     line-height: 23px !important ;
     font-size: 14px !important;
-
   }
 }
 @media (min-width: 807px) and (max-width: 925px) {
@@ -299,10 +294,9 @@ span {
     height: 230px !important;
     padding-top: 10px !important;
   }
-  .typoDescription{
+  .typoDescription {
     line-height: 23px !important ;
     font-size: 14px !important;
-
   }
 }
 @media (min-width: 925px) and (max-width: 960px) {
@@ -311,7 +305,7 @@ span {
   }
 }
 .partnerSpan {
-  color: #0C3C3A;
+  color: #0c3c3a;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -371,7 +365,7 @@ span {
     display: none !important;
   } */
   .partnerSpan {
-    color: #0C3C3A;
+    color: #0c3c3a;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -388,57 +382,66 @@ span {
 .blog-content h2 {
   font-size: 22px;
   font-weight: 600;
-  color: #001C63;text-align: left;
+  color: #001c63;
+  text-align: left;
 }
 
 .blog-content h3 {
   font-size: 20px;
   font-weight: 400;
-  color: #001C63;text-align: left;
+  color: #001c63;
+  text-align: left;
 }
 
 .blog-content h4 {
   font-size: 18px;
   font-weight: 700;
-  color: #001C63;text-align: left;
+  color: #001c63;
+  text-align: left;
 }
 
 .blog-content h5 {
   font-size: 22px;
   font-weight: 600;
-  color: #001C63;text-align: left;
+  color: #001c63;
+  text-align: left;
 }
 
 .blog-content h6 {
   font-size: 16px;
   font-weight: 700;
-  color: #001C63;text-align: left;
+  color: #001c63;
+  text-align: left;
 }
 
 .blog-content p {
   font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color: #6F76A8;
-  padding-bottom: 15px;text-align: left;
+  color: #6f76a8;
+  padding-bottom: 15px;
+  text-align: left;
 }
 
 .blog-content li {
   font-size: 17px;
   font-weight: 400;
   line-height: 32.3px;
-  color: #6F76A8;text-align: left;
+  color: #6f76a8;
+  text-align: left;
 }
 
 .blog-content ul {
   list-style-type: none;
   padding: 0;
-  color: #6F76A8;text-align: left;
+  color: #6f76a8;
+  text-align: left;
 }
 
 .blog-content li {
   margin-bottom: 10px;
-  position: relative;text-align: left;
+  position: relative;
+  text-align: left;
 }
 
 .blog-content li::before {
@@ -447,99 +450,101 @@ span {
   color: #6f76a8;
   font-size: 17px;
   margin-right: 8px;
-  display: inline-block;text-align: left;
+  display: inline-block;
+  text-align: left;
 }
 @media only screen and (max-width: 1024px) {
   .blog-content h2 {
-  font-size: 22px;
-}
+    font-size: 22px;
+  }
 
-.blog-content h3 {
-  font-size: 22px;
-}
+  .blog-content h3 {
+    font-size: 22px;
+  }
 
-.blog-content p {
-  font-size: 14px;
-  text-align: justify;
-line-height: 20px;
-}
-.blog-content li {
-  font-size: 14px;
-  text-align: justify;
-line-height: 20px;
-}
+  .blog-content p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+  }
+  .blog-content li {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .blog-content h2 {
-  font-size: 22px;
-}
+    font-size: 22px;
+  }
 
-.blog-content h3 {
-  font-size: 22px;
-}
-.blog-content p {
-  font-size: 13px;
-  text-align: justify;
-line-height: 20px;
-}
-.blog-content li {
-  font-size: 13px ;
-  text-align: justify;
-line-height: 20px;
-}
+  .blog-content h3 {
+    font-size: 22px;
+  }
+  .blog-content p {
+    font-size: 13px;
+    text-align: justify;
+    line-height: 20px;
+  }
+  .blog-content li {
+    font-size: 13px;
+    text-align: justify;
+    line-height: 20px;
+  }
 }
 @media only screen and (max-width: 425px) {
   .blog-content h2 {
-  font-size: 17px;
-}
+    font-size: 17px;
+  }
 
-.blog-content h3 {
-  font-size: 14px;
-}
-.blog-content p {
-  font-size: 11px;text-align: justify;
-line-height: 17px;
-}
-.blog-content li {
-  font-size: 11px;
-}
+  .blog-content h3 {
+    font-size: 14px;
+  }
+  .blog-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+  .blog-content li {
+    font-size: 11px;
+  }
 }
 @media only screen and (max-width: 360px) {
   .blog-content h2 {
-  font-size: 17px;
-}
+    font-size: 17px;
+  }
 
-.blog-content h3 {
-  font-size: 14px;
-}
-.blog-content p {
-  font-size: 11px;
-  text-align: justify;
-line-height: 17px;
-}
-.blog-content li {
-  font-size: 11px;
-}
+  .blog-content h3 {
+    font-size: 14px;
+  }
+  .blog-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+  .blog-content li {
+    font-size: 11px;
+  }
 }
 @media only screen and (max-width: 360px) {
   .blog-content h2 {
-  font-size: 17px;
-  text-align: left;
-}
+    font-size: 17px;
+    text-align: left;
+  }
 
-.blog-content h3 {
-  font-size: 14px;
+  .blog-content h3 {
+    font-size: 14px;
+  }
+  .blog-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+  .blog-content li {
+    font-size: 11px;
+  }
 }
-.blog-content p {
-  font-size: 11px;
-  text-align: justify;
-line-height: 17px;
-}
-.blog-content li {
-  font-size: 11px;
-}
-}
-.mix-reviews-area { 
+.mix-reviews-area {
   position: relative;
   margin-bottom: -200px;
   /* box-shadow:
@@ -580,7 +585,7 @@ line-height: 17px;
 /* .outsourcing-slide {
   margin-right: 0px !important;
 } */
-.outsourcing-icon-image{
+.outsourcing-icon-image {
   max-width: 100% !important;
   max-height: 100% !important;
 }
@@ -754,10 +759,10 @@ line-height: 17px;
 @media (max-width: 768px) {
   .partner-form .input::placeholder {
     font-size: 13px;
-}
-.PhoneInputInput::placeholder {
-  font-size: 13px;
-}
+  }
+  .PhoneInputInput::placeholder {
+    font-size: 13px;
+  }
 }
 /* .partner-form input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -979,15 +984,28 @@ input::-webkit-inner-spin-button {
   .hireTalentResponsiveBtnNav {
     display: block !important;
   }
-
 }
 @media (min-width: 270px) and (max-width: 400px) {
-  .footerCta{
+  .footerCta {
     margin-top: 50px !important;
   }
 }
+@media (min-width: 280px) and (max-width: 350px) {
+  .PhoneInput {
+    display: block !important;
+  }
+  .PhoneInputCountry {
+    width: 78px !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .PhoneInputCountrySelect option {
+    font-size: 13px !important;
+  }
+}
 @media (min-width: 420px) and (max-width: 500px) {
-  .footerCta{
+  .footerCta {
     margin-top: 50px !important;
   }
 }
