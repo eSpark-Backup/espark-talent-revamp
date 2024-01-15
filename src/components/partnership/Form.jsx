@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { PopupModal } from "react-calendly";
+import { PopupModal } from 'react-calendly';
 import emailjs from '@emailjs/browser';
 
 // import PartnersModal from './PartnersModal';
@@ -21,9 +21,8 @@ const serviceid =
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
-  const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
+  const partnersRef = useRef(null);
   const PartnerFormData = {
     first_name: '',
     last_name: '',
@@ -94,13 +93,11 @@ const Form = ({ formContent }) => {
 
         if (emailResult.status === 200) {
           action.resetForm();
-          values.phone_number = ''
+          values.phone_number = '';
         }
       } catch (error) {
         action.resetForm();
         values.phone_number = '';
-        setTimeout(() => {
-        }, 2000);
 
         console.error('Error submitting the form:', error);
       } finally {
@@ -325,12 +322,12 @@ const Form = ({ formContent }) => {
           </Box>
         </form>
       </Box>
-       <div id="partners"></div>
-       <PopupModal
+      <div id="partners" ref={partnersRef} />
+      <PopupModal
         url="https://calendly.com/esparktalents/60min"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
-        rootElement={document.getElementById("partners")}
+        rootElement={partnersRef.current}
       />
     </Box>
   );
