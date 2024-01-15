@@ -17,7 +17,7 @@ const Process = ({ data }) => {
           px: 2,
           py: 5,
         },
-        '@media (min-width: 300px) and (max-width: 599px)': {
+        '@media (min-width: 280px) and (max-width: 599px)': {
           px: 2,
           py: 5,
         },
@@ -52,7 +52,7 @@ const Process = ({ data }) => {
               fontSize: '23px !important',
               lineHeight: '22px',
             },
-            '@media (min-width: 300px) and (max-width: 359px)': {
+            '@media (min-width: 280px) and (max-width: 359px)': {
               fontSize: '20px !important',
               lineHeight: '27px',
             },
@@ -75,7 +75,7 @@ const Process = ({ data }) => {
             '@media (min-width: 360px) and (max-width: 599px)': {
               fontSize: '12px !important',
             },
-            '@media (min-width: 300px) and (max-width: 359px)': {
+            '@media (min-width: 280px) and (max-width: 359px)': {
               fontSize: '12px !important',
               lineHeight: '25px',
             },
@@ -103,7 +103,7 @@ const Process = ({ data }) => {
               py: 1.5,
               gap: 2,
             },
-            '@media (min-width: 300px) and (max-width: 359px)': {
+            '@media (min-width: 280px) and (max-width: 359px)': {
               flexDirection: 'column',
               alignItems: process?.alignment == 'right' ? 'end' : 'start',
               pb: 2,
@@ -120,7 +120,7 @@ const Process = ({ data }) => {
               display: 'flex',
               justifyContent: 'start',
               order: `${process?.alignment == 'right' ? 2 : 1}`,
-              '@media (min-width: 300px) and (max-width: 359px)': {
+              '@media (min-width: 280px) and (max-width: 359px)': {
                 order: 1,
               },
             }}
@@ -144,7 +144,7 @@ const Process = ({ data }) => {
                   width: '76px',
                   height: '68px',
                 },
-                '@media (min-width: 300px) and (max-width: 359px)': {
+                '@media (min-width: 280px) and (max-width: 359px)': {
                   width: '100px',
                   height: '100px',
                 },
@@ -167,7 +167,7 @@ const Process = ({ data }) => {
                 width: '280px',
                 gap: 0.5,
               },
-              '@media (min-width: 300px) and (max-width: 359px)': {
+              '@media (min-width: 280px) and (max-width: 359px)': {
                 textAlign: 'left',
               },
               display: 'flex',
@@ -216,6 +216,10 @@ const Process = ({ data }) => {
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
                   fontSize: '11px !important',
+                  lineHeight: '15px',
+                },
+                '@media (min-width: 280px) and (max-width: 359px)': {
+                  fontSize: '12px !important',
                   lineHeight: '15px',
                 },
               }}
