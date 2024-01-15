@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 
 import PhoneInput from 'react-phone-number-input';
@@ -9,12 +9,15 @@ import { useFormik } from 'formik';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import emailjs from '@emailjs/browser';
 import BasicModal from './BookADemoModal';
+import { PopupModal } from 'react-calendly';
 
 const BookADemoForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
   const [open, setOpen] = React.useState(false);
   const [modalText, setModalText] = React.useState('');
   const handleClose = () => setOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const partnersRef = useRef(null);
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -94,10 +97,6 @@ const BookADemoForm = ({ form }) => {
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
-              setTimeout(() => {
-                // window.open('https://calendly.com/esparktalents/', 'blank');
-                setOpen(open);
-              }, 2000);
             }, 2000);
           }
         } catch (error) {
@@ -106,13 +105,13 @@ const BookADemoForm = ({ form }) => {
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
-            setTimeout(() => {
-              // window.open('https://calendly.com/esparktalents/', 'blank');
-              setOpen(!open);
-            }, 2000);
           }, 2000);
 
           console.error('Error submitting the form:', error);
+        } finally {
+          setTimeout(() => {
+            setIsOpen(true);
+          }, 2000);
         }
       },
     });
@@ -250,6 +249,14 @@ const BookADemoForm = ({ form }) => {
           </Box>
         </Box>
         <BasicModal text={modalText} open={open} handleClose={handleClose} />
+
+        <div id="partners" ref={partnersRef} />
+        <PopupModal
+          url="https://calendly.com/esparktalents/60min"
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={partnersRef.current}
+        />
       </Box>
     </>
   );
