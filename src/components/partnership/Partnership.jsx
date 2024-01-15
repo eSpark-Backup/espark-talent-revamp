@@ -17,7 +17,7 @@ const Partnership = ({ partnership }) => {
   return (
     <Box
       sx={{
-        mt: '1.5%',
+        mt: '2%',
         mb: '6%',
       }}
     >
@@ -39,7 +39,7 @@ const Partnership = ({ partnership }) => {
                       color: '#001C63',
                       px: { xs: '40px', sm: 0 },
                       py: '5px',
-                      pt: { xs: '25px', md: '40px' },
+                      pt: { xs: '25px', md: '35px' },
                       fontSize: {
                         xs: '20px !important',
                         md: '32px !important',
