@@ -126,7 +126,11 @@ const CareerCards = ({ data }) => {
                 <Typography
                   variant="h3"
                   color="secondary"
-                  borderTop={{ md: 'none', sm: '.5px solid #ced4da', xs: '.5px solid #ced4da' }}
+                  borderTop={{
+                    md: 'none',
+                    sm: '.5px solid #ced4da',
+                    xs: '.5px solid #ced4da',
+                  }}
                   pt="10px"
                 >
                   Description
