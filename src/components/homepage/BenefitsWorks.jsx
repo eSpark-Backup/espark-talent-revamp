@@ -178,7 +178,12 @@ const BenefitsWorks = ({ data }) => {
                 <Box
                   sx={{
                     display: 'flex',
-                    borderRadius: { xs: '32.809px', md: '53px' },
+                    borderRadius: {
+                      xs: '20px',
+                      sm: '25px',
+                      md: '40px',
+                      lg: '50px',
+                    },
                     p: '20px',
                     alignItems: 'center',
                     background: ' #FFF',
