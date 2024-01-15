@@ -16,7 +16,7 @@ export const WHY_CHOOSE_OUR_HR_DATA = {
       arrowIcon: '/images/whatwedo/why-choose-our-hr/arrow.svg',
     },
     {
-      icon: '/images/whatwedo/why-choose-our-hr/setting.svg',
+      icon: '/images/whatwedo/why-choose-our-hr/management.svg',
       alt: 'settionsIcon',
       title: 'Handle Management Issues ',
       description:

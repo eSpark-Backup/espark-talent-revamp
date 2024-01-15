@@ -138,7 +138,24 @@ span {
   background-repeat: no-repeat;
   order: 1;
   color: black;
-  border: none !important;
+}
+
+/* .parnership-form .PhoneInputCountrySelect {
+  padding: 10px;
+  width: 35% !important ;
+  border: none !important ;
+  font-size: 0px;
+  appearance: none ;
+  font-weight: 600;
+  background-image: url(/images/partners/arrow.svg);
+  background-position: right 0.2rem center;
+  background-repeat: no-repeat;
+  order: 1;
+  color: black;
+  cursor: pointer;
+} */
+.parnership-form:focus{
+  outline:3px solid blue; outline-offset:2px;;
 }
 
 .PhoneInput {
@@ -150,13 +167,28 @@ span {
 .PhoneInputCountry {
   width: 100px;
   border: 0.903px solid #bcbfc0;
-  background: #fff;
   background: #f5f8fa;
   border-radius: 5.418px;
   display: flex;
   justify-content: space-around;
   /* gap: 7px; */
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.parnership-form .PhoneInputCountry {
+  width: 100px;
+  border: 0.903px solid #bcbfc0;
+  background: #fff;
+  border-radius: 5.418px;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 7px; */
+  margin-right: 10px;
+  cursor: pointer;
+}
+.parnership-form .PhoneInputInput{
+  background: #fff;
 }
 
 .PhoneInputCountrySelect {
@@ -748,6 +780,16 @@ span {
   width: 100% !important;
   color: var(--blackColor);
 }
+#partnership-form .input {
+  border-radius: 5.418px;
+  padding-left: 10px;
+  border: 0.903px solid #d0d4ea;
+  background: #fff;
+  height: 41.539px;
+  width: 100% !important;
+  color: var(--blackColor);
+  font-size: 15px !important;
+}
 
 .partner-form .input::placeholder {
   color: #abb2d9;
@@ -764,11 +806,6 @@ span {
     font-size: 13px;
   }
 }
-/* .partner-form input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
 
 .partner-form .custom-arrow {
   width: 17px;
@@ -875,6 +912,11 @@ input::-webkit-inner-spin-button {
   padding-right: 12px;
   text-wrap: nowrap;
 }
+.partner-form-country-code-partnership {
+  padding-left: 10px;
+  padding-right: 12px;
+  text-wrap: nowrap;
+}
 
 .partner-form .partner-form-full-name {
   display: flex;
@@ -893,6 +935,12 @@ input::-webkit-inner-spin-button {
 .partner-form-phone-number,
 .partner-form-Country,
 .partner-form-LinkedIn-Profile {
+  padding-bottom: 15px;
+}
+.partner-form .partner-form-your-email-adress-partnership,
+.partner-form-phone-number-partnership,
+.partner-form-Country-partnership,
+.partner-form-LinkedIn-Profile-partnership {
   padding-bottom: 15px;
 }
 
@@ -942,14 +990,45 @@ input::-webkit-inner-spin-button {
   color: var(--blackColor);
   border-radius: 5.418px;
   font-size: 14.448px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  appearance: none;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  appearance: none !important;
   font-weight: 600;
-  background-image: url('/images/partners/arrow.svg');
-  background-position: right 0.75rem center;
-  background-repeat: no-repeat;
+  background-image: url('/images/partners/arrow.svg') !important;
+  background-position: right 0.75rem center !important;
+  background-repeat: no-repeat !important;  
+}
+@media (max-width: 280px) {
+.partner-country-dropdown  option {
+  max-width: 10px !important;
+  font-size: 8px;
+  font-weight: 600 !important;
+}
+}
+@media (min-width: 280px) and (max-width: 300px) {
+  .partner-country-dropdown  option {
+    font-size: 8px;
+    font-weight: 600 !important;
+  }
+
+}
+@media (min-width: 300px) and (max-width: 340px) {
+  .partner-country-dropdown  option {
+    font-size: 9.4px;
+    font-weight: 600 !important;
+  }
+}
+@media (min-width: 341px) and (max-width: 415px) {
+  .partner-country-dropdown  option {
+    font-size: 10.4px;
+  }
+}
+@media (min-width: 769px) and (max-width: 995px) {
+  .partner-country-dropdown  option {
+    font-size: 10.4px;
+    font-weight: 600 !important;
+  }
 }
 
 .partner-country-dropdown .default-select {
