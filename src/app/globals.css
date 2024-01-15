@@ -990,6 +990,20 @@ input::-webkit-inner-spin-button {
     margin-top: 50px !important;
   }
 }
+@media (min-width: 280px) and (max-width: 350px) {
+  .PhoneInput {
+    display: block !important;
+  }
+  .PhoneInputCountry {
+    width: 78px !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .PhoneInputCountrySelect option {
+    font-size: 13px !important;
+  }
+}
 @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
     margin-top: 50px !important;
