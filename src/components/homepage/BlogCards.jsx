@@ -88,6 +88,7 @@ const BlogCards = ({ data }) => {
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
                     <Box
+                      className="hoverItem"
                       sx={{
                         position: 'relative',
                         display: 'flex',
@@ -95,7 +96,7 @@ const BlogCards = ({ data }) => {
                         border: 'none',
                         zIndex: 1,
                         backgroundColor: 'transparent',
-                        color: '#000',
+                        width: { xs: '100%', md: '60%' },
                         borderRadius: '5px',
                         fontSize: '16px',
                         fontWeight: 500,
@@ -114,7 +115,7 @@ const BlogCards = ({ data }) => {
                           transition: 'transform 0.5s',
                         },
                         '&:hover': {
-                          color: '#fff',
+                          color: '#fff ',
                           '&::before': {
                             transform: 'translateX(0)',
                           },
@@ -124,13 +125,18 @@ const BlogCards = ({ data }) => {
                       <Box
                         sx={{
                           backgroundColor: '#029894',
-                          width: '50px',
-                          height: '50px',
+                          padding: '10px',
                           borderRadius: '5px',
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
-                          mr: { sx: '6px', md: '10px', lg: '15px' },
+                          mr: { xs: '6px', md: '10px', lg: '15px' },
+                          '&:hover': {
+                            color: '#fff',
+                            '&::before': {
+                              transform: 'translateX(0)',
+                            },
+                          },
                         }}
                       >
                         <ArrowForwardIosIcon
@@ -139,11 +145,13 @@ const BlogCards = ({ data }) => {
                             transition: 'left 0.5s',
                             '&:hover': {
                               left: '50%',
+                              color: '#fff',
                             },
                           }}
                         />
                       </Box>
                       <Typography
+                        className="hoverIcon"
                         sx={{
                           fontSize: {
                             xs: '13px',
@@ -155,6 +163,10 @@ const BlogCards = ({ data }) => {
                           alignItems: 'center',
                           textAlign: 'center',
                           color: '#09114A',
+                          '&:hover': {
+                            width: '100%',
+                            color: '#fff',
+                          },
                         }}
                       >
                         {READ_MORE}
