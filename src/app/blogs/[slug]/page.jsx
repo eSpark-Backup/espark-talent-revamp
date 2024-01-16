@@ -10,8 +10,10 @@ import NotFound from '@/app/not-found';
 
 import { BLOGS_DATA } from '@/constants/blogs';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { getBlog } from '@/sanity/sanity.quries';
 
-const Page = () => {
+export default async function Page() {
+  const blogs = await getBlog();
   const pathname = usePathname();
   const segments = pathname.split('/');
   const lastSegment = segments[segments.length - 1];
@@ -19,10 +21,11 @@ const Page = () => {
   let data;
   if (!isNaN(lastSegment)) {
     const id = parseInt(lastSegment, 10);
-    data = BLOGS_DATA?.filter((item) => item?.id === id);
+    data = blogs?.filter((item) => item?._id === id);
   } else {
-    data = BLOGS_DATA?.filter((item) => item?.slug === lastSegment);
+    data = blogs?.filter((item) => item?.slug.current === lastSegment);
   }
+  console.log(blogs);
 
   if (data?.length === 0) {
     return <NotFound data={BLOGS_NOT_FOUND_DATA} />;
@@ -41,5 +44,3 @@ const Page = () => {
     </Box>
   );
 };
-
-export default Page;

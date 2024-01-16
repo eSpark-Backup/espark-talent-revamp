@@ -5,13 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-
+import { useNextSanityImage } from 'next-sanity-image';
 import { READ_MORE } from '@/constants/home-page/blogSections';
+import { urlFor } from '@/sanity/sanityImage';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
-
+console.log(data);
   const handleChangePage = (event, value) => {
     setPage(value);
   };
@@ -19,6 +20,8 @@ const BlogCards = ({ data }) => {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
+
+  
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
@@ -31,11 +34,11 @@ const BlogCards = ({ data }) => {
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
                 }}
               >
-                <Link href={`/blogs/${item?.slug}`}>
+                <Link href={`/blogs/${item?.slug?.current}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      <Image
-                        src={item?.imageLink}
+                     <Image
+                        {...useNextSanityImage(urlFor(item?.imageLink))}
                         alt={item?.title}
                         width={900}
                         height={100}
@@ -52,7 +55,7 @@ const BlogCards = ({ data }) => {
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Link href={`/blogs/${item?.slug}`}>
+                  <Link href={`/blogs/${item?.slug?.current}`}>
                     <Typography
                       sx={{
                         color: '#09114A',
@@ -86,7 +89,7 @@ const BlogCards = ({ data }) => {
                   >
                     {item?.mainParagraph}
                   </Typography>
-                  <Link href={`/blogs/${item?.slug}`}>
+                  <Link href={`/blogs/${item?.slug?.current}`}>
                     <Box className="default-btn" sx={{ position: 'relative' }}>
                       <ArrowForwardIosIcon
                         sx={{
