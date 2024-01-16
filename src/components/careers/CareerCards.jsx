@@ -13,15 +13,14 @@ import {
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 
-const CareerCards = ({ data,categories }) => {
+const CareerCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
 
-const filteredData = selectedCategory === 'all'
-  ? data
-  : data?.filter((item) => item?.jobCategory._ref === selectedCategory);
-
-console.log(data,"data");
+  const filteredData =
+    selectedCategory === 'all'
+      ? data
+      : data?.filter((item) => item?.jobCategory._ref === selectedCategory);
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
@@ -37,12 +36,8 @@ console.log(data,"data");
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
     setPage(1);
-    console.log("selectedCategory",selectedCategory);
   };
-
-  useEffect(() => {
-    console.log("Selected category changed:", selectedCategory);
-  }, [selectedCategory]);
+  useEffect(() => {}, [selectedCategory]);
   return (
     <>
       <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
@@ -64,7 +59,7 @@ console.log(data,"data");
             >
               <MenuItem value="all">All</MenuItem>
               {categories.map((category, index) => (
-                <MenuItem key={`job-category-${index}`} value= {category?._id}>
+                <MenuItem key={`job-category-${index}`} value={category?._id}>
                   {category?.title}
                 </MenuItem>
               ))}
@@ -110,7 +105,8 @@ console.log(data,"data");
                   color="#000"
                 >
                   {`${item?.location}`}
-                </Typography><Typography
+                </Typography>
+                <Typography
                   variant="body1"
                   fontSize={{
                     xs: '12px',
