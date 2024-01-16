@@ -96,6 +96,9 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 157,
                 },
+                '@media (min-width:278px) and (max-width: 299px)': {
+                  top: 177,
+                },
               }}
               src="/images/homepage/outsource-benefits/line1.svg"
               component={'img'}
@@ -129,6 +132,9 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 280,
                 },
+                '@media (min-width:278px) and (max-width: 299px)': {
+                  top: 335,
+                },
               }}
               src="/images/homepage/outsource-benefits/line4.svg"
               component={'img'}
@@ -154,6 +160,9 @@ const BenefitsWorks = ({ data }) => {
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 442,
+                },
+                '@media (min-width:278px) and (max-width: 299px)': {
+                  top: 555,
                 },
               }}
               src="/images/homepage/outsource-benefits/line3.svg"
