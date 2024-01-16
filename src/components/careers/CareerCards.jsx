@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Container,
@@ -13,22 +13,15 @@ import {
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 
-const CareerCards = ({ data }) => {
+const CareerCards = ({ data,categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
 
-  const jobCategories = Array.from(
-    new Set(
-      data?.flatMap((item) =>
-        Array.isArray(item?.category) ? item?.category : [item?.category]
-      )
-    )
-  );
+const filteredData = selectedCategory === 'all'
+  ? data
+  : data?.filter((item) => item?.jobCategory._ref === selectedCategory);
 
-  const filteredData =
-    selectedCategory === 'all'
-      ? data
-      : data?.filter((item) => item?.category.includes(selectedCategory));
+console.log(data,"data");
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
@@ -44,8 +37,12 @@ const CareerCards = ({ data }) => {
   const handleJobCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
     setPage(1);
+    console.log("selectedCategory",selectedCategory);
   };
 
+  useEffect(() => {
+    console.log("Selected category changed:", selectedCategory);
+  }, [selectedCategory]);
   return (
     <>
       <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
@@ -66,9 +63,9 @@ const CareerCards = ({ data }) => {
               }}
             >
               <MenuItem value="all">All</MenuItem>
-              {jobCategories.map((category, index) => (
-                <MenuItem key={`job-category-${index}`} value={category}>
-                  {category}
+              {categories.map((category, index) => (
+                <MenuItem key={`job-category-${index}`} value= {category?._id}>
+                  {category?.title}
                 </MenuItem>
               ))}
             </Select>
@@ -100,7 +97,7 @@ const CareerCards = ({ data }) => {
                 px={{ xs: '10px', sm: '20px' }}
               >
                 <Typography variant="h3" color="secondary">
-                  {item?.heading}
+                  {item?.title}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -112,7 +109,18 @@ const CareerCards = ({ data }) => {
                   }}
                   color="#000"
                 >
-                  {`${item?.location[0]}, ${item?.location[1]} `}
+                  {`${item?.location}`}
+                </Typography><Typography
+                  variant="body1"
+                  fontSize={{
+                    xs: '12px',
+                    sm: '12px',
+                    md: '15px',
+                    lg: '20px',
+                  }}
+                  color="#000"
+                >
+                  {`${item?.lastDateToApply}`}
                 </Typography>
               </Grid>
               <Grid
@@ -162,7 +170,7 @@ const CareerCards = ({ data }) => {
                 <Box py={{ xs: '10px', sm: '10px' }}>
                   <ESparkButton
                     title={`Apply Now >`}
-                    link={item?.link}
+                    link={item?.applyLink}
                     color={'primary'}
                   />
                 </Box>
