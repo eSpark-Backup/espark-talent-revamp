@@ -17,12 +17,12 @@ const FooterItem = ({ href, label }) => {
           sm: '10px',
           md: '13px',
           lg: '15px',
-          xl: '20px',
+          // xl: '20px',
         },
         fontStyle: 'normal',
         fontWeight: isBlackLabel ? 500 : 400,
         lineHeight: 'normal',
-        my: 2,
+        my: !isBlackLabel ? 2 : 0,
       }}
     >
       {isBlackLabel ? (

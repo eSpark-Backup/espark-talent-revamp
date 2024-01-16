@@ -37,7 +37,7 @@ const Footer = ({ data }) => {
                     sm: '10px',
                     md: '13px',
                     lg: '15px',
-                    xl: '20px',
+                    // xl: '20px',
                   },
                   fontStyle: 'normal',
                   fontWeight: 400,
@@ -160,7 +160,7 @@ const Footer = ({ data }) => {
                     <Box
                       key={index}
                       sx={{
-                        width: { sm: '60%' },
+                        width: { sm: '70%' },
                       }}
                     >
                       <FooterItem href={item?.link} label={item?.label} />
@@ -176,6 +176,9 @@ const Footer = ({ data }) => {
         sx={{
           px: {
             lg: '120px',
+          },
+          pt: {
+            lg: '25px',
           },
           background: '#ECECED',
         }}
