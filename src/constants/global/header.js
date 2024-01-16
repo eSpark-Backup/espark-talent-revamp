@@ -5,14 +5,14 @@ export const SUBMENU_ITEMS = {
       link: '/what-we-do',
       icon: '/images/header/whyeSpark.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
     },
     {
       label: 'How its Work',
       link: '/how-its-work',
       icon: '/images/header/howItsWork.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
     },
   ],
   Solutions: [
@@ -21,14 +21,14 @@ export const SUBMENU_ITEMS = {
       link: '/solutions/business-startup',
       icon: '/images/header/startup.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Propel your startup with specialized support with our agile outsourcing assistance.',
     },
     {
       label: 'Enterprise',
       link: '/solutions/enterprises',
       icon: '/images/header/enterPrice.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
     },
   ],
   Resources: [
@@ -37,21 +37,21 @@ export const SUBMENU_ITEMS = {
       link: '/blogs',
       icon: '/images/header/blogs.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Go through insightful perspectives and industry trends in our blog hub.',
     },
     {
       label: 'eSparkWiki',
       link: '/esparkwiki',
       icon: '/images/header/esparkWiki.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Explore the section of job description templates and learn about market demands.',
     },
     {
       label: 'Careers',
       link: '/careers',
       icon: '/images/header/career.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Join a dynamic team and build your career in an innovative environment.',
     },
   ],
   Partnership: [
@@ -60,7 +60,7 @@ export const SUBMENU_ITEMS = {
       link: '/partnership-program',
       icon: '/images/header/partnership.svg',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Collaborate and excel in our referral program for shared achievements and success.',
     },
   ],
 };
