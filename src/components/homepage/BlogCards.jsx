@@ -92,7 +92,7 @@ const BlogCards = ({ data }) => {
                         sx={{
                           position: 'absolute',
                           left: 12,
-                          top: 10,
+                          top: 15,
                           color: '#fff',
                         }}
                       />
