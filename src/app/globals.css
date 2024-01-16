@@ -87,6 +87,9 @@ span {
 .default-btn:hover {
   color: var(--whiteColor);
 }
+.hoverItem:hover > .hoverIcon {
+color: #fff;
+}
 
 .default-btn:hover span {
   left: 15px;
