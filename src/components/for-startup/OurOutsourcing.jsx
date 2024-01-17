@@ -13,10 +13,11 @@ const OurOutsourcing = ({ data }) => {
           sx={{
             color: '#001C63',
             fontSize: { md: '32px', xs: '20px' },
+            lineHeight: { lg: '42.289px', xs: '33.289px' },
             fontWeight: 600,
-            lineHeight: { lg: '42.289px', xs: '23.289px' },
             textAlign: 'center',
             flexWrap: 'wrap',
+            mx: { xs: '30px', md: '0px' },
             pb: { xs: '7px' },
           }}
         >
@@ -26,12 +27,11 @@ const OurOutsourcing = ({ data }) => {
           sx={{
             color: '#001C63',
             textAlign: 'center',
-            fontSize: { md: '18px', xs: '11px' },
+            fontSize: { md: '18px', xs: '10px' },
             fontStyle: 'normal',
             fontWeight: 400,
             lineHeight: { md: '27.863px', xs: '16.363px' },
             flexWrap: 'wrap',
-
             px: '35px',
             pb: { md: '10px', xs: '0px' },
           }}
@@ -46,10 +46,9 @@ const OurOutsourcing = ({ data }) => {
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: '28px',
+                  fontSize: { xs: '20px', md: '28px' },
+                  lineHeight: { xs: '31px', md: '41.547px' },
                   fontWeight: 500,
-                  lineHeight: '41.547px',
-                  mr: { lg: '10%', md: '5%' },
                   mb: { md: '15px' },
                   mt: '10px',
                   textAlign: { xs: 'center', md: 'left' },
@@ -60,13 +59,13 @@ const OurOutsourcing = ({ data }) => {
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: '18px',
                   fontWeight: 400,
-                  lineHeight: '27.863px',
+                  fontSize: { xs: '10px', sm: '13px', md: '18px' },
+                  lineHeight: { xs: '20px', md: '27.863px' },
                   textAlign: { xs: 'center', md: 'justify' },
                   fontStyle: 'normal',
-                  my: { xs: '25px', md: '22px' },
-                  mr: { lg: '10%', md: '5%' },
+                  my: { xs: '5px', md: '22px' },
+                  mr: { lg: '4%', md: '3%' },
                 }}
               >
                 {data?.description}
@@ -74,18 +73,30 @@ const OurOutsourcing = ({ data }) => {
             </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
-                <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
-                  <ListItemIcon sx={{ minWidth: '30px' }}>
-                    <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
+                <Box
+                  sx={{
+                    display: 'flex',
+                    textAlign: 'baseline',
+                    mx: { sm: '20%', md: '0%' },
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: { xs: '28px', md: '30px' } }}>
+                    <TaskAltIcon
+                      fontSize="small"
+                      sx={{
+                        color: '#029894',
+                        fontSize: { xs: '15px', md: '22px' },
+                      }}
+                    />
                   </ListItemIcon>
                   <Typography
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: '14px',
+                      fontSize: { xs: '8.581px', md: '14px' },
+                      lineHeight: { xs: '13.729px', md: '23.741px' },
                       textAlign: 'justify',
                       fontWeight: 600,
-                      lineHeight: '27.23.741px',
                     }}
                   >
                     {item?.description}

@@ -13,8 +13,6 @@ const BusinessVenture = ({ data }) => {
           <Grid item sm={12} md={6}>
             <Box
               sx={{
-                // mt: { md: '52px', lg: '72px' },
-                // pb: '12px',
                 mr: { xs: '', md: '25px', lg: '35px' },
               }}
             >
@@ -22,11 +20,13 @@ const BusinessVenture = ({ data }) => {
                 <Typography
                   sx={{
                     color: '#001C63',
-                    fontSize: '28px',
+                    fontSize: { xs: '20px', md: '28px' },
+                    lineHeight: { xs: '31px', md: '41.547px' },
                     fontWeight: 500,
-                    lineHeight: '41.547px',
-                    // mr: { lg: '35px', xs:"0" },
+                    mr: { lg: '35px', xs: '0' },
                     textAlign: { xs: 'center', md: 'left' },
+                    mb: { xs: '10px', md: '10px', lg: '15px' },
+                    mx: { xs: '20px', md: '0px' },
                   }}
                 >
                   {data?.title}
@@ -35,19 +35,39 @@ const BusinessVenture = ({ data }) => {
             </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
-                <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
-                  <ListItemIcon sx={{ minWidth: '30px' }}>
-                    <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
+                <Box
+                  sx={{
+                    display: 'flex',
+                    textAlign: 'baseline',
+                    '@media (min-width: 700px) and (max-width:768px)': {
+                      ml: '30%',
+                    },
+                    '@media (min-width: 550px) and (max-width:699px)': {
+                      ml: '20%',
+                    },
+                    '@media (min-width: 427px) and (max-width:549px)': {
+                      ml: '13%',
+                    },
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: { xs: '28px', md: '30px' } }}>
+                    <TaskAltIcon
+                      fontSize="small"
+                      sx={{
+                        color: '#029894',
+                        fontSize: { xs: '15px', md: '22px' },
+                      }}
+                    />
                   </ListItemIcon>
                   <Typography
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: '14px',
+                      fontSize: { xs: '8.8px', md: '14px' },
+                      lineHeight: { xs: '13.729px', md: '23.741px' },
                       textAlign: 'justify',
                       fontWeight: 600,
                       fontStyle: 'normal',
-                      lineHeight: '23.741px',
                     }}
                   >
                     {item?.description}
@@ -61,7 +81,7 @@ const BusinessVenture = ({ data }) => {
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
-                mt: 2,
+                mt: { xs: 1, md: 2 },
                 pt: 1,
                 py: 3,
                 display: 'flex',

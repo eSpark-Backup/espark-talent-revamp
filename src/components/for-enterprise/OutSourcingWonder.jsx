@@ -55,6 +55,9 @@ const OutSourcingWonder = ({ data }) => {
       360: {
         slidesPerView: 1,
       },
+      600: {
+        slidesPerView: 2,
+      },
       768: {
         slidesPerView: 2,
       },
@@ -79,8 +82,8 @@ const OutSourcingWonder = ({ data }) => {
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontSize: { lg: '32px', md: '25px', sm: '24px', xs: '20px' },
-                lineHeight: 1.3,
+                fontSize: { md: '32px', xs: '20px' },
+                lineHeight: { lg: '42.289px', xs: '33.289px' },
                 px: { xs: '3%', sm: '20%', md: '20%' },
                 fontWeight: 700,
                 fontStyle: 'normal',
@@ -96,27 +99,27 @@ const OutSourcingWonder = ({ data }) => {
                 <SwiperSlide key={index} className="outsourcing-slide">
                   <Grid
                     sx={{
-                      borderRadius: '20px',
+                      borderRadius: '23.172px',
                       px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
-                      py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
-                      // alignItems: 'center',
+                      py: { lg: '40px', md: '30px', sm: '35px', xs: '25px' },
                       minHeight: {
                         lg: '250px',
                         md: '250px',
                         sm: '200px',
                         xs: '150px',
                       },
-                      width: { lg: '100%' },
+                      maxWidth: { xs: '420px', lg: '100%' },
                       background: ' #FFF',
-                      border: '2px rgba(0, 0, 0, 0.25) solid',
+                      border: '1px rgba(0, 0, 0, 0.25) solid',
                       display: 'flex',
                       justifyContent: 'space-between',
                       flexDirection: 'column',
+                      mx: 'auto',
                     }}
                   >
                     <Box
                       sx={{
-                        mb: '10px',
+                        mb: { xs: '10px', sm: '0px', md: '10px' },
                         width: { xs: '30px', md: '40px' },
                         height: { xs: '30px', md: '40px' },
                       }}
@@ -142,7 +145,7 @@ const OutSourcingWonder = ({ data }) => {
                                 ? 40
                                 : 40
                         }
-                        pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
+                        pb={{ lg: '15px', md: '10px', sm: '0px', xs: '7px' }}
                       />
                     </Box>
                     <Typography
@@ -151,11 +154,11 @@ const OutSourcingWonder = ({ data }) => {
                         fontSize: {
                           lg: '20px',
                           md: '17px',
-                          sm: '13px',
-                          xs: '13px',
+                          sm: '13.524px',
+                          xs: '13.524px',
                         },
-                        lineHeight: 1.3,
-                        pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
+                        lineHeight: { xs: '19.144px', md: '26.737px' },
+                        pb: { lg: '10px', md: '7px', sm: '0px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}
