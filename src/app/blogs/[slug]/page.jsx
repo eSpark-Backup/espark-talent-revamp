@@ -8,7 +8,6 @@ import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
 import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
 import NotFound from '@/app/not-found';
 
-import { BLOGS_DATA } from '@/constants/blogs';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { getBlog } from '@/sanity/sanity.quries';
 
@@ -43,4 +42,4 @@ export default async function Page() {
       </Container>
     </Box>
   );
-};
+}
