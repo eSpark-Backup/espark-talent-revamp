@@ -15,7 +15,7 @@ const TalentIgnite = ({ data }) => {
             item
             xs={12}
             sm={12}
-            md={7}
+            md={6}
             alignItems="center"
             justifyContent="center"
             sx={{
@@ -26,14 +26,10 @@ const TalentIgnite = ({ data }) => {
             <Typography
               sx={{
                 color: '#001C63',
-                fontSize: '28px',
+                fontSize: { xs: '20px', md: '28px' },
+                lineHeight: { xs: '31px', md: '41.547px' },
                 fontWeight: 500,
-                lineHeight: '41.547px',
-                // ml: { lg: '10%', md: '5%' },
-                // mr: { lg: '15%', md: '5%' },
-                // mt: isBestOutsourceComponent
-                //   ? { md: '40px', lg: '50px' }
-                //   : { md: '30px', lg: '60px' },
+                mb: { xs: '5px', md: '10px', lg: '15px' },
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
@@ -42,17 +38,16 @@ const TalentIgnite = ({ data }) => {
             <Typography
               sx={{
                 color: '#001C63',
-                fontSize: '18px',
+                fontSize: { xs: '10px', sm: '13px', md: '18px' },
+                lineHeight: { xs: '20px', md: '27.863px' },
                 fontWeight: 400,
-                lineHeight: '36.863px',
-                // ml: { lg: '10%', md: '5%' },
-                // my: { md: '10px', lg: '20px' },
+                mb: { xs: '15px', md: '0px' },
                 textAlign: { xs: 'center', md: 'justify' },
               }}
               dangerouslySetInnerHTML={{ __html: data?.description }}
             />
           </Grid>
-          <Grid item xs={12} sm={12} md={5} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid item xs={12} sm={12} md={6} sx={{ order: { md: 1, xs: 2 } }}>
             <Box
               sx={{
                 borderRadius: '17.311px',
