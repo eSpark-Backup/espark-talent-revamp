@@ -7,9 +7,9 @@ module.exports = {
     domains: ['cdn.sanity.io'],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
+        protocol: 'https',
+        hostname: '**',
       },
     ],
-  }
+  },
 };
