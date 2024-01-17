@@ -10,5 +10,3 @@ const config = {
 const client = sanityClient.createClient(config);
 
 module.exports = client;
-
-
