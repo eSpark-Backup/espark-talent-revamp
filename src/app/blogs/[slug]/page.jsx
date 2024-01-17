@@ -24,7 +24,6 @@ export default async function Page() {
   } else {
     data = blogs?.filter((item) => item?.slug.current === lastSegment);
   }
-  console.log(blogs);
 
   if (data?.length === 0) {
     return <NotFound data={BLOGS_NOT_FOUND_DATA} />;

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
-// import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
@@ -12,14 +12,13 @@ import { READ_MORE } from '@/constants/home-page/blogSections';
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
-  console.log(data);
   const handleChangePage = (event, value) => {
     setPage(value);
   };
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-
+console.log(data);
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
@@ -32,16 +31,16 @@ const BlogCards = ({ data }) => {
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
                 }}
               >
-                <Link href={`/blogs/${item?.slug?.current}`}>
+                <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      {/* <Image
-                        {...useNextSanityImage(urlFor(item?.imageLink))}
+                      <Image
+                     src={item?.featureImage}
                         alt={item?.title}
                         width={900}
                         height={100}
                         style={{ borderRadius: '15px' }}
-                      /> */}
+                      /> 
                     </span>
                     <span className="date">
                       {Intl.DateTimeFormat('en-US', {
@@ -53,7 +52,7 @@ const BlogCards = ({ data }) => {
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Link href={`/blogs/${item?.slug?.current}`}>
+                  <Link href={`/blogs/${item?.slug}`}>
                     <Typography
                       sx={{
                         color: '#09114A',
@@ -85,9 +84,9 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item?.mainParagraph}
+                    {item?.subtitle}
                   </Typography>
-                  <Link href={`/blogs/${item?.slug?.current}`}>
+                  <Link href={`/blogs/${item?.slug}`}>
                     <Box
                       className="hoverItem"
                       sx={{

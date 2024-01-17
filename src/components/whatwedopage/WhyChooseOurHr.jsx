@@ -12,7 +12,6 @@ const WhyChooseOurHr = ({ data }) => {
   const swiperRef = useRef(null);
 
   const handleControlSwiper = (type) => {
-    console.log(type, 'type');
     switch (type) {
       case 'next':
         swiperRef?.current?.swiper?.slidePrev();

@@ -25,7 +25,6 @@ const Faq = ({ data }) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
-  console.log(isSmallScreen, isMediumScreen, isLargeScreen);
 
   return (
     <Box sx={{ py: '1%' }} id="faq">
