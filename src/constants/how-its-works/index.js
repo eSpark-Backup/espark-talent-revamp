@@ -73,13 +73,13 @@ export const OUR_OFFERED_SERVICES = {
       content: '24/7 Active Human Resource Assistance.',
     },
     {
+      content: 'Full-Time Support of Proven Professionals.',
+    },
+    {
       content: 'Cost-Efficient Hiring Services.',
     },
     {
       content: 'Rapid Customer Service.',
-    },
-    {
-      content: 'Full-Time Support of Proven Professionals.',
     },
     {
       content: 'Open to Confirm All Queries',

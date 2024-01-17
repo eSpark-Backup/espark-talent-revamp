@@ -37,15 +37,14 @@ const Footer = ({ data }) => {
                     sm: '10px',
                     md: '13px',
                     lg: '15px',
-                    xl: '20px',
                   },
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: '24.319px',
-                  width: {
-                    lg: '70%',
-                    md: '80%',
-                    sm: '90%',
+                  pr: {
+                    lg: '30%',
+                    md: '20%',
+                    sm: '10%',
                   },
                 }}
               >
@@ -148,7 +147,7 @@ const Footer = ({ data }) => {
                     <Box
                       key={index}
                       sx={{
-                        width: { sm: '60%' },
+                        pr: { sm: '35%' },
                       }}
                     >
                       <FooterItem href={item?.link} label={item?.label} />
@@ -160,7 +159,7 @@ const Footer = ({ data }) => {
                     <Box
                       key={index}
                       sx={{
-                        width: { sm: '60%' },
+                        pr: { md: '25%' },
                       }}
                     >
                       <FooterItem href={item?.link} label={item?.label} />
@@ -176,6 +175,9 @@ const Footer = ({ data }) => {
         sx={{
           px: {
             lg: '120px',
+          },
+          pt: {
+            lg: '25px',
           },
           background: '#ECECED',
         }}

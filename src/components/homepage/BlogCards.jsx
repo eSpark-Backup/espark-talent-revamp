@@ -88,21 +88,86 @@ const BlogCards = ({ data }) => {
                     {item?.mainParagraph}
                   </Typography>
                   <Link href={`/blogs/${item?.slug?.current}`}>
-                    <Box className="default-btn" sx={{ position: 'relative' }}>
-                      <ArrowForwardIosIcon
-                        sx={{
+                    <Box
+                      className="hoverItem"
+                      sx={{
+                        position: 'relative',
+                        display: 'flex',
+                        transition: 'background-color 0.5s, color 0.5s',
+                        border: 'none',
+                        zIndex: 1,
+                        backgroundColor: 'transparent',
+                        width: { xs: '100%', md: '60%' },
+                        borderRadius: '5px',
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        margin: '5px 5px',
+                        overflow: 'hidden',
+                        '&::before': {
+                          content: '""',
                           position: 'absolute',
-                          left: 12,
-                          top: 10,
-                          color: '#fff',
+                          left: 0,
+                          top: 0,
+                          width: '100%',
+                          height: '100%',
+                          backgroundColor: '#029894',
+                          zIndex: -1,
+                          transform: 'translateX(-100%)',
+                          transition: 'transform 0.5s',
+                        },
+                        '&:hover': {
+                          color: '#fff ',
+                          '&::before': {
+                            transform: 'translateX(0)',
+                          },
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          backgroundColor: '#029894',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          mr: { xs: '6px', md: '10px', lg: '15px' },
+                          '&:hover': {
+                            color: '#fff',
+                            '&::before': {
+                              transform: 'translateX(0)',
+                            },
+                          },
                         }}
-                      />
+                      >
+                        <ArrowForwardIosIcon
+                          sx={{
+                            color: '#fff',
+                            transition: 'left 0.5s',
+                            '&:hover': {
+                              left: '50%',
+                              color: '#fff',
+                            },
+                          }}
+                        />
+                      </Box>
                       <Typography
-                        fontSize={{
-                          xs: '13px',
-                          sm: '13px',
-                          md: '15px',
-                          lg: '20px',
+                        className="hoverIcon"
+                        sx={{
+                          fontSize: {
+                            xs: '13px',
+                            sm: '13px',
+                            md: '15px',
+                            lg: '20px',
+                          },
+                          display: 'flex',
+                          alignItems: 'center',
+                          textAlign: 'center',
+                          color: '#09114A',
+                          '&:hover': {
+                            width: '100%',
+                            color: '#fff',
+                          },
                         }}
                       >
                         {READ_MORE}
