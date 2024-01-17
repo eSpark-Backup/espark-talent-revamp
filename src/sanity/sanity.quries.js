@@ -1,45 +1,85 @@
 import client from './sanity.config';
-
 export async function getJob() {
-  return client.fetch(`
-    *[_type == "job"]
-  `);
+  return client.fetch(
+    ` *[_type == "job"]
+    {
+      _id,
+      applyLink,
+       description,
+       experience,
+       "jobCategory":jobCategory._ref,
+       jobTiming,
+       jobType,
+       lastDateToApply,
+       location,
+       "slug":slug.current,
+       title
+      } `
+  );
 }
 export async function getJobCategories() {
-  return client.fetch(`
-    *[_type == "jobCategory"]
-  `);
+  return client.fetch(
+    ` *[_type == "jobCategory"]
+    {
+      _id,
+      title,
+      "slug":slug.current,
+     } `
+  );
 }
-
 export async function getBlog() {
-  return client.fetch(`
-    *[_type == "blog"]
-  `);
+  return client.fetch(
+    ` *[_type == "blog"]
+{_id,
+  "author":author._ref,
+"bannerImage":bannerImage.asset->url,
+bannerTitle,
+body,
+"featureImage":featureImage.asset->url,
+publishedAt,
+ "slug": slug.current,
+subtitle,
+tags,
+title,}
+`);
 }
 export async function getBlogCategories() {
-  return client.fetch(`
-    *[_type == "jobCategory"]
-  `);
+  return client.fetch(
+    ` *[_type == "jobCategory"] 
+ {_id,
+ id,
+ "slug": slug.current,
+ title } `
+  );
 }
-
 export async function getWiki() {
-  return client.fetch(`
-    *[_type == "wiki"]
-  `);
+  return client.fetch(
+    ` *[_type == "wiki"] 
+ {_id, id,
+ title,
+ "slug": slug.current,
+ "wikiCategory": wikiCategory._ref,
+ content,
+ "heroImage":heroImage.asset->url,
+ "iconImage":iconImage.asset->url,
+ salary,
+ shortDescription,
+ title, 
+} `
+  );
 }
 export async function getWikiCategories() {
-  return client.fetch(`
-    *[_type == "wikiCategory"]
-  `);
+  return client.fetch(
+    ` *[_type == "wikiCategory"]
+ {_id,
+ id,
+ "slug": slug.current,
+ title } `
+  );
 }
-
 export async function getPageSeo() {
-  return client.fetch(`
-    *[_type == "pageSEO"]
-  `);
+  return client.fetch(` *[_type == "pageSEO"] `);
 }
 export async function getAuthor() {
-  return client.fetch(`
-    *[_type == "author"]
-  `);
+  return client.fetch(` *[_type == "author"] `);
 }

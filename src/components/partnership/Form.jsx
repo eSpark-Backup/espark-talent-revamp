@@ -77,8 +77,6 @@ const Form = ({ formContent }) => {
     initialValues: PartnerFormData,
     validationSchema: profileValidationSchema,
     onSubmit: async (values, action) => {
-      console.log(values, 'values');
-
       try {
         values.country = selectedOption;
 

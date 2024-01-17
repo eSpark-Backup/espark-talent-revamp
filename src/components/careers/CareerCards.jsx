@@ -46,7 +46,6 @@ const CareerCards = ({ data, categories }) => {
             <Select
               labelId="job-category-label"
               id="job-category"
-              className="dropdown"
               value={selectedCategory}
               onChange={handleJobCategoryChange}
               fullWidth
@@ -55,6 +54,15 @@ const CareerCards = ({ data, categories }) => {
                 sm: '13px',
                 md: '15px',
                 lg: '20px',
+              }}
+              MenuProps={{
+                PaperProps: {
+                  sx: {
+                    '& .MuiMenuItem-root': {
+                      color: '#000',
+                    },
+                  },
+                },
               }}
             >
               <MenuItem value="all">All</MenuItem>
