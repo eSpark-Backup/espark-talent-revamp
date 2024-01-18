@@ -55,9 +55,6 @@ const OutSourcingWonder = ({ data }) => {
       360: {
         slidesPerView: 1,
       },
-      600: {
-        slidesPerView: 2,
-      },
       768: {
         slidesPerView: 2,
       },
