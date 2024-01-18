@@ -98,12 +98,12 @@ const OutSourcingWonder = ({ data }) => {
                     sx={{
                       borderRadius: '23.172px',
                       px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
-                      py: { lg: '40px', md: '30px', sm: '35px', xs: '25px' },
-                      minHeight: {
+                      py: { lg: '40px', md: '45px', sm: '35px', xs: '25px' },
+                      height: {
                         lg: '250px',
                         md: '250px',
                         sm: '200px',
-                        xs: '150px',
+                        xs: '193px',
                       },
                       maxWidth: { xs: '420px', lg: '100%' },
                       background: ' #FFF',
@@ -116,7 +116,7 @@ const OutSourcingWonder = ({ data }) => {
                   >
                     <Box
                       sx={{
-                        mb: { xs: '10px', sm: '0px', md: '10px' },
+                        mb: { xs: '10px', sm: '0px', lg: '10px' },
                         width: { xs: '30px', md: '40px' },
                         height: { xs: '30px', md: '40px' },
                       }}
@@ -142,7 +142,7 @@ const OutSourcingWonder = ({ data }) => {
                                 ? 40
                                 : 40
                         }
-                        pb={{ lg: '15px', md: '10px', sm: '0px', xs: '7px' }}
+                        pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
                       />
                     </Box>
                     <Typography
@@ -155,7 +155,7 @@ const OutSourcingWonder = ({ data }) => {
                           xs: '13.524px',
                         },
                         lineHeight: { xs: '19.144px', md: '26.737px' },
-                        pb: { lg: '10px', md: '7px', sm: '0px', xs: '5px' },
+                        pb: { lg: '10px', md: '0px', sm: '0px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}

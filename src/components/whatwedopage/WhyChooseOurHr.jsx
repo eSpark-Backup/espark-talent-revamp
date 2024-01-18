@@ -204,12 +204,12 @@ const WhyChooseOurHr = ({ data }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  my: 2,
+                  my: { xs: 1, sm: 2 },
                 }}
               >
                 <Box
                   sx={{
-                    minWidth: { xs: '12px', md: '23px' },
+                    minWidth: { xs: '18px', md: '23px' },
                     height: { xs: '15px', md: '23px' },
                     display: 'flex',
                     justifyContent: 'center',
@@ -246,7 +246,7 @@ const WhyChooseOurHr = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    minWidth: { xs: '12px', md: '23px' },
+                    minWidth: { xs: '18px', md: '23px' },
                     height: { xs: '15px', md: '23px' },
                     display: 'flex',
                     justifyContent: 'center',
