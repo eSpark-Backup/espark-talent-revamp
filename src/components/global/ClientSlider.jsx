@@ -50,6 +50,7 @@ const ClientSlider = ({
             textAlign: 'center',
             fontWeight: fontWeight,
             py: '30px',
+            pt: '50px',
             fontSize: fontSize,
             lineHeight: lineHeight,
           }}

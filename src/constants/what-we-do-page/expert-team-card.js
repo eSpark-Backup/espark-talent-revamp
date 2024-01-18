@@ -14,14 +14,14 @@ export const EXPERT_TEAM_CARD = {
       alt: 'team',
       title: 'Train Creative Talent',
       paragraph:
-        'We know what you are aiming for. We train the younger talent to be the best of themselves and offer their expertise.',
+        'We know what you are aiming for. We train the younger talent to be the best of themselves and offer their earned expertise.',
     },
     {
       icon: '/images/whatwedo/onboard.png',
       alt: 'team',
       title: 'Easy Onboard Process',
       paragraph:
-        'You will just need to reach out to us, and we will take it from there. Our services are just one click away from offering you',
+        'You will just need to reach out to us, and we will take it from there. Our services are just one click away from offering you.',
     },
   ],
 };
