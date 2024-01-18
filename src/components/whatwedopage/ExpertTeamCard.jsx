@@ -18,11 +18,12 @@ const ExpertTeamCard = ({ teamData }) => {
             display: 'flex',
             justifyContent: 'center',
             pb: { md: '45px', xs: '10px' },
+            mt: { xs: '22px', md: '0px' },
           }}
         >
           <Typography
             sx={{
-              mx: '20%',
+              mx: { xs: '5%', md: '16%' },
               color: '#001C63',
               fontSize: { md: '32px', xs: '20px' },
               fontStyle: 'normal',
@@ -152,7 +153,7 @@ const ExpertTeamCard = ({ teamData }) => {
                     <Typography
                       sx={{
                         color: '#000',
-                        fontSize: { lg: '17px', xs: '13.024px' },
+                        fontSize: { lg: '16px', xs: '13.024px' },
                         textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
