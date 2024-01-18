@@ -54,21 +54,16 @@ import {
   getWikiCategories,
 } from '@/sanity/sanity.quries';
 import WikiCards from '@/components/wiki/wikiCards';
-// import WikiFilter from '@/components/wiki/WikiFilter';
 
 export default async function page() {
-  const job = await getJob();
-  const jobCategory = await getJobCategories();
   const wiki = await getWiki();
   const wikiCategory = await getWikiCategories();
-  const blogs = await getBlog();
-  // const blogs = await getBlogCategories();
 
   return (
     <>
       <Hero data={WIKI_HERO_DATA} />
       <Box sx={{ background: '#3b59980f' }}>
-        <WikiCards data={wiki} categories={wikiCategory} job={blogs} />
+        <WikiCards data={wiki} categories={wikiCategory}  />
       </Box>
     </>
   );

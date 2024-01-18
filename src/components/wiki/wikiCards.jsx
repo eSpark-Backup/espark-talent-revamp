@@ -14,7 +14,7 @@ const CARD_STYLE = {
   // boxShadow: {lg:'none',sm:`4px 4px 15px rgba(0,0,0,.3)`},
 };
 
-const WikiCards = ({ data, categories, job }) => {
+const WikiCards = ({ data, categories }) => {
   // const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
   // const isMediumScreen = useMediaQuery((theme) =>
   //   theme.breakpoints.between('sm', 'md')
@@ -22,7 +22,6 @@ const WikiCards = ({ data, categories, job }) => {
   // const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const [selectedCategory, setSelectedCategory] = useState('all');
-  // console.log(data);
   const filteredData =
     selectedCategory === 'all'
       ? data

@@ -14,7 +14,11 @@ export async function getJob() {
        location,
        "slug":slug.current,
        title
-      } `
+      } `, {
+    next: {
+      revalidate: 600 
+    }
+  }
   );
 }
 export async function getJobCategories() {
@@ -24,7 +28,11 @@ export async function getJobCategories() {
       _id,
       title,
       "slug":slug.current,
-     } `
+     } `, {
+    next: {
+      revalidate: 600 
+    }
+  }
   );
 }
 export async function getBlog() {
@@ -41,7 +49,34 @@ publishedAt,
 subtitle,
 tags,
 title,}
-`);
+`, {
+    next: {
+      revalidate: 600 
+    }
+  }
+  );
+}
+
+export async function getSingleBlog(slug) {
+  return client.fetch(
+    `*[_type == "blog" && slug.current == $slug][0]
+    {_id,
+  "author":author._ref,
+"bannerImage":bannerImage.asset->url,
+bannerTitle,
+body,
+"featureImage":featureImage.asset->url,
+publishedAt,
+ "slug": slug.current,
+subtitle,
+tags,
+title,}`,
+    { slug }, {
+    next: {
+      revalidate: 600 
+    }
+  }
+  );
 }
 export async function getBlogCategories() {
   return client.fetch(
@@ -49,13 +84,18 @@ export async function getBlogCategories() {
  {_id,
  id,
  "slug": slug.current,
- title } `
+ title } `, {
+    next: {
+      revalidate: 600 
+    }
+  }
   );
 }
 export async function getWiki() {
   return client.fetch(
     ` *[_type == "wiki"] 
- {_id, id,
+ {_id,
+  id,
  title,
  "slug": slug.current,
  "wikiCategory": wikiCategory._ref,
@@ -64,8 +104,33 @@ export async function getWiki() {
  "iconImage":iconImage.asset->url,
  salary,
  shortDescription,
- title, 
-} `
+ title
+} `, {
+    next: {
+      revalidate: 600 
+    }
+  }
+  );
+}
+
+export async function getSingleWiki(slug) {
+  return client.fetch(
+    `*[_type == "wiki" && slug.current == $slug][0]
+    {
+      _id,
+  id,
+ title,
+ "slug": slug.current,
+ "wikiCategory": wikiCategory._ref,
+ content,
+ "heroImage":heroImage.asset->url,
+ "iconImage":iconImage.asset->url,
+ salary,
+ shortDescription,
+ title
+    }
+    `,
+    { slug }
   );
 }
 export async function getWikiCategories() {
@@ -77,6 +142,7 @@ export async function getWikiCategories() {
  title } `
   );
 }
+
 export async function getPageSeo() {
   return client.fetch(` *[_type == "pageSEO"] `);
 }
