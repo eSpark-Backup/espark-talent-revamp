@@ -86,7 +86,15 @@ const OutStaffings = ({ data }) => {
                 <Box>
                   <Typography
                     variant="body1"
-                    sx={{ color: '#000', fontSize: { xs: '14px', sm: '18px' } }}
+                    sx={{
+                      color: '#000',
+                      fontSize: {
+                        xs: '14px',
+                        sm: '18px',
+                        md: '18px',
+                        lg: '18px',
+                      },
+                    }}
                   >
                     {list?.paragraph}
                   </Typography>
