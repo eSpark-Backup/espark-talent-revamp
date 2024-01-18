@@ -18,7 +18,7 @@ const BlogCards = ({ data }) => {
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-console.log(data);
+  console.log(data);
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
@@ -35,12 +35,12 @@ console.log(data);
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
-                     src={item?.featureImage}
+                        src={item?.featureImage}
                         alt={item?.title}
                         width={900}
                         height={100}
                         style={{ borderRadius: '15px' }}
-                      /> 
+                      />
                     </span>
                     <span className="date">
                       {Intl.DateTimeFormat('en-US', {
