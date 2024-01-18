@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Hero from '@/components/homepage/Hero';
-import ClientSlider from '@/components/global/Client';
+import ClientSlider from '@/components/global/ClientSlider';
 import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
 import ChooseUs from '@/components/how-it-work/ChooseUs';
 import OurQualityService from '@/components/how-it-work/OurQualityService';
@@ -31,6 +31,7 @@ const page = () => {
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
+        fontSize={'24px !important'}
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }

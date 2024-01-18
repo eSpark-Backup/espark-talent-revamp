@@ -33,6 +33,7 @@ const page = () => {
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
+        fontSize={'24px !important'}
         fontWeight={500}
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
