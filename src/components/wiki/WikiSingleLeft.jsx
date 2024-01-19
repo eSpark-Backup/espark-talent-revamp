@@ -1,16 +1,17 @@
+'use client';
 import React from 'react';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 
 import Image from 'next/image';
 
 const WikiSingleLeft = ({ data }) => {
-  // const isSmallScreen = useMediaQuery((theme) =>
-  //   theme.breakpoints.between('xs', 'sm')
-  // );
-  // const isMediumScreen = useMediaQuery((theme) =>
-  //   theme.breakpoints.between('sm', 'md')
-  // );
-  // const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <Box
@@ -21,7 +22,7 @@ const WikiSingleLeft = ({ data }) => {
         boxShadow: '0px 0px 7.8px 0px rgba(0, 0, 0, 0.25)',
       }}
     >
-      {/* {data?.content?.map((item, index) => (
+      {data?.content?.map((item, index) => (
         <Box
           key={index}
           sx={{
@@ -50,7 +51,7 @@ const WikiSingleLeft = ({ data }) => {
               },
             }}
           >
-            {item?.title}
+            {item?.title} test
           </Typography>
 
           <Typography
@@ -83,7 +84,7 @@ const WikiSingleLeft = ({ data }) => {
               },
             }}
           >
-            {item?.description}
+            {item?.description} test
           </Typography>
           {item?.items?.map((list, itemIndex) => (
             <Box key={itemIndex} py={'1%'}>
@@ -135,7 +136,7 @@ const WikiSingleLeft = ({ data }) => {
             </Box>
           ))}
         </Box>
-      ))} */}
+      ))}
     </Box>
   );
 };

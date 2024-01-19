@@ -1,8 +1,9 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Box, Typography, Button } from '@mui/material';
 
-function WikiSingleRigth() {
+const WikiSingleRigth = () => {
   return (
     <Box
       sx={{
@@ -54,7 +55,7 @@ function WikiSingleRigth() {
         </Link>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default WikiSingleRigth
+export default WikiSingleRigth;
