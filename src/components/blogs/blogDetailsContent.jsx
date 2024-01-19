@@ -31,8 +31,9 @@ const BlogDetailsContent = ({ data }) => {
               boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
               textAlign: 'justify',
             }}
-          />
-          <PortableText value={data?.content} />
+          >
+            <PortableText value={data?.body} />
+          </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={2}>
           <Grid
