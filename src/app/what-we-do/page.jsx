@@ -30,6 +30,7 @@ const page = () => {
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
+        fontSize={'24px !important'}
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }

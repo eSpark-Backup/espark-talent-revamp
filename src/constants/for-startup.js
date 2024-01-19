@@ -4,7 +4,7 @@ export const OUTSOURCING_SOLUTIONS_DATA = {
     {
       icon: '/images/for-startup/outsourcing-solutions/icon1.svg',
       title: `Diverse Business Development Approaches.`,
-      paragraph: `Access precision-crafted business development plans for your journey.`,
+      paragraph: `Access precision-crafted business development plans for your growth journey.`,
       iconHeight: 30,
       iconWidth: 30,
     },
