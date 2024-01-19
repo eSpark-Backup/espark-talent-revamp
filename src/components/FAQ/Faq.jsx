@@ -8,19 +8,12 @@ import {
   Container,
   AccordionDetails,
   AccordionSummary,
-  useMediaQuery,
 } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
-
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);

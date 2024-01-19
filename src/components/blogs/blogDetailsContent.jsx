@@ -8,9 +8,6 @@ import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 import { PortableText } from '@portabletext/react';
 
 const BlogDetailsContent = ({ data }) => {
-  const BlogString = JSON.stringify(data);
-  const parsedBlog = JSON.parse(BlogString);
-  console.log(parsedBlog);
   return (
     <>
       <Grid

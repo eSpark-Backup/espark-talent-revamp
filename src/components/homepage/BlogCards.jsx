@@ -18,7 +18,7 @@ const BlogCards = ({ data }) => {
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  console.log(data);
+
   return (
     <Box sx={{ my: '3%' }}>
       <Container>

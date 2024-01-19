@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { LocalHospital } from '@mui/icons-material';
 
 const CARD_STYLE = {
   borderRadius: '10px',
@@ -25,9 +23,6 @@ const WikiCards = ({ data, categories }) => {
     selectedCategory === 'all'
       ? data
       : data?.filter((item) => item?.wikiCategory === selectedCategory);
-  console.log('data', data);
-  console.log('selectedCategory', selectedCategory);
-  console.log('filteredData', filteredData);
 
   return (
     <>

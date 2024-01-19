@@ -8,13 +8,10 @@ import moment from 'moment';
 const SingleBlogHeader = ({ data, authors }) => {
   const blogString = JSON.stringify(data);
   const parsedblog = JSON.parse(blogString);
-  console.log(parsedblog);
 
   const filteredAuthor = authors?.filter(
     (author) => author._id === parsedblog.author
   )[0];
-
-  console.log('filteredAuthor', filteredAuthor);
 
   return (
     <>
@@ -41,43 +38,43 @@ const SingleBlogHeader = ({ data, authors }) => {
               </Typography>
             </Box>
             <Box
-  className="post-author-meta"
-  sx={{ display: { xs: 'none', md: 'block' } }}
->
-  <Box
-    style={{ display: 'flex', gap: '10px', alignItems: 'center' }}
-  >
-    <Stack direction="row" spacing={2}>
-      <Avatar
-        alt={parsedblog?.title}
-        src={filteredAuthor?.avatar}
-        sx={{
-          width: { xs: 45, md: 65 },
-          height: { xs: 45, md: 65 },
-        }}
-      />
-    </Stack>
-    <Box className="title">
-      <Box display="flex" gap="2px">
-        <Link href="#" underline="hover">
-          <Typography variant="body1" color={'black'}>
-            By{' '}
-            <Typography
-              variant="body1"
-              color="#001C63"
-              fontWeight={600}
+              className="post-author-meta"
+              sx={{ display: { xs: 'none', md: 'block' } }}
             >
-              {`${filteredAuthor?.firstName} ${filteredAuthor?.firstName}`}
-            </Typography>
-          </Typography>
-        </Link>
-      </Box>
-      <Typography variant="body1" color={'black'}>
-        {moment(parsedblog?.publishedAt).format('MMMM DD, YYYY')}
-      </Typography>
-    </Box>
-  </Box>
-</Box>
+              <Box
+                style={{ display: 'flex', gap: '10px', alignItems: 'center' }}
+              >
+                <Stack direction="row" spacing={2}>
+                  <Avatar
+                    alt={parsedblog?.title}
+                    src={filteredAuthor?.avatar}
+                    sx={{
+                      width: { xs: 45, md: 65 },
+                      height: { xs: 45, md: 65 },
+                    }}
+                  />
+                </Stack>
+                <Box className="title">
+                  <Box display="flex" gap="2px">
+                    <Link href="#" underline="hover">
+                      <Typography variant="body1" color={'black'}>
+                        By{' '}
+                        <Typography
+                          variant="body1"
+                          color="#001C63"
+                          fontWeight={600}
+                        >
+                          {`${filteredAuthor?.firstName} ${filteredAuthor?.firstName}`}
+                        </Typography>
+                      </Typography>
+                    </Link>
+                  </Box>
+                  <Typography variant="body1" color={'black'}>
+                    {moment(parsedblog?.publishedAt).format('MMMM DD, YYYY')}
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
           </Grid>
           <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 2 }}>
             <Box className="image" pl={{ xs: '0', md: '5%' }}>
