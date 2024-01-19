@@ -9,7 +9,6 @@ const WikiPage = async ({ params }) => {
 
   return (
     <>
-      {wiki.id}
       <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
       <WikiSingle data={wiki} />
     </>

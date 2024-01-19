@@ -16,7 +16,7 @@ const WikiCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const onSelectCategory = (category) => {
-    setSelectedCategory(category ? category._id : 'all');
+    setSelectedCategory(category ? category?._id : 'all');
   };
 
   const filteredData =
@@ -63,9 +63,9 @@ const WikiCards = ({ data, categories }) => {
         </Button>
         {categories?.map((category) => (
           <Button
-            key={category.id}
+            key={category?.id}
             onClick={() => onSelectCategory(category)}
-            variant={selectedCategory === category._id ? 'contained' : ''}
+            variant={selectedCategory === category?._id ? 'contained' : ''}
             color="primary"
             sx={{ borderRadius: '50px', fontWeight: 600 }}
           >
@@ -76,10 +76,10 @@ const WikiCards = ({ data, categories }) => {
                 md: '15px',
                 lg: '20px',
               }}
-              color={selectedCategory === category._id ? 'white' : '#001C63'}
+              color={selectedCategory === category?._id ? 'white' : '#001C63'}
               fontWeight="600"
             >
-              {category.title}
+              {category?.title}
             </Typography>
           </Button>
         ))}

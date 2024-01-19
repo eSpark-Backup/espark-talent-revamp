@@ -40,7 +40,7 @@ const BlogDetailsContent = ({ data }) => {
               pt: { xs: '5%', sm: '5%', md: '0%' },
             }}
           >
-            {SOCIAL_LINKS_DATA.map((item, index) => (
+            {SOCIAL_LINKS_DATA?.map((item, index) => (
               <Grid item xs={2} sm={1} md={12} sx={{ p: '10px' }} key={index}>
                 <Box>
                   <Link
