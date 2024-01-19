@@ -152,6 +152,15 @@ export async function getWikiCategories() {
 export async function getPageSeo() {
   return client.fetch(` *[_type == "pageSEO"] `);
 }
+
 export async function getAuthor() {
-  return client.fetch(` *[_type == "author"] `);
+  return client.fetch(` *[_type == "author"]{
+    _id ,
+    "slug": slug.current,
+    about,
+"avatar":avatar.asset->url,
+firstName,
+lastName, 
+role
+  } `);
 }

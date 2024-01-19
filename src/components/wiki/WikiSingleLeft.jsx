@@ -6,17 +6,10 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 
 const WikiSingleLeft = ({ data }) => {
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <Box
-      className={'blog-content'}
+      className={'blog-content wiki-content'}
       sx={{
         px: '20px',
         py: '30px',

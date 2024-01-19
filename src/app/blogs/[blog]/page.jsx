@@ -1,11 +1,12 @@
-'use client';
+// 'use client';
 import React from 'react';
 
 import { Container, Box } from '@mui/material';
-import { getSingleBlog } from '@/sanity/sanity.quries';
+import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 
 const Page = async ({ params }) => {
   const slug = params?.blog;
+  const author = await getAuthor();
   const blog = await getSingleBlog(slug);
 
   const BlogDetailsContent = React.lazy(
@@ -23,7 +24,7 @@ const Page = async ({ params }) => {
         }}
       >
         <Container>
-          <SingleBlogHeader data={blog} />
+          <SingleBlogHeader data={blog} authors={author} />
           <BlogDetailsContent data={blog} />
         </Container>
       </Box>
