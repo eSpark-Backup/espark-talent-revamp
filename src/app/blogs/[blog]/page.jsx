@@ -1,76 +1,37 @@
-// 'use client';
-// import React from 'react';
+'use client';
+import React from 'react';
 
-// import { Container, Box } from '@mui/material';
-// import { usePathname } from 'next/navigation';
+import { Container, Box } from '@mui/material';
+import { usePathname } from 'next/navigation';
 
-// import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
-// import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
-// import NotFound from '@/app/not-found';
+import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
+import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
+import NotFound from '@/app/not-found';
 
-// import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
-// import { getBlog } from '@/sanity/sanity.quries';
-
-// const Page = async ({ params }) => {
-//   const slug = params?.blog;
-//   const blog = await getSingleWiki(slug);
-
-//   // if (blog?.length === 0) {
-//   //   return <NotFound data={BLOGS_NOT_FOUND_DATA} />;
-//   // }
-//   console.log(blog);
-//   return (
-//     <>
-//       {blog.title}
-//       <Box
-//         sx={{
-//           background:
-//             'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(191,249,253,1) 0%, rgba(255,255,255,1) 100%)',
-//         }}
-//       >
-//         <Container>
-//           {/* <SingleBlogHeader data={data[0]} />
-//         <BlogDetailsContent data={data[0]} /> */}
-//         </Container>
-//       </Box>
-//     </>
-//   );
-// };
-
-import Image from 'next/image';
-import { Metadata } from 'next';
-import { PortableText } from '@portabletext/react';
-import { getSingleWiki } from '@/sanity/sanity.quries';
-import InnerHero from '@/components/homepage/InnerHero';
-import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
-import WikiSingle from '@/components/wiki/WikiSingle';
+import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { getBlog } from '@/sanity/sanity.quries';
 
 const Page = async ({ params }) => {
-  const slug = params?.wiki;
-  const wiki = await getSingleWiki(slug);
+  const slug = params?.blog;
+  const blog = await getSingleWiki(slug);
+
+  // if (blog?.length === 0) {
+  //   return <NotFound data={BLOGS_NOT_FOUND_DATA} />;
+  // }
+  console.log(blog);
   return (
     <>
-      <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
-      <WikiSingle data={wiki} />
+      {/* <Box
+        sx={{
+          background:
+            'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(191,249,253,1) 0%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Container>
+          <SingleBlogHeader data={blog} />
+        <BlogDetailsContent data={blog} />
+        </Container>
+      </Box> */}
     </>
   );
 };
-
-// export async function generateMetadata({ params }) {
-//   const slug = params?.wiki;
-//   const wiki = await getSingleWiki(slug);
-
-//   return {
-//     title: `${wiki?.name} | Project`,
-//     description: wiki?.tagline,
-//     openGraph: {
-//       images:
-//         wiki?.coverImage?.image ||
-//         "https://res?.cloudinary?.com/victoreke/image/upload/v1689892912/docs/wiki?.png",
-//       title: wiki?.name,
-//       description: wiki?.tagline,
-//     },
-//   };
-// }
-
-export default Page;
