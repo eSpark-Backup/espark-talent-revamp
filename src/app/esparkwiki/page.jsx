@@ -63,7 +63,7 @@ export default async function page() {
     <>
       <Hero data={WIKI_HERO_DATA} />
       <Box sx={{ background: '#3b59980f' }}>
-        <WikiCards data={wiki} categories={wikiCategory}  />
+        <WikiCards data={wiki} categories={wikiCategory} />
       </Box>
     </>
   );

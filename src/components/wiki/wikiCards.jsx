@@ -4,6 +4,7 @@ import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { LocalHospital } from '@mui/icons-material';
 
 const CARD_STYLE = {
   borderRadius: '10px',
@@ -11,21 +12,22 @@ const CARD_STYLE = {
   px: '30px',
   py: '20px',
   m: '10px',
-  // boxShadow: {lg:'none',sm:`4px 4px 15px rgba(0,0,0,.3)`},
 };
 
 const WikiCards = ({ data, categories }) => {
-  // const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-  // const isMediumScreen = useMediaQuery((theme) =>
-  //   theme.breakpoints.between('sm', 'md')
-  // );
-  // const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
   const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const onSelectCategory = (category) => {
+    setSelectedCategory(category ? category._id : 'all');
+  };
+
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data?.filter((item) => item?.jobCategory._ref === selectedCategory);
+      : data?.filter((item) => item?.wikiCategory === selectedCategory);
+  console.log('data', data);
+  console.log('selectedCategory', selectedCategory);
+  console.log('filteredData', filteredData);
 
   return (
     <>
@@ -45,18 +47,9 @@ const WikiCards = ({ data, categories }) => {
         }}
       >
         <Button
-          size={
-            'small'
-            // isSmallScreen
-            //   ? 'small'
-            //   : isMediumScreen
-            //     ? 'medium'
-            //     : isLargeScreen
-            //       ? 'large'
-            //       : 'medium'
-          }
+          size="small"
           onClick={() => onSelectCategory(null)}
-          variant={selectedCategory === null ? 'contained' : ''}
+          variant={selectedCategory === 'all' ? 'contained' : ''}
           color="primary"
           sx={{ borderRadius: '50px' }}
         >
@@ -67,17 +60,17 @@ const WikiCards = ({ data, categories }) => {
               md: '15px',
               lg: '20px',
             }}
-            color={selectedCategory === null ? 'white' : '#001C63'}
+            color={selectedCategory === 'all' ? 'white' : '#001C63'}
             fontWeight="600"
           >
             All
           </Typography>
         </Button>
-        {/* {categories?.map((category) => (
+        {categories?.map((category) => (
           <Button
-            key={category}
+            key={category.id}
             onClick={() => onSelectCategory(category)}
-            variant={selectedCategory === category ? 'contained' : ''}
+            variant={selectedCategory === category._id ? 'contained' : ''}
             color="primary"
             sx={{ borderRadius: '50px', fontWeight: 600 }}
           >
@@ -88,13 +81,13 @@ const WikiCards = ({ data, categories }) => {
                 md: '15px',
                 lg: '20px',
               }}
-              color={selectedCategory === category ? 'white' : '#001C63'}
+              color={selectedCategory === category._id ? 'white' : '#001C63'}
               fontWeight="600"
             >
-              {category}
+              {category.title}
             </Typography>
           </Button>
-        ))} */}
+        ))}
       </Grid>
       <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
         <Box sx={{ py: '3%' }}>
@@ -122,26 +115,8 @@ const WikiCards = ({ data, categories }) => {
                       >
                         <Image
                           src={item?.iconImage}
-                          height={
-                            30
-                            // isSmallScreen
-                            //   ? 15
-                            //   : isMediumScreen
-                            //     ? 20
-                            //     : isLargeScreen
-                            // ? 30
-                            // : 30
-                          }
-                          width={
-                            30
-                            // isSmallScreen
-                            //   ? 15
-                            //   : isMediumScreen
-                            //     ? 20
-                            //     : isLargeScreen
-                            //       ? 30
-                            // : 30
-                          }
+                          height={30}
+                          width={30}
                           alt={item?.title}
                         />
                         <Link href={`/esparkwiki/${item?.slug}`}>
@@ -189,7 +164,6 @@ const WikiCards = ({ data, categories }) => {
                         </Typography>
                       </Box>
                       <Box>
-                        {' '}
                         <Link href={`/esparkwiki/${item?.slug}`}>
                           <Typography
                             variant="body1"
@@ -217,5 +191,4 @@ const WikiCards = ({ data, categories }) => {
     </>
   );
 };
-
 export default WikiCards;
