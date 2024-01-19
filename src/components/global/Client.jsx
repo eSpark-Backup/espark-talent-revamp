@@ -9,7 +9,14 @@ import Link from 'next/link';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
+const ClientSlider = ({
+  bgColor,
+  txtColor,
+  title,
+  fontWeight,
+  data,
+  fontSize,
+}) => {
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
@@ -51,7 +58,12 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
         <Typography
           variant="h2"
           color={txtColor}
-          sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
+          sx={{
+            textAlign: 'center',
+            fontWeight: fontWeight,
+            py: '30px',
+            fontSize: fontSize,
+          }}
         >
           {title}
         </Typography>

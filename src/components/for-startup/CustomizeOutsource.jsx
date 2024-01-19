@@ -11,21 +11,15 @@ const CustomizeOutsource = ({ data }) => {
       <Container>
         <Grid container display={'flex'} alignItems={'center'}>
           <Grid item sm={12} md={6}>
-            <Box
-            // sx={{
-            //   mt: { md: '140px' },
-            //   pb: '12px',
-            // }}
-            >
+            <Box>
               <Box>
                 <Typography
                   sx={{
                     color: '#001C63',
-                    fontSize: '28px',
+                    fontSize: { xs: '20px', md: '28px' },
+                    lineHeight: { xs: '31px', md: '41.547px' },
                     fontWeight: 500,
-                    lineHeight: '41.547px',
-                    // mr: { lg: '20%', md: '5%' },
-                    mb: { xs: '17px', lg: '20px' },
+                    mb: { xs: '5px', lg: '20px' },
                     textAlign: { xs: 'center', md: 'left' },
                   }}
                 >
@@ -35,18 +29,30 @@ const CustomizeOutsource = ({ data }) => {
             </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
-                <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
-                  <ListItemIcon sx={{ minWidth: '30px' }}>
-                    <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
+                <Box
+                  sx={{
+                    display: 'flex',
+                    textAlign: 'baseline',
+                    mx: { sm: '20%', md: '0%' },
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: { xs: '28px', md: '30px' } }}>
+                    <TaskAltIcon
+                      fontSize="small"
+                      sx={{
+                        color: '#029894',
+                        fontSize: { xs: '15px', md: '22px' },
+                      }}
+                    />
                   </ListItemIcon>
                   <Typography
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: '14px',
+                      fontSize: { xs: '9px', md: '14px' },
+                      lineHeight: { xs: '13.729px', md: '23.741px' },
                       textAlign: 'justify',
                       fontWeight: 600,
-                      lineHeight: '27.23.741px',
                     }}
                   >
                     {item?.description}
@@ -60,7 +66,7 @@ const CustomizeOutsource = ({ data }) => {
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
-                mt: 2,
+                mt: { xs: 1, md: 2 },
                 pt: 1,
                 py: 3,
                 display: 'flex',

@@ -38,7 +38,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
         >
           <Typography
             sx={{
-              px: { md: '20.22%' },
+              px: { md: '11%' },
               color: '#001C63',
               textAlign: 'center',
               fontSize: { md: '32px', xs: '20px' },
@@ -106,21 +106,26 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     maxWidth: '230px !important',
                     height: '100.986px !important',
                   },
+                  '@media (min-width: 769px) and (max-width: 889px)': {
+                    maxWidth: '295px !important',
+                    height: '130.986px !important',
+                  },
                   '@media (min-width: 890px) and (max-width: 1050px)': {
                     maxWidth: '340px !important',
                     height: '110.986px !important',
                   },
                   '@media (min-width: 1051px) and (max-width: 1150px)': {
                     maxWidth: '400px !important',
-                    height: '110.986px !important',
+                    height: '100.986px !important',
                   },
                   '@media (min-width: 1151px) and (max-width: 1229px)': {
                     maxWidth: '450px !important',
-                    height: '110.986px !important',
+                    height: '100.986px !important',
                   },
 
                   '@media (min-width: 1230px) and (max-width: 1374px)': {
                     maxWidth: '460px !important',
+                    height: '100.986px !important',
                   },
                   '@media (min-width: 1375px) and (max-width: 1500px)': {
                     maxWidth: '480px !important',
@@ -182,20 +187,20 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       color: '#6F76A8',
                       fontSize: {
                         lg: '18px',
-                        md: '15px',
-                        sm: '13px',
+                        md: '16px',
+                        sm: '14px',
                         xs: '10.38px',
                       },
                       textAlign: 'justify',
                       fontStyle: 'normal',
                       fontWeight: { xs: 700, sm: 400 },
                       lineHeight: {
-                        lg: '32.085px',
-                        md: '22.085px',
-                        sm: '18.263px',
+                        lg: '30px',
+                        md: '23.085px',
+                        sm: '20.263px',
                         xs: '15.263px',
                       },
-                      p: { xs: '8px 0 0 0', md: '19px 0 0 0' },
+                      p: { xs: '8px 0 0 0', md: '13px 0 0 0' },
                     }}
                   >
                     {item?.paragraph}
@@ -210,12 +215,12 @@ const ProfessionalTeamCard = ({ teamData }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            my: 2,
+            my: { xs: 1, md: 2 },
           }}
         >
           <Box
             sx={{
-              minWidth: { xs: '12px', md: '23px' },
+              minWidth: { xs: '18px', md: '23px' },
               height: { xs: '15px', md: '23px' },
               display: 'flex',
               justifyContent: 'center',
@@ -252,7 +257,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
           </Box>
           <Box
             sx={{
-              minWidth: { xs: '12px', md: '23px' },
+              minWidth: { xs: '18px', md: '23px' },
               height: { xs: '15px', md: '23px' },
               display: 'flex',
               justifyContent: 'center',

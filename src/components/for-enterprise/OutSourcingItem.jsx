@@ -1,7 +1,14 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Grid, useMediaQuery } from '@mui/material';
-import Image from 'next/image';
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  useMediaQuery,
+  ListItemIcon,
+} from '@mui/material';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import SwiperCore, {
   EffectFade,
@@ -29,6 +36,7 @@ const OutSourcingItem = ({ data }) => {
   );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
+  console.log(isSmallScreen, isMediumScreen, isLargeScreen);
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -70,8 +78,8 @@ const OutSourcingItem = ({ data }) => {
         <Container>
           <Box
             sx={{
-              px: { md: '20%', sm: '10%', xs: '2%' },
-              pb: { lg: '25px', md: '25px', sm: '15px', xs: '15px' },
+              px: { md: '12.2%', sm: '10%', xs: '2%' },
+              pb: { lg: '45px', md: '25px', sm: '15px', xs: '15px' },
             }}
           >
             <Typography
@@ -87,6 +95,7 @@ const OutSourcingItem = ({ data }) => {
                   sm: '20px',
                   xs: '20px',
                 },
+                mx: { xs: '5.699px', sm: '0px' },
               }}
             >
               {'How Fast Are Our Outsourcing Services?'}
@@ -96,7 +105,7 @@ const OutSourcingItem = ({ data }) => {
               sx={{ textAlign: 'center' }}
               fontSize={{
                 xl: '20px',
-                lg: '20px',
+                lg: '18px',
                 md: '16px',
                 sm: '12px',
                 xs: '12px',
@@ -116,16 +125,24 @@ const OutSourcingItem = ({ data }) => {
                     sm={4}
                     sx={{
                       borderRadius: '20px',
-                      px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
-                      py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
+                      px: { lg: '19px', md: '19px', sm: '18px', xs: '17px' },
+                      py: { lg: '35px', md: '30px', sm: '25px', xs: '15px' },
                       // alignItems: 'center',
-                      minHeight: {
-                        lg: '345px',
+                      height: {
+                        lg: '274.691px',
                         md: '270px',
                         sm: '228px',
-                        xs: '150px',
+                        xs: '212px',
                       },
-                      width: { lg: '100%' },
+                      '@media (min-width: 300px) and (max-width: 348px)': {
+                        height: '238px !important',
+                      },
+                      '@media (min-width: 278px) and (max-width: 299px)': {
+                        height: '255px !important',
+                      },
+                      maxWidth: '409.681px',
+                      mx: 'auto',
+                      mb: { lg: '20px' },
                       background: ' #FFF',
                       display: 'flex',
                       justifyContent: 'space-between',
@@ -143,7 +160,7 @@ const OutSourcingItem = ({ data }) => {
                           xs: '18px',
                         },
                         lineHeight: 1.3,
-                        pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
+                        // pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}
@@ -158,61 +175,35 @@ const OutSourcingItem = ({ data }) => {
                           marginTop: '10px',
                         }}
                       >
-                        <Box
+                        <ListItemIcon
+                          sx={{ minWidth: { xs: '28px', md: '30px' } }}
+                        >
+                          <TaskAltIcon
+                            fontSize="small"
+                            sx={{
+                              color: '#029894',
+                              fontSize: { xs: '15px', md: '22px' },
+                            }}
+                          />
+                        </ListItemIcon>
+                        <Typography
+                          variant="body1"
                           sx={{
-                            pr: {
-                              lg: '16px',
+                            color: '#000',
+                            fontSize: {
+                              // lg: '16px',
                               md: '14px',
                               sm: '13px',
                               xs: '13px',
                             },
+                            lineHeight: 1.3,
+                            fontWeight: 400,
                           }}
                         >
-                          <Image
-                            src={item?.listIcon}
-                            alt="List Icon"
-                            width={
-                              isSmallScreen
-                                ? 15
-                                : isMediumScreen
-                                  ? 20
-                                  : isLargeScreen
-                                    ? 25
-                                    : 25
-                            }
-                            height={
-                              isSmallScreen
-                                ? 15
-                                : isMediumScreen
-                                  ? 20
-                                  : isLargeScreen
-                                    ? 25
-                                    : 25
-                            }
-                            style={{ marginTop: '8px' }}
-                          />
-                        </Box>
-                        <Box>
-                          <Typography
-                            variant="body1"
-                            sx={{
-                              color: '#000',
-                              fontSize: {
-                                lg: '16px',
-                                md: '14px',
-                                sm: '13px',
-                                xs: '13px',
-                              },
-                              lineHeight: 1.3,
-                              fontWeight: 400,
-                            }}
-                          >
-                            {list?.title}
-                          </Typography>
-                        </Box>
+                          {list?.title}
+                        </Typography>
                       </Box>
                     ))}
-                    {/* </Box> */}
                   </Grid>
                 </SwiperSlide>
               ))}
