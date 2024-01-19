@@ -7,8 +7,12 @@ import Link from 'next/link';
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 
 const BlogDetailsContent = ({ data }) => {
+    const blogString = JSON.stringify(data);
+  const parsedblog = JSON.parse(blogString);
+  console.log(parsedblog);
   return (
-    <Grid
+    <>
+     {/* <Grid
       container
       sx={{
         py: '5%',
@@ -19,7 +23,7 @@ const BlogDetailsContent = ({ data }) => {
       <Grid item xs={12} md={9}>
         <Box
           className={`blog-content`}
-          dangerouslySetInnerHTML={{ __html: data?.content }}
+          dangerouslySetInnerHTML={{ __html: parsedblog?.content }}
           sx={{
             backgroundColor: '#fff',
             p: { xs: '20px', md: '30px' },
@@ -57,7 +61,8 @@ const BlogDetailsContent = ({ data }) => {
           ))}
         </Grid>
       </Grid>
-    </Grid>
+    </Grid> */}
+    </>
   );
 };
 
