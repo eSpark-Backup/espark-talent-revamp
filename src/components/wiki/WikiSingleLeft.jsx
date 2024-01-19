@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
-import { Box, useMediaQuery } from '@mui/material';
-
-import Image from 'next/image';
+import { Box } from '@mui/material';
 import { PortableText } from '@portabletext/react';
 
 const WikiSingleLeft = ({ data }) => {
-
   return (
     <Box
       className={'blog-content wiki-content'}
