@@ -3,8 +3,6 @@ import React from 'react';
 import { Box, Grid, Container } from '@mui/material';
 
 const WikiSingle = ({ data }) => {
-  // const wikiString = JSON.stringify(data);
-  // const parsedWiki = JSON.parse(wikiString);
   console.log(data, 'data');
   const wikiString = JSON.stringify(data);
   const parsedWiki = JSON.parse(wikiString);
