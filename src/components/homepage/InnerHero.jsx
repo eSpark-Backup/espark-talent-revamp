@@ -4,7 +4,6 @@ import Image from 'next/image';
 import React from 'react';
 
 const InnerHero = ({ data, innerData }) => {
-
   const wikiString = JSON.stringify(innerData);
   const parsedWiki = JSON.parse(wikiString);
   return (

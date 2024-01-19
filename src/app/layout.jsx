@@ -43,7 +43,9 @@ export default function RootLayout({ children }) {
               <Root>
                 <CssBaseline />
                 {pathName !== bookADemo ? <Header /> : null}
-                <Suspense fallback={<Loading/>}><Box>{children}</Box></Suspense>
+                <Suspense fallback={<Loading />}>
+                  <Box>{children}</Box>
+                </Suspense>
                 {pathName !== bookADemo ? (
                   <>
                     {pathName !== careers && pathName !== partnership ? (
