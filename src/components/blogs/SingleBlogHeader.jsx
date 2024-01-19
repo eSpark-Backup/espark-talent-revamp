@@ -20,7 +20,6 @@ const SingleBlogHeader = ({ data, authors }) => {
           <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 1 }}>
             <Box pb={{ xs: '5%', md: '10%' }} sx={{}}>
               <Typography
-                // variant="h1"
                 color={'#001C63'}
                 fontSize={{ xs: '25px', sm: '25px', md: '30px', lg: '40px' }}
                 fontWeight={600}
@@ -70,7 +69,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                     </Link>
                   </Box>
                   <Typography variant="body1" color={'black'}>
-                    {moment(parsedblog?.publishedAt).format('MMMM DD, YYYY')}
+                    {moment(parsedblog?.publishedAt)?.format('MMMM DD, YYYY')}
                   </Typography>
                 </Box>
               </Box>

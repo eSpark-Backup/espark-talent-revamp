@@ -3,9 +3,6 @@ import React from 'react';
 import { Box, Grid, Container } from '@mui/material';
 
 const WikiSingle = ({ data }) => {
-  // const wikiString = JSON.stringify(data);
-  // const parsedWiki = JSON.parse(wikiString);
-
   const WikiSingleRigth = React.lazy(() => import('./WikiSingleRigth'));
   const WikiSingleLeft = React.lazy(() => import('./WikiSingleLeft'));
   return (

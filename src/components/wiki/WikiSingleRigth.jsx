@@ -16,7 +16,6 @@ const WikiSingleRigth = () => {
     >
       <Typography
         color={'white'}
-        // variant="h2"
         pb="10px"
         textAlign={'center'}
         fontWeight={600}
@@ -36,7 +35,6 @@ const WikiSingleRigth = () => {
         variant="body1"
         color={'white'}
         textAlign={'center'}
-        // fontSize={'16px'}
         sx={{
           fontSize: {
             xs: '12px',
