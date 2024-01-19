@@ -80,8 +80,8 @@ const OurService = ({ ourService }) => {
                   >
                     <Image
                       src={item?.image}
-                      width={40}
-                      height={50}
+                      width={35}
+                      height={30}
                       alt={item?.alt}
                     />
                   </Box>
