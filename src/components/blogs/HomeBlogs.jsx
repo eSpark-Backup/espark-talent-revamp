@@ -5,8 +5,11 @@ import { Box, Container } from '@mui/material';
 import ParagraphTitle from '../homepage/ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
 import BlogCards from '../homepage/BlogCards';
+import { getBlog } from '@/sanity/sanity.quries';
 
-const HomeBlogs = ({ data }) => {
+export default async function HomeBlogs() {
+  
+  const blog = await getBlog();
   return (
     <>
       <Container>
@@ -22,7 +25,7 @@ const HomeBlogs = ({ data }) => {
             title={'eSpark Talent Knowledge Junction'}
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}
           />
-          <BlogCards data={data?.slice(0, 3)} smCol={2} />
+          <BlogCards data={blog?.slice(0, 3)} smCol={2} />
           <ESparkButton
             title={`View all blogs`}
             link={`/blogs`}
@@ -34,5 +37,3 @@ const HomeBlogs = ({ data }) => {
     </>
   );
 };
-
-export default HomeBlogs;
