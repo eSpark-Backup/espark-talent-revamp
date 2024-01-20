@@ -8,7 +8,6 @@ import BlogCards from '../homepage/BlogCards';
 import { getBlog } from '@/sanity/sanity.quries';
 
 export default async function HomeBlogs() {
-  
   const blog = await getBlog();
   return (
     <>
@@ -36,4 +35,4 @@ export default async function HomeBlogs() {
       </Container>
     </>
   );
-};
+}
