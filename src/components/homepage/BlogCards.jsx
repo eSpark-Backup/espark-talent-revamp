@@ -5,13 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-
+// import { useNextSanityImage } from 'next-sanity-image';
 import { READ_MORE } from '@/constants/home-page/blogSections';
+// import { urlFor } from '@/sanity/sanityImage';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
-
   const handleChangePage = (event, value) => {
     setPage(value);
   };
@@ -35,7 +35,7 @@ const BlogCards = ({ data }) => {
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
-                        src={item?.imageLink}
+                        src={item?.featureImage}
                         alt={item?.title}
                         width={900}
                         height={100}
@@ -84,7 +84,7 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item?.mainParagraph}
+                    {item?.subtitle}
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
                     <Box

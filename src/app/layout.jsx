@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { Suspense } from 'react';
 import Head from 'next/head';
 import './globals.css';
 import { Box } from '@mui/material';
@@ -21,6 +21,7 @@ import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SEO_DATA } from '@/constants/global/seo';
+import Loading from '@/components/global/loading';
 
 export default function RootLayout({ children }) {
   const pathName = usePathname();
@@ -42,7 +43,9 @@ export default function RootLayout({ children }) {
               <Root>
                 <CssBaseline />
                 {pathName !== bookADemo ? <Header /> : null}
-                <Box>{children}</Box>
+                <Suspense fallback={<Loading />}>
+                  <Box>{children}</Box>
+                </Suspense>
                 {pathName !== bookADemo ? (
                   <>
                     {pathName !== careers && pathName !== partnership ? (

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React from 'react';
 
 const InnerHero = ({ data, innerData }) => {
+  const wikiString = JSON.stringify(innerData);
+  const parsedWiki = JSON.parse(wikiString);
   return (
     <>
       <Box
@@ -53,10 +55,10 @@ const InnerHero = ({ data, innerData }) => {
                     fontWeight: 600,
                   }}
                 >
-                  {innerData?.title}
+                  {parsedWiki?.title}
                 </Typography>
               )}
-              {innerData?.description && (
+              {parsedWiki?.shortDescription && (
                 <Typography
                   variant={data?.descVariant}
                   color={data?.descColor}
@@ -71,7 +73,7 @@ const InnerHero = ({ data, innerData }) => {
                     },
                   }}
                 >
-                  {data?.description}
+                  {parsedWiki?.shortDescription}
                 </Typography>
               )}
               {data?.button && (
@@ -110,8 +112,8 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 <Image
-                  src={innerData?.image}
-                  alt={innerData?.imageAlt}
+                  src={parsedWiki?.heroImage}
+                  alt={parsedWiki?.title}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />
