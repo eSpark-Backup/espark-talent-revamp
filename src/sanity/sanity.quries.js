@@ -164,7 +164,8 @@ export async function getPageSeo() {
 }
 
 export async function getAuthor() {
-  return client.fetch(` *[_type == "author"]{
+  return client.fetch(
+    ` *[_type == "author"]{
     _id ,
     "slug": slug.current,
     about,
@@ -177,5 +178,6 @@ role
       next: {
         revalidate: 600,
       },
-    });
+    }
+  );
 }
