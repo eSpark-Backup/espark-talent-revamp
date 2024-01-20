@@ -1077,3 +1077,20 @@ color: #fff;
     margin-top: 50px !important;
   }
 }
+
+.wiki-content{
+  h1,h2,h3,h4,h5,h6{
+    color: #3B5998;}  
+  p, ul,li, ol{
+    color: #000;}   
+}
+.wiki-content li::before {
+  content: url(/images/wiki/wiki-icon.svg);
+
+  color: #6f76a8;
+  height: 17px;
+  width: 17px;
+  margin-right: 20px;
+  /* display: inline-block; */
+  text-align: left;
+}
