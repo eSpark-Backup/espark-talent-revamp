@@ -14,7 +14,12 @@ export async function getJob() {
        location,
        "slug":slug.current,
        title
-      } `
+      } `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 export async function getJobCategories() {
@@ -24,7 +29,12 @@ export async function getJobCategories() {
       _id,
       title,
       "slug":slug.current,
-     } `
+     } `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 export async function getBlog() {
@@ -41,7 +51,12 @@ publishedAt,
 subtitle,
 tags,
 title,}
-`
+`,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 
@@ -59,7 +74,12 @@ publishedAt,
 subtitle,
 tags,
 title,}`,
-    { slug }
+    { slug },
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 export async function getBlogCategories() {
@@ -68,7 +88,12 @@ export async function getBlogCategories() {
  {_id,
  id,
  "slug": slug.current,
- title } `
+ title } `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 export async function getWiki() {
@@ -85,7 +110,12 @@ export async function getWiki() {
  salary,
  shortDescription,
  title
-} `
+} `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 
@@ -106,7 +136,12 @@ export async function getSingleWiki(slug) {
  title
     }
     `,
-    { slug }
+    { slug },
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 export async function getWikiCategories() {
@@ -115,7 +150,12 @@ export async function getWikiCategories() {
  {_id,
  id,
  "slug": slug.current,
- title } `
+ title } `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    }
   );
 }
 
@@ -132,5 +172,10 @@ export async function getAuthor() {
 firstName,
 lastName, 
 role
-  } `);
+  } `,
+    {
+      next: {
+        revalidate: 600,
+      },
+    });
 }
