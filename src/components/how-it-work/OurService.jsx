@@ -75,12 +75,12 @@ const OurService = ({ ourService }) => {
                     sx={{
                       mt: { xs: 1, sm: 2 },
                       my: '25px',
-                      px: { xs: '24px', md: '50px' },
+                      px: { xs: '24px', md: '15px' },
                     }}
                   >
                     <Image
                       src={item?.image}
-                      width={40}
+                      width={60}
                       height={50}
                       alt={item?.alt}
                     />

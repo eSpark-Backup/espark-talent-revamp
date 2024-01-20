@@ -110,19 +110,20 @@ export const OUTSTAFFING_TRUST_DATA = {
       iconWidth: 40,
     },
     {
-      title: `The Right Space`,
-      paragraph: `We are available online whenever you need us, our nearshore teams ensure clear communication.`,
-      listIcon: '/images/for-enterprise/check-icon.svg',
-      iconHeight: 40,
-      iconWidth: 40,
-    },
-    {
       title: `The Right Team`,
       paragraph: `Explore flexible project management options customized for your needs, ranging from solo engineers to collaborative multi-team efforts.`,
       listIcon: '/images/for-enterprise/check-icon.svg',
       iconHeight: 40,
       iconWidth: 40,
     },
+    {
+      title: `The Right Space`,
+      paragraph: `We are available online whenever you need us, our nearshore teams ensure clear communication.`,
+      listIcon: '/images/for-enterprise/check-icon.svg',
+      iconHeight: 40,
+      iconWidth: 40,
+    },
+
     {
       title: `The Right Timing`,
       paragraph: `Promptly starting as per your requirements, teams allow you to easily scale up or down based on your demands.`,
