@@ -7,12 +7,6 @@ export default async function page() {
   const job = await getJob();
   const jobCategory = await getJobCategories();
 
-  setTimeout(async () => {
-    const job = await getJob();
-    const jobCategory = await getJobCategories();
-    console.log(job, jobCategory);
-  }, 60000);
-
   return (
     <>
       <Hero data={JOBS_HERO_DATA} />
