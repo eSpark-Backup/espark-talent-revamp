@@ -156,7 +156,7 @@ const WikiCards = ({ data, categories }) => {
                           }}
                           fontWeight={600}
                         >
-                          {`USD: ${item?.salary} per month`}
+                          {`USD: ${item?.salary.toLocaleString()} per month`}
                         </Typography>
                       </Box>
                       <Box>
