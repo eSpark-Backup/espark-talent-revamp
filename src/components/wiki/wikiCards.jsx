@@ -23,7 +23,7 @@ const WikiCards = ({ data, categories }) => {
     selectedCategory === 'all'
       ? data
       : data?.filter((item) => item?.wikiCategory === selectedCategory);
-   filteredData.sort((a, b) => a?.id - b?.id);
+  filteredData.sort((a, b) => a?.id - b?.id);
 
   return (
     <>
