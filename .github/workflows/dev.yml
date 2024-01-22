@@ -5,7 +5,7 @@ name: talent-dev CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "development" ]
 
 jobs:
   build:
