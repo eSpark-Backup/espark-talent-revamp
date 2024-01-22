@@ -90,12 +90,6 @@ const Hero = ({ data }) => {
                     xl: '20px',
                   }}
                 >
-                  {/* <ESparkButton
-                  title={data.button.label}
-                  link={data.button.link}
-                  color={data.button.btnColor}
-                  size={'180px'}
-                /> */}
                   <Button
                     sx={{
                       backgroundColor: '#fff',

@@ -33,7 +33,6 @@ const page = () => {
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
-      {/* <HeroSection /> */}
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -56,15 +55,13 @@ const page = () => {
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      <HomeBlogs data={BLOGS_DATA} />
+      {/* <HomeBlogs/> */}
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}
         background={'#F7F8FB'}
       />
       <Faq data={FAQ_DATA} />
-
-      {/* <Faqs data={FAQ_DATA} /> */}
     </>
   );
 };
