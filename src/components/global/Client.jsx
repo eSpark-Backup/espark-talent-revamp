@@ -75,7 +75,7 @@ const ClientSlider = ({
               <Link href={item?.link}>
                 <Image
                   src={item?.image}
-                  alt={item?.image}
+                  alt={`${item?.alt} -eSpark Talent`}
                   height={item?.imageHeight}
                   width={item?.imageWidth}
                 />

@@ -237,18 +237,9 @@ const Form = ({ formContent }) => {
             </Typography>
 
             <Box className="parnership-form">
-              {/* <input
-              type="number"
-              className="input"
-              placeholder="+00 00000000"
-              name="phone"
-              value={values.email}
-              onChange={handleChange}
-            /> */}
               <PhoneInput
                 placeholder="Enter phone number"
                 value={values.phone_number}
-                // className='input'
                 id={'phone_number'}
                 defaultCountry={'PK'}
                 onChange={handlePhoneChange}

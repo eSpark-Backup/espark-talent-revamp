@@ -113,7 +113,7 @@ const InnerHero = ({ data, innerData }) => {
               >
                 <Image
                   src={parsedWiki?.heroImage}
-                  alt={parsedWiki?.title}
+                  alt={`${parsedWiki?.title} - eSpark Talent`}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />

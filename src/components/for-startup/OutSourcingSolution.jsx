@@ -39,7 +39,7 @@ const OutSourcingSolution = ({ data }) => {
                 >
                   <Image
                     src={item?.icon}
-                    alt={item?.title}
+                    alt={`${item?.title} -eSpark Talent`}
                     height={item?.iconHeight}
                     width={item?.iconWidth}
                   />

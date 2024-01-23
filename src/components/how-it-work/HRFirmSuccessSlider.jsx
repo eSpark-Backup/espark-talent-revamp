@@ -79,7 +79,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                     src={item.image}
                     width={600}
                     height={200}
-                    alt={item.alt}
+                    alt={`${item?.alt} - eSpark Talent`}
                   />
                 </Grid>
                 <Grid item xs={7} sm={7}>
