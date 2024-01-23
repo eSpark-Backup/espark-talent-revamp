@@ -83,7 +83,7 @@ const OurExperties = ({ data }) => {
                 <SwiperSlide>
                   {section?.lists?.map((list, listIndex) => (
                     <Grid
-                       key={`${index}-${listIndex}`}
+                      key={`${index}-${listIndex}`}
                       item
                       xs={6}
                       sm={6}
