@@ -8,7 +8,6 @@ import {
   Container,
   AccordionDetails,
   AccordionSummary,
-  useMediaQuery,
 } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
@@ -16,16 +15,9 @@ import ParagraphTitle from '../homepage/ParagraphTitle';
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
 
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
-  console.log(isSmallScreen, isMediumScreen, isLargeScreen);
 
   return (
     <Box sx={{ py: '1%' }} id="faq">
@@ -33,11 +25,11 @@ const Faq = ({ data }) => {
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 4, md: 3, sm: 0, xs: 0 }}>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(0, 3).map((item) => {
+            {data?.questions?.slice(0, 3).map((item, index) => {
               const panel = `panel${item.id}`;
               return (
                 <Accordion
-                  key={item.id}
+                  key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{ mb: 4 }}
@@ -98,11 +90,11 @@ const Faq = ({ data }) => {
             })}
           </Grid>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(3, 6).map((item) => {
+            {data?.questions?.slice(3, 6).map((item, index) => {
               const panel = `panel${item.id}`;
               return (
                 <Accordion
-                  key={item.id}
+                  key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{ mb: 4 }}

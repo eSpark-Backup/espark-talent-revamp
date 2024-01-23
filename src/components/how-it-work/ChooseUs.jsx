@@ -112,7 +112,12 @@ const ChooseUs = ({ chooseUs }) => {
                 px: 2,
               }}
             >
-              <Image src={image} width={420} height={25} alt={alt} />
+              <Image
+                src={image}
+                width={420}
+                height={25}
+                alt={`${alt} - eSpark Talent`}
+              />
             </Box>
           </Grid>
         </Grid>

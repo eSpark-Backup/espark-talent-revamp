@@ -10,7 +10,7 @@ const WIKIS_NOT_FOUND_DATA = {
   image: '/images/404Error.png',
   title: 'Oops: This Wiki Not Found',
   desc: 'Please check your link and ensure that you are on the correct page.',
-  btnLink: '/wikis',
+  btnLink: '/esparkwiki',
   btnText: 'Back to eSpark Wiki',
 };
 
