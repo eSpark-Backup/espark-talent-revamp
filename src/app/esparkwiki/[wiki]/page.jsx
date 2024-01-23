@@ -2,7 +2,7 @@ import { getSingleWiki } from '@/sanity/sanity.quries';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import React from 'react';
 import NotFound from '@/app/not-found';
-import { NOT_FOUND_DATA, WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 
 const Page = async ({ params }) => {
   if (!params || !params.wiki) {
@@ -12,7 +12,11 @@ const Page = async ({ params }) => {
   const slug = params.wiki;
 
   if (typeof slug !== 'string' || slug.trim() === '') {
-    return <div><NotFound data={WIKIS_NOT_FOUND_DATA}/></div>;
+    return (
+      <div>
+        <NotFound data={WIKIS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 
   try {
@@ -20,10 +24,16 @@ const Page = async ({ params }) => {
 
     // Validate if the fetched wiki data is in the expected format
     if (!wiki || typeof wiki !== 'object') {
-      return <div><NotFound data={WIKIS_NOT_FOUND_DATA}/></div>;
+      return (
+        <div>
+          <NotFound data={WIKIS_NOT_FOUND_DATA} />
+        </div>
+      );
     }
 
-    const InnerHero = React.lazy(() => import('@/components/homepage/InnerHero'));
+    const InnerHero = React.lazy(
+      () => import('@/components/homepage/InnerHero')
+    );
     const WikiSingle = React.lazy(() => import('@/components/wiki/WikiSingle'));
 
     return (
@@ -34,7 +44,11 @@ const Page = async ({ params }) => {
     );
   } catch (error) {
     console.error('Error fetching wiki data:', error);
-    return <div><NotFound data={WIKIS_NOT_FOUND_DATA}/></div>;
+    return (
+      <div>
+        <NotFound data={WIKIS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 };
 

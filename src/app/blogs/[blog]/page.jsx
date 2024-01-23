@@ -3,18 +3,24 @@ import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import NotFound from '@/app/not-found';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
-import SingleBlogHeader from '@/components/blogs/SingleBlogHeader';
-import BlogDetailsContent from '@/components/blogs/blogDetailsContent';
 
 const Page = async ({ params }) => {
   if (!params || !params.blog) {
-    return <div><NotFound data={BLOGS_NOT_FOUND_DATA}/></div>;
+    return (
+      <div>
+        <NotFound data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 
   const slug = params.blog;
 
   if (typeof slug !== 'string' || slug.trim() === '') {
-    return <div><NotFound data={BLOGS_NOT_FOUND_DATA}/></div>;
+    return (
+      <div>
+        <NotFound data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 
   try {
@@ -22,11 +28,19 @@ const Page = async ({ params }) => {
     const blog = await getSingleBlog(slug);
 
     if (!blog || typeof blog !== 'object') {
-      return <div><NotFound data={BLOGS_NOT_FOUND_DATA}/></div>;
+      return (
+        <div>
+          <NotFound data={BLOGS_NOT_FOUND_DATA} />
+        </div>
+      );
     }
 
-    const BlogDetailsContent = React.lazy(() => import('@/components/blogs/blogDetailsContent'));
-    const SingleBlogHeader = React.lazy(() => import('@/components/blogs/SingleBlogHeader'));
+    const BlogDetailsContent = React.lazy(
+      () => import('@/components/blogs/blogDetailsContent')
+    );
+    const SingleBlogHeader = React.lazy(
+      () => import('@/components/blogs/SingleBlogHeader')
+    );
 
     return (
       <>
@@ -46,7 +60,11 @@ const Page = async ({ params }) => {
   } catch (error) {
     // Handle errors that may occur during data fetching
     console.error('Error fetching blog data:', error);
-    return <div><NotFound data={BLOGS_NOT_FOUND_DATA}/></div>;
+    return (
+      <div>
+        <NotFound data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 };
 
