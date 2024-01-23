@@ -30,8 +30,8 @@ const Footer = ({ data }) => {
                     <Image
                       src={data?.logo}
                       width={120}
-                    height={59}
-                    alt={`${data?.alt} -eSpark Talent`}
+                      height={59}
+                      alt={`${data?.alt} -eSpark Talent`}
                       style={{ marginBottom: '10px' }}
                     />
                     <Typography

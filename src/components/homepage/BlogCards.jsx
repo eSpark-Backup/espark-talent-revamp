@@ -34,7 +34,7 @@ const BlogCards = ({ data }) => {
                     <span style={{ marginRight: '30px' }}>
                       <Image
                         src={item?.featureImage}
-                  alt={`${item?.title} - eSpark Talent`}
+                        alt={`${item?.title} - eSpark Talent`}
                         width={900}
                         height={100}
                         style={{ borderRadius: '15px' }}

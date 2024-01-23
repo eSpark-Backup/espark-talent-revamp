@@ -76,7 +76,7 @@ const AwardAchievement = ({ data, design, background }) => {
                       src={item?.image}
                       height={150}
                       width={150}
-                  alt={`${item?.alt} - eSpark Talent`}
+                      alt={`${item?.alt} - eSpark Talent`}
                     />
                   </Link>
                 </Grid>
