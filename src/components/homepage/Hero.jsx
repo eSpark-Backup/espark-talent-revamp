@@ -90,12 +90,6 @@ const Hero = ({ data }) => {
                     xl: '20px',
                   }}
                 >
-                  {/* <ESparkButton
-                  title={data.button.label}
-                  link={data.button.link}
-                  color={data.button.btnColor}
-                  size={'180px'}
-                /> */}
                   <Button
                     sx={{
                       backgroundColor: '#fff',
@@ -138,7 +132,7 @@ const Hero = ({ data }) => {
               >
                 <Image
                   src={data?.image}
-                  alt={data?.imageAlt}
+                  alt={`${data?.imageAlt} - eSpark Talent`}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />

@@ -1,13 +1,6 @@
 'use client';
 import React from 'react';
-import {
-  Box,
-  Typography,
-  Container,
-  Grid,
-  useMediaQuery,
-  ListItemIcon,
-} from '@mui/material';
+import { Box, Typography, Container, Grid, ListItemIcon } from '@mui/material';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import SwiperCore, {
@@ -28,15 +21,6 @@ import 'swiper/css/autoplay';
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
 const OutSourcingItem = ({ data }) => {
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
-  console.log(isSmallScreen, isMediumScreen, isLargeScreen);
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -119,7 +103,6 @@ const OutSourcingItem = ({ data }) => {
               {data?.items?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Grid
-                    key={index}
                     item
                     xs={12}
                     sm={4}

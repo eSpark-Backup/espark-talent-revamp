@@ -5,13 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
-
   const handleChangePage = (event, value) => {
     setPage(value);
   };
@@ -35,8 +33,8 @@ const BlogCards = ({ data }) => {
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
-                        src={item?.imageLink}
-                        alt={item?.title}
+                        src={item?.featureImage}
+                        alt={`${item?.title} - eSpark Talent`}
                         width={900}
                         height={100}
                         style={{ borderRadius: '15px' }}
@@ -84,7 +82,7 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item?.mainParagraph}
+                    {item?.subtitle}
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
                     <Box

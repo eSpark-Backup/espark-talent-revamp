@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Box, Typography, Button } from '@mui/material';
+
 const WikiSingleRigth = () => {
   return (
     <Box
       sx={{
-        px: '30px',
+        px: '15px',
         py: '30px',
         borderRadius: `15px`,
         background: '#3B5998',
@@ -14,15 +16,16 @@ const WikiSingleRigth = () => {
     >
       <Typography
         color={'white'}
-        variant="h2"
         pb="10px"
+        textAlign={'center'}
+        fontWeight={600}
         sx={{
           fontSize: {
-            xs: '23px',
-            sm: '23px',
-            md: '28px',
-            lg: '35px',
-            xl: '35px',
+            xs: '12px',
+            sm: '16px',
+            md: '20px',
+            lg: '22px',
+            xl: '22px',
           },
         }}
       >
@@ -31,14 +34,14 @@ const WikiSingleRigth = () => {
       <Typography
         variant="body1"
         color={'white'}
-        fontSize={'16px'}
+        textAlign={'center'}
         sx={{
           fontSize: {
             xs: '12px',
             sm: '13px',
             md: '16px',
-            lg: '22px',
-            xl: '23px',
+            lg: '18px',
+            xl: '18px',
           },
         }}
       >

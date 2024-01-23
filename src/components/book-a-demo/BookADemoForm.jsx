@@ -79,8 +79,6 @@ const BookADemoForm = ({ form }) => {
       initialValues: Book_A_Demo_Keys,
       validationSchema: profileValidationSchema,
       onSubmit: async (values, action) => {
-        console.log(values, 'values');
-
         try {
           const emailResult = await emailjs.send(serviceid, templeteid, {
             first_name: values.first_name,

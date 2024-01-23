@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React from 'react';
 
 const InnerHero = ({ data, innerData }) => {
+  const wikiString = JSON.stringify(innerData);
+  const parsedWiki = JSON.parse(wikiString);
   return (
     <>
       <Box
@@ -30,8 +32,8 @@ const InnerHero = ({ data, innerData }) => {
               item
               xs={12}
               sm={6}
-              lg={6}
-              md={6}
+              lg={7}
+              md={7}
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -48,15 +50,15 @@ const InnerHero = ({ data, innerData }) => {
                       sm: '23px',
                       md: '25px',
                       lg: '30px',
-                      xl: '50px',
+                      xl: '45px',
                     },
                     fontWeight: 600,
                   }}
                 >
-                  {innerData?.title}
+                  {parsedWiki?.title}
                 </Typography>
               )}
-              {innerData?.description && (
+              {parsedWiki?.shortDescription && (
                 <Typography
                   variant={data?.descVariant}
                   color={data?.descColor}
@@ -71,7 +73,7 @@ const InnerHero = ({ data, innerData }) => {
                     },
                   }}
                 >
-                  {data?.description}
+                  {parsedWiki?.shortDescription}
                 </Typography>
               )}
               {data?.button && (
@@ -101,8 +103,8 @@ const InnerHero = ({ data, innerData }) => {
                 item
                 xs={12}
                 sm={6}
-                lg={6}
-                md={6}
+                lg={5}
+                md={5}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -110,8 +112,8 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 <Image
-                  src={innerData?.image}
-                  alt={innerData?.imageAlt}
+                  src={parsedWiki?.heroImage}
+                  alt={`${parsedWiki?.title} - eSpark Talent`}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />

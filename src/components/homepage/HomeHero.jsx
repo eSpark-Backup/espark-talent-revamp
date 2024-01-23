@@ -100,9 +100,6 @@ const Hero = ({ data }) => {
                     display: 'flex',
                     flexDirection: { xs: 'column', sm: 'row' },
                     alignItems: 'center',
-                    // [theme.breakpoints.down('sm')]: {
-                    //   display: 'none',
-                    // },
                   }}
                 >
                   <ESparkButton
@@ -111,20 +108,6 @@ const Hero = ({ data }) => {
                     color={data.button.btnColor}
                     size={'180px'}
                   />
-                  {/* <Button
-                    sx={{
-                      backgroundColor: '#fff',
-                      '&:hover': {
-                        backgroundColor: '#fff',
-                      },
-                      height: '50px',
-                      width: '160px',
-                      color: '#001C63 ',
-                      fontWeight: '700',
-                    }}
-                  >
-                    {data.button?.label}
-                  </Button> */}
                 </Box>
               )}
             </Grid>

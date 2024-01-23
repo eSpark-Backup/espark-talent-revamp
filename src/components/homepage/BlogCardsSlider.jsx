@@ -70,7 +70,7 @@ const BlogCardsSlider = ({ data }) => {
     <Box sx={{ my: '3%' }}>
       <Container>
         <Swiper {...swiperSettings}>
-          <Box container spacing={2} sx={{ py: '5%' }}>
+          <Box spacing={2} sx={{ py: '5%' }}>
             {data?.slice(0, 3)?.map((item, index) => (
               <SwiperSlide key={index} className="outsourcing-slide">
                 <Box className="single-blog-post" width={'100%'}>
@@ -79,7 +79,7 @@ const BlogCardsSlider = ({ data }) => {
                       <span style={{ marginRight: '30px' }}>
                         <Image
                           src={item?.imageLink}
-                          alt={item?.title}
+                          alt={`${item?.title} - eSpark Talent`}
                           width={300}
                           height={100}
                           style={{ borderRadius: '15px' }}

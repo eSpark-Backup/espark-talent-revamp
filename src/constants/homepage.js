@@ -166,80 +166,141 @@ export const EXPERTIES_DATA = {
   startIcon: '/images/homepage/experties/start.svg',
   sections: [
     {
+      id: 1,
       lists: [
         {
           heading: 'Trending',
           listItems: [
-            { title: 'UI UX Designer', link: '/' },
-            { title: 'Full Stack Developer', link: '/' },
-            { title: 'MEAN Stack Developer', link: '/' },
-            { title: 'MERN Stack Developer', link: '/' },
-            { title: 'DevOps Engineer', link: '/' },
-            { title: 'Fintech Developer', link: '/' },
-            { title: 'Software Developer', link: '/' },
-            { title: 'QA Engineer', link: '/' },
+            { title: 'UI UX Designer', link: '/esparkwiki/ui-ux-designer' },
+            {
+              title: 'Full Stack Developer',
+              link: '/esparkwiki/full-stack-developer',
+            },
+            {
+              title: 'MEAN Stack Developer',
+              link: '/esparkwiki/mean-stack-developer',
+            },
+            {
+              title: 'MERN Stack Developer',
+              link: '/esparkwiki/mern-stack-developer',
+            },
+            { title: 'DevOps Engineer', link: '/esparkwiki/devops-engineer' },
+            {
+              title: 'Fintech Developer',
+              link: '/esparkwiki/fintech-developer',
+            },
+            {
+              title: 'Software Developer',
+              link: '/esparkwiki/software-developer',
+            },
+            { title: 'QA Engineer', link: '/esparkwiki/qa-engineer' },
           ],
         },
       ],
     },
     {
+      id: 2,
       lists: [
         {
           heading: 'Front-End Developers',
           listItems: [
-            { title: 'AngularJS Developer', link: '/' },
-            { title: 'ReactJS Developer', link: '/' },
-            { title: 'JavaScript Developer', link: '/' },
-            { title: 'NextJS Developer', link: '/' },
+            {
+              title: 'AngularJS Developer',
+              link: '/esparkwiki/angular-developer',
+            },
+            {
+              title: 'ReactJS Developer',
+              link: '/esparkwiki/react-js-developer',
+            },
+            {
+              title: 'JavaScript Developer',
+              link: '/esparkwiki/javascript-developer',
+            },
+            {
+              title: 'NextJS Developer',
+              link: '/esparkwiki/next-js-developer',
+            },
           ],
         },
         {
           heading: 'Mobile App Developers',
           listItems: [
-            { title: 'Android Developer', link: '/' },
-            { title: 'Flutter Developer', link: '/' },
-            { title: 'React Native Developer', link: '/' },
+            {
+              title: 'Android Developer',
+              link: '/esparkwiki/android-app-developer',
+            },
+            {
+              title: 'Flutter Developer',
+              link: '/esparkwiki/flutter-developer',
+            },
+            {
+              title: 'React Native Developer',
+              link: '/esparkwiki/react-native-developer',
+            },
           ],
         },
       ],
     },
     {
+      id: 3,
       lists: [
         {
           heading: 'Back-End Developers',
           listItems: [
-            { title: 'ASP .NET Developer', link: '/' },
-            { title: 'PHP Developer', link: '/' },
-            { title: 'Python Developer', link: '/' },
-            { title: 'NodeJS Developer', link: '/' },
+            {
+              title: 'ASP .NET Developer',
+              link: '/esparkwiki/asp-net-developer',
+            },
+            { title: 'PHP Developer', link: '/esparkwiki/php-developer' },
+            { title: 'Python Developer', link: '/esparkwiki/python-developer' },
+            { title: 'NodeJS Developer', link: '/esparkwiki/nodejs-developer' },
           ],
         },
         {
           heading: 'Embedded Developers',
           listItems: [
-            { title: 'Firmware Developer', link: '/' },
-            { title: 'PCB Designer', link: '/' },
-            { title: 'Embedded System Engineer', link: '/' },
+            {
+              title: 'Firmware Developer',
+              link: '/esparkwiki/firmware-developer',
+            },
+            { title: 'PCB Designer', link: '/esparkwiki/pcb-designer' },
+            {
+              title: 'Embedded System Engineer',
+              link: '/esparkwiki/embedded-system-engineer',
+            },
           ],
         },
       ],
     },
     {
+      id: 4,
       lists: [
         {
           heading: 'Digital Marketer',
           listItems: [
-            { title: 'Social Media Expert', link: '/' },
-            { title: 'PPC Specialist', link: '/' },
-            { title: 'SEO Expert', link: '/' },
-            { title: 'Performance Marketer', link: '/' },
+            {
+              title: 'Social Media Expert',
+              link: '/esparkwiki/social-media-expert',
+            },
+            { title: 'PPC Specialist', link: '/esparkwiki/ppc-specialist' },
+            { title: 'SEO Expert', link: '/esparkwiki/seo-expert' },
+            {
+              title: 'Performance Marketer',
+              link: '/esparkwiki/performance-marketer',
+            },
           ],
         },
         {
           heading: 'Ecommerce Developers',
           listItems: [
-            { title: 'WordPress Developer', link: '/' },
-            { title: 'Shopify Developer', link: '/' },
+            {
+              title: 'WordPress Developer',
+              link: '/esparkwiki/wordpress-developer',
+            },
+            {
+              title: 'Shopify Developer',
+              link: '/esparkwiki/shopify-developer',
+            },
           ],
         },
       ],
