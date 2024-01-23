@@ -32,8 +32,8 @@ const InnerHero = ({ data, innerData }) => {
               item
               xs={12}
               sm={6}
-              lg={6}
-              md={6}
+              lg={7}
+              md={7}
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -50,7 +50,7 @@ const InnerHero = ({ data, innerData }) => {
                       sm: '23px',
                       md: '25px',
                       lg: '30px',
-                      xl: '50px',
+                      xl: '45px',
                     },
                     fontWeight: 600,
                   }}
@@ -103,8 +103,8 @@ const InnerHero = ({ data, innerData }) => {
                 item
                 xs={12}
                 sm={6}
-                lg={6}
-                md={6}
+                lg={5}
+                md={5}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -113,7 +113,7 @@ const InnerHero = ({ data, innerData }) => {
               >
                 <Image
                   src={parsedWiki?.heroImage}
-                  alt={parsedWiki?.title}
+                  alt={`${parsedWiki?.title} - eSpark Talent`}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />

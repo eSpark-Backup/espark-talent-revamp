@@ -63,7 +63,7 @@ const TalentIgnite = ({ data }) => {
                 src={data?.image}
                 width={400}
                 height={300}
-                alt={data?.alt}
+                alt={`${data?.alt} -eSpark Talent`}
               />
             </Box>
           </Grid>
