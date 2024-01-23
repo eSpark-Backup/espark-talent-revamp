@@ -62,9 +62,9 @@ const WikiCards = ({ data, categories }) => {
             All
           </Typography>
         </Button>
-        {categories?.map((category) => (
+        {categories?.map((category, index) => (
           <Button
-            key={category?.id}
+            key={index}
             onClick={() => onSelectCategory(category)}
             variant={selectedCategory === category?._id ? 'contained' : ''}
             color="primary"
@@ -88,7 +88,7 @@ const WikiCards = ({ data, categories }) => {
       <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
         <Box sx={{ py: '3%' }}>
           <Container>
-            <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid container sx={{ display: 'flex', justifyContent: 'left' }}>
               {filteredData?.map((item) => (
                 <Grid
                   key={item?.id}
@@ -99,85 +99,84 @@ const WikiCards = ({ data, categories }) => {
                   xs={12}
                   gap="10px"
                 >
-                  <Link href={`/esparkwiki/${item?.slug}`}>
-                    <Box sx={CARD_STYLE}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          gap: '10px',
-                          alignItems: 'center',
-                          pb: '15px',
-                        }}
-                      >
-                        <Image
-                          src={item?.iconImage}
-                          height={30}
-                          width={30}
-                          alt={item?.title}
-                        />
-                        <Link href={`/esparkwiki/${item?.slug}`}>
-                          <Typography
-                            color="#000"
-                            variant="body1"
-                            fontWeight={600}
-                            fontSize={{
-                              xs: '15px',
-                              sm: '15px',
-                              md: '14px',
-                              lg: '20px',
-                            }}
-                          >
-                            {item?.title}
-                          </Typography>
-                        </Link>
-                      </Box>
-                      <Box sx={{ pb: '15px' }}>
+                  <Box sx={CARD_STYLE}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        gap: '10px',
+                        alignItems: 'center',
+                        pb: '15px',
+                      }}
+                    >
+                      <Image
+                        src={item?.iconImage}
+                        height={30}
+                        width={30}
+                        alt={`${item?.title} - eSpark Talent`}
+                      />
+                      <Link href={`/esparkwiki/${item?.slug}`}>
                         <Typography
+                          color="#000"
                           variant="body1"
-                          color="#667170"
                           fontWeight={600}
                           fontSize={{
-                            xs: '10px',
-                            sm: '12px',
-                            md: '12px',
-                            lg: '15px',
-                          }}
-                        >
-                          {'Average Salary'}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color="secondary"
-                          fontSize={{
-                            xs: '17px',
-                            sm: '17px',
-                            md: '15px',
+                            xs: '15px',
+                            sm: '15px',
+                            md: '14px',
                             lg: '20px',
                           }}
-                          fontWeight={600}
                         >
-                          {`USD: ${item?.salary.toLocaleString()} per month`}
+                          {' '}
+                          {item?.title}
                         </Typography>
-                      </Box>
-                      <Box>
-                        <Link href={`/esparkwiki/${item?.slug}`}>
-                          <Typography
-                            variant="body1"
-                            color="#029894"
-                            fontWeight={600}
-                            fontSize={{
-                              xs: '12px',
-                              sm: '12px',
-                              md: '14px',
-                              lg: '20px',
-                            }}
-                          >
-                            {'Job Description >'}
-                          </Typography>
-                        </Link>
-                      </Box>
+                      </Link>
                     </Box>
-                  </Link>
+                    <Box sx={{ pb: '15px' }}>
+                      <Typography
+                        variant="body1"
+                        color="#667170"
+                        fontWeight={600}
+                        fontSize={{
+                          xs: '10px',
+                          sm: '12px',
+                          md: '12px',
+                          lg: '15px',
+                        }}
+                      >
+                        {'Average Salary'}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="secondary"
+                        fontSize={{
+                          xs: '17px',
+                          sm: '17px',
+                          md: '15px',
+                          lg: '20px',
+                        }}
+                        fontWeight={600}
+                      >
+                        {`USD: ${item?.salary.toLocaleString()} per month`}
+                      </Typography>
+                    </Box>
+                    <Box>
+                      <Link href={`/esparkwiki/${item?.slug}`}>
+                        <Typography
+                          variant="body1"
+                          color="#029894"
+                          fontWeight={600}
+                          fontSize={{
+                            xs: '12px',
+                            sm: '12px',
+                            md: '14px',
+                            lg: '20px',
+                          }}
+                        >
+                          {'Job Description >'}
+                        </Typography>
+                      </Link>
+                    </Box>
+                  </Box>
                 </Grid>
               ))}
             </Grid>

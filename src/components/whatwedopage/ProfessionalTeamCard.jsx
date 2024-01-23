@@ -234,7 +234,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               src={teamData.arrowIconLeft}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>
@@ -251,7 +251,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               src={teamData.arrowIconCircle}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>
@@ -269,7 +269,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
               src={teamData.arrowIconRight}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>

@@ -1086,7 +1086,6 @@ color: #fff;
 }
 .wiki-content li::before {
   content: url(/images/wiki/wiki-icon.svg);
-
   color: #6f76a8;
   height: 17px;
   width: 17px;

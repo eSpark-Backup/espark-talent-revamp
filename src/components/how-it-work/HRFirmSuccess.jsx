@@ -49,7 +49,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                       src={item.image}
                       width={200}
                       height={100}
-                      alt={item?.alt}
+                      alt={`${item?.alt} - eSpark Talent`}
                     />
                   </Box>
                 </Grid>
