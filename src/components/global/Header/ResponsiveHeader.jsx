@@ -72,14 +72,14 @@ const ResponsiveHeader = ({
             pb: 2,
           }}
         >
-          {PAGES.map((page) => {
+          {PAGES.map((page, index) => {
             const hasSubmenu = Object.prototype.hasOwnProperty.call(
               SUBMENU_ITEMS,
               page
             );
             return (
               <Accordion
-                key={page}
+                key={index}
                 expanded={expandedAccordion[page]}
                 onChange={handleAccordionChange(page)}
                 sx={{
@@ -122,9 +122,9 @@ const ResponsiveHeader = ({
                   <AccordionDetails
                     sx={{ backgroundColor: '#fff !important ' }}
                   >
-                    {SUBMENU_ITEMS[page]?.map((submenuItem) => (
+                    {SUBMENU_ITEMS[page]?.map((submenuItem, index) => (
                       <MenuItem
-                        key={submenuItem.label}
+                        key={index}
                         onClick={() => handleSubmenuItemClicked(submenuItem)}
                       >
                         <Box

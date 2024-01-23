@@ -39,8 +39,8 @@ const DesktopHeader = ({
           ml: { lg: '46px' },
         }}
       >
-        {PAGES?.map((page) => (
-          <Box key={page}>
+        {PAGES?.map((page, index) => (
+          <Box key={index}>
             <Button
               onClick={(event) => handleOpenUserMenu(event, page)}
               sx={{
@@ -72,9 +72,8 @@ const DesktopHeader = ({
               onClose={() => handleCloseUserMenu(page)}
             >
               {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
-                <Box key={submenuItem?.label}>
+                <Box key={subIndex}>
                   <MenuItem
-                    key={submenuItem?.label}
                     onClick={() =>
                       handleSubmenuItemClickedAndClose(submenuItem, page)
                     }

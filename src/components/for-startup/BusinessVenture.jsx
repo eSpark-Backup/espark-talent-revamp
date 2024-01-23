@@ -68,7 +68,12 @@ const BusinessVenture = ({ data }) => {
                 alignItems: 'center',
               }}
             >
-              <Image src={data.image} width={380} height={300} alt={`${data?.alt} -eSpark Talent`} />
+              <Image
+                src={data.image}
+                width={380}
+                height={300}
+                alt={`${data?.alt} -eSpark Talent`}
+              />
             </Box>
           </Grid>
         </Grid>

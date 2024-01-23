@@ -62,9 +62,9 @@ const WikiCards = ({ data, categories }) => {
             All
           </Typography>
         </Button>
-        {categories?.map((category) => (
+        {categories?.map((category, index) => (
           <Button
-            key={category?.id}
+            key={index}
             onClick={() => onSelectCategory(category)}
             variant={selectedCategory === category?._id ? 'contained' : ''}
             color="primary"

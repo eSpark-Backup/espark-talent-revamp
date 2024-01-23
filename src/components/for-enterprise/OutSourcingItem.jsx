@@ -103,7 +103,6 @@ const OutSourcingItem = ({ data }) => {
               {data?.items?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Grid
-                    key={index}
                     item
                     xs={12}
                     sm={4}
