@@ -146,7 +146,7 @@ const WhyChooseOurHr = ({ data }) => {
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
-                              alt={item.alt}
+                              alt={`${item?.alt} - eSpark Talent`}
                             />
                           </ListItemIcon>
                         </Box>
@@ -222,7 +222,7 @@ const WhyChooseOurHr = ({ data }) => {
                     src={data.arrowIconLeft}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>
@@ -239,7 +239,7 @@ const WhyChooseOurHr = ({ data }) => {
                     src={data.arrowIconCircle}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>
@@ -257,7 +257,7 @@ const WhyChooseOurHr = ({ data }) => {
                     src={data.arrowIconRight}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>

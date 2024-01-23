@@ -23,6 +23,7 @@ const WikiCards = ({ data, categories }) => {
     selectedCategory === 'all'
       ? data
       : data?.filter((item) => item?.wikiCategory === selectedCategory);
+  filteredData.sort((a, b) => a?.id - b?.id);
 
   return (
     <>
@@ -111,7 +112,7 @@ const WikiCards = ({ data, categories }) => {
                         src={item?.iconImage}
                         height={30}
                         width={30}
-                        alt={item?.title}
+                        alt={`${item?.title} - eSpark Talent`}
                       />
                       <Link href={`/esparkwiki/${item?.slug}`}>
                         <Typography
@@ -125,6 +126,7 @@ const WikiCards = ({ data, categories }) => {
                             lg: '20px',
                           }}
                         >
+                          {' '}
                           {item?.title}
                         </Typography>
                       </Link>
@@ -154,7 +156,7 @@ const WikiCards = ({ data, categories }) => {
                         }}
                         fontWeight={600}
                       >
-                        {`USD: ${item?.salary} per month`}
+                        {`USD: ${item?.salary.toLocaleString()} per month`}
                       </Typography>
                     </Box>
                     <Box>

@@ -26,7 +26,6 @@ import {
   PROCESS_DATA,
 } from '@/constants/homepage';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import { BLOGS_DATA } from '@/constants/blogs';
 import { HP_HERO_DATA } from '@/constants/global/hero-sections';
 
 const page = () => {
@@ -55,7 +54,7 @@ const page = () => {
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      {/* <HomeBlogs/> */}
+      <HomeBlogs />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}

@@ -132,7 +132,7 @@ const Hero = ({ data }) => {
               >
                 <Image
                   src={data?.image}
-                  alt={data?.imageAlt}
+                  alt={`${data?.imageAlt} - eSpark Talent`}
                   width={data?.imageWidth}
                   height={data?.imageHeight}
                 />
