@@ -8,9 +8,11 @@ import {
   Container,
   AccordionDetails,
   AccordionSummary,
+  useMediaQuery,
 } from '@mui/material';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
+import Image from 'next/image';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
@@ -18,6 +20,14 @@ const Faq = ({ data }) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
+
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <Box sx={{ py: '1%' }} id="faq">
@@ -36,15 +46,26 @@ const Faq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <img
+                      <Image
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={{
-                          lg: '30px',
-                          md: '23px',
-                          sm: '15px',
-                          xs: '12px',
-                        }}
-                        height={'auto'}
+                        width={
+                          isSmallScreen
+                            ? 15
+                            : isMediumScreen
+                              ? 20
+                              : isLargeScreen
+                                ? 30
+                                : 30
+                        }
+                        height={
+                          isSmallScreen
+                            ? 15
+                            : isMediumScreen
+                              ? 20
+                              : isLargeScreen
+                                ? 30
+                                : 30
+                        }
                         alt="icon"
                       />
                     }
@@ -101,15 +122,26 @@ const Faq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <img
+                      <Image
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={{
-                          lg: '30px',
-                          md: '23px',
-                          sm: '15px',
-                          xs: '12px',
-                        }}
-                        height={'auto'}
+                        width={
+                          isSmallScreen
+                            ? 15
+                            : isMediumScreen
+                              ? 20
+                              : isLargeScreen
+                                ? 30
+                                : 30
+                        }
+                        height={
+                          isSmallScreen
+                            ? 15
+                            : isMediumScreen
+                              ? 20
+                              : isLargeScreen
+                                ? 30
+                                : 30
+                        }
                         alt="icon"
                       />
                     }

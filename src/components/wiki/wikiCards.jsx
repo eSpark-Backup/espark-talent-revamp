@@ -33,7 +33,7 @@ const WikiCards = ({ data, categories }) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'end',
-          pt: '5%',
+          pt: '4%',
           gap: {
             xs: 1,
             sm: 1,

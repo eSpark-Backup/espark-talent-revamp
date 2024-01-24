@@ -200,7 +200,7 @@ const BookADemoForm = ({ form }) => {
                         color: 'black',
                         '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
                           {
-                            '-webkit-appearance': 'none',
+                            WebkitAppearance: 'none',
                             margin: 0,
                           },
                         '&:focus': {

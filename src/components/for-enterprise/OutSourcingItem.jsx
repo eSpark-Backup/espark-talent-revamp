@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Grid, ListItemIcon } from '@mui/material';
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
-
-import SwiperCore, {
-  EffectFade,
-  Navigation,
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  ListItemIcon,
   Pagination,
-  Autoplay,
-} from 'swiper';
+} from '@mui/material';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,8 +17,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
-SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
 const OutSourcingItem = ({ data }) => {
   const swiperSettings = {
@@ -29,7 +28,7 @@ const OutSourcingItem = ({ data }) => {
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
-
+    module: [EffectFade, Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 1,

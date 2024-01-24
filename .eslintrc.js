@@ -4,17 +4,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:tailwindcss/recommended',
     'next',
     'prettier',
   ],
-  plugins: [
-    'eslint-plugin-prettier',
-    'react',
-    'react-hooks',
-    'jsx-a11y',
-    'tailwindcss',
-  ],
+  plugins: ['eslint-plugin-prettier', 'react', 'react-hooks', 'jsx-a11y'],
   env: {
     browser: true,
     es6: true,
