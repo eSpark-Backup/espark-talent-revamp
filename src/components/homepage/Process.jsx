@@ -23,7 +23,7 @@ const Process = ({ data }) => {
         },
       }}
     >
-      {/* <Box
+      <Box
         sx={{
           width: '100%',
           textAlign: 'center',
@@ -83,7 +83,7 @@ const Process = ({ data }) => {
         >
           {data?.subTitle}
         </Typography>
-      </Box> */}
+      </Box>
       {data?.processes?.map((process, index) => (
         <Box
           key={index}
