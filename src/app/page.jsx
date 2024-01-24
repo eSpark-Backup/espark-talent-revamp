@@ -13,18 +13,63 @@ import {
 } from '../constants/homepage';
 import { FAQ_DATA } from '../constants/home-page/faq-section';
 import { HP_HERO_DATA } from '../constants/global/hero-sections';
-import HomeBlogs from '@/components/blogs/HomeBlogs';
-import Faq from '@/components/FAQ/Faq';
-import AwardAchievement from '@/components/homepage/AwardAchiefment';
-import ClientSays from '@/components/homepage/ClientSays';
-import OurExperties from '@/components/homepage/OurExperties';
-import BenefitsWorks from '@/components/homepage/BenefitsWorks';
-import Perks from '@/components/homepage/Perks';
-import SourceBenefits from '@/components/homepage/SourceBenefits';
-import Process from '@/components/homepage/Process';
-import ClientSlider from '@/components/global/Client';
-import Hero from '@/components/homepage/Hero';
+import dynamic from 'next/dynamic';
 
+const ClientSlider = dynamic(() => import('@/components/global/ClientSlider'), {
+  ssr: false,
+});
+
+const SourceBenefits = dynamic(
+  () => import('@/components/homepage/SourceBenefits'),
+  {
+    ssr: false,
+  }
+);
+
+const BenefitsWorks = dynamic(
+  () => import('@/components/homepage/BenefitsWorks'),
+  {
+    ssr: false,
+  }
+);
+
+const AwardAchievement = dynamic(
+  () => import('@/components/homepage/AwardAchiefment'),
+  {
+    ssr: false,
+  }
+);
+
+const OurExperties = dynamic(
+  () => import('@/components/homepage/OurExperties'),
+  {
+    ssr: false,
+  }
+);
+
+const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
+  ssr: true,
+});
+
+const ClientSays = dynamic(() => import('@/components/homepage/ClientSays'), {
+  ssr: false,
+});
+
+const Hero = dynamic(() => import('@/components/homepage/HomeHero'), {
+  ssr: false,
+});
+
+const Process = dynamic(() => import('@/components/homepage/Process'), {
+  ssr: false,
+});
+
+const Perks = dynamic(() => import('@/components/homepage/Perks'), {
+  ssr: false,
+});
+
+const Faq = dynamic(() => import('@/components/FAQ/Faq'), {
+  ssr: false,
+});
 const page = () => {
   return (
     <>
