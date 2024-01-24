@@ -1,24 +1,11 @@
 'use client';
-import React from 'react';
 import { Box, Container } from '@mui/material';
+import React from 'react';
+import ParagraphTitle from '../homepage/ParagraphTitle';
+import HBlogs from './Hblogs';
+import ESparkButton from '../global/eSparkButton';
 
-// import ParagraphTitle from '../homepage/ParagraphTitle';
-// import ESparkButton from '../global/eSparkButton';
-// import BlogCards from '../homepage/BlogCards';
-import { getBlog } from '@/sanity/sanity.quries';
-import dynamic from 'next/dynamic';
-import BlogCards from '../homepage/BlogCards';
-
-const ParagraphTitle = dynamic(() => import('../homepage/ParagraphTitle'), {
-  ssr: false,
-});
-const ESparkButton = dynamic(() => import('../global/eSparkButton'), {
-  ssr: false,
-});
-// const BlogCards = dynamic(() => import('../homepage/BlogCards'), { ssr: true });
-
-export default async function HomeBlogs() {
-  const blog = await getBlog();
+const HomeBlogs = () => {
   return (
     <>
       <Container>
@@ -34,7 +21,7 @@ export default async function HomeBlogs() {
             title={'eSpark Talent Knowledge Junction'}
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}
           />
-          <BlogCards data={blog?.slice(0, 3)} smCol={2} />
+          <HBlogs />
           <ESparkButton
             title={`View all blogs`}
             link={`/blogs`}
@@ -45,4 +32,6 @@ export default async function HomeBlogs() {
       </Container>
     </>
   );
-}
+};
+
+export default HomeBlogs;
