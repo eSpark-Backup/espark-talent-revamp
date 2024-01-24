@@ -1,6 +1,13 @@
 'use client';
 import React from 'react';
-import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
+import {
+  Grid,
+  Box,
+  Typography,
+  Container,
+  useMediaQuery,
+  Pagination,
+} from '@mui/material';
 import Image from 'next/image';
 
 import 'swiper/css';
@@ -9,16 +16,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import SwiperCore, {
-  EffectFade,
-  Navigation,
-  Pagination,
-  Autoplay,
-} from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
 const OutSourcingWonder = ({ data }) => {
   const isSmallScreen = useMediaQuery((theme) =>
@@ -37,7 +36,7 @@ const OutSourcingWonder = ({ data }) => {
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
-
+    module: [EffectFade, Navigation, Pagination, Autoplay],
     pagination: {
       clickable: true,
       el: '.swiper-pagination',

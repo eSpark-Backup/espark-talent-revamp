@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,10 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ParagraphTitle from './ParagraphTitle';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import ESparkButton from '../global/eSparkButton';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const OurExperties = ({ data }) => {
   const swiperSettings = {
@@ -25,6 +22,7 @@ const OurExperties = ({ data }) => {
     // pagination: {
     //   clickable: false,
     // },
+    module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -72,12 +70,13 @@ const OurExperties = ({ data }) => {
         >
           <Swiper {...swiperSettings}>
             <Grid
-                container
-                spacing={2}
-                sx={{
-                  mx: 'auto',
-                }}
-              >{data?.sections?.map((section, index) => (
+              container
+              spacing={2}
+              sx={{
+                mx: 'auto',
+              }}
+            >
+              {data?.sections?.map((section, index) => (
                 <SwiperSlide key={index}>
                   {section?.lists?.map((list, listIndex) => (
                     <Grid
