@@ -11,6 +11,8 @@ const Hero = ({ data }) => {
       <Box
         sx={{
           py: data?.spacing,
+          pt: data?.pt,
+          pb: data?.pb,
           background: data?.bgColor,
           backgroundImage: `url(${data?.bgImage})`,
           backgroundSize: 'cover',
@@ -19,8 +21,8 @@ const Hero = ({ data }) => {
       >
         <Container>
           <Grid
-            pt="50px"
-            pb="30px"
+            pt={data?.pt2 || '50px'}
+            pb={data?.pb2 || '30px'}
             container
             spacing={2}
             sx={{
@@ -31,13 +33,13 @@ const Hero = ({ data }) => {
             <Grid
               item
               xs={12}
-              sm={7}
+              sm={data?.leftGrid || 7}
               sx={{ display: 'flex', flexDirection: 'column' }}
             >
               {data?.title && (
                 <Typography
                   // variant={data?.titleVariant}
-                  lineHeight={1.2}
+                  lineHeight={1.3}
                   color={data?.titleColor}
                   fontSize={{
                     xs: '22px',
@@ -61,7 +63,7 @@ const Hero = ({ data }) => {
               {data?.description && (
                 <Typography
                   color={data?.descColor}
-                  lineHeight={1.2}
+                  lineHeight={1.5}
                   fontSize={{
                     xs: '14px',
                     sm: '14px',
@@ -123,7 +125,7 @@ const Hero = ({ data }) => {
               <Grid
                 item
                 xs={12}
-                sm={5}
+                sm={data?.rightGrid || 5}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
