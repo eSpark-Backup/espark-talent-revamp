@@ -3,6 +3,12 @@ import React from 'react';
 import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
 import SwiperCore, {
   EffectFade,
   Navigation,
@@ -11,12 +17,6 @@ import SwiperCore, {
 } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
 
 SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
 
