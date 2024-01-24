@@ -71,16 +71,14 @@ const OurExperties = ({ data }) => {
           }}
         >
           <Swiper {...swiperSettings}>
-            {data?.sections?.map((section, index) => (
-              <Grid
-                key={index}
+            <Grid
                 container
                 spacing={2}
                 sx={{
                   mx: 'auto',
                 }}
-              >
-                <SwiperSlide>
+              >{data?.sections?.map((section, index) => (
+                <SwiperSlide key={index}>
                   {section?.lists?.map((list, listIndex) => (
                     <Grid
                       key={`${index}-${listIndex}`}
@@ -173,8 +171,8 @@ const OurExperties = ({ data }) => {
                     </Grid>
                   ))}
                 </SwiperSlide>
-              </Grid>
-            ))}
+              ))}
+            </Grid>
             <Box
               sx={{
                 width: '100%',
