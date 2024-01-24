@@ -65,7 +65,6 @@ const OutSourcingWonder = ({ data }) => {
       },
     },
   };
-
   return (
     <>
       <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
