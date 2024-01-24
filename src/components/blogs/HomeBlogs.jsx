@@ -2,8 +2,9 @@
 import { Box, Container } from '@mui/material';
 import React from 'react';
 import ParagraphTitle from '../homepage/ParagraphTitle';
-import HBlogs from './Hblogs';
+import HBlogs from './HBlogs';
 import ESparkButton from '../global/eSparkButton';
+import HBlogs from './HBlogs';
 
 const HomeBlogs = () => {
   return (
