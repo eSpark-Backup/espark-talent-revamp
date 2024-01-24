@@ -19,9 +19,6 @@ const OurExperties = ({ data }) => {
     spaceBetween: 20,
     loop: false,
     pagination: false,
-    // pagination: {
-    //   clickable: false,
-    // },
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {

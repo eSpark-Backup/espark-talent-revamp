@@ -200,8 +200,6 @@ const CareerCards = ({ data, categories }) => {
                         ? 'large'
                         : 'medium'
                 }
-                // showFirstButton
-                // showLastButton
                 sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
                 renderItem={(item) => (
                   <PaginationItem
@@ -216,8 +214,6 @@ const CareerCards = ({ data, categories }) => {
                     }}
                   />
                 )}
-                // prevIcon={<KeyboardArrowLeft />}
-                // nextIcon={<KeyboardArrowRight />}
               />
             </Box>
           )}
