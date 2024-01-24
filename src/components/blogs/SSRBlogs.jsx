@@ -3,7 +3,7 @@ import React from 'react';
 import { getBlog } from '@/sanity/sanity.quries';
 import BlogCards from '../homepage/BlogCards';
 
-export default async function HBlogs() {
+export default async function SSRBlogs() {
   const blog = await getBlog();
   return (
     <>

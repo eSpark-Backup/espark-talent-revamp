@@ -2,9 +2,8 @@
 import { Box, Container } from '@mui/material';
 import React from 'react';
 import ParagraphTitle from '../homepage/ParagraphTitle';
-import HBlogs from './HBlogs';
 import ESparkButton from '../global/eSparkButton';
-import HBlogs from './HBlogs';
+import SSRBlogs from './SSRBlogs';
 
 const HomeBlogs = () => {
   return (
@@ -22,7 +21,7 @@ const HomeBlogs = () => {
             title={'eSpark Talent Knowledge Junction'}
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}
           />
-          <HBlogs />
+          <SSRBlogs />
           <ESparkButton
             title={`View all blogs`}
             link={`/blogs`}
