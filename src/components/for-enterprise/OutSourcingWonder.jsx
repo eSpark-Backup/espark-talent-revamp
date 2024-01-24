@@ -44,7 +44,6 @@ const OutSourcingWonder = ({ data }) => {
         }; width: 20px; height: 20px;"></span>`;
       },
     },
-    module: [EffectFade, Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 1,
