@@ -2,10 +2,20 @@
 import React from 'react';
 import { Box, Container } from '@mui/material';
 
-import ParagraphTitle from '../homepage/ParagraphTitle';
-import ESparkButton from '../global/eSparkButton';
-import BlogCards from '../homepage/BlogCards';
+// import ParagraphTitle from '../homepage/ParagraphTitle';
+// import ESparkButton from '../global/eSparkButton';
+// import BlogCards from '../homepage/BlogCards';
 import { getBlog } from '@/sanity/sanity.quries';
+import dynamic from 'next/dynamic';
+import BlogCards from '../homepage/BlogCards';
+
+const ParagraphTitle = dynamic(() => import('../homepage/ParagraphTitle'), {
+  ssr: false,
+});
+const ESparkButton = dynamic(() => import('../global/eSparkButton'), {
+  ssr: false,
+});
+// const BlogCards = dynamic(() => import('../homepage/BlogCards'), { ssr: true });
 
 export default async function HomeBlogs() {
   const blog = await getBlog();
