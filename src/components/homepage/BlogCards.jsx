@@ -18,7 +18,7 @@ const BlogCards = ({ data }) => {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-    const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
   const isMediumScreen = useMediaQuery('(max-width:768px)');
 
   let cardsInRow = 12; // Default for screens wider than 767px
@@ -28,7 +28,6 @@ const BlogCards = ({ data }) => {
   } else if (isMediumScreen) {
     cardsInRow = 6;
   }
-
 
   return (
     <Box sx={{ my: '3%' }}>
