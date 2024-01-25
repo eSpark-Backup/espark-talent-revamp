@@ -24,7 +24,7 @@ import {
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero data={ENTERPRISE_HERO_DATA} color="default" />
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
