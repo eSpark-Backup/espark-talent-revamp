@@ -23,7 +23,7 @@ const BlogCards = ({ data }) => {
       <Container>
         <Grid container spacing={2} sx={{ py: '2%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
+            <Grid item xs={12} sm={12} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
                 sx={{
