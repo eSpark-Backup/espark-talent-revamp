@@ -1,18 +1,11 @@
 'use client';
 import React from 'react';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { READ_MORE } from '@/constants/home-page/blogSections';
-
-import SwiperCore, {
-  EffectFade,
-  Navigation,
-  Pagination,
-  Autoplay,
-} from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,8 +14,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
-SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
 const BlogCardsSlider = ({ data }) => {
   const swiperSettings = {
@@ -33,7 +25,7 @@ const BlogCardsSlider = ({ data }) => {
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
-
+    module: [EffectFade, Navigation, Pagination, Autoplay],
     pagination: {
       clickable: true,
       el: '.swiper-pagination',

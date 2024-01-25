@@ -22,7 +22,6 @@ const Page = async ({ params }) => {
   try {
     const wiki = await getSingleWiki(slug);
 
-    // Validate if the fetched wiki data is in the expected format
     if (!wiki || typeof wiki !== 'object') {
       return (
         <div>
