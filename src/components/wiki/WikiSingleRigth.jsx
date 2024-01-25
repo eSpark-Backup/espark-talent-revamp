@@ -16,10 +16,10 @@ const WikiSingleRigth = () => {
     >
       <Typography
         color={'white'}
-          pb="10px"
-          lineHeight={1.85}
+        pb="10px"
+        lineHeight={1.85}
         textAlign={'left'}
-        fontWeight={700}  
+        fontWeight={700}
         sx={{
           fontSize: {
             xs: '12px',
@@ -40,8 +40,8 @@ const WikiSingleRigth = () => {
         sx={{
           fontSize: {
             xs: '12px',
-            sm: '13px',
-            md: '16px',
+            sm: '12px',
+            md: '14px',
             lg: '16px',
             xl: '16px',
           },

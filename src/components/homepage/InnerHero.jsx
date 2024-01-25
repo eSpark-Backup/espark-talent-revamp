@@ -211,15 +211,8 @@ const InnerHero = ({ data, innerData }) => {
                       backgroundColor: '#fff',
                       display: { xs: 'none', sm: 'flex' },
                       '&:hover': {
-                        color:
-                          pathName == '/solutions/enterprises'
-                            ? '#fff'
-                            : '#001C63',
-                        backgroundColor: `${
-                          pathName == '/solutions/enterprises'
-                            ? '#001C63'
-                            : '#fff'
-                        }`,
+                        color: '#fff',
+                        backgroundColor: '#fff',
                       },
 
                       py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },

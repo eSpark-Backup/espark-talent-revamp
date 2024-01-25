@@ -8,7 +8,12 @@ const WikiSingle = ({ data }) => {
   return (
     <>
       <React.Suspense fallback={<div>Loading...</div>}>
-        <Box sx={{ my: {sm:'1%', lg:0 }, py: { xs: '8%', sm: '8%', md: '5%', lg: '3%' } }}>
+        <Box
+          sx={{
+            my: { sm: '1%', lg: 0 },
+            py: { xs: '8%', sm: '8%', md: '5%', lg: '3%' },
+          }}
+        >
           <Container>
             <Grid container spacing={4}>
               <Grid item lg={8.2} md={8.5} xs={12} sm={12}>
