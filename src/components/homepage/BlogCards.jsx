@@ -12,6 +12,7 @@ const BlogCards = ({ data }) => {
   const itemsPerPage = 6;
   const handleChangePage = (event, value) => {
     setPage(value);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const startIndex = (page - 1) * itemsPerPage;
@@ -184,8 +185,6 @@ const BlogCards = ({ data }) => {
               onChange={handleChangePage}
               color="primary"
               size="large"
-              // showFirstButton
-              // showLastButton
               sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
               renderItem={(item) => (
                 <PaginationItem
@@ -200,8 +199,6 @@ const BlogCards = ({ data }) => {
                   }}
                 />
               )}
-              // prevIcon={<KeyboardArrowLeft />}
-              // nextIcon={<KeyboardArrowRight />}
             />
           </Box>
         )}
