@@ -8,10 +8,10 @@ const WikiPage = async ({ params }) => {
   const wiki = await getSingleWiki(slug);
 
   return (
-    <>
+    <div>
       <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
       <WikiSingle data={wiki} />
-    </>
+    </div>
   );
 };
 

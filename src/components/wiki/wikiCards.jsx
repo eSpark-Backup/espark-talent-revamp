@@ -123,7 +123,7 @@ const WikiCards = ({ data, categories }) => {
                             xs: '15px',
                             sm: '15px',
                             md: '14px',
-                            lg: '20px',
+                            lg: '18px',
                           }}
                         >
                           {' '}
@@ -152,7 +152,7 @@ const WikiCards = ({ data, categories }) => {
                           xs: '17px',
                           sm: '17px',
                           md: '15px',
-                          lg: '20px',
+                          lg: '18px',
                         }}
                         fontWeight={600}
                       >
