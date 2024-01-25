@@ -21,7 +21,7 @@ import {
 
 import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero data={HOW_WORKS_HERO_DATA} />
@@ -44,4 +44,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

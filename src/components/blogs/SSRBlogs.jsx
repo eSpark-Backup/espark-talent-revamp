@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { getBlog } from '@/sanity/sanity.quries';
 import BlogCards from '../homepage/BlogCards';
 

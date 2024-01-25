@@ -17,15 +17,16 @@ const WikiSingleRigth = () => {
       <Typography
         color={'white'}
         pb="10px"
-        textAlign={'center'}
-        fontWeight={600}
+        lineHeight={1.85}
+        textAlign={'left'}
+        fontWeight={700}
         sx={{
           fontSize: {
             xs: '12px',
-            sm: '16px',
-            md: '20px',
-            lg: '22px',
-            xl: '22px',
+            sm: '20px',
+            md: '22px',
+            lg: '25px',
+            xl: '25px',
           },
         }}
       >
@@ -34,14 +35,15 @@ const WikiSingleRigth = () => {
       <Typography
         variant="body1"
         color={'white'}
-        textAlign={'center'}
+        textAlign={'left'}
+        lineHeight={2}
         sx={{
           fontSize: {
             xs: '12px',
-            sm: '13px',
-            md: '16px',
-            lg: '18px',
-            xl: '18px',
+            sm: '12px',
+            md: '14px',
+            lg: '16px',
+            xl: '16px',
           },
         }}
       >

@@ -24,7 +24,7 @@ import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/ BusinessVenture';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero data={STARTUP_HERO_DATA} />
@@ -53,4 +53,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
