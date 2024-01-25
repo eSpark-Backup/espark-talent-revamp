@@ -122,7 +122,7 @@ const InnerHero = ({ data, innerData }) => {
           </Grid>
         </Container>
       </Box> */}
-        <Box
+      <Box
         sx={{
           py: data?.spacing,
           pt: data?.pt,

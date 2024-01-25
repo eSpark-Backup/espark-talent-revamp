@@ -210,7 +210,7 @@ const Process = ({ data }) => {
                 fontStyle: 'normal',
                 fontWeight: 400,
                 textAlign: 'justify',
-                direction:process?.alignment == 'right' ? 'rtl' : 'ltr',
+                direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
                 '@media (min-width: 500px) and (max-width: 767px)': {
                   fontSize: '13px !important',
