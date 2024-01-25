@@ -28,7 +28,7 @@ const BlogCards = ({ data }) => {
   } else if (isMediumScreen) {
     cardsInRow = 6;
   }
-console.log("cardsInRow",cardsInRow);
+  console.log('cardsInRow', cardsInRow);
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
