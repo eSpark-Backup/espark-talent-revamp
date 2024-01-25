@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Container, Box, Typography, Grid } from '@mui/material';
+import { Container, Box, Typography, Grid, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const ClientSlider = ({
   bgColor,
@@ -30,6 +28,7 @@ const ClientSlider = ({
       delay: 3000,
       disableOnInteraction: true,
     },
+    module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 2,

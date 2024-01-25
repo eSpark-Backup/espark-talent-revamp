@@ -87,8 +87,9 @@ span {
 .default-btn:hover {
   color: var(--whiteColor);
 }
-.hoverItem:hover > .hoverIcon {
-color: #fff;
+
+.hoverItem:hover>.hoverIcon {
+  color: #fff;
 }
 
 .default-btn:hover span {
@@ -143,8 +144,10 @@ color: #fff;
   color: black;
 }
 
-.parnership-form:focus{
-  outline:3px solid blue; outline-offset:2px;;
+.parnership-form:focus {
+  outline: 3px solid blue;
+  outline-offset: 2px;
+  ;
 }
 
 .PhoneInput {
@@ -176,7 +179,8 @@ color: #fff;
   margin-right: 10px;
   cursor: pointer;
 }
-.parnership-form .PhoneInputInput{
+
+.parnership-form .PhoneInputInput {
   background: #fff;
 }
 
@@ -247,84 +251,101 @@ color: #fff;
     height: 32px;
   }
 }
+
 .our-team-swiper-image,
 .why-choose-our-hr-slide-icon {
   width: 100%;
   height: 100%;
 }
+
 @media (max-width: 768px) {
   .swiper-controller-icon {
     width: 12px;
     height: 15px;
   }
 }
+
 .its-our-job-card-image {
   max-width: 100% !important;
   max-height: 100% !important;
 }
+
 @media (min-width: 1051px) and (max-width: 1365px) {
   .whatWeBox {
     height: 150px !important;
   }
 }
+
 @media (min-width: 990px) and (max-width: 1050px) {
   .whatWeBox {
     height: 150px !important;
   }
 }
+
 @media (min-width: 835px) and (max-width: 950px) {
   .whatWeBox {
     height: 180px !important;
   }
 }
+
 @media (min-width: 769px) and (max-width: 834px) {
   .whatWeBox {
     height: 215px !important;
   }
 }
+
 @media (min-width: 363px) and (max-width: 440px) {
   .whatWeBox {
     height: 130px !important;
   }
 }
+
 @media (min-width: 316px) and (max-width: 340px) {
   .whatWeBox {
     height: 130px !important;
   }
 }
+
 @media (max-width: 315px) {
   .whatWeBox {
     height: 190px !important;
   }
+
   .imageBox {
     padding-top: 30px;
   }
 }
+
 @media (min-width: 769px) and (max-width: 806px) {
   .HrBox {
     height: 230px !important;
     padding-top: 10px !important;
   }
+
   .typoDescription {
-    line-height: 23px !important ;
+    line-height: 23px !important;
     font-size: 14px !important;
   }
 }
+
 @media (min-width: 807px) and (max-width: 925px) {
   .HrBox {
     height: 230px !important;
     padding-top: 10px !important;
   }
+
   .typoDescription {
-    line-height: 23px !important ;
+    line-height: 23px !important;
     font-size: 14px !important;
   }
 }
+
 @media (min-width: 925px) and (max-width: 960px) {
   .HrBox {
     padding-top: 10px !important;
   }
 }
+
 .partnerSpan {
   color: #0c3c3a;
   font-size: 32px;
@@ -339,26 +360,32 @@ color: #fff;
     height: 320px !important;
   }
 }
+
 @media (min-width: 425px) and (max-width: 599px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
     height: 360px !important;
   }
+
   .reviews-swiper .swiper-button-prev {
     top: 340px !important;
   }
+
   .reviews-swiper .swiper-button-next {
     top: 340px !important;
   }
 }
+
 @media (min-width: 300px) and (max-width: 424px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
     height: 370px !important;
   }
+
   .reviews-swiper .swiper-button-prev {
     top: 360px !important;
   }
+
   .reviews-swiper .swiper-button-next {
     top: 360px !important;
   }
@@ -377,7 +404,9 @@ color: #fff;
     display: none !important;
   }
 }
+
 @media only screen and (max-width: 1023px) {
+
   /* .hrFirmResponsive {
     display: block;
   }
@@ -474,6 +503,7 @@ color: #fff;
   display: inline-block;
   text-align: left;
 }
+
 @media only screen and (max-width: 1024px) {
   .blog-content h2 {
     font-size: 22px;
@@ -488,12 +518,14 @@ color: #fff;
     text-align: justify;
     line-height: 20px;
   }
+
   .blog-content li {
     font-size: 14px;
     text-align: justify;
     line-height: 20px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .blog-content h2 {
     font-size: 22px;
@@ -502,17 +534,20 @@ color: #fff;
   .blog-content h3 {
     font-size: 22px;
   }
+
   .blog-content p {
     font-size: 13px;
     text-align: justify;
     line-height: 20px;
   }
+
   .blog-content li {
     font-size: 13px;
     text-align: justify;
     line-height: 20px;
   }
 }
+
 @media only screen and (max-width: 425px) {
   .blog-content h2 {
     font-size: 17px;
@@ -521,15 +556,18 @@ color: #fff;
   .blog-content h3 {
     font-size: 14px;
   }
+
   .blog-content p {
     font-size: 11px;
     text-align: justify;
     line-height: 17px;
   }
+
   .blog-content li {
     font-size: 11px;
   }
 }
+
 @media only screen and (max-width: 360px) {
   .blog-content h2 {
     font-size: 17px;
@@ -538,15 +576,18 @@ color: #fff;
   .blog-content h3 {
     font-size: 14px;
   }
+
   .blog-content p {
     font-size: 11px;
     text-align: justify;
     line-height: 17px;
   }
+
   .blog-content li {
     font-size: 11px;
   }
 }
+
 @media only screen and (max-width: 360px) {
   .blog-content h2 {
     font-size: 17px;
@@ -556,15 +597,18 @@ color: #fff;
   .blog-content h3 {
     font-size: 14px;
   }
+
   .blog-content p {
     font-size: 11px;
     text-align: justify;
     line-height: 17px;
   }
+
   .blog-content li {
     font-size: 11px;
   }
 }
+
 .mix-reviews-area {
   position: relative;
   margin-bottom: -200px;
@@ -599,6 +643,7 @@ color: #fff;
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.1) 0px 15px 1px 0px; */
 }
+
 /* .swiper-slide {
   max-width: 556px !important;
   width: 100%;
@@ -610,17 +655,21 @@ color: #fff;
   max-width: 100% !important;
   max-height: 100% !important;
 }
+
 .professional-team-card-Swiper {
   max-width: 1115px !important;
 }
+
 .swiper-slide-team-card {
   /* max-width: 556px !important; */
   width: 555px;
   width: 100%;
 }
+
 .mySwiper-its-our-job {
   max-width: 1200px !important;
 }
+
 .why-choose-hr-Swiper {
   max-width: 450px !important;
 }
@@ -728,6 +777,7 @@ color: #fff;
     flex-shrink: 0;
     padding: 10px 16px !important;
   }
+
   .partner-form-button button {
     width: 220.267px !important;
     height: 50.531px;
@@ -742,6 +792,7 @@ color: #fff;
     line-height: 23.684px !important;
   }
 }
+
 .partner-form {
   border-radius: 7.224px;
   border: 1px solid #d0d4ea;
@@ -769,6 +820,7 @@ color: #fff;
   width: 100% !important;
   color: var(--blackColor);
 }
+
 #partnership-form .input {
   border-radius: 5.418px;
   padding-left: 10px;
@@ -787,10 +839,12 @@ color: #fff;
   font-weight: 400;
   line-height: normal;
 }
+
 @media (max-width: 768px) {
   .partner-form .input::placeholder {
     font-size: 13px;
   }
+
   .PhoneInputInput::placeholder {
     font-size: 13px;
   }
@@ -901,6 +955,7 @@ color: #fff;
   padding-right: 12px;
   text-wrap: nowrap;
 }
+
 .partner-form-country-code-partnership {
   padding-left: 10px;
   padding-right: 12px;
@@ -926,6 +981,7 @@ color: #fff;
 .partner-form-LinkedIn-Profile {
   padding-bottom: 15px;
 }
+
 .partner-form .partner-form-your-email-adress-partnership,
 .partner-form-phone-number-partnership,
 .partner-form-Country-partnership,
@@ -986,35 +1042,40 @@ color: #fff;
   font-weight: 600;
   background-image: url('/images/partners/arrow.svg') !important;
   background-position: right 0.75rem center !important;
-  background-repeat: no-repeat !important;  
+  background-repeat: no-repeat !important;
 }
+
 @media (max-width: 280px) {
-.partner-country-dropdown  option {
-  max-width: 10px !important;
-  font-size: 8px;
-  font-weight: 600 !important;
+  .partner-country-dropdown option {
+    max-width: 10px !important;
+    font-size: 8px;
+    font-weight: 600 !important;
+  }
 }
-}
+
 @media (min-width: 280px) and (max-width: 300px) {
-  .partner-country-dropdown  option {
+  .partner-country-dropdown option {
     font-size: 8px;
     font-weight: 600 !important;
   }
 
 }
+
 @media (min-width: 300px) and (max-width: 340px) {
-  .partner-country-dropdown  option {
+  .partner-country-dropdown option {
     font-size: 9.4px;
     font-weight: 600 !important;
   }
 }
+
 @media (min-width: 341px) and (max-width: 415px) {
-  .partner-country-dropdown  option {
+  .partner-country-dropdown option {
     font-size: 10.4px;
   }
 }
+
 @media (min-width: 769px) and (max-width: 995px) {
-  .partner-country-dropdown  option {
+  .partner-country-dropdown option {
     font-size: 10.4px;
     font-weight: 600 !important;
   }
@@ -1028,6 +1089,7 @@ color: #fff;
   font-weight: 400;
   color: var(--blackColor);
 }
+
 .hireTalentResponsiveBtnNav {
   display: block !important;
 }
@@ -1053,37 +1115,52 @@ color: #fff;
     display: block !important;
   }
 }
+
 @media (min-width: 270px) and (max-width: 400px) {
   .footerCta {
     margin-top: 50px !important;
   }
 }
+
 @media (min-width: 280px) and (max-width: 350px) {
   .PhoneInput {
     display: block !important;
   }
+
   .PhoneInputCountry {
     width: 78px !important;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 12px;
   }
+
   .PhoneInputCountrySelect option {
     font-size: 13px !important;
   }
 }
+
 @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
     margin-top: 50px !important;
   }
 }
 
-.wiki-content{
-  h1,h2,h3,h4,h5,h6{
-    color: #3B5998;}  
-  p, ul,li, ol{
-    color: #000;}   
+.wiki-content h1,
+.wiki-content h2,
+.wiki-content h3,
+.wiki-content h4,
+.wiki-content h5,
+.wiki-content h6 {
+  color: #3B5998;
 }
+
+.wiki-content p,
+.wiki-content ul,
+.wiki-content li,
+.wiki-content ol {
+  color: #000;
+}
+
 .wiki-content li::before {
   content: url(/images/wiki/wiki-icon.svg);
   color: #6f76a8;

@@ -1,10 +1,15 @@
 'use client';
 import React from 'react';
-import { Grid, Box, Typography, Container, useMediaQuery, Pagination } from '@mui/material';
+import {
+  Grid,
+  Box,
+  Typography,
+  Container,
+  useMediaQuery,
+  Pagination,
+} from '@mui/material';
 import Image from 'next/image';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -29,7 +34,7 @@ const OutSourcingWonder = ({ data }) => {
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
-
+    module: [EffectFade, Navigation, Pagination, Autoplay],
     pagination: {
       clickable: true,
       el: '.swiper-pagination',
@@ -39,7 +44,6 @@ const OutSourcingWonder = ({ data }) => {
         }; width: 20px; height: 20px;"></span>`;
       },
     },
-    module: [EffectFade, Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -61,7 +65,6 @@ const OutSourcingWonder = ({ data }) => {
       },
     },
   };
-
   return (
     <>
       <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
