@@ -51,7 +51,11 @@ const Header = () => {
   return (
     <>
       {pathName !== '/book-a-demo' && (
-        <Box>
+        <Box
+          sx={{
+            background: '#F7F7F7',
+          }}
+        >
           <Box
             backgroundColor={'#029894'}
             sx={{
@@ -59,6 +63,7 @@ const Header = () => {
               display: { xs: 'none', md: 'flex' },
               alignItems: 'center',
               justifyContent: 'center',
+              zIndex: 999,
             }}
           >
             <Typography

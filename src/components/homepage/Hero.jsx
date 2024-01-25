@@ -39,16 +39,16 @@ const Hero = ({ data }) => {
               {data?.title && (
                 <Typography
                   // variant={data?.titleVariant}
-                  lineHeight={1.3}
+                  lineHeight={1.4}
                   color={data?.titleColor}
                   fontSize={{
                     xs: '22px',
                     sm: '24px',
                     md: '30x',
-                    lg: '40px',
-                    xl: '45px',
+                    lg: '45px',
+                    xl: '50px',
                   }}
-                  fontWeight={600}
+                  fontWeight={700}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -63,7 +63,9 @@ const Hero = ({ data }) => {
               {data?.description && (
                 <Typography
                   color={data?.descColor}
-                  lineHeight={1.5}
+                  lineHeight={1.65}
+                  fontWeight={500}
+                  pr={data?.tpr}
                   fontSize={{
                     xs: '14px',
                     sm: '14px',
@@ -135,8 +137,8 @@ const Hero = ({ data }) => {
                 <Image
                   src={data?.image}
                   alt={`${data?.imageAlt} - eSpark Talent`}
-                  width={data?.imageWidth}
-                  height={data?.imageHeight}
+                  width={data?.imageWidth || 450}
+                  height={data?.imageHeight || 450}
                 />
               </Grid>
             )}

@@ -206,9 +206,11 @@ const Process = ({ data }) => {
               component="p"
               sx={{
                 color: '#001C63',
-                fontSize: { sm: '18px !important' },
+                fontSize: { sm: '17px !important' },
                 fontStyle: 'normal',
                 fontWeight: 400,
+                textAlign: 'justify',
+                direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
                 '@media (min-width: 500px) and (max-width: 767px)': {
                   fontSize: '13px !important',

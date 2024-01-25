@@ -37,6 +37,13 @@ const CareerCards = ({ data, categories }) => {
     setSelectedCategory(event.target.value);
     setPage(1);
   };
+  const handlePaginationChange = (event, value) => {
+    setPage(value);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   useEffect(() => {}, [selectedCategory]);
   return (
     <>
@@ -189,7 +196,7 @@ const CareerCards = ({ data, categories }) => {
               <Pagination
                 count={Math.ceil(filteredData.length / perPage)}
                 page={page}
-                onChange={(event, value) => setPage(value)}
+                onChange={handlePaginationChange}
                 color="primary"
                 size={
                   isSmallScreen
