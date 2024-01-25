@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -18,12 +18,24 @@ const BlogCards = ({ data }) => {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
+    const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isMediumScreen = useMediaQuery('(max-width:768px)');
+
+  let cardsInRow = 12; // Default for screens wider than 767px
+
+  if (isSmallScreen) {
+    cardsInRow = 12;
+  } else if (isMediumScreen) {
+    cardsInRow = 6;
+  }
+
+
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
         <Grid container spacing={2} sx={{ py: '2%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={12} md={4} lg={4} key={index}>
+            <Grid item xs={12} sm={cardsInRow} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
                 sx={{
