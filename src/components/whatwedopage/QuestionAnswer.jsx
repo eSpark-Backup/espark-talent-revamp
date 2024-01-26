@@ -102,6 +102,7 @@ const QuestionAnswer = ({ data }) => {
                 <ESparkButton
                   title={data?.buttonLabel}
                   link={data?.buttonLink}
+                  target="_blank"
                   color={'secondary'}
                   size={{ xs: '140px', lg: '190px' }}
                 />

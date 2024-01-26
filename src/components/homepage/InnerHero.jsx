@@ -207,6 +207,8 @@ const InnerHero = ({ data, innerData }) => {
                   }}
                 >
                   <Button
+                    herf="/book-a-demo"
+                    target="_blank"
                     sx={{
                       backgroundColor: '#fff',
                       display: { xs: 'none', sm: 'flex' },
@@ -214,7 +216,6 @@ const InnerHero = ({ data, innerData }) => {
                         color: '#fff',
                         backgroundColor: '#fff',
                       },
-
                       py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
                       px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
                       height: '50px',

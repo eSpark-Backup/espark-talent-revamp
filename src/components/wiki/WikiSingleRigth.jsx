@@ -51,9 +51,9 @@ const WikiSingleRigth = () => {
         we'll handle the matchmaking process.`}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', pt: '20px' }}>
-        <Link href={`/book-a-demo`}>
+        <Link href={`/book-a-demo`} target="_blank">
           <Button variant="primary" color="secondary">
-            {`Hire ME`}
+            {`Hire Now`}
           </Button>
         </Link>
       </Box>
