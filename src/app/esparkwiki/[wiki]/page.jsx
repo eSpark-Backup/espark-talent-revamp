@@ -1,12 +1,16 @@
-import { getSingleWiki } from '@/sanity/sanity.quries';
-import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import React from 'react';
-import NotFound from '@/app/not-found';
+import { getSingleWiki } from '@/sanity/sanity.quries';
+import NotFoundPage from '@/components/global/NotFound';
 import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 
 const Page = async ({ params }) => {
   if (!params || !params.wiki) {
-    return <div>Error: Missing wiki parameter</div>;
+    return (
+      <div>
+        <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 
   const slug = params.wiki;
@@ -14,7 +18,7 @@ const Page = async ({ params }) => {
   if (typeof slug !== 'string' || slug.trim() === '') {
     return (
       <div>
-        <NotFound data={WIKIS_NOT_FOUND_DATA} />
+        <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
       </div>
     );
   }
@@ -25,7 +29,7 @@ const Page = async ({ params }) => {
     if (!wiki || typeof wiki !== 'object') {
       return (
         <div>
-          <NotFound data={WIKIS_NOT_FOUND_DATA} />
+          <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
         </div>
       );
     }
@@ -45,7 +49,7 @@ const Page = async ({ params }) => {
     console.error('Error fetching wiki data:', error);
     return (
       <div>
-        <NotFound data={WIKIS_NOT_FOUND_DATA} />
+        <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
       </div>
     );
   }

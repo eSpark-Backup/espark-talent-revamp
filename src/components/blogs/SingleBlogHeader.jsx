@@ -10,7 +10,7 @@ const SingleBlogHeader = ({ data, authors }) => {
   const parsedblog = JSON.parse(blogString);
 
   const filteredAuthor = authors?.filter(
-    (author) => author._id === parsedblog.author
+    (author) => author?._id === parsedblog?.author
   )[0];
 
   return (
