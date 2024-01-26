@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
+import Link from 'next/link';
 
 const HeroSection = ({ data }) => {
   return (
@@ -104,28 +105,29 @@ const HeroSection = ({ data }) => {
                     {data?.description}
                   </Typography>
                 )}
-                <Button
-                  color="secondary"
-                  href={data?.button?.link}
-                  variant="secondary"
-                  sx={{
-                    width: { sm: '170px', md: '207.981px' },
-                    height: { sm: '50px', md: '54.149px' },
-                    '@media (min-width: 300px) and (max-width: 767px)': {
-                      width: '170px',
-                      height: '50px',
-                      fontSize: '15px',
-                    },
-                    borderRadius: '6.448px',
-                    fontSize: '17px',
-                    fontWeight: 700,
-                    '&:hover': {
-                      backgroundColor: '#029894',
-                    },
-                  }}
-                >
-                  {data?.button?.label}
-                </Button>
+                <Link href={data?.button?.link} target="_blank">
+                  <Button
+                    color="secondary"
+                    variant="secondary"
+                    sx={{
+                      width: { sm: '170px', md: '207.981px' },
+                      height: { sm: '50px', md: '54.149px' },
+                      '@media (min-width: 300px) and (max-width: 767px)': {
+                        width: '170px',
+                        height: '50px',
+                        fontSize: '15px',
+                      },
+                      borderRadius: '6.448px',
+                      fontSize: '17px',
+                      fontWeight: 700,
+                      '&:hover': {
+                        backgroundColor: '#029894',
+                      },
+                    }}
+                  >
+                    {data?.button?.label}
+                  </Button>
+                </Link>
               </Box>
               {data?.image && (
                 <Box

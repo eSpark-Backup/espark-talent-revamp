@@ -267,6 +267,7 @@ const Perks = ({ data }) => {
                         <ESparkButton
                           title={data[selectedCard]?.content?.buttonText}
                           link={data[selectedCard]?.content?.buttonLink}
+                          target="_blank"
                           color={'secondary'}
                           // size={{sm:'60px', md:'90px', lg:'120px', xl:'120px'}}
                         />

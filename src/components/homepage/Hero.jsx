@@ -1,6 +1,7 @@
 'use client';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
@@ -94,32 +95,34 @@ const Hero = ({ data }) => {
                     xl: '20px',
                   }}
                 >
-                  <Button
-                    sx={{
-                      backgroundColor: '#fff',
-                      display: { xs: 'none', sm: 'flex' },
-                      '&:hover': {
-                        color:
-                          pathName == '/solutions/enterprises'
-                            ? '#fff'
-                            : '#001C63',
-                        backgroundColor: `${
-                          pathName == '/solutions/enterprises'
-                            ? '#001C63'
-                            : '#fff'
-                        }`,
-                      },
+                  <Link href={data.button?.link} target="_blank">
+                    <Button
+                      sx={{
+                        backgroundColor: '#fff',
+                        display: { xs: 'none', sm: 'flex' },
+                        '&:hover': {
+                          color:
+                            pathName == '/solutions/enterprises'
+                              ? '#fff'
+                              : '#001C63',
+                          backgroundColor: `${
+                            pathName == '/solutions/enterprises'
+                              ? '#001C63'
+                              : '#fff'
+                          }`,
+                        },
 
-                      py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
-                      px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
-                      height: '50px',
-                      width: '160px',
-                      color: '#001C63',
-                      fontWeight: '700',
-                    }}
-                  >
-                    {data.button?.label}
-                  </Button>
+                        py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                        px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
+                        height: '50px',
+                        width: '160px',
+                        color: '#001C63',
+                        fontWeight: '700',
+                      }}
+                    >
+                      {data.button?.label}
+                    </Button>
+                  </Link>
                 </Box>
               )}
             </Grid>
