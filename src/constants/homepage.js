@@ -124,7 +124,7 @@ export const PERKS_DATA = [
       heading: 'Hire Hourly Employees',
       paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
       list: [
-        { item: 'Efficient Task Allocation.Cost Efficiency.' },
+        { item: 'Efficient Task Allocation.' },
         { item: 'Flexibility in Scheduling,' },
         { item: 'Dynamic Response to Workload.' },
         { item: 'Adherence to Labor Laws.' },
