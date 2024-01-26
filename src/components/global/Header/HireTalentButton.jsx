@@ -7,7 +7,7 @@ import { HIRE_A_TALENT, HIRE_A_TALENT_LINK } from '@/constants/global/header';
 const HireTalentButton = ({ handleOpenUserMenu, display }) => {
   return (
     <Box sx={{ flexGrow: 0, display, pt: 1 }} className="hireTalentBtnNav">
-      <Link href={HIRE_A_TALENT_LINK}>
+      <Link href={HIRE_A_TALENT_LINK} target='_blank'>
         <Button
           onClick={handleOpenUserMenu}
           size="small"
