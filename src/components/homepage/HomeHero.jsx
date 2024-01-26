@@ -105,6 +105,7 @@ const Hero = ({ data }) => {
                   <ESparkButton
                     title={data.button.label}
                     link={data.button.link}
+                    target="_blank"
                     color={data.button.btnColor}
                     size={'180px'}
                   />

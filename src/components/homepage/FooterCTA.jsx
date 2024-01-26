@@ -89,7 +89,7 @@ const FooterCTA = ({ data }) => {
                     >
                       {data?.description}
                     </Typography>
-                    <Link href={data?.buttonLink}>
+                    <Link href={data?.buttonLink} target="_blank">
                       <Button
                         sx={{
                           py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },

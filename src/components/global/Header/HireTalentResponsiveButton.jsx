@@ -9,7 +9,7 @@ const HireTalentResponsiveButton = ({ handleOpenUserMenu, display }) => {
       sx={{ flexGrow: 0, display, ml: '16px' }}
       className="hireTalentResponsiveBtnNav"
     >
-      <Link href={HIRE_A_TALENT_LINK}>
+      <Link href={HIRE_A_TALENT_LINK} target="_blank">
         <Button
           onClick={handleOpenUserMenu}
           size="small"

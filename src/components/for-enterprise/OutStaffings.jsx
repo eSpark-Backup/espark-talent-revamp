@@ -113,6 +113,7 @@ const OutStaffings = ({ data }) => {
             <ESparkButton
               title={data?.buttonText}
               link={data?.buttonLink}
+              target={'_blank'}
               color={'secondary'}
               size={'170px'}
             />

@@ -147,7 +147,7 @@ const OurExperties = ({ data }) => {
                                   height={60}
                                 />
                               </Box>
-                              <Link href={item?.link}>
+                              <Link href={item?.link} target="_blank">
                                 <Typography
                                   variant="body1"
                                   sx={{
@@ -179,6 +179,7 @@ const OurExperties = ({ data }) => {
               <ESparkButton
                 title={data?.buttonText}
                 link={data?.buttonLink}
+                target="_blank"
                 color={'secondary'}
                 size={'180px'}
               />
