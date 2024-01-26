@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 
