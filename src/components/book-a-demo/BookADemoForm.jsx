@@ -61,7 +61,6 @@ const BookADemoForm = ({ form }) => {
       .required('Url is required'),
     no_of_employees: Yup.number()
       .min(1, 'Minimum 1 employees')
-      .max(10, 'Maximum 10 employees')
       .required('No of emp is required'),
     phone_number: Yup.string()
       .test('phone', 'Invalid Phone Number', (value) =>

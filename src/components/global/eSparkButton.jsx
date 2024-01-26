@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Typography } from '@mui/material';
 import Link from 'next/link';
 
-const ESparkButton = ({ title, link, color, onClick, size, hover }) => {
+const ESparkButton = ({ title, link, color, onClick, size, hover, target }) => {
   let btnVariant;
 
   if (color === 'primary') {
@@ -16,7 +16,7 @@ const ESparkButton = ({ title, link, color, onClick, size, hover }) => {
   }
 
   return (
-    <Link href={link}>
+    <Link href={link} target={target}>
       <Button
         size="small"
         variant={btnVariant}

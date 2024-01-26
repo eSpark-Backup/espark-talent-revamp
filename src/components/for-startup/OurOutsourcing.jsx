@@ -27,7 +27,7 @@ const OurOutsourcing = ({ data }) => {
           sx={{
             color: '#001C63',
             textAlign: 'center',
-            fontSize: { md: '18px', xs: '10px' },
+            fontSize: { md: '18px', xs: '13px' },
             fontStyle: 'normal',
             fontWeight: 400,
             lineHeight: { md: '27.863px', xs: '16.363px' },
@@ -60,7 +60,7 @@ const OurOutsourcing = ({ data }) => {
                 sx={{
                   color: '#001C63',
                   fontWeight: 400,
-                  fontSize: { xs: '10px', sm: '13px', md: '18px' },
+                  fontSize: { xs: '12px', sm: '13px', md: '18px' },
                   lineHeight: { xs: '20px', md: '27.863px' },
                   textAlign: { xs: 'center', md: 'justify' },
                   fontStyle: 'normal',
@@ -93,7 +93,7 @@ const OurOutsourcing = ({ data }) => {
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: { xs: '8.581px', md: '14px' },
+                      fontSize: { xs: '11px', md: '14px' },
                       lineHeight: { xs: '13.729px', md: '23.741px' },
                       textAlign: 'justify',
                       fontWeight: 600,
