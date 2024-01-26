@@ -63,7 +63,7 @@ const BusinessVenture = ({ data }) => {
                     sx={{
                       mb: 2,
                       color: '#001C63',
-                      fontSize: { xs: '8.8px', md: '14px' },
+                      fontSize: { xs: '13px', md: '14px' },
                       lineHeight: { xs: '13.729px', md: '23.741px' },
                       textAlign: 'justify',
                       fontWeight: 600,

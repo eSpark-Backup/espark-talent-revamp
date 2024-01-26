@@ -38,7 +38,7 @@ const TalentIgnite = ({ data }) => {
             <Typography
               sx={{
                 color: '#001C63',
-                fontSize: { xs: '10px', sm: '13px', md: '18px' },
+                fontSize: { xs: '13px', sm: '13px', md: '18px' },
                 lineHeight: { xs: '20px', md: '27.863px' },
                 fontWeight: 400,
                 mb: { xs: '15px', md: '0px' },
