@@ -8,7 +8,6 @@ const WikiSingle = ({ data }) => {
 
   return (
     <>
-      {/* No need for React.Suspense */}
       <Box
         sx={{
           my: { sm: '1%', lg: 0 },
