@@ -19,7 +19,6 @@ const ClientSlider = ({
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
-    // centerMode: true,
     centerPadding: '0',
     loop: true,
     pagination: {

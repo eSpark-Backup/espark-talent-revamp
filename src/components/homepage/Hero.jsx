@@ -39,7 +39,6 @@ const Hero = ({ data }) => {
             >
               {data?.title && (
                 <Typography
-                  // variant={data?.titleVariant}
                   lineHeight={1.4}
                   color={data?.titleColor}
                   fontSize={{

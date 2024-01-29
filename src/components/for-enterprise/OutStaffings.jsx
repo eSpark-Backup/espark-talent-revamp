@@ -49,7 +49,6 @@ const OutStaffings = ({ data }) => {
             container
             sx={{
               justifyContent: 'center',
-              // alignItems: 'center',
               gap: 2,
             }}
           >

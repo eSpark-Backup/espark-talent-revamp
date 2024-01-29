@@ -38,7 +38,6 @@ const InnerHero = ({ data, innerData }) => {
             >
               {data?.title && (
                 <Typography
-                  // variant={data?.titleVariant}
                   lineHeight={1.3}
                   color={data?.titleColor}
                   fontSize={{

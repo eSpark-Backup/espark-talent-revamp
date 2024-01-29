@@ -109,7 +109,6 @@ const OutSourcingItem = ({ data }) => {
                       borderRadius: '20px',
                       px: { lg: '19px', md: '19px', sm: '18px', xs: '17px' },
                       py: { lg: '35px', md: '30px', sm: '25px', xs: '15px' },
-                      // alignItems: 'center',
                       height: {
                         lg: '274.691px',
                         md: '270px',
@@ -142,7 +141,6 @@ const OutSourcingItem = ({ data }) => {
                           xs: '18px',
                         },
                         lineHeight: 1.3,
-                        // pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}
@@ -173,7 +171,6 @@ const OutSourcingItem = ({ data }) => {
                           sx={{
                             color: '#000',
                             fontSize: {
-                              // lg: '16px',
                               md: '14px',
                               sm: '13px',
                               xs: '13px',
