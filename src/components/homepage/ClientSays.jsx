@@ -132,6 +132,8 @@ const ClientSays = ({ data }) => {
                         >
                           <Box>
                             <Image
+                              quality="85"
+                              proprity={true}
                               src={items.image}
                               width={174.981}
                               height={34}

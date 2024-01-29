@@ -38,6 +38,8 @@ const OutSourcingSolution = ({ data }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={item?.icon}
                     alt={`${item?.title} -eSpark Talent`}
                     height={item?.iconHeight}

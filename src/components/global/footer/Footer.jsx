@@ -9,6 +9,7 @@ import FooterTitle from './FooterTitle';
 import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
+import { ImageLoader } from '../imageloader';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -26,6 +27,8 @@ const Footer = ({ data }) => {
               <Grid container>
                 <Grid item lg={5} md={5} sm={12} xs={12}>
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={data?.logo}
                     width={120}
                     height={59}
@@ -70,6 +73,8 @@ const Footer = ({ data }) => {
                     {data?.socialMedia?.map((item, index) => (
                       <Link key={index} href={item?.link}>
                         <Image
+                          quality="85"
+                          proprity={true}
                           src={item?.img}
                           width={17}
                           height={17}

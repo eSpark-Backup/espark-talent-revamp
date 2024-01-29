@@ -9,6 +9,7 @@ import { usePathname, useRouter } from 'next/navigation';
 
 import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
+import { ImageLoader } from '../imageloader';
 
 const Header = () => {
   const pathName = usePathname();
@@ -99,6 +100,8 @@ const Header = () => {
               <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                 <Link href={'/'}>
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={'/images/header/logo.png'}
                     width={100}
                     height={49}

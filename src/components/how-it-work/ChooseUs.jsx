@@ -113,6 +113,8 @@ const ChooseUs = ({ chooseUs }) => {
               }}
             >
               <Image
+                quality="85"
+                proprity={true}
                 src={image}
                 width={420}
                 height={25}

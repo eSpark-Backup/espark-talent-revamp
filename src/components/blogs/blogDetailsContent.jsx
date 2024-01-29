@@ -49,6 +49,8 @@ const BlogDetailsContent = ({ data }) => {
                     rel="noopener noreferrer"
                   >
                     <Image
+                      quality="85"
+                      proprity={true}
                       src={item?.src}
                       width={40}
                       height={40}

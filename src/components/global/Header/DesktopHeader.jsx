@@ -11,6 +11,7 @@ import {
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentButton from './HireTalentButton';
+import { ImageLoader } from '../imageloader';
 
 const DesktopHeader = ({
   submenuAnchor,
@@ -58,6 +59,8 @@ const DesktopHeader = ({
             >
               {page}
               <Image
+                quality="85"
+                proprity={true}
                 src={'/images/header/arrow.svg'}
                 width={13}
                 height={7}
@@ -91,6 +94,8 @@ const DesktopHeader = ({
                       }}
                     >
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={submenuItem.icon}
                         width={30}
                         height={30}

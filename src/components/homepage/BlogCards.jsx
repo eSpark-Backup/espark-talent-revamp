@@ -44,6 +44,8 @@ const BlogCards = ({ data }) => {
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={item?.featureImage}
                         alt={`${item?.title} - eSpark Talent`}
                         width={900}
