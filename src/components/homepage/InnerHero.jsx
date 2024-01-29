@@ -2,10 +2,13 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 const InnerHero = ({ data, innerData }) => {
   const wikiString = JSON.stringify(innerData);
   const parsedWiki = JSON.parse(wikiString);
+  const isLoading = !parsedWiki;
+
   return (
     <>
       <Box
@@ -56,7 +59,11 @@ const InnerHero = ({ data, innerData }) => {
                     xl: 'left',
                   }}
                 >
-                  {parsedWiki?.title}
+                  {isLoading ? (
+                    <Skeleton width={200} height={24} />
+                  ) : (
+                    parsedWiki.title
+                  )}
                 </Typography>
               )}
               {data?.description && (
@@ -78,7 +85,11 @@ const InnerHero = ({ data, innerData }) => {
                     xl: 'left',
                   }}
                 >
-                  {parsedWiki?.shortDescription}
+                  {isLoading ? (
+                    <Skeleton count={3} />
+                  ) : (
+                    parsedWiki.shortDescription
+                  )}
                 </Typography>
               )}
               {data?.button && (
@@ -109,7 +120,11 @@ const InnerHero = ({ data, innerData }) => {
                       fontWeight: '700',
                     }}
                   >
-                    {data.button?.label}
+                    {isLoading ? (
+                      <Skeleton width={100} height={30} />
+                    ) : (
+                      data.button.label
+                    )}
                   </Button>
                 </Box>
               )}
@@ -125,14 +140,18 @@ const InnerHero = ({ data, innerData }) => {
                   justifyContent: 'right',
                 }}
               >
-                <Image
-                  quality="85"
-                  proprity={true}
-                  src={parsedWiki?.heroImage}
-                  alt={`${parsedWiki?.title} - eSpark Talent`}
-                  width={data?.imageWidth}
-                  height={data?.imageHeight}
-                />
+                {isLoading ? (
+                  <Skeleton width={data.imageWidth} height={data.imageHeight} />
+                ) : (
+                  <Image
+                    quality="85"
+                    proprity={true}
+                    src={parsedWiki.heroImage}
+                    alt={`${parsedWiki.title} - eSpark Talent`}
+                    width={data?.imageWidth}
+                    height={data?.imageHeight}
+                  />
+                )}
               </Grid>
             )}
           </Grid>

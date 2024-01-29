@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 import { PortableText } from '@portabletext/react';
 
@@ -29,7 +29,18 @@ const BlogDetailsContent = ({ data }) => {
               textAlign: 'justify',
             }}
           >
-            <PortableText value={data?.body} />
+            {data ? (
+              <PortableText value={data?.body} />
+            ) : (
+              <>
+                <Skeleton
+                  height={20}
+                  width="80%"
+                  style={{ marginBottom: '10px' }}
+                />
+                <Skeleton count={5} height={20} width="100%" />
+              </>
+            )}
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={2}>
@@ -43,20 +54,24 @@ const BlogDetailsContent = ({ data }) => {
             {SOCIAL_LINKS_DATA?.map((item, index) => (
               <Grid item xs={2} sm={1} md={12} sx={{ p: '10px' }} key={index}>
                 <Box>
-                  <Link
-                    href={item?.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      quality="85"
-                      proprity={true}
-                      src={item?.src}
-                      width={40}
-                      height={40}
-                      alt="social-icons"
-                    />
-                  </Link>
+                  {item ? (
+                    <Link
+                      href={item?.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        quality="85"
+                        proprity={true}
+                        src={item?.src}
+                        width={40}
+                        height={40}
+                        alt="social-icons"
+                      />
+                    </Link>
+                  ) : (
+                    <Skeleton circle={true} height={40} width={40} />
+                  )}
                 </Box>
               </Grid>
             ))}
