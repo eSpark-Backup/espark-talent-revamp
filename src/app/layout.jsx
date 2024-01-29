@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic';
 import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 // Dynamically import components that should not be server-rendered
 const Header = dynamic(() => import('@/components/global/Header/Header'), {
@@ -27,7 +28,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <AppRouterCacheProvider>
+        <SkeletonTheme baseColor="#000" highlightColor="#000">
+          <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
@@ -35,7 +37,8 @@ export default function RootLayout({ children }) {
             <FooterCTA data={FOOTER_CTA_DATA} />
             <Footer data={FOOTER_DATA} />
           </ThemeProvider>
-        </AppRouterCacheProvider>
+          </AppRouterCacheProvider>
+        </SkeletonTheme>
       </body>
     </html>
   );

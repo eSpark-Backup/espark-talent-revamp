@@ -15,10 +15,9 @@ const CARD_STYLE = {
 
 const WikiCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay to show loading skeleton
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -100,71 +99,61 @@ const WikiCards = ({ data, categories }) => {
         <Box sx={{ py: '3%' }}>
           <Container>
             <Grid container sx={{ display: 'flex', justifyContent: 'left' }}>
-              {loading
-                ? Array.from({ length: 6 }).map((_, index) => (
-                    <Grid
-                      key={index}
-                      item
-                      lg={4}
-                      md={4}
-                      sm={6}
-                      xs={12}
-                      gap="10px"
+              {filteredData?.map((item) => (
+                <Grid
+                  key={item?.id}
+                  item
+                  lg={4}
+                  md={4}
+                  sm={6}
+                  xs={12}
+                  gap="10px"
+                >
+                  <Box sx={CARD_STYLE}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        gap: '10px',
+                        alignItems: 'center',
+                        pb: '15px',
+                      }}
                     >
-                      <Box sx={CARD_STYLE}>
-                        <Skeleton height={30} />
-                        <Skeleton height={180} />
-                        <Skeleton height={15} width={150} />
-                        <Skeleton height={20} width={200} />
-                        <Skeleton height={20} width={180} />
-                      </Box>
-                    </Grid>
-                  ))
-                : filteredData?.map((item) => (
-                    <Grid
-                      key={item?.id}
-                      item
-                      lg={4}
-                      md={4}
-                      sm={6}
-                      xs={12}
-                      gap="10px"
-                    >
-                      <Box sx={CARD_STYLE}>
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            gap: '10px',
-                            alignItems: 'center',
-                            pb: '15px',
-                          }}
-                        >
-                          <Image
-                            quality="85"
-                            priority={true}
-                            src={item?.iconImage}
-                            height={30}
-                            width={30}
-                            alt={`${item?.title} - eSpark Talent`}
-                          />
-                          <Link href={`/esparkwiki/${item?.slug}`}>
-                            <Typography
-                              color="#000"
-                              variant="body1"
-                              fontWeight={600}
-                              fontSize={{
-                                xs: '15px',
-                                sm: '15px',
-                                md: '14px',
-                                lg: '18px',
-                              }}
-                            >
-                              {' '}
-                              {item?.title}
-                            </Typography>
-                          </Link>
-                        </Box>
-                        <Box sx={{ pb: '15px' }}>
+                      {item?.iconImage ? (
+                        <Image
+                          quality="85"
+                          priority={true}
+                          src={item?.iconImage}
+                          height={30}
+                          width={30}
+                          alt={`${item?.title} - eSpark Talent`}
+                        />
+                      ) : (
+                        <Skeleton width={30} height={30} />
+                      )}
+                      {item?.title ? (
+                        <Link href={`/esparkwiki/${item?.slug}`}>
+                          <Typography
+                            color="#000"
+                            variant="body1"
+                            fontWeight={600}
+                            fontSize={{
+                              xs: '15px',
+                              sm: '15px',
+                              md: '14px',
+                              lg: '18px',
+                            }}
+                          >
+                            {' '}
+                            {item?.title}
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Skeleton width={100} />
+                      )}
+                    </Box>
+                    <Box sx={{ pb: '15px' }}>
+                      {item?.salary ? (
+                        <>
                           <Typography
                             variant="body1"
                             color="#667170"
@@ -191,27 +180,38 @@ const WikiCards = ({ data, categories }) => {
                           >
                             {`USD: ${item?.salary.toLocaleString()} per month`}
                           </Typography>
-                        </Box>
-                        <Box>
-                          <Link href={`/esparkwiki/${item?.slug}`}>
-                            <Typography
-                              variant="body1"
-                              color="#029894"
-                              fontWeight={600}
-                              fontSize={{
-                                xs: '12px',
-                                sm: '12px',
-                                md: '14px',
-                                lg: '20px',
-                              }}
-                            >
-                              {'Job Description >'}
-                            </Typography>
-                          </Link>
-                        </Box>
-                      </Box>
-                    </Grid>
-                  ))}
+                        </>
+                      ) : (
+                        <>
+                          <Skeleton width={100} />
+                          <Skeleton width={150} />
+                        </>
+                      )}
+                    </Box>
+                    <Box>
+                      {item?.slug ? (
+                        <Link href={`/esparkwiki/${item?.slug}`}>
+                          <Typography
+                            variant="body1"
+                            color="#029894"
+                            fontWeight={600}
+                            fontSize={{
+                              xs: '12px',
+                              sm: '12px',
+                              md: '14px',
+                              lg: '20px',
+                            }}
+                          >
+                            {'Job Description >'}
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Skeleton width={150} />
+                      )}
+                    </Box>
+                  </Box>
+                </Grid>
+              ))}
             </Grid>
           </Container>
         </Box>
@@ -219,5 +219,4 @@ const WikiCards = ({ data, categories }) => {
     </>
   );
 };
-
 export default WikiCards;
