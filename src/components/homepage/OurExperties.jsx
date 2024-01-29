@@ -135,6 +135,8 @@ const OurExperties = ({ data }) => {
                             >
                               <Box>
                                 <Image
+                                  quality="85"
+                                  proprity={true}
                                   src={
                                     itemIndex === 0
                                       ? data?.startIcon

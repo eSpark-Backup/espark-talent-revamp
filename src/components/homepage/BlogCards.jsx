@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
+import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
@@ -28,6 +29,7 @@ const BlogCards = ({ data }) => {
   } else if (isMediumScreen) {
     cardsInRow = 6;
   }
+
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
@@ -43,20 +45,34 @@ const BlogCards = ({ data }) => {
                 <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      <Image
-                        src={item?.featureImage}
-                        alt={`${item?.title} - eSpark Talent`}
-                        width={900}
-                        height={100}
-                        style={{ borderRadius: '15px' }}
-                      />
+                      {item ? (
+                        <Image
+                          quality="85"
+                          proprity={true}
+                          src={item?.featureImage}
+                          alt={`${item?.title} - eSpark Talent`}
+                          width={900}
+                          height={100}
+                          style={{ borderRadius: '15px' }}
+                        />
+                      ) : (
+                        <Skeleton
+                          width={900}
+                          height={100}
+                          style={{ borderRadius: '15px' }}
+                        />
+                      )}
                     </span>
                     <span className="date">
-                      {Intl.DateTimeFormat('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: '2-digit',
-                      }).format(new Date('2023-09-27T00:36:00.000Z'))}
+                      {item ? (
+                        Intl.DateTimeFormat('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: '2-digit',
+                        }).format(new Date('2023-09-27T00:36:00.000Z'))
+                      ) : (
+                        <Skeleton width={80} />
+                      )}
                     </span>
                   </Box>
                 </Link>
@@ -75,7 +91,7 @@ const BlogCards = ({ data }) => {
                         lineHeight: '26px',
                       }}
                     >
-                      {item?.title}
+                      {item ? item.title : <Skeleton width={200} height={24} />}
                     </Typography>
                   </Link>
                   <Typography
@@ -93,7 +109,7 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item?.subtitle}
+                    {item ? item.subtitle : <Skeleton count={2} />}
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
                     <Box

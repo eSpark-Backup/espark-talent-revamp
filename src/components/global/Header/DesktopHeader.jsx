@@ -58,6 +58,8 @@ const DesktopHeader = ({
             >
               {page}
               <Image
+                quality="85"
+                proprity={true}
                 src={'/images/header/arrow.svg'}
                 width={13}
                 height={7}
@@ -91,6 +93,8 @@ const DesktopHeader = ({
                       }}
                     >
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={submenuItem.icon}
                         width={30}
                         height={30}
@@ -136,10 +140,7 @@ const DesktopHeader = ({
         ))}
       </Box>
       <Box>
-        <HireTalentButton
-          handleOpenUserMenu={handleOpenUserMenu}
-          // display={{ xs: 'none', md: 'flex' }}
-        />
+        <HireTalentButton handleOpenUserMenu={handleOpenUserMenu} />
       </Box>
     </Box>
   );

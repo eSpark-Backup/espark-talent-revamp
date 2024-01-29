@@ -46,7 +46,6 @@ const SourceBenefits = ({ data }) => {
                 variant={'body1'}
                 color={'secondary'}
                 className="hrFirmDesktop"
-                // sx={{ width: { md: '800px', lg: '900px' } }}
               >
                 {data?.paragraph}
               </Typography>
@@ -76,7 +75,6 @@ const SourceBenefits = ({ data }) => {
                 <Box
                   sx={{
                     width: { md: '311.696px', lg: '401.696px' },
-                    // height: { md: '214.641px', lg: '240.641px' },
                     display: 'flex',
                     flexDirection: 'column',
                     borderRadius: '20px',

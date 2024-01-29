@@ -65,46 +65,39 @@ const Form = ({ formContent }) => {
       .required('Phone number is required'),
   });
 
-  const {
-    values,
-    errors,
-    touched,
-    handleChange,
-    handleSubmit,
-    // setFieldError,
-    setFieldValue,
-  } = useFormik({
-    initialValues: PartnerFormData,
-    validationSchema: profileValidationSchema,
-    onSubmit: async (values, action) => {
-      try {
-        values.country = selectedOption;
+  const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
+    useFormik({
+      initialValues: PartnerFormData,
+      validationSchema: profileValidationSchema,
+      onSubmit: async (values, action) => {
+        try {
+          values.country = selectedOption;
 
-        const emailResult = await emailjs.send(serviceid, templeteid, {
-          first_name: values.first_name,
-          last_name: values.last_name,
-          email: values.email,
-          phone_number: values.phone_number,
-          country: values.country,
-          linkedin_profile_link: values.linkedin_profile_link,
-        });
+          const emailResult = await emailjs.send(serviceid, templeteid, {
+            first_name: values.first_name,
+            last_name: values.last_name,
+            email: values.email,
+            phone_number: values.phone_number,
+            country: values.country,
+            linkedin_profile_link: values.linkedin_profile_link,
+          });
 
-        if (emailResult.status === 200) {
+          if (emailResult.status === 200) {
+            action.resetForm();
+            values.phone_number = '';
+          }
+        } catch (error) {
           action.resetForm();
           values.phone_number = '';
-        }
-      } catch (error) {
-        action.resetForm();
-        values.phone_number = '';
 
-        console.error('Error submitting the form:', error);
-      } finally {
-        setTimeout(() => {
-          setIsOpen(true);
-        }, 2000);
-      }
-    },
-  });
+          console.error('Error submitting the form:', error);
+        } finally {
+          setTimeout(() => {
+            setIsOpen(true);
+          }, 2000);
+        }
+      },
+    });
 
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));

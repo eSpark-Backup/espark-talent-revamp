@@ -4,13 +4,12 @@ import './globals.css';
 import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 import dynamic from 'next/dynamic';
-import store from '@/redux/store';
 import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 // Dynamically import components that should not be server-rendered
 const Header = dynamic(() => import('@/components/global/Header/Header'), {
@@ -29,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Provider store={store}>
+        <SkeletonTheme baseColor="#000" highlightColor="#000">
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
               <CssBaseline />
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
               <Footer data={FOOTER_DATA} />
             </ThemeProvider>
           </AppRouterCacheProvider>
-        </Provider>
+        </SkeletonTheme>
       </body>
     </html>
   );
