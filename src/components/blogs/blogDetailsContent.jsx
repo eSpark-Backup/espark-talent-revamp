@@ -53,6 +53,7 @@ const BlogDetailsContent = ({ data }) => {
                       width={40}
                       height={40}
                       alt="social-icons"
+                      priority={1}
                     />
                   </Link>
                 </Box>

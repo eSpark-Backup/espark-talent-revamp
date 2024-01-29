@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import { useTheme } from '@mui/system';
+import { useTheme } from '@mui/material/styles';
 
 const OutSourcingAdvantage = ({ data }) => {
   const theme = useTheme();
