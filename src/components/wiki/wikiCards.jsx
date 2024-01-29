@@ -15,7 +15,7 @@ const CARD_STYLE = {
 
 const WikiCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {

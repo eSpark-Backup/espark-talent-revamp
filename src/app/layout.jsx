@@ -30,13 +30,13 @@ export default function RootLayout({ children }) {
       <body>
         <SkeletonTheme baseColor="#000" highlightColor="#000">
           <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Header />
-            <Box>{children}</Box>
-            <FooterCTA data={FOOTER_CTA_DATA} />
-            <Footer data={FOOTER_DATA} />
-          </ThemeProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <Header />
+              <Box>{children}</Box>
+              <FooterCTA data={FOOTER_CTA_DATA} />
+              <Footer data={FOOTER_DATA} />
+            </ThemeProvider>
           </AppRouterCacheProvider>
         </SkeletonTheme>
       </body>
