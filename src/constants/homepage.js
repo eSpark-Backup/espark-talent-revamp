@@ -414,28 +414,28 @@ export const ACHIEVEMENTS_DATA = {
   title: 'Achievement & Awards',
   items: [
     {
-      image: '/images/homepage/achievement-awards/achievement-1.svg',
+      image: '/images/homepage/achievement-awards/achievement-1.png',
       imageAlt: 'Description for image 1',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-2.svg',
+      image: '/images/homepage/achievement-awards/achievement-2.png',
       imageAlt: 'Description for image 2',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-3.svg',
+      image: '/images/homepage/achievement-awards/achievement-3.png',
       imageAlt: 'Description for image 1',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-4.svg',
+      image: '/images/homepage/achievement-awards/achievement-4.png',
       imageAlt: 'Description for image 2',
       imageWidth: 300,
       imageHeight: 200,
