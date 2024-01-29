@@ -3,7 +3,6 @@ import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
-import { ImageLoader } from './imageloader';
 
 const NotFoundPage = ({ data }) => {
   return (

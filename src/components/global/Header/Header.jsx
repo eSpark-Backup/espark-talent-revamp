@@ -9,7 +9,6 @@ import { usePathname, useRouter } from 'next/navigation';
 
 import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
-import { ImageLoader } from '../imageloader';
 
 const Header = () => {
   const pathName = usePathname();

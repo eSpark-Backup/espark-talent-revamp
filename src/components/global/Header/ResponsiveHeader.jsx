@@ -14,7 +14,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentResponsiveButton from './HireTalentResponsiveButton';
-import { ImageLoader } from '../imageloader';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
