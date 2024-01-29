@@ -9,7 +9,6 @@ import FooterTitle from './FooterTitle';
 import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
-import { ImageLoader } from '../imageloader';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();

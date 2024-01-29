@@ -6,7 +6,6 @@ import { Container, Box, Typography, Grid, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { ImageLoader } from './imageloader';
 
 const ClientSlider = ({
   bgColor,

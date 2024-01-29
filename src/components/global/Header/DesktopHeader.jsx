@@ -11,7 +11,6 @@ import {
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentButton from './HireTalentButton';
-import { ImageLoader } from '../imageloader';
 
 const DesktopHeader = ({
   submenuAnchor,
