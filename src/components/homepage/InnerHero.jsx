@@ -111,7 +111,7 @@ const InnerHero = ({ data, innerData }) => {
                   justifyContent: 'right',
                 }}
               >
-                <Image
+                <Image quality="85" proprity={true}
                   src={parsedWiki?.heroImage}
                   alt={`${parsedWiki?.title} - eSpark Talent`}
                   width={data?.imageWidth}
@@ -241,6 +241,8 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 <Image
+                  quality="85"
+                  proprity={true}
                   src={parsedWiki?.heroImage}
                   alt={`${parsedWiki?.title} - eSpark Talent`}
                   width={data?.imageWidth}

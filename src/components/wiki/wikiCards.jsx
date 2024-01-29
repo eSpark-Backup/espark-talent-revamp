@@ -109,6 +109,8 @@ const WikiCards = ({ data, categories }) => {
                       }}
                     >
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={item?.iconImage}
                         height={30}
                         width={30}

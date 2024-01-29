@@ -76,6 +76,8 @@ const HRFirmSuccessSlider = ({ card }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={item.image}
                     width={600}
                     height={200}

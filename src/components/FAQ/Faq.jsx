@@ -47,6 +47,8 @@ const Faq = ({ data }) => {
                   <AccordionSummary
                     expandIcon={
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={'/images/homepage/faq-sections/open.svg'}
                         width={
                           isSmallScreen
@@ -123,6 +125,8 @@ const Faq = ({ data }) => {
                   <AccordionSummary
                     expandIcon={
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={'/images/homepage/faq-sections/open.svg'}
                         width={
                           isSmallScreen

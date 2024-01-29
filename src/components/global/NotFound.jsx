@@ -3,6 +3,7 @@ import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { ImageLoader } from './imageloader';
 
 const NotFoundPage = ({ data }) => {
   return (
@@ -23,6 +24,8 @@ const NotFoundPage = ({ data }) => {
           }}
         >
           <Image
+            quality="85"
+            proprity={true}
             src={data?.image || NOT_FOUND_DATA.image}
             alt="404 Error"
             width={500}

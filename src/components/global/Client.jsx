@@ -6,6 +6,7 @@ import { Container, Box, Typography, Grid, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { ImageLoader } from './imageloader';
 
 const ClientSlider = ({
   bgColor,
@@ -73,6 +74,8 @@ const ClientSlider = ({
             <SwiperSlide key={index}>
               <Link href={item?.link}>
                 <Image
+                  quality="85"
+                  proprity={true}
                   src={item?.image}
                   alt={`${item?.alt} -eSpark Talent`}
                   height={item?.imageHeight}
