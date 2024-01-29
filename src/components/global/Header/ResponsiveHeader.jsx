@@ -177,10 +177,7 @@ const ResponsiveHeader = ({
               </Accordion>
             );
           })}
-          <HireTalentResponsiveButton
-            handleOpenUserMenu={handleOpenUserMenu}
-            // display={{ xs: 'flex', md: 'none' }}
-          />
+          <HireTalentResponsiveButton handleOpenUserMenu={handleOpenUserMenu} />
         </Box>
       )}
     </Box>

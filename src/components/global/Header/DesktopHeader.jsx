@@ -141,10 +141,7 @@ const DesktopHeader = ({
         ))}
       </Box>
       <Box>
-        <HireTalentButton
-          handleOpenUserMenu={handleOpenUserMenu}
-          // display={{ xs: 'none', md: 'flex' }}
-        />
+        <HireTalentButton handleOpenUserMenu={handleOpenUserMenu} />
       </Box>
     </Box>
   );

@@ -93,13 +93,11 @@ const ClientSlider = ({
                     height={'37px'}
                     sx={{
                       width: {
-                        // xs: '150px',
                         sm: '184px',
                         md: '184px',
                         lg: '186px',
                       },
                       height: {
-                        // xs: '30px',
                         sm: '35px',
                         md: '35px',
                         lg: '37px',

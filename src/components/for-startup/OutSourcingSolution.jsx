@@ -29,7 +29,6 @@ const OutSourcingSolution = ({ data }) => {
               >
                 <Box
                   sx={{
-                    // display: 'flex',
                     borderRadius: '30px',
                     p: '20px',
                     alignItems: 'center',

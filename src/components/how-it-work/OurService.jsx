@@ -105,7 +105,6 @@ const OurService = ({ ourService }) => {
                       sx={{
                         color: '#001C63',
                         fontSize: { xs: '12.286px', md: '14.2px' },
-                        // textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '23.344px', md: '26.979px' },

@@ -55,7 +55,6 @@ const FooterCTA = ({ data }) => {
                 >
                   <Box>
                     <Typography
-                      // variant="h1"
                       sx={{
                         color: '#ECECED',
                         fontSize: {
@@ -148,7 +147,6 @@ const FooterCTA = ({ data }) => {
                       alt="images"
                       className="footerCta"
                       style={{
-                        // position: 'absolute',
                         bottom: 0,
                         marginTop: is375Screen
                           ? `-25px`
