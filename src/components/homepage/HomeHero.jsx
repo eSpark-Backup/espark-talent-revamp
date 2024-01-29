@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { useTheme } from '@mui/system';
+import { useTheme } from '@mui/material/styles';
 import ESparkButton from '../global/eSparkButton';
 
 const Hero = ({ data }) => {
@@ -58,7 +58,6 @@ const Hero = ({ data }) => {
                     },
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
-                      // fontSize: '23px !important',
                     },
                   }}
                 >
@@ -86,7 +85,6 @@ const Hero = ({ data }) => {
                     py: '10px',
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
-                      // fontSize: '13px',
                     },
                   }}
                 >
@@ -128,7 +126,6 @@ const Hero = ({ data }) => {
                   src={data?.image}
                   alt={data?.imageAlt}
                   sx={{ maxWidth: { xs: '100%', sm: '50%', md: '100%' } }}
-                  // sx={{ width: '435.2px', height: '418.607px' }}
                 />
               </Grid>
             )}

@@ -49,7 +49,6 @@ const OutStaffings = ({ data }) => {
             container
             sx={{
               justifyContent: 'center',
-              // alignItems: 'center',
               gap: 2,
             }}
           >
@@ -63,6 +62,8 @@ const OutStaffings = ({ data }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={list?.listIcon}
                     alt="List Icon"
                     width={24}

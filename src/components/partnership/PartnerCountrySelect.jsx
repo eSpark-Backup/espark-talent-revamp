@@ -1,11 +1,9 @@
-// import { CountryCode } from 'constants/CountryCodes';
 import React from 'react';
 
 const PartnerCountrySelect = ({
   options,
   selectedOption,
   setSelectedOption,
-  // setSelectedFlag,
 }) => {
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);

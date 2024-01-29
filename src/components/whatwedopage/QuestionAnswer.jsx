@@ -24,7 +24,6 @@ const QuestionAnswer = ({ data }) => {
               sx={{
                 backgroundColor: 'rgba(59, 89, 152, 0.04)',
                 borderRadius: '17.311px',
-                // width: { lg: '594.66px' },
                 mt: { xs: '40px', md: '0px' },
               }}
             >
@@ -37,6 +36,8 @@ const QuestionAnswer = ({ data }) => {
                 }}
               >
                 <Image
+                  quality="85"
+                  proprity={true}
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
                   width={440}
                   height={200}
