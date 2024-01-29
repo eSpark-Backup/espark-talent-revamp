@@ -9,6 +9,8 @@ const StarRating = ({ stars }) => {
       {ratings.map((rating, index) => (
         <li key={index}>
           <Image
+            quality="85"
+            proprity={true}
             src={
               rating <= stars
                 ? '/images/homepage/our-clients/bright-star.svg'

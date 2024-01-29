@@ -26,13 +26,8 @@ const Perks = ({ data }) => {
             sx={{
               borderRadius: '20px',
               mx: 'auto',
-              // width: { md: '980px', lg: '1250px' },
-              // '@media (min-width: 768px) and (max-width: 1023px)': {
-              //   width: '90%',
-              // },
               background:
                 'linear-gradient(97deg, #029894 0.53%, #036764 102.09%)',
-              // py: '3%',
             }}
           >
             <Grid
@@ -63,20 +58,12 @@ const Perks = ({ data }) => {
                       key={index}
                       onClick={() => handleCardClick(index)}
                       sx={{
-                        // width: { md: 'auto' },
-                        // '@media (min-width: 768px) and (max-width: 1023px)': {
-                        //   width: '251px',
-                        // },
-                        // '@media (min-width: 600px) and (max-width: 767px)': {
-                        //   width: '100%',
-                        // },
                         display: 'flex',
                         gap: '10px',
                         borderRadius: '20px',
                         mb: '20px',
                         py: '20px',
                         px: { xs: '20px', md: '20px' },
-                        // mx: { xs: '15px', md: '20px' },
                         background:
                           index === selectedCard
                             ? 'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF'
@@ -213,6 +200,8 @@ const Perks = ({ data }) => {
                           }}
                         >
                           <Image
+                            quality="85"
+                            proprity={true}
                             src={`/images/homepage/our-perks/list-icon.svg`}
                             alt="List Icon"
                             height={
@@ -269,7 +258,6 @@ const Perks = ({ data }) => {
                           link={data[selectedCard]?.content?.buttonLink}
                           target="_blank"
                           color={'secondary'}
-                          // size={{sm:'60px', md:'90px', lg:'120px', xl:'120px'}}
                         />
                       </Box>
                     </Grid>

@@ -1,8 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import Skeleton from 'react-loading-skeleton';
 
 const CARD_STYLE = {
   borderRadius: '10px',
@@ -14,6 +15,15 @@ const CARD_STYLE = {
 
 const WikiCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const onSelectCategory = (category) => {
     setSelectedCategory(category ? category?._id : 'all');
@@ -59,7 +69,7 @@ const WikiCards = ({ data, categories }) => {
             color={selectedCategory === 'all' ? 'white' : '#001C63'}
             fontWeight="600"
           >
-            All
+            {loading ? <Skeleton width={30} height={12} /> : 'All'}
           </Typography>
         </Button>
         {categories?.map((category, index) => (
@@ -80,7 +90,7 @@ const WikiCards = ({ data, categories }) => {
               color={selectedCategory === category?._id ? 'white' : '#001C63'}
               fontWeight="600"
             >
-              {category?.title}
+              {loading ? <Skeleton width={50} height={12} /> : category?.title}
             </Typography>
           </Button>
         ))}
@@ -108,73 +118,96 @@ const WikiCards = ({ data, categories }) => {
                         pb: '15px',
                       }}
                     >
-                      <Image
-                        src={item?.iconImage}
-                        height={30}
-                        width={30}
-                        alt={`${item?.title} - eSpark Talent`}
-                      />
-                      <Link href={`/esparkwiki/${item?.slug}`}>
-                        <Typography
-                          color="#000"
-                          variant="body1"
-                          fontWeight={600}
-                          fontSize={{
-                            xs: '15px',
-                            sm: '15px',
-                            md: '14px',
-                            lg: '18px',
-                          }}
-                        >
-                          {' '}
-                          {item?.title}
-                        </Typography>
-                      </Link>
+                      {item?.iconImage ? (
+                        <Image
+                          quality="85"
+                          priority={true}
+                          src={item?.iconImage}
+                          height={30}
+                          width={30}
+                          alt={`${item?.title} - eSpark Talent`}
+                        />
+                      ) : (
+                        <Skeleton width={30} height={30} />
+                      )}
+                      {item?.title ? (
+                        <Link href={`/esparkwiki/${item?.slug}`}>
+                          <Typography
+                            color="#000"
+                            variant="body1"
+                            fontWeight={600}
+                            fontSize={{
+                              xs: '15px',
+                              sm: '15px',
+                              md: '14px',
+                              lg: '18px',
+                            }}
+                          >
+                            {' '}
+                            {item?.title}
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Skeleton width={100} />
+                      )}
                     </Box>
                     <Box sx={{ pb: '15px' }}>
-                      <Typography
-                        variant="body1"
-                        color="#667170"
-                        fontWeight={600}
-                        fontSize={{
-                          xs: '10px',
-                          sm: '12px',
-                          md: '12px',
-                          lg: '15px',
-                        }}
-                      >
-                        {'Average Salary'}
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        color="secondary"
-                        fontSize={{
-                          xs: '17px',
-                          sm: '17px',
-                          md: '15px',
-                          lg: '18px',
-                        }}
-                        fontWeight={600}
-                      >
-                        {`USD: ${item?.salary.toLocaleString()} per month`}
-                      </Typography>
+                      {item?.salary ? (
+                        <>
+                          <Typography
+                            variant="body1"
+                            color="#667170"
+                            fontWeight={600}
+                            fontSize={{
+                              xs: '10px',
+                              sm: '12px',
+                              md: '12px',
+                              lg: '15px',
+                            }}
+                          >
+                            {'Average Salary'}
+                          </Typography>
+                          <Typography
+                            variant="body1"
+                            color="secondary"
+                            fontSize={{
+                              xs: '17px',
+                              sm: '17px',
+                              md: '15px',
+                              lg: '18px',
+                            }}
+                            fontWeight={600}
+                          >
+                            {`USD: ${item?.salary.toLocaleString()} per month`}
+                          </Typography>
+                        </>
+                      ) : (
+                        <>
+                          <Skeleton width={100} />
+                          <Skeleton width={150} />
+                        </>
+                      )}
                     </Box>
                     <Box>
-                      <Link href={`/esparkwiki/${item?.slug}`}>
-                        <Typography
-                          variant="body1"
-                          color="#029894"
-                          fontWeight={600}
-                          fontSize={{
-                            xs: '12px',
-                            sm: '12px',
-                            md: '14px',
-                            lg: '20px',
-                          }}
-                        >
-                          {'Job Description >'}
-                        </Typography>
-                      </Link>
+                      {item?.slug ? (
+                        <Link href={`/esparkwiki/${item?.slug}`}>
+                          <Typography
+                            variant="body1"
+                            color="#029894"
+                            fontWeight={600}
+                            fontSize={{
+                              xs: '12px',
+                              sm: '12px',
+                              md: '14px',
+                              lg: '20px',
+                            }}
+                          >
+                            {'Job Description >'}
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Skeleton width={150} />
+                      )}
                     </Box>
                   </Box>
                 </Grid>

@@ -18,7 +18,6 @@ const ClientSlider = ({
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
-    // centerMode: true,
     centerPadding: '0',
     loop: true,
     pagination: {
@@ -73,6 +72,8 @@ const ClientSlider = ({
             <SwiperSlide key={index}>
               <Link href={item?.link}>
                 <Image
+                  quality="85"
+                  proprity={true}
                   src={item?.image}
                   alt={`${item?.alt} -eSpark Talent`}
                   height={item?.imageHeight}

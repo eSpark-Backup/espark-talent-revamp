@@ -134,6 +134,8 @@ const ResponsiveHeader = ({
                           }}
                         >
                           <Image
+                            quality="85"
+                            proprity={true}
                             src={submenuItem.icon}
                             width={30}
                             height={30}
@@ -174,10 +176,7 @@ const ResponsiveHeader = ({
               </Accordion>
             );
           })}
-          <HireTalentResponsiveButton
-            handleOpenUserMenu={handleOpenUserMenu}
-            // display={{ xs: 'flex', md: 'none' }}
-          />
+          <HireTalentResponsiveButton handleOpenUserMenu={handleOpenUserMenu} />
         </Box>
       )}
     </Box>
