@@ -148,6 +148,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={item?.icon}
                     width={isXsOrSm ? 40 : 49}
                     height={49}
@@ -228,6 +230,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              proprity={true}
               onClick={() => {
                 handleControlSwiper('next');
               }}
@@ -248,6 +252,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              proprity={true}
               src={teamData.arrowIconCircle}
               width={17}
               height={17}
@@ -265,6 +271,8 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              proprity={true}
               onClick={() => handleControlSwiper('prev')}
               src={teamData.arrowIconRight}
               width={17}

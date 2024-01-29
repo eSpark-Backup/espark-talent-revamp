@@ -78,6 +78,8 @@ const SingleBlogHeader = ({ data, authors }) => {
           <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 2 }}>
             <Box className="image" pl={{ xs: '0', md: '5%' }}>
               <Image
+                quality="85"
+                proprity={true}
                 src={parsedblog?.bannerImage}
                 alt={`${parsedblog?.alt} -eSpark Talent`}
                 width={860}

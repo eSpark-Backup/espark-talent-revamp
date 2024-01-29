@@ -23,6 +23,8 @@ const NotFoundPage = ({ data }) => {
           }}
         >
           <Image
+            quality="85"
+            proprity={true}
             src={data?.image || NOT_FOUND_DATA.image}
             alt="404 Error"
             width={500}

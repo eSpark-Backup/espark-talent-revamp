@@ -45,7 +45,6 @@ const HRFirmSuccessSlider = ({ card }) => {
                 borderRadius: '13.764px',
                 border: '0.918px solid #E5E5E5',
                 background: '#FFF',
-                // height: { xs: '118.584px', },
                 height: '118.584px',
                 maxWidth: '320.31px !important',
                 padding: {
@@ -76,6 +75,8 @@ const HRFirmSuccessSlider = ({ card }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    proprity={true}
                     src={item.image}
                     width={600}
                     height={200}

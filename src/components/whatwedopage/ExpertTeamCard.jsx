@@ -129,6 +129,8 @@ const ExpertTeamCard = ({ teamData }) => {
                     }}
                   >
                     <Image
+                      quality="85"
+                      proprity={true}
                       src={item?.icon}
                       width={65}
                       height={65}

@@ -20,7 +20,7 @@ const CareerCards = ({ data, categories }) => {
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data?.filter((item) => item?.jobCategory._ref === selectedCategory);
+      : data?.filter((item) => item?.jobCategory === selectedCategory);
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;

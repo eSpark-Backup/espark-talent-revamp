@@ -39,7 +39,6 @@ const Hero = ({ data }) => {
             >
               {data?.title && (
                 <Typography
-                  // variant={data?.titleVariant}
                   lineHeight={1.4}
                   color={data?.titleColor}
                   fontSize={{
@@ -138,6 +137,8 @@ const Hero = ({ data }) => {
                 }}
               >
                 <Image
+                  quality="85"
+                  proprity={true}
                   src={data?.image}
                   alt={`${data?.imageAlt} - eSpark Talent`}
                   width={data?.imageWidth || 450}

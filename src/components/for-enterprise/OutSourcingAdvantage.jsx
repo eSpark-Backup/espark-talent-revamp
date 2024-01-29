@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import { useTheme } from '@mui/system';
+import { useTheme } from '@mui/material/styles';
 
 const OutSourcingAdvantage = ({ data }) => {
   const theme = useTheme();
@@ -60,6 +60,8 @@ const OutSourcingAdvantage = ({ data }) => {
                       }}
                     >
                       <Image
+                        quality="85"
+                        proprity={true}
                         src={list?.listIcon}
                         alt="List Icon"
                         width={15}
@@ -92,6 +94,8 @@ const OutSourcingAdvantage = ({ data }) => {
               sx={{ display: 'flex', alignItems: 'center' }}
             >
               <Image
+                quality="85"
+                proprity={true}
                 src={data?.image}
                 height={data?.imageHeight}
                 width={data?.imageWidth}
