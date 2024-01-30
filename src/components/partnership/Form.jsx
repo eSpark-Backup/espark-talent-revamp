@@ -5,7 +5,6 @@ import { useFormik } from 'formik';
 import { PopupModal } from 'react-calendly';
 import emailjs from '@emailjs/browser';
 
-// import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
@@ -93,7 +92,6 @@ const Form = ({ formContent }) => {
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
-              // Auto close after 2 seconds
               setTimeout(() => {
                 handleClose();
               }, 3000);
@@ -105,7 +103,6 @@ const Form = ({ formContent }) => {
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
-            // Auto close after 2 seconds
             setTimeout(() => {
               handleClose();
             }, 3000);

@@ -94,7 +94,6 @@ const BookADemoForm = ({ form }) => {
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
-              // Auto close after 2 seconds
               setTimeout(() => {
                 handleClose();
               }, 3000);
@@ -106,7 +105,6 @@ const BookADemoForm = ({ form }) => {
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
-            // Auto close after 2 seconds
             setTimeout(() => {
               handleClose();
             }, 3000);
