@@ -48,7 +48,7 @@ const Faq = ({ data }) => {
                     expandIcon={
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
                         width={
                           isSmallScreen
@@ -126,7 +126,7 @@ const Faq = ({ data }) => {
                     expandIcon={
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
                         width={
                           isSmallScreen

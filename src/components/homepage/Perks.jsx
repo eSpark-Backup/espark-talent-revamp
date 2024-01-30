@@ -201,7 +201,7 @@ const Perks = ({ data }) => {
                         >
                           <Image
                             quality="85"
-                            proprity={true}
+                            priority={true}
                             src={`/images/homepage/our-perks/list-icon.svg`}
                             alt="List Icon"
                             height={

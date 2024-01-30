@@ -140,7 +140,7 @@ const FooterCTA = ({ data }) => {
                   >
                     <Image
                       quality="85"
-                      proprity={true}
+                      priority={true}
                       src={data?.image}
                       width={is600Screen ? 300 : 360}
                       height={is600Screen ? 290 : 350}

@@ -48,7 +48,7 @@ const BlogCards = ({ data }) => {
                       {item ? (
                         <Image
                           quality="85"
-                          proprity={true}
+                          priority={true}
                           src={item?.featureImage}
                           alt={`${item?.title} - eSpark Talent`}
                           width={900}

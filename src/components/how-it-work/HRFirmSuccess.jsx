@@ -47,7 +47,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
                   >
                     <Image
                       quality="85"
-                      proprity={true}
+                      priority={true}
                       src={item.image}
                       width={200}
                       height={100}
