@@ -145,7 +145,7 @@ const InnerHero = ({ data, innerData }) => {
                 ) : (
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     src={parsedWiki.heroImage}
                     alt={`${parsedWiki.title} - eSpark Talent`}
                     width={data?.imageWidth}

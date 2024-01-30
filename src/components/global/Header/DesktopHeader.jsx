@@ -59,7 +59,7 @@ const DesktopHeader = ({
               {page}
               <Image
                 quality="85"
-                proprity={true}
+                priority={true}
                 src={'/images/header/arrow.svg'}
                 width={13}
                 height={7}
@@ -94,7 +94,7 @@ const DesktopHeader = ({
                     >
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={submenuItem.icon}
                         width={30}
                         height={30}
