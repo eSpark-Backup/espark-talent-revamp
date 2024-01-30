@@ -108,7 +108,7 @@ const BookADemoForm = ({ form }) => {
         } finally {
           setTimeout(() => {
             setIsOpen(true);
-          }, 2000);
+          }, 5000);
         }
       },
     });
