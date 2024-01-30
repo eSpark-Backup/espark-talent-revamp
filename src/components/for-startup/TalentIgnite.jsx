@@ -61,7 +61,7 @@ const TalentIgnite = ({ data }) => {
             >
               <Image
                 quality="85"
-                proprity={true}
+                priority={true}
                 src={data?.image}
                 width={400}
                 height={300}

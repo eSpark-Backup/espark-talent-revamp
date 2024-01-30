@@ -42,7 +42,7 @@ const AwardAchievement = ({ data, design, background }) => {
                   <Link href={item?.link}>
                     <Image
                       quality="85"
-                      proprity={true}
+                      priority={true}
                       src={item?.image}
                       height={150}
                       width={150}
@@ -76,7 +76,7 @@ const AwardAchievement = ({ data, design, background }) => {
                   <Link href={item?.link}>
                     <Image
                       quality="85"
-                      proprity={true}
+                      priority={true}
                       src={item?.image}
                       height={150}
                       width={150}

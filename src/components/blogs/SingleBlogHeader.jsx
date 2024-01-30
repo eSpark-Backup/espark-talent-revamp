@@ -79,7 +79,7 @@ const SingleBlogHeader = ({ data, authors }) => {
             <Box className="image" pl={{ xs: '0', md: '5%' }}>
               <Image
                 quality="85"
-                proprity={true}
+                priority={true}
                 src={parsedblog?.bannerImage}
                 alt={`${parsedblog?.alt} -eSpark Talent`}
                 width={860}

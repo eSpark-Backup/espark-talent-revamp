@@ -118,7 +118,7 @@ const OutSourcingWonder = ({ data }) => {
                     >
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={item?.icon}
                         alt={`${item?.title} -eSpark Talent`}
                         height={

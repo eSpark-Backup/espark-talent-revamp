@@ -135,7 +135,7 @@ const ResponsiveHeader = ({
                         >
                           <Image
                             quality="85"
-                            proprity={true}
+                            priority={true}
                             src={submenuItem.icon}
                             width={30}
                             height={30}

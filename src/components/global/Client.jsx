@@ -73,7 +73,7 @@ const ClientSlider = ({
               <Link href={item?.link}>
                 <Image
                   quality="85"
-                  proprity={true}
+                  priority={true}
                   src={item?.image}
                   alt={`${item?.alt} -eSpark Talent`}
                   height={item?.imageHeight}
