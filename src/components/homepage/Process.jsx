@@ -22,7 +22,8 @@ const Process = ({ data }) => {
           py: 5,
         },
       }}
-    ><Box
+    >
+      <Box
         sx={{
           width: '100%',
           textAlign: 'center',

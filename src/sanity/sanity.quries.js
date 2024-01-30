@@ -1,20 +1,20 @@
 import client from './sanity.config';
+
 export async function getJob() {
   return client.fetch(
-    ` *[_type == "job"]
-    {
+    `*[_type == "job"] {
       _id,
       applyLink,
-       description,
-       experience,
-       "jobCategory":jobCategory._ref,
-       jobTiming,
-       jobType,
-       lastDateToApply,
-       location,
-       "slug":slug.current,
-       title
-      } `,
+      description,
+      experience,
+      "jobCategory": jobCategory->_ref,
+      jobTiming,
+      jobType,
+      lastDateToApply,
+      location,
+      "slug": slug.current,
+      title
+    }`,
     {
       next: {
         revalidate: 600,
@@ -22,6 +22,7 @@ export async function getJob() {
     }
   );
 }
+
 export async function getJobCategories() {
   return client.fetch(
     ` *[_type == "jobCategory"]
@@ -62,18 +63,19 @@ title,}
 
 export async function getSingleBlog(slug) {
   return client.fetch(
-    `*[_type == "blog" && slug.current == $slug][0]
-    {_id,
-  "author":author._ref,
-"bannerImage":bannerImage.asset->url,
-bannerTitle,
-body,
-"featureImage":featureImage.asset->url,
-publishedAt,
- "slug": slug.current,
-subtitle,
-tags,
-title,}`,
+    `*[_type == "blog" && slug.current == $slug][0] {
+      _id,
+      "author": author->_ref,
+      "bannerImage": bannerImage.asset->url,
+      bannerTitle,
+      body,
+      "featureImage": featureImage.asset->url,
+      publishedAt,
+      "slug": slug.current,
+      subtitle,
+      tags,
+      title
+    }`,
     { slug },
     {
       next: {
@@ -82,13 +84,15 @@ title,}`,
     }
   );
 }
+
 export async function getBlogCategories() {
   return client.fetch(
-    ` *[_type == "jobCategory"] 
- {_id,
- id,
- "slug": slug.current,
- title } `,
+    `*[_type == "jobCategory"] {
+      _id,
+      id,
+      "slug": slug.current,
+      title
+    }`,
     {
       next: {
         revalidate: 600,
@@ -96,6 +100,7 @@ export async function getBlogCategories() {
     }
   );
 }
+
 export async function getWiki() {
   return client.fetch(
     ` *[_type == "wiki"] 
@@ -121,21 +126,19 @@ export async function getWiki() {
 
 export async function getSingleWiki(slug) {
   return client.fetch(
-    `*[_type == "wiki" && slug.current == $slug][0]
-    {
+    `*[_type == "wiki" && slug.current == $slug][0] {
       _id,
-  id,
- title,
- "slug": slug.current,
- "wikiCategory": wikiCategory._ref,
- content,
- "heroImage":heroImage.asset->url,
- "iconImage":iconImage.asset->url,
- salary,
- shortDescription,
- title
-    }
-    `,
+      id,
+      title,
+      "slug": slug.current,
+      "wikiCategory": wikiCategory->_ref,
+      content,
+      "heroImage": heroImage.asset->url,
+      "iconImage": iconImage.asset->url,
+      salary,
+      shortDescription,
+      title
+    }`,
     { slug },
     {
       next: {
@@ -144,13 +147,16 @@ export async function getSingleWiki(slug) {
     }
   );
 }
+
+
 export async function getWikiCategories() {
   return client.fetch(
-    ` *[_type == "wikiCategory"]
- {_id,
- id,
- "slug": slug.current,
- title } `,
+    `*[_type == "wikiCategory"] {
+      _id,
+      id,
+      "slug": slug.current,
+      title
+    }`,
     {
       next: {
         revalidate: 600,

@@ -87,16 +87,16 @@ const Form = ({ formContent }) => {
             linkedin_profile_link: values.linkedin_profile_link,
           });
 
-           if (emailResult.status === 200) {
+          if (emailResult.status === 200) {
             action.resetForm();
             values.phone_number = '';
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
               // Auto close after 2 seconds
-            setTimeout(() => {
-              handleClose();
-            }, 3000);
+              setTimeout(() => {
+                handleClose();
+              }, 3000);
             }, 2000);
           }
         } catch (error) {
@@ -325,7 +325,7 @@ const Form = ({ formContent }) => {
           </Box>
         </form>
       </Box>
-       <BasicModal text={modalText} open={open} handleClose={handleClose} />
+      <BasicModal text={modalText} open={open} handleClose={handleClose} />
       <div id="partners" ref={partnersRef} />
       <PopupModal
         url="https://calendly.com/esparktalents/60min"
