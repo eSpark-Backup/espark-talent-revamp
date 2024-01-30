@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
-import { PortableText } from '@portabletext/react';
 
 const BlogDetailsContent = ({ data }) => {
   return (
@@ -30,7 +29,7 @@ const BlogDetailsContent = ({ data }) => {
             }}
           >
             {data ? (
-              <PortableText value={data?.body} />
+              <Box dangerouslySetInnerHTML={{ __html: data?.content }}></Box>
             ) : (
               <>
                 <Skeleton

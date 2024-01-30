@@ -49,7 +49,7 @@ const BlogCards = ({ data }) => {
                         <Image
                           quality="85"
                           priority={true}
-                          src={item?.featureImage}
+                          src={item?.imageLink}
                           alt={`${item?.title} - eSpark Talent`}
                           width={900}
                           height={100}
@@ -64,15 +64,7 @@ const BlogCards = ({ data }) => {
                       )}
                     </span>
                     <span className="date">
-                      {item ? (
-                        Intl.DateTimeFormat('en-US', {
-                          year: 'numeric',
-                          month: 'short',
-                          day: '2-digit',
-                        }).format(new Date('2023-09-27T00:36:00.000Z'))
-                      ) : (
-                        <Skeleton width={80} />
-                      )}
+                      {item ? item?.postedBy?.date : <Skeleton width={80} />}
                     </span>
                   </Box>
                 </Link>
@@ -109,7 +101,7 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item ? item.subtitle : <Skeleton count={2} />}
+                    {item ? item.mainParagraph : <Skeleton count={2} />}
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
                     <Box
