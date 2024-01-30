@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,
@@ -70,13 +70,7 @@ const Perks = dynamic(() => import('@/components/homepage/Perks'), {
 const Faq = dynamic(() => import('@/components/FAQ/Faq'), {
   ssr: false,
 });
-const Page = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  });
+const page = () => {
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
@@ -112,4 +106,4 @@ const Page = () => {
     </>
   );
 };
-export default Page;
+export default page;

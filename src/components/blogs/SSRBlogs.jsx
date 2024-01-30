@@ -1,12 +1,13 @@
 import React from 'react';
-import { getBlog } from '@/sanity/sanity.quries';
 import BlogCards from '../homepage/BlogCards';
+import { BLOGS_DATA } from '@/constants/blogs';
 
-export default async function SSRBlogs() {
-  const blog = await getBlog();
+const SSRBlogs = () => {
   return (
     <>
-      <BlogCards data={blog?.slice(0, 3)} smCol={2} />
+      <BlogCards data={BLOGS_DATA?.slice(0, 3)} smCol={2} />
     </>
   );
-}
+};
+
+export default SSRBlogs;
