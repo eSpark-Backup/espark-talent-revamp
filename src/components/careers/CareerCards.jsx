@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
@@ -13,14 +13,22 @@ import {
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 
-const CareerCards = ({ data, categories }) => {
+const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
+
+  const jobCategories = Array.from(
+    new Set(
+      data?.flatMap((item) =>
+        Array.isArray(item?.category) ? item?.category : [item?.category]
+      )
+    )
+  );
 
   const filteredData =
     selectedCategory === 'all'
       ? data
-      : data?.filter((item) => item?.jobCategory === selectedCategory);
+      : data?.filter((item) => item?.category.includes(selectedCategory));
 
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
@@ -37,14 +45,7 @@ const CareerCards = ({ data, categories }) => {
     setSelectedCategory(event.target.value);
     setPage(1);
   };
-  const handlePaginationChange = (event, value) => {
-    setPage(value);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-  useEffect(() => {}, [selectedCategory]);
+
   return (
     <>
       <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
@@ -53,6 +54,7 @@ const CareerCards = ({ data, categories }) => {
             <Select
               labelId="job-category-label"
               id="job-category"
+              className="dropdown"
               value={selectedCategory}
               onChange={handleJobCategoryChange}
               fullWidth
@@ -73,9 +75,9 @@ const CareerCards = ({ data, categories }) => {
               }}
             >
               <MenuItem value="all">All</MenuItem>
-              {categories.map((category, index) => (
-                <MenuItem key={`job-category-${index}`} value={category?._id}>
-                  {category?.title}
+              {jobCategories.map((category, index) => (
+                <MenuItem key={`job-category-${index}`} value={category}>
+                  {category}
                 </MenuItem>
               ))}
             </Select>
@@ -107,7 +109,7 @@ const CareerCards = ({ data, categories }) => {
                 px={{ xs: '10px', sm: '20px' }}
               >
                 <Typography variant="h3" color="secondary">
-                  {item?.title}
+                  {item?.heading}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -119,19 +121,7 @@ const CareerCards = ({ data, categories }) => {
                   }}
                   color="#000"
                 >
-                  {`${item?.location}`}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  fontSize={{
-                    xs: '12px',
-                    sm: '12px',
-                    md: '15px',
-                    lg: '20px',
-                  }}
-                  color="#000"
-                >
-                  {`${item?.lastDateToApply}`}
+                  {`${item?.location[0]}, ${item?.location[1]} `}
                 </Typography>
               </Grid>
               <Grid
@@ -181,7 +171,7 @@ const CareerCards = ({ data, categories }) => {
                 <Box py={{ xs: '10px', sm: '10px' }}>
                   <ESparkButton
                     title={`Apply Now >`}
-                    link={item?.applyLink}
+                    link={item?.link}
                     color={'primary'}
                   />
                 </Box>
@@ -196,7 +186,7 @@ const CareerCards = ({ data, categories }) => {
               <Pagination
                 count={Math.ceil(filteredData.length / perPage)}
                 page={page}
-                onChange={handlePaginationChange}
+                onChange={(event, value) => setPage(value)}
                 color="primary"
                 size={
                   isSmallScreen
@@ -207,6 +197,8 @@ const CareerCards = ({ data, categories }) => {
                         ? 'large'
                         : 'medium'
                 }
+                // showFirstButton
+                // showLastButton
                 sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
                 renderItem={(item) => (
                   <PaginationItem
@@ -221,6 +213,8 @@ const CareerCards = ({ data, categories }) => {
                     }}
                   />
                 )}
+                // prevIcon={<KeyboardArrowLeft />}
+                // nextIcon={<KeyboardArrowRight />}
               />
             </Box>
           )}
