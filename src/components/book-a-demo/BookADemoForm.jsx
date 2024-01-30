@@ -95,9 +95,9 @@ const BookADemoForm = ({ form }) => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
               // Auto close after 2 seconds
-            setTimeout(() => {
-              handleClose();
-            }, 3000);
+              setTimeout(() => {
+                handleClose();
+              }, 3000);
             }, 2000);
           }
         } catch (error) {

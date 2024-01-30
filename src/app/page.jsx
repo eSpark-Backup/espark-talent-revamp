@@ -81,7 +81,7 @@ const Page = () => {
 
     const delay = setTimeout(() => {
       setShowBlogs(true);
-    }, 1000); 
+    }, 1000);
 
     return () => clearTimeout(delay);
   }, []);
@@ -105,15 +105,17 @@ const Page = () => {
         lineHeight={{ xs: '30px !important', sm: '20px !important' }}
         fontWeight={500}
       />
-       {showBlogs && <><Process data={PROCESS_DATA} />
-      <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
-      <Perks data={PERKS_DATA} />
-      <BenefitsWorks data={BENEFITS_WORKS_DATA} />
-      <OurExperties data={EXPERTIES_DATA} />
-      <ClientSays data={OUR_CLIENT_SAYS} />
-        <HomeBlogs />
-      </>
-      }
+      {showBlogs && (
+        <>
+          <Process data={PROCESS_DATA} />
+          <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
+          <Perks data={PERKS_DATA} />
+          <BenefitsWorks data={BENEFITS_WORKS_DATA} />
+          <OurExperties data={EXPERTIES_DATA} />
+          <ClientSays data={OUR_CLIENT_SAYS} />
+          <HomeBlogs />
+        </>
+      )}
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}
