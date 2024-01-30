@@ -100,7 +100,7 @@ const Header = () => {
                 <Link href={'/'}>
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     src={'/images/header/logo.png'}
                     width={100}
                     height={49}

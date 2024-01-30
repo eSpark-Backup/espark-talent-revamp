@@ -127,7 +127,7 @@ const OurOutsourcing = ({ data }) => {
             >
               <Image
                 quality="85"
-                proprity={true}
+                priority={true}
                 src={data?.image}
                 width={380}
                 height={300}

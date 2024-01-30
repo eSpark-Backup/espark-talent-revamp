@@ -10,7 +10,7 @@ const StarRating = ({ stars }) => {
         <li key={index}>
           <Image
             quality="85"
-            proprity={true}
+            priority={true}
             src={
               rating <= stars
                 ? '/images/homepage/our-clients/bright-star.svg'

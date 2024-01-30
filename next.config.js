@@ -12,5 +12,5 @@ module.exports = {
       },
     ],
   },
-  swcMinify: false
+  swcMinify: false,
 };

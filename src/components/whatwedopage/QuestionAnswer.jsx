@@ -37,7 +37,7 @@ const QuestionAnswer = ({ data }) => {
               >
                 <Image
                   quality="85"
-                  proprity={true}
+                  priority={true}
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
                   width={440}
                   height={200}
