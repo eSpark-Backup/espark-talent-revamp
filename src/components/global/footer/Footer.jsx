@@ -27,7 +27,7 @@ const Footer = ({ data }) => {
                 <Grid item lg={5} md={5} sm={12} xs={12}>
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     src={data?.logo}
                     width={120}
                     height={59}
@@ -73,7 +73,7 @@ const Footer = ({ data }) => {
                       <Link key={index} href={item?.link}>
                         <Image
                           quality="85"
-                          proprity={true}
+                          priority={true}
                           src={item?.img}
                           width={17}
                           height={17}

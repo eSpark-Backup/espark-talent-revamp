@@ -63,7 +63,7 @@ const OutStaffings = ({ data }) => {
                 >
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     src={list?.listIcon}
                     alt="List Icon"
                     width={24}

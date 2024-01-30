@@ -61,7 +61,7 @@ const OutSourcingAdvantage = ({ data }) => {
                     >
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={list?.listIcon}
                         alt="List Icon"
                         width={15}
@@ -95,7 +95,7 @@ const OutSourcingAdvantage = ({ data }) => {
             >
               <Image
                 quality="85"
-                proprity={true}
+                priority={true}
                 src={data?.image}
                 height={data?.imageHeight}
                 width={data?.imageWidth}
