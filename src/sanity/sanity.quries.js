@@ -148,7 +148,6 @@ export async function getSingleWiki(slug) {
   );
 }
 
-
 export async function getWikiCategories() {
   return client.fetch(
     `*[_type == "wikiCategory"] {
