@@ -144,7 +144,7 @@ const WhyChooseOurHr = ({ data }) => {
                           <ListItemIcon sx={{ minWidth: '30px' }}>
                             <Image
                               quality="85"
-                              proprity={true}
+                              priority={true}
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
@@ -219,7 +219,7 @@ const WhyChooseOurHr = ({ data }) => {
                 >
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     onClick={() => {
                       handleControlSwiper('next');
                     }}
@@ -241,7 +241,7 @@ const WhyChooseOurHr = ({ data }) => {
                 >
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     src={data.arrowIconCircle}
                     width={17}
                     height={17}
@@ -260,7 +260,7 @@ const WhyChooseOurHr = ({ data }) => {
                 >
                   <Image
                     quality="85"
-                    proprity={true}
+                    priority={true}
                     onClick={() => handleControlSwiper('prev')}
                     src={data.arrowIconRight}
                     width={17}

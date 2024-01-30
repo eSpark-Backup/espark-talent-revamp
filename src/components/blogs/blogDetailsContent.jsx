@@ -62,7 +62,7 @@ const BlogDetailsContent = ({ data }) => {
                     >
                       <Image
                         quality="85"
-                        proprity={true}
+                        priority={true}
                         src={item?.src}
                         width={40}
                         height={40}
