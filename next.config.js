@@ -2,6 +2,23 @@
 const nextConfig = {};
 
 module.exports = nextConfig;
+
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+    ];
+  },
+};
+
 module.exports = {
   images: {
     remotePatterns: [
