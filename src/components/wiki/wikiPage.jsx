@@ -1,28 +1,18 @@
-// import { getSingleWiki } from '@/sanity/sanity.quries';
-// import InnerHero from '@/components/homepage/InnerHero';
-// import WikiSingle from '@/components/wiki/WikiSingle';
-// import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
+import { getSingleWiki } from '@/sanity/sanity.quries';
+import InnerHero from '@/components/homepage/InnerHero';
+import WikiSingle from '@/components/wiki/WikiSingle';
+import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 
-// const WikiPage = async ({ params }) => {
-//   const slug = params.wiki;
-//   const wiki = await getSingleWiki(slug);
+const WikiPage = async ({ params }) => {
+  const slug = params.wiki;
+  const wiki = await getSingleWiki(slug);
 
-//   return (
-//     <div>
-//       <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
-//       <WikiSingle data={wiki} />
-//     </div>
-//   );
-// };
-
-// export default WikiPage;
-
-import React from 'react';
-
-const wikiPage = () => {
   return (
-    <div>{/* <InnerHero data={WIKI_HERO_DATA} innerData={wiki} /> */}</div>
+    <div>
+      <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
+      <WikiSingle data={wiki} />
+    </div>
   );
 };
 
-export default wikiPage;
+export default WikiPage;
