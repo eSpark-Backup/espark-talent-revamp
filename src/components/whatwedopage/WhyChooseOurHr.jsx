@@ -12,7 +12,6 @@ const WhyChooseOurHr = ({ data }) => {
   const swiperRef = useRef(null);
 
   const handleControlSwiper = (type) => {
-    console.log(type, 'type');
     switch (type) {
       case 'next':
         swiperRef?.current?.swiper?.slidePrev();
@@ -144,10 +143,12 @@ const WhyChooseOurHr = ({ data }) => {
                         >
                           <ListItemIcon sx={{ minWidth: '30px' }}>
                             <Image
+                              quality="85"
+                              priority={true}
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
-                              alt={item.alt}
+                              alt={`${item?.alt} - eSpark Talent`}
                             />
                           </ListItemIcon>
                         </Box>
@@ -204,12 +205,12 @@ const WhyChooseOurHr = ({ data }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  my: 2,
+                  my: { xs: 1, sm: 2 },
                 }}
               >
                 <Box
                   sx={{
-                    minWidth: { xs: '12px', md: '23px' },
+                    minWidth: { xs: '18px', md: '23px' },
                     height: { xs: '15px', md: '23px' },
                     display: 'flex',
                     justifyContent: 'center',
@@ -217,13 +218,15 @@ const WhyChooseOurHr = ({ data }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    priority={true}
                     onClick={() => {
                       handleControlSwiper('next');
                     }}
                     src={data.arrowIconLeft}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>
@@ -237,16 +240,18 @@ const WhyChooseOurHr = ({ data }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    priority={true}
                     src={data.arrowIconCircle}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>
                 <Box
                   sx={{
-                    minWidth: { xs: '12px', md: '23px' },
+                    minWidth: { xs: '18px', md: '23px' },
                     height: { xs: '15px', md: '23px' },
                     display: 'flex',
                     justifyContent: 'center',
@@ -254,11 +259,13 @@ const WhyChooseOurHr = ({ data }) => {
                   }}
                 >
                   <Image
+                    quality="85"
+                    priority={true}
                     onClick={() => handleControlSwiper('prev')}
                     src={data.arrowIconRight}
                     width={17}
                     height={17}
-                    alt={data.alt}
+                    alt={`${data?.alt} - eSpark Talent`}
                     className="swiper-controller-icon"
                   />
                 </Box>

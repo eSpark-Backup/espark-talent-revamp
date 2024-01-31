@@ -41,10 +41,12 @@ const AwardAchievement = ({ data, design, background }) => {
                 >
                   <Link href={item?.link}>
                     <Image
+                      quality="85"
+                      priority={true}
                       src={item?.image}
                       height={150}
                       width={150}
-                      alt={item?.alt}
+                      alt={`${item?.alt} -eSpark Talent`}
                     />
                   </Link>
                 </Grid>
@@ -73,10 +75,12 @@ const AwardAchievement = ({ data, design, background }) => {
                 >
                   <Link href={item?.link}>
                     <Image
+                      quality="85"
+                      priority={true}
                       src={item?.image}
                       height={150}
                       width={150}
-                      alt={item?.alt}
+                      alt={`${item?.alt} - eSpark Talent`}
                     />
                   </Link>
                 </Grid>

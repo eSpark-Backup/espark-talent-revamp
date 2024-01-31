@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { useTheme } from '@mui/system';
+import { useTheme } from '@mui/material/styles';
 import ESparkButton from '../global/eSparkButton';
 
 const Hero = ({ data }) => {
@@ -58,7 +58,6 @@ const Hero = ({ data }) => {
                     },
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
-                      // fontSize: '23px !important',
                     },
                   }}
                 >
@@ -86,7 +85,6 @@ const Hero = ({ data }) => {
                     py: '10px',
                     [theme.breakpoints.down('sm')]: {
                       textAlign: 'center',
-                      // fontSize: '13px',
                     },
                   }}
                 >
@@ -100,31 +98,15 @@ const Hero = ({ data }) => {
                     display: 'flex',
                     flexDirection: { xs: 'column', sm: 'row' },
                     alignItems: 'center',
-                    // [theme.breakpoints.down('sm')]: {
-                    //   display: 'none',
-                    // },
                   }}
                 >
                   <ESparkButton
                     title={data.button.label}
                     link={data.button.link}
+                    target="_blank"
                     color={data.button.btnColor}
                     size={'180px'}
                   />
-                  {/* <Button
-                    sx={{
-                      backgroundColor: '#fff',
-                      '&:hover': {
-                        backgroundColor: '#fff',
-                      },
-                      height: '50px',
-                      width: '160px',
-                      color: '#001C63 ',
-                      fontWeight: '700',
-                    }}
-                  >
-                    {data.button?.label}
-                  </Button> */}
                 </Box>
               )}
             </Grid>
@@ -144,7 +126,6 @@ const Hero = ({ data }) => {
                   src={data?.image}
                   alt={data?.imageAlt}
                   sx={{ maxWidth: { xs: '100%', sm: '50%', md: '100%' } }}
-                  // sx={{ width: '435.2px', height: '418.607px' }}
                 />
               </Grid>
             )}

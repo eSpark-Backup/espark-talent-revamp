@@ -3,7 +3,6 @@ import React from 'react';
 
 import Image from 'next/image';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
 
 const OutStaffings = ({ data }) => {
@@ -11,35 +10,92 @@ const OutStaffings = ({ data }) => {
     <>
       <Box sx={{ background: '#F7F8FB', py: '3%', my: '2%' }}>
         <Container>
-          <ParagraphTitle
-            title={`Trust eSpark Talent's Outstaffing Services`}
-            paragraph={`Partnering With Us Is Remarkable.`}
-          />
+          <Box
+            sx={{
+              pb: '30px',
+              px: { md: '20%', sm: '10%', xs: '2%' },
+            }}
+          >
+            <Typography
+              color={'secondary'}
+              sx={{
+                textAlign: 'center',
+                flexWrap: 'wrap',
+                fontWeight: 600,
+                mb: { xs: 1, sm: 0 },
+                lineHeight: { sm: '38px', md: '40px', lg: '42.289px' },
+                fontSize: {
+                  xs: '20px',
+                  sm: '24px',
+                  md: '25px',
+                  lg: '32px',
+                },
+              }}
+            >
+              {`Trust eSpark Talent's Outstaffing Services`}
+            </Typography>
+            <Typography
+              color={'secondary'}
+              sx={{
+                textAlign: 'center',
+                fontSize: { xs: '14px', sm: '16px', md: '18px' },
+                fontWeight: 400,
+              }}
+            >
+              {`Partnering With Us Is Remarkable.`}
+            </Typography>
+          </Box>
           <Grid
             container
             sx={{
               justifyContent: 'center',
-              alignItems: 'center',
               gap: 2,
             }}
           >
             {data?.items?.map((list, itemIndex) => (
-              <Grid item xs={5} key={itemIndex}>
-                <Box sx={{ py: '20px', display: 'flex', gap: '10px' }}>
+              <Grid item xs={12} sm={5.5} key={itemIndex}>
+                <Box
+                  sx={{
+                    py: '20px',
+                    display: 'flex',
+                    gap: '10px',
+                  }}
+                >
                   <Image
+                    quality="85"
+                    priority={true}
                     src={list?.listIcon}
                     alt="List Icon"
-                    width={15}
-                    height={15}
+                    width={24}
+                    height={24}
                   />
-                  <Typography variant="h4" color="secondary">
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: '16px',
+                        sm: '18px',
+                        md: '20px',
+                        lg: '25px',
+                      },
+                      fontWeight: 500,
+                    }}
+                    color="secondary"
+                  >
                     {list?.title}
                   </Typography>
                 </Box>
                 <Box>
                   <Typography
                     variant="body1"
-                    sx={{ color: '#000', fontSize: '18px' }}
+                    sx={{
+                      color: '#000',
+                      fontSize: {
+                        xs: '14px',
+                        sm: '18px',
+                        md: '18px',
+                        lg: '18px',
+                      },
+                    }}
                   >
                     {list?.paragraph}
                   </Typography>
@@ -58,6 +114,7 @@ const OutStaffings = ({ data }) => {
             <ESparkButton
               title={data?.buttonText}
               link={data?.buttonLink}
+              target={'_blank'}
               color={'secondary'}
               size={'170px'}
             />

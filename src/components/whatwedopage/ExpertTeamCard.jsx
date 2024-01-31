@@ -18,11 +18,12 @@ const ExpertTeamCard = ({ teamData }) => {
             display: 'flex',
             justifyContent: 'center',
             pb: { md: '45px', xs: '10px' },
+            mt: { xs: '22px', md: '0px' },
           }}
         >
           <Typography
             sx={{
-              mx: '20%',
+              mx: { xs: '5%', md: '16%' },
               color: '#001C63',
               fontSize: { md: '32px', xs: '20px' },
               fontStyle: 'normal',
@@ -78,38 +79,62 @@ const ExpertTeamCard = ({ teamData }) => {
                 sx={{
                   borderRadius: '11px',
                   backgroundColor: '#fff',
+                  width: '320px',
                   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
+                  mx: 'auto !important',
                   p: { xs: '39px 28px 20px 28px', md: '48px 31px 24px 31px' },
                   m: 1,
-                  // minHeight: { xs: '250px', md: '250px' },
+                  '@media (min-width: 768px) and (max-width: 890px)': {
+                    width: '280px ',
+                    height: '200.036px',
+                  },
+                  '@media (min-width: 890px) and (max-width: 1050px)': {
+                    width: '330px ',
+                    height: '200.036px',
+                  },
+                  '@media (min-width: 1051px) and (max-width: 1150px)': {
+                    width: '380px ',
+                    height: '200.036px',
+                  },
+                  '@media (min-width: 1151px) and (max-width: 1259px)': {
+                    width: '450px ',
+                    height: '200.036px',
+                  },
+                  '@media (min-width: 360px) and (max-width: 767px)': {
+                    width: '260px ',
+                    height: '180.036px',
+                  },
+                  '@media (min-width: 276px) and (max-width: 315px)': {
+                    width: '180px ',
+                  },
+                  '@media (min-width: 316px) and (max-width: 359px)': {
+                    width: '195px ',
+                    height: '225px',
+                  },
                 }}
               >
                 <Box
                   sx={{
-                    // width: {
-                    //   md: '320px',
-                    //   sm: '258.036px',
-                    // },
-
                     margin: '0px auto',
                   }}
                 >
                   <Box
                     sx={{
-                      // mt: { xs: 1, sm: 2 },
                       display: 'flex',
                       justifyContent: 'center',
                       mb: { xs: '12px', md: '15px' },
                       width: { xs: '39px', md: '49px' },
                       height: { xs: '39px', md: '49px' },
-                      // p: 1,
+                      mx: 'auto',
                     }}
                   >
                     <Image
+                      quality="85"
+                      priority={true}
                       src={item?.icon}
                       width={65}
                       height={65}
-                      alt={item.alt}
+                      alt={`${item?.alt} - eSpark Talent`}
                       className="its-our-job-card-image"
                     />
                   </Box>
@@ -123,8 +148,6 @@ const ExpertTeamCard = ({ teamData }) => {
                         fontWeight: 600,
                         lineHeight: { xs: '24.4px', md: '26.4px' },
                         mb: { xs: '9px', md: '11px' },
-                        // letterSpacing:index > 0 && "0.65px"
-                        // mt: { lg: 1 },
                       }}
                     >
                       {item?.title}
@@ -132,12 +155,11 @@ const ExpertTeamCard = ({ teamData }) => {
                     <Typography
                       sx={{
                         color: '#000',
-                        fontSize: { lg: '17px', xs: '13.024px' },
+                        fontSize: { lg: '16px', xs: '13.024px' },
                         textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '24px', md: '30.4px' },
-                        // mt: { lg: 1 },
                       }}
                     >
                       {item?.paragraph}

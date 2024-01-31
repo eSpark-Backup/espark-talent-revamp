@@ -17,73 +17,12 @@ const Process = ({ data }) => {
           px: 2,
           py: 5,
         },
-        '@media (min-width: 300px) and (max-width: 599px)': {
+        '@media (min-width: 280px) and (max-width: 599px)': {
           px: 2,
           py: 5,
         },
       }}
     >
-      <Box
-        sx={{
-          width: '100%',
-          textAlign: 'center',
-          mb: { xs: 4, lg: 4 },
-          '@media (min-width: 600px) and (max-width: 719px)': {
-            mb: 2,
-          },
-          '@media (min-width: 360px) and (max-width: 599px)': {
-            mb: 1,
-          },
-        }}
-      >
-        <Typography
-          component={'h2'}
-          sx={{
-            color: '#001C63',
-            fontSize: { sm: '28px !important', md: '32px !important' },
-            fontStyle: 'normal',
-            fontWeight: 600,
-            lineHeight: { sm: '35px', md: '40.106px' },
-            '@media (min-width: 600px) and (max-width: 767px)': {
-              fontSize: '23px !important',
-              lineHeight: '35px',
-            },
-            '@media (min-width: 360px) and (max-width: 599px)': {
-              fontSize: '23px !important',
-              lineHeight: '22px',
-            },
-            '@media (min-width: 300px) and (max-width: 359px)': {
-              fontSize: '20px !important',
-              lineHeight: '27px',
-            },
-          }}
-        >
-          {data?.title}
-        </Typography>
-        <Typography
-          component={'p'}
-          sx={{
-            color: '#001C63',
-            fontSize: { sm: '15px !important', md: '18px !important' },
-            fontStyle: 'normal',
-            fontWeight: 400,
-            lineHeight: '39.602px',
-            '@media (min-width: 600px) and (max-width: 719px)': {
-              fontSize: '15px !important',
-              lineHeight: '35px',
-            },
-            '@media (min-width: 360px) and (max-width: 599px)': {
-              fontSize: '12px !important',
-            },
-            '@media (min-width: 300px) and (max-width: 359px)': {
-              fontSize: '12px !important',
-              lineHeight: '25px',
-            },
-          }}
-        >
-          {data?.subTitle}
-        </Typography>
-      </Box>
       {data?.processes?.map((process, index) => (
         <Box
           key={index}
@@ -103,7 +42,7 @@ const Process = ({ data }) => {
               py: 1.5,
               gap: 2,
             },
-            '@media (min-width: 300px) and (max-width: 359px)': {
+            '@media (min-width: 280px) and (max-width: 359px)': {
               flexDirection: 'column',
               alignItems: process?.alignment == 'right' ? 'end' : 'start',
               pb: 2,
@@ -120,7 +59,7 @@ const Process = ({ data }) => {
               display: 'flex',
               justifyContent: 'start',
               order: `${process?.alignment == 'right' ? 2 : 1}`,
-              '@media (min-width: 300px) and (max-width: 359px)': {
+              '@media (min-width: 280px) and (max-width: 359px)': {
                 order: 1,
               },
             }}
@@ -144,7 +83,7 @@ const Process = ({ data }) => {
                   width: '76px',
                   height: '68px',
                 },
-                '@media (min-width: 300px) and (max-width: 359px)': {
+                '@media (min-width: 280px) and (max-width: 359px)': {
                   width: '100px',
                   height: '100px',
                 },
@@ -167,7 +106,7 @@ const Process = ({ data }) => {
                 width: '280px',
                 gap: 0.5,
               },
-              '@media (min-width: 300px) and (max-width: 359px)': {
+              '@media (min-width: 280px) and (max-width: 359px)': {
                 textAlign: 'left',
               },
               display: 'flex',
@@ -206,9 +145,11 @@ const Process = ({ data }) => {
               component="p"
               sx={{
                 color: '#001C63',
-                fontSize: { sm: '18px !important' },
+                fontSize: { sm: '17px !important' },
                 fontStyle: 'normal',
                 fontWeight: 400,
+                textAlign: 'justify',
+                direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
                 '@media (min-width: 500px) and (max-width: 767px)': {
                   fontSize: '13px !important',
@@ -216,6 +157,10 @@ const Process = ({ data }) => {
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
                   fontSize: '11px !important',
+                  lineHeight: '15px',
+                },
+                '@media (min-width: 280px) and (max-width: 359px)': {
+                  fontSize: '12px !important',
                   lineHeight: '15px',
                 },
               }}

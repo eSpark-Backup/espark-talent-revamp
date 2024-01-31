@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,10 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ParagraphTitle from './ParagraphTitle';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import ESparkButton from '../global/eSparkButton';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const OurExperties = ({ data }) => {
   const swiperSettings = {
@@ -22,9 +19,7 @@ const OurExperties = ({ data }) => {
     spaceBetween: 20,
     loop: false,
     pagination: false,
-    // pagination: {
-    //   clickable: false,
-    // },
+    module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -57,13 +52,7 @@ const OurExperties = ({ data }) => {
         '@media (min-width: 600px)': { background: '#F7F8FB', py: 6 },
       }}
     >
-      <Container
-        sx={
-          {
-            //  width: { md: '1020px', lg: '1250px' }
-          }
-        }
-      >
+      <Container>
         <ParagraphTitle title={data?.title} />
         <Box
           sx={{
@@ -77,19 +66,18 @@ const OurExperties = ({ data }) => {
           }}
         >
           <Swiper {...swiperSettings}>
-            {data?.sections?.map((section, index) => (
-              <Grid
-                key={index}
-                container
-                spacing={2}
-                sx={{
-                  mx: 'auto',
-                }}
-              >
-                <SwiperSlide>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                mx: 'auto',
+              }}
+            >
+              {data?.sections?.map((section, index) => (
+                <SwiperSlide key={index}>
                   {section?.lists?.map((list, listIndex) => (
                     <Grid
-                      key={listIndex}
+                      key={`${index}-${listIndex}`}
                       item
                       xs={6}
                       sm={6}
@@ -136,7 +124,7 @@ const OurExperties = ({ data }) => {
                         <Box sx={{ pb: 2 }}>
                           {list?.listItems?.map((item, itemIndex) => (
                             <Box
-                              key={itemIndex}
+                              key={`${index}-${listIndex}-${itemIndex}`}
                               sx={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -147,6 +135,8 @@ const OurExperties = ({ data }) => {
                             >
                               <Box>
                                 <Image
+                                  quality="85"
+                                  priority={true}
                                   src={
                                     itemIndex === 0
                                       ? data?.startIcon
@@ -159,7 +149,7 @@ const OurExperties = ({ data }) => {
                                   height={60}
                                 />
                               </Box>
-                              <Link href={item?.link}>
+                              <Link href={item?.link} target="_blank">
                                 <Typography
                                   variant="body1"
                                   sx={{
@@ -179,8 +169,8 @@ const OurExperties = ({ data }) => {
                     </Grid>
                   ))}
                 </SwiperSlide>
-              </Grid>
-            ))}
+              ))}
+            </Grid>
             <Box
               sx={{
                 width: '100%',
@@ -191,6 +181,7 @@ const OurExperties = ({ data }) => {
               <ESparkButton
                 title={data?.buttonText}
                 link={data?.buttonLink}
+                target="_blank"
                 color={'secondary'}
                 size={'180px'}
               />

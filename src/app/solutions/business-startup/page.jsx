@@ -24,7 +24,7 @@ import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/ BusinessVenture';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero data={STARTUP_HERO_DATA} />
@@ -33,6 +33,7 @@ const page = () => {
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
+        fontSize={'24px !important'}
         fontWeight={500}
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
@@ -52,4 +53,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

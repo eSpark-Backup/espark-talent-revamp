@@ -39,8 +39,8 @@ const DesktopHeader = ({
           ml: { lg: '46px' },
         }}
       >
-        {PAGES?.map((page) => (
-          <Box key={page}>
+        {PAGES?.map((page, index) => (
+          <Box key={index}>
             <Button
               onClick={(event) => handleOpenUserMenu(event, page)}
               sx={{
@@ -58,6 +58,8 @@ const DesktopHeader = ({
             >
               {page}
               <Image
+                quality="85"
+                priority={true}
                 src={'/images/header/arrow.svg'}
                 width={13}
                 height={7}
@@ -72,9 +74,8 @@ const DesktopHeader = ({
               onClose={() => handleCloseUserMenu(page)}
             >
               {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
-                <Box key={submenuItem?.label}>
+                <Box key={subIndex}>
                   <MenuItem
-                    key={submenuItem?.label}
                     onClick={() =>
                       handleSubmenuItemClickedAndClose(submenuItem, page)
                     }
@@ -92,6 +93,8 @@ const DesktopHeader = ({
                       }}
                     >
                       <Image
+                        quality="85"
+                        priority={true}
                         src={submenuItem.icon}
                         width={30}
                         height={30}
@@ -137,10 +140,7 @@ const DesktopHeader = ({
         ))}
       </Box>
       <Box>
-        <HireTalentButton
-          handleOpenUserMenu={handleOpenUserMenu}
-          // display={{ xs: 'none', md: 'flex' }}
-        />
+        <HireTalentButton handleOpenUserMenu={handleOpenUserMenu} />
       </Box>
     </Box>
   );

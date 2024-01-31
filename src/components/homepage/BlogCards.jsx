@@ -1,30 +1,41 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-
+import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
-
   const handleChangePage = (event, value) => {
     setPage(value);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isMediumScreen = useMediaQuery('(max-width:768px)');
+
+  let cardsInRow = 12; // Default for screens wider than 767px
+
+  if (isSmallScreen) {
+    cardsInRow = 12;
+  } else if (isMediumScreen) {
+    cardsInRow = 6;
+  }
+
   return (
     <Box sx={{ my: '3%' }}>
       <Container>
-        <Grid container spacing={2} sx={{ py: '5%' }}>
+        <Grid container spacing={2} sx={{ py: '2%' }}>
           {data?.slice(startIndex, endIndex)?.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
+            <Grid item xs={12} sm={cardsInRow} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
                 sx={{
@@ -34,20 +45,34 @@ const BlogCards = ({ data }) => {
                 <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      <Image
-                        src={item?.imageLink}
-                        alt={item?.title}
-                        width={900}
-                        height={100}
-                        style={{ borderRadius: '15px' }}
-                      />
+                      {item ? (
+                        <Image
+                          quality="85"
+                          priority={true}
+                          src={item?.featureImage}
+                          alt={`${item?.title} - eSpark Talent`}
+                          width={900}
+                          height={100}
+                          style={{ borderRadius: '15px' }}
+                        />
+                      ) : (
+                        <Skeleton
+                          width={900}
+                          height={100}
+                          style={{ borderRadius: '15px' }}
+                        />
+                      )}
                     </span>
                     <span className="date">
-                      {Intl.DateTimeFormat('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: '2-digit',
-                      }).format(new Date('2023-09-27T00:36:00.000Z'))}
+                      {item ? (
+                        Intl.DateTimeFormat('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: '2-digit',
+                        }).format(new Date('2023-09-27T00:36:00.000Z'))
+                      ) : (
+                        <Skeleton width={80} />
+                      )}
                     </span>
                   </Box>
                 </Link>
@@ -66,7 +91,7 @@ const BlogCards = ({ data }) => {
                         lineHeight: '26px',
                       }}
                     >
-                      {item?.title}
+                      {item ? item.title : <Skeleton width={200} height={24} />}
                     </Typography>
                   </Link>
                   <Typography
@@ -84,24 +109,89 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item?.mainParagraph}
+                    {item ? item.subtitle : <Skeleton count={2} />}
                   </Typography>
                   <Link href={`/blogs/${item?.slug}`}>
-                    <Box className="default-btn" sx={{ position: 'relative' }}>
-                      <ArrowForwardIosIcon
-                        sx={{
+                    <Box
+                      className="hoverItem"
+                      sx={{
+                        position: 'relative',
+                        display: 'flex',
+                        transition: 'background-color 0.5s, color 0.5s',
+                        border: 'none',
+                        zIndex: 1,
+                        backgroundColor: 'transparent',
+                        width: { xs: '100%', md: '60%' },
+                        borderRadius: '5px',
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        margin: '5px 5px',
+                        overflow: 'hidden',
+                        '&::before': {
+                          content: '""',
                           position: 'absolute',
-                          left: 12,
-                          top: 10,
-                          color: '#fff',
+                          left: 0,
+                          top: 0,
+                          width: '100%',
+                          height: '100%',
+                          backgroundColor: '#029894',
+                          zIndex: -1,
+                          transform: 'translateX(-100%)',
+                          transition: 'transform 0.5s',
+                        },
+                        '&:hover': {
+                          color: '#fff ',
+                          '&::before': {
+                            transform: 'translateX(0)',
+                          },
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          backgroundColor: '#029894',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          mr: { xs: '6px', md: '10px', lg: '15px' },
+                          '&:hover': {
+                            color: '#fff',
+                            '&::before': {
+                              transform: 'translateX(0)',
+                            },
+                          },
                         }}
-                      />
+                      >
+                        <ArrowForwardIosIcon
+                          sx={{
+                            color: '#fff',
+                            transition: 'left 0.5s',
+                            '&:hover': {
+                              left: '50%',
+                              color: '#fff',
+                            },
+                          }}
+                        />
+                      </Box>
                       <Typography
-                        fontSize={{
-                          xs: '13px',
-                          sm: '13px',
-                          md: '15px',
-                          lg: '20px',
+                        className="hoverIcon"
+                        sx={{
+                          fontSize: {
+                            xs: '13px',
+                            sm: '13px',
+                            md: '15px',
+                            lg: '20px',
+                          },
+                          display: 'flex',
+                          alignItems: 'center',
+                          textAlign: 'center',
+                          color: '#09114A',
+                          '&:hover': {
+                            width: '100%',
+                            color: '#fff',
+                          },
                         }}
                       >
                         {READ_MORE}
@@ -121,8 +211,6 @@ const BlogCards = ({ data }) => {
               onChange={handleChangePage}
               color="primary"
               size="large"
-              // showFirstButton
-              // showLastButton
               sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
               renderItem={(item) => (
                 <PaginationItem
@@ -137,8 +225,6 @@ const BlogCards = ({ data }) => {
                   }}
                 />
               )}
-              // prevIcon={<KeyboardArrowLeft />}
-              // nextIcon={<KeyboardArrowRight />}
             />
           </Box>
         )}

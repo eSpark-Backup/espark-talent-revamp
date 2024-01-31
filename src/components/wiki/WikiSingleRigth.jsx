@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Box, Typography, Button } from '@mui/material';
+
 const WikiSingleRigth = () => {
   return (
     <Box
       sx={{
-        px: '30px',
+        px: '15px',
         py: '30px',
         borderRadius: `15px`,
         background: '#3B5998',
@@ -14,15 +16,17 @@ const WikiSingleRigth = () => {
     >
       <Typography
         color={'white'}
-        variant="h2"
         pb="10px"
+        lineHeight={1.85}
+        textAlign={'left'}
+        fontWeight={700}
         sx={{
           fontSize: {
-            xs: '23px',
-            sm: '23px',
-            md: '28px',
-            lg: '35px',
-            xl: '35px',
+            xs: '12px',
+            sm: '20px',
+            md: '22px',
+            lg: '25px',
+            xl: '25px',
           },
         }}
       >
@@ -31,14 +35,15 @@ const WikiSingleRigth = () => {
       <Typography
         variant="body1"
         color={'white'}
-        fontSize={'16px'}
+        textAlign={'left'}
+        lineHeight={2}
         sx={{
           fontSize: {
             xs: '12px',
-            sm: '13px',
-            md: '16px',
-            lg: '22px',
-            xl: '23px',
+            sm: '12px',
+            md: '14px',
+            lg: '16px',
+            xl: '16px',
           },
         }}
       >
@@ -46,9 +51,9 @@ const WikiSingleRigth = () => {
         we'll handle the matchmaking process.`}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', pt: '20px' }}>
-        <Link href={`/book-a-demo`}>
+        <Link href={`/book-a-demo`} target="_blank">
           <Button variant="primary" color="secondary">
-            {`Hire ME`}
+            {`Hire Now`}
           </Button>
         </Link>
       </Box>

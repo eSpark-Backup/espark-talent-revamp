@@ -1,4 +1,7 @@
 export const CLIENT_SLIDER_BREAK_POINTS = {
+  280: {
+    slidesPerView: 1,
+  },
   300: {
     slidesPerView: 2,
   },
@@ -121,7 +124,7 @@ export const PERKS_DATA = [
       heading: 'Hire Hourly Employees',
       paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
       list: [
-        { item: 'Efficient Task Allocation.Cost Efficiency.' },
+        { item: 'Efficient Task Allocation.' },
         { item: 'Flexibility in Scheduling,' },
         { item: 'Dynamic Response to Workload.' },
         { item: 'Adherence to Labor Laws.' },
@@ -163,80 +166,141 @@ export const EXPERTIES_DATA = {
   startIcon: '/images/homepage/experties/start.svg',
   sections: [
     {
+      id: 1,
       lists: [
         {
           heading: 'Trending',
           listItems: [
-            { title: 'UI UX Designer', link: '/' },
-            { title: 'Full Stack Developer', link: '/' },
-            { title: 'MEAN Stack Developer', link: '/' },
-            { title: 'MERN Stack Developer', link: '/' },
-            { title: 'DevOps Engineer', link: '/' },
-            { title: 'Fintech Developer', link: '/' },
-            { title: 'Software Developer', link: '/' },
-            { title: 'QA Engineer', link: '/' },
+            { title: 'UI UX Designer', link: '/esparkwiki/ui-ux-designer' },
+            {
+              title: 'Full Stack Developer',
+              link: '/esparkwiki/full-stack-developer',
+            },
+            {
+              title: 'MEAN Stack Developer',
+              link: '/esparkwiki/mean-stack-developer',
+            },
+            {
+              title: 'MERN Stack Developer',
+              link: '/esparkwiki/mern-stack-developer',
+            },
+            { title: 'DevOps Engineer', link: '/esparkwiki/devops-engineer' },
+            {
+              title: 'Fintech Developer',
+              link: '/esparkwiki/fintech-developer',
+            },
+            {
+              title: 'Software Developer',
+              link: '/esparkwiki/software-developer',
+            },
+            { title: 'QA Engineer', link: '/esparkwiki/qa-engineer' },
           ],
         },
       ],
     },
     {
+      id: 2,
       lists: [
         {
           heading: 'Front-End Developers',
           listItems: [
-            { title: 'AngularJS Developer', link: '/' },
-            { title: 'ReactJS Developer', link: '/' },
-            { title: 'JavaScript Developer', link: '/' },
-            { title: 'NextJS Developer', link: '/' },
+            {
+              title: 'AngularJS Developer',
+              link: '/esparkwiki/angular-developer',
+            },
+            {
+              title: 'ReactJS Developer',
+              link: '/esparkwiki/react-js-developer',
+            },
+            {
+              title: 'JavaScript Developer',
+              link: '/esparkwiki/javascript-developer',
+            },
+            {
+              title: 'NextJS Developer',
+              link: '/esparkwiki/next-js-developer',
+            },
           ],
         },
         {
           heading: 'Mobile App Developers',
           listItems: [
-            { title: 'Android Developer', link: '/' },
-            { title: 'Flutter Developer', link: '/' },
-            { title: 'React Native Developer', link: '/' },
+            {
+              title: 'Android Developer',
+              link: '/esparkwiki/android-app-developer',
+            },
+            {
+              title: 'Flutter Developer',
+              link: '/esparkwiki/flutter-developer',
+            },
+            {
+              title: 'React Native Developer',
+              link: '/esparkwiki/react-native-developer',
+            },
           ],
         },
       ],
     },
     {
+      id: 3,
       lists: [
         {
           heading: 'Back-End Developers',
           listItems: [
-            { title: 'ASP .NET Developer', link: '/' },
-            { title: 'PHP Developer', link: '/' },
-            { title: 'Python Developer', link: '/' },
-            { title: 'NodeJS Developer', link: '/' },
+            {
+              title: 'ASP .NET Developer',
+              link: '/esparkwiki/asp-net-developer',
+            },
+            { title: 'PHP Developer', link: '/esparkwiki/php-developer' },
+            { title: 'Python Developer', link: '/esparkwiki/python-developer' },
+            { title: 'NodeJS Developer', link: '/esparkwiki/nodejs-developer' },
           ],
         },
         {
           heading: 'Embedded Developers',
           listItems: [
-            { title: 'Firmware Developer', link: '/' },
-            { title: 'PCB Designer', link: '/' },
-            { title: 'Embedded System Engineer', link: '/' },
+            {
+              title: 'Firmware Developer',
+              link: '/esparkwiki/firmware-developer',
+            },
+            { title: 'PCB Designer', link: '/esparkwiki/pcb-designer' },
+            {
+              title: 'Embedded System Engineer',
+              link: '/esparkwiki/embedded-system-engineer',
+            },
           ],
         },
       ],
     },
     {
+      id: 4,
       lists: [
         {
           heading: 'Digital Marketer',
           listItems: [
-            { title: 'Social Media Expert', link: '/' },
-            { title: 'PPC Specialist', link: '/' },
-            { title: 'SEO Expert', link: '/' },
-            { title: 'Performance Marketer', link: '/' },
+            {
+              title: 'Social Media Expert',
+              link: '/esparkwiki/social-media-expert',
+            },
+            { title: 'PPC Specialist', link: '/esparkwiki/ppc-specialist' },
+            { title: 'SEO Expert', link: '/esparkwiki/seo-expert' },
+            {
+              title: 'Performance Marketer',
+              link: '/esparkwiki/performance-marketer',
+            },
           ],
         },
         {
           heading: 'Ecommerce Developers',
           listItems: [
-            { title: 'WordPress Developer', link: '/' },
-            { title: 'Shopify Developer', link: '/' },
+            {
+              title: 'WordPress Developer',
+              link: '/esparkwiki/wordpress-developer',
+            },
+            {
+              title: 'Shopify Developer',
+              link: '/esparkwiki/shopify-developer',
+            },
           ],
         },
       ],
@@ -350,28 +414,28 @@ export const ACHIEVEMENTS_DATA = {
   title: 'Achievement & Awards',
   items: [
     {
-      image: '/images/homepage/achievement-awards/achievement-1.svg',
+      image: '/images/homepage/achievement-awards/achievement-1.png',
       imageAlt: 'Description for image 1',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-2.svg',
+      image: '/images/homepage/achievement-awards/achievement-2.png',
       imageAlt: 'Description for image 2',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-3.svg',
+      image: '/images/homepage/achievement-awards/achievement-3.png',
       imageAlt: 'Description for image 1',
       imageWidth: 300,
       imageHeight: 200,
       link: '/',
     },
     {
-      image: '/images/homepage/achievement-awards/achievement-4.svg',
+      image: '/images/homepage/achievement-awards/achievement-4.png',
       imageAlt: 'Description for image 2',
       imageWidth: 300,
       imageHeight: 200,
@@ -384,31 +448,31 @@ export const OUR_CLIENT_SAYS = {
   subHeading: `Clients express gratitude for the outstanding service, highlighting the team's unwavering dedication and expertise.`,
   slider: [
     {
-      image: '/images/homepage/our-clients/dfrbot.png',
+      image: '/images/homepage/our-clients/dfrbot.svg',
       title: 'Ricky Ye',
       subTitle: 'CEO',
       description: `We engaged eSpark Talent for PCB and embedded development, aiming to enhance system functionality. Navigating this complex field demanded precision, and eSpark Talent demonstrated unmatched professionalism. Their expert team not only understood technical details but also swiftly addressed urgent needs.`,
     },
     {
-      image: '/images/homepage/our-clients/konoozi.png',
+      image: '/images/homepage/our-clients/konoozi.svg',
       title: 'Imran Khan',
       subTitle: 'CEO',
       description: `eSpark Talent's skill in .NET development and UI/UX design completely transformed our projects. Their quick response and dedicated team ensured tasks were completed smoothly. Surpassing expectations with efficiency and expertise, they've become our top choice. Enthusiastically recommending eSpark Talent for setting a new standard in reliability and excellence.`,
     },
     {
-      image: '/images/homepage/our-clients/equip.png',
+      image: '/images/homepage/our-clients/equip.svg',
       title: 'Clarie Dennis',
       subTitle: 'CEO',
       description: `Choosing eSpark Talent for outsourcing was transformative. Their WordPress developer and performance marketer showcased exceptional speed and agility. Partnering with eSpark Talent was the right decision; the outstanding service ensures my return for future projects. Highly recommended for those who want to avail top-notch outsourcing services!`,
     },
     {
-      image: '/images/homepage/our-clients/project.png',
+      image: '/images/homepage/our-clients/project.svg',
       title: 'Jawad Ali',
       subTitle: 'CEO',
       description: `eSpark Talent is the dream team for digital excellence! From a WordPress Developer shaping my online presence to a Performance Marketer driving results, a Social Media Expert creating buzz, and a UI/UX Designer adding aesthetic magic – they nailed every role. Fully satisfied with their service, I'm excited for more collaborations. They're not just outsourcing; they're elevating my brand to new heights.`,
     },
     {
-      image: '/images/homepage/our-clients/robot.png',
+      image: '/images/homepage/our-clients/robot.svg',
       title: 'Cole Benson',
       subTitle: 'Director',
       description: `Cheers to the tech experts at eSpark Talent! They've skillfully blended the latest tech into our online venture, making innovation smooth sailing. Affordable support aligns perfectly with our business goals, making groundbreaking ideas flow effortlessly. Thanks to eSpark Talent, success in Embedded System Engineering and Firmware Development is just within reach!`,

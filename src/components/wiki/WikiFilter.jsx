@@ -58,9 +58,9 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             All
           </Typography>
         </Button>
-        {categories?.map((category) => (
+        {categories?.map((category, index) => (
           <Button
-            key={category}
+            key={index}
             onClick={() => onSelectCategory(category)}
             variant={selectedCategory === category ? 'contained' : ''}
             color="primary"

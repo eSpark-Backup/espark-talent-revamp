@@ -1,24 +1,21 @@
 'use client';
 import React from 'react';
-import { Grid, Box, Typography, Container, useMediaQuery } from '@mui/material';
-import Image from 'next/image';
-
-import SwiperCore, {
-  EffectFade,
-  Navigation,
+import {
+  Grid,
+  Box,
+  Typography,
+  Container,
+  useMediaQuery,
   Pagination,
-  Autoplay,
-} from 'swiper';
-
+} from '@mui/material';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
-SwiperCore.use([EffectFade, Navigation, Pagination, Autoplay]);
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
 const OutSourcingWonder = ({ data }) => {
   const isSmallScreen = useMediaQuery((theme) =>
@@ -37,7 +34,7 @@ const OutSourcingWonder = ({ data }) => {
     loop: true,
     effect: 'fade',
     className: 'hero_slider',
-
+    module: [EffectFade, Navigation, Pagination, Autoplay],
     pagination: {
       clickable: true,
       el: '.swiper-pagination',
@@ -47,7 +44,6 @@ const OutSourcingWonder = ({ data }) => {
         }; width: 20px; height: 20px;"></span>`;
       },
     },
-
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -69,7 +65,6 @@ const OutSourcingWonder = ({ data }) => {
       },
     },
   };
-
   return (
     <>
       <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
@@ -79,12 +74,12 @@ const OutSourcingWonder = ({ data }) => {
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
-                fontSize: { lg: '32px', md: '28px', sm: '20px', xs: '20px' },
-                lineHeight: 1.3,
-                px: { lg: '20%' },
+                fontSize: { md: '32px', xs: '20px' },
+                lineHeight: { lg: '42.289px', xs: '33.289px' },
+                px: { xs: '3%', sm: '20%', md: '20%' },
                 fontWeight: 700,
                 fontStyle: 'normal',
-                mb: '40px',
+                mb: { xs: '25px', sm: '40px' },
               }}
             >
               {data?.title}
@@ -96,34 +91,36 @@ const OutSourcingWonder = ({ data }) => {
                 <SwiperSlide key={index} className="outsourcing-slide">
                   <Grid
                     sx={{
-                      borderRadius: '20px',
+                      borderRadius: '23.172px',
                       px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
-                      py: { lg: '40px', md: '30px', sm: '25px', xs: '25px' },
-                      // alignItems: 'center',
-                      minHeight: {
+                      py: { lg: '40px', md: '45px', sm: '35px', xs: '25px' },
+                      height: {
                         lg: '250px',
                         md: '250px',
                         sm: '200px',
-                        xs: '150px',
+                        xs: '193px',
                       },
-                      width: { lg: '100%' },
+                      maxWidth: { xs: '420px', lg: '100%' },
                       background: ' #FFF',
-                      border: '2px rgba(0, 0, 0, 0.25) solid',
+                      border: '1px rgba(0, 0, 0, 0.25) solid',
                       display: 'flex',
                       justifyContent: 'space-between',
                       flexDirection: 'column',
+                      mx: 'auto',
                     }}
                   >
                     <Box
                       sx={{
-                        mb: '10px',
+                        mb: { xs: '10px', sm: '0px', lg: '10px' },
                         width: { xs: '30px', md: '40px' },
                         height: { xs: '30px', md: '40px' },
                       }}
                     >
                       <Image
+                        quality="85"
+                        priority={true}
                         src={item?.icon}
-                        alt={item?.title}
+                        alt={`${item?.title} -eSpark Talent`}
                         height={
                           isSmallScreen
                             ? 30
@@ -142,7 +139,7 @@ const OutSourcingWonder = ({ data }) => {
                                 ? 40
                                 : 40
                         }
-                        pb={{ lg: '15px', md: '10px', sm: '7px', xs: '7px' }}
+                        pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
                       />
                     </Box>
                     <Typography
@@ -151,11 +148,11 @@ const OutSourcingWonder = ({ data }) => {
                         fontSize: {
                           lg: '20px',
                           md: '17px',
-                          sm: '13px',
-                          xs: '13px',
+                          sm: '13.524px',
+                          xs: '13.524px',
                         },
-                        lineHeight: 1.3,
-                        pb: { lg: '10px', md: '7px', sm: '5px', xs: '5px' },
+                        lineHeight: { xs: '19.144px', md: '26.737px' },
+                        pb: { lg: '10px', md: '0px', sm: '0px', xs: '5px' },
                         fontWeight: 600,
                         fontStyle: 'normal',
                       }}

@@ -38,7 +38,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
         >
           <Typography
             sx={{
-              px: { md: '20.22%' },
+              px: { md: '11%' },
               color: '#001C63',
               textAlign: 'center',
               fontSize: { md: '32px', xs: '20px' },
@@ -82,26 +82,74 @@ const ProfessionalTeamCard = ({ teamData }) => {
             <SwiperSlide className="swiper-slide-team-card" key={index}>
               <Box
                 sx={{
-                  height: { xs: '90.986px', sm: 'auto' },
+                  height: {
+                    xs: '90.986px',
+                    sm: '120px !important',
+                    md: 'auto',
+                  },
+                  maxWidth: { xs: '280.176px', sm: '295px !important' },
                   display: 'flex',
                   padding: {
                     xs: '8px 16px 8px 17px',
                     md: '15px 28px 31px 30px',
                   },
-                  margin: { xs: '5px', md: '15px 7.5px' },
                   backgroundColor: '#fff',
                   borderRadius: '13.858px',
                   boxShadow:
                     '0px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+                  margin: { xs: '10px auto', md: '2' },
+                  '@media (min-width: 276px) and (max-width: 320px)': {
+                    maxWidth: '200px !important',
+                    height: '105.986px !important',
+                  },
+                  '@media (min-width: 321px) and (max-width: 359px)': {
+                    maxWidth: '230px !important',
+                    height: '100.986px !important',
+                  },
+                  '@media (min-width: 769px) and (max-width: 889px)': {
+                    maxWidth: '295px !important',
+                    height: '130.986px !important',
+                  },
+                  '@media (min-width: 890px) and (max-width: 1050px)': {
+                    maxWidth: '340px !important',
+                    height: '110.986px !important',
+                  },
+                  '@media (min-width: 1051px) and (max-width: 1150px)': {
+                    maxWidth: '400px !important',
+                    height: '100.986px !important',
+                  },
+                  '@media (min-width: 1151px) and (max-width: 1229px)': {
+                    maxWidth: '450px !important',
+                    height: '100.986px !important',
+                  },
+
+                  '@media (min-width: 1230px) and (max-width: 1374px)': {
+                    maxWidth: '460px !important',
+                    height: '100.986px !important',
+                  },
+                  '@media (min-width: 1375px) and (max-width: 1500px)': {
+                    maxWidth: '480px !important',
+                  },
+                  '@media (min-width: 1501px) and (max-width: 6000px)': {
+                    maxWidth: '485px !important',
+                  },
                 }}
               >
                 <Box
                   sx={{
                     minWidth: { xs: '28px', md: '35px', lg: '49px' },
                     height: { xs: '28px', md: '35px', lg: '49px' },
+                    '@media (min-width: 276px) and (max-width: 359px)': {
+                      mt: { xs: '10px', sm: '0px' },
+                    },
+                    '@media (min-width: 360px) and (max-width: 767px)': {
+                      mt: { xs: '10px', sm: '15px', md: '0px' },
+                    },
                   }}
                 >
                   <Image
+                    quality="85"
+                    priority={true}
                     src={item?.icon}
                     width={isXsOrSm ? 40 : 49}
                     height={49}
@@ -109,13 +157,22 @@ const ProfessionalTeamCard = ({ teamData }) => {
                     className="our-team-swiper-image"
                   />
                 </Box>
-                <Box sx={{ pl: { xs: '18px', md: '22px', lg: '31px' } }}>
+                <Box
+                  sx={{
+                    pl: { xs: '18px', md: '22px', lg: '31px' },
+                    '@media (min-width: 310px) and (max-width: 359px)': {
+                      mt: { xs: '5px', md: '0px' },
+                    },
+                    '@media (min-width: 360px) and (max-width: 767px)': {
+                      mt: { xs: '10px', sm: '15px', md: '0px' },
+                    },
+                  }}
+                >
                   <Typography
                     sx={{
                       color: '#09114A',
                       fontSize: { md: '20.325px', sm: '15px', xs: '11.72px' },
                       fontStyle: 'normal',
-
                       fontWeight: 600,
                       lineHeight: {
                         lg: '24.39px',
@@ -132,20 +189,20 @@ const ProfessionalTeamCard = ({ teamData }) => {
                       color: '#6F76A8',
                       fontSize: {
                         lg: '18px',
-                        md: '15px',
-                        sm: '12px',
+                        md: '16px',
+                        sm: '14px',
                         xs: '10.38px',
                       },
                       textAlign: 'justify',
                       fontStyle: 'normal',
                       fontWeight: { xs: 700, sm: 400 },
                       lineHeight: {
-                        lg: '32.085px',
-                        md: '22.085px',
-                        sm: '15.263px',
-                        xs: '13.263px',
+                        lg: '30px',
+                        md: '23.085px',
+                        sm: '20.263px',
+                        xs: '15.263px',
                       },
-                      p: { xs: '8px 0 0 0', md: '19px 0 0 0' },
+                      p: { xs: '8px 0 0 0', md: '13px 0 0 0' },
                     }}
                   >
                     {item?.paragraph}
@@ -160,12 +217,12 @@ const ProfessionalTeamCard = ({ teamData }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            my: 2,
+            my: { xs: 1, md: 2 },
           }}
         >
           <Box
             sx={{
-              minWidth: { xs: '12px', md: '23px' },
+              minWidth: { xs: '18px', md: '23px' },
               height: { xs: '15px', md: '23px' },
               display: 'flex',
               justifyContent: 'center',
@@ -173,13 +230,15 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              priority={true}
               onClick={() => {
                 handleControlSwiper('next');
               }}
               src={teamData.arrowIconLeft}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>
@@ -193,16 +252,18 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              priority={true}
               src={teamData.arrowIconCircle}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>
           <Box
             sx={{
-              minWidth: { xs: '12px', md: '23px' },
+              minWidth: { xs: '18px', md: '23px' },
               height: { xs: '15px', md: '23px' },
               display: 'flex',
               justifyContent: 'center',
@@ -210,11 +271,13 @@ const ProfessionalTeamCard = ({ teamData }) => {
             }}
           >
             <Image
+              quality="85"
+              priority={true}
               onClick={() => handleControlSwiper('prev')}
               src={teamData.arrowIconRight}
               width={17}
               height={17}
-              alt={teamData.alt}
+              alt={`${teamData?.alt} - eSpark Talent`}
               className="swiper-controller-icon"
             />
           </Box>

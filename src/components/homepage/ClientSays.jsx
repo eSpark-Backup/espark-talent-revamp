@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -42,7 +41,6 @@ const ClientSays = ({ data }) => {
       }}
     >
       <Container>
-        {/* <ParagraphTitle title={heading} paragraph={subHeading} /> */}
         <Box
           sx={{
             mb: { sm: '55px', md: '40px' },
@@ -134,6 +132,8 @@ const ClientSays = ({ data }) => {
                         >
                           <Box>
                             <Image
+                              quality="85"
+                              priority={true}
                               src={items.image}
                               width={174.981}
                               height={34}
@@ -191,6 +191,7 @@ const ClientSays = ({ data }) => {
                             sx={{
                               fontSize: '18px !important',
                               fontWeight: 400,
+
                               color: '#525252',
                               '@media (min-width: 300px) and (max-width: 599px) ':
                                 {
@@ -201,7 +202,7 @@ const ClientSays = ({ data }) => {
                             {items?.subTitle}
                             <Box
                               sx={{
-                                display: 'flex',
+                                display: 'none',
                                 '@media (min-width: 300px) and (max-width: 599px) ':
                                   {
                                     display: 'flex',

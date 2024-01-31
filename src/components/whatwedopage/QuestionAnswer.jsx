@@ -9,17 +9,35 @@ const QuestionAnswer = ({ data }) => {
     <Box sx={{ mb: { md: '4%', xs: '10%' } }}>
       <Container>
         <Grid container>
-          <Grid item xs={12} md={5} sx={{ order: { md: 2, xs: 2, sm: 2 } }}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              order: { md: 2, xs: 2, sm: 2 },
+              display: { md: 'flex', lg: 'block' },
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
             <Box
               sx={{
                 backgroundColor: 'rgba(59, 89, 152, 0.04)',
                 borderRadius: '17.311px',
-                // width: { lg: '594.66px' },
                 mt: { xs: '40px', md: '0px' },
               }}
             >
-              <Box sx={{ display: 'flex', justifyContent: 'center', pt: 5 }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  pt: 5,
+                }}
+              >
                 <Image
+                  quality="85"
+                  priority={true}
                   src={'/images/whatwedo/question-answer/QuesAns.png'}
                   width={440}
                   height={200}
@@ -69,7 +87,7 @@ const QuestionAnswer = ({ data }) => {
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                   textAlign: { xs: 'center', sm: 'right' },
-                  my: 2.5,
+                  my: 1.5,
                   ml: { md: '5px', lg: '85px' },
                   px: { xs: '10px', md: '0px' },
                 }}
@@ -85,6 +103,7 @@ const QuestionAnswer = ({ data }) => {
                 <ESparkButton
                   title={data?.buttonLabel}
                   link={data?.buttonLink}
+                  target="_blank"
                   color={'secondary'}
                   size={{ xs: '140px', lg: '190px' }}
                 />
