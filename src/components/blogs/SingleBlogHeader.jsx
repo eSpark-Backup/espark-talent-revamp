@@ -3,9 +3,16 @@ import React from 'react';
 import { Grid, Typography, Box, Avatar, Stack } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-// import moment from 'moment';
+import moment from 'moment';
 
-const SingleBlogHeader = ({ data }) => {
+const SingleBlogHeader = ({ data, authors }) => {
+  const blogString = JSON.stringify(data);
+  const parsedblog = JSON.parse(blogString);
+
+  const filteredAuthor = authors?.filter(
+    (author) => author?._id === parsedblog?.author
+  )[0];
+
   return (
     <>
       <Box sx={{ mt: { md: '90px', xs: '35px' } }}>
@@ -18,7 +25,7 @@ const SingleBlogHeader = ({ data }) => {
                 fontWeight={600}
                 sx={{ textAlign: { xs: 'center', md: 'left' } }}
               >
-                {data?.mainHeading}
+                {parsedblog?.title}
               </Typography>
               <Typography
                 variant="body1"
@@ -26,7 +33,7 @@ const SingleBlogHeader = ({ data }) => {
                 fontSize={{ xs: '12px', sm: '13px', md: '14px', lg: '17px' }}
                 sx={{ textAlign: { xs: 'center', md: 'left' } }}
               >
-                {data?.mainParagraph}
+                {parsedblog?.subtitle}
               </Typography>
             </Box>
             <Box
@@ -38,8 +45,8 @@ const SingleBlogHeader = ({ data }) => {
               >
                 <Stack direction="row" spacing={2}>
                   <Avatar
-                    alt={data?.title}
-                    src={data?.postedBy?.image}
+                    alt={parsedblog?.title}
+                    src={filteredAuthor?.avatar}
                     sx={{
                       width: { xs: 45, md: 65 },
                       height: { xs: 45, md: 65 },
@@ -56,14 +63,13 @@ const SingleBlogHeader = ({ data }) => {
                           color="#001C63"
                           fontWeight={600}
                         >
-                          {`${data?.postedBy?.name}`}
+                          {`${filteredAuthor?.firstName} ${filteredAuthor?.firstName}`}
                         </Typography>
                       </Typography>
                     </Link>
                   </Box>
                   <Typography variant="body1" color={'black'}>
-                    {data?.postedBy?.date}
-                    {/* {moment(data?.publishedAt)?.format('MMMM DD, YYYY')} */}
+                    {moment(parsedblog?.publishedAt)?.format('MMMM DD, YYYY')}
                   </Typography>
                 </Box>
               </Box>
@@ -74,8 +80,8 @@ const SingleBlogHeader = ({ data }) => {
               <Image
                 quality="85"
                 priority={true}
-                src={data?.bigImageLink}
-                alt={`${data?.alt} -eSpark Talent`}
+                src={parsedblog?.bannerImage}
+                alt={`${parsedblog?.alt} -eSpark Talent`}
                 width={860}
                 height={570}
                 style={{ borderRadius: '10px' }}
