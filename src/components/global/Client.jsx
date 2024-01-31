@@ -1,19 +1,23 @@
 'use client';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Container, Box, Typography, Grid } from '@mui/material';
+import { Container, Box, Typography, Grid, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Autoplay, Navigation } from 'swiper/modules';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
-
-const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
+const ClientSlider = ({
+  bgColor,
+  txtColor,
+  title,
+  fontWeight,
+  data,
+  fontSize,
+}) => {
   const swiperSettings = {
     slidesPerView: 8,
     spaceBetween: 20,
-    // centerMode: true,
     centerPadding: '0',
     loop: true,
     pagination: {
@@ -23,6 +27,7 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
       delay: 3000,
       disableOnInteraction: true,
     },
+    module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
         slidesPerView: 2,
@@ -51,7 +56,12 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
         <Typography
           variant="h2"
           color={txtColor}
-          sx={{ textAlign: 'center', fontWeight: fontWeight, py: '30px' }}
+          sx={{
+            textAlign: 'center',
+            fontWeight: fontWeight,
+            py: '30px',
+            fontSize: fontSize,
+          }}
         >
           {title}
         </Typography>
@@ -62,8 +72,10 @@ const ClientSlider = ({ bgColor, txtColor, title, fontWeight, data }) => {
             <SwiperSlide key={index}>
               <Link href={item?.link}>
                 <Image
+                  quality="85"
+                  priority={true}
                   src={item?.image}
-                  alt={item?.image}
+                  alt={`${item?.alt} -eSpark Talent`}
                   height={item?.imageHeight}
                   width={item?.imageWidth}
                 />

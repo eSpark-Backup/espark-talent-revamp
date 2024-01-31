@@ -1,14 +1,19 @@
 'use client';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Hero = ({ data }) => {
+  const pathName = usePathname();
   return (
     <>
       <Box
         sx={{
           py: data?.spacing,
+          pt: data?.pt,
+          pb: data?.pb,
           background: data?.bgColor,
           backgroundImage: `url(${data?.bgImage})`,
           backgroundSize: 'cover',
@@ -17,8 +22,8 @@ const Hero = ({ data }) => {
       >
         <Container>
           <Grid
-            pt="50px"
-            pb="30px"
+            pt={data?.pt2 || '50px'}
+            pb={data?.pb2 || '30px'}
             container
             spacing={2}
             sx={{
@@ -29,21 +34,21 @@ const Hero = ({ data }) => {
             <Grid
               item
               xs={12}
-              sm={7}
+              sm={data?.leftGrid || 7}
               sx={{ display: 'flex', flexDirection: 'column' }}
             >
               {data?.title && (
                 <Typography
-                  // variant={data?.titleVariant}
+                  lineHeight={1.4}
                   color={data?.titleColor}
                   fontSize={{
                     xs: '22px',
                     sm: '24px',
                     md: '30x',
-                    lg: '40px',
-                    xl: '40px',
+                    lg: '45px',
+                    xl: '50px',
                   }}
-                  fontWeight={600}
+                  fontWeight={700}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -58,6 +63,9 @@ const Hero = ({ data }) => {
               {data?.description && (
                 <Typography
                   color={data?.descColor}
+                  lineHeight={1.65}
+                  fontWeight={500}
+                  pr={data?.tpr}
                   fontSize={{
                     xs: '14px',
                     sm: '14px',
@@ -86,29 +94,34 @@ const Hero = ({ data }) => {
                     xl: '20px',
                   }}
                 >
-                  {/* <ESparkButton
-                  title={data.button.label}
-                  link={data.button.link}
-                  color={data.button.btnColor}
-                  size={'180px'}
-                /> */}
-                  <Button
-                    sx={{
-                      backgroundColor: '#fff',
-                      '&:hover': {
+                  <Link href={data.button?.link} target="_blank">
+                    <Button
+                      sx={{
                         backgroundColor: '#fff',
-                      },
+                        display: { xs: 'none', sm: 'flex' },
+                        '&:hover': {
+                          color:
+                            pathName == '/solutions/enterprises'
+                              ? '#fff'
+                              : '#001C63',
+                          backgroundColor: `${
+                            pathName == '/solutions/enterprises'
+                              ? '#001C63'
+                              : '#fff'
+                          }`,
+                        },
 
-                      py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
-                      px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
-                      height: '50px',
-                      width: '160px',
-                      color: '#001C63',
-                      fontWeight: '700',
-                    }}
-                  >
-                    {data.button?.label}
-                  </Button>
+                        py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                        px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
+                        height: '50px',
+                        width: '160px',
+                        color: '#001C63',
+                        fontWeight: '700',
+                      }}
+                    >
+                      {data.button?.label}
+                    </Button>
+                  </Link>
                 </Box>
               )}
             </Grid>
@@ -116,7 +129,7 @@ const Hero = ({ data }) => {
               <Grid
                 item
                 xs={12}
-                sm={5}
+                sm={data?.rightGrid || 5}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -124,10 +137,12 @@ const Hero = ({ data }) => {
                 }}
               >
                 <Image
+                  quality="85"
+                  priority={true}
                   src={data?.image}
-                  alt={data?.imageAlt}
-                  width={data?.imageWidth}
-                  height={data?.imageHeight}
+                  alt={`${data?.imageAlt} - eSpark Talent`}
+                  width={data?.imageWidth || 450}
+                  height={data?.imageHeight || 450}
                 />
               </Grid>
             )}

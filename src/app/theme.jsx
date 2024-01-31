@@ -169,6 +169,16 @@ const theme = createTheme({
         },
       },
     },
+    MuiSelect: {
+      styleOverrides: {
+        root: {},
+        select: {
+          color: 'black',
+          alignItems: 'center',
+          paddingTop: '25px',
+        },
+      },
+    },
     MuiContainer: {
       styleOverrides: {
         root: {

@@ -75,14 +75,16 @@ const OurService = ({ ourService }) => {
                     sx={{
                       mt: { xs: 1, sm: 2 },
                       my: '25px',
-                      px: { xs: '24px', md: '50px' },
+                      px: { xs: '24px', md: '15px' },
                     }}
                   >
                     <Image
+                      quality="85"
+                      priority={true}
                       src={item?.image}
-                      width={40}
+                      width={60}
                       height={50}
-                      alt={item?.alt}
+                      alt={`${item?.alt} - eSpark Talent`}
                     />
                   </Box>
 
@@ -103,7 +105,6 @@ const OurService = ({ ourService }) => {
                       sx={{
                         color: '#001C63',
                         fontSize: { xs: '12.286px', md: '14.2px' },
-                        // textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '23.344px', md: '26.979px' },

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Button, TextField, Typography } from '@mui/material';
+import React, { useState, useRef } from 'react';
+import { Box, Button, Typography } from '@mui/material';
 
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -9,12 +9,15 @@ import { useFormik } from 'formik';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import emailjs from '@emailjs/browser';
 import BasicModal from './BookADemoModal';
+import { PopupModal } from 'react-calendly';
 
 const BookADemoForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
   const [open, setOpen] = React.useState(false);
   const [modalText, setModalText] = React.useState('');
   const handleClose = () => setOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const partnersRef = useRef(null);
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -58,7 +61,6 @@ const BookADemoForm = ({ form }) => {
       .required('Url is required'),
     no_of_employees: Yup.number()
       .min(1, 'Minimum 1 employees')
-      .max(10, 'Maximum 10 employees')
       .required('No of emp is required'),
     phone_number: Yup.string()
       .test('phone', 'Invalid Phone Number', (value) =>
@@ -76,8 +78,6 @@ const BookADemoForm = ({ form }) => {
       initialValues: Book_A_Demo_Keys,
       validationSchema: profileValidationSchema,
       onSubmit: async (values, action) => {
-        console.log(values, 'values');
-
         try {
           const emailResult = await emailjs.send(serviceid, templeteid, {
             first_name: values.first_name,
@@ -94,10 +94,6 @@ const BookADemoForm = ({ form }) => {
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
-              setTimeout(() => {
-                // window.open('https://calendly.com/esparktalents/', 'blank');
-                setOpen(open);
-              }, 2000);
             }, 2000);
           }
         } catch (error) {
@@ -106,13 +102,13 @@ const BookADemoForm = ({ form }) => {
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
-            setTimeout(() => {
-              // window.open('https://calendly.com/esparktalents/', 'blank');
-              setOpen(!open);
-            }, 2000);
           }, 2000);
 
           console.error('Error submitting the form:', error);
+        } finally {
+          setTimeout(() => {
+            setIsOpen(true);
+          }, 2000);
         }
       },
     });
@@ -184,31 +180,34 @@ const BookADemoForm = ({ form }) => {
                     onChange={handlePhoneChange}
                   />
                 ) : (
-                  <TextField
-                    name={item?.key}
-                    placeholder={item?.placeHolder}
-                    value={values[item?.key]}
-                    type={item?.type}
-                    onChange={handleChange}
-                    sx={{
-                      width: { xs: '100%', sm: '436.277px' },
-                      borderRadius: '5.418px',
-                      '& .MuiInputBase-input': {
-                        color: 'black',
+                  <Box>
+                    <Box
+                      component={'input'}
+                      name={item?.key}
+                      placeholder={item?.placeHolder}
+                      value={values[item?.key]}
+                      type={item?.type}
+                      onChange={handleChange}
+                      sx={{
+                        width: { xs: '100%', sm: '436.277px' },
+                        borderRadius: '5.418px',
+                        height: '41px',
+                        border: ' 0.903px solid #D0D4EA',
+                        background: '#F5F8FA',
                         fontSize: '14px',
-                        paddingBottom: 1.3,
-                        paddingTop: 1.7,
-                        '&:active': {
-                          backgroundColor: 'transparent',
+                        pl: 1.5,
+                        color: 'black',
+                        '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
+                          {
+                            WebkitAppearance: 'none',
+                            margin: 0,
+                          },
+                        '&:focus': {
+                          outline: 'none',
                         },
-                      },
-                      '& input[type=number]::-webkit-inner-spin-button': {
-                        '-webkit-appearance': 'none',
-                      },
-                    }}
-                    id="outlined-basic"
-                    variant="outlined"
-                  />
+                      }}
+                    />
+                  </Box>
                 )}
                 {touched[item?.key] && errors[item?.key] && (
                   <ErrorMessage message={errors[item?.key]} />
@@ -247,6 +246,14 @@ const BookADemoForm = ({ form }) => {
           </Box>
         </Box>
         <BasicModal text={modalText} open={open} handleClose={handleClose} />
+
+        <div id="partners" ref={partnersRef} />
+        <PopupModal
+          url="https://calendly.com/esparktalents/60min"
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={partnersRef.current}
+        />
       </Box>
     </>
   );

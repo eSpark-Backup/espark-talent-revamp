@@ -20,7 +20,7 @@ import { WHY_CHOOSE_OUR_HR_DATA } from '@/constants/what-we-do-page/why-choose-h
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { QUESTION_ANSWER } from '@/constants/what-we-do-page/question-answer';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero data={WHAT_WE_DO_HERO_DATA} />
@@ -30,6 +30,7 @@ const page = () => {
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
+        fontSize={'24px !important'}
         title={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
@@ -43,4 +44,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

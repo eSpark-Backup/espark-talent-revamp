@@ -1,19 +1,5 @@
 'use client';
-import React from 'react';
-
-import ClientSlider from '@/components/global/ClientSlider';
-import SourceBenefits from '@/components/homepage/SourceBenefits';
-import BenefitsWorks from '@/components/homepage/BenefitsWorks';
-import AwardAchievement from '@/components/homepage/AwardAchiefment';
-import OurExperties from '@/components/homepage/OurExperties';
-import HomeBlogs from '@/components/blogs/HomeBlogs';
-import ClientSays from '@/components/homepage/ClientSays';
-import Hero from '@/components/homepage/HomeHero';
-import Process from '@/components/homepage/Process';
-import Perks from '@/components/homepage/Perks';
-import Faq from '@/components/FAQ/Faq';
-// import Faqs from '@/components/Faqs';
-
+import React, { useEffect } from 'react';
 import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,
@@ -24,16 +10,76 @@ import {
   OUTSOURCE_BENEFITS_DATA,
   PERKS_DATA,
   PROCESS_DATA,
-} from '@/constants/homepage';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import { BLOGS_DATA } from '@/constants/blogs';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
+} from '../constants/homepage';
+import { FAQ_DATA } from '../constants/home-page/faq-section';
+import { HP_HERO_DATA } from '../constants/global/hero-sections';
+import dynamic from 'next/dynamic';
 
-const page = () => {
+const ClientSlider = dynamic(() => import('@/components/global/ClientSlider'), {
+  ssr: false,
+});
+
+const SourceBenefits = dynamic(
+  () => import('@/components/homepage/SourceBenefits'),
+  {
+    ssr: false,
+  }
+);
+
+const BenefitsWorks = dynamic(
+  () => import('@/components/homepage/BenefitsWorks'),
+  {
+    ssr: false,
+  }
+);
+
+const AwardAchievement = dynamic(
+  () => import('@/components/homepage/AwardAchiefment'),
+  {
+    ssr: false,
+  }
+);
+
+const OurExperties = dynamic(
+  () => import('@/components/homepage/OurExperties'),
+  {
+    ssr: false,
+  }
+);
+
+const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
+  ssr: true,
+});
+
+const ClientSays = dynamic(() => import('@/components/homepage/ClientSays'), {
+  ssr: false,
+});
+
+const Hero = dynamic(() => import('@/components/homepage/HomeHero'), {
+  ssr: false,
+});
+
+const Process = dynamic(() => import('@/components/homepage/Process'), {
+  ssr: false,
+});
+
+const Perks = dynamic(() => import('@/components/homepage/Perks'), {
+  ssr: false,
+});
+
+const Faq = dynamic(() => import('@/components/FAQ/Faq'), {
+  ssr: false,
+});
+const Page = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
-      {/* <HeroSection /> */}
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -56,16 +102,14 @@ const page = () => {
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      <HomeBlogs data={BLOGS_DATA} />
+      <HomeBlogs />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}
         background={'#F7F8FB'}
       />
       <Faq data={FAQ_DATA} />
-
-      {/* <Faqs data={FAQ_DATA} /> */}
     </>
   );
 };
-export default page;
+export default Page;

@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-
+import { PopupModal } from 'react-calendly';
 import emailjs from '@emailjs/browser';
 
 // import PartnersModal from './PartnersModal';
@@ -10,6 +10,7 @@ import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
+import 'react-phone-number-input/style.css';
 
 const userid =
   process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
@@ -20,8 +21,8 @@ const serviceid =
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
-  const [showModal, setShowModal] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const partnersRef = useRef(null);
   const PartnerFormData = {
     first_name: '',
     last_name: '',
@@ -64,62 +65,39 @@ const Form = ({ formContent }) => {
       .required('Phone number is required'),
   });
 
-  const {
-    values,
-    errors,
-    touched,
-    handleChange,
-    handleSubmit,
-    // setFieldError,
-    setFieldValue,
-  } = useFormik({
-    initialValues: PartnerFormData,
-    validationSchema: profileValidationSchema,
-    onSubmit: async (values, action) => {
-      console.log(values, 'values');
+  const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
+    useFormik({
+      initialValues: PartnerFormData,
+      validationSchema: profileValidationSchema,
+      onSubmit: async (values, action) => {
+        try {
+          values.country = selectedOption;
 
-      try {
-        values.country = selectedOption;
+          const emailResult = await emailjs.send(serviceid, templeteid, {
+            first_name: values.first_name,
+            last_name: values.last_name,
+            email: values.email,
+            phone_number: values.phone_number,
+            country: values.country,
+            linkedin_profile_link: values.linkedin_profile_link,
+          });
 
-        const emailResult = await emailjs.send(serviceid, templeteid, {
-          first_name: values.first_name,
-          last_name: values.last_name,
-          email: values.email,
-          phone_number: values.phone_number,
-          country: values.country,
-          linkedin_profile_link: values.linkedin_profile_link,
-        });
-
-        if (emailResult.status === 200) {
+          if (emailResult.status === 200) {
+            action.resetForm();
+            values.phone_number = '';
+          }
+        } catch (error) {
           action.resetForm();
           values.phone_number = '';
+
+          console.error('Error submitting the form:', error);
+        } finally {
           setTimeout(() => {
-            setShowModal(!showModal);
-            // setModalTitle('Your data has been successfully submitted');
-            setTimeout(() => {
-              window.open('https://calendly.com/esparktalents/', 'blank');
-              setShowModal(showModal);
-            }, 2000);
+            setIsOpen(true);
           }, 2000);
         }
-      } catch (error) {
-        action.resetForm();
-        values.phone_number = '';
-        setTimeout(() => {
-          setShowModal(!showModal);
-          // setModalTitle('Unfortunately, your data could not be submitted');
-          setTimeout(() => {
-            window.open('https://calendly.com/esparktalents/', 'blank');
-            setShowModal(showModal);
-          }, 2000);
-        }, 2000);
-
-        console.error('Error submitting the form:', error);
-      } finally {
-        // setSubmitting(false);
-      }
-    },
-  });
+      },
+    });
 
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
@@ -128,10 +106,11 @@ const Form = ({ formContent }) => {
   return (
     <Box
       className="partner-form"
+      id="partnership-form"
       sx={{
         mt: { xs: '12%', md: '12%' },
         maxWidth: '450px',
-        margin: '30px auto !important',
+        margin: '47px auto !important',
       }}
     >
       <Box sx={{ margin: '0px auto !important' }}>
@@ -209,7 +188,7 @@ const Form = ({ formContent }) => {
               )}
             </Box>
           </Box>
-          <Box className="partner-form-your-email-adress">
+          <Box className="partner-form-your-email-adress-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -235,7 +214,7 @@ const Form = ({ formContent }) => {
               <span className="error-message">{errors?.email}</span>
             )}
           </Box>
-          <Box className="partner-form-your-email-adress">
+          <Box className="partner-form-your-email-adress-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -250,26 +229,17 @@ const Form = ({ formContent }) => {
               <span className="starick">*</span>
             </Typography>
 
-            <Box>
-              {/* <input
-              type="number"
-              className="input"
-              placeholder="+00 00000000"
-              name="phone"
-              value={values.email}
-              onChange={handleChange}
-            /> */}
+            <Box className="parnership-form">
               <PhoneInput
                 placeholder="Enter phone number"
                 value={values.phone_number}
-                // className='input'
                 id={'phone_number'}
                 defaultCountry={'PK'}
                 onChange={handlePhoneChange}
               />
             </Box>
           </Box>
-          <Box className="partner-form-Country">
+          <Box className="partner-form-Country-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -288,7 +258,7 @@ const Form = ({ formContent }) => {
               setSelectedOption={setSelectedOption}
             />
           </Box>
-          <Box className="partner-form-LinkedIn-Profile">
+          <Box className="partner-form-LinkedIn-Profile-partnership">
             <Typography
               sx={{
                 color: '#265579',
@@ -334,6 +304,13 @@ const Form = ({ formContent }) => {
           </Box>
         </form>
       </Box>
+      <div id="partners" ref={partnersRef} />
+      <PopupModal
+        url="https://calendly.com/esparktalents/60min"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={partnersRef.current}
+      />
     </Box>
   );
 };

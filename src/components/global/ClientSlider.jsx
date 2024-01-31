@@ -50,6 +50,7 @@ const ClientSlider = ({
             textAlign: 'center',
             fontWeight: fontWeight,
             py: '30px',
+            pt: '50px',
             fontSize: fontSize,
             lineHeight: lineHeight,
           }}
@@ -92,13 +93,11 @@ const ClientSlider = ({
                     height={'37px'}
                     sx={{
                       width: {
-                        // xs: '150px',
                         sm: '184px',
                         md: '184px',
                         lg: '186px',
                       },
                       height: {
-                        // xs: '30px',
                         sm: '35px',
                         md: '35px',
                         lg: '37px',
@@ -111,7 +110,7 @@ const ClientSlider = ({
                         width: '100px',
                         height: '20px',
                       },
-                      '@media (min-width: 300px) and (max-width: 374px)': {
+                      '@media (min-width: 280px) and (max-width: 374px)': {
                         width: '80px',
                         height: '18px',
                       },
