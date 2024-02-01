@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,
@@ -46,7 +46,7 @@ const OurExperties = dynamic(
 );
 
 const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
-  ssr: false,
+  ssr: true,
 });
 
 const ClientSays = dynamic(() => import('@/components/homepage/ClientSays'), {
@@ -65,21 +65,12 @@ const Faq = dynamic(() => import('@/components/FAQ/Faq'), {
   ssr: false,
 });
 const Page = () => {
-  const [showBlogs, setShowBlogs] = useState(false);
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
-
-    const delay = setTimeout(() => {
-      setShowBlogs(true);
-    }, 1000);
-
-    return () => clearTimeout(delay);
-  }, []);
-
+  });
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
@@ -99,17 +90,13 @@ const Page = () => {
         lineHeight={{ xs: '30px !important', sm: '20px !important' }}
         fontWeight={500}
       />
-      {showBlogs && (
-        <>
-          <Process data={PROCESS_DATA} />
-          <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
-          <Perks data={PERKS_DATA} />
-          <BenefitsWorks data={BENEFITS_WORKS_DATA} />
-          <OurExperties data={EXPERTIES_DATA} />
-          <ClientSays data={OUR_CLIENT_SAYS} />
-          <HomeBlogs />
-        </>
-      )}
+      <Process data={PROCESS_DATA} />
+      <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
+      <Perks data={PERKS_DATA} />
+      <BenefitsWorks data={BENEFITS_WORKS_DATA} />
+      <OurExperties data={EXPERTIES_DATA} />
+      <ClientSays data={OUR_CLIENT_SAYS} />
+      <HomeBlogs />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}
