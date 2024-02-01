@@ -94,6 +94,9 @@ const BookADemoForm = ({ form }) => {
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
+              setTimeout(() => {
+                handleClose();
+              }, 3000);
             }, 2000);
           }
         } catch (error) {
@@ -102,13 +105,16 @@ const BookADemoForm = ({ form }) => {
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
+            setTimeout(() => {
+              handleClose();
+            }, 3000);
           }, 2000);
 
           console.error('Error submitting the form:', error);
         } finally {
           setTimeout(() => {
             setIsOpen(true);
-          }, 2000);
+          }, 5000);
         }
       },
     });
