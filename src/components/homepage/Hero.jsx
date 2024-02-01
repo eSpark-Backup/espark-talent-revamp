@@ -86,6 +86,13 @@ const Hero = ({ data }) => {
               )}
               {data?.button && (
                 <Box
+                  sx={{
+                    mx: {
+                      xs: 'auto',
+                      sm: 'unset',
+                      justifyContent: { xs: 'center', sm: 'flex-end' },
+                    },
+                  }}
                   py={{
                     xs: '14px',
                     sm: '14px',
@@ -98,7 +105,7 @@ const Hero = ({ data }) => {
                     <Button
                       sx={{
                         backgroundColor: pathName == '/' ? '#001C63' : '#fff',
-                        display: { xs: 'none', sm: 'flex' },
+
                         '&:hover': {
                           color:
                             pathName == '/solutions/enterprises'
