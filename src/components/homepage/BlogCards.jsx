@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
+import Skeleton from 'react-loading-skeleton';
 import { READ_MORE } from '@/constants/home-page/blogSections';
 
 const BlogCards = ({ data }) => {
@@ -22,7 +22,7 @@ const BlogCards = ({ data }) => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
   const isMediumScreen = useMediaQuery('(max-width:768px)');
 
-  let cardsInRow = 12; // Default for screens wider than 767px
+  let cardsInRow = 12;
 
   if (isSmallScreen) {
     cardsInRow = 12;

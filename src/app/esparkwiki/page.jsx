@@ -5,15 +5,20 @@ import { getWiki, getWikiCategories } from '@/sanity/sanity.quries';
 import WikiCards from '@/components/wiki/wikiCards';
 
 export default async function page() {
-  const wiki = await getWiki();
-  const wikiCategory = await getWikiCategories();
+  try {
+    const wiki = await getWiki();
+    const wikiCategory = await getWikiCategories();
 
-  return (
-    <>
-      <Hero data={WIKI_HERO_DATA} />
-      <Box sx={{ background: '#3b59980f' }}>
-        <WikiCards data={wiki} categories={wikiCategory} />
-      </Box>
-    </>
-  );
+    return (
+      <>
+        <Hero data={WIKI_HERO_DATA} />
+        <Box sx={{ background: '#3b59980f' }}>
+          <WikiCards data={wiki} categories={wikiCategory} />
+        </Box>
+      </>
+    );
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return <p>Error loading data. Please try again later.</p>;
+  }
 }

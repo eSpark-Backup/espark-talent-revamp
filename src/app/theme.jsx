@@ -8,7 +8,6 @@ const poppins = Poppins({
   subsets: ['latin'],
 });
 
-// Light Theme
 const theme = createTheme({
   palette: {
     primary: {
