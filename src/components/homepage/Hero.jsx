@@ -98,7 +98,7 @@ const Hero = ({ data }) => {
                     <Button
                       sx={{
                         backgroundColor: pathName == '/' ? '#001C63' : '#fff',
-                        display: { xs: 'none', sm: 'flex' },
+                        display: { xs: 'none', sm: 'inline' },
                         '&:hover': {
                           color:
                             pathName == '/solutions/enterprises'
