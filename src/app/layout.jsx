@@ -10,11 +10,9 @@ import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SkeletonTheme } from 'react-loading-skeleton';
+import Header from '@/components/global/Header/Header';
 
-const Header = dynamic(() => import('@/components/global/Header/Header'), {
-  ssr: false,
-});
-
+// Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,
 });

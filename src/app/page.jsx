@@ -14,10 +14,8 @@ import {
 import { FAQ_DATA } from '../constants/home-page/faq-section';
 import { HP_HERO_DATA } from '../constants/global/hero-sections';
 import dynamic from 'next/dynamic';
-
-const ClientSlider = dynamic(() => import('@/components/global/ClientSlider'), {
-  ssr: false,
-});
+import Hero from '@/components/homepage/Hero';
+import ClientSlider from '@/components/global/ClientSlider';
 
 const SourceBenefits = dynamic(
   () => import('@/components/homepage/SourceBenefits'),
@@ -52,10 +50,6 @@ const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
 });
 
 const ClientSays = dynamic(() => import('@/components/homepage/ClientSays'), {
-  ssr: false,
-});
-
-const Hero = dynamic(() => import('@/components/homepage/HomeHero'), {
   ssr: false,
 });
 
