@@ -8,10 +8,11 @@ import moment from 'moment';
 const SingleBlogHeader = ({ data, authors }) => {
   const blogString = JSON.stringify(data);
   const parsedblog = JSON.parse(blogString);
+  const singleAuthor = authors[0];
 
-  const filteredAuthor = authors?.filter(
-    (author) => author?._id === parsedblog?.author
-  )[0];
+  // const filteredAuthor = authors?.filter(
+  //   (author) => author?._id === parsedblog?.id
+  // )[0];
 
   return (
     <>
@@ -46,7 +47,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                 <Stack direction="row" spacing={2}>
                   <Avatar
                     alt={parsedblog?.title}
-                    src={filteredAuthor?.avatar}
+                    src={singleAuthor?.avatar}
                     sx={{
                       width: { xs: 45, md: 65 },
                       height: { xs: 45, md: 65 },
@@ -57,13 +58,17 @@ const SingleBlogHeader = ({ data, authors }) => {
                   <Box display="flex" gap="2px">
                     <Link href="#" underline="hover">
                       <Typography variant="body1" color={'black'}>
-                        By{' '}
+                        By
                         <Typography
+                          component={'span'}
                           variant="body1"
                           color="#001C63"
+                          sx={{
+                            ml: 1,
+                          }}
                           fontWeight={600}
                         >
-                          {`${filteredAuthor?.firstName} ${filteredAuthor?.firstName}`}
+                          {`${singleAuthor?.firstName ? singleAuthor?.firstName : ''} ${singleAuthor?.lastName ? singleAuthor?.lastName : ''}`}
                         </Typography>
                       </Typography>
                     </Link>
