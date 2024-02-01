@@ -23,6 +23,67 @@ const Process = ({ data }) => {
         },
       }}
     >
+      <Box
+        sx={{
+          width: '100%',
+          textAlign: 'center',
+          mb: { xs: 4, lg: 4 },
+          '@media (min-width: 600px) and (max-width: 719px)': {
+            mb: 2,
+          },
+          '@media (min-width: 360px) and (max-width: 599px)': {
+            mb: 1,
+          },
+        }}
+      >
+        <Typography
+          component={'h2'}
+          sx={{
+            color: '#001C63',
+            fontSize: { sm: '28px !important', md: '32px !important' },
+            fontStyle: 'normal',
+            fontWeight: 600,
+            lineHeight: { sm: '35px', md: '40.106px' },
+            '@media (min-width: 600px) and (max-width: 767px)': {
+              fontSize: '23px !important',
+              lineHeight: '35px',
+            },
+            '@media (min-width: 360px) and (max-width: 599px)': {
+              fontSize: '23px !important',
+              lineHeight: '22px',
+            },
+            '@media (min-width: 280px) and (max-width: 359px)': {
+              fontSize: '20px !important',
+              lineHeight: '27px',
+            },
+          }}
+        >
+          {data?.title}
+        </Typography>
+        <Typography
+          component={'p'}
+          sx={{
+            color: '#001C63',
+            fontSize: { sm: '15px !important', md: '18px !important' },
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: '39.602px',
+            '@media (min-width: 600px) and (max-width: 719px)': {
+              fontSize: '15px !important',
+              lineHeight: '35px',
+            },
+            '@media (min-width: 360px) and (max-width: 599px)': {
+              fontSize: '12px !important',
+            },
+            '@media (min-width: 280px) and (max-width: 359px)': {
+              fontSize: '12px !important',
+              lineHeight: '25px',
+            },
+          }}
+        >
+          {data?.subTitle}
+        </Typography>
+      </Box>
       {data?.processes?.map((process, index) => (
         <Box
           key={index}
