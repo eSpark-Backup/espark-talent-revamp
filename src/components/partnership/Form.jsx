@@ -5,12 +5,12 @@ import { useFormik } from 'formik';
 import { PopupModal } from 'react-calendly';
 import emailjs from '@emailjs/browser';
 
-// import PartnersModal from './PartnersModal';
 import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import { CountryCode } from '@/constants/global/CountryCodes';
 import 'react-phone-number-input/style.css';
+import BasicModal from '../book-a-demo/BookADemoModal';
 
 const userid =
   process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
@@ -22,6 +22,10 @@ const serviceid =
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [modalText, setModalText] = useState('');
+
+  const handleClose = () => setOpen(false);
   const partnersRef = useRef(null);
   const PartnerFormData = {
     first_name: '',
@@ -85,16 +89,30 @@ const Form = ({ formContent }) => {
           if (emailResult.status === 200) {
             action.resetForm();
             values.phone_number = '';
+            setTimeout(() => {
+              setOpen(!open);
+              setModalText('Your data has been successfully submitted');
+              setTimeout(() => {
+                handleClose();
+              }, 3000);
+            }, 2000);
           }
         } catch (error) {
           action.resetForm();
           values.phone_number = '';
+          setTimeout(() => {
+            setOpen(!open);
+            setModalText('Unfortunately, your data could not be submitted');
+            setTimeout(() => {
+              handleClose();
+            }, 3000);
+          }, 2000);
 
           console.error('Error submitting the form:', error);
         } finally {
           setTimeout(() => {
             setIsOpen(true);
-          }, 2000);
+          }, 5000);
         }
       },
     });
@@ -304,6 +322,7 @@ const Form = ({ formContent }) => {
           </Box>
         </form>
       </Box>
+      <BasicModal text={modalText} open={open} handleClose={handleClose} />
       <div id="partners" ref={partnersRef} />
       <PopupModal
         url="https://calendly.com/esparktalents/60min"
