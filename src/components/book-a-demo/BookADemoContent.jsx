@@ -98,11 +98,11 @@ const BookADemoContent = ({ content }) => {
             component={'img'}
             src={image}
             sx={{
-              width: { xs: 327.271, sm: 452 },
-              height: { xs: 274.264, sm: 378.855 },
+              // width: { xs: 327.271, sm: 452 },
+              // height: { xs: 274.264, sm: 378.855 },
               '@media (min-width:425px) and (max-width:599px)': {
-                width: 400,
-                height: 300,
+                // width: 400,
+                // height: 300,
               },
             }}
             alt={alt}
