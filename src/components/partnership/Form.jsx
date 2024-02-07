@@ -2,29 +2,26 @@
 import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { PopupModal } from 'react-calendly';
-import emailjs from '@emailjs/browser';
-
 import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
-import { CountryCode } from '@/constants/global/CountryCodes';
 import 'react-phone-number-input/style.css';
 import BasicModal from '../book-a-demo/BookADemoModal';
+import axios from 'axios';
+import { CountryCode } from '@/constants/global/CountryCodes';
+import { PopupModal } from 'react-calendly';
 
-const userid =
-  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_USER_ID || 'hyXwjEdPoM5uV-RK8';
-const templeteid =
-  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_TEMPLATE_ID || 'template_6y49v0k';
-const serviceid =
-  process.env.NEXT_PUBLIC_PARTNERS_EMAILJS_SERVICE_ID || 'service_ac1wtgmmm';
+const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
+const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
+const cleintTempleteId = process.env.NEXT_PUBLIC_PARTNERS_CLIENT_TEMPLETE_ID;
+console.log(adminId, adminTempleteId, cleintTempleteId);
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
-
+  console.log(selectedOption, 'selectedOption');
   const handleClose = () => setOpen(false);
   const partnersRef = useRef(null);
   const PartnerFormData = {
@@ -35,8 +32,6 @@ const Form = ({ formContent }) => {
     country: '',
     linkedin_profile_link: '',
   };
-
-  emailjs.init(userid);
 
   const options = CountryCode?.map((opt) => opt?.name);
 
@@ -75,18 +70,30 @@ const Form = ({ formContent }) => {
       validationSchema: profileValidationSchema,
       onSubmit: async (values, action) => {
         try {
-          values.country = selectedOption;
+          const response = await axios.post(
+            '/api/email',
+            {
+              toAdmin: adminId,
+              toSubmitter: values.email,
+              adminTemplateId: adminTempleteId,
+              submitterTemplateId: cleintTempleteId,
+              data: {
+                first_name: values.first_name,
+                last_name: values.last_name,
+                email: values.email,
+                phone_number: values.phone_number,
+                country: selectedOption,
+                linkedin_profile_link: values.linkedin_profile_link,
+              },
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
 
-          const emailResult = await emailjs.send(serviceid, templeteid, {
-            first_name: values.first_name,
-            last_name: values.last_name,
-            email: values.email,
-            phone_number: values.phone_number,
-            country: values.country,
-            linkedin_profile_link: values.linkedin_profile_link,
-          });
-
-          if (emailResult.status === 200) {
+          if (response.status === 200) {
             action.resetForm();
             values.phone_number = '';
             setTimeout(() => {
@@ -107,7 +114,6 @@ const Form = ({ formContent }) => {
               handleClose();
             }, 3000);
           }, 2000);
-
           console.error('Error submitting the form:', error);
         } finally {
           setTimeout(() => {

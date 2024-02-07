@@ -23,7 +23,7 @@ export const Book_A_Demo_Data = {
   content: {
     title: `Book a meeting with our experts and <br /> onboard the world’s best talent in minutes.`,
     text: 'Respected Amongst a Network of Global Partners',
-    image: '/images/book-a-demo/image.svg',
+    image: '/images/book-a-demo/book a demo image.png',
     alt: 'book-a-demo-image',
     description:
       'Our on-time, cost-efficient, and proven outsourcing services are waiting for you. So, talk to us and onboard your professional outsourcing employees today!',

@@ -1,13 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { Box, Button, Typography } from '@mui/material';
-
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import ErrorMessage from './ErrorMessage';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { isValidPhoneNumber } from 'react-phone-number-input';
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
 import BasicModal from './BookADemoModal';
 import { PopupModal } from 'react-calendly';
 
@@ -28,17 +27,10 @@ const BookADemoForm = ({ form }) => {
     no_of_employees: '',
   };
 
-  const userid =
-    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_USER_ID ||
-    'i97Hmgobdw1yJilSn';
-  const templeteid =
-    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_TEMPLATE_ID ||
-    'template_tpktgz5';
-  const serviceid =
-    process.env.NEXT_PUBLIC_BOOK_A_MEETING_EMAILJS_SERVICE_ID ||
-    'service_h5qpxbn';
-
-  emailjs.init(userid);
+  const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
+  const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
+  const cleintTempleteId = process.env.NEXT_PUBLIC_DEMO_CLIENT_TEMPLETE_ID;
+  console.log(adminId, adminTempleteId, cleintTempleteId);
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()
@@ -79,16 +71,30 @@ const BookADemoForm = ({ form }) => {
       validationSchema: profileValidationSchema,
       onSubmit: async (values, action) => {
         try {
-          const emailResult = await emailjs.send(serviceid, templeteid, {
-            first_name: values.first_name,
-            last_name: values.last_name,
-            email: values.email,
-            phone_number: values.phone_number,
-            web_url: values.web_url,
-            no_of_employees: values.no_of_employees,
-          });
+          const response = await axios.post(
+            '/api/email',
+            {
+              toAdmin: adminId,
+              toSubmitter: values.email,
+              adminTemplateId: adminTempleteId,
+              submitterTemplateId: cleintTempleteId,
+              data: {
+                first_name: values.first_name,
+                last_name: values.last_name,
+                email: values.email,
+                phone_number: values.phone_number,
+                web_url: values.web_url,
+                no_of_employees: values.no_of_employees,
+              },
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
 
-          if (emailResult.status === 200) {
+          if (response.status === 200) {
             action.resetForm();
             values.phone_number = '';
             setTimeout(() => {
