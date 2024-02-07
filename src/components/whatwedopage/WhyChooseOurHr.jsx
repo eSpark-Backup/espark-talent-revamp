@@ -36,6 +36,7 @@ const WhyChooseOurHr = ({ data }) => {
               }}
             >
               <Typography
+                variant="h2"
                 sx={{
                   color: '#001C63',
                   fontSize: { md: '32px', xs: '20px' },
@@ -99,6 +100,7 @@ const WhyChooseOurHr = ({ data }) => {
               {data?.card?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Box
+                    variant="h3"
                     sx={{
                       display: 'flex',
                       alignItems: { lg: 'center' },

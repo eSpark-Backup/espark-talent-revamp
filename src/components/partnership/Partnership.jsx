@@ -33,6 +33,7 @@ const Partnership = ({ partnership }) => {
                   }}
                 >
                   <Typography
+                    variant="h2"
                     sx={{
                       color: '#001C63',
                       px: { xs: '40px', sm: 0 },
