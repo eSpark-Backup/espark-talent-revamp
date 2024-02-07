@@ -39,16 +39,16 @@ const Hero = ({ data }) => {
             >
               {data?.title && (
                 <Typography
+                  variant="h1"
                   lineHeight={1.4}
                   color={data?.titleColor}
                   fontSize={{
                     xs: '22px',
-                    sm: '24px',
-                    md: '30x',
-                    lg: '45px',
+                    sm: '25px',
+                    md: '35px',
+                    lg: '50px',
                     xl: '50px',
                   }}
-                  fontWeight={700}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -56,6 +56,7 @@ const Hero = ({ data }) => {
                     lg: 'left',
                     xl: 'left',
                   }}
+                  fontWeight={700}
                 >
                   {data?.title}
                 </Typography>
@@ -67,8 +68,8 @@ const Hero = ({ data }) => {
                   fontWeight={500}
                   pr={data?.tpr}
                   fontSize={{
-                    xs: '14px',
-                    sm: '14px',
+                    xs: '12px',
+                    sm: '12px',
                     md: '16px',
                     lg: '20px',
                     xl: '20px',

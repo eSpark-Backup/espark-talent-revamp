@@ -64,6 +64,7 @@ const QuestionAnswer = ({ data }) => {
               }}
             >
               <Typography
+                variant="h2"
                 sx={{
                   color: '#09114A',
                   textAlign: { xs: 'center', sm: 'right' },

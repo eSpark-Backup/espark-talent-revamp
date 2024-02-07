@@ -20,6 +20,7 @@ const ChooseUs = ({ chooseUs }) => {
             <Box sx={{ mt: { lg: '20px' } }}>
               <Box>
                 <Typography
+                  variant="h2"
                   sx={{
                     color: '#001C63',
                     fontSize: { md: '32px', xs: '20px' },

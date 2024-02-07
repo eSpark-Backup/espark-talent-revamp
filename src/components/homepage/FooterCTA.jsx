@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -55,6 +56,7 @@ const FooterCTA = ({ data }) => {
                 >
                   <Box>
                     <Typography
+                      variant="h2"
                       sx={{
                         color: '#ECECED',
                         fontSize: {

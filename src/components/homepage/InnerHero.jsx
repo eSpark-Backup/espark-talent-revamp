@@ -41,16 +41,16 @@ const InnerHero = ({ data, innerData }) => {
             >
               {data?.title && (
                 <Typography
+                  variant="h1"
                   lineHeight={1.3}
                   color={data?.titleColor}
                   fontSize={{
                     xs: '22px',
-                    sm: '24px',
-                    md: '30x',
-                    lg: '40px',
-                    xl: '45px',
+                    sm: '25px',
+                    md: '35px',
+                    lg: '50px',
+                    xl: '50px',
                   }}
-                  fontWeight={600}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -58,6 +58,7 @@ const InnerHero = ({ data, innerData }) => {
                     lg: 'left',
                     xl: 'left',
                   }}
+                  fontWeight={700}
                 >
                   {isLoading ? (
                     <Skeleton width={200} height={24} />
@@ -71,8 +72,8 @@ const InnerHero = ({ data, innerData }) => {
                   color={data?.descColor}
                   lineHeight={1.5}
                   fontSize={{
-                    xs: '14px',
-                    sm: '14px',
+                    xs: '12px',
+                    sm: '12px',
                     md: '16px',
                     lg: '20px',
                     xl: '20px',

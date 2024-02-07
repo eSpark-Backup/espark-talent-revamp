@@ -16,8 +16,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
+import { usePathname } from 'next/navigation';
 
 const OutSourcingWonder = ({ data }) => {
+  const pathname = usePathname();
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
   );
@@ -71,6 +73,7 @@ const OutSourcingWonder = ({ data }) => {
         <Container>
           <Box sx={{ textAlign: 'center' }}>
             <Typography
+              variant="h2"
               sx={{
                 color: '#001C63',
                 textAlign: 'center',
@@ -143,6 +146,9 @@ const OutSourcingWonder = ({ data }) => {
                       />
                     </Box>
                     <Typography
+                      variant={
+                        pathname === '/solutions/business-startup' ? 'h4' : 'h3'
+                      }
                       sx={{
                         color: '#001C63',
                         fontSize: {
