@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const Title = ({ heading, subHeading }) => {
+const Title = ({ heading, subHeading, variant }) => {
   return (
     <Box
       sx={{
@@ -13,6 +13,7 @@ const Title = ({ heading, subHeading }) => {
       }}
     >
       <Typography
+        variant={variant}
         sx={{
           color: '#09114A',
           textAlign: 'center',

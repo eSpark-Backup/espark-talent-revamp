@@ -69,6 +69,7 @@ const OurQualityService = ({ ourQualityService }) => {
           >
             <Box sx={{ alignItems: 'center', pt: { xs: '30px', md: '0px' } }}>
               <Typography
+                variant="h2"
                 sx={{
                   color: '#001C63',
                   textAlign: { xs: 'center', md: 'right' },

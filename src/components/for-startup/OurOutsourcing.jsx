@@ -10,6 +10,7 @@ const OurOutsourcing = ({ data }) => {
     <Box sx={{ mb: { xs: '26px', md: '88px' } }}>
       <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>
         <Typography
+          variant="h2"
           sx={{
             color: '#001C63',
             fontSize: { md: '32px', xs: '20px' },
@@ -44,6 +45,7 @@ const OurOutsourcing = ({ data }) => {
           <Grid item sm={12} md={6}>
             <Box>
               <Typography
+                variant="h3"
                 sx={{
                   color: '#001C63',
                   fontSize: { xs: '20px', md: '28px' },
