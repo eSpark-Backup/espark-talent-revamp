@@ -87,6 +87,7 @@ const Perks = ({ data }) => {
                         alt={perk.title}
                       />
                       <Typography
+                        variant="h3"
                         color={index === selectedCard ? '#FFFFFF' : '#001C63'}
                         sx={{
                           flexWrap: 'wrap',
@@ -150,6 +151,7 @@ const Perks = ({ data }) => {
                   }}
                 >
                   <Typography
+                    variant="h3"
                     color={'#fff'}
                     fontWeight={700}
                     pb={1}

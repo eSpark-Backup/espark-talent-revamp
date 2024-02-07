@@ -75,6 +75,7 @@ const Faq = ({ data }) => {
                     id={`${panel}-header`}
                   >
                     <Typography
+                      variant="h4"
                       sx={{
                         color: '#09114A  !important',
                         fontSize: {

@@ -11,7 +11,7 @@ const HRFirmSuccess = ({ hrFirm }) => {
   return (
     <Box sx={{ my: '4%' }}>
       <Container>
-        <Title heading={heading} subHeading={subHeading} />
+        <Title heading={heading} subHeading={subHeading} variant={`h2`} />
         <Grid
           container
           rowSpacing={2}
