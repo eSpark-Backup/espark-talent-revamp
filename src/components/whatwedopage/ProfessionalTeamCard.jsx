@@ -37,6 +37,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
           }}
         >
           <Typography
+            variant="h2"
             sx={{
               px: { md: '11%' },
               color: '#001C63',
@@ -169,6 +170,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
                   }}
                 >
                   <Typography
+                    variant="h3"
                     sx={{
                       color: '#09114A',
                       fontSize: { md: '20.325px', sm: '15px', xs: '11.72px' },

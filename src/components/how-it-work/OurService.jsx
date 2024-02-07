@@ -14,7 +14,7 @@ const OurService = ({ ourService }) => {
   return (
     <Box sx={{ mb: '4%' }}>
       <Container>
-        <Title heading={heading} subHeading={subHeading} />
+        <Title heading={heading} subHeading={subHeading} variant={'h2'} />
         <Swiper
           spaceBetween={0}
           modules={[Pagination]}
@@ -90,6 +90,7 @@ const OurService = ({ ourService }) => {
 
                   <Box sx={{ px: { xs: '24px', md: '22px' } }}>
                     <Typography
+                      variant="h3"
                       sx={{
                         color: '#09114A',
                         fontSize: { xs: '19.197px ', md: '22.187px' },

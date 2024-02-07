@@ -15,6 +15,7 @@ const OutSourcingAdvantage = ({ data }) => {
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid item xs={12} sm={6}>
               <Typography
+                variant="h2"
                 color="secondary"
                 sx={{
                   fontSize: { xs: '20px', sm: '24px', md: '25px', lg: '28px' },
