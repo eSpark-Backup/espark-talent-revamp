@@ -22,6 +22,7 @@ const ExpertTeamCard = ({ teamData }) => {
           }}
         >
           <Typography
+            variant="h2"
             sx={{
               mx: { xs: '5%', md: '16%' },
               color: '#001C63',
@@ -141,6 +142,7 @@ const ExpertTeamCard = ({ teamData }) => {
 
                   <Box>
                     <Typography
+                      variant="h3"
                       sx={{
                         color: '#09114A',
                         fontSize: { xs: '17px', lg: '22px' },

@@ -85,6 +85,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                 </Grid>
                 <Grid item xs={7} sm={7}>
                   <Typography
+                    variant="h4"
                     sx={{
                       color: '#09114A',
                       fontSize: { md: '18.353px', xs: '10.234px', sm: '13px' },

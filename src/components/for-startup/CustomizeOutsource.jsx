@@ -14,6 +14,7 @@ const CustomizeOutsource = ({ data }) => {
             <Box>
               <Box>
                 <Typography
+                  variant="h3"
                   sx={{
                     color: '#001C63',
                     fontSize: { xs: '20px', md: '28px' },

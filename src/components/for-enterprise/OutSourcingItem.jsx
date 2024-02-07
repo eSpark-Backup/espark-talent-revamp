@@ -67,6 +67,7 @@ const OutSourcingItem = ({ data }) => {
           >
             <Typography
               color={'secondary'}
+              variant="h2"
               sx={{
                 textAlign: 'center',
                 flexWrap: 'wrap',
@@ -132,6 +133,7 @@ const OutSourcingItem = ({ data }) => {
                     }}
                   >
                     <Typography
+                      variant="h3"
                       sx={{
                         color: '#001C63',
                         fontSize: {
