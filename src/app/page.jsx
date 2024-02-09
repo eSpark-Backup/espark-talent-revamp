@@ -71,6 +71,7 @@ const Page = () => {
       behavior: 'smooth',
     });
   });
+
   return (
     <>
       <Hero data={HP_HERO_DATA} color="primary" />
