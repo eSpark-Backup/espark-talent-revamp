@@ -1,45 +1,52 @@
-'use client';
+import HowitsWork from '@/components/how-it-work/HowitsWork';
+import { GLOBAL_SEO } from '@/constants/test';
 import React from 'react';
 
-import Hero from '@/components/homepage/Hero';
-import ClientSlider from '@/components/global/ClientSlider';
-import HRFirmSuccess from '@/components/how-it-work/HRFirmSuccess';
-import ChooseUs from '@/components/how-it-work/ChooseUs';
-import OurQualityService from '@/components/how-it-work/OurQualityService';
-import OurService from '@/components/how-it-work/OurService';
+const pathname = '/how-its-work';
+const filteredData =
+  GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 
-import {
-  CLIENTS_SLIDER_DATA,
-  CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
-import {
-  CHOOSE_US,
-  HR_FIRM_DATA,
-  OUR_OFFERED_SERVICES,
-  OUR_SERVICE,
-} from '@/constants/how-its-works';
-
-import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
+export const metadata = {
+  metadataBase: new URL('https://esparktalent.com/'),
+  title: filteredData?.title,
+  description: filteredData?.description,
+  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  author: `eSpark Talent`,
+  canonical: `https://esparktalent.com${filteredData?.path}`,
+  robots: `index, follow`,
+  openGraph: {
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    type: 'article',
+    publishedTime: '2023-01-01T00:00:00.000Z',
+    authors: ['eSpark Talent', 'Mehdi Raza'],
+    siteName: `eSpark Talent: Get Modern Employee Outsourcing Solutions.`,
+    locale: `en_US`,
+    images: [
+      {
+        url: filteredData?.image,
+        alt: filteredData?.title,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: `summary_large_image`,
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    siteId: `@eSparkTalent`,
+    creator: `@eSparkTalent`,
+    images: [`${filteredData?.image}`],
+  },
+};
 
 const Page = () => {
   return (
     <>
-      <Hero data={HOW_WORKS_HERO_DATA} />
-      <ClientSlider
-        data={CLIENTS_SLIDER_DATA}
-        breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-        bgColor={'#3B59980A'}
-        txtColor={'#001C63'}
-        fontWeight={500}
-        fontSize={'24px !important'}
-        title={
-          'Meet our partners who trust our certified tech experts offering 100% business growth results'
-        }
-      />
-      <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
-      <OurService ourService={OUR_SERVICE} />
-      <ChooseUs chooseUs={CHOOSE_US} />
-      <OurQualityService ourQualityService={OUR_OFFERED_SERVICES} />
+      <HowitsWork />
     </>
   );
 };

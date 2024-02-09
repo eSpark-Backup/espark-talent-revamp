@@ -13,8 +13,6 @@ import { PopupModal } from 'react-calendly';
 
 const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
 const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
-const cleintTempleteId = process.env.NEXT_PUBLIC_PARTNERS_CLIENT_TEMPLETE_ID;
-console.log(adminId, adminTempleteId, cleintTempleteId);
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -76,7 +74,6 @@ const Form = ({ formContent }) => {
               toAdmin: adminId,
               toSubmitter: values.email,
               adminTemplateId: adminTempleteId,
-              submitterTemplateId: cleintTempleteId,
               data: {
                 first_name: values.first_name,
                 last_name: values.last_name,
