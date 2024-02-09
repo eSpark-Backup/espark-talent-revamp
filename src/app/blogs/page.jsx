@@ -1,40 +1,55 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import BlogCards from '@/components/homepage/BlogCards';
-import Hero from '@/components/homepage/Hero';
-import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
-import { getBlog } from '@/sanity/sanity.quries';
+import BlogsPage from '@/components/blogs/BlogsPage';
+import React from 'react';
 
-export default function Page() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+import { GLOBAL_SEO } from '@/constants/test';
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const fetchedBlogs = await getBlog();
-        if (Array.isArray(fetchedBlogs)) {
-          setBlogs(fetchedBlogs);
-        } else {
-          throw new Error('Invalid data format');
-        }
-      } catch (error) {
-        setError(error.message || 'An error occurred while fetching blog data');
-      } finally {
-        setLoading(false);
-      }
-    };
+const pathname = '/blogs';
+const filteredData =
+  GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 
-    fetchData();
-  }, []);
+export const metadata = {
+  metadataBase: new URL('https://esparktalent.com/'),
+  title: filteredData?.title,
+  description: filteredData?.description,
+  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  author: `eSpark Talent`,
+  canonical: `https://esparktalent.com${filteredData?.path}`,
+  robots: `index, follow`,
+  openGraph: {
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    type: 'article',
+    publishedTime: '2023-01-01T00:00:00.000Z',
+    authors: ['eSpark Talent', 'Mehdi Raza'],
+    siteName: `eSpark Talent: Get Modern Employee Outsourcing Solutions.`,
+    locale: `en_US`,
+    images: [
+      {
+        url: filteredData?.image,
+        alt: filteredData?.title,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: `summary_large_image`,
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    siteId: `@eSparkTalent`,
+    creator: `@eSparkTalent`,
+    images: [`${filteredData?.image}`],
+  },
+};
 
+const Page = () => {
   return (
     <>
-      <Hero data={BLOGS_HERO_DATA} />
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {!loading && !error && <BlogCards data={blogs} />}
+      <BlogsPage />
     </>
   );
-}
+};
+
+export default Page;

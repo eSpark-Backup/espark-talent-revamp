@@ -14,17 +14,10 @@ async function handler(req, res) {
     console.log(request, 'request');
     console.log(res, 'response');
 
-    const { toAdmin, toSubmitter, adminTemplateId, submitterTemplateId, data } =
-      request;
+    const { toAdmin, adminTemplateId, submitterTemplateId, data } = request;
 
     // Input validation
-    if (
-      !toAdmin ||
-      !toSubmitter ||
-      !adminTemplateId ||
-      !submitterTemplateId ||
-      !data
-    ) {
+    if (!toAdmin || !adminTemplateId || !submitterTemplateId || !data) {
       throw new Error('Invalid request body. Required fields are missing.');
     }
 
@@ -34,12 +27,6 @@ async function handler(req, res) {
         to: toAdmin,
         from: toAdmin,
         templateId: adminTemplateId,
-        dynamicTemplateData: data,
-      }),
-      sgMail.send({
-        to: toSubmitter,
-        from: toAdmin,
-        templateId: submitterTemplateId,
         dynamicTemplateData: data,
       }),
     ]);

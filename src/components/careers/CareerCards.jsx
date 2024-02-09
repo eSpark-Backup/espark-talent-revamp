@@ -25,7 +25,7 @@ const CareerCards = ({ data, categories }) => {
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
   const endIndex = startIndex + perPage;
-  const paginatedData = filteredData.slice(startIndex, endIndex);
+  const paginatedData = filteredData?.slice(startIndex, endIndex);
 
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
   const isMediumScreen = useMediaQuery((theme) =>
@@ -188,13 +188,13 @@ const CareerCards = ({ data, categories }) => {
               </Grid>
             </Grid>
           ))}
-          {filteredData.length > perPage && (
+          {filteredData?.length > perPage && (
             <Box
               spacing={2}
               sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}
             >
               <Pagination
-                count={Math.ceil(filteredData.length / perPage)}
+                count={Math.ceil(filteredData?.length / perPage)}
                 page={page}
                 onChange={handlePaginationChange}
                 color="primary"
