@@ -12,7 +12,7 @@ import { SkeletonTheme } from 'react-loading-skeleton';
 import Header from '@/components/global/Header/Header';
 import TawkToWidget from '@/components/global/TawkToWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
-
+import { GLOBAL_SEO } from '@/constants/test';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,
@@ -22,31 +22,46 @@ const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,
 });
 
+const pathname = '/';
+const filteredData =
+  GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 export const metadata = {
-  title: 'eSpark Talent: Get Modern Employee Outsourcing Solutions. ',
-  description:
-    'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy',
-  keywords: ['eSpark Talent', 'eSpark Solution', 'eSpark Consultants'],
-  author: 'eSpark Talent',
-  canonical: 'https://esparktalent.com/',
-  robots: 'index, follow',
-  ogTitle: 'eSpark Talent: Get Modern Employee Outsourcing Solutions. ',
-  ogDescription:
-    'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy',
-  ogUrl: 'https://esparktalent.com/',
-  ogImage: {
-    url: 'https://esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
-    alt: 'eSpark Talent: Get Modern Employee Outsourcing Solutions. ',
-    width: 1200,
-    height: 630,
+  metadataBase: new URL('https://esparktalent.com/'),
+  title: filteredData?.title,
+  description: filteredData?.description,
+  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  author: `eSpark Talent`,
+  canonical: `https://esparktalent.com${filteredData?.path}`,
+  robots: `index, follow`,
+  openGraph: {
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    type: 'article',
+    publishedTime: '2023-01-01T00:00:00.000Z',
+    authors: ['eSpark Talent', 'Mehdi Raza'],
+    siteName: `eSpark Talent: Get Modern Employee Outsourcing Solutions.`,
+    locale: `en_US`,
+    images: [
+      {
+        url: filteredData?.image,
+        alt: filteredData?.title,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
-  ogSiteName: 'eSpark Talent: Get Modern Employee Outsourcing Solutions.',
-  ogLocale: 'en_US',
-  twitterCard: 'summary_large_image',
-  twitterSite: '@eSparkTalent',
-  twitterCreator: '@eSparkConsGroup',
+  twitter: {
+    card: `summary_large_image`,
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    siteId: `@eSparkTalent`,
+    creator: `@eSparkTalent`,
+    images: [`${filteredData?.image}`],
+  },
 };
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
