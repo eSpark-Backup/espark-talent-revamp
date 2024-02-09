@@ -2,6 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
+import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/test';
+
+export async function generateMetadata({ params }) {
+  // read route params
+  const slug = params.blog;
+
+  const filteredData =
+    BLOGS_SEO.find((item) => item.path === slug) || GLOBAL_SEO[0];
+  const metadata = {
+    metadataBase: new URL('https://esparktalent.com/'),
+    title: filteredData?.title,
+    description: filteredData?.description,
+    keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+    author: `eSpark Talent`,
+    canonical: `https://esparktalent.com/blogs/${filteredData?.path}`,
+    robots: `index, follow`,
+    openGraph: {
+      metadataBase: new URL('https://esparktalent.com/'),
+      title: filteredData?.title,
+      description: filteredData?.description,
+      type: 'article',
+      publishedTime: '2023-01-01T00:00:00.000Z',
+      authors: ['eSpark Talent', 'Mehdi Raza'],
+      siteName: `eSpark Talent: Get Modern Employee Outsourcing Solutions.`,
+      locale: `en_US`,
+      images: [
+        {
+          url: filteredData?.image,
+          alt: filteredData?.title,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: `summary_large_image`,
+      metadataBase: new URL('https://esparktalent.com/'),
+      title: filteredData?.title,
+      description: filteredData?.description,
+      siteId: `@eSparkTalent`,
+      creator: `@eSparkTalent`,
+      images: [`${filteredData?.image}`],
+    },
+  };
+
+  return metadata;
+}
 
 const Page = async ({ params }) => {
   try {
