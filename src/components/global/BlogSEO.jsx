@@ -4,9 +4,8 @@ import { usePathname } from 'next/navigation';
 
 const BlogSEO = ({ data }) => {
   const pathname = usePathname();
-  console.log('Data', data);
+
   const metaData = data.filter((item) => item.path == pathname);
-  console.log(pathname, 'pathname');
 
   console.log(metaData[0], 'metaData');
   return (
