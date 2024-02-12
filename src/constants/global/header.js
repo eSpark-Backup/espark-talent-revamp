@@ -8,8 +8,8 @@ export const SUBMENU_ITEMS = {
         'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
     },
     {
-      label: 'How its Work',
-      link: '/how-its-work',
+      label: 'How it Works',
+      link: '/how-it-works',
       icon: '/images/header/howItsWork.svg',
       description:
         'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',

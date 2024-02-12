@@ -36,7 +36,7 @@ export const GLOBAL_SEO = [
       'https://esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
   },
   {
-    path: '/how-its-work',
+    path: '/how-it-works',
     title: 'eSpark Talent Makes Employee Outsourcing Easy for Brands',
     description:
       'eSpark Talent offers professional talent and developer hiring services. Find the best human resource solutions to supercharge your team building.',
