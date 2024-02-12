@@ -40,8 +40,8 @@ export const FOOTER_DATA = {
       link: '/what-we-do',
     },
     {
-      label: 'How its Work',
-      link: '/how-its-work',
+      label: 'How it Works',
+      link: '/how-it-works',
     },
   ],
   solution: [
