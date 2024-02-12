@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/test';
+import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 
 export async function generateMetadata({ params }) {
   // read route params
@@ -51,6 +52,13 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
+   if (!params || !params.blog) {
+    return (
+      <div>
+        <NotFoundPage data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
+  }
   try {
     const slug = params?.blog;
     const author = await getAuthor();
