@@ -7,13 +7,7 @@ async function handler(req, res) {
   console.log(res, 'respose');
   if (req.method === 'POST') {
     try {
-      const {
-        toAdmin,
-        toSubmitter,
-        adminTemplateId,
-        submitterTemplateId,
-        data,
-      } = request;
+      const { toAdmin, toSubmitter, adminTemplateId, data } = request;
 
       // Input validation
       if (!toAdmin) {
@@ -47,7 +41,6 @@ async function handler(req, res) {
         }),
           2000;
       });
-
 
       // Success response
       return new Response(
