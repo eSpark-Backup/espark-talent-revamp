@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/test';
+import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import NotFoundPage from '@/components/global/NotFound';
 
 export async function generateMetadata({ params }) {
   // read route params
@@ -51,6 +53,13 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
+  if (!params || !params.blog) {
+    return (
+      <div>
+        <NotFoundPage data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
+  }
   try {
     const slug = params?.blog;
     const author = await getAuthor();
@@ -62,7 +71,9 @@ const Page = async ({ params }) => {
     const SingleBlogHeader = React.lazy(
       () => import('@/components/blogs/SingleBlogHeader')
     );
-
+    if (!blog) {
+      return <NotFoundPage data={BLOGS_NOT_FOUND_DATA} />;
+    }
     return (
       <>
         <Box
@@ -80,7 +91,11 @@ const Page = async ({ params }) => {
     );
   } catch (error) {
     console.error('Error fetching data:', error);
-    return <div>Error loading blog details.</div>;
+    return (
+      <div>
+        <NotFoundPage data={BLOGS_NOT_FOUND_DATA} />
+      </div>
+    );
   }
 };
 
