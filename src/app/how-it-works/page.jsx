@@ -2,7 +2,7 @@ import HowitsWork from '@/components/how-it-work/HowitsWork';
 import { GLOBAL_SEO } from '@/constants/test';
 import React from 'react';
 
-const pathname = '/how-its-work';
+const pathname = '/how-it-works';
 const filteredData =
   GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 
@@ -12,7 +12,13 @@ export const metadata = {
   description: filteredData?.description,
   keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
   author: `eSpark Talent`,
-  canonical: `https://esparktalent.com${filteredData?.path}`,
+  alternates: {
+    canonical: `https://esparktalent.com${filteredData?.path}`,
+    languages: {
+      'en-US': '/en-US',
+      'en-UK': '/en-UK',
+    },
+  },
   robots: `index, follow`,
   openGraph: {
     metadataBase: new URL('https://esparktalent.com/'),

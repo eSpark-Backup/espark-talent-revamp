@@ -18,7 +18,13 @@ export const metadata = {
   description: filteredData?.description,
   keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
   author: `eSpark Talent`,
-  canonical: `https://esparktalent.com${filteredData?.path}`,
+  alternates: {
+    canonical: `https://esparktalent.com${filteredData?.path}`,
+    languages: {
+      'en-US': '/en-US',
+      'en-UK': '/en-UK',
+    },
+  },
   robots: `index, follow`,
   openGraph: {
     metadataBase: new URL('https://esparktalent.com/'),
