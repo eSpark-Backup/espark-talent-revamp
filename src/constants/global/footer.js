@@ -20,7 +20,7 @@ export const FOOTER_DATA = {
     },
     {
       img: '/images/footer/social-icons/twitter.svg',
-      link: 'https://twitter.com/eSparkTalent',
+      link: 'https://www.twitter.com/eSparkTalent',
       alt: 'twitter',
     },
     {

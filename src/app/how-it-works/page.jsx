@@ -1,5 +1,5 @@
 import HowitsWork from '@/components/how-it-work/HowitsWork';
-import { GLOBAL_SEO } from '@/constants/test';
+import { GLOBAL_SEO } from '@/constants/seo-data';
 import React from 'react';
 
 const pathname = '/how-it-works';
@@ -7,13 +7,13 @@ const filteredData =
   GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 
 export const metadata = {
-  metadataBase: new URL('https://esparktalent.com/'),
+  metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.title,
   description: filteredData?.description,
   keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
   author: `eSpark Talent`,
   alternates: {
-    canonical: `https://esparktalent.com${filteredData?.path}`,
+    canonical: `https://www.esparktalent.com${filteredData?.path}`,
     languages: {
       'en-US': '/en-US',
       'en-UK': '/en-UK',
@@ -21,7 +21,7 @@ export const metadata = {
   },
   robots: `index, follow`,
   openGraph: {
-    metadataBase: new URL('https://esparktalent.com/'),
+    metadataBase: new URL('https://www.esparktalent.com/'),
     title: filteredData?.title,
     description: filteredData?.description,
     type: 'article',
@@ -40,7 +40,7 @@ export const metadata = {
   },
   twitter: {
     card: `summary_large_image`,
-    metadataBase: new URL('https://esparktalent.com/'),
+    metadataBase: new URL('https://www.esparktalent.com/'),
     title: filteredData?.title,
     description: filteredData?.description,
     siteId: `@eSparkTalent`,

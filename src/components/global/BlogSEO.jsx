@@ -13,7 +13,7 @@ const BlogSEO = ({ data }) => {
       <NextSeo
         title={metaData[0]?.title}
         description={metaData[0]?.description}
-        canonical={`https://esparktalent.com${metaData[0]?.path}`}
+        canonical={`https://www.esparktalent.com${metaData[0]?.path}`}
         openGraph={{
           type: 'article',
           article: {
