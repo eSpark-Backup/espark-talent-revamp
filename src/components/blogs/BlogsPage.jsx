@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import BlogCards from '@/components/homepage/BlogCards';
 import Hero from '@/components/homepage/Hero';
-import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
 import { getBlog } from '@/sanity/sanity.quries';
+import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState([]);
