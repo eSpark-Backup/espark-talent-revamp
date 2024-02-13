@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
-import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/test';
+import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/seo-data';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 
@@ -13,13 +13,13 @@ export async function generateMetadata({ params }) {
   const filteredData =
     BLOGS_SEO.find((item) => item.path === slug) || GLOBAL_SEO[0];
   const metadata = {
-    metadataBase: new URL('https://esparktalent.com/'),
+    metadataBase: new URL('https://www.esparktalent.com/'),
     title: filteredData?.title,
     description: filteredData?.description,
     keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
     author: `eSpark Talent`,
     alternates: {
-      canonical: `https://esparktalent.com/blogs/${filteredData?.path}`,
+      canonical: `https://www.esparktalent.com/blogs/${filteredData?.path}`,
       languages: {
         'en-US': '/en-US',
         'en-UK': '/en-UK',
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
     },
     robots: `index, follow`,
     openGraph: {
-      metadataBase: new URL('https://esparktalent.com/'),
+      metadataBase: new URL('https://www.esparktalent.com/'),
       title: filteredData?.title,
       description: filteredData?.description,
       type: 'article',
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: `summary_large_image`,
-      metadataBase: new URL('https://esparktalent.com/'),
+      metadataBase: new URL('https://www.esparktalent.com/'),
       title: filteredData?.title,
       description: filteredData?.description,
       siteId: `@eSparkTalent`,

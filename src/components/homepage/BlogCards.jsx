@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
 import Skeleton from 'react-loading-skeleton';
-import { READ_MORE } from '@/constants/home-page/blogSections';
+import { READ_MORE } from '@/constants/blogs';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
