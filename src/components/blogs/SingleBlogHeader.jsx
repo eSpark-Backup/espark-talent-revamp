@@ -47,7 +47,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                 <Stack direction="row" spacing={2}>
                   <Avatar
                     alt={parsedblog?.title}
-                    src={filteredAuthor?.avatar}
+                    src={filteredAuthor?.avatar || `/images/author.jpg`}
                     sx={{
                       width: { xs: 45, md: 65 },
                       height: { xs: 45, md: 65 },
@@ -68,7 +68,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                           }}
                           fontWeight={600}
                         >
-                          {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : ''} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : ''}`}
+                          {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : 'eSpark'} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : 'Talent'}`}
                         </Typography>
                       </Typography>
                     </Link>
