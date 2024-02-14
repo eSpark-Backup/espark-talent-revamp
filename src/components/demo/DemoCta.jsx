@@ -9,7 +9,6 @@ import React from 'react';
 import Link from 'next/link';
 
 const DemoCta = ({ data }) => {
-  console.log(data, 'data');
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
   const isMediumScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('sm', 'md')
