@@ -123,7 +123,10 @@ const Hero = ({ data }) => {
                   <Link href={data.button?.link} target="_blank">
                     <Button
                       sx={{
-                        backgroundColor: pathName == '/' ? '#001C63' : '#fff',
+                        backgroundColor:
+                          pathName == '/' || pathName == '/demo'
+                            ? '#001C63'
+                            : '#fff',
 
                         '&:hover': {
                           color:
@@ -141,7 +144,10 @@ const Hero = ({ data }) => {
                         px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
                         height: '50px',
                         width: '160px',
-                        color: pathName == '/' ? '#fff' : '#001C63',
+                        color:
+                          pathName == '/' || pathName == '/demo'
+                            ? '#fff'
+                            : '#001C63',
                         fontWeight: '700',
                       }}
                     >
