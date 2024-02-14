@@ -12,6 +12,8 @@ const SingleBlogHeader = ({ data, authors }) => {
   const filteredAuthor = authors?.filter(
     (author) => author?._id === parsedblog?.author
   )[0];
+  console.log(
+  "filteredAuthor",filteredAuthor);
   return (
     <>
       <Box sx={{ mt: { md: '90px', xs: '35px' } }}>
