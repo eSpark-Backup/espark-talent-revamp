@@ -479,3 +479,10 @@ export const OUR_CLIENT_SAYS = {
     },
   ],
 };
+
+export const DEMO_DATA = {
+  title:
+    'Big Dream Needs Premium Outsourcing Support To Conquer The Global Market.',
+  linkText: 'Book a Demo',
+  linkUrl: '/book-a-demo',
+};
