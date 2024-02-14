@@ -21,6 +21,24 @@ const Hero = ({ data }) => {
         }}
       >
         <Container>
+          {pathName == '/demo' ? (
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Link href="/">
+                <Image
+                  src="/images/eSpark Talent Logo.svg"
+                  width={162}
+                  height={100}
+                  alt="eSpark Talent logo"
+                />
+              </Link>
+            </Box>
+          ) : null}
           <Grid
             pt={data?.pt2 || '50px'}
             pb={data?.pb2 || '30px'}
