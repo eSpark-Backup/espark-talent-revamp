@@ -65,7 +65,7 @@ export async function getSingleBlog(slug) {
   return client.fetch(
     `*[_type == "blog" && slug.current == $slug][0] {
       _id,
-      "author": author->_ref,
+      "author": author._ref,
       "bannerImage": bannerImage.asset->url,
       bannerTitle,
       body,
