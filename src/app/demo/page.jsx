@@ -11,51 +11,17 @@ import {
   PROCESS_DATA,
 } from '@/constants/homepage';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import { HP_HERO_DATA } from '@/constants/global/hero-sections';
-import dynamic from 'next/dynamic';
+import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
+import Faq from '@/components/FAQ/Faq';
+import AwardAchievement from '@/components/homepage/AwardAchiefment';
+import ClientSays from '@/components/homepage/ClientSays';
+import OurExperties from '@/components/homepage/OurExperties';
+import BenefitsWorks from '@/components/homepage/BenefitsWorks';
+import DemoCta from '@/components/demo/DemoCta';
+import Process from '@/components/homepage/Process';
 
-const BenefitsWorks = dynamic(
-  () => import('@/components/homepage/BenefitsWorks'),
-  {
-    ssr: false,
-  }
-);
-
-const AwardAchievement = dynamic(
-  () => import('@/components/homepage/AwardAchiefment'),
-  {
-    ssr: false,
-  }
-);
-
-const OurExperties = dynamic(
-  () => import('@/components/homepage/OurExperties'),
-  {
-    ssr: false,
-  }
-);
-
-const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
-  ssr: true,
-});
-
-const ClientSays = dynamic(() => import('@/components/homepage/ClientSays'), {
-  ssr: false,
-});
-
-const Process = dynamic(() => import('@/components/homepage/Process'), {
-  ssr: false,
-});
-
-const Faq = dynamic(() => import('@/components/FAQ/Faq'), {
-  ssr: false,
-});
-
-const DemoCta = dynamic(() => import('@/components/demo/DemoCta'), {
-  ssr: false,
-});
 const Page = () => {
   useEffect(() => {
     window.scrollTo({
@@ -66,7 +32,7 @@ const Page = () => {
 
   return (
     <>
-      <Hero data={HP_HERO_DATA} color="primary" />
+      <Hero data={DEMO_HERO_DATA} color="primary" />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -88,7 +54,6 @@ const Page = () => {
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      <HomeBlogs />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}

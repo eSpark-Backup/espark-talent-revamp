@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <>
-      {pathName !== '/book-a-demo' && (
+      {pathName !== '/book-a-demo' && pathName !== '/demo' && (
         <Box
           sx={{
             background: '#F7F7F7',

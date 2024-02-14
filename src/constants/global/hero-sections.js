@@ -20,6 +20,29 @@ export const HP_HERO_DATA = {
   descVarient: 'body1',
   descColor: 'secondary',
 };
+export const DEMO_HERO_DATA = {
+  title: 'Build A World-Class Experts Team For Your Business',
+  description:
+    'Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.',
+  button: {
+    label: 'Hire a Talent',
+    link: '/book-a-demo',
+    btnVarient: 'primary',
+    btnColor: 'secondary',
+  },
+  image: '/images/homepage/hero-section/hero-section-image.png',
+  imageAlt: `Hire world class experts' team for your business with espark talent`,
+  imageWidth: 435,
+  imageHeight: 420,
+  bgColor: '#fff',
+  bgImage: '/images/homepage/hero-section/hero-section-background.png',
+  spacing: '5%',
+  titleVariant: 'h1',
+  titleColor: 'primary',
+  descVarient: 'body1',
+  descColor: 'secondary',
+  pt: '25px',
+};
 
 export const WIKI_HERO_DATA = {
   title: 'eSparkWiki',
