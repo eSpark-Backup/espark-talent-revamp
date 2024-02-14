@@ -8,12 +8,11 @@ import moment from 'moment';
 const SingleBlogHeader = ({ data, authors }) => {
   const blogString = JSON.stringify(data);
   const parsedblog = JSON.parse(blogString);
-  const singleAuthor = authors[0];
-
-  // const filteredAuthor = authors?.filter(
-  //   (author) => author?._id === parsedblog?.id
-  // )[0];
-
+  console.log(parsedblog, 'blogString');
+  const filteredAuthor = authors?.filter(
+    (author) => author?._id === parsedblog?.author
+  )[0];
+  console.log('filteredAuthor', filteredAuthor);
   return (
     <>
       <Box sx={{ mt: { md: '90px', xs: '35px' } }}>
@@ -48,7 +47,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                 <Stack direction="row" spacing={2}>
                   <Avatar
                     alt={parsedblog?.title}
-                    src={singleAuthor?.avatar}
+                    src={filteredAuthor?.avatar || `/images/author.jpg`}
                     sx={{
                       width: { xs: 45, md: 65 },
                       height: { xs: 45, md: 65 },
@@ -69,7 +68,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                           }}
                           fontWeight={600}
                         >
-                          {`${singleAuthor?.firstName ? singleAuthor?.firstName : ''} ${singleAuthor?.lastName ? singleAuthor?.lastName : ''}`}
+                          {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : 'eSpark'} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : 'Talent'}`}
                         </Typography>
                       </Typography>
                     </Link>
