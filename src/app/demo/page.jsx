@@ -10,11 +10,9 @@ import {
   OUR_CLIENT_SAYS,
   PROCESS_DATA,
 } from '@/constants/homepage';
-import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
-import Faq from '@/components/FAQ/Faq';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import ClientSays from '@/components/homepage/ClientSays';
 import OurExperties from '@/components/homepage/OurExperties';
@@ -59,7 +57,6 @@ const Page = () => {
         design={1}
         background={'#F7F8FB'}
       />
-      <Faq data={FAQ_DATA} />
     </>
   );
 };
