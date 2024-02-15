@@ -1266,3 +1266,165 @@ span {
     /* margin-right: 10px; */
   }
 }
+
+/* TERMS & POLICY CSS */
+
+terms .terms-content h2 {
+  font-size: 40;
+  font-weight: 700;
+  line-height: 71px;
+  text-align: left;
+  color: #3B5998;
+}
+
+.terms-content h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 71px;
+  color: #0E0F1D;
+  text-align: left;
+}
+
+.terms-content p {
+  font-size: 17;
+  font-weight: 400;
+  line-height: 2;
+  color: #000000;
+  text-align: left;
+}
+
+.terms-content li {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 32.3px;
+  color: #000000;
+  text-align: left;
+}
+
+.terms-content ul {
+  list-style-type: none;
+  padding: 0;
+  color: #000000;
+  text-align: left;
+}
+
+.terms-content li {
+  margin-bottom: 10px;
+  position: relative;
+  text-align: left;
+}
+
+.terms-content li::before {
+  content: '\2022';
+  content: '\2022';
+  color: #3B5998;
+  font-size: 17px;
+  margin-right: 8px;
+  display: inline-block;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1024px) {
+  .terms-content h2 {
+    font-size: 22px;
+  }
+
+  .terms-content h3 {
+    font-size: 22px;
+  }
+
+  .terms-content p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+  }
+
+  .terms-content li {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .terms-content h2 {
+    font-size: 22px;
+  }
+
+  .terms-content h3 {
+    font-size: 22px;
+  }
+
+  .terms-content p {
+    font-size: 13px;
+    text-align: justify;
+    line-height: 20px;
+  }
+
+  .terms-content li {
+    font-size: 13px;
+    text-align: justify;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .terms-content h2 {
+    font-size: 17px;
+  }
+
+  .terms-content h3 {
+    font-size: 14px;
+  }
+
+  .terms-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+
+  .terms-content li {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .terms-content h2 {
+    font-size: 17px;
+  }
+
+  .terms-content h3 {
+    font-size: 14px;
+  }
+
+  .terms-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+
+  .terms-content li {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .terms-content h2 {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .terms-content h3 {
+    font-size: 14px;
+  }
+
+  .terms-content p {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 17px;
+  }
+
+  .terms-content li {
+    font-size: 11px;
+  }
+}
