@@ -5,7 +5,6 @@ import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy';
 import { PRIVACY_POLICY_HERO_DATA } from '@/constants/global/hero-sections';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 
-
 const pathname = '/privacy-policy';
 const filteredData =
   GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
