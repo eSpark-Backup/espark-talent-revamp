@@ -10,7 +10,7 @@ const Rights = ({ copyRights }) => {
         display: 'flex',
         textAlign: 'center',
         padding: 2,
-        gap:'20px',
+        gap: '20px',
         alignItems: 'center',
         justifyContent: 'center',
       }}
@@ -32,44 +32,44 @@ const Rights = ({ copyRights }) => {
       >
         {copyRights}
       </Typography>
-      <Link href='/privacy-policy'>
+      <Link href="/privacy-policy">
         <Typography
-        sx={{
-          color: '#001C63',
-          fontSize: {
-            xs: '10px',
-            sm: '10px',
-            md: '13px',
-            lg: '15px',
-            xl: '20px',
-          },
-          fontStyle: 'normal',
-          fontWeight: 400,
-          lineHeight: 'normal',
-        }}
-      >
-        {`Privacy Policy`}
-      </Typography>
+          sx={{
+            color: '#001C63',
+            fontSize: {
+              xs: '10px',
+              sm: '10px',
+              md: '13px',
+              lg: '15px',
+              xl: '20px',
+            },
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+          }}
+        >
+          {`Privacy Policy`}
+        </Typography>
       </Link>
-      <Link href='/terms-and-conditions'>
+      <Link href="/terms-and-conditions">
         <Typography
-        sx={{
-          color: '#001C63',
-          fontSize: {
-            xs: '10px',
-            sm: '10px',
-            md: '13px',
-            lg: '15px',
-            xl: '20px',
-          },
-          fontStyle: 'normal',
-          fontWeight: 400,
-          lineHeight: 'normal',
-        }}
-      >
-        {`Term & Conditions`}
-      </Typography>
-    </Link>
+          sx={{
+            color: '#001C63',
+            fontSize: {
+              xs: '10px',
+              sm: '10px',
+              md: '13px',
+              lg: '15px',
+              xl: '20px',
+            },
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+          }}
+        >
+          {`Term & Conditions`}
+        </Typography>
+      </Link>
     </Box>
   );
 };
