@@ -32,9 +32,9 @@ const TermsConditions = ({ data }) => {
               textAlign: 'justify',
             }}
           >
-            {data.content ? (
+            {data?.content ? (
               <Box>
-                {data.content.map((item, index) => (
+                {data?.content?.map((item, index) => (
                   <Box
                     key={index}
                     sx={{
@@ -51,7 +51,7 @@ const TermsConditions = ({ data }) => {
                         fontWeight: 700,
                         textAlign: { xs: 'center', md: 'left' },
                       }}
-                      dangerouslySetInnerHTML={{ __html: item.title }}
+                      dangerouslySetInnerHTML={{ __html: item?.title }}
                     />
                     <Typography
                       sx={{
