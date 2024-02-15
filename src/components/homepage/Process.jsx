@@ -227,7 +227,15 @@ const Process = ({ data }) => {
                 },
               }}
             >
-              <p style={{ direction: 'ltr', display: 'inline', unicodeBidi: 'isolate-override', }}>{process?.text}</p>
+              <p
+                style={{
+                  direction: 'ltr',
+                  display: 'inline',
+                  unicodeBidi: 'isolate-override',
+                }}
+              >
+                {process?.text}
+              </p>
             </Typography>
           </Box>
         </Box>
