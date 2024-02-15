@@ -191,3 +191,33 @@ export const WHAT_WE_DO_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+export const PRIVACY_POLICY_HERO_DATA = {
+  title: 'Privacy Policy eSpark Talent',
+  image: '/images/privacy-policy/espark-privacy-policy-hero-image.svg',
+  imageAlt: 'Privacy Policy - eSpark Talent',
+  imageWidth: 380,
+  imageHeight: 380,
+  bgImage: '/images/wiki/wiki-main-bg.png',
+  spacing: '.5%',
+  rightGrid: 4,
+  leftGrid: 8,
+  titleVariant: 'h1',
+  titleColor: '#fff',
+  descVarient: 'body1',
+  descColor: '#fff',
+};
+export const TERMS_CONDITIONS_HERO_DATA = {
+  title: 'Terms & Conditions eSpark Talent',
+  image: '/images/terms-conditions/espark-terms-conditions-hero-image.svg',
+  imageAlt: 'Terms & Conditions - eSpark Talent ',
+  imageWidth: 380,
+  imageHeight: 380,
+  bgImage: '/images/wiki/wiki-main-bg.png',
+  spacing: '.5%',
+  rightGrid: 5.5,
+  leftGrid: 6.5,
+  titleVariant: 'h1',
+  titleColor: '#fff',
+  descVarient: 'body1',
+  descColor: '#fff',
+};

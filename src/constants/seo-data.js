@@ -95,6 +95,22 @@ export const GLOBAL_SEO = [
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
   },
+  {
+    path: '/terms-and-conditions',
+    title: 'Terms & Conditions - eSpark Talent',
+    description: `Explore eSpark Talent's Terms & Conditions for secure outsourcing connections. Learn about user agreements, data protection, and intellectual property rights.`,
+    url: 'https://www.esparktalent.com/terms-and-conditions',
+    image:
+      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
+  },
+  {
+    path: '/privacy-policy',
+    title: 'Privacy Policy - eSpark Talent',
+    description: `The intended shared policy represents the services, active workforce, and management of eSpark Talent. learn how we prioritize your privacy at every step.`,
+    url: 'https://www.esparktalent.com/privacy-policy',
+    image:
+      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
+  },
 ];
 
 export const BLOGS_SEO = [
