@@ -203,7 +203,7 @@ const Process = ({ data }) => {
               {process?.title}
             </Typography>
             <Typography
-              component="p"
+              component="Box"
               sx={{
                 color: '#001C63',
                 fontSize: { sm: '17px !important' },
@@ -212,6 +212,7 @@ const Process = ({ data }) => {
                 textAlign: 'justify',
                 direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
+                display: 'inline',
                 '@media (min-width: 500px) and (max-width: 767px)': {
                   fontSize: '13px !important',
                   lineHeight: '20px',
@@ -226,7 +227,7 @@ const Process = ({ data }) => {
                 },
               }}
             >
-              {process?.text}
+              <p style={{ direction: 'ltr', display: 'inline', unicodeBidi: 'isolate-override', }}>{process?.text}</p>
             </Typography>
           </Box>
         </Box>
