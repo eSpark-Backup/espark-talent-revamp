@@ -82,6 +82,7 @@ const TermsConditions = ({ data }) => {
                             src="/images/how-its-works/true.svg"
                             height={20}
                             width={20}
+                            alt="Terms & Conditions - eSpart Talent"
                           />
                         </ListItemIcon>
 
