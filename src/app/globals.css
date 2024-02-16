@@ -1269,7 +1269,7 @@ span {
 
 /* TERMS & POLICY CSS */
 
-terms .terms-content h2 {
+.terms-content h2 {
   font-size: 40;
   font-weight: 700;
   line-height: 71px;
@@ -1427,4 +1427,19 @@ terms .terms-content h2 {
   .terms-content li {
     font-size: 11px;
   }
+}
+
+.thankyou-content h1 {
+  font-weight: 800;
+  color: #fff;
+}
+
+.thankyou-content h2 span {
+  font-weight: 800;
+  color: #fff;
+}
+
+
+.thankyou-content li::before {
+  content: url(/images/wiki/wiki-icon.svg);
 }
