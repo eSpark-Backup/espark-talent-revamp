@@ -20,7 +20,6 @@ const FooterCTA = ({ data }) => {
 
   return (
     <>
-      {' '}
       {pathName !== '/book-a-demo' &&
         pathName !== '/careers' &&
         pathName !== '/partnership-program' && (
@@ -54,7 +53,7 @@ const FooterCTA = ({ data }) => {
                     py: { lg: '1%', md: '1%', sm: '5%', xs: '5%' },
                   }}
                 >
-                  <Box>
+                  <Box py={pathName == '/thankyou' ? '10%' : null}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -73,93 +72,104 @@ const FooterCTA = ({ data }) => {
                     >
                       {data?.title}
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: '#ECECED',
-                        fontSize: {
-                          lg: '24px',
-                          md: '20px',
-                          sm: '10px',
-                          xs: '10px',
-                        },
-                        lineHeight: 1.3,
-                        fontWeight: 400,
-                        py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
-                        pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
-                      }}
-                    >
-                      {data?.description}
-                    </Typography>
-                    <Link href={data?.buttonLink} target="_blank">
-                      <Button
-                        sx={{
-                          py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
-                          px: {
-                            xs: '10px',
-                            sm: '10px',
-                            md: '12px',
-                            lg: '15px',
-                          },
-                          backgroundColor: '#fff',
-                          '&:hover': {
-                            backgroundColor: '#fff',
-                          },
-                        }}
-                      >
+                    {pathName !== '/thankyou' && (
+                      <>
                         <Typography
-                          variant="body1"
                           sx={{
-                            fontWeight: 'bold',
+                            color: '#ECECED',
                             fontSize: {
-                              xs: '8px',
+                              lg: '24px',
+                              md: '20px',
                               sm: '10px',
-                              md: '14px',
-                              lg: '17px',
+                              xs: '10px',
                             },
-                            color: '#09114A',
+                            lineHeight: 1.3,
+                            fontWeight: 400,
+                            py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
+                            pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
                           }}
                         >
-                          {data?.buttonLabel}
+                          {data?.description}
                         </Typography>
-                      </Button>
-                    </Link>
+                        <Link href={data?.buttonLink} target="_blank">
+                          <Button
+                            sx={{
+                              py: {
+                                xs: '7px',
+                                sm: '8px',
+                                md: '10px',
+                                lg: '10px',
+                              },
+                              px: {
+                                xs: '10px',
+                                sm: '10px',
+                                md: '12px',
+                                lg: '15px',
+                              },
+                              backgroundColor: '#fff',
+                              '&:hover': {
+                                backgroundColor: '#fff',
+                              },
+                            }}
+                          >
+                            <Typography
+                              variant="body1"
+                              sx={{
+                                fontWeight: 'bold',
+                                fontSize: {
+                                  xs: '8px',
+                                  sm: '10px',
+                                  md: '14px',
+                                  lg: '17px',
+                                },
+                                color: '#09114A',
+                              }}
+                            >
+                              {data?.buttonLabel}
+                            </Typography>
+                          </Button>
+                        </Link>
+                      </>
+                    )}
                   </Box>
                 </Grid>
-                <Grid
-                  item
-                  lg={3.5}
-                  md={3.5}
-                  sm={5}
-                  xs={5}
-                  sx={{ textAlign: is600Screen ? 'center' : 'start' }}
-                >
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'start',
-                    }}
+                {pathName !== '/thankyou' && (
+                  <Grid
+                    item
+                    lg={3.5}
+                    md={3.5}
+                    sm={5}
+                    xs={5}
+                    sx={{ textAlign: is600Screen ? 'center' : 'start' }}
                   >
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={data?.image}
-                      width={is600Screen ? 300 : 360}
-                      height={is600Screen ? 290 : 350}
-                      alt="images"
-                      className="footerCta"
-                      style={{
-                        bottom: 0,
-                        marginTop: is375Screen
-                          ? `-25px`
-                          : is425Screen
-                            ? `-30px`
-                            : `-60px`,
-                        zIndex: 1000,
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'start',
                       }}
-                    />
-                  </Box>
-                </Grid>
+                    >
+                      <Image
+                        quality="85"
+                        priority={true}
+                        src={data?.image}
+                        width={is600Screen ? 300 : 360}
+                        height={is600Screen ? 290 : 350}
+                        alt="images"
+                        className="footerCta"
+                        style={{
+                          bottom: 0,
+                          marginTop: is375Screen
+                            ? `-25px`
+                            : is425Screen
+                              ? `-30px`
+                              : `-60px`,
+                          zIndex: 1000,
+                        }}
+                      />
+                    </Box>
+                  </Grid>
+                )}
               </Grid>
             </Container>
           </Box>
