@@ -110,18 +110,17 @@ const ThankYou = ({ data }) => {
                 </Box>
                 <Box>
                   <Typography
-                  variant="h3"
-                  sx={{
-                    fontSize: { xs: '18px', md: '20px' },
-                    fontWeight: '700',
-                    pb: '15px',
-                    textAlign: 'center',
-                  }}
-                >
-                  {step.title}
-                </Typography>
+                    variant="h3"
+                    sx={{
+                      fontSize: { xs: '18px', md: '20px' },
+                      fontWeight: '700',
+                      pb: '15px',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {step.title}
+                  </Typography>
                 </Box>
-                
 
                 {step.items.map((item, idx) => (
                   <Box
@@ -129,14 +128,14 @@ const ThankYou = ({ data }) => {
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap:'10px', px:'10%'
+                      gap: '10px',
+                      px: '10%',
                     }}
                   >
                     <ListItemIcon
                       sx={{
                         minWidth: 'unset',
-                        mr: { lg: '20px', md: '20px', sm: '20px', },
-                       
+                        mr: { lg: '20px', md: '20px', sm: '20px' },
                       }}
                     >
                       <Image
@@ -150,7 +149,8 @@ const ThankYou = ({ data }) => {
                       variant="body1"
                       sx={{
                         fontSize: { xs: '12px', md: '13px' },
-                        fontWeight: '400', lineHeight:1.8
+                        fontWeight: '400',
+                        lineHeight: 1.8,
                       }}
                       key={idx}
                     >
