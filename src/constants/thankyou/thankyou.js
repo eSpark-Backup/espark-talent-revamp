@@ -29,7 +29,7 @@ export const THANKYOU_DATA = {
       ],
     },
     {
-      title: 'Call + Requirements',
+      title: 'Get Started',
       icon: '/images/thankyou/step3.webp',
       items: [
         `Sign your Contract`,
