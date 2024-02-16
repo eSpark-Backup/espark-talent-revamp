@@ -50,86 +50,91 @@ const Header = () => {
 
   return (
     <>
-      {pathName !== '/book-a-demo' && pathName !== '/demo' && (
-        <Box
-          sx={{
-            background: '#F7F7F7',
-          }}
-        >
+      {pathName !== '/book-a-demo' &&
+        pathName !== '/demo' &&
+        pathName !== '/thankyou' && (
           <Box
-            backgroundColor={'#029894'}
-            sx={{
-              height: { lg: '26px', md: '40px' },
-              display: { xs: 'none', md: 'flex' },
-              alignItems: 'center',
-              justifyContent: 'center',
-              zIndex: 999,
-            }}
-          >
-            <Typography
-              color={'#fff'}
-              sx={{
-                fontSize: {
-                  xs: '3px',
-                  sm: '15px !important',
-                },
-                fontWeight: 400,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-              }}
-            >
-              Scale up your business with our exclusive offer! Start with No
-              Management Fee for First Employee.
-              <Box
-                src="/images/homepage/rocket.svg"
-                sx={{ mx: 0.5, width: '16px', height: '100%' }}
-                component={'img'}
-              />
-            </Typography>
-          </Box>
-          <AppBar
-            position="static"
             sx={{
               background: '#F7F7F7',
             }}
           >
-            <Container>
-              <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-                <Link href={'/'}>
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={'/images/header/logo.png'}
-                    width={100}
-                    height={49}
-                    alt="logo"
+            <Box
+              backgroundColor={'#029894'}
+              sx={{
+                height: { lg: '26px', md: '40px' },
+                display: { xs: 'none', md: 'flex' },
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 999,
+              }}
+            >
+              <Typography
+                color={'#fff'}
+                sx={{
+                  fontSize: {
+                    xs: '3px',
+                    sm: '15px !important',
+                  },
+                  fontWeight: 400,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textAlign: 'center',
+                }}
+              >
+                Scale up your business with our exclusive offer! Start with No
+                Management Fee for First Employee.
+                <Box
+                  src="/images/homepage/rocket.svg"
+                  sx={{ mx: 0.5, width: '16px', height: '100%' }}
+                  component={'img'}
+                />
+              </Typography>
+            </Box>
+            <AppBar
+              position="static"
+              sx={{
+                background: '#F7F7F7',
+              }}
+            >
+              <Container>
+                <Toolbar
+                  disableGutters
+                  sx={{ justifyContent: 'space-between' }}
+                >
+                  <Link href={'/'}>
+                    <Image
+                      quality="85"
+                      priority={true}
+                      src={'/images/header/logo.png'}
+                      width={100}
+                      height={49}
+                      alt="logo"
+                    />
+                  </Link>
+                  <ResponsiveHeader
+                    handleAccordionChange={handleAccordionChange}
+                    handleOpenNavMenu={handleOpenNavMenu}
+                    anchorElNav={anchorElNav}
+                    expandedAccordion={expandedAccordion}
+                    handleSubmenuItemClicked={handleSubmenuItemClicked}
+                    handleOpenUserMenu={handleOpenUserMenu}
+                    handleCloseNavMenu={handleCloseNavMenu}
                   />
-                </Link>
-                <ResponsiveHeader
-                  handleAccordionChange={handleAccordionChange}
-                  handleOpenNavMenu={handleOpenNavMenu}
-                  anchorElNav={anchorElNav}
-                  expandedAccordion={expandedAccordion}
-                  handleSubmenuItemClicked={handleSubmenuItemClicked}
-                  handleOpenUserMenu={handleOpenUserMenu}
-                  handleCloseNavMenu={handleCloseNavMenu}
-                />
 
-                <DesktopHeader
-                  submenuAnchor={submenuAnchor}
-                  handleOpenUserMenu={handleOpenUserMenu}
-                  handleSubmenuItemClicked={handleSubmenuItemClicked}
-                  handleCloseUserMenu={handleCloseUserMenu}
-                  anchorElUser={anchorElUser}
-                  selectedMenuItem={selectedMenuItem}
-                />
-              </Toolbar>
-            </Container>
-          </AppBar>
-        </Box>
-      )}
+                  <DesktopHeader
+                    submenuAnchor={submenuAnchor}
+                    handleOpenUserMenu={handleOpenUserMenu}
+                    handleSubmenuItemClicked={handleSubmenuItemClicked}
+                    handleCloseUserMenu={handleCloseUserMenu}
+                    anchorElUser={anchorElUser}
+                    selectedMenuItem={selectedMenuItem}
+                  />
+                </Toolbar>
+              </Container>
+            </AppBar>
+          </Box>
+        )}
     </>
   );
 };

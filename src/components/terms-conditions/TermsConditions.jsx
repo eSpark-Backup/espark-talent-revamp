@@ -9,6 +9,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import Skeleton from 'react-loading-skeleton';
+import Image from 'next/image';
 
 const TermsConditions = ({ data }) => {
   return (
@@ -77,10 +78,11 @@ const TermsConditions = ({ data }) => {
                             mr: { md: '20px' },
                           }}
                         >
-                          <img
+                          <Image
                             src="/images/how-its-works/true.svg"
-                            height="20"
-                            width="20"
+                            height={20}
+                            width={20}
+                            alt="Terms & Conditions - eSpart Talent"
                           />
                         </ListItemIcon>
 
