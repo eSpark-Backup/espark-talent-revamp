@@ -23,9 +23,9 @@ export const THANKYOU_DATA = {
       title: 'Candidate Interview',
       icon: '/images/thankyou/step2.webp',
       items: [
+        `90% + Placement Success Rate`,
         `We'll Handpick the Perfect Candidate for you`,
         `Schedule an Interview with your Candidate`,
-        `90% + Placement Success Rate`,
       ],
     },
     {
@@ -33,8 +33,8 @@ export const THANKYOU_DATA = {
       icon: '/images/thankyou/step3.webp',
       items: [
         `Sign your Contract`,
-        `On - Boarding Call with your Dedicated Customer Success Manager`,
         `Activate Massive Growth`,
+        `On - Boarding Call with your Dedicated Customer Success Manager`,
       ],
     },
   ],
