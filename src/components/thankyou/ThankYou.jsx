@@ -1,6 +1,7 @@
 'use client';
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const ThankYou = ({ data }) => {
@@ -24,12 +25,14 @@ const ThankYou = ({ data }) => {
             flexDirection: 'column',
           }}
         >
-          <Image
-            src={data?.logo}
-            height={100}
-            width={200}
-            alt="Thankyou - eSpark Talent"
-          />
+          <Link href={'/'}>
+            <Image
+              src={data?.logo}
+              height={100}
+              width={200}
+              alt="Thankyou - eSpark Talent"
+            />
+          </Link>
           <Typography
             variant="h1"
             sx={{
