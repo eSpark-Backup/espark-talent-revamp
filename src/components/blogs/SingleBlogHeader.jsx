@@ -12,7 +12,6 @@ const SingleBlogHeader = ({ data, authors }) => {
   const filteredAuthor = authors?.filter(
     (author) => author?._id === parsedblog?.author
   )[0];
-  console.log('filteredAuthor', filteredAuthor);
   return (
     <>
       <Box sx={{ mt: { md: '90px', xs: '35px' } }}>
@@ -86,7 +85,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                 quality="85"
                 priority={true}
                 src={parsedblog?.bannerImage}
-                alt={`${parsedblog?.alt} -eSpark Talent`}
+                alt={`${parsedblog?.imageAlt}`}
                 width={860}
                 height={570}
                 style={{ borderRadius: '10px' }}
