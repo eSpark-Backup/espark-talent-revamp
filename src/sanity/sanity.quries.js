@@ -66,6 +66,7 @@ export async function getSingleBlog(slug) {
     `*[_type == "blog" && slug.current == $slug][0] {
       _id,
       "author": author._ref,
+      imageAlt,
       "bannerImage": bannerImage.asset->url,
       bannerTitle,
       body,
