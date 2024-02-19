@@ -115,6 +115,31 @@ export const GLOBAL_SEO = [
 
 export const BLOGS_SEO = [
   {
+    path: 'outsourcing-trends-for-2024',
+    title: 'Exploring Outsourcing Trends For 2024 & Beyond ',
+    description: `Optimize your business strategy with eSpark Talent's insights on outsourcing trends for 2024. Stay informed, stay successful.Explore now!`,
+    url: 'https://www.esparktalent.com/blogs/outsourcing-trends-for-2024',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2F0dd9a2ad273669b2dc140fe832136ecfadfca545-633x421.png&w=1080&q=85',
+  },
+  {
+    path: 'how-to-do-payroll-true-up',
+    title: `How To Do Payroll True Up - eSpark Talent Blogs`,
+    description:
+      'eSpark Talent guides you through Payroll True Up. Ensure accuracy, streamline processes, and master the key to financial success.',
+    url: 'https://www.esparktalent.com/blogs/how-to-do-payroll-true-up',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2F0dd9a2ad273669b2dc140fe832136ecfadfca545-633x421.png&w=1080&q=85',
+  },
+  {
+    path: 'how-remote-work-changing-workforce',
+    title: 'How Remote Work Changing Workforce - eSpark Talent Blogs',
+    description: `Navigate the workforce shift with eSpark Talent. Discover how remote work is changing the workforce. Stay flexible, stay successful.`,
+    url: 'https://www.esparktalent.com/blogs/how-remote-work-changing-workforce',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2F0dd9a2ad273669b2dc140fe832136ecfadfca545-633x421.png&w=1080&q=85',
+  },
+  {
     path: 'positive-work-culture',
     title: '8 Tips Guide for Bringing Positive Work Culture',
     description:
