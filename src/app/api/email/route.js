@@ -14,16 +14,10 @@ async function handler(req, res) {
     console.log(request, 'request');
     console.log(res, 'response');
 
-    const { toAdmin, toSubmitter, adminTemplateId, data } =
-      request;
+    const { toAdmin, toSubmitter, adminTemplateId, data } = request;
 
     // Input validation
-    if (
-      !toAdmin ||
-      !toSubmitter ||
-      !adminTemplateId ||
-      !data
-    ) {
+    if (!toAdmin || !toSubmitter || !adminTemplateId || !data) {
       throw new Error('Invalid request body. Required fields are missing.');
     }
 
