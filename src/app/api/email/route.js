@@ -16,7 +16,7 @@ async function handler(req, res) {
           {
             to: [{ email: toAdmin }],
             dynamic_template_data: data,
-          }
+          },
         ],
         from: { email: toSubmitter },
         template_id: adminTemplateId,
@@ -29,13 +29,17 @@ async function handler(req, res) {
       };
 
       // Sending emails
-      await axios.post('https://api.sendgrid.com/v3/mail/send', requestData, { headers });
+      await axios.post('https://api.sendgrid.com/v3/mail/send', requestData, {
+        headers,
+      });
 
       // Success response
       return res.status(200).json({ success: true });
     } catch (error) {
       console.error('Error sending emails:', error);
-      return res.status(500).json({ error: 'An error occurred while sending emails' });
+      return res
+        .status(500)
+        .json({ error: 'An error occurred while sending emails' });
     }
   } else {
     // Method not allowed
