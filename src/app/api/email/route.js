@@ -33,7 +33,7 @@ async function handler(req, res) {
 
     // Define headers
     const headers = {
-      Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+      Authorization: `Bearer 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`,
       'Content-Type': 'application/json',
     };
 
