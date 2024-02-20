@@ -26,7 +26,8 @@ const BookADemoForm = ({ form }) => {
     web_url: '',
     no_of_employees: '',
   };
-
+  const apikey =
+    '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';
   const adminId =
     process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID || 'sales@esparktakent';
   const adminTempleteId =
@@ -73,25 +74,43 @@ const BookADemoForm = ({ form }) => {
       onSubmit: async (values, action) => {
         try {
           const response = await axios.post(
-            '/api/email',
+            'https://api.sendgrid.com/v3/mail/send',
             {
-              toAdmin: adminId,
-              toSubmitter: values.email,
-              adminTemplateId: adminTempleteId,
-              data: {
-                first_name: values.first_name,
-                last_name: values.last_name,
-                email: values.email,
-                phone_number: values.phone_number,
-                web_url: values.web_url,
-                no_of_employees: values.no_of_employees,
-              },
+              personalizations: [
+                {
+                  to: [{ email: adminId }],
+                  dynamic_template_data: {
+                    first_name: values.first_name,
+                    last_name: values.last_name,
+                    email: values.email,
+                    phone_number: values.phone_number,
+                    web_url: values.web_url,
+                    no_of_employees: values.no_of_employees,
+                  },
+                },
+              ],
+              from: { email: adminId },
+              template_id: adminTempleteId,
             },
             {
-              headers: {
-                'Content-Type': 'application/json',
-              },
+              headers: { Authorization: `Bearer ${apikey}` },
+              'Content-Type': 'application/json',
             }
+
+            // '/api/email',
+            // {
+            //   toAdmin: adminId,
+            //   toSubmitter: values.email,
+            //   adminTemplateId: adminTempleteId,
+            //   data: {
+            //     first_name: values.first_name,
+            //     last_name: values.last_name,
+            //     email: values.email,
+            //     phone_number: values.phone_number,
+            //     web_url: values.web_url,
+            //     no_of_employees: values.no_of_employees,
+            //   },
+            // },
           );
 
           if (response.status === 200) {
