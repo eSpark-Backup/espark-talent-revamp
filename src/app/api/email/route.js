@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import Cors from 'cors';
+import { runMiddleware } from '@/utils/cors';
 
 const cors = Cors({
   methods: ['POST'],
