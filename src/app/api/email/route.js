@@ -1,16 +1,23 @@
-import axios from 'axios';
+import fetch from 'node-fetch';
+import Cors from 'cors';
+import { runMiddleware } from '@/utils/cors';
+
+const cors = Cors({
+  methods: ['POST'],
+});
 
 async function handler(req, res) {
+  await runMiddleware(req, res, cors);
+
   if (req.method !== 'POST') {
     // Method not allowed
     res.setHeader('Allow', ['POST']);
-    Response.status(405).json({ error: `Method ${req.method} not allowed` });
+    return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 
   try {
     const request = await req.json();
     console.log(request, 'request');
-    console.log(res, 'response');
 
     const { toAdmin, adminTemplateId, data } = request;
 
@@ -34,26 +41,27 @@ async function handler(req, res) {
     // Define headers
     const headers = {
       Authorization: `Bearer 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`,
-      ContentType: 'application/json',
-      AccessControlAllowCredentials: 'true',
-      AccessControlAllowOrigin: '*',
-      AccessControlAllowMethods: 'GET,DELETE,PATCH,POST,PUT',
-      AccessControlAllowHeaders:
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+      'Content-Type': 'application/json',
     };
 
     // Sending emails
-    await axios.post('https://api.sendgrid.com/v3/mail/send', requestData, {
-      headers,
-    });
+    const sendgridResponse = await fetch(
+      'https://api.sendgrid.com/v3/mail/send',
+      {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(requestData),
+      }
+    );
+
+    // Log SendGrid response
+    console.log(await sendgridResponse.json());
 
     // Success response
-    return new Response({ success: true, status: 200 });
+    return res.json({ success: true, status: 200 });
   } catch (error) {
     console.error('Error sending emails:', error);
-    return new Response('An error occurred while sending emails', {
-      status: 500,
-    });
+    return res.status(500).json('An error occurred while sending emails');
   }
 }
 
