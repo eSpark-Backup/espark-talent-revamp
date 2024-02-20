@@ -34,11 +34,11 @@ async function handler(req, res) {
     // Define headers
     const headers = {
       Authorization: `Bearer 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`,
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Credentials': 'true',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,DELETE,PATCH,POST,PUT',
-      'Access-Control-Allow-Headers':
+      ContentType: 'application/json',
+      AccessControlAllowCredentials: 'true',
+      AccessControlAllowOrigin: '*',
+      AccessControlAllowMethods: 'GET,DELETE,PATCH,POST,PUT',
+      AccessControlAllowHeaders:
         'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
     };
 
