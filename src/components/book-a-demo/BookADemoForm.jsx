@@ -29,7 +29,7 @@ const BookADemoForm = ({ form }) => {
   const apikey =
     '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';
   const adminId =
-    process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID || 'sales@esparktakent';
+    process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID || 'sales@esparktalent.com';
   const adminTempleteId =
     process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID ||
     'd-d7ecc4af6b92408982123d695dd84498';
