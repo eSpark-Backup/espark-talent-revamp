@@ -1,8 +1,6 @@
-import CareerCards from '@/components/careers/CareerCards';
-import Hero from '@/components/homepage/Hero';
-import { JOBS_HERO_DATA } from '@/constants/global/hero-sections';
+import CareersPage from '@/components/careers/CareersPage';
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getJob, getJobCategories } from '@/sanity/sanity.quries';
+import React from 'react';
 
 const pathname = '/careers';
 const filteredData =
@@ -51,19 +49,12 @@ export const metadata = {
   },
 };
 
-export default async function page() {
-  try {
-    const job = await getJob();
-    const jobCategory = await getJobCategories();
+const Page = () => {
+  return (
+    <>
+      <CareersPage />
+    </>
+  );
+};
 
-    return (
-      <>
-        <Hero data={JOBS_HERO_DATA} />
-        <CareerCards data={job} categories={jobCategory} />
-      </>
-    );
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return <p>Error loading data. Please try again later.</p>;
-  }
-}
+export default Page;
