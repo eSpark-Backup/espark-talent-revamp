@@ -27,7 +27,11 @@ export default function BlogsPage() {
     };
 
     fetchData();
-  }, []);
+    
+    const intervalId = setInterval(fetchData, 600000);
+
+    return () => clearInterval(intervalId);
+  }, []); 
 
   return (
     <>
