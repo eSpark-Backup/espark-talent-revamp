@@ -48,7 +48,7 @@ const Page = () => {
         fontWeight={500}
       />
       <Process data={PROCESS_DATA} />
-      <DemoCta data={DEMO_DATA} link={'/demo'} />
+      <DemoCta data={DEMO_DATA} link={'/book-a-demo'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
