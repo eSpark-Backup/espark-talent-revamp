@@ -29,7 +29,8 @@ const Page = () => {
   });
 
   return (
-    <><BookAMeeting data={BOOK_A_MEETING} />
+    <>
+      <BookAMeeting data={BOOK_A_MEETING} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -47,7 +48,7 @@ const Page = () => {
         fontWeight={500}
       />
       <Process data={PROCESS_DATA} />
-      <DemoCta data={DEMO_DATA} link={'/book-a-meeting' } />
+      <DemoCta data={DEMO_DATA} link={'/book-a-meeting'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
