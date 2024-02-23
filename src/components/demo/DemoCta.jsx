@@ -8,7 +8,7 @@ import {
 import React from 'react';
 import Link from 'next/link';
 
-const DemoCta = ({ data, link }) => {
+const DemoCta = ({ data, link, target }) => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
   const isMediumScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('sm', 'md')
@@ -44,7 +44,7 @@ const DemoCta = ({ data, link }) => {
           >
             {data?.title}
           </Typography>
-          <Link href={link} target="_blank">
+          <Link href={link} target={target}>
             <Button
               size={
                 isSmallScreen
