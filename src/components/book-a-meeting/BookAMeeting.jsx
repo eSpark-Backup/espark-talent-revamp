@@ -47,6 +47,7 @@ const BookAMeeting = ({ data }) => {
             <Box
               sx={{
                 display: { xs: 'none', sm: 'flex' },
+                mx: { xs: 'auto', md: 0 },
                 alignItems: 'center',
               }}
             >
@@ -66,13 +67,14 @@ const BookAMeeting = ({ data }) => {
               <Box
                 sx={{
                   display: 'flex',
-                  textAlign: { xs: 'center', sm: 'left' },
+                  textAlign: { xs: 'center', sm: 'center', md: 'left' },
                   flexDirection: 'column',
-                  gap: { xs: 1, sm: 1, lg: 1 },
+                  gap: { xs: 1, sm: 0.5, lg: 1 },
                   pr: { xs: 0, md: 4 },
                 }}
               >
                 <Typography
+                  variant="h1"
                   sx={{
                     fontSize: {
                       xs: '22px',
@@ -82,7 +84,7 @@ const BookAMeeting = ({ data }) => {
                     },
                     textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
                     fontWeight: 600,
-                    lineHeight: { sm: '46px', lg: '56px' },
+                    lineHeight: { sm: '40px', lg: '56px' },
                   }}
                   color={data?.titleColor}
                 >
@@ -90,7 +92,7 @@ const BookAMeeting = ({ data }) => {
                 </Typography>
                 <Box
                   sx={{
-                    mx: { xs: 'auto', sm: 0 },
+                    mx: { xs: 'auto', md: 0 },
                     maxWidth: {
                       xs: '350px',
                       sm: '450px',
@@ -100,6 +102,7 @@ const BookAMeeting = ({ data }) => {
                   }}
                 >
                   <Typography
+                    variant="h1"
                     sx={{
                       fontSize: {
                         xs: '21px',
@@ -111,7 +114,7 @@ const BookAMeeting = ({ data }) => {
                       fontWeight: 500,
                       lineHeight: {
                         xs: '30px',
-                        sm: '40px',
+                        sm: '38px',
                         md: '45px',
                         lg: '56px',
                       },
@@ -123,6 +126,7 @@ const BookAMeeting = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
+                    mx: { xs: 'auto', md: 0 },
                     maxWidth: {
                       xs: '400px',
                       sm: '450px',
@@ -175,16 +179,17 @@ const BookAMeeting = ({ data }) => {
                             md: '210px',
                             lg: '245px',
                           },
-                          mx: { xs: 'auto', sm: 0 },
-                          textAlign: { xs: 'center', sm: 'start' },
+                          mx: { xs: 'auto', sm: 'auto', md: 0 },
+                          alignItems: { xs: 'center', md: 'start' },
+                          textAlign: { xs: 'center', md: 'start' },
                           flexDirection: 'column',
                           gap: 1.1,
                         }}
                       >
                         <Box
                           component={'img'}
-                          src={item?.image}
-                          alt={`${item?.alt}`}
+                          src={item?.image || ''}
+                          alt={`${item?.alt || ''}`}
                           sx={{ mx: { xs: 'auto', sm: 0 } }}
                           width={28}
                           height={28}
@@ -193,11 +198,11 @@ const BookAMeeting = ({ data }) => {
                           sx={{
                             fontSize: {
                               xs: '11px',
-                              sm: '11px',
+                              sm: '12px',
                               md: '18px',
                               lg: '20px',
                             },
-                            maxWidth: { sm: '120px', md: '200px', lg: '227px' },
+                            maxWidth: { sm: '140px', md: '200px', lg: '227px' },
                             fontWeight: 600,
                           }}
                         >
@@ -208,7 +213,7 @@ const BookAMeeting = ({ data }) => {
                             color: `${data?.titleColor}`,
                             fontSize: {
                               xs: '10px',
-                              sm: '10px',
+                              sm: '11px',
                               md: '13px',
                               lg: '15px',
                             },
