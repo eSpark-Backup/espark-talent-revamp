@@ -12,6 +12,7 @@ const BookAMeeting = ({ data }) => {
   return (
     <>
       <Box
+        id={'top'}
         sx={{
           py: { xs: 5, sm: 8 },
           px: { xs: 2, sm: 5 },
