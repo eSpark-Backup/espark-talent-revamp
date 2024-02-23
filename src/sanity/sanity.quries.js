@@ -7,7 +7,7 @@ export async function getJob() {
       applyLink,
       description,
       experience,
-      "jobCategory": jobCategory->_ref,
+      "jobCategory": jobCategory._ref,
       jobTiming,
       jobType,
       lastDateToApply,
