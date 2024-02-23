@@ -9,6 +9,7 @@ import { isValidPhoneNumber } from 'react-phone-number-input';
 import axios from 'axios';
 import BasicModal from './BookADemoModal';
 import { PopupModal } from 'react-calendly';
+import { usePathname } from 'next/navigation';
 
 const BookADemoForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
@@ -17,6 +18,8 @@ const BookADemoForm = ({ form }) => {
   const handleClose = () => setOpen(false);
   const [isOpen, setIsOpen] = useState(false);
   const partnersRef = useRef(null);
+  const pathName = usePathname();
+  const book_A_meeting = '/book-a-meeting';
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -129,143 +132,174 @@ const BookADemoForm = ({ form }) => {
     <>
       <Box
         sx={{
-          width: '100%',
-          height: { xs: 'auto', sm: '100%' },
+          width: 'auto',
+          height: '100%',
+          maxWidth: '486px',
           display: 'flex',
-          flexDirection: 'column',
-          mt: { xs: 7, sm: 10, md: 10, lg: 0 },
-          mb: { xs: 7, sm: 0, md: 0, lg: 0 },
-          px: { xs: 7 },
-          alignItems: { sm: 'center' },
-          justifyContent: { xs: 'auto', lg: 'center' },
-          '@media (max-width: 425px)': {
-            px: 4,
+          alignItems: 'center',
+          mx: { md: 'auto' },
+          '@media(min-width: 280px) and (max-width:1259px)': {
+            mx: 'auto',
           },
         }}
       >
-        <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
-          <Typography
-            sx={{
-              color: '#001C63',
-              fontSize: '32px !important',
-              fontStyle: 'normal',
-              fontWeight: 600,
-              lineHeight: '42.289px',
-            }}
-          >
-            {title}
-          </Typography>
-          <Typography
-            sx={{
-              color: '#001C63',
-              fontSize: '15px !important',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: { xs: '25px', sm: '27.863px' },
-            }}
-          >
-            {subTitle}
-          </Typography>
-        </Box>
-        <Box component={'form'}>
-          {fields &&
-            fields?.map((item, index) => (
-              <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
-                <Typography
-                  sx={{
-                    mb: 0.5,
-                    color: '#029894',
-                    fontSize: '14.448px !important',
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    lineHeight: '19.867px',
-                  }}
-                >
-                  {item?.label}
-                </Typography>
-                {item?.label == 'Phone Number*' ? (
-                  <PhoneInput
-                    placeholder="Enter phone number"
-                    value={values?.phone_number}
-                    id={'phone_number'}
-                    defaultCountry={'PK'}
-                    onChange={handlePhoneChange}
-                  />
-                ) : (
-                  <Box>
-                    <Box
-                      component={'input'}
-                      name={item?.key}
-                      placeholder={item?.placeHolder}
-                      value={values[item?.key]}
-                      type={item?.type}
-                      onChange={handleChange}
-                      sx={{
-                        width: { xs: '100%', sm: '436.277px' },
-                        borderRadius: '5.418px',
-                        height: '41px',
-                        border: ' 0.903px solid #D0D4EA',
-                        background: '#F5F8FA',
-                        fontSize: '14px',
-                        pl: 1.5,
-                        color: 'black',
-                        '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
-                          {
-                            WebkitAppearance: 'none',
-                            margin: 0,
-                          },
-                        '&:focus': {
-                          outline: 'none',
-                        },
-                      }}
-                    />
-                  </Box>
-                )}
-                {touched[item?.key] && errors[item?.key] && (
-                  <ErrorMessage message={errors[item?.key]} />
-                )}
-              </Box>
-            ))}
-          <Button
-            onClick={handleSubmit}
-            sx={{
-              mt: 1,
-              mb: 3,
-              width: '126.416px',
-              height: '32.913px',
-              borderRadius: '3.92px',
-              background: '#001C63',
-              color: '#fff',
-              '&:hover': {
-                backgroundColor: '#029894',
-              },
-            }}
-          >
-            Submit
-          </Button>
-          <Box>
+        <Box
+          sx={{
+            width: '100%',
+            height: { xs: 'auto', sm: '100%' },
+            display: 'flex',
+            flexDirection: 'column',
+            mt: {
+              xs: pathName == book_A_meeting ? 0 : 5,
+              sm: pathName == book_A_meeting ? 0 : 5,
+              md: pathName == book_A_meeting ? 0 : 10,
+              lg: 0,
+            },
+            mb: {
+              xs: pathName == book_A_meeting ? 0 : 5,
+              sm: 0,
+              md: 0,
+              lg: 0,
+            },
+            px: 2,
+            alignItems: { md: 'center' },
+            justifyContent: { xs: 'auto', lg: 'center' },
+            '@media (min-width: 600px) and (max-width: 768px)': {
+              justifyContent: 'center',
+              px: 2,
+              width: '100%',
+            },
+            '@media (max-width: 425px)': {
+              justifyContent: 'center',
+              px: 2,
+              width: '100%',
+            },
+          }}
+        >
+          <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
+            <Typography
+              sx={{
+                color: '#001C63',
+                fontSize: '32px !important',
+                fontStyle: 'normal',
+                fontWeight: 600,
+                lineHeight: '42.289px',
+              }}
+            >
+              {title}
+            </Typography>
             <Typography
               sx={{
                 color: '#001C63',
                 fontSize: '15px !important',
                 fontStyle: 'normal',
                 fontWeight: 400,
-                linehHeight: '27.863px',
-                width: { xs: '280', sm: '430px', md: '430px' },
+                lineHeight: { xs: '25px', sm: '27.863px' },
               }}
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
+            >
+              {subTitle}
+            </Typography>
           </Box>
-        </Box>
-        <BasicModal text={modalText} open={open} handleClose={handleClose} />
+          <Box component={'form'}>
+            {fields &&
+              fields?.map((item, index) => (
+                <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
+                  <Typography
+                    sx={{
+                      mb: 0.5,
+                      color: '#029894',
+                      fontSize: '14.448px !important',
+                      fontStyle: 'normal',
+                      fontWeight: 600,
+                      lineHeight: '19.867px',
+                    }}
+                  >
+                    {item?.label}
+                  </Typography>
+                  {item?.label == 'Phone Number*' ? (
+                    <PhoneInput
+                      placeholder="Enter phone number"
+                      value={values?.phone_number}
+                      id={'phone_number'}
+                      defaultCountry={'PK'}
+                      onChange={handlePhoneChange}
+                    />
+                  ) : (
+                    <Box>
+                      <Box
+                        component={'input'}
+                        name={item?.key}
+                        placeholder={item?.placeHolder}
+                        value={values[item?.key]}
+                        type={item?.type}
+                        onChange={handleChange}
+                        sx={{
+                          width: '100%',
+                          borderRadius: '5.418px',
+                          height: '41px',
+                          border: ' 0.903px solid #D0D4EA',
+                          background: '#F5F8FA',
+                          fontSize: '14px',
+                          pl: 1.5,
+                          color: 'black',
+                          '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
+                            {
+                              WebkitAppearance: 'none',
+                              margin: 0,
+                            },
+                          '&:focus': {
+                            outline: 'none',
+                          },
+                        }}
+                      />
+                    </Box>
+                  )}
+                  {touched[item?.key] && errors[item?.key] && (
+                    <ErrorMessage message={errors[item?.key]} />
+                  )}
+                </Box>
+              ))}
+            <Button
+              onClick={handleSubmit}
+              sx={{
+                mt: 1,
+                mb: 3,
+                width: '126.416px',
+                height: '32.913px',
+                borderRadius: '3.92px',
+                background: '#001C63',
+                color: '#fff',
+                '&:hover': {
+                  backgroundColor: '#029894',
+                },
+              }}
+            >
+              Submit
+            </Button>
+            <Box>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: '15px !important',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  linehHeight: '27.863px',
+                  maxWidth: '430px',
+                }}
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+            </Box>
+          </Box>
+          <BasicModal text={modalText} open={open} handleClose={handleClose} />
 
-        <div id="partners" ref={partnersRef} />
-        <PopupModal
-          url="https://calendly.com/esparktalents/60min"
-          onModalClose={() => setIsOpen(false)}
-          open={isOpen}
-          rootElement={partnersRef.current}
-        />
+          <div id="partners" ref={partnersRef} />
+          <PopupModal
+            url="https://calendly.com/esparktalents/60min"
+            onModalClose={() => setIsOpen(false)}
+            open={isOpen}
+            rootElement={partnersRef.current}
+          />
+        </Box>
       </Box>
     </>
   );

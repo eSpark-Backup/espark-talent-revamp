@@ -88,7 +88,7 @@ span {
   color: var(--whiteColor);
 }
 
-.hoverItem:hover>.hoverIcon {
+.hoverItem:hover > .hoverIcon {
   color: #fff;
 }
 
@@ -147,7 +147,6 @@ span {
 .parnership-form:focus {
   outline: 3px solid blue;
   outline-offset: 2px;
-  ;
 }
 
 .PhoneInput {
@@ -406,7 +405,6 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
-
   /* .hrFirmResponsive {
     display: block;
   }
@@ -1058,7 +1056,6 @@ span {
     font-size: 8px;
     font-weight: 600 !important;
   }
-
 }
 
 @media (min-width: 300px) and (max-width: 340px) {
@@ -1072,6 +1069,9 @@ span {
   .partner-country-dropdown option {
     font-size: 10.4px;
   }
+}
+@media (max-width: 520px) {
+  /* /// */
 }
 
 @media (min-width: 769px) and (max-width: 995px) {
@@ -1151,12 +1151,11 @@ span {
 .wiki-content h4,
 .wiki-content h5,
 .wiki-content h6 {
-  color: #3B5998;
-
+  color: #3b5998;
 }
 
 .wiki-content h2 {
-  color: #3B5998;
+  color: #3b5998;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -1171,7 +1170,7 @@ span {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.0;
+  line-height: 2;
 }
 
 .wiki-content li::before {
@@ -1184,9 +1183,7 @@ span {
   text-align: left;
 }
 
-
 @media only screen and (max-width: 1024px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1206,7 +1203,6 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1227,7 +1223,6 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1247,7 +1242,6 @@ span {
 }
 
 @media only screen and (max-width: 360px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1274,14 +1268,14 @@ span {
   font-weight: 700;
   line-height: 71px;
   text-align: left;
-  color: #3B5998;
+  color: #3b5998;
 }
 
 .terms-content h3 {
   font-size: 30px;
   font-weight: 600;
   line-height: 71px;
-  color: #0E0F1D;
+  color: #0e0f1d;
   text-align: left;
 }
 
@@ -1317,7 +1311,7 @@ span {
 .terms-content li::before {
   content: '\2022';
   content: '\2022';
-  color: #3B5998;
+  color: #3b5998;
   font-size: 17px;
   margin-right: 8px;
   display: inline-block;
@@ -1438,7 +1432,6 @@ span {
   font-weight: 800;
   color: #fff;
 }
-
 
 .thankyou-content li::before {
   content: url(/images/wiki/wiki-icon.svg);
