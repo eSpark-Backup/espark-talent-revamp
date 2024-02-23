@@ -3,7 +3,7 @@ export const GLOBAL_SEO = [
     path: '/',
     title: 'eSpark Talent: Get Modern Employee Outsourcing Solutions.',
     description:
-      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy',
+      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy.',
     url: 'https://www.esparktalent.com/',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
@@ -12,7 +12,7 @@ export const GLOBAL_SEO = [
     path: null,
     title: 'eSpark Talent: Get Modern Employee Outsourcing Solutions.',
     description:
-      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy',
+      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy.',
     url: 'https://www.esparktalent.com/',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
@@ -21,8 +21,17 @@ export const GLOBAL_SEO = [
     path: '/book-a-demo ',
     title: 'eSpark Talent: Get Modern Employee Outsourcing Solutions.',
     description:
-      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy',
-    url: 'https://www.esparktalent.com/',
+      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy.',
+    url: 'https://www.esparktalent.com/book-a-demo ',
+    image:
+      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+  },
+  {
+    path: '/book-a-meeting',
+    title: 'Tap into the Global Workforce with eSpark Talent',
+    description:
+      'Discover amazing efficiency and innovation with eSpark Talent. Our diverse expertise ensures remarkable success for your business.',
+    url: 'https://www.esparktalent.com/book-a-meeting',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
   },
@@ -74,7 +83,7 @@ export const GLOBAL_SEO = [
     path: '/esparkwiki',
     title: 'Lets Break Down Average Salaries in USD with eSpark Wiki',
     description:
-      'Discover salaries with eSpark Wiki! Learn average pay in simple words, helping you make smart decisions about compensation in USD."',
+      'Discover salaries with eSpark Wiki! Learn average pay in simple words, helping you make smart decisions about compensation in USD.',
     url: 'https://www.esparktalent.com/esparkwiki',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fheader%2Flogo.png&w=128&q=85',
