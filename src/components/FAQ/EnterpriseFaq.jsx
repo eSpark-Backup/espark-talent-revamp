@@ -92,7 +92,7 @@ const EnterpriseFaq = ({ data }) => {
                         color: '#09114A !important ',
                         textAlign: 'justify',
                         fontWeight: 400,
-                        fontSize:'12px',
+                        fontSize: '12px',
                         lineHeight: '23.69px',
                       }}
                     >
@@ -160,7 +160,7 @@ const EnterpriseFaq = ({ data }) => {
                         color: '#09114A !important ',
                         textAlign: 'justify',
                         fontWeight: 400,
-                        fontSize:'12px',
+                        fontSize: '12px',
                         lineHeight: '23.69px',
                       }}
                     >
