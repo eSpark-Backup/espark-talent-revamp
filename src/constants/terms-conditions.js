@@ -25,7 +25,7 @@ The process of hiring a talent goes through a legalized and authorized procedure
       title: `User Agreement`,
       paragraph: `<p>The website contains agreeable document that reveals the privacy policy for user rights. The herein lays out the righteous and legal aspects that own the rights of the property, security, and subscription manners. Users visiting the website, acquiring services, and continuing to associate with the team lordly accept and permit the shared privacy policy and terms of service.
             <br>
-The agreement herein also expresses the evidence that this website holds the rights to every available material and may use the required data as per the needs of the company. The entries on the website allied with company services approve the sharing of their provided data after the notice of the use of the data through concerning notification.
+The agreement herein also expresses the evidence that this website holds the rights to every available material and may use the required data as per the needs of the company. The entries on the website allied with company services approve the sharing of their provided data after the notice of the use of the data through concerning notification.<br>
 The terms of service address that the company manages and uses data related to service offerings and other marketing purposes. Hence, it is unconditional to address the refusal regarding the utilization of shared data by users on the website. Moreover, the company doesn’t become the responding authority to answer if any situation of data leak is faced by users.</p>`,
     },
     {
