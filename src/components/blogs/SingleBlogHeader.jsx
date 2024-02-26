@@ -55,20 +55,20 @@ const SingleBlogHeader = ({ data, authors }) => {
                 </Stack>
                 <Box className="title">
                   <Box display="flex" gap="2px">
-                      <Typography variant="body1" color={'black'}>
-                        By
-                        <Typography
-                          component={'span'}
-                          variant="body1"
-                          color="#001C63"
-                          sx={{
-                            ml: 1,
-                          }}
-                          fontWeight={600}
-                        >
-                          {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : 'eSpark'} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : 'Talent'}`}
-                        </Typography>
+                    <Typography variant="body1" color={'black'}>
+                      By
+                      <Typography
+                        component={'span'}
+                        variant="body1"
+                        color="#001C63"
+                        sx={{
+                          ml: 1,
+                        }}
+                        fontWeight={600}
+                      >
+                        {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : 'eSpark'} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : 'Talent'}`}
                       </Typography>
+                    </Typography>
                   </Box>
                   <Typography variant="body1" color={'black'}>
                     {moment(parsedblog?.publishedAt)?.format('MMMM DD, YYYY')}
