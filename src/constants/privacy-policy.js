@@ -16,7 +16,7 @@ Furthermore, we promote the offered services of the human resource firm. Therefo
     },
     {
       title: `Data Usage`,
-      paragraph: `<p>Apart from underlining data inclusion fundamentals for our clients who entail our services, we strictly follow the law and respect the rights of the users. The company utilizes the available info of the visitors only to offer a better experience. Moreover, those who intend to avail the assistance may require certain permissions from the company management to access the services. We request to get the needed data of the user by informing through notifications.
+      paragraph: `<p>Apart from underlining data inclusion fundamentals for our clients who entail our services, we strictly follow the law and respect the rights of the users. The company utilizes the available info of the visitors only to offer a better experience. Moreover, those who intend to avail the assistance may require certain permissions from the company management to access the services. We request to get the needed data of the user by informing through notifications.<br>
 Employees applying for the career opportunity are directly communicated with our team, and the entailed information is shared under the consent and acknowledgment of the applicants. Similarly, we care for our users who visit the websites. Therefore, we gather only the required information and use the data to offer on-hand assistance.</p>`,
     },
     {
