@@ -25,15 +25,7 @@ const Footer = ({ data }) => {
             <Container>
               <Grid container>
                 <Grid item lg={5} md={5} sm={12} xs={12}>
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={data?.logo}
-                    width={120}
-                    height={59}
-                    alt={`${data?.alt}`}
-                    style={{ marginBottom: '10px' }}
-                  />
+                  <Link href={data?.logoLink}></Link>
                   <Typography
                     sx={{
                       color: '#001C63',
