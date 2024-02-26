@@ -67,6 +67,8 @@ const Hero = ({ data }) => {
                     lg: '50px',
                     xl: '50px',
                   }}
+                  px={{ xs: '10%', sm:'15%' }}
+                  pt={{ xs: '10%', sm:'10%' }}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -85,6 +87,7 @@ const Hero = ({ data }) => {
                   lineHeight={1.65}
                   fontWeight={500}
                   pr={data?.tpr}
+                  px={{ xs: '15%', sm:'15%' }}
                   fontSize={{
                     xs: '12px',
                     sm: '12px',
