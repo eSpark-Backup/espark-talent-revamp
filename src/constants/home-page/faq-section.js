@@ -86,12 +86,6 @@ export const FAQ_DATA_ENTERPRISE = {
         'eSpark Talent specializes in outsourcing, offering tech expertise and innovation to ensure superior prolect outcomes.',
     },
     {
-      id: 2,
-      heading: "Can eSpark Talent monitor enterprise's social media companies?",
-      description:
-        'Yes, We ensures a creative and skilled workforce to drive successful and impactful campaigns for your enterprise.',
-    },
-    {
       id: 3,
       heading:
         'Does eSpark Talent also collaborate with successful companies as well?',
@@ -99,16 +93,22 @@ export const FAQ_DATA_ENTERPRISE = {
         'Yes! eSpark Talent is the go-to choice for successful collaborations, providing transformative workforce solutions to elevate your business.',
     },
     {
-      id: 4,
-      heading: 'Does eSpark Talent offer the best talent for enterprises?',
-      description:
-        'You can enhance your team size with ease. As our flexible hiring options empower you to assemble the right workforce for your project needs.',
-    },
-    {
       id: 5,
       heading: 'Is outsourcing too expensive for enterprises?',
       description:
         'Not with eSpark Talent; our commitment to transparent pricing guarantees cost-effectiveness without compromising on quality work.',
+    },
+    {
+      id: 2,
+      heading: "Can eSpark Talent monitor enterprise's social media companies?",
+      description:
+        'Yes, We ensures a creative and skilled workforce to drive successful and impactful campaigns for your enterprise.',
+    },
+    {
+      id: 4,
+      heading: 'Does eSpark Talent offer the best talent for enterprises?',
+      description:
+        'You can enhance your team size with ease. As our flexible hiring options empower you to assemble the right workforce for your project needs.',
     },
     {
       id: 6,
