@@ -33,7 +33,7 @@ The sign-in and login entries are also registered in our secured database. We ta
       title: `Cookies & Tracking Tools`,
       paragraph: `<p>We gather cookies to offer the utmost service by saving the entry data of the users. It is not an essential or the foremost requirement to be agreed on allowing the cookies notification. Hence, the implementation allows users to get access to all pages of the websites. Secondly, users won’t need to provide the same shared info while signing in or visiting the website.
             <br>
-Cookies are for the easy access of the users and tracking tools are employed to enhance the performance of the website. Likewise, we collect data regarding user entries, click rates, and visiting patterns</p>`,
+Cookies are for the easy access of the users and tracking tools are employed to enhance the performance of the website. Likewise, we collect data regarding user entries, click rates, and visiting patterns.</p>`,
     },
     {
       title: `Delete of Personal Data`,
