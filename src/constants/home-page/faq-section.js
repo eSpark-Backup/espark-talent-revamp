@@ -8,28 +8,28 @@ export const FAQ_DATA = {
         'HR outsourcing examples include Professional Employer Organization (PEO), Human Resources Outsourcing (HRO), and Business Process Outsourcing (BPO).',
     },
     {
-      id: 2,
-      heading: 'What is done during onboarding? ​',
-      description:
-        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition. ​​',
-    },
-    {
       id: 3,
       heading: 'What are the models of HR outsourcing?',
       description:
         'There are various types of HR outsourcing. However, four prime models that cover all of them. PEO, HRO, ASO, BPO.',
     },
     {
-      id: 4,
-      heading: 'What is a good onboarding process?',
-      description:
-        'A good onboarding process involves clear communication, comprehensive training, and a welcoming atmosphere. At eSpark Talent, we prioritize a positive onboarding venture for lasting success.',
-    },
-    {
       id: 5,
       heading: 'What is the purpose of HR outsourcing? ​',
       description:
         'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload. ​',
+    },
+    {
+      id: 2,
+      heading: 'What is done during onboarding? ​',
+      description:
+        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition. ​​',
+    },
+    {
+      id: 4,
+      heading: 'What is a good onboarding process?',
+      description:
+        'A good onboarding process involves clear communication, comprehensive training, and a welcoming atmosphere. At eSpark Talent, we prioritize a positive onboarding venture for lasting success.',
     },
     {
       id: 6,

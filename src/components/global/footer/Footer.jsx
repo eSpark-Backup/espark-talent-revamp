@@ -87,8 +87,8 @@ const Footer = ({ data }) => {
                   item
                   lg={2}
                   md={2}
-                  sm={6}
-                  xs={6}
+                  sm={12}
+                  xs={12}
                   sx={{
                     mb: {
                       xs: '40px',
@@ -97,7 +97,7 @@ const Footer = ({ data }) => {
                   }}
                 >
                   <Grid container>
-                    <Grid item lg={12} md={12} sm={12} xs={12}>
+                    <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.companyTitle} />
                       {data?.company?.map((item, index) => (
                         <Box key={index}>
@@ -105,7 +105,7 @@ const Footer = ({ data }) => {
                         </Box>
                       ))}
                     </Grid>
-                    <Grid item lg={12} md={12} sm={12} xs={12}>
+                    <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.solutionTitle} />
                       {data?.solution?.map((item, index) => (
                         <Box key={index}>
@@ -119,8 +119,8 @@ const Footer = ({ data }) => {
                   item
                   lg={2}
                   md={2}
-                  sm={6}
-                  xs={6}
+                  sm={12}
+                  xs={12}
                   sx={{
                     mb: {
                       xs: '40px',
@@ -129,7 +129,7 @@ const Footer = ({ data }) => {
                   }}
                 >
                   <Grid container>
-                    <Grid item lg={12} md={12} sm={12} xs={12}>
+                    <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.resourceTitle} />
                       {data?.resource?.map((item, index) => (
                         <Box key={index}>
@@ -137,7 +137,7 @@ const Footer = ({ data }) => {
                         </Box>
                       ))}
                     </Grid>
-                    <Grid item lg={12} md={12} sm={12} xs={12}>
+                    <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.partnershipTitle} />
                       {data?.partnership?.map((item, index) => (
                         <Box key={index}>
