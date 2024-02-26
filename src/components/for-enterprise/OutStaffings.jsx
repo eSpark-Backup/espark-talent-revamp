@@ -32,7 +32,7 @@ const OutStaffings = ({ data }) => {
                 },
               }}
             >
-              {`Trust eSpark Talent's Outstaffing Services`}
+              {data?.heading}
             </Typography>
             <Typography
               color={'secondary'}
@@ -42,7 +42,7 @@ const OutStaffings = ({ data }) => {
                 fontWeight: 400,
               }}
             >
-              {`Partnering With Us Is Remarkable.`}
+              {data?.description}
             </Typography>
           </Box>
           <Grid
