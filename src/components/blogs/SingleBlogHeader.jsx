@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Grid, Typography, Box, Avatar, Stack } from '@mui/material';
-import Link from 'next/link';
 import Image from 'next/image';
 import moment from 'moment';
 
