@@ -1,5 +1,6 @@
 export const FOOTER_DATA = {
   logo: '/images/footer/logo.png',
+  logoLink: '/',
   alt: 'logo',
   description:
     'Our guaranteed top-tier service and industry-leading worldwide coverage provides peace of mind for any global team. With eSpark Talent next-level automation and in-house infrastructure, quality always comes first for our customers.',
