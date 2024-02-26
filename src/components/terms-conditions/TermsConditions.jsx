@@ -55,7 +55,7 @@ const TermsConditions = ({ data }) => {
                       variant="h2"
                       sx={{
                         color: '#3B5998',
-                        px: {  sm: 0 },
+                        px: { sm: 0 },
                         py: '5px',
                         fontStyle: 'normal',
                         fontWeight: 700,
@@ -84,29 +84,29 @@ const TermsConditions = ({ data }) => {
                         <ListItemIcon
                           sx={{
                             minWidth: { xs: '15px', md: '22px' },
-                            mr: { xs: '10px',sx: '15px',md: '20px', },
+                            mr: { xs: '10px', sx: '15px', md: '20px' },
                           }}
                         >
                           <Image
                             src="/images/how-its-works/true.svg"
                             height={
-                          isSmallScreen
-                            ? 12
-                            : isMediumScreen
-                              ? 15
-                              : isLargeScreen
-                                ? 20
-                                : 20
-                        }
+                              isSmallScreen
+                                ? 12
+                                : isMediumScreen
+                                  ? 15
+                                  : isLargeScreen
+                                    ? 20
+                                    : 20
+                            }
                             width={
-                          isSmallScreen
-                            ? 12
-                            : isMediumScreen
-                              ? 15
-                              : isLargeScreen
-                                ? 20
-                                : 20
-                        }
+                              isSmallScreen
+                                ? 12
+                                : isMediumScreen
+                                  ? 15
+                                  : isLargeScreen
+                                    ? 20
+                                    : 20
+                            }
                             alt="Terms & Conditions - eSpart Talent"
                           />
                         </ListItemIcon>
