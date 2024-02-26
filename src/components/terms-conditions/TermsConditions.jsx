@@ -46,7 +46,7 @@ const TermsConditions = ({ data }) => {
                       variant="h2"
                       sx={{
                         color: '#3B5998',
-                        px: { xs: '40px', sm: 0 },
+                        px: {  sm: 0 },
                         py: '5px',
                         fontStyle: 'normal',
                         fontWeight: 700,
