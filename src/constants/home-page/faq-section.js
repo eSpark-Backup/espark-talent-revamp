@@ -15,15 +15,15 @@ export const FAQ_DATA = {
     },
     {
       id: 5,
-      heading: 'What is the purpose of HR outsourcing? ​',
+      heading: 'What is the purpose of HR outsourcing?',
       description:
-        'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload. ​',
+        'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload.',
     },
     {
       id: 2,
-      heading: 'What is done during onboarding? ​',
+      heading: 'What is done during onboarding?',
       description:
-        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition. ​​',
+        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition.',
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ export const FAQ_DATA = {
   ],
 };
 export const STARTUP_FAQ_DATA = {
-  title: 'Frequently Asked Questions​',
+  title: 'Frequently Asked Questions',
   questions: [
     {
       heading: 'How does an outsourced firm help new startups?',
@@ -50,7 +50,7 @@ export const STARTUP_FAQ_DATA = {
     {
       heading: 'Is outsourcing affordable for fresh startups?',
       description:
-        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition. ​​',
+        'At eSpark Talent, we tender excellent integration into your organization during onboarding, covering the hiring process, paperwork, and introductions to facilitate an effortless transition.',
     },
     {
       heading: 'What is special for start-ups at eSpark Talent?',
@@ -65,7 +65,7 @@ export const STARTUP_FAQ_DATA = {
     {
       heading: 'Why eSpark Talent is best for emerging start-ups?',
       description:
-        'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload. ​',
+        'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload.',
     },
     {
       heading: 'Why do start-ups need outsourcing services?',
@@ -76,7 +76,7 @@ export const STARTUP_FAQ_DATA = {
 };
 
 export const FAQ_DATA_ENTERPRISE = {
-  title: 'Frequently Asked Questions​',
+  title: 'Frequently Asked Questions',
   questions: [
     {
       id: 1,
