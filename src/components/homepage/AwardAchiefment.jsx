@@ -10,15 +10,16 @@ const AwardAchievement = ({ data, design, background }) => {
   return (
     <>
       {design === 2 ? (
-        <Box sx={{ background: `${background}`, py: '2.5%' }}>
-          <Container>
+      <Container>
+        <Box sx={{
+          background: `${background}`, py: '2.5%', px: '1%',
+                border: '1px solid rgba(170, 169, 169, 0.41)', }}>
             <Grid
               container
               spacing={2}
               sx={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                border: '1px solid rgba(170, 169, 169, 0.41)',
                 py: '30px',
               }}
             >
@@ -52,11 +53,10 @@ const AwardAchievement = ({ data, design, background }) => {
                 </Grid>
               ))}
             </Grid>
-          </Container>
         </Box>
+    </Container>
       ) : (
         <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
-          <Container>
             <ParagraphTitle title={data?.title} />
             <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
               {data?.items?.map((item, index) => (
@@ -86,10 +86,9 @@ const AwardAchievement = ({ data, design, background }) => {
                 </Grid>
               ))}
             </Grid>
-          </Container>
         </Box>
       )}
-    </>
+      </>
   );
 };
 
