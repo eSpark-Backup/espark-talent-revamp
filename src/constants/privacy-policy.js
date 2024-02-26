@@ -21,7 +21,7 @@ Employees applying for the career opportunity are directly communicated with our
     },
     {
       title: `Third-Party Involvement`,
-      paragraph: `<p>eSpark Talent believes in serving both parties, employees, and employers. This directly highlights the share of the information of both participants. Hence, the specific information of outsourced professional and business companies is shared with third-party inpiduals. Thus, our company doesn’t share separate information that is not provided to our team. Secondly, eSpark Talent is not responsible for the leak or vial of the personal data of the participants or regular visitors on the websites.<br>
+      paragraph: `<p>eSpark Talent believes in serving both parties, employees, and employers. This directly highlights the share of the information of both participants. Hence, the specific information of outsourced professional and business companies is shared with third-party individuals. Thus, our company doesn’t share separate information that is not provided to our team. Secondly, eSpark Talent is not responsible for the leak or vial of the personal data of the participants or regular visitors on the websites.<br>
 We implement the legalized process of acquiring the information by confirming the authorities about the collection of information through cookies and approval notifications.</p>`,
     },
     {
