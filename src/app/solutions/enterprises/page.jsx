@@ -25,6 +25,7 @@ import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
 import { GLOBAL_SEO } from '@/constants/seo-data';
+import EnterpriseFaq from '@/components/FAQ/EnterpriseFaq';
 
 const pathname = '/solutions/enterprises';
 const filteredData =
@@ -98,7 +99,7 @@ const Page = () => {
       <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
       <OutStaffings data={OUTSTAFFING_TRUST_DATA} />
       <AwardAchievement data={ACHIEVEMENTS_DATA} design={2} />
-      <Faq data={FAQ_DATA_ENTERPRISE} />
+      <EnterpriseFaq data={FAQ_DATA_ENTERPRISE} />
     </>
   );
 };
