@@ -167,7 +167,7 @@ const WikiCards = ({ data, categories }) => {
                       </Typography>
                       <Typography
                         variant="body1"
-                        color="secondary"
+                        color="#3b5998"
                         fontSize={{
                           xs: '17px',
                           sm: '17px',
@@ -176,7 +176,7 @@ const WikiCards = ({ data, categories }) => {
                         }}
                         fontWeight={600}
                       >
-                        {`USD: ${item?.salary.toLocaleString()} per month`}
+                        {`USD: $${item?.salary.toLocaleString()} per month`}
                       </Typography>
                     </Box>
                     <Box>
