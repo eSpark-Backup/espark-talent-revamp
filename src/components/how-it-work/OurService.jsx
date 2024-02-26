@@ -84,7 +84,7 @@ const OurService = ({ ourService }) => {
                       src={item?.image}
                       width={60}
                       height={50}
-                      alt={`${item?.alt} - eSpark Talent`}
+                      alt={`${item?.alt}`}
                     />
                   </Box>
 

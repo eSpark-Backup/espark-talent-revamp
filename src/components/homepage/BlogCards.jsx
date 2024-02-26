@@ -50,7 +50,7 @@ const BlogCards = ({ data }) => {
                           quality="85"
                           priority={true}
                           src={item?.featureImage}
-                          alt={`${item?.title} - eSpark Talent`}
+                          alt={`${item?.title}`}
                           width={900}
                           height={100}
                           style={{ borderRadius: '15px' }}

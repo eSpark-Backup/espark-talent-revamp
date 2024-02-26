@@ -172,7 +172,7 @@ const Hero = ({ data }) => {
                   quality="85"
                   priority={true}
                   src={data?.image}
-                  alt={`${data?.imageAlt} - eSpark Talent`}
+                  alt={`${data?.imageAlt}`}
                   width={data?.imageWidth || 450}
                   height={data?.imageHeight || 450}
                 />
