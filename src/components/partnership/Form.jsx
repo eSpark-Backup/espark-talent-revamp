@@ -59,11 +59,11 @@ const Form = ({ formContent }) => {
         'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
       ),
     phone_number: Yup.string()
-    .test('phone', 'Invalid phone number', (value) =>
-      value ? isValidPhoneNumber(value) : true
-    )
-    .required('Phone number is required'),
-});
+      .test('phone', 'Invalid phone number', (value) =>
+        value ? isValidPhoneNumber(value) : true
+      )
+      .required('Phone number is required'),
+  });
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
       initialValues: PartnerFormData,
@@ -124,8 +124,8 @@ const Form = ({ formContent }) => {
 
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
-  };  
-  console.log(values.phone_number,'phone_number');
+  };
+  console.log(values.phone_number, 'phone_number');
   return (
     <Box
       className="partner-form"
@@ -257,11 +257,17 @@ const Form = ({ formContent }) => {
                 placeholder="Enter phone number"
                 value={values.phone_number}
                 id={'phone_number'}
-                name='phone_number'
+                name="phone_number"
                 defaultCountry={'PK'}
                 onChange={handlePhoneChange}
               />
-              {values.phone_number == undefined || values.phone_number == null  ?  (<Typography color='#f00' fontSize='13px' fontWeight={500} > {`Phone number is required`}</Typography>):null}
+              {values.phone_number == undefined ||
+              values.phone_number == null ? (
+                <Typography color="#f00" fontSize="13px" fontWeight={500}>
+                  {' '}
+                  {`Phone number is required`}
+                </Typography>
+              ) : null}
             </Box>
           </Box>
           <Box className="partner-form-Country-partnership">
