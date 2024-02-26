@@ -31,7 +31,7 @@ const Footer = ({ data }) => {
                     src={data?.logo}
                     width={120}
                     height={59}
-                    alt={`${data?.alt} -eSpark Talent`}
+                    alt={`${data?.alt}`}
                     style={{ marginBottom: '10px' }}
                   />
                   <Typography
@@ -77,7 +77,7 @@ const Footer = ({ data }) => {
                           src={item?.img}
                           width={17}
                           height={17}
-                          alt={`${item?.alt} -eSpark Talent`}
+                          alt={`${item?.alt}`}
                         />
                       </Link>
                     ))}
