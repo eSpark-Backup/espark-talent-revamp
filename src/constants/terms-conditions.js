@@ -7,6 +7,7 @@ export const TERMS_CONDITIONS_DATA = {
       paragraph: `<p>eSpark Talent welcomes users to proceed with their visit to the website. The standard terms and conditions are attributed and officially allocated for the use of this website and the extensive presented services of our business. In the intended shared herein users are advised to follow up with the issued terms and conditions by the management of the business for the official website.
             <br>
 The documental section includes all the essentials concerning the rights of eSpark Talent’s offered services, management team, and official website or application. Following the update regarding services the document includes a detailed reference of all allocations that legally protect the rights of the business.
+<br>
 Users are advised to review the herein to acquire the needed insights about user agreement, restrictions, copyright claims, limitation of liability, and security manners of the website.</p>`,
     },
     {
