@@ -8,7 +8,7 @@ import ParagraphTitle from './ParagraphTitle';
 
 const AwardAchievement = ({ data, design, background }) => {
   return (
-    <>
+    <Box py={'40px'}>
       {design === 2 ? (
         <Container>
           <Box
@@ -93,7 +93,7 @@ const AwardAchievement = ({ data, design, background }) => {
           </Grid>
         </Box>
       )}
-    </>
+    </Box>
   );
 };
 
