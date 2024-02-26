@@ -108,6 +108,7 @@ const OutStaffings = ({ data }) => {
             xs={12}
             sx={{
               pt: '40px',
+              pb: {xs:'20px',md:'0',lg:'0',},
               textAlign: 'center',
             }}
           >
