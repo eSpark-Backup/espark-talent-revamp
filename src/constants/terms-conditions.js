@@ -30,7 +30,7 @@ The terms of service address that the company manages and uses data related to s
     },
     {
       title: `Data Collection`,
-      paragraph: `<p>We gather user data to proffer the foremost services. Hence, users are acknowledged through notifications for the approval of the provided information. We may assemble information to share the needed data with our client companies. In the same way, the company reserves the right to use specific information for marketing purposes
+      paragraph: `<p>We gather user data to proffer the foremost services. Hence, users are acknowledged through notifications for the approval of the provided information. We may assemble information to share the needed data with our client companies. In the same way, the company reserves the right to use specific information for marketing purposes.
             <br>
 The offered services of eSpark Talent may require data to bring better results for the users. Thus, every information that is gathered from the website relies on the authority of the company. Moreover, the collected data from the users can also be implemented to lay out future professional opportunities of outsourced employment for the applicants. Therefore, the management owns the authority to utilize every practice including the collection of data to lead the way for future collaboration opportunities.</p>`,
     },
