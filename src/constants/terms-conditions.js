@@ -67,7 +67,7 @@ Furthermore, the website doesn’t implement any practice that reveals the perso
     },
     {
       title: `Limitation Of Liability`,
-      paragraph: `<p>The whole team of eSpark Talent (management, directors, leads, and employees) follows the motive of serving clients and offering professional opportunities to inpiduals. Hence, our support is only limited to professional assistance. Our office workforce including the management directors, leads, and employees won’t be involved in unprofessional liability or during any event that doesn’t include proper paperwork.</p>`,
+      paragraph: `<p>The whole team of eSpark Talent (management, directors, leads, and employees) follows the motive of serving clients and offering professional opportunities to individuals. Hence, our support is only limited to professional assistance. Our office workforce including the management directors, leads, and employees won’t be involved in unprofessional liability or during any event that doesn’t include proper paperwork.</p>`,
     },
     {
       title: `Personal Information & Your Content`,
