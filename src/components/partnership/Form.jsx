@@ -59,12 +59,11 @@ const Form = ({ formContent }) => {
         'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
       ),
     phone_number: Yup.string()
-      .test('phone', 'Invalid phone number', (value) =>
-        value ? isValidPhoneNumber(value) : true
-      )
-      .required('Phone number is required'),
-  });
-
+    .test('phone', 'Invalid phone number', (value) =>
+      value ? isValidPhoneNumber(value) : true
+    )
+    .required('Phone number is required'),
+});
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
       initialValues: PartnerFormData,
@@ -95,7 +94,7 @@ const Form = ({ formContent }) => {
 
           if (response.status === 200) {
             action.resetForm();
-            values.phone_number = '';
+            // values.phone_number = '';
             setTimeout(() => {
               setOpen(!open);
               setModalText('Your data has been successfully submitted');
@@ -106,7 +105,7 @@ const Form = ({ formContent }) => {
           }
         } catch (error) {
           action.resetForm();
-          values.phone_number = '';
+          // values.phone_number = '';
           setTimeout(() => {
             setOpen(!open);
             setModalText('Unfortunately, your data could not be submitted');
@@ -125,8 +124,8 @@ const Form = ({ formContent }) => {
 
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
-  };
-
+  };  
+  console.log(values.phone_number,'phone_number');
   return (
     <Box
       className="partner-form"
@@ -258,9 +257,11 @@ const Form = ({ formContent }) => {
                 placeholder="Enter phone number"
                 value={values.phone_number}
                 id={'phone_number'}
+                name='phone_number'
                 defaultCountry={'PK'}
                 onChange={handlePhoneChange}
               />
+              {values.phone_number == undefined || values.phone_number == null  ?  (<Typography color='#f00' fontSize='13px' fontWeight={500} > {`Phone number is required`}</Typography>):null}
             </Box>
           </Box>
           <Box className="partner-form-Country-partnership">

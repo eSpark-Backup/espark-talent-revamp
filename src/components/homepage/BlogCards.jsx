@@ -40,6 +40,7 @@ const BlogCards = ({ data }) => {
                 className="single-blog-post"
                 sx={{
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
+                  pb:'30px'
                 }}
               >
                 <Link href={`/blogs/${item?.slug}`}>
@@ -69,7 +70,7 @@ const BlogCards = ({ data }) => {
                           year: 'numeric',
                           month: 'short',
                           day: '2-digit',
-                        }).format(new Date('2023-09-27T00:36:00.000Z'))
+                        }).format(new Date(item?.publishedAt))
                       ) : (
                         <Skeleton width={80} />
                       )}
