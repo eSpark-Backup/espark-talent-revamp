@@ -152,41 +152,32 @@ const WikiCards = ({ data, categories }) => {
                       )}
                     </Box>
                     <Box sx={{ pb: '15px' }}>
-                      {item?.salary ? (
-                        <>
-                          <Typography
-                            variant="body1"
-                            color="#667170"
-                            fontWeight={600}
-                            fontSize={{
-                              xs: '10px',
-                              sm: '12px',
-                              md: '12px',
-                              lg: '15px',
-                            }}
-                          >
-                            {'Average Salary'}
-                          </Typography>
-                          <Typography
-                            variant="body1"
-                            color="secondary"
-                            fontSize={{
-                              xs: '17px',
-                              sm: '17px',
-                              md: '15px',
-                              lg: '18px',
-                            }}
-                            fontWeight={600}
-                          >
-                            {`USD: ${item?.salary.toLocaleString()} per month`}
-                          </Typography>
-                        </>
-                      ) : (
-                        <>
-                          <Skeleton width={100} />
-                          <Skeleton width={150} />
-                        </>
-                      )}
+                      <Typography
+                        variant="body1"
+                        color="#667170"
+                        fontWeight={600}
+                        fontSize={{
+                          xs: '10px',
+                          sm: '12px',
+                          md: '12px',
+                          lg: '15px',
+                        }}
+                      >
+                        {'Average Salary'}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="secondary"
+                        fontSize={{
+                          xs: '17px',
+                          sm: '17px',
+                          md: '15px',
+                          lg: '18px',
+                        }}
+                        fontWeight={600}
+                      >
+                        {`USD: ${item?.salary.toLocaleString()} per month`}
+                      </Typography>
                     </Box>
                     <Box>
                       {item?.slug ? (
