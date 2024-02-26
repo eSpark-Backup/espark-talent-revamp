@@ -26,7 +26,7 @@ We implement the legalized process of acquiring the information by confirming th
     },
     {
       title: `Protection of the Data`,
-      paragraph: `<p>We restrict any third-party involvement and participation to use your shared data. Hence,data exchange is conducted with the agreeable approval of the employees, employers, and other visitors on the website. We only gather and protect data that is listed after the permission of the users. With various software services, we shield the information of users thus, your data can’t be protected 100%, as users must be responsible for share of their own contributed data.<br>
+      paragraph: `<p>We restrict any third-party involvement and participation to use your shared data. Hence, data exchange is conducted with the agreeable approval of the employees, employers, and other visitors on the website. We only gather and protect data that is listed after the permission of the users. With various software services, we shield the information of users thus, your data can’t be protected 100%, as users must be responsible for share of their own contributed data.<br>
 The sign-in and login entries are also registered in our secured database. We take care of every entry and offer guarding services through various protective tools. We may share the information through internal links and list the data of career opportunistic employees for their onboarding.</p>`,
     },
     {
