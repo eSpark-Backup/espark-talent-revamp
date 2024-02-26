@@ -3,7 +3,6 @@ import React from 'react';
 
 import Image from 'next/image';
 import { Box, Typography, Grid, Container, Button } from '@mui/material';
-import ESparkButton from '../global/eSparkButton';
 import Link from 'next/link';
 
 const OutStaffings = ({ data }) => {

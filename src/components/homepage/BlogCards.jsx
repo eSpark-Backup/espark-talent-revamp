@@ -40,7 +40,7 @@ const BlogCards = ({ data }) => {
                 className="single-blog-post"
                 sx={{
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
-                  pb:'30px'
+                  pb: '30px',
                 }}
               >
                 <Link href={`/blogs/${item?.slug}`}>
