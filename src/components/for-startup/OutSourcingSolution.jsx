@@ -40,7 +40,7 @@ const OutSourcingSolution = ({ data }) => {
                     quality="85"
                     priority={true}
                     src={item?.icon}
-                    alt={`${item?.title} -eSpark Talent`}
+                    alt={`${item?.title}`}
                     height={item?.iconHeight}
                     width={item?.iconWidth}
                   />

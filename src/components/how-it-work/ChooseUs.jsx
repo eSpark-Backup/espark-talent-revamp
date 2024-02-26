@@ -119,7 +119,7 @@ const ChooseUs = ({ chooseUs }) => {
                 src={image}
                 width={420}
                 height={25}
-                alt={`${alt} - eSpark Talent`}
+                alt={`${alt}`}
               />
             </Box>
           </Grid>

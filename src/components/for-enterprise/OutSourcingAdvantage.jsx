@@ -100,7 +100,7 @@ const OutSourcingAdvantage = ({ data }) => {
                 src={data?.image}
                 height={data?.imageHeight}
                 width={data?.imageWidth}
-                alt={`${data?.alt} -eSpark Talent`}
+                alt={`${data?.alt}`}
               />
             </Grid>
           </Grid>

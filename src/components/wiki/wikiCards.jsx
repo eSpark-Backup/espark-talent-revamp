@@ -125,7 +125,7 @@ const WikiCards = ({ data, categories }) => {
                           src={item?.iconImage}
                           height={30}
                           width={30}
-                          alt={`${item?.title} - eSpark Talent`}
+                          alt={`${item?.title}`}
                         />
                       ) : (
                         <Skeleton width={30} height={30} />
