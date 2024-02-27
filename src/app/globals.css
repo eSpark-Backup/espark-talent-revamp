@@ -440,6 +440,12 @@ span {
   font-weight: 400;
   color: #001c63;
   text-align: left;
+  padding-left: 30px;
+}
+
+.blog-content h3+p,
+.blog-content h3+p+p {
+  padding-left: 30px;
 }
 
 .blog-content h4 {
