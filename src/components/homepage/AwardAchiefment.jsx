@@ -5,10 +5,12 @@ import { Box, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ParagraphTitle from './ParagraphTitle';
+import { usePathname } from 'next/navigation';
 
 const AwardAchievement = ({ data, design, background }) => {
+  const pathName = usePathname();
   return (
-    <Box py={'40px'}>
+    <Box sx={{ py: pathName.includes('/book-a-meeting') ? null : '40px' }}>
       {design === 2 ? (
         <Container>
           <Box
@@ -61,7 +63,14 @@ const AwardAchievement = ({ data, design, background }) => {
           </Box>
         </Container>
       ) : (
-        <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
+        <Box
+          sx={{
+            background: '#F7F8FB',
+            py: '2.5%',
+            pb: { xs: pathName.includes('/book-a-meeting') ? '100px' : null },
+            pt: { xs: pathName.includes('/book-a-meeting') ? '25px' : null },
+          }}
+        >
           <ParagraphTitle title={data?.title} />
           <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
             {data?.items?.map((item, index) => (
