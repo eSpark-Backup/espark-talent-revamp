@@ -67,7 +67,7 @@ const QuestionAnswer = ({ data }) => {
                 variant="h2"
                 sx={{
                   color: '#09114A',
-                  textAlign: { xs: 'center', sm: 'right' },
+                  textAlign: { xs: 'center', sm: 'left' },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
                   fontStyle: 'normal',

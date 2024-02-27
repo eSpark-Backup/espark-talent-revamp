@@ -3,9 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-const TalentIgnite = ({ data }) => {
+const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
+  const textAlignXs = isBestOutsourceComponent ? 'left' : 'center';
   return (
-    <Box sx={{ my: 4 }}>
+    <Box sx={{ my: 4, pt: { sm: '7px', md: '10', lg: '15px' } }}>
       <Container>
         <Grid
           container
@@ -15,7 +16,7 @@ const TalentIgnite = ({ data }) => {
             item
             xs={12}
             sm={12}
-            md={6}
+            md={6.6}
             alignItems="center"
             justifyContent="center"
             sx={{
@@ -43,12 +44,12 @@ const TalentIgnite = ({ data }) => {
                 lineHeight: { xs: '20px', md: '27.863px' },
                 fontWeight: 400,
                 mb: { xs: '15px', md: '0px' },
-                textAlign: { xs: 'center', md: 'justify' },
+                textAlign: { xs: textAlignXs, sm: 'center', md: 'justify' },
               }}
               dangerouslySetInnerHTML={{ __html: data?.description }}
             />
           </Grid>
-          <Grid item xs={12} sm={12} md={6} sx={{ order: { md: 1, xs: 2 } }}>
+          <Grid item xs={12} sm={12} md={5.4} sx={{ order: { md: 1, xs: 2 } }}>
             <Box
               sx={{
                 borderRadius: '17.311px',

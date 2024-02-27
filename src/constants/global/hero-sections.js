@@ -3,7 +3,7 @@ export const HP_HERO_DATA = {
   description:
     'Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.',
   button: {
-    label: 'Hire a Talent',
+    label: 'Hire A Talent',
     link: '/book-a-demo',
     btnVarient: 'primary',
     btnColor: 'secondary',
