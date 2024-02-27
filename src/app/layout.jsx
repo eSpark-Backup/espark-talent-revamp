@@ -22,6 +22,8 @@ const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,
 });
 
+export const revalidate = 60 * 2; // 2 minutes
+
 const pathname = '/';
 const filteredData =
   GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
