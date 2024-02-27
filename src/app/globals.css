@@ -157,7 +157,7 @@ span {
 
 .PhoneInputCountry {
   width: 100px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #f5f8fa;
   border-radius: 5.418px;
   display: flex;
@@ -169,7 +169,7 @@ span {
 
 .parnership-form .PhoneInputCountry {
   width: 100px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #fff;
   border-radius: 5.418px;
   display: flex;
@@ -214,7 +214,7 @@ span {
   padding-left: 9px;
   border-radius: 5.418px;
   padding-left: 10px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #f5f8fa;
   color: black;
   height: 40px;
@@ -1021,9 +1021,10 @@ span {
 }
 
 .partner-form .error-message {
-  color: #f00;
+  color: red;
+  font-weight: 400;
 
-  font-size: 13.448px;
+  font-size: 11px;
 }
 
 .partner-country-dropdown {

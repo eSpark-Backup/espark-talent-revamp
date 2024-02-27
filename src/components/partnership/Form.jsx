@@ -38,12 +38,14 @@ const Form = ({ formContent }) => {
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()
-      .min(3, 'First name must be at least 3 characters')
-      .max(25, 'First name must be at most 25 characters')
+      .matches(/^[a-z]+$/, 'First Name must contain only letters')
+      .min(3, 'First Name must be at least 3 characters')
+      .max(25, 'First Name must be at most 25 characters')
       .required('First Name is required'),
     last_name: Yup.string()
-      .min(3, 'Last name must be at least 3 characters')
-      .max(25, 'Last name must be at most 25 characters')
+      .matches(/^[a-z]+$/, 'Last Name must contain only letters')
+      .min(3, 'Last Name must be at least 3 characters')
+      .max(25, 'Last Name must be at most 25 characters')
       .required('Last Name is required'),
     email: Yup.string()
       .email('Invalid email')

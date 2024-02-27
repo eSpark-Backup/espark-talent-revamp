@@ -14,7 +14,8 @@ const BookAMeeting = ({ data }) => {
       <Box
         id={'top'}
         sx={{
-          py: { xs: 5, sm: 8 },
+          pt: { xs: 5, sm: 5 },
+          pb: { xs: 5, sm: 8 },
           px: { xs: 2, sm: 5 },
         }}
       >
@@ -145,10 +146,10 @@ const BookAMeeting = ({ data }) => {
                         lg: '20px',
                         xl: '20px',
                       },
+                      color: '#0E1155',
                       fontWeight: 500,
                       lineHeight: { xs: 'auto', lg: '37px' },
                     }}
-                    color={data?.titleColor}
                   >
                     {data?.description}
                   </Typography>
@@ -211,7 +212,7 @@ const BookAMeeting = ({ data }) => {
                         </Typography>
                         <Typography
                           sx={{
-                            color: `${data?.titleColor}`,
+                            color: `#1D4E72`,
                             fontSize: {
                               xs: '10px',
                               sm: '11px',
@@ -230,7 +231,7 @@ const BookAMeeting = ({ data }) => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box sx={{ pt: { xs: 0, md: 3 }, pb: { xs: 0, sm: 1 } }}>
             <Box
               sx={{
                 width: 'auto',
@@ -239,7 +240,6 @@ const BookAMeeting = ({ data }) => {
                 borderRadius: '8px',
                 py: 3,
                 px: 0.8,
-                // boxShadow: '5px 5px 5px 5px #D0D4EA',
                 boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
                 order: { xs: 0, sm: 1 },
                 '@media(min-width: 280px) and (max-width:1259px)': {
