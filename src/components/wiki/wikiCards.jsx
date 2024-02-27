@@ -72,7 +72,7 @@ const WikiCards = ({ data, categories }) => {
             {loading ? <Skeleton width={30} height={12} /> : 'All'}
           </Typography>
         </Button>
-        {categories?.map((category, index) => (
+        {categories?.sort((a, b) => a?.id - b?.id).map((category, index) => (
           <Button
             key={index}
             onClick={() => onSelectCategory(category)}
