@@ -9,45 +9,50 @@ const FooterItem2 = ({ href, label }) => {
     label === FOOTER_DATA?.infoEmail || label === FOOTER_DATA?.salesEmail;
 
   return (
-    <Box sx={{pr:'10%'}}>
-    <Typography
-      sx={{
-        color: isBlackLabel ? '#000' : '#001C63',
-        fontSize: {
-          xs: '11px',
-          sm: '12px',
-          md: '13px',
-          lg: '15px',
-        },
-        fontStyle: 'normal',
-        fontWeight: isBlackLabel ? 500 : 400,
-        lineHeight: 'normal',
-        my: !isBlackLabel ? 2 : 0,
-        mr: {
-          xs: isBlackLabel ? '15px' : '0px',
-          md: isBlackLabel ? '0px' : '0px',
-        },
-      }}
-      dangerouslySetInnerHTML={{ __html: label }} />
+    <Box sx={{ pr: '10%' }}>
+      <Typography
+        sx={{
+          color: isBlackLabel ? '#000' : '#001C63',
+          fontSize: {
+            xs: '11px',
+            sm: '12px',
+            md: '13px',
+            lg: '15px',
+          },
+          fontStyle: 'normal',
+          fontWeight: isBlackLabel ? 500 : 400,
+          lineHeight: 'normal',
+          my: !isBlackLabel ? 2 : 0,
+          mr: {
+            xs: isBlackLabel ? '15px' : '0px',
+            md: isBlackLabel ? '0px' : '0px',
+          },
+        }}
+        dangerouslySetInnerHTML={{ __html: label }}
+      />
       <Link href={`mailto:${href}`}>
         <Typography
-      sx={{
-        color: isBlackLabel ? '#000' : '#001C63',
-        fontSize: {
-          xs: '11px',
-          sm: '12px',
-          md: '13px',
-          lg: '15px',
-        },
-        fontStyle: 'normal',
-        fontWeight: isBlackLabel ? 500 : 400,
-        lineHeight: 'normal',
-        my: !isBlackLabel ? 2 : 0,
-        mr: {
-          xs: isBlackLabel ? '15px' : '0px',
-          md: isBlackLabel ? '0px' : '0px',
-        },
-      }}>{href}</Typography> </Link>
+          sx={{
+            color: isBlackLabel ? '#000' : '#001C63',
+            fontSize: {
+              xs: '11px',
+              sm: '12px',
+              md: '13px',
+              lg: '15px',
+            },
+            fontStyle: 'normal',
+            fontWeight: isBlackLabel ? 500 : 400,
+            lineHeight: 'normal',
+            my: !isBlackLabel ? 2 : 0,
+            mr: {
+              xs: isBlackLabel ? '15px' : '0px',
+              md: isBlackLabel ? '0px' : '0px',
+            },
+          }}
+        >
+          {href}
+        </Typography>{' '}
+      </Link>
     </Box>
   );
 };
