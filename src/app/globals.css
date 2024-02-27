@@ -1118,11 +1118,11 @@ span {
   }
 }
 
-@media (min-width: 270px) and (max-width: 400px) {
+/* @media (min-width: 270px) and (max-width: 400px) {
   .footerCta {
     margin-top: 50px !important;
   }
-}
+} */
 
 @media (min-width: 280px) and (max-width: 350px) {
   .PhoneInput {
@@ -1143,7 +1143,7 @@ span {
 
 @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
-    margin-top: 50px !important;
+    margin-top: 10px !important;
   }
 }
 
