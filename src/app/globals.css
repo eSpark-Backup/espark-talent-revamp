@@ -1178,11 +1178,12 @@ span {
   }
 }
 
-@media (min-width: 420px) and (max-width: 500px) {
+/* @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
-    margin-top: 10px !important;
+    margin-top: -20px !important;
   }
-}
+} */
+
 
 .wiki-content h1,
 .wiki-content h2,
