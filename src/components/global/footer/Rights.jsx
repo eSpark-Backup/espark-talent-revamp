@@ -9,7 +9,8 @@ const Rights = ({ copyRights }) => {
       sx={{
         display: 'flex',
         textAlign: 'center',
-        padding: 2,
+        px: { xs: 0, sx: 0, md: 2, lg: 2 },
+        py: { xs: 1, sx: 1, md: 2, lg: 2 },
         gap: '20px',
         alignItems: 'center',
         justifyContent: 'center',

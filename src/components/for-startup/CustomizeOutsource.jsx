@@ -81,7 +81,7 @@ const CustomizeOutsource = ({ data }) => {
                 src={data?.image}
                 width={380}
                 height={300}
-                alt={`${data?.alt} -eSpark Talent`}
+                alt={`${data?.alt}`}
               />
             </Box>
           </Grid>

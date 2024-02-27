@@ -155,7 +155,7 @@ const FooterCTA = ({ data }) => {
                         src={data?.image}
                         width={is600Screen ? 300 : 360}
                         height={is600Screen ? 290 : 350}
-                        alt="images"
+                        alt={data?.alt}
                         className="footerCta"
                         style={{
                           bottom: 0,
