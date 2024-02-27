@@ -11,7 +11,7 @@ const BenefitsWorks = ({ data }) => {
             sx={{
               mx: 'auto',
               pb: '50px',
-              width: { sm: '750px', md: '750px' },
+              width: { sm: '750px', md: '750px', lg: '900px' },
               '@media (min-width: 600px) and (max-width:767px)': {
                 width: '500px',
                 pb: '30px',
@@ -38,6 +38,9 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width: 300px) and (max-width:424px)': {
                   fontSize: '20px !important',
                 },
+                '@media (min-width:768px) and (max-width: 790px)': {
+                  pr: '40px',
+                },
                 textAlign: 'center',
                 flexWrap: 'wrap',
                 pb: { xs: '15px' },
@@ -57,11 +60,14 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width: 300px) and (max-width:424px)': {
                   px: '25px',
                 },
+                '@media (min-width:768px) and (max-width: 790px)': {
+                  pr: '70px',
+                },
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: { sm: '27.863px' },
                 flexWrap: 'wrap',
-                px: '35px',
+                px: { xs: '35px', lg: '10px' },
                 pb: { md: '10px', xs: '0px' },
               }}
             >
@@ -71,7 +77,7 @@ const BenefitsWorks = ({ data }) => {
           <Grid
             container
             spacing={[5, 6, 2, 2]}
-            gap={{ md: '13%', lg: '7.3%', sm: '1%' }}
+            gap={{ md: '13%', lg: '5.3%', sm: '1%' }}
             justifyContent="center"
             position={'relative'}
           >
@@ -96,7 +102,10 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 157,
                 },
-                '@media (min-width:278px) and (max-width: 299px)': {
+                '@media (min-width:291px) and (max-width: 299px)': {
+                  top: 170,
+                },
+                '@media (min-width:278px) and (max-width: 290px)': {
                   top: 177,
                 },
               }}
@@ -123,16 +132,22 @@ const BenefitsWorks = ({ data }) => {
                 zIndex: 0,
                 display: { xs: 'block', sm: 'block', md: 'none' },
                 top: { sm: 455, md: 160 },
+                '@media (max-width: 768px)': {
+                  top: 420,
+                },
                 '@media (min-width:600px) and (max-width: 767px)': {
-                  top: 415,
+                  top: 380,
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
-                  top: 380,
+                  top: 330,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 280,
                 },
-                '@media (min-width:278px) and (max-width: 299px)': {
+                '@media (min-width:291px) and (max-width: 299px)': {
+                  top: 317,
+                },
+                '@media (min-width:278px) and (max-width: 290px)': {
                   top: 335,
                 },
               }}
@@ -152,16 +167,22 @@ const BenefitsWorks = ({ data }) => {
                 },
                 zIndex: 0,
                 top: { sm: 708, md: 260 },
+                '@media (max-width: 768px)': {
+                  top: 655,
+                },
                 '@media (min-width:600px) and (max-width: 767px)': {
-                  top: 650,
+                  top: 600,
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
-                  top: 590,
+                  top: 530,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 442,
                 },
-                '@media (min-width:278px) and (max-width: 299px)': {
+                '@media (min-width:291px) and (max-width: 299px)': {
+                  top: 532,
+                },
+                '@media (min-width:278px) and (max-width: 290px)': {
                   top: 555,
                 },
               }}
@@ -179,7 +200,7 @@ const BenefitsWorks = ({ data }) => {
                   display: 'flex',
                   alignItems: 'stretch',
                   justifyContent: 'center',
-                  p: ['10px', '30px'],
+                  p: ['10px', '6px'],
                   position: 'relative',
                   zIndex: 1,
                 }}
@@ -202,8 +223,8 @@ const BenefitsWorks = ({ data }) => {
                       lg: '162.569px',
                     },
                     width: {
-                      sm: '489.938px',
-                      lg: '489.938px',
+                      sm: '589.938px !important',
+                      lg: '580.938px !important',
                     },
                     '@media (min-width: 600px) and (max-width: 767px)': {
                       width: '450.938px',

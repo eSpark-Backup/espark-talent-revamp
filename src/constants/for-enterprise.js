@@ -101,7 +101,7 @@ export const OUTSTAFFING_TRUST_DATA = {
   heading: `Trust eSpark Talent's Outstaffing Services`,
   description: `Partnering With Us Is Remarkable.`,
   title: 'Our Outsourcing Works Wonders for Your Business Enterprise',
-  buttonText: 'Book A Demo',
+  buttonText: 'Book a Demo',
   buttonLink: '/book-a-demo',
   items: [
     {

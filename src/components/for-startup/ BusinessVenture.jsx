@@ -7,10 +7,10 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const BusinessVenture = ({ data }) => {
   const { listItem } = data;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, pt: { lg: '45px' }, pb: { sm: '25px' } }}>
       <Container>
         <Grid container display={'flex'} alignItems={'center'}>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6.4}>
             <Box
               sx={{
                 mr: { xs: '', md: '25px', lg: '35px' },
@@ -41,7 +41,7 @@ const BusinessVenture = ({ data }) => {
                     display: 'flex',
                     textAlign: 'baseline',
                     '@media (min-width: 700px) and (max-width:768px)': {
-                      ml: '30%',
+                      ml: '20%',
                     },
                     '@media (min-width: 550px) and (max-width:699px)': {
                       ml: '20%',
@@ -77,7 +77,7 @@ const BusinessVenture = ({ data }) => {
               </Grid>
             ))}
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={5.6}>
             <Box
               sx={{
                 borderRadius: '17.311px',

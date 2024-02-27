@@ -30,7 +30,6 @@ const Footer = ({ data }) => {
                   <Typography
                     sx={{
                       color: '#001C63',
-                      textAlign: 'justify',
                       fontSize: {
                         xs: '10px',
                         sm: '10px',
@@ -39,10 +38,10 @@ const Footer = ({ data }) => {
                       },
                       fontStyle: 'normal',
                       fontWeight: 400,
-                      lineHeight: '24.319px',
+                      lineHeight: '24.32px',
                       pr: {
-                        lg: '30%',
-                        md: '20%',
+                        lg: '18%',
+                        md: '15%',
                         sm: '10%',
                       },
                     }}
@@ -179,6 +178,7 @@ const Footer = ({ data }) => {
                 lg: '120px',
               },
               pt: {
+                xs: '25px',
                 lg: '25px',
               },
               background: '#ECECED',

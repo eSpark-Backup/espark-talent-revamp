@@ -9,12 +9,12 @@ const FooterItem2 = ({ href, label }) => {
     label === FOOTER_DATA?.infoEmail || label === FOOTER_DATA?.salesEmail;
 
   return (
-    <Box sx={{ pr: '10%' }}>
+    <Box sx={{ pr: { sm: '10%', md: '0%', xs: '5%' } }}>
       <Typography
         sx={{
-          color: isBlackLabel ? '#000' : '#001C63',
+          color: '#001C63',
           fontSize: {
-            xs: '11px',
+            xs: '9px',
             sm: '12px',
             md: '13px',
             lg: '15px',
@@ -33,9 +33,9 @@ const FooterItem2 = ({ href, label }) => {
       <Link href={`mailto:${href}`}>
         <Typography
           sx={{
-            color: isBlackLabel ? '#000' : '#001C63',
+            color: '#000',
             fontSize: {
-              xs: '11px',
+              xs: '9px',
               sm: '12px',
               md: '13px',
               lg: '15px',
