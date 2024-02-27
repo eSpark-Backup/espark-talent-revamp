@@ -2,7 +2,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box, Typography, Grid, Container, Pagination } from '@mui/material';
+import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,14 +11,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ParagraphTitle from './ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { usePathname } from 'next/navigation';
 
-const OurExperties = ({ data }) => {
+const OurExperties = ({ data, link }) => {
+  const pathName = usePathname();
   const swiperSettings = {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    pagination: false,
+    pagination: { clickable: false },
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
@@ -180,8 +182,12 @@ const OurExperties = ({ data }) => {
             >
               <ESparkButton
                 title={data?.buttonText}
-                link={data?.buttonLink}
-                target="_blank"
+                link={
+                  pathName?.includes('/book-a-meeting')
+                    ? link
+                    : data?.buttonLink
+                }
+                target={pathName?.includes('/book-a-meeting') ? null : '_blank'}
                 color={'secondary'}
                 size={'180px'}
               />

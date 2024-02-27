@@ -55,7 +55,8 @@ const Footer = ({ data }) => {
                       justifyContent: 'space-between',
                       width: '140px',
                       my: '10px',
-                      mx: '6px',
+                      mx: { xs: 0, md: '7px' },
+                      ml: { xs: -0.5, lg: '7px' },
                       mb: {
                         xs: '10px',
                         lg: '0px',
@@ -63,7 +64,7 @@ const Footer = ({ data }) => {
                     }}
                   >
                     {data?.socialMedia?.map((item, index) => (
-                      <Link key={index} href={item?.link}>
+                      <Link key={index} href={item?.link} target="blank">
                         <Image
                           quality="85"
                           priority={true}
