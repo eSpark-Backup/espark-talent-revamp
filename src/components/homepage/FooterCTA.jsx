@@ -86,36 +86,25 @@ const FooterCTA = ({ data }) => {
                             lineHeight: 1.3,
                             fontWeight: 400,
                             py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
-                            pb: { lg: '3.5%', md: '3%', sm: '3%', xs: '3%' },
+                            pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
                           }}
                         >
                           {data?.description}
                         </Typography>
-                        <Link
-                          href={
-                            pathName?.includes('/book-a-meeting')
-                              ? '/book-a-meeting'
-                              : data?.buttonLink
-                          }
-                          target={
-                            pathName?.includes('/book-a-meeting')
-                              ? null
-                              : '_blank'
-                          }
-                        >
+                        <Link href={data?.buttonLink} target="_blank">
                           <Button
                             sx={{
                               py: {
-                                xs: '10px',
-                                sm: '12px',
-                                md: '15px',
-                                lg: '20px',
+                                xs: '7px',
+                                sm: '8px',
+                                md: '10px',
+                                lg: '10px',
                               },
                               px: {
                                 xs: '10px',
-                                sm: '15px',
-                                md: '25px',
-                                lg: '30px',
+                                sm: '10px',
+                                md: '12px',
+                                lg: '15px',
                               },
                               backgroundColor: '#fff',
                               '&:hover': {
@@ -131,7 +120,7 @@ const FooterCTA = ({ data }) => {
                                   xs: '8px',
                                   sm: '10px',
                                   md: '14px',
-                                  lg: '16px',
+                                  lg: '17px',
                                 },
                                 color: '#09114A',
                               }}

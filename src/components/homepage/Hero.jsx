@@ -1,12 +1,5 @@
 'use client';
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,7 +7,6 @@ import React from 'react';
 
 const Hero = ({ data }) => {
   const pathName = usePathname();
-  const isSmallScreen = useMediaQuery('(max-width:425px)');
   return (
     <>
       <Box
@@ -75,6 +67,8 @@ const Hero = ({ data }) => {
                     lg: '50px',
                     xl: '50px',
                   }}
+                  px={{ xs: '10%', sm: '15%' }}
+                  pt={{ xs: '10%', sm: '10%' }}
                   textAlign={{
                     xs: 'center',
                     sm: 'left',
@@ -89,13 +83,11 @@ const Hero = ({ data }) => {
               )}
               {data?.description && (
                 <Typography
-                  sx={{
-                    pr: pathName === '/' ? { lg: '80px' } : 'undefined',
-                  }}
                   color={data?.descColor}
                   lineHeight={1.65}
                   fontWeight={500}
                   pr={data?.tpr}
+                  px={{ xs: '15%', sm: '15%' }}
                   fontSize={{
                     xs: '12px',
                     sm: '12px',
@@ -183,8 +175,8 @@ const Hero = ({ data }) => {
                   quality="85"
                   priority={true}
                   src={data?.image}
-                  width={isSmallScreen ? 220 : data?.imageWidth || 450}
                   alt={`${data?.imageAlt}`}
+                  width={data?.imageWidth || 450}
                   height={data?.imageHeight || 450}
                 />
               </Grid>

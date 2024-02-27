@@ -38,12 +38,12 @@ const BookADemoForm = ({ form }) => {
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'First Name must contain only letters')
+      .matches(/^[a-z]+$/, 'First Name must contain only letters')
       .min(3, 'First Name must be at least 3 characters')
       .max(25, 'First Name must be at most 25 characters')
       .required('First Name is required'),
     last_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'Last Name must contain only letters')
+      .matches(/^[a-z]+$/, 'Last Name must contain only letters')
       .min(3, 'Last Name must be at least 3 characters')
       .max(25, 'Last Name must be at most 25 characters')
       .required('Last Name is required'),
@@ -59,7 +59,7 @@ const BookADemoForm = ({ form }) => {
       .required('Url is required'),
     no_of_employees: Yup.number()
       .min(1, 'Minimum 1 employees')
-      .required('No of employee is required'),
+      .required('No of emp is required'),
     phone_number: Yup.string()
       .test('phone', 'Invalid Phone Number', (value) =>
         value ? isValidPhoneNumber(value) : true

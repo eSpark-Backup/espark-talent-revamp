@@ -440,12 +440,6 @@ span {
   font-weight: 400;
   color: #001c63;
   text-align: left;
-  padding-left: 30px;
-}
-
-.blog-content h3+p,
-.blog-content h3+p+p {
-  padding-left: 30px;
 }
 
 .blog-content h4 {
@@ -518,12 +512,6 @@ span {
     font-size: 22px;
   }
 
-  .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
-    padding-left: 25px;
-  }
-
   .blog-content p {
     font-size: 14px;
     text-align: justify;
@@ -544,12 +532,6 @@ span {
 
   .blog-content h3 {
     font-size: 22px;
-  }
-
-  .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
-    padding-left: 20px;
   }
 
   .blog-content p {
@@ -574,12 +556,6 @@ span {
     font-size: 14px;
   }
 
-  .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
-    padding-left: 20px;
-  }
-
   .blog-content p {
     font-size: 11px;
     text-align: justify;
@@ -600,12 +576,6 @@ span {
     font-size: 14px;
   }
 
-  .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
-    padding-left: 20px;
-  }
-
   .blog-content p {
     font-size: 11px;
     text-align: justify;
@@ -621,12 +591,6 @@ span {
   .blog-content h2 {
     font-size: 17px;
     text-align: left;
-  }
-
-  .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
-    padding-left: 20px;
   }
 
   .blog-content h3 {
@@ -1155,11 +1119,11 @@ span {
   }
 }
 
-/* @media (min-width: 270px) and (max-width: 400px) {
+@media (min-width: 270px) and (max-width: 400px) {
   .footerCta {
     margin-top: 50px !important;
   }
-} */
+}
 
 @media (min-width: 280px) and (max-width: 350px) {
   .PhoneInput {
@@ -1180,7 +1144,7 @@ span {
 
 @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
-    margin-top: 10px !important;
+    margin-top: 50px !important;
   }
 }
 

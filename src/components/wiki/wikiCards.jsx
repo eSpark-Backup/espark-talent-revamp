@@ -72,34 +72,28 @@ const WikiCards = ({ data, categories }) => {
             {loading ? <Skeleton width={30} height={12} /> : 'All'}
           </Typography>
         </Button>
-        {categories
-          ?.sort((a, b) => a?.id - b?.id)
-          .map((category, index) => (
-            <Button
-              key={index}
-              onClick={() => onSelectCategory(category)}
-              variant={selectedCategory === category?._id ? 'contained' : ''}
-              color="primary"
-              sx={{ borderRadius: '50px', fontWeight: 600 }}
+        {categories?.map((category, index) => (
+          <Button
+            key={index}
+            onClick={() => onSelectCategory(category)}
+            variant={selectedCategory === category?._id ? 'contained' : ''}
+            color="primary"
+            sx={{ borderRadius: '50px', fontWeight: 600 }}
+          >
+            <Typography
+              fontSize={{
+                xs: '10px',
+                sm: '12px',
+                md: '15px',
+                lg: '20px',
+              }}
+              color={selectedCategory === category?._id ? 'white' : '#001C63'}
+              fontWeight="600"
             >
-              <Typography
-                fontSize={{
-                  xs: '10px',
-                  sm: '12px',
-                  md: '15px',
-                  lg: '20px',
-                }}
-                color={selectedCategory === category?._id ? 'white' : '#001C63'}
-                fontWeight="600"
-              >
-                {loading ? (
-                  <Skeleton width={50} height={12} />
-                ) : (
-                  category?.title
-                )}
-              </Typography>
-            </Button>
-          ))}
+              {loading ? <Skeleton width={50} height={12} /> : category?.title}
+            </Typography>
+          </Button>
+        ))}
       </Grid>
       <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
         <Box sx={{ py: '3%' }}>

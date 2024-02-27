@@ -2,24 +2,23 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Pagination } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ParagraphTitle from './ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { usePathname } from 'next/navigation';
+import { Autoplay, Navigation } from 'swiper/modules';
 
-const OurExperties = ({ data, link }) => {
-  const pathName = usePathname();
+const OurExperties = ({ data }) => {
   const swiperSettings = {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    pagination: { clickable: false },
+    pagination: false,
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
@@ -150,19 +149,19 @@ const OurExperties = ({ data, link }) => {
                                   height={60}
                                 />
                               </Box>
-                              {/* <Link href={item?.link} target="_blank"> */}
-                              <Typography
-                                variant="body1"
-                                sx={{
-                                  py: '0px',
-                                  color: '#000',
-                                  fontSize: '14px !important',
-                                  fontWeight: 400,
-                                }}
-                              >
-                                {item?.title}
-                              </Typography>
-                              {/* </Link> */}
+                              <Link href={item?.link} target="_blank">
+                                <Typography
+                                  variant="body1"
+                                  sx={{
+                                    py: '0px',
+                                    color: '#000',
+                                    fontSize: '14px !important',
+                                    fontWeight: 400,
+                                  }}
+                                >
+                                  {item?.title}
+                                </Typography>
+                              </Link>
                             </Box>
                           ))}
                         </Box>
@@ -181,12 +180,8 @@ const OurExperties = ({ data, link }) => {
             >
               <ESparkButton
                 title={data?.buttonText}
-                link={
-                  pathName?.includes('/book-a-meeting')
-                    ? link
-                    : data?.buttonLink
-                }
-                target={pathName?.includes('/book-a-meeting') ? null : '_blank'}
+                link={data?.buttonLink}
+                target="_blank"
                 color={'secondary'}
                 size={'180px'}
               />

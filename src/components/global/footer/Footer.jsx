@@ -9,7 +9,6 @@ import FooterTitle from './FooterTitle';
 import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
-import FooterItem2 from './FooterItem2';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -30,6 +29,7 @@ const Footer = ({ data }) => {
                   <Typography
                     sx={{
                       color: '#001C63',
+                      textAlign: 'justify',
                       fontSize: {
                         xs: '10px',
                         sm: '10px',
@@ -38,10 +38,10 @@ const Footer = ({ data }) => {
                       },
                       fontStyle: 'normal',
                       fontWeight: 400,
-                      lineHeight: '24.32px',
+                      lineHeight: '24.319px',
                       pr: {
-                        lg: '18%',
-                        md: '15%',
+                        lg: '30%',
+                        md: '20%',
                         sm: '10%',
                       },
                     }}
@@ -54,16 +54,15 @@ const Footer = ({ data }) => {
                       justifyContent: 'space-between',
                       width: '140px',
                       my: '10px',
-                      mx: { xs: 0, md: '7px' },
-                      ml: { xs: -0.5, lg: '7px' },
+                      mx: '6px',
                       mb: {
-                        xs: '10px',
+                        xs: '40px',
                         lg: '0px',
                       },
                     }}
                   >
                     {data?.socialMedia?.map((item, index) => (
-                      <Link key={index} href={item?.link} target="blank">
+                      <Link key={index} href={item?.link}>
                         <Image
                           quality="85"
                           priority={true}
@@ -84,7 +83,7 @@ const Footer = ({ data }) => {
                   xs={12}
                   sx={{
                     mb: {
-                      xs: '10px',
+                      xs: '40px',
                       lg: '0px',
                     },
                   }}
@@ -116,7 +115,7 @@ const Footer = ({ data }) => {
                   xs={12}
                   sx={{
                     mb: {
-                      xs: '10px',
+                      xs: '40px',
                       lg: '0px',
                     },
                   }}
@@ -144,28 +143,28 @@ const Footer = ({ data }) => {
                   <FooterTitle title={data?.contactUsTitle} />
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '35%' },
-                        }}
-                      >
-                        <FooterItem2
-                          href={data?.contactUsSales?.link}
-                          label={data?.contactUsSales?.label}
-                        />
-                      </Box>
+                      {data?.contactUsSales?.map((item, index) => (
+                        <Box
+                          key={index}
+                          sx={{
+                            pr: { sm: '35%' },
+                          }}
+                        >
+                          <FooterItem href={item?.link} label={item?.label} />
+                        </Box>
+                      ))}
                     </Grid>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '35%' },
-                        }}
-                      >
-                        <FooterItem2
-                          href={data?.contactUsInfo?.link}
-                          label={data?.contactUsInfo?.label}
-                        />
-                      </Box>
+                      {data?.contactUsInfo?.map((item, index) => (
+                        <Box
+                          key={index}
+                          sx={{
+                            pr: { md: '25%' },
+                          }}
+                        >
+                          <FooterItem href={item?.link} label={item?.label} />
+                        </Box>
+                      ))}
                     </Grid>
                   </Grid>
                 </Grid>
@@ -178,7 +177,6 @@ const Footer = ({ data }) => {
                 lg: '120px',
               },
               pt: {
-                xs: '25px',
                 lg: '25px',
               },
               background: '#ECECED',
