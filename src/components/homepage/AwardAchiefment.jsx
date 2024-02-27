@@ -3,7 +3,6 @@ import React from 'react';
 
 import { Box, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 import ParagraphTitle from './ParagraphTitle';
 import { usePathname } from 'next/navigation';
 
@@ -47,59 +46,50 @@ const AwardAchievement = ({ data, design, background }) => {
                     justifyContent: 'center',
                   }}
                 >
-                  <Link href={item?.link}>
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.image}
-                      height={150}
-                      width={150}
-                      alt={`${item?.alt}`}
-                    />
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        </Container>
-      ) : (
-        <Box
-          sx={{
-            background: '#F7F8FB',
-            py: '2.5%',
-            pb: { xs: pathName.includes('/book-a-meeting') ? '100px' : null },
-            pt: { xs: pathName.includes('/book-a-meeting') ? '25px' : null },
-          }}
-        >
-          <ParagraphTitle title={data?.title} />
-          <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
-            {data?.items?.map((item, index) => (
-              <Grid
-                key={index}
-                item
-                xs={6}
-                md={3}
-                lg={2}
-                xl={2}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Link href={item?.link}>
                   <Image
                     quality="85"
                     priority={true}
                     src={item?.image}
                     height={150}
                     width={150}
-                    alt={`${item?.alt}`}
+                    alt={`${item?.alt} -eSpark Talent`}
                   />
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Container>
+      ) : (
+        <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
+          <Container>
+            <ParagraphTitle title={data?.title} />
+            <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
+              {data?.items?.map((item, index) => (
+                <Grid
+                  key={index}
+                  item
+                  xs={6}
+                  md={3}
+                  lg={2}
+                  xl={2}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Image
+                    quality="85"
+                    priority={true}
+                    src={item?.image}
+                    height={150}
+                    width={150}
+                    alt={`${item?.alt} - eSpark Talent`}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
         </Box>
       )}
     </Box>

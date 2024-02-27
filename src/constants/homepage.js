@@ -15,7 +15,7 @@ export const CLIENT_SLIDER_BREAK_POINTS = {
     slidesPerView: 4,
   },
   1024: {
-    slidesPerView: 6,
+    slidesPerView: 5,
   },
   1440: {
     slidesPerView: 7,

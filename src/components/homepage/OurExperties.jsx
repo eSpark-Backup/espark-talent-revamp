@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -151,19 +150,19 @@ const OurExperties = ({ data, link }) => {
                                   height={60}
                                 />
                               </Box>
-                              <Link href={item?.link} target="_blank">
-                                <Typography
-                                  variant="body1"
-                                  sx={{
-                                    py: '0px',
-                                    color: '#000',
-                                    fontSize: '14px !important',
-                                    fontWeight: 400,
-                                  }}
-                                >
-                                  {item?.title}
-                                </Typography>
-                              </Link>
+                              {/* <Link href={item?.link} target="_blank"> */}
+                              <Typography
+                                variant="body1"
+                                sx={{
+                                  py: '0px',
+                                  color: '#000',
+                                  fontSize: '14px !important',
+                                  fontWeight: 400,
+                                }}
+                              >
+                                {item?.title}
+                              </Typography>
+                              {/* </Link> */}
                             </Box>
                           ))}
                         </Box>
