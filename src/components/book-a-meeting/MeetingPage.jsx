@@ -50,7 +50,7 @@ const MeetingPage = () => {
       <Process data={PROCESS_DATA} />
       <DemoCta data={DEMO_DATA} link={'/book-a-meeting/#top'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
-      <OurExperties data={EXPERTIES_DATA} />
+      <OurExperties data={EXPERTIES_DATA} link={'/book-a-meeting/#top'} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}

@@ -91,7 +91,18 @@ const FooterCTA = ({ data }) => {
                         >
                           {data?.description}
                         </Typography>
-                        <Link href={data?.buttonLink} target="_blank">
+                        <Link
+                          href={
+                            pathName?.includes('/book-a-meeting')
+                              ? '/book-a-meeting'
+                              : data?.buttonLink
+                          }
+                          target={
+                            pathName?.includes('/book-a-meeting')
+                              ? null
+                              : '_blank'
+                          }
+                        >
                           <Button
                             sx={{
                               py: {
