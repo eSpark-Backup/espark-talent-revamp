@@ -10,7 +10,7 @@ export const BOOK_A_MEETING = {
   title: 'Tired of Limited Talent Pools?',
   subTitle: 'Tap into the Global Workforce with eSpark Talent',
   description:
-    'Explore exceptional efficiency and innovation through our outsourced solutions.We offer diverse expertise for remarkable success.',
+    'Explore exceptional efficiency and innovation through our outsourced solutions. We offer diverse expertise for remarkable success.',
   services: [
     {
       image: '/images/book-a-meeting/meeting-1.svg',
@@ -24,7 +24,7 @@ export const BOOK_A_MEETING = {
       alt: 'Hire the best in less time',
       title: 'Hire the best in less time',
       description:
-        'Quickly build your dream team - where top talents align smoothly with your opportunities',
+        'Quickly build your dream team - where top talents align smoothly with your opportunities.',
     },
     {
       image: '/images/book-a-meeting/meeting-3.svg',

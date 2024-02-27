@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
-import Link from 'next/link';
 
 const extendClients = (clients, length) => {
   const extendedClients = Array.from({ length }, (_, index) => ({
@@ -85,38 +84,36 @@ const ClientSlider = ({
           >
             <Box sx={{ pb: pb || 5 }}>
               {
-                <Link href={item.link}>
-                  <Box
-                    component={'img'}
-                    src={getImagePath(item.image)}
-                    alt={item.image}
-                    height={'37px'}
-                    sx={{
-                      width: {
-                        sm: '184px',
-                        md: '184px',
-                        lg: '186px',
-                      },
-                      height: {
-                        sm: '35px',
-                        md: '35px',
-                        lg: '37px',
-                      },
-                      '@media (min-width: 550px) and (max-width: 767px)': {
-                        width: '140px',
-                        height: '25px',
-                      },
-                      '@media (min-width: 375px) and (max-width: 549px)': {
-                        width: '100px',
-                        height: '20px',
-                      },
-                      '@media (min-width: 280px) and (max-width: 374px)': {
-                        width: '80px',
-                        height: '18px',
-                      },
-                    }}
-                  />
-                </Link>
+                <Box
+                  component={'img'}
+                  src={getImagePath(item.image)}
+                  alt={item.image}
+                  height={'37px'}
+                  sx={{
+                    width: {
+                      sm: '184px',
+                      md: '184px',
+                      lg: '186px',
+                    },
+                    height: {
+                      sm: '35px',
+                      md: '35px',
+                      lg: '37px',
+                    },
+                    '@media (min-width: 550px) and (max-width: 767px)': {
+                      width: '160px',
+                      height: '25px',
+                    },
+                    '@media (min-width: 375px) and (max-width: 549px)': {
+                      width: '160px',
+                      height: '20px',
+                    },
+                    '@media (min-width: 280px) and (max-width: 374px)': {
+                      width: '160px',
+                      height: '18px',
+                    },
+                  }}
+                />
               }
             </Box>
           </SwiperSlide>

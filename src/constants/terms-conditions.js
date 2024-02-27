@@ -7,6 +7,7 @@ export const TERMS_CONDITIONS_DATA = {
       paragraph: `<p>eSpark Talent welcomes users to proceed with their visit to the website. The standard terms and conditions are attributed and officially allocated for the use of this website and the extensive presented services of our business. In the intended shared herein users are advised to follow up with the issued terms and conditions by the management of the business for the official website.
             <br>
 The documental section includes all the essentials concerning the rights of eSpark Talent’s offered services, management team, and official website or application. Following the update regarding services the document includes a detailed reference of all allocations that legally protect the rights of the business.
+<br>
 Users are advised to review the herein to acquire the needed insights about user agreement, restrictions, copyright claims, limitation of liability, and security manners of the website.</p>`,
     },
     {
@@ -25,12 +26,12 @@ The process of hiring a talent goes through a legalized and authorized procedure
       title: `User Agreement`,
       paragraph: `<p>The website contains agreeable document that reveals the privacy policy for user rights. The herein lays out the righteous and legal aspects that own the rights of the property, security, and subscription manners. Users visiting the website, acquiring services, and continuing to associate with the team lordly accept and permit the shared privacy policy and terms of service.
             <br>
-The agreement herein also expresses the evidence that this website holds the rights to every available material and may use the required data as per the needs of the company. The entries on the website allied with company services approve the sharing of their provided data after the notice of the use of the data through concerning notification.
+The agreement herein also expresses the evidence that this website holds the rights to every available material and may use the required data as per the needs of the company. The entries on the website allied with company services approve the sharing of their provided data after the notice of the use of the data through concerning notification.<br>
 The terms of service address that the company manages and uses data related to service offerings and other marketing purposes. Hence, it is unconditional to address the refusal regarding the utilization of shared data by users on the website. Moreover, the company doesn’t become the responding authority to answer if any situation of data leak is faced by users.</p>`,
     },
     {
       title: `Data Collection`,
-      paragraph: `<p>We gather user data to proffer the foremost services. Hence, users are acknowledged through notifications for the approval of the provided information. We may assemble information to share the needed data with our client companies. In the same way, the company reserves the right to use specific information for marketing purposes
+      paragraph: `<p>We gather user data to proffer the foremost services. Hence, users are acknowledged through notifications for the approval of the provided information. We may assemble information to share the needed data with our client companies. In the same way, the company reserves the right to use specific information for marketing purposes.
             <br>
 The offered services of eSpark Talent may require data to bring better results for the users. Thus, every information that is gathered from the website relies on the authority of the company. Moreover, the collected data from the users can also be implemented to lay out future professional opportunities of outsourced employment for the applicants. Therefore, the management owns the authority to utilize every practice including the collection of data to lead the way for future collaboration opportunities.</p>`,
     },
@@ -38,7 +39,7 @@ The offered services of eSpark Talent may require data to bring better results f
       title: `Intellectual Property Rights`,
       paragraph: `<p>The attachment of images and graphics on the website is reserved by the company. Users are advised to not misuse any information that is shared on the website. The agreement is the evidence for the legal copyright authority of the company on its images, features, design, and content. eSpark Talent is a professional firm that acquires every required intellectual property right to offer secure services to users.</p>
             <h3>Images & Graphics</h3>
-            <p>Visual elements and images on the website are reserved and are attached as per the requirement of the website’s design. Intellectual property rights represent the reserve of the used material on the website. Hence, the visuals and graphics on the website don’t promote any unwanted or vague goals and clearly manifest the perfect representation of offered outsourcing services</p>
+            <p>Visual elements and images on the website are reserved and are attached as per the requirement of the website’s design. Intellectual property rights represent the reserve of the used material on the website. Hence, the visuals and graphics on the website don’t promote any unwanted or vague goals and clearly manifest the perfect representation of offered outsourcing services.</p>
             <h3>Content</h3>
             <p>We may share content on the website through various styles of writing and several mediums. Likewise, in the form of an audio clip or videographic footage. The material and content shared in audio and video won't include any inappropriate exhibits. Hence, the company and management are not answerable to any query from the users about the display of content, audio, and videography on the website.</p>`,
     },
@@ -67,7 +68,7 @@ Furthermore, the website doesn’t implement any practice that reveals the perso
     },
     {
       title: `Limitation Of Liability`,
-      paragraph: `<p>The whole team of eSpark Talent (management, directors, leads, and employees) follows the motive of serving clients and offering professional opportunities to inpiduals. Hence, our support is only limited to professional assistance. Our office workforce including the management directors, leads, and employees won’t be involved in unprofessional liability or during any event that doesn’t include proper paperwork.</p>`,
+      paragraph: `<p>The whole team of eSpark Talent (management, directors, leads, and employees) follows the motive of serving clients and offering professional opportunities to individuals. Hence, our support is only limited to professional assistance. Our office workforce including the management directors, leads, and employees won’t be involved in unprofessional liability or during any event that doesn’t include proper paperwork.</p>`,
     },
     {
       title: `Personal Information & Your Content`,

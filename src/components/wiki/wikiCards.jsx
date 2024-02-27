@@ -72,28 +72,34 @@ const WikiCards = ({ data, categories }) => {
             {loading ? <Skeleton width={30} height={12} /> : 'All'}
           </Typography>
         </Button>
-        {categories?.map((category, index) => (
-          <Button
-            key={index}
-            onClick={() => onSelectCategory(category)}
-            variant={selectedCategory === category?._id ? 'contained' : ''}
-            color="primary"
-            sx={{ borderRadius: '50px', fontWeight: 600 }}
-          >
-            <Typography
-              fontSize={{
-                xs: '10px',
-                sm: '12px',
-                md: '15px',
-                lg: '20px',
-              }}
-              color={selectedCategory === category?._id ? 'white' : '#001C63'}
-              fontWeight="600"
+        {categories
+          ?.sort((a, b) => a?.id - b?.id)
+          .map((category, index) => (
+            <Button
+              key={index}
+              onClick={() => onSelectCategory(category)}
+              variant={selectedCategory === category?._id ? 'contained' : ''}
+              color="primary"
+              sx={{ borderRadius: '50px', fontWeight: 600 }}
             >
-              {loading ? <Skeleton width={50} height={12} /> : category?.title}
-            </Typography>
-          </Button>
-        ))}
+              <Typography
+                fontSize={{
+                  xs: '10px',
+                  sm: '12px',
+                  md: '15px',
+                  lg: '20px',
+                }}
+                color={selectedCategory === category?._id ? 'white' : '#001C63'}
+                fontWeight="600"
+              >
+                {loading ? (
+                  <Skeleton width={50} height={12} />
+                ) : (
+                  category?.title
+                )}
+              </Typography>
+            </Button>
+          ))}
       </Grid>
       <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
         <Box sx={{ py: '3%' }}>
@@ -125,7 +131,7 @@ const WikiCards = ({ data, categories }) => {
                           src={item?.iconImage}
                           height={30}
                           width={30}
-                          alt={`${item?.title} - eSpark Talent`}
+                          alt={`${item?.title}`}
                         />
                       ) : (
                         <Skeleton width={30} height={30} />
@@ -152,41 +158,32 @@ const WikiCards = ({ data, categories }) => {
                       )}
                     </Box>
                     <Box sx={{ pb: '15px' }}>
-                      {item?.salary ? (
-                        <>
-                          <Typography
-                            variant="body1"
-                            color="#667170"
-                            fontWeight={600}
-                            fontSize={{
-                              xs: '10px',
-                              sm: '12px',
-                              md: '12px',
-                              lg: '15px',
-                            }}
-                          >
-                            {'Average Salary'}
-                          </Typography>
-                          <Typography
-                            variant="body1"
-                            color="secondary"
-                            fontSize={{
-                              xs: '17px',
-                              sm: '17px',
-                              md: '15px',
-                              lg: '18px',
-                            }}
-                            fontWeight={600}
-                          >
-                            {`USD: ${item?.salary.toLocaleString()} per month`}
-                          </Typography>
-                        </>
-                      ) : (
-                        <>
-                          <Skeleton width={100} />
-                          <Skeleton width={150} />
-                        </>
-                      )}
+                      <Typography
+                        variant="body1"
+                        color="#667170"
+                        fontWeight={600}
+                        fontSize={{
+                          xs: '10px',
+                          sm: '12px',
+                          md: '12px',
+                          lg: '15px',
+                        }}
+                      >
+                        {'Average Salary'}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="#3b5998"
+                        fontSize={{
+                          xs: '17px',
+                          sm: '17px',
+                          md: '15px',
+                          lg: '18px',
+                        }}
+                        fontWeight={600}
+                      >
+                        {`USD: $${item?.salary.toLocaleString()} per month`}
+                      </Typography>
                     </Box>
                     <Box>
                       {item?.slug ? (

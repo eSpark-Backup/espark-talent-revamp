@@ -3,22 +3,29 @@ import React from 'react';
 
 import { Box, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 import ParagraphTitle from './ParagraphTitle';
+import { usePathname } from 'next/navigation';
 
 const AwardAchievement = ({ data, design, background }) => {
+  const pathName = usePathname();
   return (
-    <>
+    <Box sx={{ py: pathName.includes('/book-a-meeting') ? null : '40px' }}>
       {design === 2 ? (
-        <Box sx={{ background: `${background}`, py: '2.5%' }}>
-          <Container>
+        <Container>
+          <Box
+            sx={{
+              background: `${background}`,
+              py: '2.5%',
+              px: '1%',
+              border: '1px solid rgba(170, 169, 169, 0.41)',
+            }}
+          >
             <Grid
               container
               spacing={2}
               sx={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                border: '1px solid rgba(170, 169, 169, 0.41)',
                 py: '30px',
               }}
             >
@@ -39,21 +46,19 @@ const AwardAchievement = ({ data, design, background }) => {
                     justifyContent: 'center',
                   }}
                 >
-                  <Link href={item?.link}>
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.image}
-                      height={150}
-                      width={150}
-                      alt={`${item?.alt} -eSpark Talent`}
-                    />
-                  </Link>
+                  <Image
+                    quality="85"
+                    priority={true}
+                    src={item?.image}
+                    height={150}
+                    width={150}
+                    alt={`${item?.alt} -eSpark Talent`}
+                  />
                 </Grid>
               ))}
             </Grid>
-          </Container>
-        </Box>
+          </Box>
+        </Container>
       ) : (
         <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
           <Container>
@@ -73,23 +78,21 @@ const AwardAchievement = ({ data, design, background }) => {
                     justifyContent: 'center',
                   }}
                 >
-                  <Link href={item?.link}>
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.image}
-                      height={150}
-                      width={150}
-                      alt={`${item?.alt} - eSpark Talent`}
-                    />
-                  </Link>
+                  <Image
+                    quality="85"
+                    priority={true}
+                    src={item?.image}
+                    height={150}
+                    width={150}
+                    alt={`${item?.alt} - eSpark Talent`}
+                  />
                 </Grid>
               ))}
             </Grid>
           </Container>
         </Box>
       )}
-    </>
+    </Box>
   );
 };
 

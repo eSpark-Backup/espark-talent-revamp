@@ -75,7 +75,7 @@ const ClientSlider = ({
                   quality="85"
                   priority={true}
                   src={item?.image}
-                  alt={`${item?.alt} -eSpark Talent`}
+                  alt={`${item?.alt}`}
                   height={item?.imageHeight}
                   width={item?.imageWidth}
                 />

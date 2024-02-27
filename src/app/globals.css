@@ -88,7 +88,7 @@ span {
   color: var(--whiteColor);
 }
 
-.hoverItem:hover > .hoverIcon {
+.hoverItem:hover>.hoverIcon {
   color: #fff;
 }
 
@@ -157,7 +157,7 @@ span {
 
 .PhoneInputCountry {
   width: 100px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #f5f8fa;
   border-radius: 5.418px;
   display: flex;
@@ -169,7 +169,7 @@ span {
 
 .parnership-form .PhoneInputCountry {
   width: 100px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #fff;
   border-radius: 5.418px;
   display: flex;
@@ -214,7 +214,7 @@ span {
   padding-left: 9px;
   border-radius: 5.418px;
   padding-left: 10px;
-  border: 0.903px solid #bcbfc0;
+  border: 0.903px solid #d0d4ea;
   background: #f5f8fa;
   color: black;
   height: 40px;
@@ -405,6 +405,7 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
+
   /* .hrFirmResponsive {
     display: block;
   }
@@ -439,6 +440,12 @@ span {
   font-weight: 400;
   color: #001c63;
   text-align: left;
+  padding-left: 30px;
+}
+
+.blog-content h3+p,
+.blog-content h3+p+p {
+  padding-left: 30px;
 }
 
 .blog-content h4 {
@@ -511,6 +518,12 @@ span {
     font-size: 22px;
   }
 
+  .blog-content h3,
+  .blog-content h3+p,
+  .blog-content h3+p+p {
+    padding-left: 25px;
+  }
+
   .blog-content p {
     font-size: 14px;
     text-align: justify;
@@ -531,6 +544,12 @@ span {
 
   .blog-content h3 {
     font-size: 22px;
+  }
+
+  .blog-content h3,
+  .blog-content h3+p,
+  .blog-content h3+p+p {
+    padding-left: 20px;
   }
 
   .blog-content p {
@@ -555,6 +574,12 @@ span {
     font-size: 14px;
   }
 
+  .blog-content h3,
+  .blog-content h3+p,
+  .blog-content h3+p+p {
+    padding-left: 20px;
+  }
+
   .blog-content p {
     font-size: 11px;
     text-align: justify;
@@ -575,6 +600,12 @@ span {
     font-size: 14px;
   }
 
+  .blog-content h3,
+  .blog-content h3+p,
+  .blog-content h3+p+p {
+    padding-left: 20px;
+  }
+
   .blog-content p {
     font-size: 11px;
     text-align: justify;
@@ -590,6 +621,12 @@ span {
   .blog-content h2 {
     font-size: 17px;
     text-align: left;
+  }
+
+  .blog-content h3,
+  .blog-content h3+p,
+  .blog-content h3+p+p {
+    padding-left: 20px;
   }
 
   .blog-content h3 {
@@ -1021,9 +1058,10 @@ span {
 }
 
 .partner-form .error-message {
-  color: #f00;
+  color: red;
+  font-weight: 400;
 
-  font-size: 13.448px;
+  font-size: 11px;
 }
 
 .partner-country-dropdown {
@@ -1070,6 +1108,7 @@ span {
     font-size: 10.4px;
   }
 }
+
 @media (max-width: 520px) {
   /* /// */
 }
@@ -1116,11 +1155,11 @@ span {
   }
 }
 
-@media (min-width: 270px) and (max-width: 400px) {
+/* @media (min-width: 270px) and (max-width: 400px) {
   .footerCta {
     margin-top: 50px !important;
   }
-}
+} */
 
 @media (min-width: 280px) and (max-width: 350px) {
   .PhoneInput {
@@ -1141,7 +1180,7 @@ span {
 
 @media (min-width: 420px) and (max-width: 500px) {
   .footerCta {
-    margin-top: 50px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -1184,6 +1223,7 @@ span {
 }
 
 @media only screen and (max-width: 1024px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1203,6 +1243,7 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1223,6 +1264,7 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1242,6 +1284,7 @@ span {
 }
 
 @media only screen and (max-width: 360px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1266,17 +1309,17 @@ span {
 .terms-content h2 {
   font-size: 40;
   font-weight: 700;
-  line-height: 71px;
-  text-align: left;
+  line-height: 1.4;
+  text-align: 'left';
   color: #3b5998;
 }
 
 .terms-content h3 {
   font-size: 30px;
   font-weight: 600;
-  line-height: 71px;
+  line-height: 1.4;
   color: #0e0f1d;
-  text-align: left;
+  text-align: 'left';
 }
 
 .terms-content p {
@@ -1343,10 +1386,12 @@ span {
 @media only screen and (max-width: 768px) {
   .terms-content h2 {
     font-size: 22px;
+    text-align: center;
   }
 
   .terms-content h3 {
     font-size: 22px;
+    text-align: center;
   }
 
   .terms-content p {
@@ -1365,10 +1410,12 @@ span {
 @media only screen and (max-width: 425px) {
   .terms-content h2 {
     font-size: 17px;
+    text-align: center;
   }
 
   .terms-content h3 {
     font-size: 14px;
+    text-align: center;
   }
 
   .terms-content p {
@@ -1385,10 +1432,12 @@ span {
 @media only screen and (max-width: 360px) {
   .terms-content h2 {
     font-size: 17px;
+    text-align: center;
   }
 
   .terms-content h3 {
     font-size: 14px;
+    text-align: center;
   }
 
   .terms-content p {
@@ -1406,10 +1455,12 @@ span {
   .terms-content h2 {
     font-size: 17px;
     text-align: left;
+    text-align: center;
   }
 
   .terms-content h3 {
     font-size: 14px;
+    text-align: center;
   }
 
   .terms-content p {

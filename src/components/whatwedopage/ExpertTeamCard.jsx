@@ -135,7 +135,7 @@ const ExpertTeamCard = ({ teamData }) => {
                       src={item?.icon}
                       width={65}
                       height={65}
-                      alt={`${item?.alt} - eSpark Talent`}
+                      alt={`${item?.alt}`}
                       className="its-our-job-card-image"
                     />
                   </Box>
