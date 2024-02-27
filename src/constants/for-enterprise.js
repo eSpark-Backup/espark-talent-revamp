@@ -98,6 +98,8 @@ export const OUTSOURCING_LIST_DATA = {
 };
 
 export const OUTSTAFFING_TRUST_DATA = {
+  heading: `Trust eSpark Talent's Outstaffing Services`,
+  description: `Partnering With Us Is Remarkable.`,
   title: 'Our Outsourcing Works Wonders for Your Business Enterprise',
   buttonText: 'Book A Demo',
   buttonLink: '/book-a-demo',
@@ -111,7 +113,7 @@ export const OUTSTAFFING_TRUST_DATA = {
     },
     {
       title: `The Right Team`,
-      paragraph: `Explore flexible project management options customized for your needs, ranging from solo engineers to collaborative multi-team efforts.`,
+      paragraph: `Explore flexible project management options customized for your needs, ranging from solo engineers to collaborative multi - team efforts.`,
       listIcon: '/images/for-enterprise/check-icon.svg',
       iconHeight: 40,
       iconWidth: 40,
@@ -135,8 +137,7 @@ export const OUTSTAFFING_TRUST_DATA = {
 };
 
 export const OUTSOURCING_ADVANTAGES_DATA = {
-  title:
-    'eSpark Talents Outsourcing Advantages for Business Success of Enterprises',
+  title: `eSpark Talent's Outsourcing Advantages for Business Success of Enterprises`,
   paragraph: `Experience a boost in enterprise success with eSpark Talent's open invitation to global talent access and streamlined operations.`,
   image: '/images/for-enterprise/outsourcing-advantages.svg',
   alt: 'Outsourcing advantages with eSpark Talent',

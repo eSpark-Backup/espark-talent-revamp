@@ -121,18 +121,6 @@ const CareerCards = ({ data, categories }) => {
                 >
                   {`${item?.location}`}
                 </Typography>
-                <Typography
-                  variant="body1"
-                  fontSize={{
-                    xs: '12px',
-                    sm: '12px',
-                    md: '15px',
-                    lg: '20px',
-                  }}
-                  color="#000"
-                >
-                  {`${item?.lastDateToApply}`}
-                </Typography>
               </Grid>
               <Grid
                 item
