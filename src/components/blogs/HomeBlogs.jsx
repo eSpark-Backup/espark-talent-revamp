@@ -25,7 +25,7 @@ const HomeBlogs = () => {
           <ESparkButton
             title={`View all blogs`}
             link={`/blogs`}
-            color={'secondary'}
+            color={'primary'}
             size={'170px'}
           />
         </Box>

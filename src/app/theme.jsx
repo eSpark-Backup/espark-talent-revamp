@@ -75,7 +75,7 @@ const theme = createTheme({
       fontSize: '20px',
     },
     button: {
-      textTransform: 'normal',
+      textTransform: 'capitalize',
     },
     link: {
       textDecoration: 'none',
@@ -98,6 +98,7 @@ const theme = createTheme({
         {
           props: { variant: 'primary' },
           style: {
+            textTransform: 'capitalize',
             backgroundColor: '#029894',
             color: '#fff',
             borderRadius: '5px',
@@ -111,6 +112,7 @@ const theme = createTheme({
         {
           props: { variant: 'secondary' },
           style: {
+            textTransform: 'capitalize',
             backgroundColor: '#001C63 ',
             borderRadius: '5px',
             color: '#fff',

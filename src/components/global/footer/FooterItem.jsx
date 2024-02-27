@@ -13,8 +13,8 @@ const FooterItem = ({ href, label }) => {
       sx={{
         color: isBlackLabel ? '#000' : '#001C63',
         fontSize: {
-          xs: '11px',
-          sm: '12px',
+          xs: '10px',
+          sm: '10px',
           md: '13px',
           lg: '15px',
         },

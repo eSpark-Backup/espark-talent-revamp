@@ -27,7 +27,6 @@ const ESparkButton = ({ title, link, color, onClick, size, hover, target }) => {
           px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
           '&:hover': {
             backgroundColor: hover && hover ? hover : '#029894',
-            color: hover ? '#001C63' : '#fff',
           },
         }}
       >

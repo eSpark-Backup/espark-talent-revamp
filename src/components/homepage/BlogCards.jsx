@@ -86,7 +86,7 @@ const BlogCards = ({ data }) => {
                           xs: '18px',
                           sm: '18px',
                           md: '20px',
-                          lg: '23.49px',
+                          lg: '24px',
                         },
                         fontWeight: 600,
                         lineHeight: '26px',
@@ -101,7 +101,8 @@ const BlogCards = ({ data }) => {
                       fontSize: {
                         xs: '13px',
                         sm: '13px',
-                        md: '14.46px',
+                        md: '15px',
+                        lg: '18px',
                       },
                       fontWeight: 400,
                       lineHeight: '27.465px',

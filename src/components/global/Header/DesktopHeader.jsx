@@ -11,7 +11,6 @@ import {
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentButton from './HireTalentButton';
-import Link from 'next/link';
 
 const DesktopHeader = ({
   submenuAnchor,
@@ -76,63 +75,61 @@ const DesktopHeader = ({
             >
               {SUBMENU_ITEMS[page]?.map((submenuItem, subIndex) => (
                 <Box key={subIndex}>
-                  <Link href={submenuItem.link}>
-                    <MenuItem
-                      onClick={() =>
-                        handleSubmenuItemClickedAndClose(submenuItem, page)
-                      }
+                  <MenuItem
+                    onClick={() =>
+                      handleSubmenuItemClickedAndClose(submenuItem, page)
+                    }
+                    sx={{
+                      width: '341px',
+                      height: '105px',
+                      padding: 2,
+                    }}
+                  >
+                    <Box
                       sx={{
-                        width: '341px',
-                        height: '105px',
-                        padding: 2,
+                        display: 'flex',
+                        alignItems: 'center',
+                        paddingRight: 19,
                       }}
                     >
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          paddingRight: 19,
-                        }}
-                      >
-                        <Image
-                          quality="85"
-                          priority={true}
-                          src={submenuItem.icon}
-                          width={30}
-                          height={30}
-                          alt="icon"
-                          style={{ marginRight: '10px' }}
-                        />
-                        <Box sx={{ mx: 2 }}>
-                          <Typography
-                            variant="subtitle1"
-                            sx={{
-                              color: '#222',
-                              fontSize: '17.566px',
-                              fontWeight: 600,
-                              lineHeight: '17px',
-                              mb: 1,
-                            }}
-                          >
-                            {submenuItem?.label}
-                          </Typography>
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              color: '#000',
-                              fontSize: '12px',
-                              fontWeight: 400,
-                              lineHeight: '16px',
-                              width: '240px',
-                              whiteSpace: 'normal',
-                            }}
-                          >
-                            {submenuItem.description}
-                          </Typography>
-                        </Box>
+                      <Image
+                        quality="85"
+                        priority={true}
+                        src={submenuItem.icon}
+                        width={30}
+                        height={30}
+                        alt="icon"
+                        style={{ marginRight: '10px' }}
+                      />
+                      <Box sx={{ mx: 2 }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            color: '#222',
+                            fontSize: '17.566px',
+                            fontWeight: 600,
+                            lineHeight: '17px',
+                            mb: 1,
+                          }}
+                        >
+                          {submenuItem?.label}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: '#000',
+                            fontSize: '12px',
+                            fontWeight: 400,
+                            lineHeight: '16px',
+                            width: '240px',
+                            whiteSpace: 'normal',
+                          }}
+                        >
+                          {submenuItem.description}
+                        </Typography>
                       </Box>
-                    </MenuItem>
-                  </Link>
+                    </Box>
+                  </MenuItem>
                   {subIndex < SUBMENU_ITEMS[page].length - 1 && (
                     <Divider sx={{ mx: '20%' }} />
                   )}
