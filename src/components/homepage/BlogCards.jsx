@@ -40,6 +40,7 @@ const BlogCards = ({ data }) => {
                 className="single-blog-post"
                 sx={{
                   px: { sm: '10%', xs: '10%', lg: '0%', md: '0%' },
+                  pb: '30px',
                 }}
               >
                 <Link href={`/blogs/${item?.slug}`}>
@@ -50,7 +51,7 @@ const BlogCards = ({ data }) => {
                           quality="85"
                           priority={true}
                           src={item?.featureImage}
-                          alt={`${item?.title} - eSpark Talent`}
+                          alt={`${item?.title}`}
                           width={900}
                           height={100}
                           style={{ borderRadius: '15px' }}
@@ -69,7 +70,7 @@ const BlogCards = ({ data }) => {
                           year: 'numeric',
                           month: 'short',
                           day: '2-digit',
-                        }).format(new Date('2023-09-27T00:36:00.000Z'))
+                        }).format(new Date(item?.publishedAt))
                       ) : (
                         <Skeleton width={80} />
                       )}
@@ -85,7 +86,7 @@ const BlogCards = ({ data }) => {
                           xs: '18px',
                           sm: '18px',
                           md: '20px',
-                          lg: '24px',
+                          lg: '23.49px',
                         },
                         fontWeight: 600,
                         lineHeight: '26px',
@@ -100,8 +101,7 @@ const BlogCards = ({ data }) => {
                       fontSize: {
                         xs: '13px',
                         sm: '13px',
-                        md: '15px',
-                        lg: '18px',
+                        md: '14.46px',
                       },
                       fontWeight: 400,
                       lineHeight: '27.465px',

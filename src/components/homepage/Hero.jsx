@@ -1,5 +1,12 @@
 'use client';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -7,6 +14,7 @@ import React from 'react';
 
 const Hero = ({ data }) => {
   const pathName = usePathname();
+  const isSmallScreen = useMediaQuery('(max-width:425px)');
   return (
     <>
       <Box
@@ -81,6 +89,9 @@ const Hero = ({ data }) => {
               )}
               {data?.description && (
                 <Typography
+                  sx={{
+                    pr: pathName === '/' ? { lg: '80px' } : 'undefined',
+                  }}
                   color={data?.descColor}
                   lineHeight={1.65}
                   fontWeight={500}
@@ -172,8 +183,8 @@ const Hero = ({ data }) => {
                   quality="85"
                   priority={true}
                   src={data?.image}
-                  alt={`${data?.imageAlt} - eSpark Talent`}
-                  width={data?.imageWidth || 450}
+                  width={isSmallScreen ? 220 : data?.imageWidth || 450}
+                  alt={`${data?.imageAlt}`}
                   height={data?.imageHeight || 450}
                 />
               </Grid>

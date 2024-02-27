@@ -15,7 +15,7 @@ export const CLIENT_SLIDER_BREAK_POINTS = {
     slidesPerView: 4,
   },
   1024: {
-    slidesPerView: 6,
+    slidesPerView: 5,
   },
   1440: {
     slidesPerView: 7,
@@ -384,7 +384,7 @@ export const CLIENTS_SLIDER_DATA = {
 };
 
 export const BENEFITS_WORKS_DATA = {
-  title: 'Here Is How Our Offshore Outsourcing Works',
+  title: 'Here Is How Our Offshore Outsourcing Works.',
   paragraph: `We adhere to professional hiring practices and take care of all legal entities and documentation throughout every outsourcing collaboration.`,
   items: [
     {
@@ -405,7 +405,7 @@ export const BENEFITS_WORKS_DATA = {
     {
       icon: '/images/homepage/outsource-benefits/icon4.svg',
       title: `Step 4`,
-      paragraph: `Align with local laws to protect against legal risks and challenges proactively`,
+      paragraph: `Align with local laws to protect against legal risks and challenges proactively.`,
     },
   ],
 };

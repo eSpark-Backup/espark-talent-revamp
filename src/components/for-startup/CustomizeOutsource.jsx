@@ -7,10 +7,10 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const CustomizeOutsource = ({ data }) => {
   const { listItem } = data;
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, pt: { sm: '25px', md: '40', lg: '45px' } }}>
       <Container>
         <Grid container display={'flex'} alignItems={'center'}>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6.4}>
             <Box>
               <Box>
                 <Typography
@@ -62,7 +62,7 @@ const CustomizeOutsource = ({ data }) => {
               </Grid>
             ))}
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={5.6}>
             <Box
               sx={{
                 borderRadius: '17.311px',
@@ -70,7 +70,7 @@ const CustomizeOutsource = ({ data }) => {
                 mt: { xs: 1, md: 2 },
                 pt: 1,
                 py: 3,
-                display: 'flex',
+                display: { xs: 'none', sm: 'flex' },
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
@@ -81,7 +81,7 @@ const CustomizeOutsource = ({ data }) => {
                 src={data?.image}
                 width={380}
                 height={300}
-                alt={`${data?.alt} -eSpark Talent`}
+                alt={`${data?.alt}`}
               />
             </Box>
           </Grid>

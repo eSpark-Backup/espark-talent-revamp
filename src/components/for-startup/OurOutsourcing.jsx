@@ -7,7 +7,7 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ mb: { xs: '26px', md: '88px' } }}>
+    <Box sx={{ mb: { xs: '26px', md: '40px' } }}>
       <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>
         <Typography
           variant="h2"
@@ -42,7 +42,7 @@ const OurOutsourcing = ({ data }) => {
       </Box>
       <Container>
         <Grid container>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} lg={6.4}>
             <Box>
               <Typography
                 variant="h3"
@@ -97,7 +97,7 @@ const OurOutsourcing = ({ data }) => {
                       color: '#001C63',
                       fontSize: { xs: '11px', md: '14px' },
                       lineHeight: { xs: '13.729px', md: '23.741px' },
-                      textAlign: 'justify',
+                      textAlign: 'left',
                       fontWeight: 600,
                     }}
                   >
@@ -112,6 +112,7 @@ const OurOutsourcing = ({ data }) => {
             xs={12}
             sm={12}
             md={6}
+            lg={5.6}
             sx={{
               display: { md: 'flex', lg: 'block' },
               justifyContent: { md: 'center' },
@@ -133,7 +134,7 @@ const OurOutsourcing = ({ data }) => {
                 src={data?.image}
                 width={380}
                 height={300}
-                alt={`${data?.alt} -eSpark Talent`}
+                alt={`${data?.alt}`}
               />
             </Box>
           </Grid>

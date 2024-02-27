@@ -2,8 +2,8 @@
 import React from 'react';
 
 import Image from 'next/image';
-import { Box, Typography, Grid, Container } from '@mui/material';
-import ESparkButton from '../global/eSparkButton';
+import { Box, Typography, Grid, Container, Button } from '@mui/material';
+import Link from 'next/link';
 
 const OutStaffings = ({ data }) => {
   return (
@@ -32,7 +32,7 @@ const OutStaffings = ({ data }) => {
                 },
               }}
             >
-              {`Trust eSpark Talent's Outstaffing Services`}
+              {data?.heading}
             </Typography>
             <Typography
               color={'secondary'}
@@ -42,7 +42,7 @@ const OutStaffings = ({ data }) => {
                 fontWeight: 400,
               }}
             >
-              {`Partnering With Us Is Remarkable.`}
+              {data?.description}
             </Typography>
           </Box>
           <Grid
@@ -108,16 +108,30 @@ const OutStaffings = ({ data }) => {
             xs={12}
             sx={{
               pt: '40px',
+              pb: { xs: '20px', md: '0', lg: '0' },
               textAlign: 'center',
             }}
           >
-            <ESparkButton
-              title={data?.buttonText}
-              link={data?.buttonLink}
-              target={'_blank'}
-              color={'secondary'}
-              size={'170px'}
-            />
+            <Link href={data?.buttonLink} target="_blank">
+              <Button
+                sx={{
+                  backgroundColor: '#001C63',
+                  '&:hover': {
+                    color: '#001C63',
+                    backgroundColor: '#fff',
+                  },
+
+                  py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                  px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
+                  height: '50px',
+                  width: '160px',
+                  color: '#fff',
+                  fontWeight: '700',
+                }}
+              >
+                {data?.buttonText}
+              </Button>
+            </Link>
           </Box>
         </Container>
       </Box>
