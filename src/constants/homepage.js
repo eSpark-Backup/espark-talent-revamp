@@ -384,7 +384,7 @@ export const CLIENTS_SLIDER_DATA = {
 };
 
 export const BENEFITS_WORKS_DATA = {
-  title: 'Here Is How Our Offshore Outsourcing Works',
+  title: 'Here Is How Our Offshore Outsourcing Works.',
   paragraph: `We adhere to professional hiring practices and take care of all legal entities and documentation throughout every outsourcing collaboration.`,
   items: [
     {

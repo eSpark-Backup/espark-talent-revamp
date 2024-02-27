@@ -37,7 +37,7 @@ const DemoCta = ({ data, link, target }) => {
             sx={{
               fontSize: { xs: '20px', sm: '25px', md: '28px', lg: '35px' },
               fontWeight: 700,
-              lineHeight: 1.4,
+              lineHeight: { xs: '44px', sm: '64px' },
               textAlign: 'center',
               pb: '20px',
             }}
