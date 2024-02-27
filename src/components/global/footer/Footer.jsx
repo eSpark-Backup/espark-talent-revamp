@@ -9,6 +9,7 @@ import FooterTitle from './FooterTitle';
 import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
+import FooterItem2 from './FooterItem2';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -57,7 +58,7 @@ const Footer = ({ data }) => {
                       mx: { xs: 0, md: '7px' },
                       ml: { xs: -0.5, lg: '7px' },
                       mb: {
-                        xs: '40px',
+                        xs: '10px',
                         lg: '0px',
                       },
                     }}
@@ -84,7 +85,7 @@ const Footer = ({ data }) => {
                   xs={12}
                   sx={{
                     mb: {
-                      xs: '40px',
+                      xs: '10px',
                       lg: '0px',
                     },
                   }}
@@ -116,7 +117,7 @@ const Footer = ({ data }) => {
                   xs={12}
                   sx={{
                     mb: {
-                      xs: '40px',
+                      xs: '10px',
                       lg: '0px',
                     },
                   }}
@@ -144,28 +145,28 @@ const Footer = ({ data }) => {
                   <FooterTitle title={data?.contactUsTitle} />
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      {data?.contactUsSales?.map((item, index) => (
-                        <Box
-                          key={index}
-                          sx={{
-                            pr: { sm: '35%' },
-                          }}
-                        >
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
+                      <Box
+                        sx={{
+                          pr: { sm: '35%' },
+                        }}
+                      >
+                        <FooterItem2
+                          href={data?.contactUsSales?.link}
+                          label={data?.contactUsSales?.label}
+                        />
+                      </Box>
                     </Grid>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      {data?.contactUsInfo?.map((item, index) => (
-                        <Box
-                          key={index}
-                          sx={{
-                            pr: { md: '25%' },
-                          }}
-                        >
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
+                      <Box
+                        sx={{
+                          pr: { sm: '35%' },
+                        }}
+                      >
+                        <FooterItem2
+                          href={data?.contactUsInfo?.link}
+                          label={data?.contactUsInfo?.label}
+                        />
+                      </Box>
                     </Grid>
                   </Grid>
                 </Grid>
