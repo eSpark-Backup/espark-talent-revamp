@@ -14,7 +14,7 @@ const Perks = ({ data }) => {
     theme.breakpoints.between('sm', 'md')
   );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
+  const isExtraSmallScreen = useMediaQuery('(max-width:310px)');
   const handleCardClick = (index) => {
     setSelectedCard(index === selectedCard ? index : index);
   };
@@ -51,7 +51,7 @@ const Perks = ({ data }) => {
                 }}
               >
                 <Box
-                  sx={{ mx: { lg: '20px', md: '20px' }, py: { sm: '20px' } }}
+                  sx={{ mx: { lg: '13.1px', md: '20px' }, py: { sm: '20px' } }}
                 >
                   {data?.map((perk, index) => (
                     <Box
@@ -62,7 +62,7 @@ const Perks = ({ data }) => {
                         gap: '10px',
                         borderRadius: '20px',
                         mb: '20px',
-                        py: '20px',
+                        py: '35.929px',
                         px: { xs: '20px', md: '20px' },
                         background:
                           index === selectedCard
@@ -81,7 +81,7 @@ const Perks = ({ data }) => {
                           index === selectedCard ? perk?.activeIcon : perk?.icon
                         }
                         sx={{
-                          width: { sm: 24, lg: 38 },
+                          width: { xs: isExtraSmallScreen ? 18 : 24, lg: 38 },
                           height: { sm: 24, lg: 38 },
                         }}
                         alt={perk.title}
@@ -91,7 +91,8 @@ const Perks = ({ data }) => {
                         color={index === selectedCard ? '#FFFFFF' : '#001C63'}
                         sx={{
                           flexWrap: 'wrap',
-                          pl: '10px',
+                          pl: isExtraSmallScreen ? '3px' : '10px',
+
                           fontWeight: 500,
                           fontSize: {
                             lg: '20px',
@@ -104,7 +105,7 @@ const Perks = ({ data }) => {
                         {perk?.title}
                       </Typography>
                       <Typography
-                        fontSize={'30px'}
+                        fontSize={isExtraSmallScreen ? '20px' : '30px'}
                         color={'rgba(224, 221, 221, 0.68)'}
                       >
                         {perk?.sno}
@@ -114,6 +115,7 @@ const Perks = ({ data }) => {
                         src={perk?.hoverIcons}
                         sx={{
                           width: {
+                            xs: 16,
                             sm: 18,
                             lg: 24,
                           },
@@ -148,6 +150,7 @@ const Perks = ({ data }) => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: ' space-between',
+                    px: { lg: '10px' },
                   }}
                 >
                   <Typography
@@ -181,6 +184,7 @@ const Perks = ({ data }) => {
                       },
                       mb: { xs: '10px', md: '30px' },
                       pr: { xs: '2px', md: '15px', lg: '0px' },
+                      textAlign: 'justify',
                     }}
                   >
                     {data[selectedCard]?.content?.paragraph}
@@ -258,6 +262,7 @@ const Perks = ({ data }) => {
                         <ESparkButton
                           title={data[selectedCard]?.content?.buttonText}
                           link={data[selectedCard]?.content?.buttonLink}
+                          hover={'#fff'}
                           target="_blank"
                           color={'secondary'}
                         />

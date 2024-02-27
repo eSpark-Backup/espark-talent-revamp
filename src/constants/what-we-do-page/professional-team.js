@@ -3,6 +3,8 @@ export const TEAM_CARD_DATA = {
     'Our Team With Years of Professional Assistance is Waiting for You to Connect!',
   arrowIcon: '/images/whatwedo/why-choose-our-hr/arrow.svg',
   arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
+  disabledArrowIconRight: '/images/whatwedo/why-choose-our-hr/disableNext.png',
+  disabledArrowIconLeft: '/images/whatwedo/why-choose-our-hr/disablePrev.png',
   arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
   arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
   alt: 'arrow',
