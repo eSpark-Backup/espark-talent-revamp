@@ -405,7 +405,7 @@ export const BENEFITS_WORKS_DATA = {
     {
       icon: '/images/homepage/outsource-benefits/icon4.svg',
       title: `Step 4`,
-      paragraph: `Align with local laws to protect against legal risks and challenges proactively`,
+      paragraph: `Align with local laws to protect against legal risks and challenges proactively.`,
     },
   ],
 };
