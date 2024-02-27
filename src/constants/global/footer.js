@@ -75,8 +75,7 @@ export const FOOTER_DATA = {
       link: '/partnership-program',
     },
   ],
-  contactUsSales:
-  {
+  contactUsSales: {
     label: 'Have questions about <span>our features</span>?',
     link: 'sales@esparktalent.com',
   },

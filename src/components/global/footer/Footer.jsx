@@ -144,23 +144,28 @@ const Footer = ({ data }) => {
                   <FooterTitle title={data?.contactUsTitle} />
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                     <Box
-                          sx={{
-                            pr: { sm: '35%' },
-                          }}
-                        >
-                         
-                          <FooterItem2 href={data?.contactUsSales?.link} label={data?.contactUsSales?.label} />
-                        </Box>
+                      <Box
+                        sx={{
+                          pr: { sm: '35%' },
+                        }}
+                      >
+                        <FooterItem2
+                          href={data?.contactUsSales?.link}
+                          label={data?.contactUsSales?.label}
+                        />
+                      </Box>
                     </Grid>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                     <Box
-                          sx={{
-                            pr: { sm: '35%' },
-                          }}
-                        >
-                          <FooterItem2 href={data?.contactUsInfo?.link} label={data?.contactUsInfo?.label} />
-                        </Box>
+                      <Box
+                        sx={{
+                          pr: { sm: '35%' },
+                        }}
+                      >
+                        <FooterItem2
+                          href={data?.contactUsInfo?.link}
+                          label={data?.contactUsInfo?.label}
+                        />
+                      </Box>
                     </Grid>
                   </Grid>
                 </Grid>
