@@ -105,12 +105,12 @@ const ClientSlider = ({
                       height: '25px',
                     },
                     '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '160px',
-                      height: '20px',
+                      width: '180px',
+                      height: '25px',
                     },
                     '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '160px',
-                      height: '18px',
+                      width: '180px',
+                      height: '25px',
                     },
                   }}
                 />
