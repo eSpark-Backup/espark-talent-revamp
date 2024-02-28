@@ -96,8 +96,8 @@ export const PERKS_DATA = [
   {
     sno: '01',
     title: 'Hire Salary Based Employees',
-    icon: '/images/homepage/our-perks/icon1.png',
-    activeIcon: '/images/homepage/our-perks/wIcon1.png',
+    icon: '/images/homepage/our-perks/icon1.svg',
+    activeIcon: '/images/homepage/our-perks/icon1a.svg',
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
     listIcon: '/images/homepage/our-perks/list-icon.svg',
     content: {
@@ -117,8 +117,8 @@ export const PERKS_DATA = [
   {
     sno: '02',
     title: 'Hire Hourly Based Employees',
-    icon: '/images/homepage/our-perks/icon2.png',
-    activeIcon: '/images/homepage/our-perks/wIcon2.png',
+    icon: '/images/homepage/our-perks/icon2.svg',
+    activeIcon: '/images/homepage/our-perks/icon2a.svg',
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
     content: {
       heading: 'Hire Hourly Employees',
@@ -137,8 +137,8 @@ export const PERKS_DATA = [
   {
     sno: '03',
     title: 'Hire Our Dedicated Team ',
-    icon: '/images/homepage/our-perks/icon3.png',
-    activeIcon: '/images/homepage/our-perks/wIcon3.png',
+    icon: '/images/homepage/our-perks/icon3.svg',
+    activeIcon: '/images/homepage/our-perks/icon3a.svg',
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
     content: {
       heading: 'Hire Our Dedicated Team',
