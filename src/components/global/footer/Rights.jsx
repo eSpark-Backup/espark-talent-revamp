@@ -102,7 +102,7 @@ const Rights = ({ copyRights, data }) => {
             }}
           >
             {data?.map((item, index) => (
-              <Link key={index} href={item?.link} target="blank">
+              <Link key={index} href={item?.link} target="_blank">
                 <Image
                   quality="85"
                   priority={true}
