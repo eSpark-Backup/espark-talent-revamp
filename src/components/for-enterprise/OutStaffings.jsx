@@ -117,8 +117,8 @@ const OutStaffings = ({ data }) => {
                 sx={{
                   backgroundColor: '#001C63',
                   '&:hover': {
-                    color: '#001C63',
-                    backgroundColor: '#fff',
+                    color: '#fff',
+                    backgroundColor: '#029894',
                   },
 
                   py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
