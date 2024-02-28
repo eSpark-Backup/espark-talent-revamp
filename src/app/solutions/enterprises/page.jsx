@@ -83,9 +83,10 @@ const Page = () => {
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
-        title={
+        compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
         fontSize={{
           xs: '19px !important',
           sm: '20px !important',
