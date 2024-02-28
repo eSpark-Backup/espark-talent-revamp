@@ -30,7 +30,7 @@ const Faq = ({ data }) => {
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
-    <Box sx={{ py: '1%' }} id="faq">
+    <Box sx={{ pt: '1%',pb: '5%' }} id="faq">
       <Container>
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 4, md: 3, sm: 0, xs: 0 }}>
@@ -153,6 +153,7 @@ const Faq = ({ data }) => {
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
+                    <>
                     <Typography
                       sx={{
                         color: '#09114A  !important',
@@ -168,6 +169,7 @@ const Faq = ({ data }) => {
                     >
                       {item?.heading}
                     </Typography>
+                    </>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
