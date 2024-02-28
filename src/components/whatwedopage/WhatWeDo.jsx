@@ -31,9 +31,10 @@ const WhatWeDo = () => {
         txtColor={'#001C63'}
         fontWeight={500}
         fontSize={'24px !important'}
-        title={
+        compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
       />
       <WhyChooseOurHr data={WHY_CHOOSE_OUR_HR_DATA} />
       <QuestionAnswer data={QUESTION_ANSWER} />

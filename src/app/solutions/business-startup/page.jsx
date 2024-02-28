@@ -84,9 +84,10 @@ const Page = () => {
         txtColor={'#001C63'}
         fontSize={'24px !important'}
         fontWeight={500}
-        title={
+        compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
       />
       <OurOutsourcing data={OUR_OUTSOURCE} />
       <TalentIgnite data={BUSINESS_START_UP} />
