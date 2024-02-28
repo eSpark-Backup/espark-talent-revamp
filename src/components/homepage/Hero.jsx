@@ -143,11 +143,11 @@ const Hero = ({ data }) => {
                           color:
                             pathName == '/solutions/enterprises'
                               ? '#fff'
-                              : '#001C63',
+                              : '#fff',
                           backgroundColor: `${
                             pathName == '/solutions/enterprises'
                               ? '#001C63'
-                              : '#fff'
+                              : '#029894'
                           }`,
                         },
 
