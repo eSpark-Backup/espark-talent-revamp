@@ -50,7 +50,7 @@ const FooterCTA = ({ data }) => {
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    py: { lg: '1%', md: '1%',  },
+                    py: { lg: '1%', md: '1%' },
                   }}
                 >
                   <Box py={pathName == '/thankyou' ? '10%' : null}>
