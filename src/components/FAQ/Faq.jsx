@@ -8,11 +8,8 @@ import {
   Container,
   AccordionDetails,
   AccordionSummary,
-  useMediaQuery,
 } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ParagraphTitle from '../homepage/ParagraphTitle';
-import Image from 'next/image';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
@@ -33,14 +30,6 @@ const Faq = ({ data }) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
-
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
     <Box sx={{ pt: '1%', pb: '5%' }} id="faq">
@@ -73,7 +62,6 @@ const Faq = ({ data }) => {
                           xs: '15px',
                         },
                         pr: '5%',
-                        fontWeight: { lg: 400, md: 400, sm: 700, xs: 700 },
                         fontWeight: expanded === panel ? 600 : 400,
                       }}
                     >

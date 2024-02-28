@@ -24,7 +24,6 @@ import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/ BusinessVenture';
 
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import EnterpriseFaq from '@/components/FAQ/EnterpriseFaq';
 import Faq from '@/components/FAQ/Faq';
 
 const pathname = '/solutions/business-startup';
