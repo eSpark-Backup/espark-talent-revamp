@@ -84,8 +84,6 @@ const Perks = ({ data }) => {
                       >
                         {index === selectedCard ? (
                           <Image
-                            quality="85"
-                            priority={true}
                             src={perk?.activeIcon}
                             alt={perk.title}
                             height={38}
@@ -93,8 +91,6 @@ const Perks = ({ data }) => {
                           />
                         ) : (
                           <Image
-                            quality="85"
-                            priority={true}
                             src={perk?.icon}
                             alt={perk.title}
                             height={38}
