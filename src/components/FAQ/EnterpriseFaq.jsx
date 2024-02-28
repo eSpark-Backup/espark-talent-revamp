@@ -13,6 +13,7 @@ import {
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 import Image from 'next/image';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const EnterpriseFaq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
@@ -46,7 +47,7 @@ const EnterpriseFaq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <Image
+                      <img
                         quality="85"
                         priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
@@ -73,7 +74,8 @@ const EnterpriseFaq = ({ data }) => {
                     }
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
-                  >
+                  ><>
+                    
                     <Typography
                       variant="h4"
                       sx={{
@@ -85,6 +87,7 @@ const EnterpriseFaq = ({ data }) => {
                     >
                       {item?.heading}
                     </Typography>
+                    </>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
@@ -143,7 +146,8 @@ const EnterpriseFaq = ({ data }) => {
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
-                    <Typography
+                    <>
+                     <Typography
                       sx={{
                         color: '#09114A  !important',
                         fontSize: '14px',
@@ -153,6 +157,7 @@ const EnterpriseFaq = ({ data }) => {
                     >
                       {item?.heading}
                     </Typography>
+                    </>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
