@@ -12,7 +12,7 @@ eSpark Talent is a renowned hiring firm that utilizes the offered expertise by p
       title: `Collection of Information`,
       paragraph: `<p>Users visiting the website are welcome to explore the services. Hence, we gather the required information regarding the joining through IP addresses, browsing history, or operating systems.
             <br>
-Furthermore, we promote the offered services of the human resource firm. Therefore, assembling the relevant legal data goes well with our process of data collection. individuals who aim to get hired by companies are required to offer information that is used to find the match for the earned skills. On the other hand, we collect the data of the employer companies to provide authentic information to outsourced professionals. Your shared information is gathered through online logins on the website, collaboration meetings, and the application sign-in process.</p>`,
+Furthermore, we promote the offered services of the human resource firm. Therefore, assembling the relevant legal data goes well with our process of data collection. Individuals who aim to get hired by companies are required to offer information that is used to find the match for the earned skills. On the other hand, we collect the data of the employer companies to provide authentic information to outsourced professionals. Your shared information is gathered through online logins on the website, collaboration meetings, and the application sign-in process.</p>`,
     },
     {
       title: `Data Usage`,
