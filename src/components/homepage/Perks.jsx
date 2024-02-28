@@ -83,20 +83,22 @@ const Perks = ({ data }) => {
                         }}
                       >
                         {index === selectedCard ? (
-                          <img
+                          <Image
+                            quality="85"
+                            priority={true}
                             src={perk?.activeIcon}
                             alt={perk.title}
                             height={38}
                             width={38}
-                            style={{ quality: 85 }}
                           />
                         ) : (
-                          <img
+                          <Image
+                            quality="85"
+                            priority={true}
                             src={perk?.icon}
                             alt={perk.title}
                             height={38}
                             width={38}
-                            style={{ quality: 85 }}
                           />
                         )}
                       </Box>

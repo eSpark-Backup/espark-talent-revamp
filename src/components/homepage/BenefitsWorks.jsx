@@ -60,6 +60,9 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width: 300px) and (max-width:424px)': {
                   px: '25px',
                 },
+                '@media (min-width: 426px) and (max-width:440px)': {
+                  pr: '45px',
+                },
                 '@media (min-width:768px) and (max-width: 790px)': {
                   pr: '70px',
                 },
@@ -80,6 +83,23 @@ const BenefitsWorks = ({ data }) => {
             gap={{ md: '13%', lg: '5.3%', sm: '1%' }}
             justifyContent="center"
             position={'relative'}
+            sx={{
+              '@media (min-width:278px) and (max-width: 300px)': {
+                ml: '-35px !important',
+              },
+              '@media (min-width:301px) and (max-width: 340px)': {
+                ml: '-34px !important',
+              },
+              '@media (min-width:341px) and (max-width: 424px)': {
+                ml: '-34px !important',
+              },
+              '@media (min-width:426px) and (max-width: 600px)': {
+                ml: '-45px !important',
+              },
+              '@media (min-width:601px) and (max-width: 768px)': {
+                ml: '-46px !important',
+              },
+            }}
           >
             <Box
               sx={{
