@@ -24,7 +24,6 @@ import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import EnterpriseFaq from '@/components/FAQ/EnterpriseFaq';
 import Faq from '@/components/FAQ/Faq';
 
 const pathname = '/solutions/enterprises';

@@ -13,7 +13,6 @@ import {
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
 import Image from 'next/image';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const EnterpriseFaq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
