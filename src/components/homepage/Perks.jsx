@@ -101,7 +101,7 @@ const Perks = ({ data }) => {
                         sx={{
                           flexWrap: 'wrap',
                           pl: isExtraSmallScreen ? '3px' : '10px',
-
+                          width: { lg: '260px' },
                           fontWeight: 500,
                           fontSize: {
                             lg: '20px',
