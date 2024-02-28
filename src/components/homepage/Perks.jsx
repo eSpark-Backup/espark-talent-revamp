@@ -199,7 +199,7 @@ const Perks = ({ data }) => {
                         lg: '16px',
                       },
                       mb: { xs: '10px', md: '30px' },
-                      pr: { xs: '2px', md: '15px', lg: '0px' },
+                      pr: { xs: '2px', md: '15px', lg: '15%' },
                       textAlign: 'justify',
                     }}
                   >
