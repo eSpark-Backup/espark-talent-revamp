@@ -67,7 +67,12 @@ const QuestionAnswer = ({ data }) => {
                 variant="h2"
                 sx={{
                   color: '#09114A',
-                  textAlign: { xs: 'center', sm: 'center',md: 'center',md: 'left' },
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'center',
+                    md: 'center',
+                    md: 'left',
+                  },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -87,7 +92,12 @@ const QuestionAnswer = ({ data }) => {
                   fontStyle: 'normal',
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
-                  textAlign: { xs: 'center', sm: 'center',md: 'center',md: 'left' },  
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'center',
+                    md: 'center',
+                    md: 'left',
+                  },
                   my: 1.5,
                   ml: { md: '30px', lg: '55px' },
                   px: { xs: '10px', md: '0px' },
