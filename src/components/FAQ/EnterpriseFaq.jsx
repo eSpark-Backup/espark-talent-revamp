@@ -46,7 +46,7 @@ const EnterpriseFaq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <Image
+                      <img
                         quality="85"
                         priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
@@ -74,17 +74,19 @@ const EnterpriseFaq = ({ data }) => {
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
-                    <Typography
-                      variant="h4"
-                      sx={{
-                        color: '#09114A  !important',
-                        fontSize: '14px',
-                        fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                        fontWeight: expanded === panel ? 600 : 400,
-                      }}
-                    >
-                      {item?.heading}
-                    </Typography>
+                    <>
+                      <Typography
+                        variant="h4"
+                        sx={{
+                          color: '#09114A  !important',
+                          fontSize: '14px',
+                          fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
+                          fontWeight: expanded === panel ? 600 : 400,
+                        }}
+                      >
+                        {item?.heading}
+                      </Typography>
+                    </>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
@@ -143,16 +145,18 @@ const EnterpriseFaq = ({ data }) => {
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
-                    <Typography
-                      sx={{
-                        color: '#09114A  !important',
-                        fontSize: '14px',
-                        fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                        fontWeight: expanded === panel ? 600 : 400,
-                      }}
-                    >
-                      {item?.heading}
-                    </Typography>
+                    <>
+                      <Typography
+                        sx={{
+                          color: '#09114A  !important',
+                          fontSize: '14px',
+                          fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
+                          fontWeight: expanded === panel ? 600 : 400,
+                        }}
+                      >
+                        {item?.heading}
+                      </Typography>
+                    </>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography

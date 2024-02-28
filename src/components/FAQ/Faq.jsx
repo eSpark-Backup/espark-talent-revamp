@@ -8,29 +8,31 @@ import {
   Container,
   AccordionDetails,
   AccordionSummary,
-  useMediaQuery,
 } from '@mui/material';
-
 import ParagraphTitle from '../homepage/ParagraphTitle';
-import Image from 'next/image';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
-
+  const bigImage = (
+    <svg
+      width="21"
+      height="12"
+      viewBox="0 0 21 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.10357 11.2241L0.535569 2.65608C0.417389 2.5379 0.329149 2.41027 0.270847 2.27318C0.212545 2.13609 0.182606 1.98798 0.18103 1.82883C0.18103 1.51368 0.289755 1.23793 0.507205 1.00157C0.724655 0.765212 1.00986 0.647034 1.36282 0.647034H19.3261C19.6806 0.647034 19.9666 0.765212 20.1841 1.00157C20.4015 1.23793 20.5095 1.51368 20.5079 1.82883C20.5079 1.90761 20.3897 2.18337 20.1533 2.65608L11.5853 11.2241C11.3884 11.4211 11.1914 11.5589 10.9944 11.6377C10.7975 11.7165 10.5808 11.7559 10.3445 11.7559C10.1081 11.7559 9.89144 11.7165 9.69447 11.6377C9.49751 11.5589 9.30054 11.4211 9.10357 11.2241Z"
+        fill="black"
+      />
+    </svg>
+  );
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
 
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
   return (
-    <Box sx={{ py: '1%' }} id="faq">
+    <Box sx={{ pt: '1%', pb: '5%' }} id="faq">
       <Container>
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 4, md: 3, sm: 0, xs: 0 }}>
@@ -45,46 +47,21 @@ const Faq = ({ data }) => {
                   sx={{ mb: 4 }}
                 >
                   <AccordionSummary
-                    expandIcon={
-                      <Image
-                        quality="85"
-                        priority={true}
-                        src={'/images/homepage/faq-sections/open.svg'}
-                        width={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        height={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        alt="icon"
-                      />
-                    }
+                    expandIcon={<Box pt={'20px'}>{bigImage}</Box>}
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
                     <Typography
                       variant="h4"
                       sx={{
-                        color: '#09114A  !important',
+                        color: '#09114A !important',
                         fontSize: {
                           lg: '24px',
                           md: '20px',
                           sm: '15px',
                           xs: '15px',
                         },
-                        fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
+                        pr: '5%',
                         fontWeight: expanded === panel ? 600 : 400,
                       }}
                     >
@@ -124,36 +101,13 @@ const Faq = ({ data }) => {
                   sx={{ mb: 4 }}
                 >
                   <AccordionSummary
-                    expandIcon={
-                      <Image
-                        quality="85"
-                        priority={true}
-                        src={'/images/homepage/faq-sections/open.svg'}
-                        width={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        height={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 30
-                                : 30
-                        }
-                        alt="icon"
-                      />
-                    }
+                    expandIcon={<Box pt={'20px'}>{bigImage}</Box>}
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
+                    sx={{ alignItems: 'flex-start' }}
                   >
                     <Typography
+                      variant="h4"
                       sx={{
                         color: '#09114A  !important',
                         fontSize: {
@@ -162,6 +116,7 @@ const Faq = ({ data }) => {
                           sm: '15px',
                           xs: '15px',
                         },
+                        pr: '5%',
                         fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
                         fontWeight: expanded === panel ? 600 : 400,
                       }}
