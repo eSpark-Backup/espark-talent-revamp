@@ -129,8 +129,8 @@ const WikiCards = ({ data, categories }) => {
                           quality="85"
                           priority={true}
                           src={item?.iconImage}
-                          height={30}
-                          width={30}
+                          height={40}
+                          width={40}
                           alt={`${item?.title}`}
                         />
                       ) : (
@@ -149,7 +149,6 @@ const WikiCards = ({ data, categories }) => {
                               lg: '18px',
                             }}
                           >
-                            {' '}
                             {item?.title}
                           </Typography>
                         </Link>

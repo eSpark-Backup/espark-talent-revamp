@@ -127,6 +127,7 @@ const Form = ({ formContent }) => {
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
   };
+
   console.log(values.phone_number, 'phone_number');
   return (
     <Box
@@ -263,13 +264,9 @@ const Form = ({ formContent }) => {
                 defaultCountry={'PK'}
                 onChange={handlePhoneChange}
               />
-              {values.phone_number == undefined ||
-              values.phone_number == null ? (
-                <Typography color="#f00" fontSize="13px" fontWeight={500}>
-                  {' '}
-                  {`Phone number is required`}
-                </Typography>
-              ) : null}
+              {touched?.phone_number && errors?.phone_number && (
+                <span className="error-message">{errors?.phone_number}</span>
+              )}
             </Box>
           </Box>
           <Box className="partner-form-Country-partnership">

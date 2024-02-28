@@ -33,7 +33,7 @@ const OutSourcingWonder = ({ data }) => {
     spaceBetween: 20,
     centerMode: true,
     centerPadding: '0',
-    loop: true,
+    loop: false,
     effect: 'fade',
     className: 'hero_slider',
     module: [EffectFade, Navigation, Pagination, Autoplay],
