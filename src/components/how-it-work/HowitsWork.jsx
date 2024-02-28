@@ -32,9 +32,10 @@ const HowitsWork = () => {
         txtColor={'#001C63'}
         fontWeight={500}
         fontSize={'24px !important'}
-        title={
+        compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
       />
       <HRFirmSuccess hrFirm={HR_FIRM_DATA} />
       <OurService ourService={OUR_SERVICE} />
