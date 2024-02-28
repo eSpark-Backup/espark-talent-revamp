@@ -90,7 +90,7 @@ const BenefitsWorks = ({ data }) => {
               '@media (min-width:301px) and (max-width: 340px)': {
                 ml: '-34px !important',
               },
-              '@media (min-width:341px) and (max-width: 424px)': {
+              '@media (min-width:341px) and (max-width: 425px)': {
                 ml: '-34px !important',
               },
               '@media (min-width:426px) and (max-width: 600px)': {
@@ -119,7 +119,7 @@ const BenefitsWorks = ({ data }) => {
                 '@media (min-width:425px) and (max-width: 599px)': {
                   top: 190,
                 },
-                '@media (min-width:300px) and (max-width: 424px)': {
+                '@media (min-width:300px) and (max-width: 425px)': {
                   top: 157,
                 },
                 '@media (min-width:291px) and (max-width: 299px)': {
@@ -195,6 +195,9 @@ const BenefitsWorks = ({ data }) => {
                 },
                 '@media (min-width:425px) and (max-width: 599px)': {
                   top: 530,
+                },
+                '@media (max-width: 425px)': {
+                  top: 510,
                 },
                 '@media (min-width:300px) and (max-width: 424px)': {
                   top: 442,
