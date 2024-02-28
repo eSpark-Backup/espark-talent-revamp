@@ -67,12 +67,17 @@ const QuestionAnswer = ({ data }) => {
                 variant="h2"
                 sx={{
                   color: '#09114A',
-                  textAlign: { xs: 'center', sm: 'left' },
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'center',
+                    md: 'center',
+                    lg: 'left',
+                  },
                   fontSize: { md: '32px', xs: '20px' },
                   fontWeight: 700,
                   fontStyle: 'normal',
                   lineHeight: { md: '48px', xs: '36px' },
-                  ml: { md: '5px', lg: '60px' },
+                  ml: { md: '30px', lg: '50px' },
                   px: { xs: '5px', md: '0px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
                 }}
@@ -87,9 +92,14 @@ const QuestionAnswer = ({ data }) => {
                   fontStyle: 'normal',
                   lineHeight: { md: '30.4px', xs: '18px' },
                   justifyContent: { xs: 'center', sm: 'flex-end' },
-                  textAlign: { xs: 'center', sm: 'right' },
+                  textAlign: {
+                    xs: 'center',
+                    sm: 'center',
+                    md: 'center',
+                    lg: 'left',
+                  },
                   my: 1.5,
-                  ml: { md: '5px', lg: '85px' },
+                  ml: { md: '30px', lg: '55px' },
                   px: { xs: '10px', md: '0px' },
                 }}
               >
@@ -98,7 +108,8 @@ const QuestionAnswer = ({ data }) => {
               <Box
                 sx={{
                   display: 'flex',
-                  justifyContent: { md: 'end', xs: 'center' },
+                  justifyContent: { md: 'start', xs: 'center' },
+                  ml: { md: '30px', lg: '55px' },
                 }}
               >
                 <ESparkButton
