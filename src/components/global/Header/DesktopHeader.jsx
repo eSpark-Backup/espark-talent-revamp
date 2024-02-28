@@ -19,7 +19,7 @@ const DesktopHeader = ({
   handleCloseUserMenu,
   handleSubmenuItemClicked,
 }) => {
-  const handleSubmenuItemClickedAndClose = ( page) => {
+  const handleSubmenuItemClickedAndClose = (page) => {
     handleCloseUserMenu(page);
   };
 
