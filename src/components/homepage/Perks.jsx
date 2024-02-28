@@ -76,23 +76,32 @@ const Perks = ({ data }) => {
                       }}
                     >
                       <Box
-                        component={'img'}
-                        src={
-                          index === selectedCard ? perk?.activeIcon : perk?.icon
-                        }
                         sx={{
-                          width: { xs: isExtraSmallScreen ? 18 : 24, lg: 38 },
-                          height: { sm: 24, lg: 38 },
+                          '@media (max-width: 300px)': {
+                            width: '40px',
+                          },
                         }}
-                        alt={perk.title}
-                      />
+                      >
+                        <Image
+                          quality="85"
+                          priority={true}
+                          src={
+                            index === selectedCard
+                              ? perk?.activeIcon
+                              : perk?.icon
+                          }
+                          alt={perk.title}
+                          height={38}
+                          width={38}
+                        />
+                      </Box>
                       <Typography
                         variant="h3"
                         color={index === selectedCard ? '#FFFFFF' : '#001C63'}
                         sx={{
                           flexWrap: 'wrap',
                           pl: isExtraSmallScreen ? '3px' : '10px',
-
+                          width: { lg: '260px' },
                           fontWeight: 500,
                           fontSize: {
                             lg: '20px',
