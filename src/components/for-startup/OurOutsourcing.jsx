@@ -107,18 +107,12 @@ const OurOutsourcing = ({ data }) => {
               </Grid>
             ))}
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={6}
-            lg={5.6}
-          >
+          <Grid item xs={12} sm={12} md={6} lg={5.6}>
             <Box
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
-                pt: {lg:1},
+                pt: { lg: 1 },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
