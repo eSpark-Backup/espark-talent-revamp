@@ -71,7 +71,7 @@ const Footer = ({ data }) => {
                     }}
                   >
                     {data?.socialMedia?.map((item, index) => (
-                      <Link key={index} href={item?.link} target="blank">
+                      <Link key={index} href={item?.link} target="_blank">
                         <Image
                           quality="85"
                           priority={true}
