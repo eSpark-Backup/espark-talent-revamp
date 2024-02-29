@@ -24,7 +24,7 @@ import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
 
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import EnterpriseFaq from '@/components/FAQ/EnterpriseFaq';
+import Faq from '@/components/FAQ/Faq';
 
 const pathname = '/solutions/enterprises';
 const filteredData =
@@ -83,9 +83,10 @@ const Page = () => {
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
         fontWeight={500}
-        title={
+        compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
         fontSize={{
           xs: '19px !important',
           sm: '20px !important',
@@ -98,7 +99,7 @@ const Page = () => {
       <OutSourcingWonder data={OUTSOURCING_WONDERS_DATA} />
       <OutStaffings data={OUTSTAFFING_TRUST_DATA} />
       <AwardAchievement data={ACHIEVEMENTS_DATA} design={2} />
-      <EnterpriseFaq data={FAQ_DATA_ENTERPRISE} />
+      <Faq data={FAQ_DATA_ENTERPRISE} />
     </>
   );
 };

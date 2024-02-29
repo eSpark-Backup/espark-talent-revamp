@@ -80,7 +80,10 @@ const Page = () => {
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
         bgColor={'#029894'}
         txtColor={'#ffffff'}
-        title={'Meet our partners who trust our certified tech experts'}
+        compeleteTitle={
+          'Meet our partners who trust our certified tech experts'
+        }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
         length={100}
         fontSize={{
           xs: '19px !important',
@@ -88,7 +91,7 @@ const Page = () => {
           md: '22px !important',
           lg: '28px !important',
         }}
-        lineHeight={{ xs: '30px !important', sm: '20px !important' }}
+        lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
       />
       <Process data={PROCESS_DATA} />

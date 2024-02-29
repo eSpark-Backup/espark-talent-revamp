@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography, useMediaQuery } from '@mui/material';
 
 const extendClients = (clients, length) => {
   const extendedClients = Array.from({ length }, (_, index) => ({
@@ -17,7 +17,8 @@ const extendClients = (clients, length) => {
 const ClientSlider = ({
   bgColor,
   txtColor,
-  title,
+  compeleteTitle,
+  shortTitle,
   fontWeight,
   data,
   length = 1000,
@@ -38,24 +39,42 @@ const ClientSlider = ({
       return originalImagePath.replace('_light', '_dark');
     }
   };
+  const isMediumScreen = useMediaQuery('(max-width:769px)');
 
   return (
     <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
       <Container sx={{ pb: pb || '10px' }}>
-        <Typography
-          variant={variant || 'h2'}
-          color={txtColor}
-          sx={{
-            textAlign: 'center',
-            fontWeight: fontWeight,
-            py: '30px',
-            pt: '50px',
-            fontSize: fontSize,
-            lineHeight: lineHeight,
-          }}
-        >
-          {title}
-        </Typography>
+        {isMediumScreen ? (
+          <Typography
+            variant={variant || 'h2'}
+            color={txtColor}
+            sx={{
+              textAlign: 'center',
+              fontWeight: fontWeight,
+              py: { xs: '16px', sm: '18px', md: '30px' },
+              pt: { xs: '17px', sm: '20px', md: '50px' },
+              fontSize: fontSize,
+              lineHeight: lineHeight,
+            }}
+          >
+            {shortTitle}
+          </Typography>
+        ) : (
+          <Typography
+            variant={variant || 'h2'}
+            color={txtColor}
+            sx={{
+              textAlign: 'center',
+              fontWeight: fontWeight,
+              py: { xs: '16px', sm: '18px', md: '30px' },
+              pt: { xs: '17px', sm: '20px', md: '50px' },
+              fontSize: fontSize,
+              lineHeight: lineHeight,
+            }}
+          >
+            {compeleteTitle}
+          </Typography>
+        )}
       </Container>
       <Swiper
         spaceBetween={0}
