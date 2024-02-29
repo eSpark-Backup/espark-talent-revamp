@@ -60,7 +60,19 @@ const AwardAchievement = ({ data, design, background }) => {
           </Box>
         </Container>
       ) : (
-        <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
+        <Box
+          sx={{
+            background: '#F7F8FB',
+            py: '2.5%',
+            pb: { xs: '40px', sm: '70px', md: '60px', lg: '50px' },
+            '@media (min-width: 280px) and (max-width:424px)': {
+              pb: '30px',
+            },
+            '@media (min-width: 425px) and (max-width:480px)': {
+              pb: '55px',
+            },
+          }}
+        >
           <Container>
             <ParagraphTitle title={data?.title} />
             <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
