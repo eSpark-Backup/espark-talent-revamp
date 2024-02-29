@@ -17,7 +17,6 @@ const FooterCTA = ({ data }) => {
   const is600Screen = useMediaQuery('(max-width:600px)');
   const is425Screen = useMediaQuery('(max-width:425px)');
   const is375Screen = useMediaQuery('(max-width:375px)');
-  const is325Screen = useMediaQuery('(max-width:325px)');
 
   return (
     <>
