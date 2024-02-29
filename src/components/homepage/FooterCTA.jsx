@@ -17,6 +17,7 @@ const FooterCTA = ({ data }) => {
   const is600Screen = useMediaQuery('(max-width:600px)');
   const is425Screen = useMediaQuery('(max-width:425px)');
   const is375Screen = useMediaQuery('(max-width:375px)');
+  const is325Screen = useMediaQuery('(max-width:325px)');
 
   return (
     <>
@@ -64,6 +65,14 @@ const FooterCTA = ({ data }) => {
                           sm: '20px',
                           xs: '14px',
                         },
+                        '@media (min-width: 280px) and (max-width:359px)': {
+                          fontSize: '12px',
+                          lineHeight: 1.1,
+                        },
+                        '@media (min-width: 426px) and (max-width:459px)': {
+                          fontSize: '13px',
+                          lineHeight: 1,
+                        },
                         lineHeight: 1.3,
                         fontWeight: 700,
                         py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
@@ -82,6 +91,9 @@ const FooterCTA = ({ data }) => {
                               md: '20px',
                               sm: '10px',
                               xs: '10px',
+                            },
+                            '@media (min-width: 280px) and (max-width:359px)': {
+                              fontSize: '8px',
                             },
                             lineHeight: 1.3,
                             fontWeight: 400,
@@ -171,7 +183,7 @@ const FooterCTA = ({ data }) => {
                         style={{
                           bottom: 0,
                           marginTop: is375Screen
-                            ? `-25px`
+                            ? `-25px `
                             : is425Screen
                               ? `-30px`
                               : `-60px`,
