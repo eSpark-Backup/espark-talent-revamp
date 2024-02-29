@@ -82,18 +82,25 @@ const Perks = ({ data }) => {
                           },
                         }}
                       >
-                        <Image
-                          quality="85"
-                          priority={true}
-                          src={
-                            index === selectedCard
-                              ? perk?.activeIcon
-                              : perk?.icon
-                          }
-                          alt={perk.title}
-                          height={38}
-                          width={38}
-                        />
+                        {index === selectedCard ? (
+                          <Image
+                            quality="85"
+                            priority={true}
+                            src={perk?.activeIcon}
+                            alt={perk.title}
+                            height={38}
+                            width={38}
+                          />
+                        ) : (
+                          <Image
+                            quality="85"
+                            priority={true}
+                            src={perk?.icon}
+                            alt={perk.title}
+                            height={38}
+                            width={38}
+                          />
+                        )}
                       </Box>
                       <Typography
                         variant="h3"
@@ -192,7 +199,7 @@ const Perks = ({ data }) => {
                         lg: '16px',
                       },
                       mb: { xs: '10px', md: '30px' },
-                      pr: { xs: '2px', md: '15px', lg: '0px' },
+                      pr: { xs: '2px', md: '15px', lg: '15%' },
                       textAlign: 'justify',
                     }}
                   >
