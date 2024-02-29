@@ -64,7 +64,7 @@ const AwardAchievement = ({ data, design, background }) => {
           sx={{
             background: '#F7F8FB',
             py: '2.5%',
-            pb: { xs: '40px', sm: '70px', md: '60px', lg: '50px', xs: '0px' },
+            pb: { xs: '40px', sm: '70px', md: '60px', lg: '50px' },
             '@media (min-width: 280px) and (max-width:424px)': {
               pb: '30px',
             },
