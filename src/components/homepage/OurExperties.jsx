@@ -134,7 +134,11 @@ const OurExperties = ({ data, link }) => {
                                 my: 0.2,
                               }}
                             >
-                              <Box>
+                              <Box
+                                sx={{
+                                  minWidth: '20px',
+                                }}
+                              >
                                 <Image
                                   quality="85"
                                   priority={true}

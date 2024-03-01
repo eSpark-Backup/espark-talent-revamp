@@ -78,11 +78,10 @@
 // export default Rights;
 
 import { Box, Typography, useMediaQuery } from '@mui/material';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Rights = ({ copyRights, data }) => {
+const Rights = ({ copyRights }) => {
   const isMediumScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'md')
   );
@@ -93,54 +92,13 @@ const Rights = ({ copyRights, data }) => {
         <Box>
           <Box
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '20px',
-              pt: '20px',
-              pb: '10px',
-            }}
-          >
-            {data?.map((item, index) => (
-              <Link key={index} href={item?.link} target="_blank">
-                <Image
-                  quality="85"
-                  priority={true}
-                  src={item?.img}
-                  width={20}
-                  height={20}
-                  alt={`${item?.alt}`}
-                />
-              </Link>
-            ))}
-          </Box>
-          <Box
-            sx={{
               textAlign: 'center',
               px: { xs: 2, sx: 2, md: 2, lg: 2 },
               pb: { xs: 2, sx: 2, md: 2, lg: 2 },
+              pt: '20px',
               gap: '20px',
             }}
           >
-            <Box>
-              <Typography
-                sx={{
-                  color: '#0E0F1D',
-                  fontSize: {
-                    xs: '12px',
-                    sm: '12px',
-                    md: '13px',
-                    lg: '15px',
-                    xl: '20px',
-                  },
-                  fontStyle: 'normal',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                }}
-              >
-                {copyRights}
-              </Typography>
-            </Box>
             <Box
               sx={{
                 display: 'flex',
@@ -187,6 +145,25 @@ const Rights = ({ copyRights, data }) => {
                   {`Term & Conditions`}
                 </Typography>
               </Link>
+            </Box>
+            <Box>
+              <Typography
+                sx={{
+                  color: '#0E0F1D',
+                  fontSize: {
+                    xs: '12px',
+                    sm: '12px',
+                    md: '13px',
+                    lg: '15px',
+                    xl: '20px',
+                  },
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: 'normal',
+                }}
+              >
+                {copyRights}
+              </Typography>
             </Box>
           </Box>
         </Box>
