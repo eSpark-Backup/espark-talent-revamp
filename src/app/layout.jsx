@@ -13,6 +13,7 @@ import Header from '@/components/global/Header/Header';
 import TawkToWidget from '@/components/global/TawkToWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
+import GoogleTag from '@/components/global/Header/GoogleTag';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,
@@ -86,6 +87,8 @@ export default async function RootLayout({ children }) {
                 taskId={`1gsovfhm7`}
               />
               <GoogleTagManager gtmId="GTM-5JWLG8J2" />
+              <GoogleTagManager gtmId="G-N43EVHZHXM" />
+              <GoogleTag gtmId="G-N43EVHZHXM" />
             </ThemeProvider>
           </AppRouterCacheProvider>
         </SkeletonTheme>
