@@ -1,13 +1,11 @@
-import Script from 'next/script';
-
 const GoogleTag = (gtmId) => {
   return (
     <>
-      <Script
+      <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
       />
-      <Script
+      <script
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];

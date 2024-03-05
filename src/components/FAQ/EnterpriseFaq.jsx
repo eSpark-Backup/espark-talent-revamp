@@ -46,7 +46,7 @@ const EnterpriseFaq = ({ data }) => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <img
+                      <Image
                         quality="85"
                         priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
