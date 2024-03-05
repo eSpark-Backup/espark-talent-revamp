@@ -13,7 +13,7 @@ const GoogleTag = (gtmId) => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'gtmId');
+          gtag('config', '${gtmId}');
         `,
         }}
       />
