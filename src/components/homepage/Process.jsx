@@ -209,6 +209,7 @@ const Process = ({ data }) => {
                 fontSize: { sm: '17px !important' },
                 fontStyle: 'normal',
                 fontWeight: 400,
+                textAlign: 'justify',
                 direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
                 display: 'inline',
