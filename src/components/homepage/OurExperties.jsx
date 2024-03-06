@@ -19,7 +19,7 @@ const OurExperties = ({ data, link }) => {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    pagination: { clickable: false },
+    // pagination: { clickable: false },
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
