@@ -21,7 +21,7 @@ const Header = () => {
   const router = useRouter();
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+    setAnchorElNav(event.currentTarget || null);
   };
 
   const handleCloseNavMenu = () => {
@@ -35,6 +35,8 @@ const Header = () => {
   };
 
   const handleCloseUserMenu = (page) => {
+    console.log(page, 'page');
+    setSelectedMenuItem(null);
     setAnchorElUser(null);
     setSubmenuAnchor((prev) => ({ ...prev, [page]: null }));
   };
@@ -43,6 +45,8 @@ const Header = () => {
   };
 
   const handleOpenUserMenu = (event, page) => {
+    console.log(event.currentTarget, 'event');
+    console.log(page, 'page');
     setAnchorElUser(event.currentTarget);
     setSubmenuAnchor({ ...submenuAnchor, [page]: event.currentTarget });
     setSelectedMenuItem(null);

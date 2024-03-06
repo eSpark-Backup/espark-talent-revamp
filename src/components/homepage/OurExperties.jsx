@@ -19,7 +19,7 @@ const OurExperties = ({ data, link }) => {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    pagination: { clickable: false },
+    // pagination: { clickable: false },
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
       0: {
@@ -134,7 +134,11 @@ const OurExperties = ({ data, link }) => {
                                 my: 0.2,
                               }}
                             >
-                              <Box>
+                              <Box
+                                sx={{
+                                  minWidth: '20px',
+                                }}
+                              >
                                 <Image
                                   quality="85"
                                   priority={true}

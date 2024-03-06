@@ -110,6 +110,12 @@ const BookADemoContent = ({ content }) => {
           <ClientSlider
             data={CLIENTS_SLIDER_DATA}
             breakPoints={CLIENT_SLIDER_BREAK_POINTS}
+            shortTitle={
+              'Meet our partners who trust our certified tech experts'
+            }
+            compeleteTitle={
+              'Meet our partners who trust our certified tech experts'
+            }
             txtColor={'#fff'}
             variant={'h6'}
             fontSize={{ sm: '15px !important', md: '16px !important' }}
