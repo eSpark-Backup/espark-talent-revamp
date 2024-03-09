@@ -20,7 +20,7 @@ const CustomComponent = () => {
               px: '10%',
             }}
             dangerouslySetInnerHTML={{
-              __html: `Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`
+              __html: `Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`,
             }}
           />
         </Box>

@@ -1,17 +1,8 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Chip,
-  Container,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 
 const SecondSection = ({ data }) => {
-  console.log(data, 'data');
   return (
     <Box sx={{ backgroundColor: '#F7F8FF', py: 3 }}>
       <Container>
