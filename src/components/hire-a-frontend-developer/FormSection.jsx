@@ -13,7 +13,7 @@ const FormSection = ({ data }) => {
   return (
     <>
       <Box
-        id={'top'}
+        id={'form'}
         sx={{
           pt: { xs: 5, sm: 5 },
           pb: { xs: 5, sm: 8 },
@@ -39,7 +39,7 @@ const FormSection = ({ data }) => {
           <Box
             sx={{
               display: 'flex',
-              maxWidth: '1200px',
+              maxWidth: '1400px',
               // flexDirection: 'column',
               alignItems: 'center', // Align items vertically center
               order: { xs: 2, sm: 0 },
@@ -65,8 +65,8 @@ const FormSection = ({ data }) => {
                   fontSize: {
                     xs: '22px',
                     sm: '30px',
-                    md: '35px',
-                    lg: '43px',
+                    md: '40px',
+                    lg: '48px',
                   },
                   lineHeight: '63px',
                   fontWeight: 600,
@@ -110,7 +110,7 @@ const FormSection = ({ data }) => {
             <Box
               sx={{
                 width: 'auto',
-                maxWidth: '600px',
+                maxWidth: '700px',
                 height: 'auto',
                 borderRadius: '8px',
                 py: 3,

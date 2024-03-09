@@ -1,7 +1,91 @@
+'use client';
+import { Box, Button, Container, Typography } from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
-const HireHeroSection = () => {
-  return <div>HireHeroSection</div>;
+const HireHeroSection = ({ data }) => {
+  return (
+    <Box
+      sx={{
+        pt: '50px',
+        backgroundImage: `url(${data?.bgImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        color: '#fff',
+      }}
+    >
+      <Container>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Link href={'/'}>
+            <Image
+              src={data?.logo}
+              height={100}
+              width={200}
+              alt="Thankyou - eSpark Talent"
+            />
+          </Link>
+          <Typography
+            variant="h1"
+            color="#001C63"
+            sx={{
+              fontSize: `87px`,
+              fontWeight: 700,
+              lineHeight: '102px',
+              textAlign: 'center',
+            }}
+            dangerouslySetInnerHTML={{ __html: data?.title }}
+          />
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: '24px', md: '32px' },
+              fontWeight: '500',
+              textAlign: 'center',
+            }}
+            dangerouslySetInnerHTML={{ __html: data?.subHeading }}
+          />
+          <Box justifyContent={'center'} textAlign="center" py={3}>
+            <Link href={data?.btnLink}>
+              <Button
+                variant="contained"
+                style={{
+                  width: '210px',
+                  height: '60px',
+                  borderRadius: '50px',
+                  backgroundColor: '#029894',
+                  color: '#fff',
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: '20px',
+                    fontWeight: 500,
+                    lineHeight: '30px',
+                    textAlign: 'center',
+                  }}
+                >
+                  {data?.btnText}
+                </Typography>
+              </Button>
+            </Link>
+          </Box>
+          <Box justifyContent={'center'} textAlign="center" pt={3}>
+            <img src={data?.image} alt="image" />
+          </Box>
+        </Box>
+      </Container>
+    </Box>
+  );
 };
 
 export default HireHeroSection;
