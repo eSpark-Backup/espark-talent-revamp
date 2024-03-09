@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const FifthSection = () => {
-  return (
-    <div>FifthSection</div>
-  )
-}
+  return <div>FifthSection</div>;
+};
 
-export default FifthSection
+export default FifthSection;
