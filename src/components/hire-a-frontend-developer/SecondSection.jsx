@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const SecondSection = () => {
-  return (
-    <div>SecondSection</div>
-  )
-}
+  return <div>SecondSection</div>;
+};
 
-export default SecondSection
+export default SecondSection;

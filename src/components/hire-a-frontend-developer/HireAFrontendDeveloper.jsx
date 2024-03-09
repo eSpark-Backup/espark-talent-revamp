@@ -24,5 +24,5 @@ const HireAFrontendDeveloper = () => {
     </div>
   );
 };
- 
+
 export default HireAFrontendDeveloper;

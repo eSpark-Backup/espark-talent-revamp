@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ForthSection = () => {
-  return (
-    <div>ForthSection</div>
-  )
-}
+  return <div>ForthSection</div>;
+};
 
-export default ForthSection
+export default ForthSection;
