@@ -17,14 +17,14 @@ const HireAFrontendDeveloper = () => {
     <div>
       <HireHeroSection data={HIRE_FRONTEND_DEVELOPER?.heroSection} />
       <SecondSection data={HIRE_FRONTEND_DEVELOPER?.secondSection} />
-      <Box >
+      <Box>
         <ClientSays data={OUR_CLIENT_SAYS} />
-        <CustomComponent/>
-      <Perks
-        data={PERKS_DATA}
-        target={'_self'}
-        link={'/hire-a-frontend-developer/#form'}
-      />
+        <CustomComponent />
+        <Perks
+          data={PERKS_DATA}
+          target={'_self'}
+          link={'/hire-a-frontend-developer/#form'}
+        />
       </Box>
       <ThirdSection data={HIRE_FRONTEND_DEVELOPER?.thirdSection} />
       <ForthSection data={HIRE_FRONTEND_DEVELOPER?.forthSection} />

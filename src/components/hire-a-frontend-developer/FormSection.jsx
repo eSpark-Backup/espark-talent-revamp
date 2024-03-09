@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
 
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
-import BookADemoForm from '../book-a-demo/BookADemoForm';
 import HireForm from './HireForm';
 
 const FormSection = ({ data }) => {
@@ -70,7 +68,6 @@ const FormSection = ({ data }) => {
                   },
                   lineHeight: '63px',
                   fontWeight: 600,
-                  lineHeight: { sm: '40px', lg: '56px' },
                 }}
                 color={data?.titleColor}
               >

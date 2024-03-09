@@ -2,7 +2,6 @@ import { Avatar, Box, Chip, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
 const FifthSection = ({ data }) => {
-  console.log(data, 'data');
   return (
     <Box sx={{ backgroundColor: '#F7F8FF', py: 3 }}>
       <Container>
