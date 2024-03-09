@@ -2,15 +2,15 @@ export const HIRE_FRONTEND_DEVELOPER = {
   heroSection: {
     logo: `/images/eSpark-Talent-Logo.svg`,
     logoLink: `/`,
-    image: ``,
-    bgImage: ``,
-    title: `Your Expert <span color:"#029894">Front-End Developer</span> Awaits!`,
+    image: `/images/hire-a-frontend-developer/hero-section-image2.png`,
+    bgImage: `/images/hire-a-frontend-developer/hero-section-bg.png`,
+    title: `Your Expert <span style="color:#029894;font-weight: 700;">Front-End Developer</span> Awaits!`,
     descrcipton: `Craft the future of user engagement with our front-end developers, molding your brand's vision into interactive web and mobile experiences. Our experts proficiently transform vision into captivating interfaces, delivering codes that exhibit visual wisdom with careful attention to detail.`,
     btnText: `Hire a Developer`,
     btnLink: `/hire-a-frontend-developer/#form`,
   },
   secondSection: {
-    title: `Searching for a Personalized Front-End Solution?<span color:"#029894">Let's Connect!</span>`,
+    title: `Searching for a Personalized Front-End Solution? <span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
     descrcipton: `Your search for personalized front-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in front-end development. Let's connect and enhance your front-end journey together.`,
     btnText: `Hire a Developer`,
     btnLink: `/hire-a-frontend-developer/#form`,
@@ -18,14 +18,14 @@ export const HIRE_FRONTEND_DEVELOPER = {
   thirdSection: {
     image: ``,
     bgImage: ``,
-    title: `eSpark Talent Hosts The <span color:"#029894">Top-Notch 1%</span> Of Globally Certified Front-End Developers`,
+    title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Front-End Developers`,
     descrcipton: `Our developers, masters in the art of front-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest front-end engineers to ensure the most suitable match for your project.`,
     btnText: `Hire a Developer`,
     btnLink: `/hire-a-frontend-developer/#form`,
   },
   forthSection: {
     bgImage: ``,
-    title: `Customized Solutions - Where Your Demands Meet Our Creative <span color:"#029894">Front-End Developers</span>`,
+    title: `Customized Solutions - Where Your Demands Meet Our Creative <span style="color:#029894;font-weight:600;">Front-End Developers</span>`,
     descrcipton: `We understand your HR struggles, which is why our outsourcing services are here to assist. Hire front-end developers from eSpark Talent to effortlessly fulfill all your HR outstaffing requirements. Such as streamlined recruitment, compliance management, and seamless outsourcing.`,
     items: [
       {
@@ -67,7 +67,7 @@ export const HIRE_FRONTEND_DEVELOPER = {
     ],
   },
   fifthSection: {
-    title: `Here is how we employ modern front-end technologies for your project`,
+    title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >front-end technologies</span> for your project`,
     descrcipton: `We hire candidates with strong expertise in utilizing cutting-edge technologies, top-notch tools, and innovative approaches to craft and enhance your digital solutions. Unlock the tech wonders shaping this field:`,
     items: [
       {
@@ -91,9 +91,9 @@ export const HIRE_FRONTEND_DEVELOPER = {
         items: [
           `HTML`,
           `TypeScript`,
-          `JavaScript (Ecmascript)`,
-          `Flutter by Dart `,
-          `React Native`,
+          `JavaScript (Ecmascript) `,
+          `Flutter by Dart         `,
+          `React Native            `,
         ],
       },
       {
