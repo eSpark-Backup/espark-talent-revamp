@@ -23,10 +23,10 @@ const BLOGS_NOT_FOUND_DATA = {
 };
 const HIRES_NOT_FOUND_DATA = {
   image: '/images/404Error.png',
-  title: 'Oops: This Hire Page Not Found',
-  desc: 'Please check your link and make sure that you are on the right page.',
+  title: 'Error 404: Page Not Found!',
+  desc: 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.',
   btnLink: '/',
-  btnText: 'Back to Home',
+  btnText: 'Back to Homepage',
 };
 
 export { NOT_FOUND_DATA, WIKIS_NOT_FOUND_DATA, BLOGS_NOT_FOUND_DATA, HIRES_NOT_FOUND_DATA };
