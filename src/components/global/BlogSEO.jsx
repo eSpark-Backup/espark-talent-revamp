@@ -7,7 +7,6 @@ const BlogSEO = ({ data }) => {
 
   const metaData = data.filter((item) => item.path == pathname);
 
-  console.log(metaData[0], 'metaData');
   return (
     <>
       <NextSeo

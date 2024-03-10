@@ -1,4 +1,5 @@
-export const HIRE_FRONTEND_DEVELOPER = {
+export const HIRE_FRONTEND_DEVELOPER = [{
+  path: 'hire-a-frontend-developer',
   heroSection: {
     logo: `/images/eSpark-Talent-Logo.svg`,
     logoLink: `/`,
@@ -121,4 +122,4 @@ export const HIRE_FRONTEND_DEVELOPER = {
     title: `Let us empower you to hire the world's best talent in minutes!`,
     description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
   },
-};
+}];

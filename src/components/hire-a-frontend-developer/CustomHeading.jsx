@@ -5,10 +5,8 @@ import Typography from '@mui/material/Typography';
 
 const CustomComponent = () => {
   return (
-    <Box sx={{ backgroundColor: '#F7F8FF', py: 3 }}>
       <Container>
-        <Box py={2}>
-          <Typography
+        <Typography
             variant="h4"
             textAlign="center"
             sx={{
@@ -23,9 +21,7 @@ const CustomComponent = () => {
               __html: `Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`,
             }}
           />
-        </Box>
       </Container>
-    </Box>
   );
 };
 
