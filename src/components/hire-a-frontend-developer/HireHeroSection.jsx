@@ -36,21 +36,18 @@ const HireHeroSection = ({ data }) => {
             variant="h1"
             color="#001C63"
             sx={{
-              fontSize: `87px`,
+              fontSize: {
+                xs: '25px',
+                sm: '25px',
+                md: '50px',
+                lg: '87px',
+                xl: '87px',
+              },
               fontWeight: 700,
-              lineHeight: '102px',
+              lineHeight: '1.4',
               textAlign: 'center',
             }}
             dangerouslySetInnerHTML={{ __html: data?.title }}
-          />
-          <Typography
-            variant="h2"
-            sx={{
-              fontSize: { xs: '24px', md: '32px' },
-              fontWeight: '500',
-              textAlign: 'center',
-            }}
-            dangerouslySetInnerHTML={{ __html: data?.subHeading }}
           />
           <Box justifyContent={'center'} textAlign="center" py={3}>
             <Link href={data?.btnLink}>

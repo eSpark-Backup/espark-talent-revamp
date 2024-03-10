@@ -58,7 +58,9 @@ export async function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const slug = params.hire;
-  const data = HIRE_FRONTEND_DEVELOPER?.filter((item) => item?.path === slug)[0];
+  const data = HIRE_FRONTEND_DEVELOPER?.filter(
+    (item) => item?.path === slug
+  )[0];
   if (!params || !params.hire) {
     return (
       <div>
@@ -72,7 +74,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
-          <HireAFrontendDeveloper  data={data}/>
+        <HireAFrontendDeveloper data={data} />
       </>
     );
   } catch (error) {
