@@ -128,7 +128,6 @@ const Form = ({ formContent }) => {
     setFieldValue((values.phone_number = event));
   };
 
-  console.log(values.phone_number, 'phone_number');
   return (
     <Box
       className="partner-form"

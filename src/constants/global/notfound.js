@@ -21,5 +21,12 @@ const BLOGS_NOT_FOUND_DATA = {
   btnLink: '/blogs',
   btnText: 'Back to Blogs',
 };
+const HIRES_NOT_FOUND_DATA = {
+  image: '/images/404Error.png',
+  title: 'Oops: This Hire Page Not Found',
+  desc: 'Please check your link and make sure that you are on the right page.',
+  btnLink: '/',
+  btnText: 'Back to Home',
+};
 
-export { NOT_FOUND_DATA, WIKIS_NOT_FOUND_DATA, BLOGS_NOT_FOUND_DATA };
+export { NOT_FOUND_DATA, WIKIS_NOT_FOUND_DATA, BLOGS_NOT_FOUND_DATA, HIRES_NOT_FOUND_DATA };
