@@ -14,13 +14,11 @@ import CustomComponent from './CustomHeading';
 import { Box } from '@mui/material';
 
 const HireAFrontendDeveloper = ({ data }) => {
-  // const pathname = usePathname();
-  // const page = data?.filter((item) => item?.path === pathname)[0];
   return (
     <>
       <HireHeroSection data={data?.heroSection} />
       <SecondSection data={data?.secondSection} />
-       <Box>
+      <Box>
         <ClientSays data={OUR_CLIENT_SAYS} />
         <CustomComponent />
         <Perks
@@ -28,7 +26,7 @@ const HireAFrontendDeveloper = ({ data }) => {
           target={'_self'}
           link={'/hire-a-frontend-developer/#form'}
         />
-      </Box> 
+      </Box>
       <ThirdSection data={data?.thirdSection} />
       <ForthSection data={data?.forthSection} />
       <FifthSection data={data?.fifthSection} />

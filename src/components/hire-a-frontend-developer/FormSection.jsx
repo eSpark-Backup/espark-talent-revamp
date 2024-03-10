@@ -13,9 +13,9 @@ const FormSection = ({ data }) => {
       <Box
         id={'form'}
         sx={{
-          pt: { xs: 5, sm: 5 },
-          pb: { xs: 5, sm: 8 },
-          px: { xs: 2, sm: 5 },
+          pt: { xs: 2, sm: 2, md: 5 },
+          pb: { xs: 5, sm: 5, md: 5 },
+          px: { xs: 2, sm: 5, md: 5 },
         }}
       >
         <Box
@@ -27,10 +27,10 @@ const FormSection = ({ data }) => {
             justifyContent: 'center',
             '@media(min-width: 280px) and (max-width:1259px)': {
               flexDirection: 'column !important',
-              gap: 10,
+              gap: 4,
             },
             '@media(max-width: 425px)': {
-              gap: 6,
+              gap: 4,
             },
           }}
         >
@@ -38,9 +38,7 @@ const FormSection = ({ data }) => {
             sx={{
               display: 'flex',
               maxWidth: '1400px',
-              // flexDirection: 'column',
-              alignItems: 'center', // Align items vertically center
-              order: { xs: 2, sm: 0 },
+              alignItems: 'center',
               gap: { xs: 2, sm: 3, md: 5, lg: 7 },
               '@media(min-width: 280px) and (max-width:1259px)': {
                 mx: 'auto',
@@ -61,12 +59,12 @@ const FormSection = ({ data }) => {
                 variant="h1"
                 sx={{
                   fontSize: {
-                    xs: '22px',
-                    sm: '30px',
+                    xs: '20px',
+                    sm: '25px',
                     md: '40px',
                     lg: '48px',
                   },
-                  lineHeight: '63px',
+                  lineHeight: 1.4,
                   fontWeight: 600,
                 }}
                 color={data?.titleColor}
@@ -87,15 +85,15 @@ const FormSection = ({ data }) => {
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: '14px',
-                      sm: '15px',
+                      xs: '13px',
+                      sm: '13px',
                       md: '18px',
                       lg: '23px',
                       xl: '23px',
                     },
                     color: '#0E1155',
                     fontWeight: 400,
-                    lineHeight: { xs: 'auto', lg: '43px' },
+                    lineHeight: 1.4,
                   }}
                 >
                   {data?.description}
@@ -113,7 +111,6 @@ const FormSection = ({ data }) => {
                 py: 3,
                 px: 0.8,
                 boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
-                order: { xs: 0, sm: 1 },
                 '@media(min-width: 280px) and (max-width:1259px)': {
                   mx: 'auto',
                 },

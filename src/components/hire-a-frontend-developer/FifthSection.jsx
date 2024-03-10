@@ -11,11 +11,16 @@ const FifthSection = ({ data }) => {
             textAlign="center"
             sx={{
               textTransform: 'capitalize',
-              fontSize: '48px',
+              fontSize: {
+                xs: '20px',
+                sm: '25px',
+                md: '40px',
+                lg: '48px',
+              },
               fontWeight: 600,
-              lineHeight: '67px',
+              lineHeight: 1.4,
               color: '#001C63',
-              px: '10%',
+              px: { xs: '9%', sm: '9%', md: '10%', lg: '10%' },
             }}
             dangerouslySetInnerHTML={{
               __html: data?.title,
@@ -26,11 +31,17 @@ const FifthSection = ({ data }) => {
             textAlign="center"
             sx={{
               textAlign: 'center',
-              fontSize: '19px',
+              fontSize: {
+                xs: '13px',
+                sm: '15px',
+                md: '18px',
+                lg: '23px',
+                xl: '23px',
+              },
               fontWeight: 400,
-              lineHeight: '29px',
+              lineHeight: 1.4,
               color: '#001C63',
-              px: '12%',
+              px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
             }}
           >
             {data?.descrcipton}
@@ -38,21 +49,33 @@ const FifthSection = ({ data }) => {
         </Box>
         <Grid container display={'flex'} spacing={3}>
           {data?.items?.map((item, index) => (
-            <Grid item xs={4} gap={'20px'} key={index}>
+            <Grid item lg={item.grid} sm={12} xs={12} gap={'20px'} key={index}>
               <Typography
                 variant="h3"
                 textAlign="center"
                 sx={{
-                  fontSize: '22px',
                   fontWeight: 700,
                   lineHeight: '48px',
-                  textAlign: 'left',
                   color: '#029894',
+                  fontSize: {
+                    xs: '16px',
+                    sm: '16px',
+                    md: '18px',
+                    lg: '22px',
+                    xl: '22px',
+                  },
+                  textAlign: {
+                    xs: 'center',
+                    md: 'left',
+                  },
                 }}
               >
                 {item?.title}
               </Typography>
-              <Box py={'10px'} sx={{ gap: 2, alignItems: 'center' }}>
+              <Box
+                py={{ xs: '0px', sm: '10px' }}
+                sx={{ gap: 2, alignItems: 'center' }}
+              >
                 {item?.items.map((chip, index) => (
                   <Chip
                     key={index}
@@ -66,7 +89,7 @@ const FifthSection = ({ data }) => {
                         variant="h3"
                         textAlign="center"
                         sx={{
-                          fontSize: '19px',
+                          fontSize: '18px',
                           fontWeight: 400,
                           lineHeight: '35px',
                           textAlign: 'left',
