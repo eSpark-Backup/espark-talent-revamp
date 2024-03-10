@@ -17,9 +17,10 @@ export const HIRE_FRONTEND_DEVELOPER = [
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
     },
-    thirdSection: {
-      image: ``,
-      bgImage: ``,
+    hosts: {
+      image: `/images/hire-a-frontend-developer/business.svg`,
+      leftImage: `/images/hire-a-frontend-developer/round.svg`,
+      bgImage: `/images/hire-a-frontend-developer/global-certified.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Front-End Developers`,
       descrcipton: `Our developers, masters in the art of front-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest front-end engineers to ensure the most suitable match for your project.`,
       btnText: `Hire a Developer`,
