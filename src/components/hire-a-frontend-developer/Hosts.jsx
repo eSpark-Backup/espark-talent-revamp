@@ -14,6 +14,22 @@ const Hosts = ({ data }) => {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
+            mb: { xs: 45, sm: 32, md: 35, lg: 56 },
+            '@media(min-width:426px) and (max-width:539px)': {
+              mb: 40,
+            },
+            '@media(min-width:387px) and (max-width:425px)': {
+              mb: 40,
+            },
+            '@media(min-width:320px) and (max-width:386px)': {
+              mb: 45,
+            },
+            '@media(min-width:300px) and (max-width:319px)': {
+              mb: 42,
+            },
+            '@media(min-width:280px) and (max-width:299px)': {
+              mb: 42,
+            },
           }}
         >
           <Box
@@ -31,9 +47,10 @@ const Hosts = ({ data }) => {
           />
           <Box
             sx={{
+              position: 'relative',
               top: 0,
               px: 3,
-              maxWidth: '961px',
+              maxWidth: { xs: '310px', sm: '490px', md: '700px', lg: '961px' },
               height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
             }}
           >
@@ -48,39 +65,26 @@ const Hosts = ({ data }) => {
           </Box>
           <Box
             sx={{
-              py: { xs: 3.5, sm: 4, md: 6, lg: 12 },
-              top: { xs: -62, md: -80, lg: -90 },
-              '@media (min-width: 769px) and (max-width:950px)': {
-                top: -150,
+              position: 'absolute',
+              top: { xs: 255, sm: 240, md: 280, lg: 440 },
+              '@media(min-width:426px) and (max-width:539px)': {
+                top: 270,
               },
-              '@media (min-width: 680px) and (max-width:768px)': {
-                top: -50,
+              '@media(min-width:387px) and (max-width:425px)': {
+                top: 230,
               },
-              '@media (min-width: 650px) and (max-width:679px)': {
-                top: -80,
+              '@media(min-width:320px) and (max-width:386px)': {
+                top: 255,
               },
-              '@media (min-width: 570px) and (max-width:649px)': {
-                top: -120,
+              '@media(min-width:300px) and (max-width:319px)': {
+                top: 245,
               },
-              '@media (min-width: 540px) and (max-width:569px)': {
-                top: -150,
-              },
-              '@media (min-width: 500px) and (max-width:539px)': {
-                top: -170,
-              },
-              '@media (min-width: 470px) and (max-width:499px)': {
-                top: -180,
-              },
-              '@media (min-width: 445px) and (max-width:469px)': {
-                top: -200,
-              },
-              '@media (min-width: 426px) and (max-width:444px)': {
-                top: -200,
+              '@media(min-width:280px) and (max-width:299px)': {
+                top: 241,
               },
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              position: 'relative',
               backgroundImage: `url(${data?.bgImage || ''})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -90,17 +94,18 @@ const Hosts = ({ data }) => {
           >
             <Box
               sx={{
-                width: { xs: '90%', lg: '75%' },
+                width: { xs: '90%', lg: '1324px' },
                 display: 'flex',
                 p: 5,
-                py: { xs: 5, sm: 10 },
+                '@media(min-width:280px) and (max-width:320px)': {
+                  p: 3,
+                },
                 justifyContent: 'center',
                 position: 'relative',
                 gap: 1.8,
                 alignItems: 'center',
                 flexDirection: 'column',
                 borderRadius: '20px',
-                // backgroundColor: '#F6F1F1',
                 boxShadow: '0 9px  30pc rgba(0,0,0,0.19)',
                 backgroundColor: 'rgba(246, 241, 241, 0.78)',
                 border: '1px',
