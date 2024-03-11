@@ -49,10 +49,11 @@ const FifthSection = ({ data }) => {
         </Box>
         <Grid container display={'flex'} spacing={3}>
           {data?.items?.map((item, index) => (
-            <Grid item lg={item.grid} sm={12} xs={12} gap={'20px'} key={index}>
+            <Grid item sm={12} xs={12} md={item.gridMd} lg={item.gridLg} gap={'20px'} key={index}>
               <Typography
                 variant="h3"
                 textAlign="center"
+                mr={item[0]? `50px`:''}
                 sx={{
                   fontWeight: 700,
                   lineHeight: '48px',
@@ -74,7 +75,7 @@ const FifthSection = ({ data }) => {
               </Typography>
               <Box
                 py={{ xs: '0px', sm: '10px' }}
-                sx={{ gap: 2, alignItems: 'center' }}
+                sx={{ gap: 2, alignItems: 'center'}}
               >
                 {item?.items.map((chip, index) => (
                   <Chip
@@ -94,9 +95,9 @@ const FifthSection = ({ data }) => {
                           lineHeight: '35px',
                           textAlign: 'left',
                           color: '#000000',
-                        }}
+                        }} 
+                dangerouslySetInnerHTML={{ __html: chip }}
                       >
-                        {chip}
                       </Typography>
                     }
                     sx={{
