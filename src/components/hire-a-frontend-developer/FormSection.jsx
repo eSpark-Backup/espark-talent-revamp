@@ -7,12 +7,6 @@ import HireForm from './HireForm';
 
 const FormSection = ({ data }) => {
   const { form } = Book_A_Demo_Data;
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('md', 'xl')
-  );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
   return (
