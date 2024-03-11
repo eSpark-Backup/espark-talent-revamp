@@ -123,7 +123,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
       bgColor: `#fff`,
       spacing: `3%`,
       pt: `25px`,
-      bgImage: ``,
+      bgImage: `/images/hire-a-frontend-developer/FormSectionbg.png`,
       title: `Let us empower you to hire the world's best talent in minutes!`,
       description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
     },
