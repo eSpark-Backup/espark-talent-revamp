@@ -6,12 +6,12 @@ import ClientSays from '../homepage/ClientSays';
 import { OUR_CLIENT_SAYS, PERKS_DATA } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
 import SecondSection from './SecondSection';
-import ForthSection from './ForthSection';
 import FifthSection from './FifthSection';
 import FormSection from './FormSection';
 import CustomComponent from './CustomHeading';
 import { Box } from '@mui/material';
 import Hosts from './Hosts';
+import CustomizedSolution from './CustomizedSolution';
 
 const HireAFrontendDeveloper = ({ data }) => {
   return (
@@ -28,7 +28,7 @@ const HireAFrontendDeveloper = ({ data }) => {
         />
       </Box>
       <Hosts data={data?.hosts} />
-      <ForthSection data={data?.forthSection} />
+      <CustomizedSolution data={data?.customizedSolution} />
       <FifthSection data={data?.fifthSection} />
       <FormSection data={data?.formSection} />
     </>

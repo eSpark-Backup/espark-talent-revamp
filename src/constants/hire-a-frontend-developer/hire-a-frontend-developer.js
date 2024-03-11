@@ -26,7 +26,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
     },
-    forthSection: {
+    customizedSolution: {
       bgImage: ``,
       title: `Customized Solutions - Where Your Demands Meet Our Creative <span style="color:#029894;font-weight:600;">Front-End Developers</span>`,
       descrcipton: `We understand your HR struggles, which is why our outsourcing services are here to assist. Hire front-end developers from eSpark Talent to effortlessly fulfill all your HR outstaffing requirements. Such as streamlined recruitment, compliance management, and seamless outsourcing.`,
