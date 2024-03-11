@@ -4,7 +4,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
     heroSection: {
       logo: `/images/eSpark-Talent-Logo.svg`,
       logoLink: `/`,
-      image: `/images/hire-a-frontend-developer/hero-section-image.png`,
+      image: `/images/hire-a-frontend-developer/dashboard.png`,
       bgImage: `/images/hire-a-frontend-developer/hero-section-bg.png`,
       title: `Your Expert <span style="color:#029894;font-weight: 700;">Front-End Developer</span> Awaits!`,
       descrcipton: `Craft the future of user engagement with our front-end developers, molding your brand's vision into interactive web and mobile experiences. Our experts proficiently transform vision into captivating interfaces, delivering codes that exhibit visual wisdom with careful attention to detail.`,
