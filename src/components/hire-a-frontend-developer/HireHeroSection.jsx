@@ -1,11 +1,16 @@
 'use client';
-import { Box, Button, Container, Typography, useMediaQuery } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const HireHeroSection = ({ data }) => {
-  
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
   );
@@ -17,46 +22,50 @@ const HireHeroSection = ({ data }) => {
   return (
     <Box
       sx={{
-        pt: {xs:'25px',sm:'25px', md:'38px',lg:'50px'},
+        pt: { xs: '25px', sm: '25px', md: '38px', lg: '50px' },
         backgroundImage: `url(${data?.bgImage})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         color: '#fff',
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-        }}
-      >
-        <Container>
-          <Box sx={{ mt: {xs:'15px',sm:'20px', md:'25px',lg:'35px'},
-          display: 'flex',
-          justifyContent: 'center', }} >
+      <Container>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Box
+            sx={{
+              mt: { xs: '15px', sm: '20px', md: '25px', lg: '35px' },
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             <Link href={'/'}>
               <Image
                 src={data?.logo}
                 width={
-                          isSmallScreen
-                            ? 100
-                            : isMediumScreen
-                              ? 150
-                              : isLargeScreen
-                                ? 200
-                                : 200
-                        }
-                        height={
-                          isSmallScreen
-                            ? 50
-                            : isMediumScreen
-                              ? 75
-                              : isLargeScreen
-                                ? 100
-                                : 100
-                        }
+                  isSmallScreen
+                    ? 100
+                    : isMediumScreen
+                      ? 150
+                      : isLargeScreen
+                        ? 200
+                        : 200
+                }
+                height={
+                  isSmallScreen
+                    ? 50
+                    : isMediumScreen
+                      ? 75
+                      : isLargeScreen
+                        ? 100
+                        : 100
+                }
                 alt="Thankyou - eSpark Talent"
               />
             </Link>
@@ -105,11 +114,12 @@ const HireHeroSection = ({ data }) => {
               </Button>
             </Link>
           </Box>
-        </Container>
-        <Box justifyContent={'center'} textAlign="center" pt={3}>
-          <img src={data?.image} alt={'Hire A Developer Cover Art'} />
+
+          <Box justifyContent={'center'} textAlign="center" pt={3}>
+            <img src={data?.image} alt={'Hire A Developer Cover Art'} />
+          </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 };

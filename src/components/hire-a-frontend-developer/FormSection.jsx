@@ -1,12 +1,19 @@
 'use client';
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import HireForm from './HireForm';
 
 const FormSection = ({ data }) => {
   const { form } = Book_A_Demo_Data;
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('md', 'xl')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
   return (
     <>
@@ -16,7 +23,7 @@ const FormSection = ({ data }) => {
           pt: { xs: 2, sm: 2, md: 5 },
           pb: { xs: 5, sm: 5, md: 5 },
           px: { xs: 2, sm: 5, md: 5 },
-          backgroundImage: `url(${data?.bgImage})`,
+          backgroundImage: `url(${isLargeScreen ? data?.bgImage : ''})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}
