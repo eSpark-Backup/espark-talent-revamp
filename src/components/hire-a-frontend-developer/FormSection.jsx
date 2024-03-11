@@ -16,6 +16,9 @@ const FormSection = ({ data }) => {
           pt: { xs: 2, sm: 2, md: 5 },
           pb: { xs: 5, sm: 5, md: 5 },
           px: { xs: 2, sm: 5, md: 5 },
+          backgroundImage: `url(${data?.bgImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
         }}
       >
         <Box
