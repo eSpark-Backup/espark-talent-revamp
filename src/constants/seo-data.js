@@ -471,9 +471,8 @@ export const HIRE_SEO = [
   },
   {
     path: 'hire-a-frontend-developer',
-    title: 'Hire Top Frontend Developer Quickly | eSpark Talent',
-    description:
-      'Quickly hire top Frontend Developer at eSpark Talent. Elevate your digital presence effortlessly. Seamless hiring for exceptional results. Book a Meeting Now!',
+    title: 'Hire Top Front-End Developers | Hire Remotely with eSpark',
+    description: `Accelerate your company's progress with the expertise of eSpark Talent's leading front-end developers. Find, onboard, and pay remote developers aligned with your requirements`,
     url: 'https://esparktalent.com/hire-a-frontend-developer',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
