@@ -3,14 +3,12 @@ import React from 'react';
 
 const CustomizedSolution = ({ data }) => {
   const { bgImage, title, descrcipton, items } = data;
-  console.log(data, 'data');
   return (
     <>
       <Box
         sx={{
           width: '100%',
           height: 'auto',
-          // backgroundSize: '50%',
           backgroundPosition: 'center',
           backgroundImage: `url(${bgImage || ''})`,
           pt: 4,
