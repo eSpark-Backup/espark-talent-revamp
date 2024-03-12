@@ -62,7 +62,7 @@ const Perks = ({ data, link, target }) => {
                         gap: '10px',
                         borderRadius: '20px',
                         mb: '20px',
-                        py: '35.929px',
+                        py: { xs: '15px', md: '35.929px' },
                         px: { xs: '20px', md: '20px' },
                         background:
                           index === selectedCard
@@ -138,6 +138,10 @@ const Perks = ({ data, link, target }) => {
                           height: {
                             sm: 18,
                             lg: 24,
+                          },
+                          transform: {
+                            xs: 'rotate(90deg)',
+                            md: 'rotate(0deg)',
                           },
                         }}
                         alt={perk.title}

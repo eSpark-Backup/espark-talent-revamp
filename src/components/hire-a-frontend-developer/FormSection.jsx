@@ -72,6 +72,7 @@ const FormSection = ({ data }) => {
                   fontWeight: 600,
                 }}
                 color={data?.titleColor}
+                textTransform={'capitalize'}
               >
                 {data?.title}
               </Typography>
