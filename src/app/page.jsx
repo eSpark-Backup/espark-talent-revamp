@@ -96,7 +96,7 @@ const Page = () => {
       />
       <Process data={PROCESS_DATA} />
       <SourceBenefits data={OUTSOURCE_BENEFITS_DATA} />
-      <Perks data={PERKS_DATA} />
+      <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
