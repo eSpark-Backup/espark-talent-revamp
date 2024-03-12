@@ -1,0 +1,43 @@
+'use client';
+import React from 'react';
+import PropTypes from 'prop-types';
+import HireHeroSection from './HireHeroSection';
+import ClientSays from '../homepage/ClientSays';
+import { OUR_CLIENT_SAYS, PERKS_DATA } from '@/constants/homepage';
+import Perks from '../homepage/Perks';
+import SecondSection from './SecondSection';
+import FifthSection from './FifthSection';
+import FormSection from './FormSection';
+import CustomComponent from './CustomHeading';
+import { Box } from '@mui/material';
+import Hosts from './Hosts';
+import CustomizedSolution from './CustomizedSolution';
+
+const HireAFrontendDeveloper = ({ data }) => {
+  return (
+    <>
+      <HireHeroSection data={data?.heroSection} />
+      <SecondSection data={data?.secondSection} />
+      <Box>
+        <ClientSays data={OUR_CLIENT_SAYS} />
+        <CustomComponent />
+        <Perks
+          data={PERKS_DATA}
+          target={'_self'}
+          link={'/hire-a-frontend-developer/#form'}
+        />
+      </Box>
+      <Hosts data={data?.hosts} />
+      <CustomizedSolution data={data?.customizedSolution} />
+      <FifthSection data={data?.fifthSection} />
+      <FormSection data={data?.formSection} />
+    </>
+  );
+};
+
+// Define PropTypes
+HireAFrontendDeveloper.propTypes = {
+  data: PropTypes.array.isRequired, // Assuming data is an array
+};
+
+export default HireAFrontendDeveloper;
