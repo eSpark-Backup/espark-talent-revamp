@@ -7,7 +7,6 @@ import moment from 'moment';
 const SingleBlogHeader = ({ data, authors }) => {
   const blogString = JSON.stringify(data);
   const parsedblog = JSON.parse(blogString);
-  console.log(parsedblog, 'blogString');
   const filteredAuthor = authors?.filter(
     (author) => author?._id === parsedblog?.author
   )[0];
