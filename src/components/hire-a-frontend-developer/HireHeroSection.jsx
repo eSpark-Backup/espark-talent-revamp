@@ -25,7 +25,7 @@ const HireHeroSection = ({ data }) => {
         pt: { xs: '25px', sm: '25px', md: '38px', lg: '50px' },
         backgroundImage: `url(${data?.bgImage})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         color: '#fff',
       }}
     >
@@ -94,7 +94,7 @@ const HireHeroSection = ({ data }) => {
               fontSize: {
                 xs: '13px',
                 sm: '15px',
-                md: '50px',
+                md: '16px',
                 lg: '19px',
                 xl: '19px',
               },
