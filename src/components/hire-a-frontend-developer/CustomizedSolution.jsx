@@ -180,7 +180,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -304,7 +304,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media(min-width: 980px)': {
@@ -455,7 +455,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -584,7 +584,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media (min-width: 980px)': {
@@ -730,7 +730,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -857,7 +857,7 @@ const CustomizedSolution = ({ data }) => {
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow:'0 4px 4px 2px rgba(0,0,0,0.25)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media(min-width: 980px)': {
