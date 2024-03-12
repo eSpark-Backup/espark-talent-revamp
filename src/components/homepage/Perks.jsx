@@ -5,7 +5,7 @@ import Image from 'next/image';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ESparkButton from '../global/eSparkButton';
 
-const Perks = ({ data, link, target, title }) => {
+const Perks = ({ data, link, target }) => {
   const [selectedCard, setSelectedCard] = useState(0);
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
@@ -62,7 +62,7 @@ const Perks = ({ data, link, target, title }) => {
                         gap: '10px',
                         borderRadius: '20px',
                         mb: '20px',
-                        py: { xs: '0px', md: '10px', lg: '20px'  },
+                        py: { xs: '0px', md: '10px', lg: '20px' },
                         px: { xs: '20px', md: '20px' },
                         background:
                           index === selectedCard
