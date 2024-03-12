@@ -87,6 +87,24 @@ const HireHeroSection = ({ data }) => {
             }}
             dangerouslySetInnerHTML={{ __html: data?.title }}
           />
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: {
+                xs: '13px',
+                sm: '15px',
+                md: '50px',
+                lg: '19px',
+                xl: '19px',
+              },
+              color: '#6A6A6A',
+              fontWeight: '500',
+              textAlign: 'center',
+            }}
+          >
+            {data?.descrcipton}
+          </Typography>
           <Box justifyContent={'center'} textAlign="center" py={3}>
             <Link href={data?.btnLink}>
               <Button
