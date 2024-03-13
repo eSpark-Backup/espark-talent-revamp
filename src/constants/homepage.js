@@ -164,7 +164,7 @@ export const DEVELOEPRS_PERKS_DATA = [
     hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
     listIcon: '/images/homepage/our-perks/list-icon.svg',
     content: {
-      heading: 'Hire Full-Time Salaried Employees',
+      heading: 'Hire Full-Time Salaried Developers',
       paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
       list: [
         { item: 'Collaborative Work Environment,' },
