@@ -75,7 +75,7 @@ const FifthSection = ({ data }) => {
                   },
                   textAlign: {
                     xs: 'center',
-                    md: 'left',
+                    lg: 'left',
                   },
                 }}
               >
@@ -83,7 +83,16 @@ const FifthSection = ({ data }) => {
               </Typography>
               <Box
                 py={{ xs: '0px', sm: '10px' }}
-                sx={{ gap: 2, alignItems: 'center' }}
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  mx: 'auto',
+                  gap: '0.2rem',
+                  alignItems: 'center',
+                  textAlign: 'left',
+                  maxWidth: { xs: 'auto', md: '800px', lg: 'auto' },
+                  justifyContent: { xs: 'center', lg: 'start', xl: 'start' },
+                }}
               >
                 {item?.items.map((chip, index) => (
                   <Chip
@@ -108,6 +117,9 @@ const FifthSection = ({ data }) => {
                       ></Typography>
                     }
                     sx={{
+                      width: 'auto',
+                      minWidth: '93px',
+                      maxWidth: '264px',
                       backgroundColor: '#E9ECF6',
                       color: '#000',
                       borderRadius: '3px',

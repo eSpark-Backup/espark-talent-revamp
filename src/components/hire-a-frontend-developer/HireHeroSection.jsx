@@ -109,7 +109,7 @@ const HireHeroSection = ({ data }) => {
             <Link href={data?.btnLink}>
               <Button
                 variant="contained"
-                style={{
+                sx={{
                   width: '210px',
                   height: '60px',
                   borderRadius: '50px',
@@ -117,6 +117,9 @@ const HireHeroSection = ({ data }) => {
                   color: '#fff',
                   fontSize: '16px',
                   fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 28, 99, 1)',
+                  },
                 }}
               >
                 <Typography
