@@ -92,7 +92,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
         {
           id: 1,
           title: `Front-End Libraries & Frameworks`,
-          gridLg: 4.5,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `React`,
@@ -108,7 +108,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
         {
           id: 2,
           title: `Front-End Languages`,
-          gridLg: 4,
+          gridLg: 3.8,
           gridmd: 4,
           items: [
             `HTML`,
@@ -121,7 +121,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
         {
           id: 3,
           title: `Testing Tools & Frameworks`,
-          gridLg: 3.5,
+          gridLg: 3.7,
           gridmd: 4,
           items: [
             `Mocha`,

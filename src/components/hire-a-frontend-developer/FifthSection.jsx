@@ -47,7 +47,7 @@ const FifthSection = ({ data }) => {
             {data?.descrcipton}
           </Typography>
         </Box>
-        <Grid container display={'flex'} spacing={3}>
+        <Grid container display={'flex'} justifyContent={'space-between'} spacing={3}>
           {data?.items?.map((item, index) => (
             <Grid
               item
