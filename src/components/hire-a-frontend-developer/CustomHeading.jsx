@@ -29,7 +29,7 @@ const CustomComponent = () => {
           fontWeight: 700,
           lineHeight: 1.4,
           color: '#001C63',
-          px: { xs: '5%', md: '7%' },
+          px: { xs: '5%', md: '7%', lg: '14%' },
         }}
         dangerouslySetInnerHTML={{
           __html: `Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`,

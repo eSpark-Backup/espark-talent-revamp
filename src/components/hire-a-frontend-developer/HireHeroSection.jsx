@@ -25,7 +25,7 @@ const HireHeroSection = ({ data }) => {
         pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
         backgroundImage: `url(${data?.bgImage})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
+        backgroundSize: `100%`,
         color: '#fff',
       }}
     >
