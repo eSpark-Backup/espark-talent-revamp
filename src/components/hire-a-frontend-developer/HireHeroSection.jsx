@@ -22,7 +22,7 @@ const HireHeroSection = ({ data }) => {
   return (
     <Box
       sx={{
-        pt: { xs: '25px', sm: '25px', md: '38px', lg: '50px' },
+        pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
         backgroundImage: `url(${data?.bgImage})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
