@@ -20,7 +20,7 @@ const ClientSays = ({ data }) => {
   return (
     <Box
       sx={{
-        mt: { sm: 7, md: 9, lg: 13 },
+        mt: { sm: 7, md: 9, lg: 7 },
         mb: { sm: '25%', md: '20%', lg: '13%' },
         '@media (min-width: 600px) and (max-width: 767px)': {
           mt: 6,
