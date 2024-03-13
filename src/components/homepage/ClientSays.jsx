@@ -20,7 +20,7 @@ const ClientSays = ({ data }) => {
   return (
     <Box
       sx={{
-        mt: { sm: 7, md: 9, lg: 13 },
+        mt: { sm: 7, md: 9, lg: 7 },
         mb: { sm: '25%', md: '20%', lg: '13%' },
         '@media (min-width: 600px) and (max-width: 767px)': {
           mt: 6,
@@ -51,7 +51,13 @@ const ClientSays = ({ data }) => {
             component={'h2'}
             color={'secondary'}
             sx={{
-              fontSize: { sm: '25px', md: '30px', lg: '32px !important' },
+              px: { xs: '5%', md: '7%' },
+              fontSize: {
+                xs: '22px',
+                sm: '24px',
+                md: '35px',
+                lg: '43px',
+              },
               mb: 1,
               fontWeight: 600,
               textAlign: 'center',
@@ -65,12 +71,14 @@ const ClientSays = ({ data }) => {
             color={'secondary'}
             sx={{
               fontSize: {
-                sm: '16px',
-                md: '16px !important',
-                lg: '18px !important',
+                xs: '11px',
+                sm: '13px',
+                md: '16px',
+                lg: '18px',
               },
-              fontWeight: 400,
+              fontWeight: 500,
               textAlign: 'center',
+              px: { xs: '5%', md: '7%' },
             }}
           >
             {subHeading}
