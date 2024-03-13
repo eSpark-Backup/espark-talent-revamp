@@ -13,15 +13,15 @@ const SecondSection = ({ data }) => {
             sx={{
               textTransform: 'capitalize',
               fontSize: {
-                xs: '18px',
-                sm: '18px',
+                xs: '22px',
+                sm: '24px',
                 md: '35px',
                 lg: '43px',
               },
               fontWeight: 700,
-              lineHeight: 1.2,
+              lineHeight: 1.4,
               color: '#001C63',
-              px: { xs: '16%', md: '5%' },
+              px: { xs: '5%', md: '7%' },
             }}
             dangerouslySetInnerHTML={{
               __html: data?.title,
@@ -38,10 +38,10 @@ const SecondSection = ({ data }) => {
                 md: '15px',
                 lg: '21px',
               },
-              fontWeight: 400,
+              fontWeight: 500,
               lineHeight: 1.4,
               color: '#001C63',
-              px: '7%',
+              px: { xs: '5%', md: '7%' },
             }}
           >
             {data?.descrcipton}
@@ -50,7 +50,7 @@ const SecondSection = ({ data }) => {
             <Link href={data?.btnLink}>
               <Button
                 variant="contained"
-                style={{
+                sx={{
                   width: '210px',
                   height: '60px',
                   borderRadius: '50px',
@@ -58,6 +58,9 @@ const SecondSection = ({ data }) => {
                   color: '#fff',
                   fontSize: '16px',
                   fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 28, 99, 1)',
+                  },
                 }}
               >
                 <Typography
