@@ -175,12 +175,12 @@ const CustomizedSolution = ({ data }) => {
                   zIndex: 1,
                   mx: 'auto',
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -203,8 +203,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[0]?.icon || ''}
                     alt={items[0]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -236,14 +236,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {
@@ -299,12 +299,12 @@ const CustomizedSolution = ({ data }) => {
                 sx={{
                   mx: 'auto',
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media(min-width: 980px)': {
@@ -332,8 +332,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[1]?.icon || ''}
                     alt={items[1]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -365,14 +365,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {
@@ -450,12 +450,12 @@ const CustomizedSolution = ({ data }) => {
                     mx: 'auto',
                   },
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -478,8 +478,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[2]?.icon || ''}
                     alt={items[2]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -511,14 +511,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {
@@ -579,12 +579,12 @@ const CustomizedSolution = ({ data }) => {
                     mx: 'auto',
                   },
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media (min-width: 980px)': {
@@ -612,8 +612,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[3]?.icon || ''}
                     alt={items[3]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -645,14 +645,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {
@@ -725,12 +725,12 @@ const CustomizedSolution = ({ data }) => {
                   zIndex: 1,
                   mx: 'auto',
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   '@media(max-width: 425px)': {
                     mx: 1.2,
                     height: 'auto',
@@ -753,8 +753,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[4]?.icon || ''}
                     alt={items[4]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -786,14 +786,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {
@@ -852,12 +852,12 @@ const CustomizedSolution = ({ data }) => {
                 sx={{
                   mx: 'auto',
                   maxWidth: '401px',
-                  height: '260px',
+                  height: '224px',
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: '20px',
                   background: '#fff',
-                  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                  boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                   position: 'relative',
                   zIndex: 1,
                   '@media(min-width: 980px)': {
@@ -885,8 +885,8 @@ const CustomizedSolution = ({ data }) => {
                     src={items[5]?.icon || ''}
                     alt={items[5]?.alt || ''}
                     sx={{
-                      width: 43,
-                      height: 43,
+                      width: 42,
+                      height: 42,
                       '@media(max-width: 425px)': {
                         width: 30,
                         height: 30,
@@ -918,14 +918,14 @@ const CustomizedSolution = ({ data }) => {
                 </Box>
                 <Box
                   sx={{
-                    p: '20px',
+                    p: '10px 20px 20px 20px',
                     borderRadius: '0 0 20px 20px',
                   }}
                 >
                   <Typography
                     component="p"
                     sx={{
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: 500,
                       lineHeight: '23px',
                       '@media(max-width: 425px)': {

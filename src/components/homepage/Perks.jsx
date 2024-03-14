@@ -62,7 +62,7 @@ const Perks = ({ data, link, target }) => {
                         gap: '10px',
                         borderRadius: '20px',
                         mb: '20px',
-                        py: '35.929px',
+                        py: { xs: '0px', md: '10px', lg: '20px' },
                         px: { xs: '20px', md: '20px' },
                         background:
                           index === selectedCard
@@ -121,8 +121,9 @@ const Perks = ({ data, link, target }) => {
                         {perk?.title}
                       </Typography>
                       <Typography
-                        fontSize={isExtraSmallScreen ? '20px' : '30px'}
+                        fontSize={isExtraSmallScreen ? '30px' : '60px'}
                         color={'rgba(224, 221, 221, 0.68)'}
+                        fontWeight={700}
                       >
                         {perk?.sno}
                       </Typography>
@@ -138,6 +139,10 @@ const Perks = ({ data, link, target }) => {
                           height: {
                             sm: 18,
                             lg: 24,
+                          },
+                          transform: {
+                            xs: 'rotate(90deg)',
+                            md: 'rotate(0deg)',
                           },
                         }}
                         alt={perk.title}
