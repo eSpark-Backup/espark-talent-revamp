@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HireHeroSection from './HireHeroSection';
 import ClientSays from '../homepage/ClientSays';
-import { OUR_CLIENT_SAYS, PERKS_DATA } from '@/constants/homepage';
+import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
 import SecondSection from './SecondSection';
 import FifthSection from './FifthSection';
@@ -22,7 +22,7 @@ const HireAFrontendDeveloper = ({ data }) => {
         <ClientSays data={OUR_CLIENT_SAYS} />
         <CustomComponent />
         <Perks
-          data={PERKS_DATA}
+          data={DEVELOEPRS_PERKS_DATA}
           target={'_self'}
           link={'/hire-a-frontend-developer/#form'}
         />

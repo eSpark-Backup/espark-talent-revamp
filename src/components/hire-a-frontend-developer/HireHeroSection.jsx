@@ -22,10 +22,10 @@ const HireHeroSection = ({ data }) => {
   return (
     <Box
       sx={{
-        pt: { xs: '25px', sm: '25px', md: '38px', lg: '50px' },
+        pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
         backgroundImage: `url(${data?.bgImage})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: `100%`,
         color: '#fff',
       }}
     >
@@ -87,11 +87,29 @@ const HireHeroSection = ({ data }) => {
             }}
             dangerouslySetInnerHTML={{ __html: data?.title }}
           />
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: {
+                xs: '13px',
+                sm: '15px',
+                md: '16px',
+                lg: '19px',
+                xl: '19px',
+              },
+              color: '#6A6A6A',
+              fontWeight: '500',
+              textAlign: 'center',
+            }}
+          >
+            {data?.descrcipton}
+          </Typography>
           <Box justifyContent={'center'} textAlign="center" py={3}>
             <Link href={data?.btnLink}>
               <Button
                 variant="contained"
-                style={{
+                sx={{
                   width: '210px',
                   height: '60px',
                   borderRadius: '50px',
@@ -99,6 +117,9 @@ const HireHeroSection = ({ data }) => {
                   color: '#fff',
                   fontSize: '16px',
                   fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 28, 99, 1)',
+                  },
                 }}
               >
                 <Typography
