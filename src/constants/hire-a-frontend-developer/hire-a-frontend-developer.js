@@ -47,7 +47,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Top 1% Front-End Talent `,
-          paragraph: `Join an elite hub of top front-end developers, HTML/CSS specialists, JavaScript experts, and Responsive Web Design professionals —ranked among the top 1% of UI developers globally for their exceptional talent.`,
+          paragraph: `Join the Exclusive Hub of Elite Backend Developers. Our members are at the forefront of backend development, with proficiency in the latest technologies and frameworks.`,
         },
         {
           id: 3,
@@ -154,13 +154,13 @@ export const HIRE_DEVELOPERS = [
       image: `/images/hire-a-frontend-developer/dashboard.png`,
       bgImage: `/images/hire-a-frontend-developer/hero-section-bg.png`,
       title: `Your Expert <span style="color:#029894;font-weight: 700;">Back-End Developer</span> Awaits!`,
-      descrcipton: `Craft the future of user engagement with our Back-end developers, moulding your brand's vision into interactive web and mobile experiences. Our experts proficiently transform vision into captivating interfaces, delivering codes that exhibit visual wisdom with careful attention to detail.`,
+      descrcipton: `Craft the future of user engagement with our back-end developers, moulding your brand's vision into interactive web and mobile experiences. Our experts proficiently transform vision into captivating interfaces, delivering codes that exhibit visual wisdom with careful attention to detail.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
     },
     secondSection: {
       title: `Searching for a Personalized Back-End Solution? <span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
-      descrcipton: `Your search for personalized Back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in Back-end development. Let's connect and enhance your Back-end journey together.`,
+      descrcipton: `Your search for personalized back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in back-end development. Let's connect and enhance your back-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
     },
@@ -169,14 +169,14 @@ export const HIRE_DEVELOPERS = [
       leftImage: `/images/hire-a-frontend-developer/round.svg`,
       bgImage: `/images/hire-a-frontend-developer/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Back-End Developers`,
-      descrcipton: `Our developers, masters in the art of Back-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Back-end engineers to ensure the most suitable match for your project.`,
+      descrcipton: `Our developers, masters in the art of back-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest back-end engineers to ensure the most suitable match for your project.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
     },
     customizedSolution: {
       bgImage: `/images/hire-a-frontend-developer/customized_background.svg`,
       title: `Customized Solutions - Where Your Demands Meet Our Creative <span style="color:#029894;font-weight:600;">Back-End Developers</span>`,
-      descrcipton: `We understand your HR struggles, which is why our outsourcing services are here to assist. Hire Back-end developers from eSpark Talent to effortlessly ful fill all your HR out staffing requirements. Such as streamlined recruitment, compliance management, and seamless outsourcing.`,
+      descrcipton: `We understand your HR struggles, which is why our outsourcing services are here to assist. Hire back-end developers from eSpark Talent to effortlessly ful fill all your HR out staffing requirements. Such as streamlined recruitment, compliance management, and seamless outsourcing.`,
       items: [
         {
           id: 1,
@@ -186,7 +186,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Time Zone Harmony `,
-          paragraph: `Collaborate effectively with top Back-end developers coordinated with your project's time zones, offering timely delivery and meeting business objectives.`,
+          paragraph: `Collaborate effectively with top back-end developers coordinated with your project's time zones, offering timely delivery and meeting business objectives.`,
         },
         {
           id: 2,
@@ -194,7 +194,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Top 1% Back-End Talent `,
-          paragraph: `Join an elite hub of top Back-end developers, HTML/CSS specialists, JavaScript experts, and Responsive Web Design professionals —ranked among the top 1% of UI developers globally for their exceptional talent.`,
+          paragraph: `Join an elite hub of top back-end developers, HTML/CSS specialists, JavaScript experts, and Responsive Web Design professionals —ranked among the top 1% of UI developers globally for their exceptional talent.`,
         },
         {
           id: 3,
@@ -211,7 +211,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Experienced Tech Force`,
-          paragraph: `Strengthen your team with 500+ tech experts, ready to conquer every business challenge across Back-end websites and apps with their extensive experience.`,
+          paragraph: `Strengthen your team with 500+ tech experts, ready to conquer every business challenge across back-end websites and apps with their extensive experience.`,
         },
         {
           id: 5,
@@ -220,7 +220,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Focused Expertise`,
-          paragraph: `Empower your goals with dedicated Back-end experts, following global benchmarks for high-quality results within set timeframes and budgets.`,
+          paragraph: `Empower your goals with dedicated back-end experts, following global benchmarks for high-quality results within set timeframes and budgets.`,
         },
         {
           id: 6,
@@ -228,12 +228,12 @@ export const HIRE_DEVELOPERS = [
           end_point: '/images/hire-a-frontend-developer/end_point.svg',
           alt: `icon`,
           title: `Cost and Time Clarity`,
-          paragraph: `Access a squad of remote Back-end developers, streamlining expenses and saving time without the need for in-house hiring and training. `,
+          paragraph: `Access a squad of remote back-end developers, streamlining expenses and saving time without the need for in-house hiring and training. `,
         },
       ],
     },
     fifthSection: {
-      title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >Back-end technologies</span> for your project`,
+      title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >back-end technologies</span> for your project`,
       descrcipton: `We hire candidates with strong expertise in utilizing cutting-edge technologies, top-notch tools, and innovative approaches to craft and enhance your digital solutions. Unlock the tech wonders shaping this field:`,
       items: [
         {
