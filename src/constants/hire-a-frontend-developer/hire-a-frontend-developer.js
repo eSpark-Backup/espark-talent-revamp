@@ -241,13 +241,7 @@ export const HIRE_FRONTEND_DEVELOPER = [
           title: `Back-End Libraries & Frameworks`,
           gridLg: 4,
           gridmd: 4,
-          items: [
-            `Javascript`,
-            `Python`,
-            `Ruby`,
-            `Java`,
-            `C#`,
-          ],
+          items: [`Javascript`, `Python`, `Ruby`, `Java`, `C#`],
         },
         {
           id: 2,
