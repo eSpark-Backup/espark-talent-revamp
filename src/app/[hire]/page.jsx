@@ -4,7 +4,7 @@ import { HIRE_SEO, GLOBAL_SEO } from '@/constants/seo-data';
 import { HIRES_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 import HireDeveloper from '@/components/hire-developer/HireDeveloper';
-import { HIRE_DEVELOPERS } from '@/constants/hire-a-developer/hire-a-developer';
+import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
