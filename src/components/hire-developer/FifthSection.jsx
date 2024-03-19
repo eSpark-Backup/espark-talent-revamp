@@ -102,11 +102,7 @@ const FifthSection = ({ data }) => {
                 {item?.items.map((chip, index) => (
                   <Chip
                     key={index}
-                    avatar={
-                      <Avatar
-                        src={'/images/hire-developer/bulit.png'}
-                      />
-                    }
+                    avatar={<Avatar src={'/images/hire-developer/bulit.png'} />}
                     label={
                       <Typography
                         variant="h3"
