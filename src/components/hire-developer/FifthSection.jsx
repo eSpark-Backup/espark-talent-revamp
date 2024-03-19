@@ -104,7 +104,7 @@ const FifthSection = ({ data }) => {
                     key={index}
                     avatar={
                       <Avatar
-                        src={'/images/hire-a-frontend-developer/bulit.png'}
+                        src={'/images/hire-developer/bulit.png'}
                       />
                     }
                     label={
