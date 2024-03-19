@@ -149,6 +149,7 @@ export const HIRE_DEVELOPERS = [
   },
   {
     path: 'hire-a-backend-developer',
+    bgImage: `/images/hire-developer/bgimage.png`,
     heroSection: {
       logo: `/images/eSpark-Talent-Logo.svg`,
       logoLink: `/`,
