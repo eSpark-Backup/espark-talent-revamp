@@ -1,4 +1,4 @@
-export const HIRE_FRONTEND_DEVELOPER = [
+export const HIRE_DEVELOPERS = [
   {
     path: 'hire-a-frontend-developer',
     heroSection: {
