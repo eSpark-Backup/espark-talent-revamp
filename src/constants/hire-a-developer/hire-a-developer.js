@@ -47,7 +47,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Top 1% Front-End Talent `,
-          paragraph: `Join the Exclusive Hub of Elite Backend Developers. Our members are at the forefront of backend development, with proficiency in the latest technologies and frameworks.`,
+          paragraph: `Join an elite hub of top front-end developers, HTML/CSS specialists, JavaScript experts, and Responsive Web Design professionals —ranked among the top 1% of UI developers globally for their exceptional talent.`,
         },
         {
           id: 3,
@@ -194,7 +194,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Top 1% Back-End Talent `,
-          paragraph: `Join an elite hub of top back-end developers, HTML/CSS specialists, JavaScript experts, and Responsive Web Design professionals —ranked among the top 1% of UI developers globally for their exceptional talent.`,
+          paragraph: `Join the Exclusive Hub of Elite Backend Developers. Our members are at the forefront of backend development, with proficiency in the latest technologies and frameworks.`,
         },
         {
           id: 3,
