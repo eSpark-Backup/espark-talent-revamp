@@ -186,7 +186,7 @@ export const HIRE_DEVELOPERS = [
           vertical: '/images/hire-a-frontend-developer/vertical_line.svg',
           alt: `icon`,
           title: `Time Zone Harmony `,
-          paragraph: `Collaborate effectively with top front-end developers coordinated with your project's time zones, offering timely delivery and meeting business objectives.`,
+          paragraph: `Collaborate effectively with top Back-end developers coordinated with your project's time zones, offering timely delivery and meeting business objectives.`,
         },
         {
           id: 2,
