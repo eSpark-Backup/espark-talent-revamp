@@ -21,7 +21,7 @@ const SecondSection = ({ data }) => {
               fontWeight: 700,
               lineHeight: 1.4,
               color: '#001C63',
-              px: { xs: '5%', md: '7%' },
+              px: { xs: '5%', md: '11%', lg: '5%' },
             }}
             dangerouslySetInnerHTML={{
               __html: data?.title,
