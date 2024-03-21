@@ -85,7 +85,7 @@ const CustomSectionSlider = ({ items }) => {
                   <Box
                     sx={{
                       width: 'auto',
-                      height: '89.498px',
+                      height: '59.498px',
                       display: 'flex',
                       borderRadius: '20px 20px 0 0 ',
                       background: '#F7F8FB',
@@ -119,10 +119,10 @@ const CustomSectionSlider = ({ items }) => {
                         fontSize: '20px',
                         fontWeight: 600,
                         '@media(max-width: 425px)': {
-                          fontSize: '18px',
+                          fontSize: '13.34px',
                         },
                         '@media(max-width: 280px)': {
-                          fontSize: '16px',
+                          fontSize: '13.34px',
                         },
                       }}
                     >
@@ -142,10 +142,11 @@ const CustomSectionSlider = ({ items }) => {
                         fontWeight: 500,
                         lineHeight: '23px',
                         '@media(max-width: 425px)': {
-                          fontSize: '15px',
+                          fontSize: '10.67px',
+                          lineHeight: '15.41px',
                         },
                         '@media(max-width: 280px)': {
-                          fontSize: '13px',
+                          fontSize: '10.67px',
                         },
                       }}
                       color="initial"
