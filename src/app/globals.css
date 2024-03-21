@@ -1488,3 +1488,6 @@ span {
 .thankyou-content li::before {
   content: url(/images/wiki/wiki-icon.svg);
 }
+#hireDev .swiper-pagination{
+  bottom: var(--swiper-pagination-bottom, -4px) !important;
+}

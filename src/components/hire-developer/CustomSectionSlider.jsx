@@ -15,7 +15,8 @@ const CustomSectionSlider = ({ items }) => {
         spaceBetween={1}
         modules={[Pagination]}
         className="mySwiper"
-        pagination={{ clickable: true, el: '.swiper-pagination' }}
+        id="hireDev"
+        pagination={true}
         breakpoints={{
           280: {
             slidesPerView: 1,
@@ -31,7 +32,7 @@ const CustomSectionSlider = ({ items }) => {
             slidesPerView: 2,
             pagination: {
               el: '.swiper-pagination',
-              clickable: true,
+              clickable: false,
             },
             containerClass: 'swiper-container',
             wrapperClass: 'swiper-wrapper',
@@ -47,6 +48,7 @@ const CustomSectionSlider = ({ items }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                pb:3
               }}
             >
               <Grid
