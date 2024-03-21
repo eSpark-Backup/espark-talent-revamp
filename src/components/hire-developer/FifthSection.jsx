@@ -1,13 +1,23 @@
-import { Avatar, Box, Chip, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import {
+  Avatar,
+  Box,
+  Chip,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import React from 'react';
 
 const FifthSection = ({ data }) => {
-    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
-    <Box sx={{
-      backgroundColor: `${isSmallScreen ? '' : '#F7F8FF'}`,
-      py: 3
-    }}>
+    <Box
+      sx={{
+        backgroundColor: `${isSmallScreen ? '' : '#F7F8FF'}`,
+        py: 3,
+      }}
+    >
       <Container>
         <Box py={2}>
           <Typography

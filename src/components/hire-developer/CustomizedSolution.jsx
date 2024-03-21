@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const CustomizedSolution = ({ data }) => {
   const { bgImage, title, descrcipton, items } = data;
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <>
       <Box
@@ -18,9 +18,9 @@ const pathname = usePathname()
           backgroundImage: `url(${isSmallScreen ? '' : bgImage})`,
           backgroundColor: `${isSmallScreen ? '#F7F8FF' : ''}`,
           pt: 4,
-          pb:  isSmallScreen ? 4:15,
+          pb: isSmallScreen ? 4 : 15,
           '@media(max-width: 425px)': {
-            pb: pathname ? 4:15,
+            pb: pathname ? 4 : 15,
           },
         }}
       >
@@ -84,7 +84,11 @@ const pathname = usePathname()
         </Box>
         {items && (
           <>
-            {isSmallScreen ? (<CustomSectionSlider items={items} />):( <CustomSection items={items} />)}
+            {isSmallScreen ? (
+              <CustomSectionSlider items={items} />
+            ) : (
+              <CustomSection items={items} />
+            )}
           </>
         )}
       </Box>
