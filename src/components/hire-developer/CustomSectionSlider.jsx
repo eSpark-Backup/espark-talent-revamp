@@ -48,7 +48,7 @@ const CustomSectionSlider = ({ items }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                pb:3
+                pb: 3,
               }}
             >
               <Grid
