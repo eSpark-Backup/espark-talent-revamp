@@ -13,7 +13,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-frontend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Front-End Solution? <span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Front-End Solution? <br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized front-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in front-end development. Let's connect and enhance your front-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
@@ -161,7 +161,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-backend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Back-End Solution? <span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Back-End Solution? <br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in back-end development. Let's connect and enhance your back-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
