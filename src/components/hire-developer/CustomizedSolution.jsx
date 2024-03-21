@@ -18,9 +18,9 @@ const CustomizedSolution = ({ data }) => {
           backgroundImage: `url(${isSmallScreen ? '' : bgImage})`,
           backgroundColor: `${isSmallScreen ? '#F7F8FF' : ''}`,
           pt: 4,
-          pb: isSmallScreen ? 4 : 15,
+          pb: isSmallScreen ? 1 : 15,
           '@media(max-width: 425px)': {
-            pb: pathname ? 4 : 15,
+            pb: pathname ? 1 : 15,
           },
         }}
       >
@@ -84,7 +84,7 @@ const CustomizedSolution = ({ data }) => {
         </Box>
         {items && (
           <>
-            {isSmallScreen ? (
+            {isSmallScreen && pathname === '/hire-a-backend-developer' ? (
               <CustomSectionSlider items={items} />
             ) : (
               <CustomSection items={items} />
