@@ -1,8 +1,5 @@
-'use client';
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { usePathname } from 'next/navigation';
@@ -49,7 +46,6 @@ const CustomSectionSlider = ({ items }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 pb: 4,
-                // mx: 2,
               }}
             >
               <Grid
@@ -101,6 +97,10 @@ const CustomSectionSlider = ({ items }) => {
                       sx={{
                         width: 42,
                         height: 42,
+                        '@media(max-width: 480px)': {
+                          width: 35,
+                          height: 35,
+                        },
                         '@media(max-width: 425px)': {
                           width: 30,
                           height: 30,
@@ -137,19 +137,29 @@ const CustomSectionSlider = ({ items }) => {
                     sx={{
                       p: '10px 20px 20px 20px',
                       borderRadius: '0 0 20px 20px',
+                      height: '100px',
                       '@media(max-width: 480px)': {
-                        minHeight: '145px',
+                          height: '100px',
                       },
-                      '@media(max-width: 425px)': {
-                        minHeight: '90px',
+                      '@media(min-width: 480px) and (max-width: 480px)': {
+                          height: '100px',
+                        },
+                      '@media(min-width: 4px) and (max-width: 480px)': {
+                          height: '100px',
+                        },
+                        '@media(max-width: 425px)': {
+                          height: '80px',
                       },
                       '@media(max-width: 375px)': {
-                        minHeight: '110px',
-                      },
+                          height: '100px',
+                        },
                       '@media(max-width: 320px)': {
-                        minHeight: '120px',
-                      },
-                      minHeight: '90px',
+                          height: '115px',
+                        },
+                      //   '@media(max-width: 280px)': {
+                      //     height: '100px',
+                      //   },
+                      overflow: 'hidden', 
                     }}
                   >
                     <Typography
@@ -158,6 +168,10 @@ const CustomSectionSlider = ({ items }) => {
                         fontSize: '15px',
                         fontWeight: 500,
                         lineHeight: '23px',
+                        '@media(max-width: 480px)': {
+                          fontSize: '12px',
+                          lineHeight: '18px',
+                        },
                         '@media(max-width: 425px)': {
                           fontSize: '10.67px',
                           lineHeight: '15.41px',
