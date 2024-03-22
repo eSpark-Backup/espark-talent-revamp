@@ -1,9 +1,23 @@
-import { Avatar, Box, Chip, Container, Grid, Typography } from '@mui/material';
+import {
+  Avatar,
+  Box,
+  Chip,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import React from 'react';
 
 const FifthSection = ({ data }) => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
-    <Box sx={{ backgroundColor: '#F7F8FF', py: 3 }}>
+    <Box
+      sx={{
+        backgroundColor: `${isSmallScreen ? '' : '#F7F8FF'}`,
+        py: 3,
+      }}
+    >
       <Container>
         <Box py={2}>
           <Typography
@@ -72,9 +86,9 @@ const FifthSection = ({ data }) => {
                   lineHeight: '48px',
                   color: '#029894',
                   fontSize: {
-                    xs: '16px',
-                    sm: '16px',
-                    md: '18px',
+                    xs: '22px',
+                    sm: '22px',
+                    md: '22px',
                     lg: '22px',
                     xl: '22px',
                   },
@@ -102,11 +116,7 @@ const FifthSection = ({ data }) => {
                 {item?.items.map((chip, index) => (
                   <Chip
                     key={index}
-                    avatar={
-                      <Avatar
-                        src={'/images/hire-a-frontend-developer/bulit.png'}
-                      />
-                    }
+                    avatar={<Avatar src={'/images/hire-developer/bulit.png'} />}
                     label={
                       <Typography
                         variant="h3"

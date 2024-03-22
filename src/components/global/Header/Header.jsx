@@ -58,7 +58,8 @@ const Header = () => {
         pathName !== '/demo' &&
         pathName !== '/thankyou' &&
         pathName !== '/book-a-meeting' &&
-        pathName !== '/hire-a-frontend-developer' && (
+        pathName !== '/hire-a-frontend-developer' &&
+        pathName !== '/hire-a-backend-developer' && (
           <Box
             sx={{
               background: '#F7F7F7',

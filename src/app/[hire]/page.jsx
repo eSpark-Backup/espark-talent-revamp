@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { HIRE_SEO, GLOBAL_SEO } from '@/constants/seo-data';
 import { HIRES_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
-import HireAFrontendDeveloper from '@/components/hire-a-frontend-developer/HireAFrontendDeveloper';
-import { HIRE_FRONTEND_DEVELOPER } from '@/constants/hire-a-frontend-developer/hire-a-frontend-developer';
+import HireDeveloper from '@/components/hire-developer/HireDeveloper';
+import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
@@ -58,9 +58,7 @@ export async function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const slug = params.hire;
-  const data = HIRE_FRONTEND_DEVELOPER?.filter(
-    (item) => item?.path === slug
-  )[0];
+  const data = HIRE_DEVELOPERS?.filter((item) => item?.path === slug)[0];
   if (!params || !params.hire) {
     return (
       <div>
@@ -74,7 +72,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
-        <HireAFrontendDeveloper data={data} />
+        <HireDeveloper data={data} />
       </>
     );
   } catch (error) {
