@@ -19,7 +19,7 @@ const CustomSectionSlider = ({ items }) => {
         pagination={true}
         breakpoints={{
           280: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
@@ -49,6 +49,7 @@ const CustomSectionSlider = ({ items }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 pb: 4,
+                mx: 2,
               }}
             >
               <Grid
@@ -61,7 +62,7 @@ const CustomSectionSlider = ({ items }) => {
                   justifyContent: 'center',
                   height: `${pathname == '/hire-a-frontend-developer' ? '250px' : ''}`,
                   width: '140px',
-                  m: 1,
+                  my: 1,
                 }}
               >
                 <Box
@@ -77,7 +78,7 @@ const CustomSectionSlider = ({ items }) => {
                     background: '#fff',
                     boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                     '@media(max-width: 425px)': {
-                      mx: 1.2,
+                      mx: 0.8,
                       height: 'auto',
                     },
                   }}
@@ -133,6 +134,16 @@ const CustomSectionSlider = ({ items }) => {
                     sx={{
                       p: '10px 20px 20px 20px',
                       borderRadius: '0 0 20px 20px',
+                      '@media(max-width: 425px)': {
+                        minHeight: '90px',
+                      },
+                      '@media(max-width: 375px)': {
+                        minHeight: '110px',
+                      },
+                      '@media(max-width: 320px)': {
+                        minHeight: '120px',
+                      },
+                      minHeight: '90px',
                     }}
                   >
                     <Typography
