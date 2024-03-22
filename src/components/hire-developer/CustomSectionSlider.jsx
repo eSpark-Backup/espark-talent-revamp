@@ -77,7 +77,7 @@ const CustomSectionSlider = ({ items }) => {
                     borderRadius: '20px',
                     background: '#fff',
                     boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
-                    '@media(max-width: 425px)': {
+                    '@media(max-width: 480px)': {
                       mx: 0.8,
                       height: 'auto',
                     },
@@ -119,6 +119,9 @@ const CustomSectionSlider = ({ items }) => {
                         color: '#001C63',
                         fontSize: '20px',
                         fontWeight: 600,
+                        '@media(max-width: 480px)': {
+                          fontSize: '15px',
+                        },
                         '@media(max-width: 425px)': {
                           fontSize: '13.34px',
                         },
@@ -134,6 +137,9 @@ const CustomSectionSlider = ({ items }) => {
                     sx={{
                       p: '10px 20px 20px 20px',
                       borderRadius: '0 0 20px 20px',
+                      '@media(max-width: 480px)': {
+                        minHeight: '145px',
+                      },
                       '@media(max-width: 425px)': {
                         minHeight: '90px',
                       },
