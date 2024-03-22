@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const CustomSectionSlider = ({ items }) => {
   const pathname = usePathname();
   return (
-    <Box sx={{mx: 2}}>
+    <Box sx={{ mx: 2 }}>
       <Swiper
         spaceBetween={1}
         modules={[Pagination]}
