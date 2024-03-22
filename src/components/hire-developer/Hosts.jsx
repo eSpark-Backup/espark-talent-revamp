@@ -106,7 +106,7 @@ const Hosts = ({ data }) => {
                 alignItems: 'center',
                 flexDirection: 'column',
                 borderRadius: '20px',
-                boxShadow: '0 9px  30pc rgba(0,0,0,0.19)',
+                boxShadow: '0px 9px 29.5px 0px #00000030',
                 backgroundColor: 'rgba(246, 241, 241, 0.78)',
                 border: '1px',
               }}

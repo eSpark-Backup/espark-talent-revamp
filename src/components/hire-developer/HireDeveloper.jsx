@@ -13,12 +13,19 @@ import { Box } from '@mui/material';
 import Hosts from './Hosts';
 import CustomizedSolution from './CustomizedSolution';
 
-const HireAFrontendDeveloper = ({ data }) => {
+const HireDeveloper = ({ data }) => {
   return (
     <>
       <HireHeroSection data={data?.heroSection} />
       <SecondSection data={data?.secondSection} />
-      <Box>
+      <Box
+        sx={{
+          backgroundImage: `url(${data?.bgImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: `100%`,
+          color: '#fff',
+        }}
+      >
         <ClientSays data={OUR_CLIENT_SAYS} />
         <CustomComponent />
         <Perks
@@ -36,8 +43,8 @@ const HireAFrontendDeveloper = ({ data }) => {
 };
 
 // Define PropTypes
-HireAFrontendDeveloper.propTypes = {
+HireDeveloper.propTypes = {
   data: PropTypes.array.isRequired, // Assuming data is an array
 };
 
-export default HireAFrontendDeveloper;
+export default HireDeveloper;
