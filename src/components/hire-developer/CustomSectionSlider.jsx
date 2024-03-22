@@ -139,27 +139,27 @@ const CustomSectionSlider = ({ items }) => {
                       borderRadius: '0 0 20px 20px',
                       height: '100px',
                       '@media(max-width: 480px)': {
-                          height: '100px',
+                        height: '100px',
                       },
                       '@media(min-width: 480px) and (max-width: 480px)': {
-                          height: '100px',
-                        },
+                        height: '100px',
+                      },
                       '@media(min-width: 4px) and (max-width: 480px)': {
-                          height: '100px',
-                        },
-                        '@media(max-width: 425px)': {
-                          height: '80px',
+                        height: '100px',
+                      },
+                      '@media(max-width: 425px)': {
+                        height: '80px',
                       },
                       '@media(max-width: 375px)': {
-                          height: '100px',
-                        },
+                        height: '100px',
+                      },
                       '@media(max-width: 320px)': {
-                          height: '115px',
-                        },
+                        height: '115px',
+                      },
                       //   '@media(max-width: 280px)': {
                       //     height: '100px',
                       //   },
-                      overflow: 'hidden', 
+                      overflow: 'hidden',
                     }}
                   >
                     <Typography
