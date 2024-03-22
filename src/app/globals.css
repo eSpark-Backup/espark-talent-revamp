@@ -1525,7 +1525,7 @@ span {
   opacity: 1;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   #hireDev .swiper-pagination .swiper-pagination-bullet:first-child {
     border-radius: 10px 0px 0px 10px;
   }
