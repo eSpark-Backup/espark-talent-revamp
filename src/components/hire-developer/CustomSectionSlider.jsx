@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 const CustomSectionSlider = ({ items }) => {
   const pathname = usePathname();
   return (
-    <Box>
+    <Box sx={{mx: 2}}>
       <Swiper
         spaceBetween={1}
         modules={[Pagination]}
@@ -22,7 +22,7 @@ const CustomSectionSlider = ({ items }) => {
             slidesPerView: 1.2,
             pagination: {
               el: '.swiper-pagination',
-              clickable: true,
+              clickable: false,
             },
             containerClass: 'swiper-container',
             wrapperClass: 'swiper-wrapper',
@@ -49,7 +49,7 @@ const CustomSectionSlider = ({ items }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 pb: 4,
-                mx: 2,
+                // mx: 2,
               }}
             >
               <Grid
