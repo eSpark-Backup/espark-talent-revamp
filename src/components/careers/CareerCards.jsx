@@ -10,12 +10,18 @@ import {
   Pagination,
   PaginationItem,
   useMediaQuery,
+  Modal,
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
+import CareersForm from './CareersForm';
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import { CAREERS_FORM_DATA } from '@/constants/careers-form-data';
 
 const CareerCards = ({ data, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
+  const [openModal, setOpenModal] = useState(false);
+  const [jobData, setJobData] = useState(null);
 
   const filteredData =
     selectedCategory === 'all'
@@ -37,6 +43,7 @@ const CareerCards = ({ data, categories }) => {
     setSelectedCategory(event.target.value);
     setPage(1);
   };
+
   const handlePaginationChange = (event, value) => {
     setPage(value);
     window.scrollTo({
@@ -44,7 +51,20 @@ const CareerCards = ({ data, categories }) => {
       behavior: 'smooth',
     });
   };
+
+  const handleApplyButtonClick = (selectedJobData) => {
+    setOpenModal(true);
+    setJobData(selectedJobData);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   useEffect(() => {}, [selectedCategory]);
+
+  const { form } = CAREERS_FORM_DATA;
+
   return (
     <>
       <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
@@ -169,13 +189,69 @@ const CareerCards = ({ data, categories }) => {
                 <Box py={{ xs: '10px', sm: '10px' }}>
                   <ESparkButton
                     title={`Apply Now >`}
-                    link={item?.applyLink}
+                    link={'#'}
+                    onClick={() => handleApplyButtonClick(item)}
                     color={'primary'}
                   />
                 </Box>
               </Grid>
             </Grid>
           ))}
+          <Modal
+            open={openModal}
+            onClose={handleCloseModal}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <>
+              <Box
+                sx={{
+                  position: { lg: 'absolute', sm: 'relative' },
+                  top: { lg: '50%', sm: '50%' },
+                  left: { lg: '50%', sm: '50%' },
+                  transform: {
+                    lg: 'translate(-50%, -50%)',
+                    sm: 'translate(-50%, -50%)',
+                  },
+                  width: 'auto',
+                  bgcolor: 'background.paper',
+                  border: '2px solid #000',
+                  borderRadius: '15px',
+                  boxShadow: 24,
+                }}
+              >
+                <Box textAlign={'right'} px={2} pt={2}>
+                  <Box
+                    onClick={handleCloseModal}
+                    sx={{
+                      fontSize: '20px',
+                      fontWeight: 800,
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                  >
+                    <CloseSharpIcon color="primary" />
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    px: 4,
+                    pb: 4,
+                    pt: 1,
+                  }}
+                >
+                  {jobData && (
+                    <CareersForm
+                      form={form}
+                      jobData={jobData}
+                      handleCloseModal={handleCloseModal}
+                    />
+                  )}
+                </Box>
+              </Box>
+            </>
+          </Modal>
           {filteredData?.length > perPage && (
             <Box
               spacing={2}
