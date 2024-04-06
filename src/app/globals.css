@@ -1552,3 +1552,34 @@ span {
     width: 10;
   }
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding-right: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+.mui-10bxxrr {
+  width: auto !important;
+  height: auto !important;
+}
+
+@media screen and (max-width: 786px) {
+  .mui-10bxxrr {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mui-10bxxrr {
+    width: 100% !important;
+    height: 100vh !important;
+  }
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
