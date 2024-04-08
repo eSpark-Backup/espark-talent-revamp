@@ -17,7 +17,7 @@ export async function getJob() {
     }`,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -33,7 +33,7 @@ export async function getJobCategories() {
      } `,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -55,7 +55,7 @@ title,}
 `,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -80,7 +80,7 @@ export async function getSingleBlog(slug) {
     { slug },
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -96,7 +96,7 @@ export async function getBlogCategories() {
     }`,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -119,7 +119,7 @@ export async function getWiki() {
 } `,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -143,7 +143,7 @@ export async function getSingleWiki(slug) {
     { slug },
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -159,7 +159,7 @@ export async function getWikiCategories() {
     }`,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
@@ -182,7 +182,7 @@ role
   } `,
     {
       next: {
-        revalidate: 2 * 60,
+        revalidate: 3600,
       },
     }
   );
