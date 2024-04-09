@@ -1,11 +1,17 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+  Skeleton,
+} from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Pagination, PaginationItem } from '@mui/material';
-import Skeleton from 'react-loading-skeleton';
 import { READ_MORE } from '@/constants/blogs';
 
 const BlogCards = ({ data }) => {
@@ -15,7 +21,7 @@ const BlogCards = ({ data }) => {
     setPage(value);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+  const blogs = data ? data : [1, 2, 3, 4, 5, 6];
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
@@ -34,7 +40,7 @@ const BlogCards = ({ data }) => {
     <Box sx={{ my: '3%' }}>
       <Container>
         <Grid container spacing={2} sx={{ py: '2%' }}>
-          {data?.slice(startIndex, endIndex)?.map((item, index) => (
+          {blogs?.slice(startIndex, endIndex)?.map((item, index) => (
             <Grid item xs={12} sm={cardsInRow} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
@@ -46,7 +52,13 @@ const BlogCards = ({ data }) => {
                 <Link href={`/blogs/${item?.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      {item ? (
+                      {!item?.featureImage ? (
+                        <Skeleton
+                          width={350}
+                          height={'300px'}
+                          style={{ borderRadius: '15px' }}
+                        />
+                      ) : (
                         <Image
                           quality="85"
                           priority={true}
@@ -56,25 +68,21 @@ const BlogCards = ({ data }) => {
                           height={100}
                           style={{ borderRadius: '15px' }}
                         />
-                      ) : (
-                        <Skeleton
-                          width={900}
-                          height={100}
-                          style={{ borderRadius: '15px' }}
-                        />
                       )}
                     </span>
-                    <span className="date">
-                      {item ? (
-                        Intl.DateTimeFormat('en-US', {
-                          year: 'numeric',
-                          month: 'short',
-                          day: '2-digit',
-                        }).format(new Date(item?.publishedAt))
-                      ) : (
-                        <Skeleton width={80} />
-                      )}
-                    </span>
+                    {!item?.publishedAt ? (
+                      ''
+                    ) : (
+                      <span className="date">
+                        {item
+                          ? Intl.DateTimeFormat('en-US', {
+                              year: 'numeric',
+                              month: 'short',
+                              day: '2-digit',
+                            }).format(new Date(item?.publishedAt))
+                          : ''}
+                      </span>
+                    )}
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
@@ -92,7 +100,9 @@ const BlogCards = ({ data }) => {
                         lineHeight: '26px',
                       }}
                     >
-                      {item ? item.title : <Skeleton width={200} height={24} />}
+                      {item?.title || (
+                        <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+                      )}
                     </Typography>
                   </Link>
                   <Typography
@@ -109,104 +119,116 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {item ? item.subtitle : <Skeleton count={2} />}
+                    {!item?.subtitle ? (
+                      <>
+                        <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                        <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                        <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                      </>
+                    ) : (
+                      item.subtitle
+                    )}
                   </Typography>
-                  <Link href={`/blogs/${item?.slug}`}>
-                    <Box
-                      className="hoverItem"
-                      sx={{
-                        position: 'relative',
-                        display: 'flex',
-                        transition: 'background-color 0.5s, color 0.5s',
-                        border: 'none',
-                        zIndex: 1,
-                        backgroundColor: 'transparent',
-                        width: { xs: '100%', md: '60%' },
-                        borderRadius: '5px',
-                        fontSize: '16px',
-                        fontWeight: 500,
-                        margin: '5px 5px',
-                        overflow: 'hidden',
-                        '&::before': {
-                          content: '""',
-                          position: 'absolute',
-                          left: 0,
-                          top: 0,
-                          width: '100%',
-                          height: '100%',
-                          backgroundColor: '#029894',
-                          zIndex: -1,
-                          transform: 'translateX(-100%)',
-                          transition: 'transform 0.5s',
-                        },
-                        '&:hover': {
-                          color: '#fff ',
-                          '&::before': {
-                            transform: 'translateX(0)',
-                          },
-                        },
-                      }}
-                    >
+                  {!item?.slug ? (
+                    <Skeleton width={'200px'} sx={{ fontSize: '4rem' }} />
+                  ) : (
+                    <Link href={`/blogs/${item?.slug}`}>
                       <Box
+                        className="hoverItem"
                         sx={{
-                          backgroundColor: '#029894',
-                          padding: '10px',
-                          borderRadius: '5px',
+                          position: 'relative',
                           display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          mr: { xs: '6px', md: '10px', lg: '15px' },
+                          transition: 'background-color 0.5s, color 0.5s',
+                          border: 'none',
+                          zIndex: 1,
+                          backgroundColor: 'transparent',
+                          width: { xs: '100%', md: '60%' },
+                          borderRadius: '5px',
+                          fontSize: '16px',
+                          fontWeight: 500,
+                          margin: '5px 5px',
+                          overflow: 'hidden',
+                          '&::before': {
+                            content: '""',
+                            position: 'absolute',
+                            left: 0,
+                            top: 0,
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: '#029894',
+                            zIndex: -1,
+                            transform: 'translateX(-100%)',
+                            transition: 'transform 0.5s',
+                          },
                           '&:hover': {
-                            color: '#fff',
+                            color: '#fff ',
                             '&::before': {
                               transform: 'translateX(0)',
                             },
                           },
                         }}
                       >
-                        <ArrowForwardIosIcon
+                        <Box
                           sx={{
-                            color: '#fff',
-                            transition: 'left 0.5s',
+                            backgroundColor: '#029894',
+                            padding: '10px',
+                            borderRadius: '5px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            mr: { xs: '6px', md: '10px', lg: '15px' },
                             '&:hover': {
-                              left: '50%',
+                              color: '#fff',
+                              '&::before': {
+                                transform: 'translateX(0)',
+                              },
+                            },
+                          }}
+                        >
+                          <ArrowForwardIosIcon
+                            sx={{
+                              color: '#fff',
+                              transition: 'left 0.5s',
+                              '&:hover': {
+                                left: '50%',
+                                color: '#fff',
+                              },
+                            }}
+                          />
+                        </Box>
+                        <Typography
+                          className="hoverIcon"
+                          sx={{
+                            fontSize: {
+                              xs: '13px',
+                              sm: '13px',
+                              md: '15px',
+                              lg: '20px',
+                            },
+                            display: 'flex',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            color: '#09114A',
+                            '&:hover': {
+                              width: '100%',
                               color: '#fff',
                             },
                           }}
-                        />
+                        >
+                          {READ_MORE}
+                        </Typography>
                       </Box>
-                      <Typography
-                        className="hoverIcon"
-                        sx={{
-                          fontSize: {
-                            xs: '13px',
-                            sm: '13px',
-                            md: '15px',
-                            lg: '20px',
-                          },
-                          display: 'flex',
-                          alignItems: 'center',
-                          textAlign: 'center',
-                          color: '#09114A',
-                          '&:hover': {
-                            width: '100%',
-                            color: '#fff',
-                          },
-                        }}
-                      >
-                        {READ_MORE}
-                      </Typography>
-                    </Box>
-                  </Link>
+                    </Link>
+                  )}
                 </Box>
               </Box>
             </Grid>
           ))}
         </Grid>
-        {data?.length > itemsPerPage && (
+        {blogs?.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(data?.length / itemsPerPage)}
+              count={Math.ceil(blogs?.length / itemsPerPage)}
               page={page}
               onChange={handleChangePage}
               color="primary"

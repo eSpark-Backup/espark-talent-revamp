@@ -4,58 +4,50 @@ export async function getJob() {
   return client.fetch(
     `*[_type == "job"] {
       _id,
-      applyLink,
       description,
       experience,
-      "jobCategory": jobCategory._ref,
       jobTiming,
       jobType,
       lastDateToApply,
       location,
       "slug": slug.current,
-      title
+      title,
+      metaTitle,
+      metaDescription,
+      url,
+      "metaImage":metaImage.asset->url
     }`,
     {
       next: {
-        revalidate: 3600,
+        revalidate: 1800,
       },
     }
   );
 }
 
-export async function getJobCategories() {
-  return client.fetch(
-    ` *[_type == "jobCategory"]
-    {
-      _id,
-      title,
-      "slug":slug.current,
-     } `,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
-  );
-}
 export async function getBlog() {
   return client.fetch(
     ` *[_type == "blog"]
-{_id,
-  "author":author._ref,
-"bannerImage":bannerImage.asset->url,
-bannerTitle,
-body,
-"featureImage":featureImage.asset->url,
-publishedAt,
- "slug": slug.current,
-subtitle,
-tags,
-title,}
-`,
+    {
+      _id,
+      "author":author._ref,
+      "bannerImage":bannerImage.asset->url,
+      bannerTitle,
+      body,
+      "featureImage":featureImage.asset->url,
+      publishedAt,
+      "slug": slug.current,
+      subtitle,
+      tags,
+      title,
+      metaTitle,
+      metaDescription,
+      url,
+      "metaImage":metaImage.asset->url
+    }`,
     {
       next: {
-        revalidate: 3600,
+        revalidate: 1800,
       },
     }
   );
@@ -63,7 +55,8 @@ title,}
 
 export async function getSingleBlog(slug) {
   return client.fetch(
-    `*[_type == "blog" && slug.current == $slug][0] {
+    `*[_type == "blog" && slug.current == $slug][0]
+    {
       _id,
       "author": author._ref,
       imageAlt,
@@ -75,28 +68,16 @@ export async function getSingleBlog(slug) {
       "slug": slug.current,
       subtitle,
       tags,
-      title
+      title,
+      metaTitle,
+      metaDescription,
+      url,
+      "metaImage":metaImage.asset->url
     }`,
     { slug },
     {
       next: {
-        revalidate: 3600,
-      },
-    }
-  );
-}
-
-export async function getBlogCategories() {
-  return client.fetch(
-    `*[_type == "jobCategory"] {
-      _id,
-      id,
-      "slug": slug.current,
-      title
-    }`,
-    {
-      next: {
-        revalidate: 3600,
+        revalidate: 1800,
       },
     }
   );
@@ -104,22 +85,27 @@ export async function getBlogCategories() {
 
 export async function getWiki() {
   return client.fetch(
-    ` *[_type == "wiki"] 
- {_id,
-  id,
- title,
- "slug": slug.current,
- "wikiCategory": wikiCategory._ref,
- content,
- "heroImage":heroImage.asset->url,
- "iconImage":iconImage.asset->url,
- salary,
- shortDescription,
- title
-} `,
+    ` *[_type == "wiki"]
+    {
+      _id,
+      id,
+      title,
+      "slug": slug.current,
+      wikiCategory,
+      content,
+      "heroImage":heroImage.asset->url,
+      "iconImage":iconImage.asset->url,
+      salary,
+      shortDescription,
+      title,
+      metaTitle,
+      metaDescription,
+      url,
+      "metaImage":metaImage.asset->url
+    } `,
     {
       next: {
-        revalidate: 3600,
+        revalidate: 1800,
       },
     }
   );
@@ -127,62 +113,65 @@ export async function getWiki() {
 
 export async function getSingleWiki(slug) {
   return client.fetch(
-    `*[_type == "wiki" && slug.current == $slug][0] {
+    `*[_type == "wiki" && slug.current == $slug][0]
+    {
       _id,
       id,
       title,
       "slug": slug.current,
-      "wikiCategory": wikiCategory->_ref,
+      wikiCategory,
       content,
       "heroImage": heroImage.asset->url,
       "iconImage": iconImage.asset->url,
       salary,
       shortDescription,
-      title
+      title,
+      metaTitle,
+      metaDescription,
+      url,
+      "metaImage":metaImage.asset->url
     }`,
     { slug },
     {
       next: {
-        revalidate: 3600,
-      },
-    }
-  );
-}
-
-export async function getWikiCategories() {
-  return client.fetch(
-    `*[_type == "wikiCategory"] {
-      _id,
-      id,
-      "slug": slug.current,
-      title
-    }`,
-    {
-      next: {
-        revalidate: 3600,
+        revalidate: 1800,
       },
     }
   );
 }
 
 export async function getPageSeo() {
-  return client.fetch(` *[_type == "pageSEO"] `);
-}
-
-export async function getAuthor() {
   return client.fetch(
-    ` *[_type == "author"]{
-    _id ,
-    "slug": slug.current,
-    about,
-"avatar":avatar.asset->url,
-firstName,
-lastName, 
-role
-  } `,
+    ` *[_type == "seo"]
+  {
+    path,
+    metaTitle,
+    metaDescription,
+    url,
+    "metaImage":metaImage.asset->url
+  }`,
     {
       next: {
-        revalidate: 3600,
+        revalidate: 1800,
+      },
+    }
+  );
+}
+export async function getAuthor() {
+  return client.fetch(
+    ` *[_type == "author"]
+    {
+      _id ,
+      "slug": slug.current,
+      about,
+      "avatar":avatar.asset->url,
+      firstName,
+      lastName,
+      role
+    } `,
+    {
+      next: {
+        revalidate: 1800,
       },
     }
   );

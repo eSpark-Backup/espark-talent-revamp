@@ -1,44 +1,42 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import BlogCards from '@/components/homepage/BlogCards';
-import Hero from '@/components/homepage/Hero';
-import { getBlog } from '@/sanity/sanity.quries';
+import { useState, useEffect } from 'react';
 import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
+import { getBlog } from '@/sanity/sanity.quries';
+import Hero from '@/components/homepage/Hero';
+import BlogCards from '../homepage/BlogCards';
 
 export default function BlogsPage() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [blogs, setBlogs] = useState(null);
+  const [error, setError] = useState('');
+
+  const fetchData = async () => {
+    try {
+      const fetchedJob = await getBlog();
+      setBlogs(fetchedJob);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setError('Error loading data. Please try again later.');
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const fetchedBlogs = await getBlog();
-        if (Array.isArray(fetchedBlogs)) {
-          setBlogs(fetchedBlogs);
-        } else {
-          throw new Error('Invalid data format');
-        }
-      } catch (error) {
-        setError(error.message || 'An error occurred while fetching blog data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchData();
-
-    const intervalId = setInterval(fetchData, 600000);
-
-    return () => clearInterval(intervalId);
+    const interval = setInterval(async () => {
+      try {
+        fetchData();
+      } catch (error) {
+        console.error('Error refreshing Blogs:', error);
+      }
+    }, 600000);
+    return () => clearInterval(interval);
   }, []);
+
+  if (error) return <p>{error}</p>;
 
   return (
     <>
       <Hero data={BLOGS_HERO_DATA} />
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {!loading && !error && <BlogCards data={blogs} />}
+      <BlogCards data={blogs} />
     </>
   );
 }
