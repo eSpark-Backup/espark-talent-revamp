@@ -8,8 +8,7 @@ async function handler(req, res) {
   const request = await req.json();
   if (req.method === 'POST') {
     try {
-      const { toAdmin, toSubmitter, adminTemplateId, data, attachments } =
-        request;
+      const { toAdmin, toSubmitter, adminTemplateId, data } = request;
       // Input validation
       if (!toAdmin) {
         throw new Error(
@@ -38,14 +37,6 @@ async function handler(req, res) {
           from: toAdmin,
           templateId: adminTemplateId,
           dynamicTemplateData: data,
-          attachments: [
-            {
-              content: attachments[0]?.content,
-              filename: attachments[0]?.filename,
-              type: attachments[0]?.type,
-              disposition: 'attachment',
-            },
-          ],
         }),
           2000;
       });
@@ -66,7 +57,6 @@ async function handler(req, res) {
   } else {
     // Method not allowed
     res.setHeader('Allow', ['POST']);
-    // res.setHeader('Content-Type', 'multipart/form-data, application/json,*/*');
     Response.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 }
