@@ -11,23 +11,23 @@ import {
   PaginationItem,
   useMediaQuery,
   Modal,
+  Skeleton,
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 import CareersForm from './CareersForm';
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import { CAREERS_FORM_DATA } from '@/constants/careers-form-data';
 
-const CareerCards = ({ data, categories }) => {
+const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [jobData, setJobData] = useState(null);
-
+  const jobs = data ? data : [1, 2, 3];
   const filteredData =
     selectedCategory === 'all'
-      ? data
-      : data?.filter((item) => item?.jobCategory === selectedCategory);
-
+      ? jobs
+      : jobs?.filter((item) => item?.title === selectedCategory);
   const perPage = 5;
   const startIndex = (page - 1) * perPage;
   const endIndex = startIndex + perPage;
@@ -93,14 +93,14 @@ const CareerCards = ({ data, categories }) => {
               }}
             >
               <MenuItem value="all">All</MenuItem>
-              {categories.map((category, index) => (
-                <MenuItem key={`job-category-${index}`} value={category?._id}>
+              {jobs?.map((category, index) => (
+                <MenuItem key={`job-category-${index}`} value={category?.title}>
                   {category?.title}
                 </MenuItem>
               ))}
             </Select>
           </Box>
-          {paginatedData.map((item, index) => (
+          {paginatedData?.map((item, index) => (
             <Grid
               key={index}
               container
@@ -127,7 +127,9 @@ const CareerCards = ({ data, categories }) => {
                 px={{ xs: '10px', sm: '20px' }}
               >
                 <Typography variant="h3" color="secondary">
-                  {item?.title}
+                  {item?.title || (
+                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+                  )}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -139,7 +141,9 @@ const CareerCards = ({ data, categories }) => {
                   }}
                   color="#000"
                 >
-                  {`${item?.location}`}
+                  {item?.location || (
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                  )}
                 </Typography>
               </Grid>
               <Grid
@@ -150,30 +154,44 @@ const CareerCards = ({ data, categories }) => {
                 lg={7}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <Typography
-                  variant="h3"
-                  color="secondary"
-                  borderTop={{
-                    md: 'none',
-                    sm: '.5px solid #ced4da',
-                    xs: '.5px solid #ced4da',
-                  }}
-                  pt="10px"
-                >
-                  Description
-                </Typography>
-                <Typography
-                  variant="body1"
-                  fontSize={{
-                    xs: '12px',
-                    sm: '12px',
-                    md: '15px',
-                    lg: '20px',
-                  }}
-                  color="#000"
-                >
-                  {item?.description}
-                </Typography>
+                {!item?.title ? (
+                  <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+                ) : (
+                  <Typography
+                    variant="h3"
+                    color="secondary"
+                    borderTop={{
+                      md: 'none',
+                      sm: '.5px solid #ced4da',
+                      xs: '.5px solid #ced4da',
+                    }}
+                    pt="10px"
+                  >
+                    Description
+                  </Typography>
+                )}
+                {!item?.description ? (
+                  <>
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                  </>
+                ) : (
+                  <Typography
+                    variant="body1"
+                    fontSize={{
+                      xs: '12px',
+                      sm: '12px',
+                      md: '15px',
+                      lg: '20px',
+                    }}
+                    color="#000"
+                  >
+                    {item?.description}
+                  </Typography>
+                )}
               </Grid>
               <Grid
                 item
@@ -186,14 +204,18 @@ const CareerCards = ({ data, categories }) => {
                 justifyContent={'center'}
                 px={{ xs: '10px', sm: '20px' }}
               >
-                <Box py={{ xs: '10px', sm: '10px' }}>
-                  <ESparkButton
-                    title={`Apply Now >`}
-                    link={'#'}
-                    onClick={() => handleApplyButtonClick(item)}
-                    color={'primary'}
-                  />
-                </Box>
+                {!item?.title ? (
+                  <Skeleton variant="text" height={100} width={200} />
+                ) : (
+                  <Box py={{ xs: '10px', sm: '10px' }}>
+                    <ESparkButton
+                      title={`Apply Now >`}
+                      link={'#'}
+                      onClick={() => handleApplyButtonClick(item)}
+                      color={'primary'}
+                    />
+                  </Box>
+                )}
               </Grid>
             </Grid>
           ))}
