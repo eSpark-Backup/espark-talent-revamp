@@ -92,7 +92,7 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
           },
         ],
       };
-      const response = await axios.post('/api/email', emailData);
+      const response = await axios.post('/api/emailwithattachments', emailData);
 
       if (response.status === 200) {
         action.resetForm();

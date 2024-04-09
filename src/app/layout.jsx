@@ -22,7 +22,7 @@ const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
 const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,
 });
-export const revalidate = 3600;
+export const revalidate = 1800;
 
 const pathname = '/';
 const filteredData =
