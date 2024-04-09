@@ -20,7 +20,6 @@ const CARD_STYLE = {
 };
 
 const WikiCards = ({ data }) => {
-  console.log(data);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const wikis = data ? data : [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const wikiCategories = [...new Set(wikis?.map((item) => item?.wikiCategory))];
@@ -41,7 +40,7 @@ const WikiCards = ({ data }) => {
     selectedCategory === 'all'
       ? wikis
       : wikis?.filter((item) => item?.wikiCategory === selectedCategory);
-
+  filteredData?.sort((a, b) => a?.id - b?.id);
   return (
     <>
       <Box sx={{ backgroundColor: '#3b59980f' }}>
@@ -80,31 +79,28 @@ const WikiCards = ({ data }) => {
               {wikiCategories ? 'All' : <Skeleton width={30} height={20} />}
             </Typography>
           </Button>
-          {wikiCategories &&
-            wikiCategories.length >= 2 &&
-            wikiCategories.map((category, index) => {
-              <Button
-                Button
-                key={index}
-                onClick={() => onSelectCategory(category)}
-                variant={selectedCategory === category ? 'contained' : ''}
-                color="primary"
-                sx={{ borderRadius: '50px', fontWeight: 600 }}
+          {wikiCategories?.map((category, index) => (
+            <Button
+              key={index}
+              onClick={() => onSelectCategory(category)}
+              variant={selectedCategory === category ? 'contained' : ''}
+              color="primary"
+              sx={{ borderRadius: '50px', fontWeight: 600 }}
+            >
+              <Typography
+                fontSize={{
+                  xs: '10px',
+                  sm: '12px',
+                  md: '15px',
+                  lg: '20px',
+                }}
+                color={selectedCategory === category ? 'white' : '#001C63'}
+                fontWeight="600"
               >
-                <Typography
-                  fontSize={{
-                    xs: '10px',
-                    sm: '12px',
-                    md: '15px',
-                    lg: '20px',
-                  }}
-                  color={selectedCategory === category ? 'white' : '#001C63'}
-                  fontWeight="600"
-                >
-                  {category || <Skeleton width={30} height={20} />}
-                </Typography>
-              </Button>;
-            })}
+                {!category ? <Skeleton width={30} height={20} /> : category}
+              </Typography>
+            </Button>
+          ))}
         </Grid>
         <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
           <Box sx={{ py: '3%' }}>
