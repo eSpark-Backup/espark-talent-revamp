@@ -67,7 +67,6 @@ async function handler(req, res) {
   } else {
     // Method not allowed
     res.setHeader('Allow', ['POST']);
-    // res.setHeader('Content-Type', 'multipart/form-data, application/json,*/*');
     Response.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 }
