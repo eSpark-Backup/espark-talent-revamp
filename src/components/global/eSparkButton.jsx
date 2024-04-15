@@ -1,8 +1,12 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const ESparkButton = ({ title, link, color, onClick, size, hover, target }) => {
+  const pathName = usePathname();
+  const book_A_demo_meeting = '/book-a-demo-meeting';
+
   let btnVariant;
 
   if (color === 'primary') {
@@ -39,7 +43,17 @@ const ESparkButton = ({ title, link, color, onClick, size, hover, target }) => {
             md: '15px',
             lg: '20px',
           }}
-          sx={{ fontWeight: 600 }}
+          sx={{
+            fontWeight: 600,
+            transition:
+              pathName === book_A_demo_meeting
+                ? 'transform 0.3s ease-in-out'
+                : 'none',
+            '&:hover': {
+              transform:
+                pathName === book_A_demo_meeting ? 'scale(0.8)' : 'none',
+            },
+          }}
         >
           {title}
         </Typography>

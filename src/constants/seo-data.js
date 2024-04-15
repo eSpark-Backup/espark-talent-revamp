@@ -36,6 +36,15 @@ export const GLOBAL_SEO = [
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
   },
   {
+    path: '/book-a-demo-meeting',
+    title: 'Tap into the Global Workforce with eSpark Talent',
+    description:
+      'Discover amazing efficiency and innovation with eSpark Talent. Our diverse expertise ensures remarkable success for your business.',
+    url: 'https://www.esparktalent.com/book-a-demo-meeting',
+    image:
+      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+  },
+  {
     path: '/what-we-do',
     title: 'We Support Business Brands with Our Expert Outsourcing ',
     description:
