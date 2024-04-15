@@ -13,7 +13,7 @@ const CustomSectionSlider = ({ items }) => {
         modules={[Pagination]}
         className="mySwiper"
         id="hireDev"
-        pagination={true}
+        pagination={pathname?.includes('/book-a-demo-meeting') ? false : true}
         breakpoints={{
           280: {
             slidesPerView: 1.2,
@@ -45,7 +45,8 @@ const CustomSectionSlider = ({ items }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                pb: 4,
+                pt: 4,
+                pb: pathname?.includes('/book-a-demo-meeting') ? 0 : 4,
               }}
             >
               <Grid

@@ -20,6 +20,7 @@ const HireForm = ({ form }) => {
   const partnersRef = useRef(null);
   const pathName = usePathname();
   const book_A_meeting = '/book-a-meeting';
+  const book_A_demo_meeting = '/book-a-demo-meeting';
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -137,6 +138,8 @@ const HireForm = ({ form }) => {
           width: 'auto',
           height: '100%',
           maxWidth: '486px',
+          position: 'relative',
+          zIndex: 10,
           display: 'flex',
           alignItems: 'center',
           mx: { md: 'auto' },
@@ -152,13 +155,13 @@ const HireForm = ({ form }) => {
             display: 'flex',
             flexDirection: 'column',
             mt: {
-              xs: pathName == book_A_meeting ? 0 : 5,
-              sm: pathName == book_A_meeting ? 0 : 5,
-              md: pathName == book_A_meeting ? 0 : 10,
+              xs: pathName == book_A_meeting || book_A_demo_meeting ? 0 : 5,
+              sm: pathName == book_A_meeting || book_A_demo_meeting ? 0 : 5,
+              md: pathName == book_A_meeting || book_A_demo_meeting ? 0 : 10,
               lg: 0,
             },
             mb: {
-              xs: pathName == book_A_meeting ? 0 : 5,
+              xs: pathName == book_A_meeting || book_A_demo_meeting ? 0 : 5,
               sm: 0,
               md: 0,
               lg: 0,
@@ -178,37 +181,40 @@ const HireForm = ({ form }) => {
             },
           }}
         >
-          <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '32px !important',
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '42.289px',
-              }}
-            >
-              {title}
-            </Typography>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '15px !important',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: { xs: '25px', sm: '27.863px' },
-              }}
-            >
-              {subTitle}
-            </Typography>
-          </Box>
+          {pathName !== book_A_demo_meeting && (
+            <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: '32px !important',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '42.289px',
+                }}
+              >
+                {title}
+              </Typography>
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: '15px !important',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: { xs: '25px', sm: '27.863px' },
+                }}
+              >
+                {subTitle}
+              </Typography>
+            </Box>
+          )}
+
           <Box component={'form'}>
             {fields &&
               fields?.map((item, index) => (
                 <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
                   <Typography
                     sx={{
-                      mb: 0.5,
+                      pb: 1.5,
                       color: '#029894',
                       fontSize: '14.448px !important',
                       fontStyle: 'normal',
@@ -282,7 +288,10 @@ const HireForm = ({ form }) => {
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: '15px !important',
+                  fontSize:
+                    pathName === '/book-a-demo-meeting'
+                      ? { xs: '11.06px !important', md: '15px !important' }
+                      : '15px !important',
                   fontStyle: 'normal',
                   fontWeight: 400,
                   linehHeight: '27.863px',
