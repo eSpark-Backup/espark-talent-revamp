@@ -389,6 +389,20 @@ span {
     top: 360px !important;
   }
 }
+@media (min-width: 280px) and (max-width: 300px) {
+  .reviews-swiper .swiper-slide {
+    width: 90% !important;
+    height: 370px !important;
+  }
+
+  .reviews-swiper .swiper-button-prev {
+    top: 360px !important;
+  }
+
+  .reviews-swiper .swiper-button-next {
+    top: 360px !important;
+  }
+}
 
 .hrFirmResponsive {
   display: none;

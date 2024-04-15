@@ -1,3 +1,4 @@
+'use client';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import CustomSection from './CustomSection';
@@ -5,9 +6,11 @@ import CustomSectionSlider from './CustomSectionSlider';
 import { usePathname } from 'next/navigation';
 
 const CustomizedSolution = ({ data }) => {
-  const { bgImage, title, descrcipton, items } = data;
+  const { bgImage, title, descrcipton, items } = data || {};
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const pathname = usePathname();
+  const book_a_demo_meeting = '/book-a-demo-meeting';
+
   return (
     <>
       <Box
@@ -16,11 +19,14 @@ const CustomizedSolution = ({ data }) => {
           height: 'auto',
           backgroundPosition: 'center',
           backgroundImage: `url(${isSmallScreen ? '' : bgImage})`,
-          backgroundColor: `${isSmallScreen ? '#F7F8FF' : ''}`,
+          backgroundColor: `${isSmallScreen && pathname !== '/book-a-demo-meeting' ? '#F7F8FF' : ''}`,
           pt: 4,
-          pb: isSmallScreen ? 1 : 15,
+          pb:
+            isSmallScreen && !pathname?.includes('/hire-a-frontend-developer')
+              ? 1.5
+              : 10,
           '@media(max-width: 425px)': {
-            pb: pathname ? 1 : 15,
+            pb: !pathname?.includes('/hire-a-frontend-developer') ? 1 : 7,
           },
         }}
       >
@@ -73,7 +79,7 @@ const CustomizedSolution = ({ data }) => {
                   md: '30px',
                   lg: '40px',
                 },
-                color: '#0E1155',
+                color: pathname === book_a_demo_meeting ? '#001C63' : '#0E1155',
                 textAlign: 'center',
                 maxWidth: '975.45px',
               }}
@@ -84,7 +90,8 @@ const CustomizedSolution = ({ data }) => {
         </Box>
         {items && (
           <>
-            {isSmallScreen && pathname === '/hire-a-backend-developer' ? (
+            {(isSmallScreen && pathname === '/hire-a-backend-developer') ||
+            (isSmallScreen && pathname === '/book-a-demo-meeting') ? (
               <CustomSectionSlider items={items} />
             ) : (
               <CustomSection items={items} />

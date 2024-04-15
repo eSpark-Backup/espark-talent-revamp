@@ -14,14 +14,26 @@ import {
   EffectFade,
 } from 'swiper/modules';
 import StarRating from './StarRating';
+import { usePathname } from 'next/navigation';
 
 const ClientSays = ({ data }) => {
+  const pathName = usePathname();
   const { slider, heading, subHeading } = data;
   return (
     <Box
       sx={{
         mt: { sm: 7, md: 9, lg: 7 },
         mb: { sm: '25%', md: '20%', lg: '13%' },
+        backgroundColor: pathName.includes('book-a-demo-meeting')
+          ? '#F7F8FF'
+          : '#fff',
+        pt: pathName.includes('book-a-demo-meeting')
+          ? {
+              xs: 3,
+              sm: 5,
+              md: 7,
+            }
+          : 0,
         '@media (min-width: 600px) and (max-width: 767px)': {
           mt: 6,
           mb: '30%',

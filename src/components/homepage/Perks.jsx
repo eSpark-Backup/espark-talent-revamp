@@ -2,11 +2,14 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ESparkButton from '../global/eSparkButton';
 
 const Perks = ({ data, link, target }) => {
   const [selectedCard, setSelectedCard] = useState(0);
+  const pathName = usePathname();
+  const book_a_demo_meeting = '/book-a-demo-meeting';
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
   );
@@ -20,7 +23,13 @@ const Perks = ({ data, link, target }) => {
   };
   return (
     <>
-      <Box sx={{ py: '5%', px: '3%' }}>
+      <Box
+        sx={{
+          py: `${pathName === book_a_demo_meeting ? '0%' : '5%'}`,
+          pb: `${pathName === book_a_demo_meeting ? '3%' : '0%'}`,
+          px: '3%',
+        }}
+      >
         <Container>
           <Box
             sx={{
@@ -116,6 +125,9 @@ const Perks = ({ data, link, target }) => {
                             sm: '15px',
                             xs: '13px',
                           },
+                          '@media(min-width: 551px) and (max-width:768px)': {
+                            width: '230px',
+                          },
                         }}
                       >
                         {perk?.title}
@@ -186,7 +198,7 @@ const Perks = ({ data, link, target }) => {
                       xs: 'center',
                     }}
                     fontSize={{
-                      lg: '27px',
+                      lg: `${pathName === book_a_demo_meeting ? '37px' : '27px'}`,
                       md: '22px',
                       sm: '18px',
                       xs: '18px',
@@ -201,16 +213,26 @@ const Perks = ({ data, link, target }) => {
                         xs: '10px',
                         sm: '10px',
                         md: '13px',
-                        lg: '16px',
+                        lg: `${pathName === book_a_demo_meeting ? '18.3px' : '16px'}`,
                       },
                       mb: { xs: '10px', md: '30px' },
-                      pr: { xs: '2px', md: '15px', lg: '15%' },
-                      textAlign: 'justify',
+                      pr: {
+                        xs: '2px',
+                        md: '15px',
+                        lg: `${pathName === book_a_demo_meeting ? '7%' : '15%'}`,
+                      },
+                      textAlign:
+                        pathName === book_a_demo_meeting
+                          ? { xs: 'center', md: 'justify' }
+                          : 'justify',
                     }}
                   >
                     {data[selectedCard]?.content?.paragraph}
                   </Typography>
-                  <Grid container>
+                  <Grid
+                    container
+                    columnSpacing={pathName === book_a_demo_meeting ? 3 : 0}
+                  >
                     {data[selectedCard]?.content?.list?.map((item, index) => (
                       <Grid item xs={6} key={index} py={'1%'}>
                         <Box
@@ -222,7 +244,7 @@ const Perks = ({ data, link, target }) => {
                               xs: '10px',
                               sm: '10px',
                               md: '10px',
-                              lg: '20px',
+                              lg: `${pathName === book_a_demo_meeting ? '10px' : '20px'}`,
                             },
                           }}
                         >
@@ -259,7 +281,7 @@ const Perks = ({ data, link, target }) => {
                                 xs: '10px',
                                 sm: '10px',
                                 md: '13px',
-                                lg: '16px',
+                                lg: `${pathName === book_a_demo_meeting ? '17.76px' : '16px'}`,
                               },
                             }}
                           >
