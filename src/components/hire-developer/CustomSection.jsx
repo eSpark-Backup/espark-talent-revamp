@@ -1,7 +1,10 @@
 import { Box, Typography } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const CustomSection = ({ items }) => {
+  const pathName = usePathname();
+  const demo_meeting = 'book-a-demo-meeting';
   return (
     <>
       <Box
@@ -611,41 +614,66 @@ const CustomSection = ({ items }) => {
             },
           }}
         >
-          <Box
-            component={'img'}
-            src={items[4]?.horizontal || ''}
-            sx={{
-              width: 'auto',
-              height: 'auto',
-              mx: 'auto',
-              position: 'absolute',
-              right: -23,
-              bottom: '42%',
-              transform: 'translateY(-50%)',
-              zIndex: 0,
-              '@media(min-width: 280px) and (max-width: 980px)': {
-                display: 'none',
-              },
-            }}
-          />
-          <Box
-            component={'img'}
-            src={items[4]?.vertical || ''}
-            sx={{
-              display: 'none',
-              width: 'auto',
-              height: 'auto',
-              mx: 'auto',
-              position: 'absolute',
-              bottom: -51,
-              right: '19%',
-              transform: 'translateX(-50%)',
-              zIndex: 0,
-              '@media(min-width: 280px) and (max-width: 980px)': {
-                display: 'flex',
-              },
-            }}
-          />
+          {!pathName?.includes(demo_meeting) ? (
+            <>
+              <Box
+                component={'img'}
+                src={items[4]?.horizontal || ''}
+                sx={{
+                  width: 'auto',
+                  height: 'auto',
+                  mx: 'auto',
+                  position: 'absolute',
+                  right: -23,
+                  bottom: '42%',
+                  transform: 'translateY(-50%)',
+                  zIndex: 0,
+                  '@media(min-width: 280px) and (max-width: 980px)': {
+                    display: 'none',
+                  },
+                }}
+              />
+              <Box
+                component={'img'}
+                src={items[4]?.vertical || ''}
+                sx={{
+                  display: 'none',
+                  width: 'auto',
+                  height: 'auto',
+                  mx: 'auto',
+                  position: 'absolute',
+                  bottom: -51,
+                  right: '19%',
+                  transform: 'translateX(-50%)',
+                  zIndex: 0,
+                  '@media(min-width: 280px) and (max-width: 980px)': {
+                    display: 'flex',
+                  },
+                }}
+              />
+            </>
+          ) : (
+            <Box
+              component={'img'}
+              src={items[4]?.end_point || ''}
+              sx={{
+                width: 'auto',
+                height: 'auto',
+                mx: 'auto',
+                position: 'absolute',
+                right: -23,
+                top: '42%',
+                transform: 'translateY(-50%) rotate(270deg)',
+                zIndex: 0,
+                '@media(max-width: 980px)': {
+                  top: 'auto',
+                  bottom: -57,
+                  right: '11.5%',
+                  transform: 'translateX(-50%)',
+                },
+              }}
+            />
+          )}
           <Box
             sx={{
               position: 'relative',
@@ -737,138 +765,140 @@ const CustomSection = ({ items }) => {
             </Box>
           </Box>
         </Box>
-        <Box
-          sx={{
-            position: 'relative',
-            height: 'auto',
-            width: 'auto',
-            '@media(min-width: 425px) and (max-width: 980px)': {
-              mx: 'auto',
-              width: '401px',
-            },
-            '@media(min-width: 280px) and (max-width: 424px)': {
-              mx: 'auto',
-              width: 'auto',
-            },
-          }}
-        >
-          <Box
-            component={'img'}
-            src={items[5]?.end_point || ''}
-            sx={{
-              width: 'auto',
-              height: 'auto',
-              mx: 'auto',
-              position: 'absolute',
-              bottom: -57,
-              left: '50%',
-              transform: 'translateX(-50%)',
-              zIndex: 0,
-              '@media(min-width: 280px) and (max-width: 980px)': {
-                left: '19%',
-              },
-              '@media(max-width: 425px)': {
-                bottom: -42,
-                left: '24%',
-                width: '35px',
-                height: '40px',
-              },
-            }}
-          />
+        {!pathName?.includes(demo_meeting) && (
           <Box
             sx={{
-              mx: 'auto',
-              maxWidth: '401px',
-              height: '224px',
-              display: 'flex',
-              flexDirection: 'column',
-              borderRadius: '20px',
-              background: '#fff',
-              boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
               position: 'relative',
-              zIndex: 1,
-              '@media(min-width: 980px)': {
-                mt: 6,
+              height: 'auto',
+              width: 'auto',
+              '@media(min-width: 425px) and (max-width: 980px)': {
+                mx: 'auto',
+                width: '401px',
               },
-              '@media(max-width: 425px)': {
-                mx: 1.2,
-                height: 'auto',
+              '@media(min-width: 280px) and (max-width: 424px)': {
+                mx: 'auto',
+                width: 'auto',
               },
             }}
           >
             <Box
+              component={'img'}
+              src={items[5]?.end_point || ''}
               sx={{
                 width: 'auto',
-                height: '89.498px',
+                height: 'auto',
+                mx: 'auto',
+                position: 'absolute',
+                bottom: -57,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 0,
+                '@media(min-width: 280px) and (max-width: 980px)': {
+                  left: '19%',
+                },
+                '@media(max-width: 425px)': {
+                  bottom: -42,
+                  left: '24%',
+                  width: '35px',
+                  height: '40px',
+                },
+              }}
+            />
+            <Box
+              sx={{
+                mx: 'auto',
+                maxWidth: '401px',
+                height: '224px',
                 display: 'flex',
-                borderRadius: '20px 20px 0 0 ',
-                background: '#F7F8FB',
-                p: '20px',
-                alignItems: 'center',
+                flexDirection: 'column',
+                borderRadius: '20px',
+                background: '#fff',
+                boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
+                position: 'relative',
+                zIndex: 1,
+                '@media(min-width: 980px)': {
+                  mt: 6,
+                },
+                '@media(max-width: 425px)': {
+                  mx: 1.2,
+                  height: 'auto',
+                },
               }}
             >
               <Box
-                component={'img'}
-                src={items[5]?.icon || ''}
-                alt={items[5]?.alt || ''}
                 sx={{
-                  width: 42,
-                  height: 42,
-                  '@media(max-width: 425px)': {
-                    width: 30,
-                    height: 30,
-                  },
-                  '@media(max-width: 280px)': {
-                    width: 25,
-                    height: 25,
-                  },
-                }}
-              />
-              <Typography
-                component={'h4'}
-                color="secondary"
-                sx={{
-                  ml: 2,
-                  color: '#001C63',
-                  fontSize: '20px',
-                  fontWeight: 600,
-                  '@media(max-width: 425px)': {
-                    fontSize: '18px',
-                  },
-                  '@media(max-width: 280px)': {
-                    fontSize: '16px',
-                  },
+                  width: 'auto',
+                  height: '89.498px',
+                  display: 'flex',
+                  borderRadius: '20px 20px 0 0 ',
+                  background: '#F7F8FB',
+                  p: '20px',
+                  alignItems: 'center',
                 }}
               >
-                {items[5]?.title || ''}
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                p: '10px 20px 20px 20px',
-                borderRadius: '0 0 20px 20px',
-              }}
-            >
-              <Typography
-                component="p"
+                <Box
+                  component={'img'}
+                  src={items[5]?.icon || ''}
+                  alt={items[5]?.alt || ''}
+                  sx={{
+                    width: 42,
+                    height: 42,
+                    '@media(max-width: 425px)': {
+                      width: 30,
+                      height: 30,
+                    },
+                    '@media(max-width: 280px)': {
+                      width: 25,
+                      height: 25,
+                    },
+                  }}
+                />
+                <Typography
+                  component={'h4'}
+                  color="secondary"
+                  sx={{
+                    ml: 2,
+                    color: '#001C63',
+                    fontSize: '20px',
+                    fontWeight: 600,
+                    '@media(max-width: 425px)': {
+                      fontSize: '18px',
+                    },
+                    '@media(max-width: 280px)': {
+                      fontSize: '16px',
+                    },
+                  }}
+                >
+                  {items[5]?.title || ''}
+                </Typography>
+              </Box>
+              <Box
                 sx={{
-                  fontSize: '15px',
-                  fontWeight: 500,
-                  lineHeight: '23px',
-                  '@media(max-width: 425px)': {
+                  p: '10px 20px 20px 20px',
+                  borderRadius: '0 0 20px 20px',
+                }}
+              >
+                <Typography
+                  component="p"
+                  sx={{
                     fontSize: '15px',
-                  },
-                  '@media(max-width: 280px)': {
-                    fontSize: '13px',
-                  },
-                }}
-                color="initial"
-              >
-                {items[5]?.paragraph || ''}
-              </Typography>
+                    fontWeight: 500,
+                    lineHeight: '23px',
+                    '@media(max-width: 425px)': {
+                      fontSize: '15px',
+                    },
+                    '@media(max-width: 280px)': {
+                      fontSize: '13px',
+                    },
+                  }}
+                  color="initial"
+                >
+                  {items[5]?.paragraph || ''}
+                </Typography>
+              </Box>
             </Box>
           </Box>
-        </Box>
+        )}
       </Box>
     </>
   );

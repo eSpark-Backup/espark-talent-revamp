@@ -27,7 +27,9 @@ const HireDeveloper = ({ data }) => {
         }}
       >
         <ClientSays data={OUR_CLIENT_SAYS} />
-        <CustomComponent />
+        <CustomComponent
+          data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
+        />
         <Perks
           data={DEVELOEPRS_PERKS_DATA}
           target={'_self'}

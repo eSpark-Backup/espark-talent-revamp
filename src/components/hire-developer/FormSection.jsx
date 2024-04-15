@@ -4,10 +4,13 @@ import { Box, Typography, useMediaQuery } from '@mui/material';
 
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import HireForm from './HireForm';
+import { usePathname } from 'next/navigation';
 
 const FormSection = ({ data }) => {
   const { form } = Book_A_Demo_Data;
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('md'));
+  const pathName = usePathname();
+  const book_a_demo_meeting = '/book-a-demo-meeting';
 
   return (
     <>
@@ -20,6 +23,30 @@ const FormSection = ({ data }) => {
           backgroundImage: `url(${isLargeScreen ? data?.bgImage : ''})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
+          '@media (min-width: 270px) and (max-width: 300px)': {
+            pt: pathName === book_a_demo_meeting ? '220px' : undefined,
+          },
+          '@media (min-width: 300px) and (max-width: 330px)': {
+            pt: pathName === book_a_demo_meeting ? '70px' : undefined,
+          },
+          '@media (min-width: 330px) and (max-width: 375px)': {
+            pt: pathName === book_a_demo_meeting ? '50px' : undefined,
+          },
+          '@media (min-width: 375px) and (max-width: 410px)': {
+            pt: pathName === book_a_demo_meeting ? '80px' : undefined,
+          },
+          '@media (min-width: 410px) and (max-width: 450px)': {
+            pt: pathName === book_a_demo_meeting ? '80px' : undefined,
+          },
+          '@media (min-width: 450px) and (max-width: 520px)': {
+            pt: pathName === book_a_demo_meeting ? '60px' : undefined,
+          },
+          '@media (min-width: 520px) and (max-width: 630px)': {
+            pt: pathName === book_a_demo_meeting ? '40px' : undefined,
+          },
+          '@media (min-width: 768px) and (max-width: 840px)': {
+            pt: pathName === book_a_demo_meeting ? '70px' : undefined,
+          },
         }}
       >
         <Box
@@ -66,9 +93,14 @@ const FormSection = ({ data }) => {
                     xs: '20px',
                     sm: '25px',
                     md: '40px',
-                    lg: '48px',
+                    lg: '41.04px',
                   },
-                  lineHeight: 1.4,
+                  lineHeight: {
+                    xs: '28px',
+                    sm: '36px',
+                    md: '50px',
+                    lg: '62.77px',
+                  },
                   fontWeight: 600,
                 }}
                 color={data?.titleColor}
@@ -83,22 +115,29 @@ const FormSection = ({ data }) => {
                     xs: '400px',
                     sm: '450px',
                     md: '650px',
-                    lg: '700px',
+                    lg: '660px',
                   },
                 }}
               >
                 <Typography
                   sx={{
                     fontSize: {
-                      xs: '13px',
+                      xs: '11px',
                       sm: '13px',
                       md: '18px',
                       lg: '23px',
                       xl: '23px',
                     },
-                    color: '#0E1155',
+                    color:
+                      pathName === book_a_demo_meeting ? '#001C63' : '#0E1155',
                     fontWeight: 400,
-                    lineHeight: 1.4,
+                    lineHeight: {
+                      xs: '19.5px',
+                      sm: '23px',
+                      md: '33px',
+                      lg: '43px',
+                    },
+                    px: { xs: '10px', sm: '0px' },
                   }}
                 >
                   {data?.description}
