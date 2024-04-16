@@ -58,9 +58,7 @@ export async function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const slug = params.service;
-  console.log(slug);
   const data = SERVICES_DATA?.filter((item) => item?.path === slug)[0];
-  console.log(data, 'data');
   if (!params || !params.service) {
     return (
       <div>
