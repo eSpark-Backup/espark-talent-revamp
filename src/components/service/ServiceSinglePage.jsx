@@ -1,11 +1,22 @@
-import React from 'react'
-import ClientSlider from '../global/Client'
-import { CLIENT_SLIDER_BREAK_POINTS, CLIENTS_SLIDER_DATA, OUR_CLIENT_SAYS, PERKS_DATA } from '@/constants/homepage'
-import Perks from '../homepage/Perks'
-import ClientSays from '../homepage/ClientSays'
-import Faq from '../FAQ/Faq'
-import { FAQ_DATA } from '@/constants/home-page/faq-section'
-import ServiceHeroSection from './ServiceHeroSection'
+'use client';
+import React from 'react';
+import ClientSlider from '../global/Client';
+import {
+    CLIENT_SLIDER_BREAK_POINTS,
+    CLIENTS_SLIDER_DATA,
+    OUR_CLIENT_SAYS,
+    PERKS_DATA,
+} from '@/constants/homepage';
+import Perks from '../homepage/Perks';
+import ClientSays from '../homepage/ClientSays';
+import Faq from '../FAQ/Faq';
+import { FAQ_DATA } from '@/constants/home-page/faq-section';
+import ServiceHeroSection from './ServiceHeroSection';
+import ServiceHosts from './ServiceHosts';
+import FifthSection from '../hire-developer/FifthSection';
+import ServiceWhyHire from './ServiceWhyHire';
+import ServiceExperties from './ServiceExperties';
+import CustomComponent from '../hire-developer/CustomHeading';
 
 const ServiceSinglePage = ({ data }) => {
     return (
@@ -30,14 +41,18 @@ const ServiceSinglePage = ({ data }) => {
                 lineHeight={{ xs: '30px !important', sm: '25px !important' }}
                 fontWeight={500}
             />
+            <ServiceExperties data={data[0].experties} />
+            <FifthSection data={data[0].technologies} />
+            <CustomComponent
+                data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
+            />
             <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
-
+            <ServiceWhyHire data={data[0].whyHire} />
             <ClientSays data={OUR_CLIENT_SAYS} />
-
-            <Faq data={FAQ_DATA} />
-
+            <ServiceHosts data={data[0].hosts} />
+            <Faq data={data[0].faqs} />
         </>
-    )
-}
+    );
+};
 
-export default ServiceSinglePage
+export default ServiceSinglePage;
