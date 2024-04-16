@@ -15,6 +15,7 @@ import ServiceExperties from './ServiceExperties';
 import CustomComponent from '../hire-developer/CustomHeading';
 import { Box } from '@mui/material';
 import ServiceFaq from './ServiceFaq';
+import ServiceCustomComponent from './ServiceCustomComponent';
 
 const ServiceSinglePage = ({ data }) => {
   return (
@@ -41,7 +42,7 @@ const ServiceSinglePage = ({ data }) => {
       />
       <ServiceExperties data={data[0]?.experties} />
       <FifthSection data={data[0]?.technologies} />
-      <CustomComponent
+      <ServiceCustomComponent
         data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
       />
       <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
