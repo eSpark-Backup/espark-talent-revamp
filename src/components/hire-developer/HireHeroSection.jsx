@@ -135,7 +135,6 @@ const HireHeroSection = ({ data }) => {
               </Button>
             </Link>
           </Box>
-
           <Box justifyContent={'center'} textAlign="center" pt={3}>
             <img src={data?.image} alt={'Hire A Developer Cover Art'} />
           </Box>

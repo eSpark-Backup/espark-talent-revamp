@@ -1,3 +1,4 @@
+'use client';
 import {
   Avatar,
   Box,
@@ -34,7 +35,7 @@ const FifthSection = ({ data }) => {
               fontWeight: 600,
               lineHeight: 1.4,
               color: '#001C63',
-              px: { xs: '9%', sm: '9%', md: '10%', lg: '10%' },
+              px: { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
             }}
             dangerouslySetInnerHTML={{
               __html: data?.title,

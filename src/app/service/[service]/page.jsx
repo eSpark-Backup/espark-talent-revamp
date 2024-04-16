@@ -7,7 +7,7 @@ import NotFoundPage from '@/components/global/NotFound';
 import ServiceSinglePage from '@/components/service/ServiceSinglePage';
 
 export async function generateMetadata({ params }) {
-  const slug = params.hire;
+  const slug = params.service;
   const filteredData =
     SERVICE_SEO.find((item) => item.path === slug) || SERVICE_SEO[0];
   const metadata = {
@@ -57,9 +57,9 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-  const slug = params.hire;
+  const slug = params.service;
   const data = SERVICES_DATA?.filter((item) => item?.path === slug)[0];
-  if (!params || !params.hire) {
+  if (!params || !params.service) {
     return (
       <div>
         <NotFoundPage data={SERVICE_NOT_FOUND_DATA} />

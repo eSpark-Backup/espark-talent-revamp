@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ServiceHeroSection = () => {
-    return (
-        <div>ServiceHeroSection</div>
-    )
-}
+  return <div>ServiceHeroSection</div>;
+};
 
-export default ServiceHeroSection
+export default ServiceHeroSection;
