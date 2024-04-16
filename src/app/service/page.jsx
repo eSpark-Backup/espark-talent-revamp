@@ -1,9 +1,6 @@
-import BlogsPage from '@/components/blogs/BlogsPage';
-import React from 'react';
-
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import ServiceSinglePage from '@/components/service/ServiceSinglePage';
 import { SERVICES_DATA } from '@/constants/services/services';
+import ServiceSinglePage from '@/components/service/ServiceSinglePage';
 
 const pathname = '/blogs';
 const filteredData =

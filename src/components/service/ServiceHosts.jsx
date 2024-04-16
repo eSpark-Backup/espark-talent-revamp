@@ -14,74 +14,11 @@ const ServiceHosts = ({ data }) => {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
-            mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-            '@media(min-width:426px) and (max-width:539px)': {
-              mb: 40,
-            },
-            '@media(min-width:387px) and (max-width:425px)': {
-              mb: 40,
-            },
-            '@media(min-width:320px) and (max-width:386px)': {
-              mb: 45,
-            },
-            '@media(min-width:300px) and (max-width:319px)': {
-              mb: 42,
-            },
-            '@media(min-width:280px) and (max-width:299px)': {
-              mb: 42,
-            },
+            mb: 10,
           }}
         >
           <Box
-            component={'img'}
             sx={{
-              display: { xs: 'none', lg: 'flex' },
-              width: 'auto',
-              height: 'auto',
-              left: 0,
-              top: 70,
-              right: 'auto',
-              position: 'absolute',
-            }}
-            src={`${data?.leftImage || ''}`}
-          />
-          <Box
-            sx={{
-              position: 'relative',
-              top: 0,
-              px: 3,
-              maxWidth: { xs: '310px', sm: '490px', md: '700px', lg: '961px' },
-              height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
-            }}
-          >
-            <Box
-              component={'img'}
-              sx={{
-                width: 'auto',
-                height: 'auto',
-              }}
-              src={`${data?.image || ''}`}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: 'absolute',
-              top: { xs: 255, sm: 240, md: 280, lg: 440 },
-              '@media(min-width:426px) and (max-width:539px)': {
-                top: 270,
-              },
-              '@media(min-width:387px) and (max-width:425px)': {
-                top: 230,
-              },
-              '@media(min-width:320px) and (max-width:386px)': {
-                top: 255,
-              },
-              '@media(min-width:300px) and (max-width:319px)': {
-                top: 245,
-              },
-              '@media(min-width:280px) and (max-width:299px)': {
-                top: 241,
-              },
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',

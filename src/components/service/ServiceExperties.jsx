@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import OutSourceBenefitsSlider from '@/components/homepage/OutSourceBenefitsSlider.jsx';
+import Link from 'next/link';
 
 const ServiceExperties = ({ data }) => {
   return (
     <>
-      <Box sx={{ background: '#F7F8FB', py: '2.5%' }}>
+      <Box sx={{ py: '2.5%' }}>
         <Container>
           <Box>
             <Box
@@ -17,7 +18,7 @@ const ServiceExperties = ({ data }) => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 flexDirection: 'column',
-                width: { sm: '600px', md: '700px', lg: '900px' },
+                // width: { sm: '600px', md: '700px', lg: '900px' },
                 '@media(min-width: 570px) and (max-width: 767px)': {
                   width: '550px',
                   pt: 2,
@@ -38,13 +39,26 @@ const ServiceExperties = ({ data }) => {
                 gap: 2,
               }}
             >
-              <Typography variant={'h2'} color={'secondary'}>
-                {data?.title}
-              </Typography>
+              <Typography
+                variant={'h2'}
+                color={'secondary'}
+                sx={{
+                  fontSize: '48px',
+                  fontWeight: 600,
+                  lineHeight: '65px',
+                }}
+                dangerouslySetInnerHTML={{ __html: data?.title }}
+              />
               <Typography
                 variant={'body1'}
                 color={'secondary'}
                 className="hrFirmDesktop"
+                sx={{
+                  fontSize: '19px',
+                  fontWeight: 400,
+                  lineHeight: '33px',
+                  px: '20%',
+                }}
               >
                 {data?.paragraph}
               </Typography>
@@ -145,6 +159,36 @@ const ServiceExperties = ({ data }) => {
           </Grid>
           <Box className="hrFirmResponsive">
             <OutSourceBenefitsSlider items={data?.items} />
+          </Box>
+          <Box justifyContent={'center'} textAlign="center" py={2}>
+            <Link href={data?.btnLink}>
+              <Button
+                variant="contained"
+                sx={{
+                  width: '210px',
+                  height: '60px',
+                  borderRadius: '50px',
+                  backgroundColor: '#029894',
+                  color: '#fff',
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 28, 99, 1)',
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: '20px',
+                    fontWeight: 500,
+                    lineHeight: '30px',
+                    textAlign: 'center',
+                  }}
+                >
+                  {data?.btnText}
+                </Typography>
+              </Button>
+            </Link>
           </Box>
         </Container>
       </Box>
