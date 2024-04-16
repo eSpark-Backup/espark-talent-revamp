@@ -506,4 +506,13 @@ export const SERVICE_SEO = [
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
   },
+  {
+    path: 'mean-stack-developers',
+    title: 'Hire Top Talented MEAN Stack Developer Quickly | eSpark Talent',
+    description:
+      'Quickly hire top talented MEAN Stack Developer at eSpark Talent. Elevate your digital presence effortlessly. Seamless hiring for exceptional results. Book a Meeting Now!',
+    url: 'https://esparktalent.com/service',
+    image:
+      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+  },
 ];

@@ -12,7 +12,6 @@ import ServiceHosts from './ServiceHosts';
 import FifthSection from '../hire-developer/FifthSection';
 import ServiceWhyHire from './ServiceWhyHire';
 import ServiceExperties from './ServiceExperties';
-import CustomComponent from '../hire-developer/CustomHeading';
 import { Box } from '@mui/material';
 import ServiceFaq from './ServiceFaq';
 import ServiceCustomComponent from './ServiceCustomComponent';
@@ -40,22 +39,22 @@ const ServiceSinglePage = ({ data }) => {
         lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
       />
-      <ServiceExperties data={data[0]?.experties} />
-      <FifthSection data={data[0]?.technologies} />
+      <ServiceExperties data={data?.experties} />
+      <FifthSection data={data?.technologies} />
       <ServiceCustomComponent
         data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
       />
       <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
-      <ServiceWhyHire data={data[0]?.whyHire} />
+      <ServiceWhyHire data={data?.whyHire} />
       <ClientSays data={OUR_CLIENT_SAYS} />
-      <ServiceHosts data={data[0]?.hosts} />
+      <ServiceHosts data={data?.hosts} />
       <Box
         pt={5}
         sx={{
           backgroundColor: '#F7F8FF',
         }}
       >
-        <ServiceFaq data={data[0]?.faqs} />
+        <ServiceFaq data={data?.faqs} />
       </Box>
     </>
   );
