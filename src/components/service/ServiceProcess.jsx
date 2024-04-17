@@ -33,7 +33,12 @@ const ServiceProcess = ({ data }) => {
             >
               {process?.text}
             </Typography>
-            <Image src={process?.image} height={235} width={205} style={{ margin: '0 auto', marginTop: '20px' }} />
+            <Image
+              src={process?.image}
+              height={235}
+              width={205}
+              style={{ margin: '0 auto', marginTop: '20px' }}
+            />
           </Grid>
         ))}
         {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}> */}
@@ -42,8 +47,24 @@ const ServiceProcess = ({ data }) => {
         <Grid item xs={1.8} />
         <Grid item xs={1.8} />
         {oddMap?.map((process, index) => (
-          <Grid item xs={process?.xs} key={index} sx={{ pl: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center' }} >
-            <Image src={process?.image} height={235} width={220} style={{ margin: '0 auto' }} />
+          <Grid
+            item
+            xs={process?.xs}
+            key={index}
+            sx={{
+              pl: '15px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Image
+              src={process?.image}
+              height={235}
+              width={220}
+              style={{ margin: '0 auto' }}
+            />
             <Typography
               sx={{
                 color: process?.color,
