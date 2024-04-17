@@ -1,6 +1,5 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import Image from 'next/image';
 import React from 'react';
+import { Box, Container, Typography } from '@mui/material';
 import ServiceProcessMobile from './ServiceProcessMobile';
 import ServiceProcess from './ServiceProcess';
 
@@ -57,7 +56,6 @@ const ServiceWhyHire = ({ data }) => {
             <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
           </Box>
           <ServiceProcessMobile data={data} />
-
         </Container>
       </Box>
     </>
