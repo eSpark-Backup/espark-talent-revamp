@@ -19,7 +19,7 @@ import ServiceCustomComponent from './ServiceCustomComponent';
 const ServiceSinglePage = ({ data }) => {
   return (
     <>
-      <ServiceHeroSection data={data[0]?.heroSection}/>
+      <ServiceHeroSection data={data?.heroSection} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
@@ -39,13 +39,13 @@ const ServiceSinglePage = ({ data }) => {
         lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
       />
-      {/* <ServiceExperties data={data?.experties} /> */}
-      {/* <FifthSection data={data?.technologies} /> */}
+      <ServiceExperties data={data?.experties} />
+      <FifthSection data={data?.technologies} />
       <ServiceCustomComponent
         data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
       />
       <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
-      {/* <ServiceWhyHire data={data?.whyHire} /> */}
+      <ServiceWhyHire data={data?.whyHire} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <ServiceHosts data={data?.hosts} />
       <Box
