@@ -23,7 +23,6 @@ const ServiceWhyHire = ({ data }) => {
                 fontWeight: 600,
                 lineHeight: 1.4,
                 color: '#001C63',
-                // px: { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
               }}
               dangerouslySetInnerHTML={{
                 __html: data?.title,
@@ -52,9 +51,9 @@ const ServiceWhyHire = ({ data }) => {
           </Box>
 
           <ServiceProcess data={data} />
-          <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
+          {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
             <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
-          </Box>
+          </Box> */}
           <ServiceProcessMobile data={data} />
         </Container>
       </Box>
