@@ -1,4 +1,4 @@
-import ClientSlider from '../global/Client';
+import ClientSlider from '../global/ClientSlider';
 import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,
