@@ -8,19 +8,32 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const FifthSection = ({ data }) => {
+  const pathname = usePathname();
+
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <Box
       sx={{
-        backgroundColor: `${isSmallScreen ? '' : '#F7F8FF'}`,
+        backgroundColor: pathname.includes('service')
+          ? isSmallScreen
+            ? '#F7F8FF'
+            : '#F7F8FF'
+          : isSmallScreen
+            ? ''
+            : '#F7F8FF',
         py: 3,
       }}
     >
       <Container>
-        <Box py={2}>
+        <Box
+          sx={{
+            py: pathname.includes('service') ? 0 : 2,
+          }}
+        >
           <Typography
             variant="h4"
             textAlign="center"
@@ -33,9 +46,11 @@ const FifthSection = ({ data }) => {
                 lg: '48px',
               },
               fontWeight: 600,
-              lineHeight: 1.4,
+              lineHeight: { xs: '29px', md: 1.4 },
               color: '#001C63',
-              px: { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
+              px: pathname.includes('service')
+                ? { xs: '0%', sm: '5%', md: '10%', lg: '15%' }
+                : { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
             }}
             dangerouslySetInnerHTML={{
               __html: data?.title,
@@ -47,7 +62,7 @@ const FifthSection = ({ data }) => {
             sx={{
               textAlign: 'center',
               fontSize: {
-                xs: '13px',
+                xs: pathname.includes('service') ? '11px' : '13px',
                 sm: '15px',
                 md: '18px',
                 lg: '23px',
@@ -56,7 +71,11 @@ const FifthSection = ({ data }) => {
               fontWeight: 400,
               lineHeight: 1.4,
               color: '#001C63',
-              px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+              pt: pathname.includes('service') ? 1 : 0,
+              pb: pathname.includes('service') ? 2 : 0,
+              px: pathname.includes('service')
+                ? { xs: '0%', sm: '5%', md: '5%', lg: '12%' }
+                : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
             }}
           >
             {data?.descrcipton}
@@ -66,7 +85,8 @@ const FifthSection = ({ data }) => {
           container
           display={'flex'}
           justifyContent={'space-between'}
-          spacing={3}
+          textItems={'flex-end'}
+          spacing={pathname.includes('service') ? { xs: 1, sm: 2, md: 3 } : 3}
         >
           {data?.items?.map((item, index) => (
             <Grid
@@ -97,6 +117,10 @@ const FifthSection = ({ data }) => {
                     xs: 'center',
                     lg: 'left',
                   },
+                  '@media (min-width: 280px) and (max-width: 359px)': {
+                    lineHeight: '30px',
+                    pb: 1,
+                  },
                 }}
               >
                 {item?.title}
@@ -105,13 +129,23 @@ const FifthSection = ({ data }) => {
                 py={{ xs: '0px', sm: '10px' }}
                 sx={{
                   display: 'flex',
+                  flexDirection: pathname.includes('service')
+                    ? { md: 'column' }
+                    : 'row',
                   flexWrap: 'wrap',
                   mx: 'auto',
                   gap: '0.2rem',
-                  alignItems: 'center',
+                  alignItems: pathname.includes('service')
+                    ? { md: 'center', lg: 'start' }
+                    : 'center',
                   textAlign: 'left',
                   maxWidth: { xs: 'auto', md: '800px', lg: 'auto' },
-                  justifyContent: { xs: 'center', lg: 'start', xl: 'start' },
+                  justifyContent: {
+                    xs: 'center',
+                    md: 'center',
+                    lg: 'start',
+                    xl: 'start',
+                  },
                 }}
               >
                 {item?.items.map((chip, index) => (
@@ -128,6 +162,10 @@ const FifthSection = ({ data }) => {
                           lineHeight: '35px',
                           textAlign: 'left',
                           color: '#000000',
+                          '@media (min-width: 280px) and (max-width: 359px)': {
+                            fontSize: '13.1px',
+                            lineHeight: '15px',
+                          },
                         }}
                         dangerouslySetInnerHTML={{ __html: chip }}
                       ></Typography>
@@ -135,12 +173,14 @@ const FifthSection = ({ data }) => {
                     sx={{
                       width: 'auto',
                       minWidth: '93px',
-                      maxWidth: '264px',
+                      maxWidth: pathname.includes('service')
+                        ? { xs: '964px', md: '464px' }
+                        : { xs: '264px' },
                       backgroundColor: '#E9ECF6',
                       color: '#000',
                       borderRadius: '3px',
                       mb: '10px',
-                      mr: '10px',
+                      mr: { md: '10px' },
                     }}
                   />
                 ))}

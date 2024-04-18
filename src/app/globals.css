@@ -251,6 +251,15 @@ span {
   }
 }
 
+@media (min-width: 280px) and (max-width: 340px) {
+  .break-span {
+    display: block;
+    color: #000000;
+    font-weight: 400;
+  }
+}
+
+
 .our-team-swiper-image,
 .why-choose-our-hr-slide-icon {
   width: 100%;

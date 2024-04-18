@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
 import { Box, Typography, Grid, Container, Button } from '@mui/material';
-import OutSourceBenefitsSlider from '@/components/homepage/OutSourceBenefitsSlider.jsx';
 import Link from 'next/link';
+import ServiceExpertiesResponsive from './ServiceExpertiesResponsive';
 
 const ServiceExperties = ({ data }) => {
   return (
@@ -25,9 +26,9 @@ const ServiceExperties = ({ data }) => {
                 },
                 '@media(min-width: 425px) and (max-width: 569px)': {
                   pt: 2,
-                  width: '360px',
+                  width: '400px',
                 },
-                '@media(min-width: 300px) and (max-width: 424px)': {
+                '@media(min-width: 340px) and (max-width: 370px)': {
                   pt: 2,
                   width: '300px',
                 },
@@ -43,21 +44,23 @@ const ServiceExperties = ({ data }) => {
                 variant={'h2'}
                 color={'secondary'}
                 sx={{
-                  fontSize: '48px',
+                  fontSize: { xs: '20px', md: '48px' },
                   fontWeight: 600,
-                  lineHeight: '65px',
+                  lineHeight: { xs: '29px', md: '65px' },
                 }}
                 dangerouslySetInnerHTML={{ __html: data?.title }}
               />
               <Typography
                 variant={'body1'}
                 color={'secondary'}
-                className="hrFirmDesktop"
+                // className="hrFirmDesktop"
                 sx={{
-                  fontSize: '19px',
+                  fontSize: { xs: '11px', sm: '14px', md: '19px' },
                   fontWeight: 400,
-                  lineHeight: '33px',
-                  px: '20%',
+                  lineHeight: { xs: '19px', sm: '22px', md: '33px' },
+                  px: { xs: '5%', sm: '8%', md: '20%' },
+                  mt: { xs: '-10px !important', md: '0px !important' },
+                  mb: { xs: '-25px !important', md: '0px !important' },
                 }}
               >
                 {data?.paragraph}
@@ -158,15 +161,23 @@ const ServiceExperties = ({ data }) => {
             ))}
           </Grid>
           <Box className="hrFirmResponsive">
-            <OutSourceBenefitsSlider items={data?.items} />
+            <ServiceExpertiesResponsive
+              items={data?.items}
+              arrowIconRight={data?.arrowIconRight}
+              arrowIconLeft={data?.arrowIconLeft}
+              arrowIconCircle={data.arrowIconCircle}
+            />
           </Box>
-          <Box justifyContent={'center'} textAlign="center" py={2}>
+          <Box
+            justifyContent={'center'}
+            textAlign="center"
+            sx={{ py: { xs: 0.5, md: 2 } }}
+          >
             <Link href={data?.btnLink}>
               <Button
-                variant="contained"
                 sx={{
-                  width: '210px',
-                  height: '60px',
+                  width: { xs: '102.29px', sm: '130px', md: '210px' },
+                  height: { xs: '30.24px', md: '60px' },
                   borderRadius: '50px',
                   backgroundColor: '#029894',
                   color: '#fff',
@@ -179,9 +190,9 @@ const ServiceExperties = ({ data }) => {
               >
                 <Typography
                   sx={{
-                    fontSize: '20px',
+                    fontSize: { xs: '9.62px', sm: '11px', md: '20px' },
                     fontWeight: 500,
-                    lineHeight: '30px',
+                    lineHeight: { xs: '13.12px', md: '30px' },
                     textAlign: 'center',
                   }}
                 >

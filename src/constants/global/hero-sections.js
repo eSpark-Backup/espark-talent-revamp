@@ -20,6 +20,35 @@ export const HP_HERO_DATA = {
   descVarient: 'body1',
   descColor: 'secondary',
 };
+export const SERVICE = {
+  title:
+    '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MEAN Stack <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+  description:
+    'Hire skilled MEAN stack developers from eSpark Talent as they ensure the delivery of feature-rich software products. Using MongoDB, Express.js, AngularJS, and Node.js, Our professionals hold expertise in creating web and mobile applications. Hire a MEAN stack developer from eSpark Talent now to optimize your journey of software development.',
+  button: {
+    label: 'Hire A Developer',
+    link: '/book-a-demo',
+    btnVarient: 'primary',
+    btnColor: 'secondary',
+  },
+  image: '/images/homepage/hero-section/service-hero-image.png',
+  imageAlt: `Hire world class experts' team for your business with espark talent`,
+  imageWidth: 435,
+  imageHeight: 431,
+  bgColor: '#fff',
+  bgImage: '/images/homepage/hero-section/hero-section-background.png',
+  spacing: '5%',
+  titleVariant: 'h1',
+  titleColor: 'primary',
+  descVarient: 'body1',
+  descColor: 'secondary',
+  awardsSection: [
+    { image: '/images/homepage/hero-section/award1.svg', alt: 'awd1' },
+    { image: '/images/homepage/hero-section/award2.svg', alt: 'awd2' },
+    { image: '/images/homepage/hero-section/award3.svg', alt: 'awd4' },
+    { image: '/images/homepage/hero-section/award4.svg', alt: 'awd3' },
+  ],
+};
 export const DEMO_HERO_DATA = {
   title: 'Build A World-Class Experts Team For Your Business',
   description:
