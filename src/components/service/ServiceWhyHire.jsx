@@ -17,7 +17,7 @@ const ServiceWhyHire = ({ data }) => {
             my: 6,
             backgroundColor: '#F7F8FF',
             backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',
             height: '100%',
