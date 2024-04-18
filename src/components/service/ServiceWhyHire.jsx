@@ -65,12 +65,12 @@ const ServiceWhyHire = ({ data }) => {
                 {data?.subTitle}
               </Typography>
             </Box>
-
-            <ServiceProcess data={data} />
-            {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
+          </Container>
+          <ServiceProcess data={data} />
+          {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
             <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
           </Box> */}
-          </Container>
+
         </Box>
       ) : (
         <Container>
