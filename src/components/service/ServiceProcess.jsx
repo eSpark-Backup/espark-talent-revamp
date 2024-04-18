@@ -59,11 +59,11 @@ const ServiceProcess = ({ data }) => {
               textAlign: 'center',
             }}
           >
-            <Image
+            <img
               src={process?.image}
-              height={235}
-              width={220}
-              style={{ margin: '0 auto' }}
+            // height={400}
+            // width={220}
+            // style={{ margin: '0 auto' }}
             />
             <Typography
               sx={{

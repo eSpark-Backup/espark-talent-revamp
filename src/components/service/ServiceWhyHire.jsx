@@ -15,12 +15,12 @@ const ServiceWhyHire = ({ data }) => {
           sx={{
             py: 4,
             my: 6,
-            backgroundColor: '#F7F8FF',
-            backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: '100%',
-            height: '100%',
+            // backgroundColor: '#F7F8FF',
+            // backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
+            // backgroundSize: 'cover',
+            // backgroundPosition: 'center',
+            // width: '100%',
+            // height: '100%',
           }}
         >
           <Container>
