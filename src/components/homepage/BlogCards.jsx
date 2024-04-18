@@ -21,13 +21,22 @@ const BlogCards = ({ data }) => {
     setPage(value);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const blogs = data ? data : [1, 2, 3, 4, 5, 6];
+
+  const blogs = data || [1, 2, 3, 4, 5, 6];
+
+  const sortedBlogs = [...blogs].sort((a, b) => {
+    if (a.publishedAt && b.publishedAt) {
+      return new Date(b.publishedAt) - new Date(a.publishedAt);
+    }
+    return 0;
+  });
+
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
+  const displayedBlogs = sortedBlogs.slice(startIndex, endIndex);
 
   const isSmallScreen = useMediaQuery('(max-width:600px)');
   const isMediumScreen = useMediaQuery('(max-width:768px)');
-
   let cardsInRow = 12;
 
   if (isSmallScreen) {
@@ -40,7 +49,7 @@ const BlogCards = ({ data }) => {
     <Box sx={{ my: '3%' }}>
       <Container>
         <Grid container spacing={2} sx={{ py: '2%' }}>
-          {blogs?.slice(startIndex, endIndex)?.map((item, index) => (
+          {displayedBlogs.map((item, index) => (
             <Grid item xs={12} sm={cardsInRow} md={4} lg={4} key={index}>
               <Box
                 className="single-blog-post"
@@ -49,10 +58,10 @@ const BlogCards = ({ data }) => {
                   pb: '30px',
                 }}
               >
-                <Link href={`/blogs/${item?.slug}`}>
+                <Link href={`/blogs/${item.slug}`}>
                   <Box className="image" sx={{ display: 'flex' }}>
                     <span style={{ marginRight: '30px' }}>
-                      {!item?.featureImage ? (
+                      {!item.featureImage ? (
                         <Skeleton
                           width={350}
                           height={'300px'}
@@ -62,31 +71,27 @@ const BlogCards = ({ data }) => {
                         <Image
                           quality="85"
                           priority={true}
-                          src={item?.featureImage}
-                          alt={`${item?.title}`}
+                          src={item.featureImage}
+                          alt={`${item.title}`}
                           width={900}
                           height={100}
                           style={{ borderRadius: '15px' }}
                         />
                       )}
                     </span>
-                    {!item?.publishedAt ? (
-                      ''
-                    ) : (
+                    {item.publishedAt && (
                       <span className="date">
-                        {item
-                          ? Intl.DateTimeFormat('en-US', {
-                              year: 'numeric',
-                              month: 'short',
-                              day: '2-digit',
-                            }).format(new Date(item?.publishedAt))
-                          : ''}
+                        {Intl.DateTimeFormat('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: '2-digit',
+                        }).format(new Date(item.publishedAt))}
                       </span>
                     )}
                   </Box>
                 </Link>
                 <Box sx={{ width: '90%', my: 2 }}>
-                  <Link href={`/blogs/${item?.slug}`}>
+                  <Link href={`/blogs/${item.slug}`}>
                     <Typography
                       sx={{
                         color: '#09114A',
@@ -100,7 +105,7 @@ const BlogCards = ({ data }) => {
                         lineHeight: '26px',
                       }}
                     >
-                      {item?.title || (
+                      {item.title || (
                         <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
                       )}
                     </Typography>
@@ -119,7 +124,7 @@ const BlogCards = ({ data }) => {
                       my: 2,
                     }}
                   >
-                    {!item?.subtitle ? (
+                    {!item.subtitle ? (
                       <>
                         <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
                         <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
@@ -129,10 +134,8 @@ const BlogCards = ({ data }) => {
                       item.subtitle
                     )}
                   </Typography>
-                  {!item?.slug ? (
-                    <Skeleton width={'200px'} sx={{ fontSize: '4rem' }} />
-                  ) : (
-                    <Link href={`/blogs/${item?.slug}`}>
+                  {item.slug && (
+                    <Link href={`/blogs/${item.slug}`}>
                       <Box
                         className="hoverItem"
                         sx={{
@@ -225,10 +228,10 @@ const BlogCards = ({ data }) => {
             </Grid>
           ))}
         </Grid>
-        {blogs?.length > itemsPerPage && (
+        {blogs.length > itemsPerPage && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
             <Pagination
-              count={Math.ceil(blogs?.length / itemsPerPage)}
+              count={Math.ceil(blogs.length / itemsPerPage)}
               page={page}
               onChange={handleChangePage}
               color="primary"

@@ -404,6 +404,21 @@ span {
   }
 }
 
+@media (min-width: 280px) and (max-width: 300px) {
+  .reviews-swiper .swiper-slide {
+    width: 90% !important;
+    height: 370px !important;
+  }
+
+  .reviews-swiper .swiper-button-prev {
+    top: 360px !important;
+  }
+
+  .reviews-swiper .swiper-button-next {
+    top: 360px !important;
+  }
+}
+
 .hrFirmResponsive {
   display: none;
 }
@@ -521,6 +536,15 @@ span {
   margin-right: 8px;
   display: inline-block;
   text-align: left;
+}
+
+.blog-content a {
+  color: #6f76a8;
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  color: #001c63;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1205,6 +1229,15 @@ span {
 .wiki-content h5,
 .wiki-content h6 {
   color: #3b5998;
+}
+
+.wiki-content a {
+  color: #3b5998;
+  text-decoration: underline;
+}
+
+.wiki-content a:hover {
+  color: #001c63;
 }
 
 .wiki-content h2 {
