@@ -184,8 +184,8 @@ export const SERVICES_DATA = [
       processes: [
         {
           id: `01`,
-          title: `<span style="color: #029894; font-weight: 700"> Full stack development </span>`,
-          text: `Our developers excel in handling both frontend and backend development, ideal for complex software projects.`,
+          title: `Full stack development`,
+          text: `Our developers excel in handling both frontend <br/> and backend development, ideal for complex <br/>software projects.`,
           image: `/images/service/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -195,8 +195,9 @@ export const SERVICES_DATA = [
         },
         {
           id: `02`,
-          title: `<span style="color: #029894; font-weight: 700"> Real-time software </span>`,
-          text: `Our MEAN stack developers are the best choice because they have experience in creating such real- time applications.`,
+          title: `Real-time software`,
+          text: ` Our MEAN stack developers are the best<br/>
+choice because they have experience in <br/>creating such real-time applications.`,
           image: `/images/service/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -206,8 +207,8 @@ export const SERVICES_DATA = [
         },
         {
           id: `03`,
-          title: `<span style="color: #029894; font-weight: 700; text-align: start"> Consistency </span>`,
-          text: `MEAN stack developers reduce the need for context switching, improving the usability and productivity of code.`,
+          title: `Consistency`,
+          text: `MEAN stack developers reduce the need for<br/> context switching, improving the<br/> usability and productivity of code.`,
           image: `/images/service/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -218,7 +219,7 @@ export const SERVICES_DATA = [
         {
           id: `04`,
           title: `Scalability`,
-          text: `MERN stack developers are professionals at scaling projects to changing trends and requirements.`,
+          text: `MERN stack developers are professionals at<br/> scaling projects to changing trends<br/> and requirements.`,
           image: `/images/service/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -229,7 +230,7 @@ export const SERVICES_DATA = [
         {
           id: `05`,
           title: `Community driven`,
-          text: `Strong collaboration and communication among MEAN developers boosts tool, framework, and library usage and sharing.`,
+          text: `Strong collaboration and communication among<br/> MEAN developers boosts tool, framework, and<br/> library usage and sharing.`,
           image: `/images/service/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -240,7 +241,7 @@ export const SERVICES_DATA = [
         {
           id: `06`,
           title: `Latest tech stack `,
-          text: `Using up-to-date technologies like React.js and Node.js ensures that the applications built are efficient and modern. `,
+          text: `Using up-to-date technologies like React.js<br/> and Node.js ensures that the applications<br/> built are efficient and modern. `,
           image: `/images/service/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',

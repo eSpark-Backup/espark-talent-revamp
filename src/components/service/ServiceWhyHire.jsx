@@ -15,12 +15,12 @@ const ServiceWhyHire = ({ data }) => {
           sx={{
             py: 4,
             my: 6,
-            backgroundColor: '#F7F8FF',
-            backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            width: '100%',
-            height: '100%',
+            // backgroundColor: '#F7F8FF',
+            // backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
+            // backgroundSize: 'cover',
+            // backgroundPosition: 'center',
+            // width: '100%',
+            // height: '100%',
           }}
         >
           <Container>
@@ -65,12 +65,12 @@ const ServiceWhyHire = ({ data }) => {
                 {data?.subTitle}
               </Typography>
             </Box>
-
-            <ServiceProcess data={data} />
-            {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
+          </Container>
+          <ServiceProcess data={data} />
+          {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
             <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
           </Box> */}
-          </Container>
+
         </Box>
       ) : (
         <Container>
