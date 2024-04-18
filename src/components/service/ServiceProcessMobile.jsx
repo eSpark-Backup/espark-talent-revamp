@@ -87,7 +87,7 @@ const ServiceProcessMobile = ({ data }) => {
           {data?.subTitle}
         </Typography>
       </Box>
-      {data?.processes?.map((process, index) => (
+      {data?.responsiveProcesses?.map((process, index) => (
         <Box
           key={index}
           sx={{
