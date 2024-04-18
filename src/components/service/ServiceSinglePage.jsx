@@ -49,9 +49,9 @@ const ServiceSinglePage = ({ data }) => {
       <ClientSays data={OUR_CLIENT_SAYS} />
       <ServiceHosts data={data?.hosts} />
       <Box
-        pt={5}
         sx={{
           backgroundColor: '#F7F8FF',
+          pt: { xs: 3, md: 5 },
         }}
       >
         <ServiceFaq data={data?.faqs} />

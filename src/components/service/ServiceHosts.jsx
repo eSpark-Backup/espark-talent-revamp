@@ -1,11 +1,11 @@
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
 
 const ServiceHosts = ({ data }) => {
   return (
     <>
-      <Box sx={{ my: 2 }}>
+      <Box sx={{ my: 2, mt: { xs: '230px' } }}>
         <Box
           sx={{
             width: '100%',
@@ -33,7 +33,7 @@ const ServiceHosts = ({ data }) => {
               sx={{
                 width: { xs: '90%', lg: '1324px' },
                 display: 'flex',
-                p: 5,
+                p: { xs: 2.1, md: 5 },
                 '@media(min-width:280px) and (max-width:320px)': {
                   p: 3,
                 },
@@ -54,7 +54,7 @@ const ServiceHosts = ({ data }) => {
                     xs: '18px',
                     sm: '26px',
                     md: '35px',
-                    lg: '48px',
+                    lg: '47px',
                   },
                   fontWeight: 600,
                   lineHeight: {
@@ -109,7 +109,7 @@ const ServiceHosts = ({ data }) => {
                       md: '15px',
                       lg: '17.42px',
                     },
-                    width: { xs: '150px', sm: '180px', lg: '200.6px' },
+                    width: { xs: '123px', sm: '180px', lg: '200.6px' },
                     height: {
                       xs: '30px',
                       sm: '38px',

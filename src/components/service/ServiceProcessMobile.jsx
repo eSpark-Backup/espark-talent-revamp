@@ -18,8 +18,7 @@ const ServiceProcessMobile = ({ data }) => {
           py: 5,
         },
         '@media (min-width: 280px) and (max-width: 599px)': {
-          px: 2,
-          py: 5,
+          pt: 4,
         },
       }}
     >
@@ -56,6 +55,7 @@ const ServiceProcessMobile = ({ data }) => {
               fontSize: '20px !important',
               lineHeight: '27px',
             },
+            px: { xs: '13px' },
           }}
           dangerouslySetInnerHTML={{ __html: data?.title }}
         />
@@ -63,20 +63,24 @@ const ServiceProcessMobile = ({ data }) => {
           component={'p'}
           sx={{
             color: '#001C63',
-            fontSize: { sm: '15px !important', md: '18px !important' },
+            fontSize: {
+              xs: '11px',
+              sm: '15px !important',
+              md: '18px !important',
+            },
             fontStyle: 'normal',
             fontWeight: 400,
-            lineHeight: '39.602px',
+            lineHeight: { xs: '19px', md: '39.602px' },
+            pt: { xs: '12px', md: '0px' },
             '@media (min-width: 600px) and (max-width: 719px)': {
               fontSize: '15px !important',
               lineHeight: '35px',
             },
             '@media (min-width: 360px) and (max-width: 599px)': {
-              fontSize: '12px !important',
+              fontSize: '11px !important',
             },
             '@media (min-width: 280px) and (max-width: 359px)': {
               fontSize: '12px !important',
-              lineHeight: '25px',
             },
           }}
         >
@@ -163,11 +167,16 @@ const ServiceProcessMobile = ({ data }) => {
               },
               '@media (min-width: 360px) and (max-width: 599px)': {
                 pl: process?.alignment == 'right' ? 1 : 0,
+                pr: process?.alignment == 'left' ? 0.5 : 0,
                 width: '280px',
-                gap: 0.5,
+                gap: 0,
               },
               '@media (min-width: 280px) and (max-width: 359px)': {
                 textAlign: 'left',
+                gap: 0,
+              },
+              '@media (min-width: 280px) and (max-width: 291px)': {
+                height: '95.15px',
               },
               display: 'flex',
               flexDirection: 'column',
@@ -178,33 +187,35 @@ const ServiceProcessMobile = ({ data }) => {
                 sm: process?.alignment == 'right' ? 5 : 0,
                 lg: process?.alignment == 'right' ? 2.3 : 0,
               },
-              textAlign: `${process?.alignment == 'right' ? 'right' : 'left'}`,
+              textAlign: `${process?.textAlignment == 'right' ? 'right' : 'left'}`,
+              backgroundColor: '#F7F8FF',
+              height: '85.15px',
+              py: '10px',
             }}
           >
             <Typography
-              component="h3"
               sx={{
                 color: '#001C63',
                 fontStyle: 'normal',
-                fontWeight: 500,
+                fontWeight: 700,
                 '@media (min-width: 600px) and (max-width: 767px)': {
                   fontSize: '16px !important',
                   lineHeight: '25px',
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
-                  fontSize: '12px !important',
+                  fontSize: '18px !important',
                   lineHeight: '20px',
+                  fontWeight: 700,
                 },
                 lineHeight: { sm: '28.621px' },
                 fontSize: { md: '25px !important', lg: '28px !important' },
               }}
-            >
-              {process?.title}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: process?.title }}
+            ></Typography>
             <Typography
               component="Box"
               sx={{
-                color: '#001C63',
+                color: '#4E4E4E',
                 fontSize: { sm: '17px !important' },
                 fontStyle: 'normal',
                 fontWeight: 400,
@@ -217,7 +228,7 @@ const ServiceProcessMobile = ({ data }) => {
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
                   fontSize: '11px !important',
-                  lineHeight: '15px',
+                  lineHeight: '16px',
                 },
                 '@media (min-width: 280px) and (max-width: 359px)': {
                   fontSize: '12px !important',

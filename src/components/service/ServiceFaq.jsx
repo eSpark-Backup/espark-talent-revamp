@@ -12,8 +12,6 @@ import {
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
-import ParagraphTitle from '../homepage/ParagraphTitle';
-
 const ServiceFaq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
 
@@ -21,9 +19,20 @@ const ServiceFaq = ({ data }) => {
     setExpanded(isExpanded ? panel : null);
   };
   return (
-    <Box sx={{ pt: '1%', pb: '5%' }} id="faq">
+    <Box sx={{ pt: { xs: '0%', md: '1%' }, pb: '5%' }} id="faq">
       <Container>
-        <ParagraphTitle title={data?.title} />
+        <Typography
+          sx={{
+            textAlign: 'center',
+            flexWrap: 'wrap',
+            fontSize: { xs: '20px', md: '32px ' },
+            fontWeight: 700,
+            color: '#001C63',
+            pb: { md: 2 },
+          }}
+        >
+          {data?.title}
+        </Typography>
         <Grid container spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }}>
           <Grid item md={6} sm={12}>
             {data?.questions?.slice(0, 3).map((item, index) => {
@@ -34,7 +43,7 @@ const ServiceFaq = ({ data }) => {
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{
-                    mb: 4,
+                    mb: { xs: 1, md: 4 },
                     position: 'relative',
                     backgroundColor: '#F7F8FF',
                   }}
@@ -47,7 +56,7 @@ const ServiceFaq = ({ data }) => {
                         <ArrowDropDownIcon
                           sx={{
                             color: 'black',
-                            fontSize: '2em',
+                            fontSize: { xs: '1.5em', md: '2em' },
                           }}
                         />
                       )
@@ -60,19 +69,20 @@ const ServiceFaq = ({ data }) => {
                       sx={{
                         color: '#09114A  !important',
                         fontSize: {
-                          lg: '24px',
+                          lg: '21.94px',
                           md: '20px',
                           sm: '15px',
-                          xs: '15px',
+                          xs: '10.85px',
                         },
                         fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
                         fontWeight: expanded === panel ? 600 : 400,
+                        lineHeight: { xs: '12.86px', md: '26px' },
                       }}
                     >
                       {item?.heading}
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
+                  <AccordionDetails sx={{ mt: { xs: '-15px', md: '0px' } }}>
                     <Typography
                       sx={{
                         color: '#09114A !important ',
@@ -82,9 +92,10 @@ const ServiceFaq = ({ data }) => {
                           lg: '18px',
                           md: '15px',
                           sm: '10px',
-                          xs: '12px',
+                          xs: '10px',
                         },
-                        lineHeight: '23.69px',
+                        lineHeight: { xs: '15px', md: '23.69px' },
+                        pr: '50px',
                       }}
                     >
                       {item?.description}
@@ -103,7 +114,7 @@ const ServiceFaq = ({ data }) => {
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
                   sx={{
-                    mb: 4,
+                    mb: { xs: 1, md: 4 },
                     position: 'relative',
                     backgroundColor: '#F7F8FF',
                   }}
@@ -116,7 +127,7 @@ const ServiceFaq = ({ data }) => {
                         <ArrowDropDownIcon
                           sx={{
                             color: 'black',
-                            fontSize: '2em',
+                            fontSize: { xs: '1.5em', md: '2em' },
                           }}
                         />
                       )
@@ -129,19 +140,20 @@ const ServiceFaq = ({ data }) => {
                       sx={{
                         color: '#09114A  !important',
                         fontSize: {
-                          lg: '24px',
+                          lg: '21.94px',
                           md: '20px',
                           sm: '15px',
-                          xs: '15px',
+                          xs: '10.85px',
                         },
                         fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
                         fontWeight: expanded === panel ? 600 : 400,
+                        lineHeight: { xs: '12.86px', lg: '26px' },
                       }}
                     >
                       {item?.heading}
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
+                  <AccordionDetails sx={{ mt: { xs: '-15px', md: '0px' } }}>
                     <Typography
                       sx={{
                         color: '#09114A !important ',
@@ -151,9 +163,10 @@ const ServiceFaq = ({ data }) => {
                           lg: '18px',
                           md: '15px',
                           sm: '10px',
-                          xs: '12px',
+                          xs: '10px',
                         },
-                        lineHeight: '23.69px',
+                        lineHeight: { xs: '15px', md: '23.69px' },
+                        pr: '50px',
                       }}
                     >
                       {item?.description}
