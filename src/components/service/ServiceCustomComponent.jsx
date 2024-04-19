@@ -1,12 +1,17 @@
+'use client';
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { usePathname } from 'next/navigation';
 
 const ServiceCustomComponent = ({ data }) => {
+  const pathName = usePathname();
   return (
     <Container
       sx={{
-        pt: { xs: 3, sm: 0, md: 0, lg: 3, xl: 3 },
+        pt: pathName.includes('service')
+          ? { xs: '7%', sm: '4%', md: '4%', lg: '2%' }
+          : { xs: 3, sm: 0, md: 0, lg: 3, xl: 3 },
       }}
     >
       <Typography
