@@ -1,26 +1,31 @@
 'use client';
-import React from 'react';
-import { Box, Container, Typography, useMediaQuery } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Box, Container, Typography } from '@mui/material';
 import ServiceProcessMobile from './ServiceProcessMobile';
 import ServiceProcess from './ServiceProcess';
 
 const ServiceWhyHire = ({ data }) => {
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
+  const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window?.innerWidth);
+    };
+    window?.addEventListener('resize', handleResize);
+    return () => {
+      window?.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
-      {!isSmallScreen ? (
+      {windowWidth > 1023 ? (
         <Box
           sx={{
-            py: 4,
+            pt: 5,
+            pb: 6,
             my: 6,
-            // backgroundColor: '#F7F8FF',
-            // backgroundImage: 'url(/images/service/why-hire/bg-image.png)',
-            // backgroundSize: 'cover',
-            // backgroundPosition: 'center',
-            // width: '100%',
-            // height: '100%',
+            backgroundColor: '#F7F8FF',
           }}
         >
           <Container>
@@ -48,16 +53,17 @@ const ServiceWhyHire = ({ data }) => {
                 variant="body1"
                 textAlign="center"
                 sx={{
+                  mt: 1.5,
                   textAlign: 'center',
                   fontSize: {
                     xs: '13px',
                     sm: '15px',
                     md: '18px',
-                    lg: '23px',
-                    xl: '23px',
+                    lg: '21px',
+                    xl: '21px',
                   },
                   fontWeight: 400,
-                  lineHeight: 1.4,
+                  lineHeight: 1.7,
                   color: '#001C63',
                   px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
                 }}
@@ -66,10 +72,7 @@ const ServiceWhyHire = ({ data }) => {
               </Typography>
             </Box>
           </Container>
-          <ServiceProcess data={data} />
-          {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
-            <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
-          </Box> */}
+          <ServiceProcess data={data} windowWidth={windowWidth} />
         </Box>
       ) : (
         <Container>

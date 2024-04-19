@@ -7,7 +7,7 @@ const ServiceProcessMobile = ({ data }) => {
       sx={{
         mx: 'auto',
         maxWidth: { xs: 'auto', md: '1000px', lg: '1100px' },
-        py: { sm: 9, md: 10 },
+        pt: { sm: 9, md: 10 },
         px: { sm: 5, md: 4, lg: 0 },
         '@media (min-width: 720px) and (max-width: 767px)': {
           px: 2,
@@ -15,7 +15,7 @@ const ServiceProcessMobile = ({ data }) => {
         },
         '@media (min-width: 600px) and (max-width: 719px)': {
           px: 2,
-          py: 5,
+          pt: 5,
         },
         '@media (min-width: 280px) and (max-width: 599px)': {
           pt: 4,
@@ -26,7 +26,7 @@ const ServiceProcessMobile = ({ data }) => {
         sx={{
           width: '100%',
           textAlign: 'center',
-          mb: { xs: 4, lg: 4 },
+          mb: { xs: 6, lg: 4 },
           '@media (min-width: 600px) and (max-width: 719px)': {
             mb: 2,
           },
@@ -74,7 +74,7 @@ const ServiceProcessMobile = ({ data }) => {
             pt: { xs: '12px', md: '0px' },
             '@media (min-width: 600px) and (max-width: 719px)': {
               fontSize: '15px !important',
-              lineHeight: '35px',
+              lineHeight: '20px',
             },
             '@media (min-width: 360px) and (max-width: 599px)': {
               fontSize: '11px !important',
@@ -105,6 +105,8 @@ const ServiceProcessMobile = ({ data }) => {
             '@media (min-width: 360px) and (max-width: 599px)': {
               py: 1.5,
               gap: 2,
+              // justifyContent: `${process?.alignment == 'right' ? 'space-between' : 'space-between'
+              //   }`,
             },
             '@media (min-width: 280px) and (max-width: 359px)': {
               flexDirection: 'column',
@@ -113,7 +115,7 @@ const ServiceProcessMobile = ({ data }) => {
             },
 
             justifyContent: `${
-              process?.alignment == 'right' ? 'end' : 'start'
+              process?.alignment == 'right' ? 'center' : 'center'
             }`,
             gap: 3,
           }}
@@ -144,8 +146,8 @@ const ServiceProcessMobile = ({ data }) => {
                   height: 100,
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
-                  width: '76px',
-                  height: '68px',
+                  width: '100%',
+                  height: '100%',
                 },
                 '@media (min-width: 280px) and (max-width: 359px)': {
                   width: '100px',
@@ -182,11 +184,13 @@ const ServiceProcessMobile = ({ data }) => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              backgroundColor: '#F7F8FF',
               order: `${process?.alignment == 'right' ? 1 : 1}`,
-
+              px: 1,
+              py: 1,
               pl: {
-                sm: process?.alignment == 'right' ? 5 : 0,
-                lg: process?.alignment == 'right' ? 2.3 : 0,
+                sm: process?.alignment == 'right' ? 1 : 1,
+                lg: process?.alignment == 'right' ? 2.3 : 0.5,
               },
               textAlign: `${process?.textAlignment == 'right' ? 'right' : 'left'}`,
               backgroundColor: '#F7F8FF',
@@ -196,7 +200,7 @@ const ServiceProcessMobile = ({ data }) => {
           >
             <Typography
               sx={{
-                color: '#001C63',
+                color: process?.color,
                 fontStyle: 'normal',
                 fontWeight: 700,
                 '@media (min-width: 600px) and (max-width: 767px)': {
@@ -223,8 +227,8 @@ const ServiceProcessMobile = ({ data }) => {
                 direction: process?.alignment == 'right' ? 'rtl' : 'ltr',
                 lineHeight: { sm: '27.363px' },
                 display: 'inline',
-                '@media (min-width: 500px) and (max-width: 767px)': {
-                  fontSize: '13px !important',
+                '@media (min-width: 426px) and (max-width: 767px)': {
+                  fontSize: '12px !important',
                   lineHeight: '20px',
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
@@ -243,9 +247,8 @@ const ServiceProcessMobile = ({ data }) => {
                   display: 'inline',
                   unicodeBidi: 'isolate-override',
                 }}
-              >
-                {process?.text}
-              </p>
+                dangerouslySetInnerHTML={{ __html: process?.text }}
+              />
             </Typography>
           </Box>
         </Box>

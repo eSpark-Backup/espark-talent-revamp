@@ -192,18 +192,20 @@ export const SERVICES_DATA = [
           textAlignment: 'left',
           color: '#029894',
           xs: '3.4',
+          vec: '/images/service/why-hire/vec_1.svg',
         },
         {
           id: `02`,
           title: `Real-time software`,
           text: ` Our MEAN stack developers are the best<br/>
-choice because they have experience in <br/>creating such real-time applications.`,
+          choice because they have experience in <br/>creating such real-time applications.`,
           image: `/images/service/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
           textAlignment: 'right',
           color: '#029894',
           xs: '3.4',
+          vec: '/images/service/why-hire/vec_2.svg',
         },
         {
           id: `03`,
@@ -215,6 +217,7 @@ choice because they have experience in <br/>creating such real-time applications
           textAlignment: 'left',
           color: '#029894',
           xs: '3.4',
+          vec: '/images/service/why-hire/vec_1.svg',
         },
         {
           id: `04`,
@@ -226,6 +229,7 @@ choice because they have experience in <br/>creating such real-time applications
           textAlignment: 'right',
           color: '#001C63',
           xs: '3.4',
+          vec: '/images/service/why-hire/vec_3.svg',
         },
         {
           id: `05`,
@@ -316,6 +320,7 @@ choice because they have experience in <br/>creating such real-time applications
           textAlignment: 'right',
           color: '#001C63',
           xs: '3.4',
+          vec: '/images/service/why-hire/vec_4.svg',
         },
       ],
     },
