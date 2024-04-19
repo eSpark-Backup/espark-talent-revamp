@@ -26,8 +26,7 @@ const FooterCTA = ({ data }) => {
         pathName !== '/hire-a-backend-developer' &&
         pathName !== '/book-a-demo-meeting' &&
         pathName !== '/service/mean-stack-developer' &&
-        pathName !== '/partnership-program' && 
-        (
+        pathName !== '/partnership-program' && (
           <Box
             sx={{
               backgroundColor: '#029894',
