@@ -168,10 +168,11 @@ const ServiceProcessMobile = ({ data }) => {
               '@media (min-width: 360px) and (max-width: 599px)': {
                 pl: process?.alignment == 'right' ? 1 : 0,
                 pr: process?.alignment == 'left' ? 0.5 : 0,
-                width: '280px',
+                width:'100%',
                 gap: 0,
               },
               '@media (min-width: 280px) and (max-width: 359px)': {
+                width:'100%',
                 textAlign: 'left',
                 gap: 0,
               },
