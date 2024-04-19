@@ -30,7 +30,6 @@ const ServiceProcess = ({ data, windowWidth }) => {
               width: '950px',
               ml: 0,
               mx: 0,
-              // gap: 2,
               justifyContent: 'space-between',
             },
             '@media (min-width:1400px)': {
@@ -133,7 +132,6 @@ const ServiceProcess = ({ data, windowWidth }) => {
               width: '950px',
               mt: 12,
               mr: 0,
-              // gap: 2,
               justifyContent: 'space-between',
             },
             '@media (min-width:1400px)': {
@@ -177,7 +175,7 @@ const ProcessCardTop = ({ data }) => {
         sx={{
           color: '#4E4E4E',
           fontWeight: 400,
-          lineHeight: 1.2,
+          lineHeight: 1.5,
           fontSize: '15px',
           textAlign: 'center',
           '@media(min-width: 1024px) and (max-width:1399px)': {
@@ -230,7 +228,7 @@ const ProcessCardBottom = ({ data }) => {
         sx={{
           color: '#4E4E4E',
           fontWeight: 400,
-          lineHeight: 1.2,
+          lineHeight: 1.5,
           fontSize: '14px',
           textAlign: 'center',
           '@media(min-width: 1024px) and (max-width:1399px)': {
