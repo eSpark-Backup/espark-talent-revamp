@@ -25,7 +25,12 @@ const Perks = ({ data, link, target }) => {
     <>
       <Box
         sx={{
-          py: `${pathName === book_a_demo_meeting ? '0%' : '5%'}`,
+          py:
+            pathName === book_a_demo_meeting
+              ? '0%'
+              : pathName.includes('service')
+                ? '2%'
+                : '5%',
           pb: `${pathName === book_a_demo_meeting ? '3%' : '0%'}`,
           px: '3%',
         }}
