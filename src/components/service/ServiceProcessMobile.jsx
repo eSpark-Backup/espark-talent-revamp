@@ -170,15 +170,17 @@ const ServiceProcessMobile = ({ data }) => {
               '@media (min-width: 360px) and (max-width: 599px)': {
                 pl: process?.alignment == 'right' ? 1 : 0,
                 pr: process?.alignment == 'left' ? 0.5 : 0,
-                width:'100%',
+                width: '100%',
+                height: '85.15px',
                 gap: 0,
               },
               '@media (min-width: 280px) and (max-width: 359px)': {
-                width:'100%',
+                width: '100%',
+                height: '85.15px',
                 textAlign: 'left',
                 gap: 0,
               },
-              '@media (min-width: 280px) and (max-width: 291px)': {
+              '@media (min-width: 280px) and (max-width: 307px)': {
                 height: '95.15px',
               },
               display: 'flex',
@@ -187,14 +189,12 @@ const ServiceProcessMobile = ({ data }) => {
               backgroundColor: '#F7F8FF',
               order: `${process?.alignment == 'right' ? 1 : 1}`,
               px: 1,
-              py: 1,
               pl: {
                 sm: process?.alignment == 'right' ? 1 : 1,
                 lg: process?.alignment == 'right' ? 2.3 : 0.5,
               },
               textAlign: `${process?.textAlignment == 'right' ? 'right' : 'left'}`,
-              backgroundColor: '#F7F8FF',
-              height: '85.15px',
+              height: 'auto',
               py: '10px',
             }}
           >
