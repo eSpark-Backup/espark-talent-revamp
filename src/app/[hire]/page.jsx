@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { HIRE_SEO, GLOBAL_SEO } from '@/constants/seo-data';
 import { HIRES_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
-import HireDeveloper from '@/components/hire-developer/HireDeveloper';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
+import Hire from '@/components/hire-developer/Hire';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
+  console.log({ params });
   const filteredData =
     HIRE_SEO.find((item) => item.path === slug) || GLOBAL_SEO[0];
   const metadata = {
@@ -59,6 +60,7 @@ export async function generateMetadata({ params }) {
 const Page = async ({ params }) => {
   const slug = params.hire;
   const data = HIRE_DEVELOPERS?.filter((item) => item?.path === slug)[0];
+
   if (!params || !params.hire) {
     return (
       <div>
@@ -72,7 +74,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
-        <HireDeveloper data={data} />
+        <Hire data={data} slug={slug} />
       </>
     );
   } catch (error) {

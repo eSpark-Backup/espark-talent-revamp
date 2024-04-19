@@ -19,7 +19,7 @@ const ServiceWhyHire = ({ data }) => {
 
   return (
     <>
-      {windowWidth > 1023 ? (
+      {data && windowWidth > 1023 ? (
         <Box
           sx={{
             pt: 5,
@@ -75,9 +75,7 @@ const ServiceWhyHire = ({ data }) => {
           <ServiceProcess data={data} windowWidth={windowWidth} />
         </Box>
       ) : (
-        <Container>
-          <ServiceProcessMobile data={data} />
-        </Container>
+        <Container>{data && <ServiceProcessMobile data={data} />}</Container>
       )}
     </>
   );

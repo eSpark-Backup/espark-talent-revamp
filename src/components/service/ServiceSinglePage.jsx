@@ -17,9 +17,11 @@ import ServiceFaq from './ServiceFaq';
 import ServiceCustomComponent from './ServiceCustomComponent';
 
 const ServiceSinglePage = ({ data }) => {
+  //  hiring services page components
+
   return (
     <>
-      <ServiceHeroSection data={data?.heroSection} />
+      <ServiceHeroSection data={data?.servicesHeroSection} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
