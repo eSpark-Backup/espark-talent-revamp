@@ -70,7 +70,6 @@ const ServiceWhyHire = ({ data }) => {
           {/* <Box sx={{ pt: { sm: '20px', md: '30px', lg: '50px' } }}>
             <img src={'/images/service/services/INFOGRAPHICS.png'} alt="" />
           </Box> */}
-
         </Box>
       ) : (
         <Container>

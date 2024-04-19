@@ -1,24 +1,34 @@
 'use client';
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 
-
 const ServiceProcess = ({ data }) => {
-  console.log(data.processes, 'data');
-  const evenMap = data.processes?.filter((_, index) => index % 2 === 0);
-  const oddMap = data.processes?.filter((_, index) => index % 2 !== 0);
+  // const evenMap = data.processes?.filter((_, index) => index % 2 === 0);
+  // const oddMap = data.processes?.filter((_, index) => index % 2 !== 0);
   return (
     <>
-      <Box sx={{ display: 'flex', alignItems: 'center', }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <ProcessCardTop data={data?.processes[0]} />
             <ProcessCardTop data={data?.processes[2]} />
           </Box>
           <ProcessCardBottom data={data?.processes[1]} />
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <ProcessCardTop data={data?.processes[4]} />
           <Box sx={{ display: 'flex' }}>
             <ProcessCardBottom data={data?.processes[3]} />
@@ -39,14 +49,12 @@ const ServiceProcess = ({ data }) => {
           <ProcessCardBottom data={data?.processes[5]} />
         </Box>
       </Box> */}
-      </Box >
+      </Box>
     </>
   );
 };
 
 export default ServiceProcess;
-
-
 
 const ProcessCardTop = ({ data }) => {
   return (
@@ -79,11 +87,11 @@ const ProcessCardTop = ({ data }) => {
         style={{ margin: '0 auto', marginTop: '20px' }}
       />
     </Box>
-  )
-}
+  );
+};
 const ProcessCardBottom = ({ data }) => {
   return (
-    <Box sx={{ px: '15px', }}>
+    <Box sx={{ px: '15px' }}>
       <Image
         src={data?.image}
         height={235}
@@ -111,7 +119,6 @@ const ProcessCardBottom = ({ data }) => {
         }}
         dangerouslySetInnerHTML={{ __html: data?.text }}
       />
-
     </Box>
-  )
-}
+  );
+};
