@@ -3,7 +3,6 @@ import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,
   OUR_CLIENT_SAYS,
-  PERKS_DATA,
 } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
 import ClientSays from '../homepage/ClientSays';
@@ -14,7 +13,6 @@ import ServiceWhyHire from './ServiceWhyHire';
 import ServiceExperties from './ServiceExperties';
 import { Box } from '@mui/material';
 import ServiceFaq from './ServiceFaq';
-import ServiceCustomComponent from './ServiceCustomComponent';
 
 const ServiceSinglePage = ({ data }) => {
   //  hiring services page components
@@ -43,10 +41,12 @@ const ServiceSinglePage = ({ data }) => {
       />
       <ServiceExperties data={data?.experties} />
       <FifthSection data={data?.technologies} />
-      <ServiceCustomComponent
-        data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
+      <Perks
+        data={data?.perks}
+        link={'/book-a-demo'}
+        target={'_blank'}
+        title={data?.perkTitle}
       />
-      <Perks data={PERKS_DATA} link={'/book-a-demo'} target={'_blank'} />
       <ServiceWhyHire data={data?.whyHire} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <ServiceHosts data={data?.hosts} />
