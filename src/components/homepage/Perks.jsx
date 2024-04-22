@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ESparkButton from '../global/eSparkButton';
 
-const Perks = ({ data, link, target }) => {
+const Perks = ({ data, link, target, title }) => {
   const [selectedCard, setSelectedCard] = useState(0);
   const pathName = usePathname();
   const book_a_demo_meeting = '/book-a-demo-meeting';
@@ -37,6 +37,34 @@ const Perks = ({ data, link, target }) => {
           }}
         >
           <Container>
+            <Box sx={{ mb: 3.5 }}>
+              <Typography
+                variant="h3"
+                textAlign="center"
+                sx={{
+                  textTransform: 'capitalize',
+                  fontSize: {
+                    xs: '18px',
+                    sm: '24px',
+                    md: '35px',
+                    lg: '43px',
+                  },
+                  fontWeight: 700,
+                  lineHeight: 1.4,
+                  color: '#001C63',
+                  px: { xs: '2%', md: '7%', lg: '14%' },
+                  '@media(min-width: 419px) and (max-width:460px)': {
+                    px: '32px',
+                  },
+                  '@media(min-width: 461px) and (max-width:480px)': {
+                    px: '39px',
+                  },
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: title || '',
+                }}
+              />
+            </Box>
             <Box
               sx={{
                 borderRadius: '20px',
