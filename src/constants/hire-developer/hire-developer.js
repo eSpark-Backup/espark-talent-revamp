@@ -1407,11 +1407,7 @@ export const HIRE_DEVELOPERS = [
           title: `Development Tools and Environments`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `XAMPP/WAMP`,
-            `Composer`,
-            `PHPUnit`,
-          ],
+          items: [`XAMPP/WAMP`, `Composer`, `PHPUnit`],
         },
         {
           id: 3,
