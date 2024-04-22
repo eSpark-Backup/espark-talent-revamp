@@ -8,7 +8,6 @@ import Hire from '@/components/hire-developer/Hire';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
-  console.log({ params });
   const filteredData =
     HIRE_SEO.find((item) => item.path === slug) || GLOBAL_SEO[0];
   const metadata = {
