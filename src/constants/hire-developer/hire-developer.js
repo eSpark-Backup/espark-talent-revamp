@@ -13,7 +13,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-frontend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Front-End Solution? <br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Front-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized front-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in front-end development. Let's connect and enhance your front-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
@@ -161,7 +161,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-backend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Back-End Solution? <br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Back-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in back-end development. Let's connect and enhance your back-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
@@ -361,7 +361,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies<br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies</br>We Use For Your Project`,
       descrcipton: `MEAN stack developers at eSpark Talent are well-versed in the languages, tools, and frameworks for this technology.`,
       items: [
         {
@@ -467,7 +467,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> </br> From eSpark Talent ?`,
       subTitle: `Hire a dedicated MEAN stack developer from eSpark Talent as they can bring multiple benefits to the development and growth of your software project.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -726,7 +726,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies<br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies</br>We Use For Your Project`,
       descrcipton: `React Native developers at eSpark Talent possess a thorough knowledge of different languages, tools, and frameworks.`,
       items: [
         {
@@ -838,7 +838,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> </br> From eSpark Talent ?`,
       subTitle: `Hire dedicated React Native from eSpark Talent as they assist you in creating the best software products.`,
       processes: [
         {
@@ -1066,7 +1066,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use <br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use </br> For Your Project`,
       descrcipton: `ASP.net developers at eSpark Talent are well-versed in various languages, tools, and frameworks to build software products.`,
       items: [
         {
@@ -1174,7 +1174,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> </br> From eSpark Talent ?`,
       subTitle: `Hire dedicated ASP.net developers from eSpark Talent to avail numerous benefits for software development.`,
       processes: [
         {
@@ -1392,7 +1392,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For <br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For </br> Your Project`,
       descrcipton: `PHP developers at eSpark Talent have extensive knowledge of various tools, frameworks, and libraries.`,
       items: [
         {
@@ -1496,7 +1496,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> </br> From eSpark Talent ?`,
       subTitle: `Hire the best PHP developers from eSpark Talent as they are trained to provide you with a quality software product.`,
       processes: [
         {
@@ -1729,7 +1729,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For <br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For </br> Your Project`,
       descrcipton: `Python developer at eSpark Talent possesses good know-how about different tools, libraries, and frameworks.`,
       items: [
         {
@@ -1833,7 +1833,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> </br> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Python developer from eSpark Talent as our basic motive is to provide you with the best software solution that fulfills all your objectives and requirements.`,
       processes: [
         {
@@ -2055,7 +2055,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use <br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use </br> For Your Project`,
       descrcipton: `Shopify developers at eSpark have detailed knowledge about numerous tools and frameworks.`,
       items: [
         {
@@ -2167,7 +2167,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> </br> From eSpark Talent ?`,
       subTitle: `Hire dedicated Shopify developers from eSpark Talent as they possess a wide variety of quality attributes.`,
       processes: [
         {
@@ -2856,7 +2856,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Cost-effective`,
-          text: `Performance marketers make the marketing<br> process cost-effective by making payments<br> when desired actions are performed. `,
+          text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
           image: `/images/service/performence/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -2865,7 +2865,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Result oriented  `,
-          text: `Marketers at eSpark Talent use appropriate<br>  data analytics tools to generate results to<br> improve performance.`,
+          text: `Marketers at eSpark Talent use appropriate</br>  data analytics tools to generate results to</br> improve performance.`,
           image: `/images/service/performence/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -2874,7 +2874,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Scalability `,
-          text: `Our performance marketers are skilled at<br>  scaling the process to match your<br>  requirements.`,
+          text: `Our performance marketers are skilled at</br>  scaling the process to match your</br>  requirements.`,
           image: `/images/service/performence/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -2883,7 +2883,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Data-Driven`,
-          text: `Performance Marketers are experts at<br>  analyzing the data to enhance the Return on<br>  Investment (ROI).`,
+          text: `Performance Marketers are experts at</br>  analyzing the data to enhance the Return on</br>  Investment (ROI).`,
           image: `/images/service/performence/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -2892,7 +2892,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Eperties `,
-          text: `Marketers at eSpark Talent have proficiency in<br> different marketing channels like email marketing,<br> social media advertising, etc.`,
+          text: `Marketers at eSpark Talent have proficiency in</br> different marketing channels like email marketing,</br> social media advertising, etc.`,
           image: `/images/service/performence/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -2900,7 +2900,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Correct audience `,
-          text: `Our experts are trained to target appropriate<br>  audiences based on demographics and<br>  purchase behavior.`,
+          text: `Our experts are trained to target appropriate</br>  audiences based on demographics and</br>  purchase behavior.`,
           image: `/images/service/performence/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -2911,7 +2911,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Cost-effective`,
-          text: `Performance marketers make the marketing<br> process cost-effective by making payments<br> when desired actions are performed. `,
+          text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
           image: `/images/service/performence/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -2920,7 +2920,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Result oriented  `,
-          text: `Marketers at eSpark Talent use appropriate<br>  data analytics tools to generate results to<br> improve performance.`,
+          text: `Marketers at eSpark Talent use appropriate</br>  data analytics tools to generate results to</br> improve performance.`,
           image: `/images/service/performence/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -2929,7 +2929,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Scalability `,
-          text: `Our performance marketers are skilled at<br>  scaling the process to match your<br>  requirements.`,
+          text: `Our performance marketers are skilled at</br>  scaling the process to match your</br>  requirements.`,
           image: `/images/service/performence/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -2938,7 +2938,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Data-Driven`,
-          text: `Performance Marketers are experts at<br>  analyzing the data to enhance the Return on<br>  Investment (ROI).`,
+          text: `Performance Marketers are experts at</br>  analyzing the data to enhance the Return on</br>  Investment (ROI).`,
           image: `/images/service/performence/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -2947,7 +2947,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Eperties `,
-          text: `Marketers at eSpark Talent have proficiency in<br> different marketing channels like email marketing,<br> social media advertising, etc.`,
+          text: `Marketers at eSpark Talent have proficiency in</br> different marketing channels like email marketing,</br> social media advertising, etc.`,
           image: `/images/service/performence/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -2956,7 +2956,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Correct audience `,
-          text: `Our experts are trained to target appropriate<br>  audiences based on demographics and<br>  purchase behavior.`,
+          text: `Our experts are trained to target appropriate</br>  audiences based on demographics and</br>  purchase behavior.`,
           image: `/images/service/performence/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3194,7 +3194,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Experties`,
-          text: `To enhance visibility of your website on the<br> search engine, our experts implement various<br> strategies and algorithms`,
+          text: `To enhance visibility of your website on the</br> search engine, our experts implement various</br> strategies and algorithms`,
           image: `/images/service/seo/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3203,7 +3203,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `On Page Optimization`,
-          text: `Our SEO experts enhance various website<br> elements including images, headings, meta<br> tags, and content structure.`,
+          text: `Our SEO experts enhance various website</br> elements including images, headings, meta</br> tags, and content structure.`,
           image: `/images/service/seo/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -3212,7 +3212,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for<br> conducting extensive keyword research to make the website visible to<br> a larger audience.`,
+          text: `SEO experts are also responsible for</br> conducting extensive keyword research to make the website visible to</br> a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3221,7 +3221,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Off page optimization`,
-          text: `Experts at eSpark Talent are skilled at building<br> back links by using various off page SEO<br> methods.`,
+          text: `Experts at eSpark Talent are skilled at building</br> back links by using various off page SEO</br> methods.`,
           image: `/images/service/seo/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3230,7 +3230,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Technical SEO`,
-          text: `Our experts are professionals to enhance the<br> mobile friendliness and speed for search engine<br> indexing.`,
+          text: `Our experts are professionals to enhance the</br> mobile friendliness and speed for search engine</br> indexing.`,
           image: `/images/service/seo/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3238,7 +3238,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competition`,
-          text: `Hiring SEO expert from eSpark Talent would<br> help you to make your website stand out<br> among all your competitors.`,
+          text: `Hiring SEO expert from eSpark Talent would</br> help you to make your website stand out</br> among all your competitors.`,
           image: `/images/service/seo/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3249,7 +3249,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Experties`,
-          text: `To enhance visibility of your website on the<br> search engine, our experts implement various<br> strategies and algorithms`,
+          text: `To enhance visibility of your website on the</br> search engine, our experts implement various</br> strategies and algorithms`,
           image: `/images/service/seo/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3258,7 +3258,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `On Page Optimization`,
-          text: `Our SEO experts enhance various website<br> elements including images, headings, meta<br> tags, and content structure.`,
+          text: `Our SEO experts enhance various website</br> elements including images, headings, meta</br> tags, and content structure.`,
           image: `/images/service/seo/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3267,7 +3267,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for<br> conducting extensive keyword research to make the website visible to<br> a larger audience.`,
+          text: `SEO experts are also responsible for</br> conducting extensive keyword research to make the website visible to</br> a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3276,7 +3276,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Off page optimization`,
-          text: `Experts at eSpark Talent are skilled at building<br> back links by using various off page SEO<br> methods.`,
+          text: `Experts at eSpark Talent are skilled at building</br> back links by using various off page SEO</br> methods.`,
           image: `/images/service/seo/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3285,7 +3285,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Technical SEO`,
-          text: `Our experts are professionals to enhance the<br> mobile friendliness and speed for search engine<br> indexing.`,
+          text: `Our experts are professionals to enhance the</br> mobile friendliness and speed for search engine</br> indexing.`,
           image: `/images/service/seo/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3294,7 +3294,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competition`,
-          text: `Hiring SEO expert from eSpark Talent would<br> help you to make your website stand out<br> among all your competitors.`,
+          text: `Hiring SEO expert from eSpark Talent would</br> help you to make your website stand out</br> among all your competitors.`,
           image: `/images/service/seo/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3344,6 +3344,666 @@ export const HIRE_DEVELOPERS = [
           id: 6,
           heading: `Are SEO experts in Demand?`,
           description: `SEO experts are in high demand as it helps to enhance the visibility of your website, bringing improvement to your overall product or service.`,
+        },
+      ],
+    },
+  },
+  {
+    path: `hire-ppc-specialists`,
+    servicesHeroSection: {
+      title:
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> PPC Specialist <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+      description:
+        'Hire a PPC specialist from eSpark Talent to ensure maximum visibility and enhanced campaign performance. Our Specialists can optimize the performance of your PPC campaigns at a cost-effective rate. To make your PPC campaigns streamlined and customized to match your requirements, get an outsourced PPC specialist from eSpark Talent.',
+      button: {
+        label: 'Hire A Developer',
+        link: '/book-a-demo',
+        btnVarient: 'primary',
+        btnColor: 'secondary',
+      },
+      image: '/images/service/ppc/ppc.svg',
+      imageAlt: `Hire world class experts' team for your business with espark talent`,
+      imageWidth: 435,
+      imageHeight: 431,
+      bgColor: '#fff',
+      bgImage: '/images/homepage/hero-section/hero-section-background.png',
+      spacing: '5%',
+      titleVariant: 'h1',
+      titleColor: 'primary',
+      descVarient: 'body1',
+      descColor: 'secondary',
+      awardsSection: [
+        { image: '/images/service/icons/award1.svg', alt: 'awd1' },
+        { image: '/images/service/icons/award2.svg', alt: 'awd2' },
+        { image: '/images/service/icons/award3.svg', alt: 'awd4' },
+        { image: '/images/service/icons/award4.svg', alt: 'awd3' },
+      ],
+    },
+    experties: {
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist'</span> <br/>Expertise`,
+      paragraph: `PPC specialists at eSpark are skilled at performing a vast variety of tasks.`,
+      btnLink: `/book-a-demo`,
+      btnText: `Hire A Developers`,
+      arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
+      arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
+      arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
+      items: [
+        {
+          icon: `/images/service/ppc/experties/icon1.svg`,
+          title: `Campaign management`,
+          paragraph: `They are responsible for creating and managing PPC campaigns on different platforms like Google ads.`,
+        },
+        {
+          icon: `/images/service/ppc/experties/icon2.svg`,
+          title: `Keyword Research`,
+          paragraph: `PPC specialists carry out detailed research to target the correct campaign requirements and objectives.`,
+        },
+        {
+          icon: `/images/service/ppc/experties/icon3.svg`,
+          title: `Bid management`,
+          paragraph: `Our specialists at eSpark Talent organize bids to ensure the best ad management on the search engines.`,
+        },
+        {
+          icon: `/images/service/ppc/experties/icon4.svg`,
+          title: `Ad creation`,
+          paragraph: `eSpark PPC specialists make ad copies to attract large amounts of drives and click conversions..`,
+        },
+        {
+          icon: `/images/service/ppc/experties/icon5.svg`,
+          title: `Budget management`,
+          paragraph: `Our professionals also manage the budget allocated for PPC campaigns by assigning budgets to optimal campaigns.`,
+        },
+        {
+          icon: `/images/service/ppc/experties/icon6.svg`,
+          title: `Insights`,
+          paragraph: `PPC specialists would also provide thorough insights that would help to enhance future campaigns. `,
+        },
+      ],
+    },
+    technologies: {
+      title: `<span style="color:#029894;font-weight:600;" >PPC </span> Tools We Use </br> For Your Project`,
+      descrcipton: `Our dedicated PPC specialists are skilled in several research, ads management & Analytics tools.`,
+      items: [
+        {
+          id: 1,
+          title: `Keyword Research & Analysis Tools`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`SEMrush`, `KeywordTool.io `, `Google Keyword Planner`, `SpyFu`],
+        },
+        {
+          id: 2,
+          title: `Ad Management Tools`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`Google Ads`, `Optmyzr `, `Microsoft Advertising`, `WordStream`],
+        },
+        {
+          id: 3,
+          title: `Analytics and Tracking Tools`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`Google Analytics `, `Google Tag Manager`, `Hotjar`],
+        },
+      ],
+    },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
+    perks: [
+      {
+        sno: `01`,
+        title: `Hire Salary Based Developers `,
+        icon: `/images/homepage/our-perks/icon1.svg`,
+        activeIcon: `/images/homepage/our-perks/icon1a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        listIcon: `/images/homepage/our-perks/list-icon.svg`,
+        content: {
+          heading: `Hire Full-Time Salaried Developers`,
+          paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
+          list: [
+            {
+              item: `Collaborative Work Environment,`,
+            },
+            { item: `Stability in Payroll, ` },
+            {
+              item: `High-Value Contract Partnership,`,
+            },
+            { item: `Work- Life Balance Focus, ` },
+          ],
+
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+      {
+        sno: `02`,
+        title: `Hire Hourly Based Developers`,
+        icon: `/images/homepage/our-perks/icon2.svg`,
+        activeIcon: `/images/homepage/our-perks/icon2a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire Hourly Developers`,
+          paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
+          list: [
+            {
+              item: `Efficient Task Allocation.`,
+            },
+            { item: `Flexibility in Scheduling, ` },
+            {
+              item: `Dynamic Response to Workload.`,
+            },
+            { item: `Adherence to Labor Laws.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+      {
+        sno: `03`,
+        title: `Hire a Dedicated Team`,
+        icon: `/images/homepage/our-perks/icon3.svg`,
+        activeIcon: `/images/homepage/our-perks/icon3a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire a Dedicated Team`,
+          paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
+          list: [
+            {
+              item: `Cost Efficiency.`,
+            },
+            { item: `Faster Project Turnaround.` },
+            {
+              item: `Specialized Expertise,`,
+            },
+            { item: `Strategic Project Planning.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+    ],
+
+    whyHire: {
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> </br> From eSpark Talent ?`,
+      subTitle: `Hire a dedicated PPC specialist from eSpark Talent as they have a lot of qualifications that make them a perfect choice for your project.`,
+      processes: [
+        {
+          id: `01`,
+          title: `Experties`,
+          text: `These specialists possess the expertise to hold</br> PPC campaigns on numerous platforms like</br>  Google ads.`,
+          image: `/images/service/ppc/why-hire/icon1.svg`,
+          alignment: 'right',
+          color: '#029894',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `02`,
+          title: `Data Analysis`,
+          text: `Specialists at eSpark Talent critically analyze</br> the performance metrics of the campaigns to</br> check various factors like conversion rates.`,
+          image: `/images/service/ppc/why-hire/icon2.svg`,
+          alignment: 'left',
+          color: '#029894',
+          vec: '/images/service/icons/vec_2.svg',
+        },
+        {
+          id: `03`,
+          title: `Customized Techniques`,
+          text: `PPC specialists can customize techniques to</br> enhance website traffic or sales to improve</br> overall visibility.`,
+          image: `/images/service/ppc/why-hire/icon3.svg`,
+          alignment: 'right',
+          color: '#029894',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `04`,
+          title: `Cost-effective`,
+          text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
+          image: `/images/service/ppc/why-hire/icon4.svg`,
+          alignment: 'left',
+          color: '#001C63',
+          vec: '/images/service/icons/vec_3.svg',
+        },
+        {
+          id: `05`,
+          title: `Streamlined`,
+          text: `You can benefit a lot by outsourcing PPC</br> management by saving time and effort</br> and utilizing it for other aspects of the business.`,
+          image: `/images/service/ppc/why-hire/icon5.svg`,
+          alignment: 'right',
+          color: '#001C63',
+        },
+        {
+          id: `06`,
+          title: `Adaptable`,
+          text: `PPC specialists can quickly analyze</br> modifications in policies and algorithms to</br> guarantee that your campaign is efficient.`,
+          image: `/images/service/ppc/why-hire/icon6.svg`,
+          alignment: 'left',
+          color: '#001C63',
+          vec: '/images/service/icons/vec_4.svg',
+        },
+      ],
+      responsiveProcesses: [
+        {
+          id: `01`,
+          title: `Experties`,
+          text: `These specialists possess the expertise to hold</br> PPC campaigns on numerous platforms like</br>  Google ads.`,
+          image: `/images/service/ppc/why-hire/icon1.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+        },
+        {
+          id: `02`,
+          title: `Data Analysis`,
+          text: `Specialists at eSpark Talent critically analyze</br> the performance metrics of the campaigns to</br> check various factors like conversion rates.`,
+          image: `/images/service/ppc/why-hire/icon2.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#029894',
+        },
+        {
+          id: `03`,
+          title: `Customized Techniques`,
+          text: `PPC specialists can customize techniques to</br> enhance website traffic or sales to improve</br> overall visibility.`,
+          image: `/images/service/ppc/why-hire/icon3.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+        },
+        {
+          id: `04`,
+          title: `Cost-effective`,
+          text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
+          image: `/images/service/ppc/why-hire/icon4.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+        },
+        {
+          id: `05`,
+          title: `Streamlined`,
+          text: `You can benefit a lot by outsourcing PPC</br> management by saving time and effort</br> and utilizing it for other aspects of the business.`,
+          image: `/images/service/ppc/why-hire/icon5.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#001C63',
+        },
+        {
+          id: `06`,
+          title: `Adaptable`,
+          text: `PPC specialists can quickly analyze</br> modifications in policies and algorithms to</br> guarantee that your campaign is efficient.`,
+          image: `/images/service/ppc/why-hire/icon6.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+          vec: '/images/service/why-hire/vec_4.svg',
+        },
+      ],
+    },
+    hosts: {
+      image: `/images/hire-expert/business.svg`,
+      leftImage: `/images/hire-expert/round.svg`,
+      bgImage: `/images/service/pipe.svg`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PPC Specialist`,
+      descrcipton: `Our specialists, masters in the art of PPC, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PPC experts to ensure the most suitable match for your project.`,
+      btnText: `Hire A Developer`,
+      btnLink: `/hire-a-frontend-expert/#form`,
+    },
+    faqs: {
+      title: `Check Out Our Common Questions`,
+      questions: [
+        {
+          id: 1,
+          heading: `What does a PPC specialist do?`,
+          description: `PPC specialists are experts in managing campaigns, keyword research, bid management, and ad creation.`,
+        },
+        {
+          id: 2,
+          heading: `Why hire a PPC specialist?`,
+          description: `Hire a PPC specialist as they hold the expertise to handle the PPC campaigns by using the appropriate techniques and streamlining the process.`,
+        },
+        {
+          id: 3,
+          heading: `Which job is better SEO or PPC?`,
+          description: `Depending upon the project scope and requirements, the decision to opt for either SEO or PPC can be taken.`,
+        },
+        {
+          id: 4,
+          heading: `Is PPC in demand?`,
+          description: `Due to increasing demand for PPC campaigns on platforms like Google ads, the demand for PPC is also rising.`,
+        },
+        {
+          id: 5,
+          heading: `Why eSpark Talent PPC Specialist different from others?`,
+          description: `PPC specialists at eSpark Talent possess the skills and experience that will assist you in making your project successful.`,
+        },
+        {
+          id: 6,
+          heading: `How much does it cost to Hire a Certified PPC Specialist?`,
+          description: `eSpark Talent would decide the cost after analyzing the project scope and requirements`,
+        },
+      ],
+    },
+  }, {
+    path: `hire-social-media-experts`,
+    servicesHeroSection: {
+      title:
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Social Media <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Expert </span>',
+      description:
+        'Hire social media experts from eSpark Talent as they are proficient in planning to target the appropriate audience for your brand. Using different data analytics tools and techniques, social media experts assist in improving the visibility and awareness of your project. To get skills and experience in one place, hire social media experts from eSpark Talent.',
+      button: {
+        label: 'Hire A Developer',
+        link: '/book-a-demo',
+        btnVarient: 'primary',
+        btnColor: 'secondary',
+      },
+      image: '/images/service/social/social.svg',
+      imageAlt: `Hire world class experts' team for your business with espark talent`,
+      imageWidth: 435,
+      imageHeight: 431,
+      bgColor: '#fff',
+      bgImage: '/images/homepage/hero-section/hero-section-background.png',
+      spacing: '5%',
+      titleVariant: 'h1',
+      titleColor: 'primary',
+      descVarient: 'body1',
+      descColor: 'secondary',
+      awardsSection: [
+        { image: '/images/service/icons/award1.svg', alt: 'awd1' },
+        { image: '/images/service/icons/award2.svg', alt: 'awd2' },
+        { image: '/images/service/icons/award3.svg', alt: 'awd4' },
+        { image: '/images/service/icons/award4.svg', alt: 'awd3' },
+      ],
+    },
+    experties: {
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists '</span> <br/>Expertise`,
+      paragraph: `Hire the best social media experts from eSpark talent to optimize the strategy for social media advertisement.`,
+      btnLink: `/book-a-demo`,
+      btnText: `Hire A Developers`,
+      arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
+      arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
+      arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
+      items: [
+        {
+          icon: `/images/service/social/experties/icon1.svg`,
+          title: `Strategy development`,
+          paragraph: `Social Media Experts craft plans to ensure alignment with business objectives, demographics, and brand requirements.`,
+        },
+        {
+          icon: `/images/service/social/experties/icon2.svg`,
+          title: `Audience engagement`,
+          paragraph: `Social Media experts are also responsible for engaging with the audience via comments, mentions, and messages.`,
+        },
+        {
+          icon: `/images/service/social/experties/icon3.svg`,
+          title: `Advertisement`,
+          paragraph: `They also conduct paid promotion campaigns to enhance the overall audience engagement on different platforms.`,
+        },
+        {
+          icon: `/images/service/social/experties/icon4.svg`,
+          title: `Content creation`,
+          paragraph: `Experts at eSpark Talent develop quality content that has images, stories, videos, etc.`,
+        },
+        {
+          icon: `/images/service/social/experties/icon5.svg`,
+          title: `Community management`,
+          paragraph: `Our Social media experts engage in meaningful conversations for effective online community management.`,
+        },
+        {
+          icon: `/images/service/social/experties/icon6.svg`,
+          title: `Crisis management`,
+          paragraph: `Along with positive content, social media experts at eSpark Talent manage reviews, complaints, and negative comments.`,
+        },
+      ],
+    },
+    technologies: {
+      title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use </br> For Your Project`,
+      descrcipton: `Hire professional social media experts from eSpark Talent who have proficiency in numerous tools and technologies.`,
+      items: [
+        {
+          id: 1,
+          title: `Social Media Platforms`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`Facebook`, `Instagram `, `Twitter`, `SpyFu`],
+        },
+        {
+          id: 2,
+          title: `Social Media Management Tools`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`Hootsuite`, `Buffer `, `Sprout Social`],
+        },
+        {
+          id: 3,
+          title: `Analytics and Insights`,
+          gridLg: 3.8,
+          gridmd: 4,
+          items: [`Facebook Insights`, `Instagram Insights`, `Twitter Insights`],
+        },
+      ],
+    },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
+    perks: [
+      {
+        sno: `01`,
+        title: `Hire Salary Based Developers `,
+        icon: `/images/homepage/our-perks/icon1.svg`,
+        activeIcon: `/images/homepage/our-perks/icon1a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        listIcon: `/images/homepage/our-perks/list-icon.svg`,
+        content: {
+          heading: `Hire Full-Time Salaried Developers`,
+          paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
+          list: [
+            {
+              item: `Collaborative Work Environment,`,
+            },
+            { item: `Stability in Payroll, ` },
+            {
+              item: `High-Value Contract Partnership,`,
+            },
+            { item: `Work- Life Balance Focus, ` },
+          ],
+
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+      {
+        sno: `02`,
+        title: `Hire Hourly Based Developers`,
+        icon: `/images/homepage/our-perks/icon2.svg`,
+        activeIcon: `/images/homepage/our-perks/icon2a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire Hourly Developers`,
+          paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
+          list: [
+            {
+              item: `Efficient Task Allocation.`,
+            },
+            { item: `Flexibility in Scheduling, ` },
+            {
+              item: `Dynamic Response to Workload.`,
+            },
+            { item: `Adherence to Labor Laws.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+      {
+        sno: `03`,
+        title: `Hire a Dedicated Team`,
+        icon: `/images/homepage/our-perks/icon3.svg`,
+        activeIcon: `/images/homepage/our-perks/icon3a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire a Dedicated Team`,
+          paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
+          list: [
+            {
+              item: `Cost Efficiency.`,
+            },
+            { item: `Faster Project Turnaround.` },
+            {
+              item: `Specialized Expertise,`,
+            },
+            { item: `Strategic Project Planning.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a Developer`,
+          buttonLink: `/hire-a-frontend-expert/#form`,
+        },
+      },
+    ],
+
+    whyHire: {
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Social Media Expert </span> </br> From eSpark Talent ?`,
+      subTitle: `Hire a dedicated Social Media Expert from eSpark Talent to elevate the progress of your brand`,
+      processes: [
+        {
+          id: `01`,
+          title: `Experties`,
+          text: `Social Media Expert have the skills to manage<br> various social media platforms like YouTube,<br> Pinterest, Twitter, etc.`,
+          image: `/images/service/social/why-hire/icon1.svg`,
+          alignment: 'right',
+          color: '#029894',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `02`,
+          title: `Planning`,
+          text: `Experts at eSpark Talent make various plans to<br> enhance your engagement on different social<br> media platforms.`,
+          image: `/images/service/social/why-hire/icon2.svg`,
+          alignment: 'left',
+          color: '#029894',
+          vec: '/images/service/icons/vec_2.svg',
+        },
+        {
+          id: `03`,
+          title: `Customized Techniques`,
+          text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
+          image: `/images/service/social/why-hire/icon3.svg`,
+          alignment: 'right',
+          color: '#029894',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `04`,
+          title: `Content Creation`,
+          text: `They develop creative and visually appealing<br> content using videos, images, articles, posts,<br> etc.`,
+          image: `/images/service/social/why-hire/icon4.svg`,
+          alignment: 'left',
+          color: '#001C63',
+          vec: '/images/service/icons/vec_3.svg',
+        },
+        {
+          id: `05`,
+          title: `Data Analytics`,
+          text: `Experts at eSpark Talent use the data metrics to<br> track audience interaction on numerous<br> platforms.`,
+          image: `/images/service/social/why-hire/icon5.svg`,
+          alignment: 'right',
+          color: '#001C63',
+        },
+        {
+          id: `06`,
+          title: `Brand visibility`,
+          text: `Using hashtags, partnerships, and trends,<br> social media experts improve the overall<br> visibility of your project.`,
+          image: `/images/service/social/why-hire/icon6.svg`,
+          alignment: 'left',
+          color: '#001C63',
+          vec: '/images/service/icons/vec_4.svg',
+        },
+      ],
+      responsiveProcesses: [
+        {
+          id: `01`,
+          title: `Experties`,
+          text: `Social Media Expert have the skills to manage<br> various social media platforms like YouTube,<br> Pinterest, Twitter, etc.`,
+          image: `/images/service/social/why-hire/icon1.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+        },
+        {
+          id: `02`,
+          title: `Planning`,
+          text: `Experts at eSpark Talent make various plans to<br> enhance your engagement on different social<br> media platforms.`,
+          image: `/images/service/social/why-hire/icon2.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#029894',
+        },
+        {
+          id: `03`,
+          title: `Customized Techniques`,
+          text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
+          image: `/images/service/social/why-hire/icon3.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+        },
+        {
+          id: `04`,
+          title: `Content Creation`,
+          text: `They develop creative and visually appealing<br> content using videos, images, articles, posts,<br> etc.`,
+          image: `/images/service/social/why-hire/icon4.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+        },
+        {
+          id: `05`,
+          title: `Data Analytics`,
+          text: `Experts at eSpark Talent use the data metrics to<br> track audience interaction on numerous<br> platforms.`,
+          image: `/images/service/social/why-hire/icon5.svg`,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#001C63',
+        },
+        {
+          id: `06`,
+          title: `Brand visibility`,
+          text: `Using hashtags, partnerships, and trends,<br> social media experts improve the overall<br> visibility of your project.`,
+          image: `/images/service/social/why-hire/icon6.svg`,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+          vec: '/images/service/why-hire/vec_4.svg',
+        },
+      ],
+    },
+    hosts: {
+      image: `/images/hire-expert/business.svg`,
+      leftImage: `/images/hire-expert/round.svg`,
+      bgImage: `/images/service/pipe.svg`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Social Media Specialists`,
+      descrcipton: `Our specialists, masters in the art of Social Media, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Social Media experts to ensure the most suitable match for your project.`,
+      btnText: `Hire A Developer`,
+      btnLink: `/hire-a-frontend-expert/#form`,
+    },
+    faqs: {
+      title: `Check Out Our Common Questions`,
+      questions: [
+        {
+          id: 1,
+          heading: `What is the role of a Social Media Expert?`,
+          description: `Social Media Experts are responsible for managing social media platforms and content creation to enhance brand visibility and engagement.`,
+        },
+        {
+          id: 2,
+          heading: `How much does it cost to hire a social media expert?`,
+          description: `eSpark Talent would decide the cost after analyzing the project scope and requirements.`,
+        },
+        {
+          id: 3,
+          heading: `Does a Social Media Expert have a good future?`,
+          description: `With growing advancements in digital media, the demand for social media experts is increasing day by day.`,
         },
       ],
     },
