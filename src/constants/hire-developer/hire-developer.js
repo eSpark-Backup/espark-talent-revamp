@@ -369,19 +369,20 @@ export const HIRE_DEVELOPERS = [
           title: `Design and Prototyping Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Adobe XD`,
-            `Sketch`,
-            `InVision`,
-            `Figma`,
-          ],
+          items: [`Adobe XD`, `Sketch`, `InVision`, `Figma`],
         },
         {
           id: 2,
           title: `Graphic Design and Visualization Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Affinity Designer`, `Procreate`, `After Effects`, `Photoshop`, `Illustrator`],
+          items: [
+            `Affinity Designer`,
+            `Procreate`,
+            `After Effects`,
+            `Photoshop`,
+            `Illustrator`,
+          ],
         },
         {
           id: 3,
@@ -746,7 +747,7 @@ export const HIRE_DEVELOPERS = [
             `JavaScript (Node.js)`,
             `Python (Django, Flask)`,
             `Java (Spring Boot)`,
-            `C# (ASP.NET Core)`,           
+            `C# (ASP.NET Core)`,
           ],
         },
         {
@@ -754,7 +755,14 @@ export const HIRE_DEVELOPERS = [
           title: `Frameworks and Libraries:`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`React.js`, `Angular`, `Vue.js`, `jQuery`, `Bootstrap`, `Sass/Less (for styling)`],
+          items: [
+            `React.js`,
+            `Angular`,
+            `Vue.js`,
+            `jQuery`,
+            `Bootstrap`,
+            `Sass/Less (for styling)`,
+          ],
         },
         {
           id: 3,
@@ -1493,10 +1501,7 @@ export const HIRE_DEVELOPERS = [
           title: `Frontend Framework`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `React.js`,
-           
-          ],
+          items: [`React.js`],
         },
         {
           id: 2,
@@ -1510,7 +1515,12 @@ export const HIRE_DEVELOPERS = [
           title: `Database and Development Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`MongoDB`, `MongoDB Compass`, `npm (Node Package Manager)`, `React Developer Tools`],
+          items: [
+            `MongoDB`,
+            `MongoDB Compass`,
+            `npm (Node Package Manager)`,
+            `React Developer Tools`,
+          ],
         },
       ],
     },
@@ -1855,11 +1865,7 @@ export const HIRE_DEVELOPERS = [
           title: `(CI/CD) Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Jenkins`,
-            `Travis CI`,
-            `GitLab CI`,
-          ],
+          items: [`Jenkins`, `Travis CI`, `GitLab CI`],
         },
         {
           id: 2,
@@ -1873,7 +1879,7 @@ export const HIRE_DEVELOPERS = [
           title: `Containerization & Orchestration`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Docker`, `Kubernetes`, `Amazon ECS`,],
+          items: [`Docker`, `Kubernetes`, `Amazon ECS`],
         },
       ],
     },
@@ -2218,11 +2224,7 @@ export const HIRE_DEVELOPERS = [
           title: `Blockchain Technology`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Ethereum`,
-            `Hyperledger Fabric`,
-            `Ripple`,
-          ],
+          items: [`Ethereum`, `Hyperledger Fabric`, `Ripple`],
         },
         {
           id: 2,
@@ -2236,7 +2238,7 @@ export const HIRE_DEVELOPERS = [
           title: `Financial APIs`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Plaid`, `Yodlee`, `Stripe API`,],
+          items: [`Plaid`, `Yodlee`, `Stripe API`],
         },
       ],
     },
@@ -2581,21 +2583,14 @@ export const HIRE_DEVELOPERS = [
           title: `Test Automation Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Selenium`,
-            `TestNG`,
-            `Appium`,
-            `JUnit`,
-            `Jenkins`,
-         
-          ],
+          items: [`Selenium`, `TestNG`, `Appium`, `JUnit`, `Jenkins`],
         },
         {
           id: 2,
           title: `Test Management Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`JIRA`, `TestRail`, `Bugzilla`,`Mantis`, `Redmine`],
+          items: [`JIRA`, `TestRail`, `Bugzilla`, `Mantis`, `Redmine`],
         },
         {
           id: 3,
@@ -2953,7 +2948,6 @@ export const HIRE_DEVELOPERS = [
             `AngularJS Dependency Injection`,
             `AngularJS Services`,
             `AngularJS Controllers`,
-         
           ],
         },
         {
@@ -3305,17 +3299,14 @@ export const HIRE_DEVELOPERS = [
           title: `Programming Languages`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `JavaScript`,
-            `TypeScript`,
-          ],
+          items: [`JavaScript`, `TypeScript`],
         },
         {
           id: 2,
           title: `State Management Framework`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Redux`, ],
+          items: [`Redux`],
         },
         {
           id: 3,
@@ -3663,20 +3654,17 @@ export const HIRE_DEVELOPERS = [
           title: `Frameworks and Libraries`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `React`,
-            `Angular`,
-            `Vue.js`,
-            `Node.js`,
-            `Express.js`,
-          ],
+          items: [`React`, `Angular`, `Vue.js`, `Node.js`, `Express.js`],
         },
         {
           id: 2,
           title: `Programming Languages`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`JavaScript (ECMAScript)`, `TypeScript (a superset of JavaScript)` ],
+          items: [
+            `JavaScript (ECMAScript)`,
+            `TypeScript (a superset of JavaScript)`,
+          ],
         },
         {
           id: 3,
@@ -4031,17 +4019,14 @@ discussions that suit your availability.
           title: `Programming Languagesn`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `JavaScript`,
-            `TypeScript`,
-          ],
+          items: [`JavaScript`, `TypeScript`],
         },
         {
           id: 2,
           title: `State Management Framework`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Redux`,],
+          items: [`Redux`],
         },
         {
           id: 3,
@@ -4398,17 +4383,14 @@ goals and requirements.
           title: `Programming Languagesn`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Java`,
-            `Kotlin`,
-          ],
+          items: [`Java`, `Kotlin`],
         },
         {
           id: 2,
           title: `Development Environment`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Android Studio`,],
+          items: [`Android Studio`],
         },
         {
           id: 3,
@@ -4757,23 +4739,21 @@ goals and requirements.
           title: `Programming Languagesn`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `Dart`,
-          ],
+          items: [`Dart`],
         },
         {
           id: 2,
           title: `Development Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Flutter SDK`,`Flutter Inspector`],
+          items: [`Flutter SDK`, `Flutter Inspector`],
         },
         {
           id: 3,
           title: `(IDE)`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Android Studio with Flutter Plugin`,],
+          items: [`Android Studio with Flutter Plugin`],
         },
       ],
     },
@@ -5790,7 +5770,11 @@ goals and requirements.
           title: `Backend Technologies & Integrations`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Shopify App Development`, `Database Management Systems`, `Webhooks and APIs`],
+          items: [
+            `Shopify App Development`,
+            `Database Management Systems`,
+            `Webhooks and APIs`,
+          ],
         },
       ],
     },
@@ -6121,11 +6105,7 @@ goals and requirements.
           title: `Content Management`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [
-            `WordPress Core`,
-            `Themes `,
-            `Plugins`,
-          ],
+          items: [`WordPress Core`, `Themes `, `Plugins`],
         },
         {
           id: 3,
@@ -6276,7 +6256,8 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `WordPress developers at eSpark Talent have<br /> knowledge about this technology to ensure that<br /> you get a professional website. `,image: `/images/service/wordpress/why-hire/icon1.svg`,
+          text: `WordPress developers at eSpark Talent have<br /> knowledge about this technology to ensure that<br /> you get a professional website. `,
+          image: `/images/service/wordpress/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
           color: '#029894',
@@ -6293,7 +6274,8 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization `,
-          text: `Developers at eSpark Talent can modify existing<br /> plugins, themes and features according to your<br /> requirements.`,image: `/images/service/wordpress/why-hire/icon3.svg`,
+          text: `Developers at eSpark Talent can modify existing<br /> plugins, themes and features according to your<br /> requirements.`,
+          image: `/images/service/wordpress/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
           color: '#029894',
@@ -6301,7 +6283,8 @@ goals and requirements.
         {
           id: `04`,
           title: `Interactive design`,
-          text: `Our WordPress experts create a user-friendly</br> design to ensure high customer satisfaction</br> and loyalty to the product.`,image: `/images/service/wordpress/why-hire/icon4.svg`,
+          text: `Our WordPress experts create a user-friendly</br> design to ensure high customer satisfaction</br> and loyalty to the product.`,
+          image: `/images/service/wordpress/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
           color: '#001C63',
@@ -6318,7 +6301,8 @@ goals and requirements.
         {
           id: `06`,
           title: `Security `,
-          text: `To protect your website from cyber threats, our</br> developers implement security measures like</br> encryption and controls.`,image: `/images/service/wordpress/why-hire/icon6.svg`,
+          text: `To protect your website from cyber threats, our</br> developers implement security measures like</br> encryption and controls.`,
+          image: `/images/service/wordpress/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
           color: '#001C63',
