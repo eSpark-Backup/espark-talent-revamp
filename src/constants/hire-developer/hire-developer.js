@@ -1,6 +1,6 @@
 export const HIRE_DEVELOPERS = [
   {
-    path: 'hire-a-frontend-developers',
+    path: 'hire-a-frontend-developer',
     bgImage: `/images/hire-developer/bgimage.png`,
     heroSection: {
       logo: `/images/eSpark-Talent-Logo.svg`,
@@ -148,7 +148,7 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    path: 'hire-a-backend-developers',
+    path: 'hire-a-backend-developer',
     bgImage: `/images/hire-developer/bgimage.png`,
     heroSection: {
       logo: `/images/eSpark-Talent-Logo.svg`,
@@ -4455,7 +4455,11 @@ export const HIRE_DEVELOPERS = [
           title: `On-Page Optimization Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Yoast SEO`, `Screaming Frog SEO Spider `, `Google Search Console`],
+          items: [
+            `Yoast SEO`,
+            `Screaming Frog SEO Spider `,
+            `Google Search Console`,
+          ],
         },
         {
           id: 3,
@@ -4786,14 +4790,24 @@ export const HIRE_DEVELOPERS = [
           title: `Keyword Research & Analysis Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`SEMrush`, `KeywordTool.io `, `Google Keyword Planner`, `SpyFu`],
+          items: [
+            `SEMrush`,
+            `KeywordTool.io `,
+            `Google Keyword Planner`,
+            `SpyFu`,
+          ],
         },
         {
           id: 2,
           title: `Ad Management Tools`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Google Ads`, `Optmyzr `, `Microsoft Advertising`, `WordStream`],
+          items: [
+            `Google Ads`,
+            `Optmyzr `,
+            `Microsoft Advertising`,
+            `WordStream`,
+          ],
         },
         {
           id: 3,
@@ -5042,7 +5056,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-  }, {
+  },
+  {
     path: `hire-social-media-experts`,
     servicesHeroSection: {
       title:
@@ -5137,7 +5152,11 @@ export const HIRE_DEVELOPERS = [
           title: `Analytics and Insights`,
           gridLg: 3.8,
           gridmd: 4,
-          items: [`Facebook Insights`, `Instagram Insights`, `Twitter Insights`],
+          items: [
+            `Facebook Insights`,
+            `Instagram Insights`,
+            `Twitter Insights`,
+          ],
         },
       ],
     },

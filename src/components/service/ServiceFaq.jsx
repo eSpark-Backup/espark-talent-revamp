@@ -33,8 +33,8 @@ const ServiceFaq = ({ data }) => {
         >
           {data?.title}
         </Typography>
-        <Grid container spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }} >
-          <Grid item md={6} sm={12} >
+        <Grid container spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }}>
+          <Grid item md={6} sm={12}>
             {data?.questions?.slice(0, 3).map((item, index) => {
               const panel = `panel${item.id}`;
               return (
