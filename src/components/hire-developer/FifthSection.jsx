@@ -19,20 +19,28 @@ const FifthSection = ({ data }) => {
     data && (
       <Box
         sx={{
-          backgroundColor: pathname.includes('service')
-            ? isSmallScreen
-              ? '#F7F8FF'
-              : '#F7F8FF'
-            : isSmallScreen
-              ? ''
-              : '#F7F8FF',
+          backgroundColor:
+            pathname.includes('developers') ||
+            pathname.includes('designers') ||
+            pathname.includes('engineers')
+              ? isSmallScreen
+                ? '#F7F8FF'
+                : '#F7F8FF'
+              : isSmallScreen
+                ? ''
+                : '#F7F8FF',
           py: 3,
         }}
       >
         <Container>
           <Box
             sx={{
-              py: pathname.includes('service') ? 0 : 2,
+              py:
+                pathname.includes('developers') ||
+                pathname.includes('designers') ||
+                pathname.includes('engineers')
+                  ? 0
+                  : 2,
             }}
           >
             <Typography
@@ -49,34 +57,54 @@ const FifthSection = ({ data }) => {
                 fontWeight: 600,
                 lineHeight: { xs: '29px', md: 1.4 },
                 color: '#001C63',
-                px: pathname.includes('service')
-                  ? { xs: '0%', sm: '5%', md: '10%', lg: '15%' }
-                  : { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
+                px:
+                  pathname.includes('developers') ||
+                  pathname.includes('designers') ||
+                  pathname.includes('engineers')
+                    ? { xs: '0%', sm: '5%', md: '10%', lg: '15%' }
+                    : { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
               }}
               dangerouslySetInnerHTML={{
                 __html: data?.title,
               }}
             />
             <Typography
-              variant="body1"
               textAlign="center"
               sx={{
                 textAlign: 'center',
                 fontSize: {
-                  xs: pathname.includes('service') ? '11px' : '13px',
+                  xs:
+                    pathname.includes('developers') ||
+                    pathname.includes('designers') ||
+                    pathname.includes('engineers')
+                      ? '11px'
+                      : '13px',
                   sm: '15px',
                   md: '18px',
-                  lg: '23px',
+                  lg: '19px',
                   xl: '23px',
                 },
                 fontWeight: 400,
-                lineHeight: 1.4,
+                lineHeight: { xs: 1.4, md: '34px' },
                 color: '#001C63',
-                pt: pathname.includes('service') ? 1 : 0,
-                pb: pathname.includes('service') ? 2 : 0,
-                px: pathname.includes('service')
-                  ? { xs: '0%', sm: '5%', md: '5%', lg: '12%' }
-                  : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+                pt:
+                  pathname.includes('developers') ||
+                  pathname.includes('designers') ||
+                  pathname.includes('engineers')
+                    ? 1
+                    : 0,
+                pb:
+                  pathname.includes('developers') ||
+                  pathname.includes('designers') ||
+                  pathname.includes('engineers')
+                    ? 2
+                    : 0,
+                px:
+                  pathname.includes('developers') ||
+                  pathname.includes('designers') ||
+                  pathname.includes('engineers')
+                    ? { xs: '0%', sm: '5%', md: '5%', lg: '12%' }
+                    : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
               }}
             >
               {data?.descrcipton}
@@ -105,7 +133,7 @@ const FifthSection = ({ data }) => {
                   mr={item[0] ? `50px` : ''}
                   sx={{
                     fontWeight: 700,
-                    lineHeight: '48px',
+                    lineHeight: '40px',
                     color: '#029894',
                     fontSize: {
                       xs: '22px',
@@ -140,7 +168,7 @@ const FifthSection = ({ data }) => {
                       ? { md: 'center', lg: 'start' }
                       : 'center',
                     textAlign: 'left',
-                    maxWidth: { xs: 'auto', md: '800px', lg: 'auto' },
+                    maxWidth: { xs: 'auto', md: '800px', lg: '1100px' },
                     justifyContent: {
                       xs: 'center',
                       md: 'center',
@@ -170,6 +198,32 @@ const FifthSection = ({ data }) => {
                                 fontSize: '13.1px',
                                 lineHeight: '15px',
                               },
+                            '@media (min-width: 280px) and (max-width: 300px)':
+                              {
+                                fontSize:
+                                  pathname.includes('native') ||
+                                  pathname.includes('flutter') ||
+                                  pathname.includes('javascript') ||
+                                  pathname.includes('angular') ||
+                                  pathname.includes('asp') ||
+                                  pathname.includes('shopify')
+                                    ? '11.1px'
+                                    : '13px',
+                                lineHeight: '15px',
+                              },
+                            '@media (min-width: 360px) and (max-width: 400px)':
+                              {
+                                fontSize:
+                                  pathname.includes('native') ||
+                                  pathname.includes('flutter') ||
+                                  pathname.includes('javascript') ||
+                                  pathname.includes('angular') ||
+                                  pathname.includes('asp') ||
+                                  pathname.includes('shopify')
+                                    ? '15.1px'
+                                    : '18px',
+                                lineHeight: '15px',
+                              },
                           }}
                           dangerouslySetInnerHTML={{ __html: chip }}
                         ></Typography>
@@ -177,9 +231,12 @@ const FifthSection = ({ data }) => {
                       sx={{
                         width: 'auto',
                         minWidth: '93px',
-                        maxWidth: pathname.includes('service')
-                          ? { xs: '964px', md: '464px' }
-                          : { xs: '264px' },
+                        maxWidth:
+                          pathname.includes('developers') ||
+                          pathname.includes('designers') ||
+                          pathname.includes('engineers')
+                            ? { xs: '964px', md: '964px !important' }
+                            : { xs: '264px' },
                         backgroundColor: '#E9ECF6',
                         color: '#000',
                         borderRadius: '3px',
