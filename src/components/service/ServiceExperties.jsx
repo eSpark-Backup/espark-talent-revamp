@@ -45,9 +45,19 @@ const ServiceExperties = ({ data }) => {
                   variant={'h2'}
                   color={'secondary'}
                   sx={{
-                    fontSize: { xs: '20px', md: '48px' },
+                    fontSize: {
+                      xs: '20px',
+                      sm: '20px',
+                      md: '35px',
+                      lg: '48px',
+                    },
                     fontWeight: 600,
-                    lineHeight: { xs: '29px', md: '65px' },
+                    lineHeight: {
+                      xs: '29px',
+                      sm: '45px',
+                      md: '50px',
+                      lg: '65px',
+                    },
                   }}
                   dangerouslySetInnerHTML={{ __html: data?.title }}
                 />
