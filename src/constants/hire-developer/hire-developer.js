@@ -393,7 +393,7 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    perkBtnTitle: '',
+    perkBtnTitle: 'Hire a Designer',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8102,7 +8102,7 @@ goals and requirements.
         },
       ],
     },
-    perkBtnTitle: '',
+    perkBtnTitle: 'Hire a Marketer',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8431,7 +8431,7 @@ goals and requirements.
         },
       ],
     },
-    perkBtnTitle: '',
+    perkBtnTitle: 'Hire a SEO Expert',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8767,7 +8767,7 @@ goals and requirements.
         },
       ],
     },
-    perkBtnTitle: '',
+    perkBtnTitle: 'Hire a PPC Expert',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -9096,7 +9096,7 @@ goals and requirements.
         },
       ],
     },
-    perkBtnTitle: '',
+    perkBtnTitle: 'Hire a Expert',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
