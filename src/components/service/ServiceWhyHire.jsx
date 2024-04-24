@@ -44,6 +44,9 @@ const ServiceWhyHire = ({ data }) => {
                   fontWeight: 600,
                   lineHeight: 1.4,
                   color: '#001C63',
+                  '@media (min-width:1024px) and (max-width: 1439px)': {
+                    fontSize: '35px',
+                  },
                 }}
                 dangerouslySetInnerHTML={{
                   __html: data?.title,
@@ -61,6 +64,10 @@ const ServiceWhyHire = ({ data }) => {
                     md: '18px',
                     lg: '21px',
                     xl: '21px',
+                  },
+                  '@media (min-width:1024px) and (max-width: 1439px)': {
+                    fontSize: '19px',
+                    lineHeight: 1.6,
                   },
                   fontWeight: 400,
                   lineHeight: 1.7,

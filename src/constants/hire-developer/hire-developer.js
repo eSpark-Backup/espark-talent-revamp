@@ -1229,7 +1229,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Community driven`,
-          text: `Strong collaboration and communication among<br/> MEAN developers boosts tool, framework, and<br/> library usage and sharing.`,
+          text: `Strong collaboration and communication <br/> among MEAN developers boosts tool, framework, <br/> and library usage and sharing.`,
           image: `/images/service/mean-stack/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -3976,7 +3976,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `During development, eSpark Talent developers <br /> collaborate closely with you, keeping you informed <br /> about progress and milestones.achieved.`,
+          text: `During development, eSpark Talent developers <br /> collaborate closely with you, keeping you <br /> informed about progress and milestones.achieved.`,
           image: `/images/service/nextjs/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7879,7 +7879,8 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce</br> websites with features like payment gateways,br> product filters and shopping carts.`,
+          text: `Our experts at developing e-commerce</br> websites with features like payment gateways,br> product filters and shopping carts.
+          `,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7887,7 +7888,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Security `,
-          text: `To protect your website from cyber threats, our</br> developers implement security measures like</br> encryption and controls.`,
+          text: `To protect your website from cyber threats, <br /> our developers implement security measures <br /> like encryption and controls.`,
           image: `/images/service/wordpress/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8209,7 +8210,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Eperties `,
-          text: `Marketers at eSpark Talent have proficiency in</br> different marketing channels like email marketing,</br> social media advertising, etc.`,
+          text: `Marketers at eSpark Talent have proficiency in </br> different marketing channels like email </br> marketing, social media advertising, etc.`,
           image: `/images/service/performence/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -8521,7 +8522,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for</br> conducting extensive keyword research to make the website visible to</br> a larger audience.`,
+          text: `SEO experts are also responsible for </br> conducting extensive keyword research to make </br> the website visible to a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',

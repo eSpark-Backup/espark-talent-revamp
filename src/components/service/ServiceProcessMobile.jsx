@@ -103,7 +103,7 @@ const ServiceProcessMobile = ({ data }) => {
               py: 2,
             },
             '@media (min-width: 360px) and (max-width: 599px)': {
-              py: 1.5,
+              py: 2,
               gap: 2,
               // justifyContent: `${process?.alignment == 'right' ? 'space-between' : 'space-between'
               //   }`,
@@ -146,12 +146,12 @@ const ServiceProcessMobile = ({ data }) => {
                   height: 100,
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
-                  width: '100%',
-                  height: '100%',
+                  width: '65px',
+                  height: '65px',
                 },
                 '@media (min-width: 280px) and (max-width: 359px)': {
-                  width: '100px',
-                  height: '100px',
+                  width: '80px',
+                  height: '80px',
                 },
               }}
             />
@@ -171,17 +171,17 @@ const ServiceProcessMobile = ({ data }) => {
                 pl: process?.alignment == 'right' ? 1 : 0,
                 pr: process?.alignment == 'left' ? 0.5 : 0,
                 width: '100%',
-                height: '85.15px',
+                height: 'auto',
                 gap: 0,
               },
               '@media (min-width: 280px) and (max-width: 359px)': {
                 width: '100%',
-                height: '85.15px',
+                height: 'auto',
                 textAlign: 'left',
                 gap: 0,
               },
               '@media (min-width: 280px) and (max-width: 307px)': {
-                height: '95.15px',
+                height: 'auto',
               },
               display: 'flex',
               flexDirection: 'column',
@@ -200,6 +200,7 @@ const ServiceProcessMobile = ({ data }) => {
           >
             <Typography
               sx={{
+                mb: 0.7,
                 color: process?.color,
                 fontStyle: 'normal',
                 fontWeight: 700,
