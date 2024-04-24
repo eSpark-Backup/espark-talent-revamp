@@ -340,7 +340,10 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                       >
                         <Box sx={{ my: 2 }}>
                           <ESparkButton
-                            title={btnTitle || data[selectedCard]?.content?.buttonText}
+                            title={
+                              btnTitle ||
+                              data[selectedCard]?.content?.buttonText
+                            }
                             link={link}
                             hover={'#fff'}
                             target={target}

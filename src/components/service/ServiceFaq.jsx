@@ -152,7 +152,7 @@ const ServiceFaq = ({ data }) => {
                           },
                           fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
                           fontWeight: expanded === panel ? 600 : 400,
-                          lineHeight: { xs: '12.86px', lg: '26px' },
+                          lineHeight: { xs: '12.86px', md: '26px' },
                         }}
                       >
                         {item?.heading}
