@@ -393,6 +393,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -773,6 +775,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1158,6 +1162,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1524,6 +1530,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1883,6 +1891,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2242,6 +2252,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2601,6 +2613,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2966,6 +2980,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3317,6 +3333,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3675,6 +3693,8 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4037,6 +4057,8 @@ discussions that suit your availability.
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4401,6 +4423,8 @@ goals and requirements.
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4757,6 +4781,8 @@ goals and requirements.
         },
       ],
     },
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
