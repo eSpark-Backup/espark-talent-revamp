@@ -84,7 +84,6 @@ const FifthSection = ({ data }) => {
                   lg: '19px',
                   xl: '23px',
                 },
-                color: '#001C63',
                 fontWeight: 400,
                 lineHeight: { xs: 1.4, md: '34px' },
                 color: '#001C63',
