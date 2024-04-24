@@ -538,8 +538,7 @@ export const HIRE_SEO = [
     path: 'hire-ui-ux-designers',
     url: 'https://esparktalent.com/hire-ui-ux-designers',
     title: 'Best UI/UX designer for hire within 48 hours',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/_next/image?url=%2Fimages%2Fservice%2Fuiux%2Fmain.png&w=640&q=85',
     description:
       'Hire talented UI/UX designers from eSpark Talent. Our experts excel in graphic, interactive, and industrial design for outstanding digital products.',
   },
@@ -548,7 +547,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-full-stack-developers',
     title: 'Hire Full Stack Developers in 2 Days | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Ffull-stack%2Ffullstack-main.png&w=640&q=85',
     description:
       'Want to hire a Full Stack Developer? Get matched with top developers who are perfect for your specific product and business requirements. Hire Now!',
   },
@@ -557,16 +556,16 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-mean-stack-developers',
     title: 'Hire MEAN stack specialists from eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fservices%2Fservice-hero-image.png&w=640&q=85',
     description:
       'Want to hire MEAN stack developers? eSpark Talent provides skilled experts for crafting web apps using MongoDB, Express, Angular, and Node.js. Hire Now!',
   },
   {
-    path: 'hire-mean-stack-developers',
+    path: 'hire-mern-stack-developers',
     url: 'https://esparktalent.com/hire-mern-stack-developers',
     title: 'Hire MERN Stack Developers Within 24 Hours | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fmern%2Fmern-stack.png&w=640&q=85',
     description:
       'Want to hire MERN stack developers? eSpark Talent provides skilled experts for crafting web apps using MongoDB, Express, React, and Node.js. Hire Now!',
   },
@@ -575,7 +574,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-devops-engineers',
     title: 'Hire Expert DevOps Engineers | Affordable & Ease',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2FdevOps%2FdevOps.png&w=640&q=85',
     description:
       'Want to hire DevOps engineers? Our skilled experts streamline your development and deployment, automating business processes for efficiency. Hire Now!',
   },
@@ -584,7 +583,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-fintech-developers',
     title: 'Top Fintech Developers for Hire | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Ffintech%2Ffintech.png&w=640&q=85',
     description:
       'Are you looking for a Fintech Developer? Hire from eSpark Talent to design digital wallets, banking portals, payment gateways, Robo advisors, and more.',
   },
@@ -592,8 +591,7 @@ export const HIRE_SEO = [
     path: 'hire-qa-engineers',
     url: 'https://esparktalent.com/hire-qa-engineers',
     title: 'Hire Dedicated QA Engineers & Software Testers | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/_next/image?url=%2Fimages%2Fservice%2Fqa%2Fqa-main.png&w=640&q=85',
     description:
       'Hire dedicated QA engineers and software testers at eSpark Talent. Ensure the quality and performance of your software with our skilled professionals.',
   },
@@ -602,7 +600,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-angular-developers',
     title: 'Hire Experienced Angular JS Developers Quickly | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fangular%2Fangular.png&w=640&q=85',
     description:
       'Want to hire Angular JS developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Reach out to us now!',
   },
@@ -611,7 +609,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-reactjs-developers',
     title: 'Hire Dedicated ReactJS Developers | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Freact%2Freact-main.png&w=640&q=85',
     description:
       'Hire ReactJS developers with flexible models. Our React programmers craft top-tier web and mobile apps to meet your business needs.',
   },
@@ -620,7 +618,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-javascript-developers',
     title: 'Top-Rated JavaScript Developers for Hire | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fjavascript%2Fjavascript-main.png&w=640&q=85',
     description:
       'Want to hire JavaScript developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Hire Now!',
   },
@@ -629,7 +627,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-nextjs-developers',
     title: 'Hire Dedicated Next.js Developers for your Project',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fnextjs%2Fnextjs-main.png&w=640&q=85',
     description:
       'Are you looking for Next.js developers? Hire skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Contact Us!',
   },
@@ -638,7 +636,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-android-developers',
     title: 'Hire Top Android Developers Within 72 Hours | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fandroid%2Fandroid-main.png&w=640&q=85',
     description:
       'Looking for Android developers quickly? Hire top talent from eSpark Talent and onboard experts within 72 hours. Get started with us today!',
   },
@@ -647,7 +645,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-flutter-developers',
     title: 'Best Flutter Developer to Hire in Two Days | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fflutter%2Fflutter.png&w=640&q=85',
     description:
       'Want to hire a skilled flutter developer? Hire flutter developers from eSpark talent on an hourly or full-time basis to build high-quality apps.',
   },
@@ -655,8 +653,7 @@ export const HIRE_SEO = [
     path: 'hire-react-native-developers',
     url: 'https://esparktalent.com/hire-react-native-developers',
     title: 'Hire Top React Native Developers for your Workspace',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/react-native/react-native.svg',
     description:
       'Want to hire React Native developers? Choose eSpark Talent to find skilled experts ready to upgrade your mobile app projects. Connect with us today!',
   },
@@ -664,8 +661,7 @@ export const HIRE_SEO = [
     path: 'hire-asp-dot-net-developers',
     url: 'https://esparktalent.com/hire-asp-dot-net-developers',
     title: 'Hire Dedicated ASP.Net Developers & Programmers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/asp.net/asp.net.svg',
     description:
       'Hire dedicated ASP.Net developers and programmers at eSpark Talent. Find skilled experts to boost your web projects. Connect with us today!',
   },
@@ -673,8 +669,7 @@ export const HIRE_SEO = [
     path: 'hire-php-developers',
     url: 'https://esparktalent.com/hire-php-developers',
     title: 'Hire the best PHP developer for your project within 48 hours',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/php/php.svg',
     description:
       'Want to hire PHP developers? eSpark Talent offers rapid hiring to get skilled professionals on board for your project quickly. Reach out to us now!',
   },
@@ -682,8 +677,7 @@ export const HIRE_SEO = [
     path: 'hire-python-developers',
     url: 'https://esparktalent.com/hire-python-developers',
     title: 'Hire the Best Python Developers & Programmers in (48 Hours)',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/python/python.svg',
     description:
       'Want to hire Python developers quickly? At eSpark Talent, we connect you with top experts ready to contribute to your projects. Get started with us!',
   },
@@ -691,8 +685,7 @@ export const HIRE_SEO = [
     path: 'hire-nodejs-developers',
     url: 'https://esparktalent.com/hire-nodejs-developers',
     title: 'Hire Skilled Node.js Developers | Expert Developers Within Hours',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/node-js/node-js.svg',
     description:
       'Looking to hire Node.js developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Contact us today!',
   },
@@ -700,8 +693,7 @@ export const HIRE_SEO = [
     path: 'hire-firmware-developers',
     url: 'https://esparktalent.com/hire-firmware-developers',
     title: 'Hire Top-notch Firmware Developer | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/firmware/firmware.svg',
     description:
       'Want to hire Firmware Developer? Join eSpark Talent and find the perfect fit for your projects quickly. Contact us and get started today!',
   },
@@ -709,8 +701,7 @@ export const HIRE_SEO = [
     path: 'hire-pcb-designers',
     url: 'https://esparktalent.com/hire-pcb-designers',
     title: 'Hire Experienced PCB Designer | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/pcb/pcb.svg',
     description:
       'Looking to hire an experienced PCB Designer? Choose eSpark Talent for skilled experts ready to elevate your projects. Connect with us now!',
   },
@@ -718,8 +709,7 @@ export const HIRE_SEO = [
     path: 'hire-embedded-system-engineers',
     url: 'https://esparktalent.com/hire-embedded-system-engineers',
     title: 'Hire Embedded Software Engineers Quickly | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/embedded/embedded.svg',
     description:
       'Fast-track your projects with top Embedded Software Engineers from eSpark Talent. Hire skilled professionals to upgrade your tech solutions. Contact us now!',
   },
@@ -727,8 +717,7 @@ export const HIRE_SEO = [
     path: 'hire-social-media-experts',
     url: 'https://esparktalent.com/hire-social-media-experts',
     title: 'Hire Top Social Media Expert | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/social/social.svg',
     description:
       "Looking for a social media expert? Our specialists create engaging content and strategies to boost your brand's online presence. Connect with us!",
   },
@@ -736,8 +725,7 @@ export const HIRE_SEO = [
     path: 'hire-ppc-specialists',
     url: 'https://esparktalent.com/hire-ppc-specialists',
     title: 'Hire Certified PPC Specialist Quickly | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/ppc/ppc.svg',
     description:
       'Looking to hire dedicated PPC experts? Boost website traffic and revenue with our certified Google Ads specialists and paid marketing managers. Hire now!',
   },
@@ -745,8 +733,7 @@ export const HIRE_SEO = [
     path: 'hire-seo-experts',
     url: 'https://esparktalent.com/hire-seo-experts',
     title: 'Hire Skilled SEO Expert in 2 Days | eSpark Talent',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+    image: '/images/service/seo/seo.svg',
     description:
       'Explore our top-rated SEO experts for hire. Boost your online presence with tailored strategies and proven results to drive organic traffic and growth.',
   },
@@ -755,7 +742,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-performence-marketers',
     title: 'Hire Top Performence Marketer | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'https://esparktalent.com/_next/image?url=%2Fimages%2Fservice%2Fperformence%2Fperformance.png&w=640&q=85',
     description:
       'Want to hire a performance marketer? Our specialists craft effective strategies to upgrade your marketing success. Connect with us to improve your brand!',
   },
@@ -764,7 +751,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-wordpress-developers',
     title: 'Hire Experienced WordPress Developers | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fwordpress%2Fwordpress.png&w=640&q=85',
     description:
       'Hire skilled WordPress developers for custom, mobile-friendly sites that enhance your online presence. Get started with our specialized development services.',
   },
@@ -773,7 +760,7 @@ export const HIRE_SEO = [
     url: 'https://esparktalent.com/hire-shopify-developers',
     title: 'Hire the Best Shopify Developer Quickly | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fshopify%2Fshopify.png&w=640&q=85',
     description:
       'Want to hire a Shopify developer? Our skilled experts excel in Shopify design and development. Contact us for a quote and enhance your online store.',
   },
