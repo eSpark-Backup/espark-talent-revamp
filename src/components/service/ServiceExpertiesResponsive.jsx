@@ -198,7 +198,7 @@ const ServiceExpertiesResponsive = ({
               src={arrowIconLeft}
               width={19}
               height={19}
-              // alt={`${data?.alt}`}
+              alt={`Experties Icon`}
               className="swiper-controller-icon"
             />
           </Box>
@@ -217,7 +217,7 @@ const ServiceExpertiesResponsive = ({
               src={arrowIconCircle}
               width={19}
               height={19}
-              // alt={`${data?.alt}`}
+              alt={`Experties Icon`}
               className="swiper-controller-icon"
             />
           </Box>
@@ -237,7 +237,7 @@ const ServiceExpertiesResponsive = ({
               src={arrowIconRight}
               width={19}
               height={19}
-              // alt={`${data?.alt}`}
+              alt={`Experties Icon`}
               className="swiper-controller-icon"
             />
           </Box>
