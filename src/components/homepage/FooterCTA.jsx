@@ -22,10 +22,9 @@ const FooterCTA = ({ data }) => {
     <>
       {pathName !== '/book-a-demo' &&
         pathName !== '/careers' &&
-        pathName !== '/hire-a-frontend-developer' &&
-        pathName !== '/hire-a-backend-developer' &&
         pathName !== '/book-a-demo-meeting' &&
         pathName !== '/service/mean-stack-developer' &&
+        !pathName?.includes('/hire-') &&
         pathName !== '/partnership-program' && (
           <Box
             sx={{

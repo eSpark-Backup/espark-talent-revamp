@@ -23,14 +23,16 @@ const ServiceHosts = ({ data }) => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundImage: `url(${data?.bgImage || ''})`,
-              backgroundSize: 'cover',
+              backgroundSize: '100%',
               backgroundPosition: 'center',
               width: '100%',
               height: '100%',
+              py: 7,
             }}
           >
             <Box
               sx={{
+                mt: -5.9,
                 width: { xs: '90%', lg: '1324px' },
                 display: 'flex',
                 p: { xs: 2.1, md: 5 },
@@ -96,7 +98,7 @@ const ServiceHosts = ({ data }) => {
               >
                 {data?.descrcipton || ''}
               </Typography>
-              <Link href={`${data?.btnLink || ''}`}>
+              <Link href={`${data?.btnLink || ''}`} target='_blank'>
                 <Typography
                   sx={{
                     display: 'flex',
