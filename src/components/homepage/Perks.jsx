@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ESparkButton from '../global/eSparkButton';
 
-const Perks = ({ data, link, target, title }) => {
+const Perks = ({ data, link, target, title, btnTitle }) => {
   const [selectedCard, setSelectedCard] = useState(0);
   const pathName = usePathname();
   const book_a_demo_meeting = '/book-a-demo-meeting';
@@ -340,7 +340,7 @@ const Perks = ({ data, link, target, title }) => {
                       >
                         <Box sx={{ my: 2 }}>
                           <ESparkButton
-                            title={data[selectedCard]?.content?.buttonText}
+                            title={btnTitle || data[selectedCard]?.content?.buttonText}
                             link={link}
                             hover={'#fff'}
                             target={target}

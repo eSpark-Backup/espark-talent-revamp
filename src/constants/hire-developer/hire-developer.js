@@ -393,6 +393,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -773,6 +776,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1158,6 +1164,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1524,6 +1533,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1883,6 +1895,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2242,6 +2257,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2601,6 +2619,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2966,6 +2987,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3317,6 +3341,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3675,6 +3702,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4037,6 +4067,9 @@ discussions that suit your availability.
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4401,6 +4434,9 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4757,6 +4793,9 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -5112,6 +5151,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -5448,6 +5488,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -5770,6 +5811,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6107,6 +6149,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6433,6 +6476,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6779,6 +6823,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7115,6 +7160,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7454,6 +7500,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7798,6 +7845,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8136,6 +8184,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8380,11 +8429,11 @@ goals and requirements.
     path: `hire-performence-marketers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Performance<br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Marketers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span>Performance<br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Marketer </span>',
       description:
         'Hire a performance Marketer from eSpark Talent to optimize the process of marketing at an affordable price. To target the correct audience by using appropriate data analysis techniques, marketers at eSpark use numerous strategies.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Marketer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -8411,7 +8460,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers '</span> <br/>Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a Marketer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -8481,6 +8530,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8822,6 +8872,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -9170,6 +9221,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -9512,6 +9564,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
