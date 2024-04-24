@@ -3,9 +3,11 @@ import React from 'react';
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const ServiceHeroSection = ({ data }) => {
   const isSmallScreen = useMediaQuery('(max-width:425px)');
+  const pathName = usePathname();
 
   return (
     <>
@@ -113,7 +115,11 @@ const ServiceHeroSection = ({ data }) => {
                               borderRadius: '50px',
                               backgroundColor: '#029894',
                               color: '#fff',
-                              fontSize: { xs: '10px', sm: '10px', md: '22px' },
+                              fontSize:
+                                pathName === '/hire-ppc-specialists' ||
+                                pathName === '/hire-seo-experts'
+                                  ? { xs: '8px', sm: '8px', md: '19px' }
+                                  : { xs: '10px', sm: '10px', md: '22px' },
                               fontWeight: 500,
                               lineHeight: { xs: '14.97px', md: '30px' },
                               textAlign: 'center',

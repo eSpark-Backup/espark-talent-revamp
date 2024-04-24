@@ -109,7 +109,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 2,
           title: `Front-End Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `HTML`,
@@ -248,7 +248,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 2,
           title: `Back-End Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Node.js`,
@@ -292,7 +292,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-ui-ux-designers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> UI/UX <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Designer </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> UI/UX <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Designer </span>',
       description:
         'Hiring UI/UX designers can be very beneficial as it adds to the aesthetic feel of the software product and also enhances the accessibility, usability, and user interface. They make sure to increase the business progress as well as customer loyalty. To make your software product stand out amongst the best, hire the best UI/UX designers from eSpark Talent.',
       button: {
@@ -367,14 +367,14 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Design and Prototyping Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Adobe XD`, `Sketch`, `InVision`, `Figma`],
         },
         {
           id: 2,
           title: `Graphic Design and Visualization Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Affinity Designer`,
@@ -387,7 +387,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 3,
           title: `Collaboration and Workflow Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Zeplin`, `Asana`, `Abstract`, `Slack`, `Trello`],
         },
@@ -663,7 +663,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-full-stack-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Full Stack <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Full Stack <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Full-stack developers are equipped with the skills of both the frontend and backend development of web and mobile applications. They are responsible for crafting the user interface as well as handling the database and logic side of the system. Hire a full-stack developer to reduce the overall cost of employing separate front-end and back-end developers.',
       button: {
@@ -743,7 +743,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Programming Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `JavaScript (Node.js)`,
@@ -755,7 +755,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 2,
           title: `Frameworks and Libraries:`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `React.js`,
@@ -769,7 +769,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 3,
           title: `Database`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`PostgreSQL`, `Redis`, `MySQL`, `Cassandra`, `SQL Server`],
         },
@@ -1063,7 +1063,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-mean-stack-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MEAN Stack <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MEAN Stack <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire skilled MEAN stack developers from eSpark Talent as they ensure the delivery of feature-rich software products. Using MongoDB, Express.js, AngularJS, and Node.js, Our professionals hold expertise in creating web and mobile applications. Hire a MEAN stack developer from eSpark Talent now to optimize your journey of software development.',
       button: {
@@ -1138,7 +1138,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Front-end Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Angular (AngularJS <span style="color: #000000; font-weight: 400; class="break-span">/Angular 2+)</span>`,
@@ -1149,14 +1149,14 @@ export const HIRE_DEVELOPERS = [
         {
           id: 2,
           title: `Back-end Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Node.js`, `Express.js`],
         },
         {
           id: 3,
           title: `Database Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`MongoDB`, `Mongoose`],
         },
@@ -1430,7 +1430,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-mern-stack-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MERN Stack <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MERN Stack <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire a dedicated MERN stack developer from eSpark Talent to get the immense benefits of full-stack development using JavaScript. Our developers are trained to adapt to new trends and technologies to deliver you with the best software product.',
       button: {
@@ -1505,21 +1505,21 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Frontend Framework`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`React.js`],
         },
         {
           id: 2,
           title: `Backend Framework`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Node.js`, `Express.js`],
         },
         {
           id: 3,
           title: `Database and Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `MongoDB`,
@@ -1796,7 +1796,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-devOps-engineers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> DevOps <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> DevOps <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
       description:
         'Hire a dedicated DevOps engineer from eSpark Talent to get faster development along with scalability, automation, and enhanced collaboration. We aim to provide the best DevOps engineer to improve the development and deployment phases of the software development life cycle.',
       button: {
@@ -1871,21 +1871,21 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `(CI/CD) Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Jenkins`, `Travis CI`, `GitLab CI`],
         },
         {
           id: 2,
           title: `Configuration Management`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Ansible`, `Chef`, `Puppet`],
         },
         {
           id: 3,
           title: `Containerization & Orchestration`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Docker`, `Kubernetes`, `Amazon ECS`],
         },
@@ -2157,7 +2157,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-fintech-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Fintech <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Fintech <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire a Fintech developer from eSpark Talent who has in-depth knowledge of financial trends and insights. We aim to provide professionals to make your project stand out among the best.',
       button: {
@@ -2232,21 +2232,21 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Blockchain Technology`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Ethereum`, `Hyperledger Fabric`, `Ripple`],
         },
         {
           id: 2,
           title: `Payment Gateways`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Paypal`, `Stripe`, `Square`],
         },
         {
           id: 3,
           title: `Financial APIs`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Plaid`, `Yodlee`, `Stripe API`],
         },
@@ -2518,7 +2518,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-qa-engineers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> QA <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> QA <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
       description:
         'Hire the best QA engineers from eSpark Talent to ensure that the developed software product meets high-quality standards. Our engineers will ensure that your product reaches the highest customer satisfaction by critically analyzing the software product.',
       button: {
@@ -2593,21 +2593,21 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Test Automation Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Selenium`, `TestNG`, `Appium`, `JUnit`, `Jenkins`],
         },
         {
           id: 2,
           title: `Test Management Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`JIRA`, `TestRail`, `Bugzilla`, `Mantis`, `Redmine`],
         },
         {
           id: 3,
           title: `Performance & Security Testing Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`JMeter`, `LoadRunner`, `OWASP ZAP`, `Burp Suite`],
         },
@@ -2879,7 +2879,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-angular-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> AngularJS <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> AngularJS <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire dedicated AngularJS developers from eSpark Talent to ensure a scalable, efficient, and interactive development product. Our dedicated AngularJS developers delivering AngularJS development solutions to both established clients and up-and-coming startups.',
       button: {
@@ -2954,7 +2954,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Core AngularJS Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `AngularJS Directives`,
@@ -2967,14 +2967,14 @@ export const HIRE_DEVELOPERS = [
         {
           id: 2,
           title: `Front-End Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`HTML/CSS`, `Bootstrap`, `SCSS/Sass`],
         },
         {
           id: 3,
           title: `Development and Build Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Angular CLI`, `Jasmine`, `Webpack`, `Karma`],
         },
@@ -3234,7 +3234,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-reactjs-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> ReactJS <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> ReactJS <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hiring React JS developers comes with several benefits as they ensure the implementation of virtual DOM and extensive features like data binding to make a software application that is advanced and user-friendly to a greater extent. Our professionals assist in creating applications that support data management and efficient rendering.',
       button: {
@@ -3313,21 +3313,21 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Programming Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`JavaScript`, `TypeScript`],
         },
         {
           id: 2,
           title: `State Management Framework`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Redux`],
         },
         {
           id: 3,
           title: `Development Tools & Environments`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Node.js`, `npm(Node Package Manager)`, `React DevTools`],
         },
@@ -3587,7 +3587,7 @@ export const HIRE_DEVELOPERS = [
     path: `hire-javascript-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> JavaScript<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> JavaScript <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire JavaScript developers to bring a revolution to the conventional web development process. They bring forth their expertise to ensure enhanced intuitive and dynamic aspects to both the frontend and backend phases of development. Our dedicated JavaScript developers are equipped with the knowledge and expertise to transform business requirements into invaluable digital solutions.',
       button: {
@@ -3670,14 +3670,14 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           title: `Frameworks and Libraries`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`React`, `Angular`, `Vue.js`, `Node.js`, `Express.js`],
         },
         {
           id: 2,
           title: `Programming Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `JavaScript (ECMAScript)`,
@@ -3687,7 +3687,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 3,
           title: `Testing Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Jest`, `Mocha`, `Cypress`],
         },
@@ -3956,7 +3956,7 @@ discussions that suit your availability.
     path: `hire-nextjs-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Next.js <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Next.js <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Want to hire Next.js developers? eSpark Talent has supported many small businesses and established companies in expanding their teams and delivering top-notch projects by hiring Next.js experts at budget-friendly rates. Hire dedicated Next.js developers to enhance the overall efficiency, scalability, and reliability of web applications.',
       button: {
@@ -4037,21 +4037,21 @@ discussions that suit your availability.
         {
           id: 1,
           title: `Programming Languagesn`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`JavaScript`, `TypeScript`],
         },
         {
           id: 2,
           title: `State Management Framework`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Redux`],
         },
         {
           id: 3,
           title: `Development Tools & Environments`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Node.js`, `npm`, `React DevTools`, 'Next.js CLI'],
         },
@@ -4326,7 +4326,7 @@ goals and requirements.
     path: `hire-android-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Android <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Android <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire the best Android developer from eSpark Talent to build interactive applications for different versions and devices. They are experts at providing reliable and high-performance applications, so hire an Android developer from eSpark Talent for your project.',
       button: {
@@ -4403,21 +4403,21 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Languagesn`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Java`, `Kotlin`],
         },
         {
           id: 2,
           title: `Development Environment`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Android Studio`],
         },
         {
           id: 3,
           title: `Database`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`SQLite`, 'Firebase Realtime Database'],
         },
@@ -4682,7 +4682,7 @@ goals and requirements.
     path: `hire-flutter-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Flutter <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Flutter <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire a top-notch Flutter developer from eSpark Talent to create visually appealing and responsive software applications. They are skilled at building technical solutions with high-performance and interactive designs. To ensure efficient and scalable projects, hire developers from eSpark.',
       button: {
@@ -4761,21 +4761,21 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Languagesn`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Dart`],
         },
         {
           id: 2,
           title: `Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Flutter SDK`, `Flutter Inspector`],
         },
         {
           id: 3,
           title: `(IDE)`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Android Studio with Flutter Plugin`],
         },
@@ -5035,7 +5035,7 @@ goals and requirements.
     path: `hire-react-native-developers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> React Native <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> React Native <br /><span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire the best React Native developers from eSpark Talent to build cross-platform projects. We aim to provide you with top-notch developers to develop a fine software application for your startups or enterprises. Hire dedicated and skilled from eSpark Talent to bring advancements to the development process.',
       button: {
@@ -5110,14 +5110,14 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Language`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`JavaScript`, `TypeScript`],
         },
         {
           id: 2,
           title: `Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `React Native CLI`,
@@ -5128,7 +5128,7 @@ goals and requirements.
         {
           id: 3,
           title: `Additional Libraries & Resources`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `React Navigation`,
@@ -5450,14 +5450,14 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Language`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`C#`, `Visual Basic .NET (VB.NET)`],
         },
         {
           id: 2,
           title: `Frameworks and Libraries`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `ASP.NET MVC (Model-View-Controller)`,
@@ -5468,7 +5468,7 @@ goals and requirements.
         {
           id: 3,
           title: `Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Visual Studio (IDE)`, `.NET CLI`],
         },
@@ -5776,21 +5776,21 @@ goals and requirements.
         {
           id: 1,
           title: `Languages & Frameworks`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`PHP`, `Laravel`, `Symfony`, `CodeIgniter`],
         },
         {
           id: 2,
           title: `Development Tools and Environments`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`XAMPP/WAMP`, `Composer`, `PHPUnit`],
         },
         {
           id: 3,
           title: `Database Management Systems`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`MySQL`, `MariaDB`, `PostgreSQL`],
         },
@@ -6113,21 +6113,21 @@ goals and requirements.
         {
           id: 1,
           title: `Frameworks and Libraries`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Django`, `Flask`, `PyTorch`, `Matplotlib`],
         },
         {
           id: 2,
           title: `IDEs`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`PyCharm`, `Jupyter Notebook`],
         },
         {
           id: 3,
           title: `Version Control Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Git`, `GitHub`],
         },
@@ -6439,21 +6439,21 @@ goals and requirements.
         {
           id: 1,
           title: `Event-driven Architecture`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Asynchronous I/O`, `Non-blocking I/O`],
         },
         {
           id: 2,
           title: `Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`npm`, `Express.js`, `Node.js Debugger`],
         },
         {
           id: 3,
           title: `Additional Libraries & Frameworks`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`GitSocket.io`, `Sequelize`],
         },
@@ -6775,14 +6775,14 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`C`, `Assembly Language`, `Embedded C/C++`, `Python`],
         },
         {
           id: 2,
           title: `(IDEs)`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Eclipse`,
@@ -6794,7 +6794,7 @@ goals and requirements.
         {
           id: 3,
           title: `Hardware Debugging & Testing Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Simulation Software`,
@@ -7121,21 +7121,21 @@ goals and requirements.
         {
           id: 1,
           title: `PCB Design Software`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Altium Designer`, `KiCad`, `Eagle`],
         },
         {
           id: 2,
           title: `Manufacturing Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Gerber Viewer`, `Pick and Place Machines`, `(AOI) Systems`],
         },
         {
           id: 3,
           title: `Testing Equipment`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Oscilloscopes`, `Logic Analyzers`, `Multimeters`],
         },
@@ -7452,14 +7452,14 @@ goals and requirements.
         {
           id: 1,
           title: `Microcontrollers and Processors`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Arduino`, `Raspberry Pi`, `STM32`],
         },
         {
           id: 2,
           title: `Development Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Embedded C/C++`,
@@ -7470,7 +7470,7 @@ goals and requirements.
         {
           id: 3,
           title: `Hardware Integration`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Sensor Integration`,
@@ -7796,14 +7796,14 @@ goals and requirements.
         {
           id: 1,
           title: `Shopify Development Tools and Platforms`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Shopify CLI`, `Shopify Theme Kit`, `Shopify API`],
         },
         {
           id: 2,
           title: `Front-end Technologies`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Liquid Templating Language`,
@@ -7814,7 +7814,7 @@ goals and requirements.
         {
           id: 3,
           title: `Backend Technologies & Integrations`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Shopify App Development`,
@@ -8142,21 +8142,21 @@ goals and requirements.
         {
           id: 1,
           title: `Programming Languages`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`PHP`, `JavaScript `, `CSS (for styling)`],
         },
         {
           id: 2,
           title: `Content Management`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`WordPress Core`, `Themes `, `Plugins`],
         },
         {
           id: 3,
           title: `Development Tools & Environments`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Code Editors `, `Version Control System`, `XAMPP`],
         },
@@ -8410,7 +8410,7 @@ goals and requirements.
       description:
         'Hire a performance Marketer from eSpark Talent to optimize the process of marketing at an affordable price. To target the correct audience by using appropriate data analysis techniques, marketers at eSpark use numerous strategies.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Marketer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -8437,7 +8437,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers '</span> <br/>Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a Marketer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -8482,7 +8482,7 @@ goals and requirements.
         {
           id: 1,
           title: `Paid Ads & Campaign Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Google Ads`,
@@ -8494,14 +8494,14 @@ goals and requirements.
         {
           id: 2,
           title: `CRO Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`MouseFlow`, `Optimizely `, `Microsoft Clarity`, `Crazy Egg`],
         },
         {
           id: 3,
           title: `Performance Tracking  Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Google Analytics`, `Mixpanel`, `Heap`],
         },
@@ -8753,7 +8753,7 @@ goals and requirements.
       description:
         'Hire SEO expert from eSpark Talent to enhance the online visibility of your website on the search engine. They possess expertise to conduct thorough research about the algorithms and techniques to make your website rank higher among all the other competing websites.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a SEO Expert',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -8780,7 +8780,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">SEO Experts'</span> <br/>Expertise`,
       paragraph: `SEO experts at eSpark Talent are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a SEO Expert`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -8824,14 +8824,14 @@ goals and requirements.
         {
           id: 1,
           title: `Keyword Research & Analysis Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Google Keyword Planner`, `SEMrush `, `Ahrefs`],
         },
         {
           id: 2,
           title: `On-Page Optimization Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Yoast SEO`,
@@ -8842,7 +8842,7 @@ goals and requirements.
         {
           id: 3,
           title: `Analysis and Link Building Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Moz Link Explorer `, `BuzzSumo`, `Linkody`],
         },
@@ -9095,7 +9095,7 @@ goals and requirements.
       description:
         'Hire a PPC specialist from eSpark Talent to ensure maximum visibility and enhanced campaign performance. Our Specialists can optimize the performance of your PPC campaigns at a cost-effective rate. To make your PPC campaigns streamlined and customized to match your requirements, get an outsourced PPC specialist from eSpark Talent.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a PPC Expert',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -9122,7 +9122,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist'</span> <br/>Expertise`,
       paragraph: `PPC specialists at eSpark are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a PPC Expert`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -9166,7 +9166,7 @@ goals and requirements.
         {
           id: 1,
           title: `Keyword Research & Analysis Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `SEMrush`,
@@ -9178,7 +9178,7 @@ goals and requirements.
         {
           id: 2,
           title: `Ad Management Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Google Ads`,
@@ -9190,7 +9190,7 @@ goals and requirements.
         {
           id: 3,
           title: `Analytics and Tracking Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Google Analytics `, `Google Tag Manager`, `Hotjar`],
         },
@@ -9443,7 +9443,7 @@ goals and requirements.
       description:
         'Hire social media experts from eSpark Talent as they are proficient in planning to target the appropriate audience for your brand. Using different data analytics tools and techniques, social media experts assist in improving the visibility and awareness of your project. To get skills and experience in one place, hire social media experts from eSpark Talent.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Expert',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -9470,7 +9470,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists '</span> <br/>Expertise`,
       paragraph: `Hire the best social media experts from eSpark talent to optimize the strategy for social media advertisement.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a Expert`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -9514,21 +9514,21 @@ goals and requirements.
         {
           id: 1,
           title: `Social Media Platforms`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Facebook`, `Instagram `, `Twitter`, `SpyFu`],
         },
         {
           id: 2,
           title: `Social Media Management Tools`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [`Hootsuite`, `Buffer `, `Sprout Social`],
         },
         {
           id: 3,
           title: `Analytics and Insights`,
-          gridLg: 3.8,
+          gridLg: 4,
           gridmd: 4,
           items: [
             `Facebook Insights`,

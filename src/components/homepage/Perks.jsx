@@ -29,11 +29,19 @@ const Perks = ({ data, link, target, title }) => {
             py:
               pathName === book_a_demo_meeting
                 ? '0%'
-                : pathName.includes('service')
+                : pathName.includes('developers') ||
+                    pathName.includes('designers') ||
+                    pathName.includes('engineers')
                   ? '2%'
                   : '5%',
             pb: `${pathName === book_a_demo_meeting ? '3%' : '0%'}`,
             px: '3%',
+            pt:
+              pathName.includes('developers') ||
+              pathName.includes('designers') ||
+              pathName.includes('engineers')
+                ? '30px'
+                : '0px',
           }}
         >
           <Container>
