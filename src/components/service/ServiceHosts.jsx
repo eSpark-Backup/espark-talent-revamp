@@ -25,9 +25,10 @@ const ServiceHosts = ({ data }) => {
               backgroundImage: `url(${data?.bgImage || ''})`,
               backgroundSize: '100%',
               backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
               width: '100%',
               height: '100%',
-              py: 7,
+              py: { xs: 0, lg: 7 },
             }}
           >
             <Box
@@ -98,7 +99,7 @@ const ServiceHosts = ({ data }) => {
               >
                 {data?.descrcipton || ''}
               </Typography>
-              <Link href={`${data?.btnLink || ''}`} target='_blank'>
+              <Link href={`${data?.btnLink || ''}`} target="_blank">
                 <Typography
                   sx={{
                     display: 'flex',
