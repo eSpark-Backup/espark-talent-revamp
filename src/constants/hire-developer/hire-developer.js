@@ -393,6 +393,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -405,17 +408,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a Designer`,
-          buttonLink: `/hire-a-designer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -428,18 +427,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Designer`,
-          buttonLink: `/hire-a-designer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -452,18 +447,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Designer`,
-          buttonLink: `/hire-a-designer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -486,8 +477,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Enhanced Engagement`,
-          text: ` Hiring professional designers could bring<br/>
-          long-term benefits like maximizing user <br/>engagement and loyalty.`,
+          text: ` Hiring professional designers could bring<br/> long-term benefits like maximizing user <br/>engagement and loyalty.`,
           image: `/images/service/uiux/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -498,8 +488,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Competition`,
-          text: `In today's highly digital world, you need the<br/>best UI/UX designer to make your
-          product <br/> different from your competitors.`,
+          text: `In today's highly digital world, you need the<br/>best UI/UX designer to make your product <br/> different from your competitors.`,
           image: `/images/service/uiux/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -588,8 +577,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Brand Image`,
-          text: `Designers at eSpark Talent guarantee that your brand looks credible and modern with the 
-          help of their designs`,
+          text: `Designers at eSpark Talent guarantee that your brand looks credible and modern with the  help of their designs`,
           image: `/images/service/uiux/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -600,8 +588,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Low Development Costs`,
-          text: `Hiring UI/UX designers could prove to be a good investment as it helps to reduce
-          future development costs.`,
+          text: `Hiring UI/UX designers could prove to be a good investment as it helps to reduce future development costs.`,
           image: `/images/service/uiux/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -619,40 +606,40 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified UI/UX Designers`,
       descrcipton: `Our designers, masters in the art of UI/UX development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest UI/UX designers to ensure the most suitable match for your project.`,
       btnText: `Hire A Designer`,
-      btnLink: `/hire-a-designer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
       questions: [
         {
           id: 1,
-          heading: `What does a UI UX designer do?`,
-          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
-        },
-        {
-          id: 3,
-          heading: `How much does it cost to hire a UX designer?`,
-          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
-        },
-        {
-          id: 5,
-          heading: `How do I hire the best UI UX designer?`,
-          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
-        },
-        {
-          id: 2,
           heading: `Why should I hire a UX/UI developer from eSpark Talent?`,
           description: `Hiring a UI/UX designer from eSpark Talent would be an excellent initiative as they possess the expertise required to create a good design for your product at a reasonable cost.`,
         },
         {
-          id: 4,
+          id: 3,
+          heading: `What does a UI UX designer do?`,
+          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
+        },
+        {
+          id: 5,
           heading: `Can your UI UX designers work on both web and mobile projects?`,
           description: `Yes. Our designers work on both web and mobile applications.`,
         },
         {
-          id: 6,
+          id: 2,
           heading: `How can update site states from the designer about work?`,
           description: `Using different communication channels, you can inquire about the progress and milestones of your project.`,
+        },
+        {
+          id: 4,
+          heading: `How much does it cost to hire a UX designer?`,
+          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
+        },
+        {
+          id: 6,
+          heading: `How do I hire the best UI UX designer?`,
+          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
         },
       ],
     },
@@ -721,15 +708,12 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/full-stack/experts/testing.svg`,
           title: `Testing`,
-          paragraph: `These developers are not only responsible for development but also for handling
-          and fixing bugs to enhance the overall user experience.`,
+          paragraph: `These developers are not only responsible for development but also for handling and fixing bugs to enhance the overall user experience.`,
         },
         {
           icon: `/images/service/full-stack/experts/service.svg`,
           title: `Deployment and Maintenance `,
-          paragraph: `Full-stack developers deploy applications as well after development. Also, they are
-          required to know about changing technological trends and practices.
-          `,
+          paragraph: `Full-stack developers deploy applications as well after development. Also, they are required to know about changing technological trends and practices.`,
         },
       ],
     },
@@ -773,6 +757,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -785,17 +772,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -808,18 +791,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -832,18 +811,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -856,8 +831,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Creative`,
-          text: `Full-stack developers are immensely creative <br /> and proficient in working with both <br />
-          frontend and backend technologies`,
+          text: `Full-stack developers are immensely creative <br /> and proficient in working with both <br /> frontend and backend technologies`,
           image: `/images/service/full-stack/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -868,9 +842,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Cost-effective`,
-          text: `Hiring a full-stack developer can be a good <br /> asset as you don't have to invest in <br />
-          hiring separate frontend and backend developers.
-          `,
+          text: `Hiring a full-stack developer can be a good <br /> asset as you don't have to invest in <br /> hiring separate frontend and backend developers.`,
           image: `/images/service/full-stack/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -880,8 +852,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: `03`,
-          title: `High efficiency
-          `,
+          title: `High efficiency`,
           text: `eSpark Talent aims to provide full-stack <br /> developers that would minimize the <br />communication issue between developers <br /> and different teams by handling multiple <br /> jobs on their own.`,
           image: `/images/service/full-stack/why-hire/icon3.svg`,
           isReverse: false,
@@ -893,8 +864,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Quick development`,
-          text: `By developing both the front-end and back-<br />end of a project, full-stack developers <br />
-          would deliver projects at a quicker pace. `,
+          text: `By developing both the front-end and back-<br />end of a project, full-stack developers <br /> would deliver projects at a quicker pace. `,
           image: `/images/service/full-stack/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -905,8 +875,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `In-depth knowledge`,
-          text: `Full Stack developers are more experts at <br /> problem-solving and decision making <br />
-          enhancing the overall quality of a software <br /> application.`,
+          text: `Full Stack developers are more experts at <br /> problem-solving and decision making <br /> enhancing the overall quality of a software <br /> application.`,
           image: `/images/service/full-stack/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -916,8 +885,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Adaptability`,
-          text: `Full-stack developers are flexible to learn new <br /> tools and frameworks, making them <br />
-          a suitable option for dynamic projects.`,
+          text: `Full-stack developers are flexible to learn new <br /> tools and frameworks, making them <br /> a suitable option for dynamic projects.`,
           image: `/images/service/full-stack/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -930,8 +898,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Creative </span>`,
-          text: `Full-stack developers are immensely creative and proficient in working with both
-          frontend and backend technologies`,
+          text: `Full-stack developers are immensely creative and proficient in working with both frontend and backend technologies`,
           image: `/images/service/full-stack/why-hire /icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -942,9 +909,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `<span style="color: #029894; font-weight: 700">Cost-effective</span>`,
-          text: `Hiring a full-stack developer can be a good asset as you don't have to invest in
-          hiring separate frontend and backend developers.
-          `,
+          text: `Hiring a full-stack developer can be a good asset as you don't have to invest in hiring separate frontend and backend developers.`,
           image: `/images/service/full-stack/why-hire /icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -966,8 +931,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Quick development`,
-          text: `By developing both the front-end and back-end of a project, full-stack developers
-          would deliver projects at a quicker pace.`,
+          text: `By developing both the front-end and back-end of a project, full-stack developers would deliver projects at a quicker pace.`,
           image: `/images/service/full-stack/why-hire /icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -978,8 +942,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `In-depth knowledge`,
-          text: `Full Stack developers are more experts at problem-solving and decision making
-          enhancing the overall quality of a software application.`,
+          text: `Full Stack developers are more experts at problem-solving and decision making enhancing the overall quality of a software application.`,
           image: `/images/service/full-stack/why-hire /icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -990,8 +953,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Adaptability`,
-          text: `Full-stack developers are flexible to learn new tools and frameworks, making them
-          a suitable option for dynamic projects.`,
+          text: `Full-stack developers are flexible to learn new tools and frameworks, making them a suitable option for dynamic projects.`,
           image: `/images/service/full-stack/why-hire /icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1009,7 +971,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Full Stack Developers`,
       descrcipton: `Our developers, masters in the art of Full Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Full Stack programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -1017,40 +979,32 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           heading: `Are full-stack developers in demand?`,
-          description: `Full-stack developers are in demand as they reduce the team size and cost of
-          developing a software product.`,
+          description: `Full-stack developers are in demand as they reduce the team size and cost of developing a software product.`,
         },
         {
           id: 3,
+          heading: `Why did I choose eSpark Talent to hire a full-stack developer?`,
+          description: `eSpark Talent can be a good choice to hire a full-stack developer because we aim to provide professional and dedicated developers at a cost-effective rate.`,
+        },
+        {
+          id: 5,
+          heading: `Can your full-stack developers join and take over mid-project?`,
+          description: `That depends upon the project requirements and scope to decide whether to take over a mid-project.`,
+        },
+        {
+          id: 2,
           heading: `How to hire full-stack developers?`,
           description: `eSpark Talent can provide skilled and dedicated full-stack developers.`,
         },
         {
-          id: 5,
-          heading: `Why did I choose eSpark Talent to hire a full-stack developer?`,
-          description: `eSpark Talent can be a good choice to hire a full-stack developer because we aim
-          to provide professional and dedicated developers at a cost-effective rate.`,
-        },
-        {
-          id: 2,
-          heading: `Can your full-stack developers join and take over mid-project?`,
-          description: `That depends upon the project requirements and scope to decide whether to take
-          over a mid-project.
-          `,
-        },
-        {
           id: 4,
           heading: `How fast can we get people assigned to our project?`,
-          description: `As soon as we understand your project goals, scope, and requirements, we will
-          assign a suitable developer for your project.
-          `,
+          description: `As soon as we understand your project goals, scope, and requirements, we will assign a suitable developer for your project.`,
         },
         {
           id: 6,
           heading: `What languages does a Full Stack developer use most often?`,
-          description: `Full-stack developers most often use HTML, CSS, or JavaScript for frontend
-          development and PHP or Python for backend development. However, choosing a
-          language depends upon the project requirements.`,
+          description: `Full-stack developers most often use HTML, CSS, or JavaScript for frontend  development and PHP or Python for backend development. However, choosing a language depends upon the project requirements.`,
         },
       ],
     },
@@ -1158,6 +1112,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1170,18 +1127,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1194,18 +1146,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1218,18 +1166,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -1252,8 +1196,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Real-time software`,
-          text: ` Our MEAN stack developers are the best<br/>
-          choice because they have experience in <br/>creating such real-time applications.`,
+          text: ` Our MEAN stack developers are the best<br/> choice because they have experience in <br/>creating such real-time applications.`,
           image: `/images/service/mean-stack/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1382,7 +1325,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified MEAN Stack Developers`,
       descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
       btnText: `Book A Demo`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -1394,28 +1337,28 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 3,
-          heading: `Is MEAN stack in demand?`,
-          description: `Yes MEAN stack is in demand due to its capability to develop a reliable, scalable, and modern software project efficiently.`,
-        },
-        {
-          id: 5,
           heading: `Can I Hire a Dedicated MEAN Developer on an hourly basis or for a project-based task?`,
           description: `Yes Depending upon the objectives and goals, eSpark Talent will assign a MEAN stack developer for your project.`,
         },
         {
-          id: 2,
+          id: 5,
           heading: `What are the benefits of Hiring MEAN Developers from eSpark Talent?`,
           description: `MEAN stack developers from eSpark talent possess skills and experience. They can help you in turning your business goals and requirements into a fine software product at a cost-effective rate.`,
         },
         {
-          id: 4,
+          id: 2,
           heading: `How much time will it take to develop a MEAN Stack project?`,
           description: `The timeline for the MEAN stack project will be decided after analyzing the project requirements.`,
         },
         {
-          id: 6,
+          id: 4,
           heading: `What is the difference between a MEAN stack developer and a Full stack developer?`,
           description: `A MEAN stack developer uses MangoDB, Express.js, AngularJS, and Node.js for software development. However, a full-stack developer possesses a broader skill set to use for development.`,
+        },
+        {
+          id: 6,
+          heading: `Is MEAN stack in demand?`,
+          description: `Yes MEAN stack is in demand due to its capability to develop a reliable, scalable, and modern software project efficiently.`,
         },
       ],
     },
@@ -1524,6 +1467,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1536,17 +1482,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1559,18 +1501,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1583,18 +1521,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -1746,7 +1680,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified MERN Stack Developers`,
       descrcipton: `Our developers, masters in the art of MERN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MERN Stack programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -1763,8 +1697,8 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 5,
-          heading: `Why eSpark Talent MERN Stack developer different from other?`,
-          description: `MERN stack ata eSpark Talent posses extensive knowledge and experience of working on different projets. We aim to provide you width their experties at affordable cost.`,
+          heading: `Which is better MEAN Stack or MERN Stack?`,
+          description: `Chooseing the MEAN or MERN stak depends uon the business objectives of your project.`,
         },
         {
           id: 2,
@@ -1773,8 +1707,8 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `Which is better MEAN Stack or MERN Stack?`,
-          description: `Chooseing the MEAN or MERN stak depends uon the business objectives of your project.`,
+          heading: `Why eSpark Talent MERN Stack developer different from other?`,
+          description: `MERN stack ata eSpark Talent posses extensive knowledge and experience of working on different projets. We aim to provide you width their experties at affordable cost.`,
         },
         {
           id: 6,
@@ -1883,6 +1817,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -1895,17 +1832,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1918,18 +1851,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -1942,18 +1871,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -2105,7 +2030,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified DevOps Engineer`,
       descrcipton: `Our developers, masters in the art of DevOps engineering, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest DevOps programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -2242,6 +2167,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2254,17 +2182,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -2277,18 +2201,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -2301,18 +2221,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -2464,7 +2380,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Fintech Developers`,
       descrcipton: `Our developers, masters in the art of Fintech development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Fintech programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -2486,18 +2402,18 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 2,
-          heading: `Are fintech jobs in demand? `,
-          description: `Fintech jobs are in high demand due to numeous reasons: technology innovation, rvolving regulatory requirements, job diversity, etc.`,
-        },
-        {
-          id: 4,
           heading: `What are the best ways to hire a fintech software engineer?`,
           description: `eSpark Talent aims to privide best Fintech developers, who have extensive knoledge and experience of working on variety of software project.`,
         },
         {
-          id: 6,
+          id: 4,
           heading: `What are the best ways to hire a fintech software engineer?`,
           description: `Hire a dedicated Fintech software engineer from eSpark Talent to ensure the development of a scalable, reliable, innovative, and secure software solution.`,
+        },
+        {
+          id: 6,
+          heading: `Are fintech jobs in demand? `,
+          description: `Fintech jobs are in high demand due to numeous reasons: technology innovation, rvolving regulatory requirements, job diversity, etc.`,
         },
       ],
     },
@@ -2601,6 +2517,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2613,17 +2532,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a QA`,
-          buttonLink: `/hire-a-qa/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -2636,18 +2551,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a QA`,
-          buttonLink: `/hire-a-qa/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -2660,18 +2571,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a QA`,
-          buttonLink: `/hire-a-qa/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -2823,25 +2730,25 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified QA Engineer`,
       descrcipton: `Our developers, masters in the art of QA Engineer, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest QA Engineers to ensure the most suitable match for your project.`,
       btnText: `Hire A QA`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
       questions: [
         {
           id: 1,
-          heading: `What are the skills of your QA engineers?`,
-          description: `QA engineers at eSpark Talent are proficient in both manual and automation testing. They are also good at communication and collaboration with the stakeholders, providing through insight into defects identified.`,
-        },
-        {
-          id: 3,
           heading: `Why should I choose eSpark talent to hire QA engineers?`,
           description: `We offer professional QA engineers, well-versed with different tools and frameworks at a cost-effective rate.`,
         },
         {
+          id: 3,
+          heading: `What are the skills of your QA engineers?`,
+          description: `QA engineers at eSpark Talent are proficient in both manual and automation testing. They are also good at communication and collaboration with the stakeholders, providing through insight into defects identified.`,
+        },
+        {
           id: 5,
-          heading: `How much does it cost to hire QA engineers?`,
-          description: `Depending upon your project requirements and scope, eSpark Talent will decide the cost.`,
+          heading: `What are the channels of communication available to you with our QA expert?`,
+          description: `There are different modes of communication used by our QA experts to provide you width feedback on the quality assurance process.`,
         },
         {
           id: 2,
@@ -2850,13 +2757,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `Is QA still in demand?`,
-          description: `QA is a valuable phase of software development as it ensures the quality of sotware product and helps to increase customer satisfaction and loyalty.`,
+          heading: `How much does it cost to hire QA engineers?`,
+          description: `Depending upon your project requirements and scope, eSpark Talent will decide the cost.`,
         },
         {
           id: 6,
-          heading: `What are the channels of communication available to you with our QA expert?`,
-          description: `There are different modes of communication used by our QA experts to provide you width feedback on the quality assurance process.`,
+          heading: `Is QA still in demand?`,
+          description: `QA is a valuable phase of software development as it ensures the quality of sotware product and helps to increase customer satisfaction and loyalty.`,
         },
       ],
     },
@@ -2966,6 +2873,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: 'Hire a Developer',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -2978,17 +2888,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3001,18 +2907,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3025,18 +2927,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -3048,9 +2946,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Design`,
-          text: `Our AngularJS developers hold expertise in<br /> creating interactive user interfaces <br />
-          that align with the latest trends.
-          `,
+          text: `Our AngularJS developers hold expertise in<br /> creating interactive user interfaces <br /> that align with the latest trends.`,
           image: `/images/service/angular/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3077,8 +2973,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `We provide a smooth and seamless <br />development lifecycle for our clients starting <br />
-          from the design  till the deployment.`,
+          text: `We provide a smooth and seamless <br />development lifecycle for our clients starting <br /> from the design  till the deployment.`,
           image: `/images/service/angular/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3087,9 +2982,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `Communication is the key to the success of any <br /> project. Our developers
-          maintain transparency <br /> and clarity  throughout the
-          development.`,
+          text: `Communication is the key to the success of any <br /> project. Our developers maintain transparency <br /> and clarity  throughout the development.`,
           image: `/images/service/angular/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3097,8 +2990,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `We provide cost-effective rates for our <br /> AngularJS services that best to both your <br />
-          budget and requirements.`,
+          text: `We provide cost-effective rates for our <br /> AngularJS services that best to both your <br /> budget and requirements.`,
           image: `/images/service/angular/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3109,9 +3001,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Design </span>`,
-          text: `Our AngularJS developers hold expertise in creating interactive user interfaces
-          that align with the latest trends.
-          `,
+          text: `Our AngularJS developers hold expertise in creating interactive user interfaces that align with the latest trends.`,
           image: `/images/service/angular/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3138,8 +3028,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `We provide a smooth and seamless development lifecycle for our clients starting
-          from the design  till the deployment.`,
+          text: `We provide a smooth and seamless development lifecycle for our clients starting from the design  till the deployment.`,
           image: `/images/service/angular/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3148,9 +3037,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `Communication is the key to the success of any project. Our developers
-          maintain transparency and clarity  throughout the
-          development.`,
+          text: `Communication is the key to the success of any project. Our developers maintain transparency and clarity  throughout the development.`,
           image: `/images/service/angular/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3159,8 +3046,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `We provide cost-effective rates for our AngularJS services that best to both your
-          budget and requirements.`,
+          text: `We provide cost-effective rates for our AngularJS services that best to both your budget and requirements.`,
           image: `/images/service/angular/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3176,7 +3062,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Angular JS Developers`,
       descrcipton: `Our developers, masters in the art of AngularJS development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest AngularJS programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -3188,13 +3074,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 3,
-          heading: `How much does it cost to hire an Angular JS developer?`,
-          description: `Depending upon the project scope and timeline, the budget would be decided to hire an Angular JS developer`,
+          heading: `Is it worth it to hire an AngularJS expert?`,
+          description: `Yes. To ensure the reliability and efficiency of your software product, it is worth it to hire Angular JS experts.`,
         },
         {
           id: 5,
-          heading: `Is it worth it to hire an AngularJS expert?`,
-          description: `Yes. To ensure the reliability and efficiency of your software product, it is worth it to hire Angular JS experts.`,
+          heading: `How much does it cost to hire an Angular JS developer?`,
+          description: `Depending upon the project scope and timeline, the budget would be decided to hire an Angular JS developer`,
         },
         {
           id: 2,
@@ -3268,9 +3154,7 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/react/reuseable.svg`,
           title: `Reusable Components`,
-          paragraph: `Our React JS developers are skilled in creating complex interfaces using small, usable
-          elements, improving the efficiency and usability of code.
-          `,
+          paragraph: `Our React JS developers are skilled in creating complex interfaces using small, usable elements, improving the efficiency and usability of code.`,
         },
         {
           icon: `/images/service/react/state.svg`,
@@ -3317,6 +3201,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3329,17 +3216,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus,` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3352,18 +3235,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3376,18 +3255,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -3401,8 +3276,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Design`,
-          text: `eSpark's React JS developers deliver top-notch<br /> solutions with interactive interfaces,<br /> enhancing user experience..
-          `,
+          text: `eSpark's React JS developers deliver top-notch<br /> solutions with interactive interfaces,<br /> enhancing user experience..`,
           image: `/images/service/react/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3420,8 +3294,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Work With Experts`,
-          text: `We have a team of professionals that ensure <br /> high-end code and a smooth software <br />
-          development life cycle.`,
+          text: `We have a team of professionals that ensure <br /> high-end code and a smooth software <br /> development life cycle.`,
           image: `/images/service/react/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3458,8 +3331,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Design </span>`,
-          text: `eSpark's React JS developers deliver top-notch solutions with interactive interfaces, enhancing user experience.
-          `,
+          text: `eSpark's React JS developers deliver top-notch solutions with interactive interfaces, enhancing user experience.`,
           image: `/images/service/react/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3477,8 +3349,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `<span style="color: #029894; font-weight: 700; text-align: start">Work With Experts</span>`,
-          text: `We have a team of professionals that ensure high-end code and a smooth software
-          development life cycle.`,
+          text: `We have a team of professionals that ensure high-end code and a smooth software development life cycle.`,
           image: `/images/service/react/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3521,7 +3392,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified React Developers`,
       descrcipton: `Our developers, masters in the art of React JS development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest React JS programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -3534,28 +3405,22 @@ export const HIRE_DEVELOPERS = [
         {
           id: 3,
           heading: `How Much Does It Cost to Hire a React JS Developer?`,
-          description: `Depending upon the project scope and timeline, a cost-effective rate would be
-          decided to hire a React JS developer.`,
+          description: `Depending upon the project scope and timeline, a cost-effective rate would be decided to hire a React JS developer.`,
         },
         {
           id: 5,
-          heading: `Why Hire React JS Developers from eSpark Talent?
-          `,
-          description: `Hiring React JS developers from eSpark Talent would ensure that you are provided
-          with the best software solution along with a collaborative work environment and
-          smooth development cycle.`,
+          heading: `Why Hire React JS Developers from eSpark Talent?`,
+          description: `Hiring React JS developers from eSpark Talent would ensure that you are provided with the best software solution along with a collaborative work environment and smooth development cycle.`,
         },
         {
           id: 2,
-          heading: `Why eSpark Talent React.Js developers diferent from others?`,
-          description: `
-          Depending upon the project scope and timeline, a cost-effective rate would be
-          decided to hire a Next.js developer.`,
+          heading: `Are React developers in demand? `,
+          description: `React developers are in demand as they possess the expertise of building variety of software solutions like web apps, virtual DOM, cross platform development etc. `,
         },
         {
           id: 4,
-          heading: `Are React developers in demand? `,
-          description: `React developers are in demand as they possess the expertise of building variety of software solutions like web apps, virtual DOM, cross platform development etc. `,
+          heading: `Why eSpark Talent React.Js developers diferent from others?`,
+          description: `Depending upon the project scope and timeline, a cost-effective rate would be decided to hire a Next.js developer.`,
         },
         {
           id: 6,
@@ -3614,33 +3479,27 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/javascript/browser.svg`,
           title: `Browser Extensions`,
-          paragraph: `JavaScript developers are hired to develop add-ons and browser extensions for
-          Chrome, Edge, or even Firefox.`,
+          paragraph: `JavaScript developers are hired to develop add-ons and browser extensions for Chrome, Edge, or even Firefox.`,
         },
         {
           icon: `/images/service/javascript/game.svg`,
           title: `Game Development`,
-          paragraph: `Our professional developers use libraries like Phaser and Three.js to craft browser-based games with interactive interfaces.
-          `,
+          paragraph: `Our professional developers use libraries like Phaser and Three.js to craft browser-based games with interactive interfaces.`,
         },
         {
           icon: `/images/service/javascript/mobile.svg`,
           title: `Mobile App Development`,
-          paragraph: `Hire JavaScript developers to create cross-platform mobile applications to support
-          both Android and iOS.
-          `,
+          paragraph: `Hire JavaScript developers to create cross-platform mobile applications to support both Android and iOS.`,
         },
         {
           icon: `/images/service/javascript/iot.svg`,
           title: `IoT (Internet of Things)`,
-          paragraph: `For connecting devices and sensors, JavaScript developers use frameworks like
-          Node-RED for programming. `,
+          paragraph: `For connecting devices and sensors, JavaScript developers use frameworks like Node-RED for programming. `,
         },
         {
           icon: `/images/service/javascript/progressive.svg`,
           title: `Progressive Web Apps`,
-          paragraph: `React JS developers help in creating applications that efficiently handle varying
-          loading speeds.`,
+          paragraph: `React JS developers help in creating applications that efficiently handle varying loading speeds.`,
         },
       ],
     },
@@ -3675,6 +3534,9 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -3687,17 +3549,13 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus,` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3710,18 +3568,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -3734,18 +3588,14 @@ export const HIRE_DEVELOPERS = [
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -3760,8 +3610,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `Design`,
-          text: `Hire JavaScript developers from eSpark <br /> Talent ensures highly user-friendly results <br /> with top UI/UX design practices.
-          `,
+          text: `Hire JavaScript developers from eSpark <br /> Talent ensures highly user-friendly results <br /> with top UI/UX design practices.`,
           image: `/images/service/javascript/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3805,8 +3654,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `With quality, value, and efficiency, we make <br /> sure to offer affordable price rates for <br />
-          our services. `,
+          text: `With quality, value, and efficiency, we make <br /> sure to offer affordable price rates for <br /> our services. `,
           image: `/images/service/javascript/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3817,8 +3665,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Design </span>`,
-          text: `Hire JavaScript developers from eSpark Talent ensures highly user-friendly results with top UI/UX design practices.
-          `,
+          text: `Hire JavaScript developers from eSpark Talent ensures highly user-friendly results with top UI/UX design practices.`,
           image: `/images/service/javascript/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3863,8 +3710,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `With quality, value, and efficiency, we make sure to offer affordable price rates for
-          our services. `,
+          text: `With quality, value, and efficiency, we make sure to offer affordable price rates for our services. `,
           image: `/images/service/javascript/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3880,7 +3726,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified JavaScript Developers`,
       descrcipton: `Our developers, masters in the art of Javascript development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Javascript programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -3888,41 +3734,27 @@ export const HIRE_DEVELOPERS = [
         {
           id: 1,
           heading: `Why should I hire JavaScript developers from eSpark Talent?`,
-          description: `We offer to provide dedicated and professional JavaScript developers at affordable
-          pricing.
-          `,
+          description: `We offer to provide dedicated and professional JavaScript developers at affordable pricing.`,
         },
         {
           id: 3,
           heading: `How much does it cost to hire a JavaScript developer?`,
-          description: `
-          Hourly rates for a JavaScript developer vary depending on skills and expertise. The
-          average hourly rate for a senior JavaScript developer ranges between $100 to $200.`,
+          description: `Hourly rates for a JavaScript developer vary depending on skills and expertise. The average hourly rate for a senior JavaScript developer ranges between $100 to $200.`,
         },
         {
           id: 5,
-          heading: `Why eSpark Talent JavaScript developers different from others?
-          `,
-          description: `JavaScript developers at eSpark Talent are skilled with the latest tools,
-          frameworks, and libraries. They have strong communication and development
-          experience offered at a reasonable rate.`,
+          heading: `How can I track the progress of my project?`,
+          description: `We aim to provide transparent communication through different channels to guide you about the progress and milestones of your project.`,
         },
         {
           id: 2,
-          heading: `Will the hired JavaScript resources work according to my time zone?`,
-          description: `
-Yes. They will work by your designated time zone, scheduling meetings and
-discussions that suit your availability.
-.`,
+          heading: `Why eSpark Talent JavaScript developers different from others?`,
+          description: `JavaScript developers at eSpark Talent are skilled with the latest tools, frameworks, and libraries. They have strong communication and development experience offered at a reasonable rate.`,
         },
         {
           id: 4,
-          heading: `How can I track the progress of my project?
-          `,
-          description: `
-          We aim to provide transparent communication through different channels to guide
-          you about the progress and milestones of your project.
-          `,
+          heading: `Will the hired JavaScript resources work according to my time zone?`,
+          description: `Yes. They will work by your designated time zone, scheduling meetings and discussions that suit your availability..`,
         },
         {
           id: 6,
@@ -3986,15 +3818,12 @@ discussions that suit your availability.
         {
           icon: `/images/service/nextjs/web.svg`,
           title: `Web Portals`,
-          paragraph: `Hire Next.js developers to develop web portals and dashboards with data gathering
-          capabilities, intuitive elements, and real-time updates.          
-          `,
+          paragraph: `Hire Next.js developers to develop web portals and dashboards with data gathering capabilities, intuitive elements, and real-time updates.          `,
         },
         {
           icon: `/images/service/nextjs/hybird.svg`,
           title: `Hybrid Applications`,
-          paragraph: `Next.js developers at eSpark combines static and dynamic generation in one application, ideal for large projects with complex requirements.
-          `,
+          paragraph: `Next.js developers at eSpark combines static and dynamic generation in one application, ideal for large projects with complex requirements.`,
         },
         {
           icon: `/images/service/nextjs/content.svg`,
@@ -4004,8 +3833,7 @@ discussions that suit your availability.
         {
           icon: `/images/service/nextjs/progressive.svg`,
           title: `Progressive Web Apps`,
-          paragraph: `Next.js offers advanced features like push notifications and offline support that are
-          beneficial for building Progressive Web Apps (PWAs).`,
+          paragraph: `Next.js offers advanced features like push notifications and offline support that are beneficial for building Progressive Web Apps (PWAs).`,
         },
       ],
     },
@@ -4037,6 +3865,9 @@ discussions that suit your availability.
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4049,17 +3880,13 @@ discussions that suit your availability.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus,` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4072,18 +3899,14 @@ discussions that suit your availability.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4096,18 +3919,14 @@ discussions that suit your availability.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -4121,8 +3940,7 @@ discussions that suit your availability.
         {
           id: `01`,
           title: `Design`,
-          text: `Next.js developers at eSpark excel <br /> at implementing intuitive designs into web <br /> applications.          
-          `,
+          text: `Next.js developers at eSpark excel <br /> at implementing intuitive designs into web <br /> applications.          `,
           image: `/images/service/nextjs/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4131,9 +3949,7 @@ discussions that suit your availability.
         {
           id: `02`,
           title: `We Match Your Need`,
-          text: `We make sure that our Next.js developers <br /> provide solutions that align with your <br />
-          goals and requirements.          
-          `,
+          text: `We make sure that our Next.js developers <br /> provide solutions that align with your <br /> goals and requirements.          `,
           image: `/images/service/nextjs/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4168,8 +3984,7 @@ discussions that suit your availability.
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `We offer top-notch software solutions at <br />affordable rates that match your project <br /> budget perfectly.
-           `,
+          text: `We offer top-notch software solutions at <br />affordable rates that match your project <br /> budget perfectly.  `,
           image: `/images/service/nextjs/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4180,8 +3995,7 @@ discussions that suit your availability.
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Design </span>`,
-          text: `Next.js developers at eSpark excel at implementing intuitive designs into web applications.
-          `,
+          text: `Next.js developers at eSpark excel at implementing intuitive designs into web applications.`,
           image: `/images/service/nextjs/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -4244,7 +4058,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Next.js Developers`,
       descrcipton: `Our developers, masters in the art of Next.js development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Next.Js programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -4252,50 +4066,32 @@ goals and requirements.
         {
           id: 1,
           heading: `Why should I hire Next.js developers from eSpark Talent?`,
-          description: `
-          We offer to provide dedicated and professional Next.js developers at affordable
-          pricing.
-          `,
+          description: `We offer to provide dedicated and professional Next.js developers at affordable pricing.`,
         },
         {
           id: 3,
           heading: `Why eSpark Talent Next.js developers different from others?`,
-          description: `
-          eSpark Talent provides the best Next.js developers who are skilled with the latest
-          tools and frameworks. They possess proficiency in communication and
-          development, offered at a reasonable rate.`,
+          description: `eSpark Talent provides the best Next.js developers who are skilled with the latest tools and frameworks. They possess proficiency in communication and development, offered at a reasonable rate.`,
         },
         {
           id: 5,
-          heading: `Will the hired Next.js resources work according to my time zone?
-          `,
-          description: ` 
-          Yes. They will work by your designated time zone, scheduling meetings and
-          discussions that suit your availability.
-          `,
+          heading: `How can I track the progress of my project?`,
+          description: `  We aim to provide transparent communication through different channels to guide   you about the progress and milestones of your project.`,
         },
         {
           id: 2,
-          heading: `How much does it cost to hire a Next.js developer?`,
-          description: `
-          Depending upon the project scope and timeline, a cost-effective rate would be
-          decided to hire a Next.js developer.
-.`,
+          heading: `Will the hired Next.js resources work according to my time zone?`,
+          description: `Yes. They will work by your designated time zone, scheduling meetings and discussions that suit your availability.`,
         },
         {
           id: 4,
-          heading: `How can I track the progress of my project?
-          `,
-          description: `
-            We aim to provide transparent communication through different channels to guide
-            you about the progress and milestones of your project.
-          `,
+          heading: `How much does it cost to hire a Next.js developer?`,
+          description: `Depending upon the project scope and timeline, a cost-effective rate would be decided to hire a Next.js developer..`,
         },
         {
           id: 6,
           heading: `What is the future of Next.js?`,
-          description: `
-          The future of Next.js is highly scalable and will keep on enhancing with additions to its plugins and tools.`,
+          description: `The future of Next.js is highly scalable and will keep on enhancing with additions to its plugins and tools.`,
         },
       ],
     },
@@ -4353,14 +4149,12 @@ goals and requirements.
         {
           icon: `/images/service/android/experts/uiux.svg`,
           title: `UI/UX design`,
-          paragraph: `Developers at eSpark Talent create designs following the Android design guidelines to ensure a smooth user experience.          
-          `,
+          paragraph: `Developers at eSpark Talent create designs following the Android design guidelines to ensure a smooth user experience.          `,
         },
         {
           icon: `/images/service/android/experts/app.svg`,
           title: `App maintenance`,
-          paragraph: `Android developers at eSpark Talent maintain the applications for updates and bug fixing to optimize the performance.
-          `,
+          paragraph: `Android developers at eSpark Talent maintain the applications for updates and bug fixing to optimize the performance.`,
         },
         {
           icon: `/images/service/android/experts/api.svg`,
@@ -4401,6 +4195,9 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: 'Hire a Devloper',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4413,17 +4210,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus,` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4436,18 +4229,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4460,18 +4249,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -4483,8 +4268,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Platform skills`,
-          text: `Our developers are highly efficient at <br /> integrating the Android architecture and <br /> design to build interactive applications.          
-          `,
+          text: `Our developers are highly efficient at <br /> integrating the Android architecture and <br /> design to build interactive applications.          `,
           image: `/images/service/android/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4493,8 +4277,7 @@ goals and requirements.
         {
           id: `02`,
           title: `User Experience`,
-          text: `Android developers are skilled at creating <br />interactive user interfaces to maximize user <br /> satisfaction.          
-          `,
+          text: `Android developers are skilled at creating <br />interactive user interfaces to maximize user <br /> satisfaction.          `,
           image: `/images/service/android/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4529,8 +4312,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Maintenance`,
-          text: `To keep the applications updated with <br /> changing versions, Android developers <br /> maintain the applications for updates.
-           `,
+          text: `To keep the applications updated with <br /> changing versions, Android developers <br /> maintain the applications for updates.  `,
           image: `/images/service/android/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4541,8 +4323,7 @@ goals and requirements.
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700"> Platform skills </span>`,
-          text: `Our developers are highly efficient at integrating the Android architecture and design to build interactive applications.
-          `,
+          text: `Our developers are highly efficient at integrating the Android architecture and design to build interactive applications.`,
           image: `/images/service/android/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -4604,7 +4385,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Android Developers`,
       descrcipton: `Our developers, masters in the art of Android development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Android programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -4612,44 +4393,32 @@ goals and requirements.
         {
           id: 1,
           heading: `How much does it cost to hire Android developers?`,
-          description: `
-          eSpark Talent would decide the cost after analyzing the project scope and requirements.
-          `,
+          description: `eSpark Talent would decide the cost after analyzing the project scope and requirements.`,
         },
         {
           id: 3,
           heading: `What are the benefits of hiring Android developers from eSpark Talent?`,
-          description: `
-          With changing versions and upgrades in the market, the demand for Android developers would increase.`,
+          description: `With changing versions and upgrades in the market, the demand for Android developers would increase.`,
         },
         {
           id: 5,
-          heading: `For how long are we in the market?
-          `,
-          description: ` 
-          With changing versions and upgrades in the market, the demand for Android developers would increase.
-          `,
+          heading: `What are the modes of communication to get in touch with our hired dedicated Android developer?`,
+          description: `Using different collaboration platforms like Jira and Trello, our developers would update you about the progress and milestones of your project..`,
         },
         {
           id: 2,
-          heading: `What are the modes of communication to get in touch with our hired dedicated Android developer?`,
-          description: `
-          Using different collaboration platforms like Jira and Trello, our developers would update you about the progress and milestones of your project.
-.`,
+          heading: `Why eSpark Talent android developers different from others?`,
+          description: `Our developers possess the skills and experience to turn your requirements into a fine Android application.`,
         },
         {
           id: 4,
-          heading: `Why eSpark Talent android developers different from others?
-          `,
-          description: `
-          Our developers possess the skills and experience to turn your requirements into a fine Android application.
-          `,
+          heading: `What is the difference between Android and iOS apps?`,
+          description: `Android and iOS applications are different in terms of design guidelines, development languages, and distribution channels.`,
         },
         {
           id: 6,
-          heading: `What is the difference between Android and iOS apps?`,
-          description: `
-          Android and iOS applications are different in terms of design guidelines, development languages, and distribution channels.`,
+          heading: `For how long are we in the market?`,
+          description: `With changing versions and upgrades in the market, the demand for Android developers would increase.`,
         },
       ],
     },
@@ -4709,14 +4478,12 @@ goals and requirements.
         {
           icon: `/images/service/flutter/experts/uiux.svg`,
           title: `UI/UX services`,
-          paragraph: `Flutter developers create interactive designs using widgets to ensure a smooth user experience.         
-          `,
+          paragraph: `Flutter developers create interactive designs using widgets to ensure a smooth user experience.         `,
         },
         {
           icon: `/images/service/flutter/experts/app.svg`,
           title: `App development`,
-          paragraph: `Flutter developers at eSpark build applications for different platforms including web, iOS, and Android.
-          `,
+          paragraph: `Flutter developers at eSpark build applications for different platforms including web, iOS, and Android.`,
         },
         {
           icon: `/images/service/flutter/experts/intigration.svg`,
@@ -4757,6 +4524,9 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
       {
         sno: `01`,
@@ -4769,17 +4539,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus,` },
           ],
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4792,18 +4558,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -4816,18 +4578,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -4839,8 +4597,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Cross-platform `,
-          text: `Our Flutter developers excel in cross-platform <br /> projects for Android, saving time and cost<br /> with a single codebase.          
-          `,
+          text: `Our Flutter developers excel in cross-platform <br /> projects for Android, saving time and cost<br /> with a single codebase.          `,
           image: `/images/service/flutter/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4849,8 +4606,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Integration`,
-          text: `Our developers can efficiently integrate with <br /> native code to use several functionalities and<br /> APIs.        
-          `,
+          text: `Our developers can efficiently integrate with <br /> native code to use several functionalities and<br /> APIs.        `,
           image: `/images/service/flutter/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4885,8 +4641,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Strong community`,
-          text: `Due to high collaboration and extensive <br /> documentation, our developers stay updated <br /> with the latest changes.
-           `,
+          text: `Due to high collaboration and extensive <br /> documentation, our developers stay updated <br /> with the latest changes.  `,
           image: `/images/service/flutter/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4897,8 +4652,7 @@ goals and requirements.
         {
           id: `01`,
           title: `<span style="color: #029894; font-weight: 700">Cross-platform </span>`,
-          text: `Our Flutter developers excel in cross-platform projects for Android, saving time and cost with a single codebase.
-          `,
+          text: `Our Flutter developers excel in cross-platform projects for Android, saving time and cost with a single codebase.`,
           image: `/images/service/flutter/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -4960,7 +4714,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Flutter Developers`,
       descrcipton: `Our developers, masters in the art of Flutter development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Flutter programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -4968,39 +4722,28 @@ goals and requirements.
         {
           id: 1,
           heading: `How much does it cost to hire a Flutter app developer?`,
-          description: `
-          eSpark Talent would decide the cost after analyzing the project scope and requirements.
-          `,
+          description: `eSpark Talent would decide the cost after analyzing the project scope and requirements.`,
         },
         {
           id: 3,
           heading: `Can I Hire a Flutter developer on an hourly or project basis?`,
-          description: `
-          After analyzing your requirements, eSpark would assign a Flutter developer for hourly or regular projects.`,
+          description: `After analyzing your requirements, eSpark would assign a Flutter developer for hourly or regular projects.`,
         },
         {
           id: 5,
-          heading: `Why is Flutter Becoming Popular?
-          `,
-          description: ` 
-          Flutter is becoming increasingly popular as it allows cross-platform development, customized widgets, and UI/UX services.
-
-          `,
+          heading: `Why is Flutter Becoming Popular?`,
+          description: `Flutter is becoming increasingly popular as it allows cross-platform development, customized widgets, and UI/UX services.
+`,
         },
         {
           id: 2,
           heading: `I'm hiring a Flutter team—will their availability be flexible with my time zone?`,
-          description: `
-          Our developers would collaborate and communicate with you to discuss and inform you about the project details according to your time zone feasibility.
-.`,
+          description: `Our developers would collaborate and communicate with you to discuss and inform you about the project details according to your time zone feasibility..`,
         },
         {
           id: 4,
-          heading: `Why eSpark Talent Flutter developers different from others?
-          `,
-          description: `
-          Our developers would collaborate and communicate with you to discuss and inform you about the project details according to your time zone feasibility.
-          `,
+          heading: `Why eSpark Talent Flutter developers different from others?`,
+          description: `Our developers would collaborate and communicate with you to discuss and inform you about the project details according to your time zone feasibility.`,
         },
       ],
     },
@@ -5112,6 +4855,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -5126,18 +4870,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5150,18 +4889,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5174,18 +4909,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -5312,7 +5043,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;"> Top-Notch 1%</span> Of Globally Certified React Native Developers`,
       descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -5329,18 +5060,18 @@ goals and requirements.
         },
         {
           id: 5,
+          heading: `Is React Native a good career?`,
+          description: `React Native can prove to be a good career option as it is a useful technology for developing cross-platform projects.`,
+        },
+        {
+          id: 2,
           heading: `Why should I hire React Native developers from eSpark Talent?`,
           description: `Hire dedicated React Native developers from eSpark Talent because they possess extensive knowledge about tools and frameworks and will build a fine software product based on your project requirements.`,
         },
         {
-          id: 2,
+          id: 4,
           heading: `Can I hire a React Native Developer for project-based tasks?`,
           description: `Yes, you can hire React Native developers for project-based tasks.`,
-        },
-        {
-          id: 4,
-          heading: `Is React Native a good career?`,
-          description: `React Native can prove to be a good career option as it is a useful technology for developing cross-platform projects.`,
         },
       ],
     },
@@ -5448,6 +5179,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -5462,18 +5194,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5486,18 +5213,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5510,18 +5233,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -5648,7 +5367,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified ASP.Net Developers`,
       descrcipton: `Our developers, masters in the art of ASP.Net development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest ASP.Net programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -5659,12 +5378,12 @@ goals and requirements.
           description: `Hiring ASP.net developers from eSpark Talent would be highly beneficial as they possess expertise in using this framework to build dynamic web applications based on your project requirements and objectives, at an affordable price.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `How much does it cost to Hire ASP.net Developers?`,
           description: `eSpark Talent would decide the cost after analyzing the project scope and requirements.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `Are ASP.NET developers in demand?`,
           description: `ASP.net developers are in high demand as this framework can be efficiently used to build robust systems that are scalable, reliable, and secure.`,
         },
@@ -5770,6 +5489,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -5784,18 +5504,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5808,18 +5523,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -5832,18 +5543,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -5970,7 +5677,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP`,
       descrcipton: `Our developers, masters in the art of PHP development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PHP programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -5981,29 +5688,29 @@ goals and requirements.
           description: `PHP web development refers to the use of PHP for building dynamic web applications. It is widely used as it is open source and simple to learn.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `How to hire the best PHP developers?`,
           description: `eSpark Talent aims to provide the best PHP developers at a cost-effective rate.`,
         },
         {
-          id: 3,
-          heading: `How much does PHP development cost?`,
-          description: `Depending upon the project requirements and scope, eSpark Talent would decide the cost.`,
-        },
-        {
-          id: 4,
-          heading: `Why PHP is in demand?`,
-          description: `PHP is open source and is widely used because it's easy to learn, with extensive built-in libraries, making it a good choice to build dynamic and scalable web applications.`,
-        },
-        {
           id: 5,
+          heading: `Why eSpark Talent PHP developers different from others?`,
+          description: `PHP developers at eSpark Talent possess the skill set as well as the experience. Moreover, we aim to provide the best developers at an affordable price.`,
+        },
+        {
+          id: 2,
           heading: `Why should I hire PHP developers from eSpark Talent?`,
           description: `PHP is open source and is widely used because it's easy to learn, with extensive built-in libraries, making it a good choice to build dynamic and scalable web applications.`,
         },
         {
+          id: 4,
+          heading: `How much does PHP development cost?`,
+          description: `Depending upon the project requirements and scope, eSpark Talent would decide the cost.`,
+        },
+        {
           id: 6,
-          heading: `Why eSpark Talent PHP developers different from others?`,
-          description: `PHP developers at eSpark Talent possess the skill set as well as the experience. Moreover, we aim to provide the best developers at an affordable price.`,
+          heading: `Why PHP is in demand?`,
+          description: `PHP is open source and is widely used because it's easy to learn, with extensive built-in libraries, making it a good choice to build dynamic and scalable web applications.`,
         },
       ],
     },
@@ -6107,6 +5814,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6121,18 +5829,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6145,18 +5848,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6169,18 +5868,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -6306,7 +6001,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Python Developers`,
       descrcipton: `Our developers, masters in the art of Python development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Python programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -6322,12 +6017,12 @@ goals and requirements.
           description: `Python developers at eSpark Talent are proficient with the use of Python for web development, backend development, data analysis, machine learning, and artificial intelligence.`,
         },
         {
-          id: 4,
+          id: 2,
           heading: `How early can I hire and get a Python developer working?`,
           description: `After analyzing the project requirements and scope, our developers will start working on your project.`,
         },
         {
-          id: 5,
+          id: 4,
           heading: `How much does Python development cost?`,
           description: `Depending on the project requirements and scope, eSpark Talent will decide a development cost for your project.`,
         },
@@ -6433,6 +6128,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6447,18 +6143,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6471,18 +6162,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6495,18 +6182,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -6632,7 +6315,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Node.js Developers`,
       descrcipton: `Our developers, masters in the art of Node.js development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Node.js programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -6643,22 +6326,22 @@ goals and requirements.
           description: `Depending upon the project requirements and scope, eSpark Talent would decide a cost.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `How do I hire a node.js developer?`,
           description: `Hire a dedicated node.js developer from eSpark Talent who possesses the detailed knowledge of using this technology to build applications, at a cost-effective rate.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `What makes eSpark node.js developers different?`,
           description: `Node.js developers at eSpark are not only proficient with node.js but are also skilled at communication and collaboration to provide you with thorough insights and feedback about the progress and milestones of the project achieved.`,
         },
         {
-          id: 4,
+          id: 2,
           heading: `What are the benefits of hiring node.js developers from eSpark Talent?`,
           description: `The benefits of hiring node.js developers from eSpark Talent are numerous as they are experts at turning your business goals and requirements into a fine software product.`,
         },
         {
-          id: 5,
+          id: 4,
           heading: `Is node.js high paying?`,
           description: `Node.js is high-paying due to its extensive use in web development and its capability to allow scalability and improved performance.`,
         },
@@ -6779,6 +6462,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -6793,18 +6477,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6817,18 +6496,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -6841,18 +6516,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -6978,7 +6649,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Firmware Developers`,
       descrcipton: `Our developers, masters in the art of Firmware development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Firmware programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -6989,12 +6660,17 @@ goals and requirements.
           description: `After analyzing your requirements, eSpark Talent will decide the cost.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `What skills should a professional firmware programmer have?`,
           description: `Professional firmware developers must know the development, testing, and maintenance of firmware.`,
         },
         {
-          id: 3,
+          id: 5,
+          heading: `Are firmware developer jobs in demand?`,
+          description: `Due to their expertise in building firmware, device drivers, and RTOS systems, these developers are in high demand.`,
+        },
+        {
+          id: 2,
           heading: `Why should I hire firmware developers from eSpark Talent?`,
           description: `Firmware developers at eSpark are skilled at building firmware, and RTOS. Furthermore, they also provide you with maintenance and testing services.`,
         },
@@ -7002,11 +6678,6 @@ goals and requirements.
           id: 4,
           heading: `Why eSpark Talent Firmware developers different from others?`,
           description: `Our developers provide you with development, testing, and maintenance services for firmware at an affordable price.`,
-        },
-        {
-          id: 5,
-          heading: `Are firmware developer jobs in demand?`,
-          description: `Due to their expertise in building firmware, device drivers, and RTOS systems, these developers are in high demand.`,
         },
         {
           id: 6,
@@ -7115,6 +6786,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7129,18 +6801,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7153,18 +6820,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7177,18 +6840,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -7314,7 +6973,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified PCB Designer`,
       descrcipton: `Our developers, masters in the art of PCB Designing, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PCB designers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -7325,22 +6984,22 @@ goals and requirements.
           description: `PCB designs are a good choice as they ensure cost-effective products that are scalable and reliable.`,
         },
         {
-          id: 2,
-          heading: `How much does it cost to hire a PCB designer?`,
-          description: `After analyzing your requirements, eSpark Talent will decide on the cost.`,
-        },
-        {
           id: 3,
           heading: `What are the PCB routing best practices followed by your PCB designers?`,
           description: `Some of the best practices followed by our designers are impedance matching, short traces, signal crosstalk avoidance, and component checking.`,
         },
         {
-          id: 4,
+          id: 5,
+          heading: `How much does it cost to hire a PCB designer?`,
+          description: `After analyzing your requirements, eSpark Talent will decide on the cost.`,
+        },
+        {
+          id: 2,
           heading: `What makes eSpark  PCB designer Different?`,
           description: `Our designers are good at developing effective designs as well as communicating with the manufacturers to ensure optimal performance.`,
         },
         {
-          id: 5,
+          id: 4,
           heading: `What are the aspects to consider when outsourcing PCB design services?`,
           description: `Some of the key factors that one must keep in mind when outsourcing PCB designers are the cost, skill set, and experience.`,
         },
@@ -7454,6 +7113,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7468,18 +7128,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7492,18 +7147,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7516,18 +7167,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -7653,7 +7300,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Embedded Developers`,
       descrcipton: `Our developers, masters in the art of Embedded development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Embedded programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -7664,12 +7311,17 @@ goals and requirements.
           description: `Embedded engineers are in high demand to develop firmware, RTOS, and device drivers.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `Which field is best embedded?`,
           description: `Some of the best fields for embedded systems are IoT, embedded software development, automotive embedded systems, and real-time systems.`,
         },
         {
-          id: 3,
+          id: 5,
+          heading: `Why eSpark Talent embedded developers different from others?`,
+          description: `Embedded developers at eSpark Talent are skilled at building firmware, RTOS, and device drivers. Furthermore, they also provide testing and maintenance services, all at an affordable price.`,
+        },
+        {
+          id: 2,
           heading: `Which is better embedded or IoT?`,
           description: `The decision to choose between embedded and IoT depends upon factors like domain, scope, interests, and career goals.`,
         },
@@ -7677,11 +7329,6 @@ goals and requirements.
           id: 4,
           heading: `Are embedded systems the future?`,
           description: `As the demand for smart technologies is increasing, the scope of embedded systems is also rising.`,
-        },
-        {
-          id: 5,
-          heading: `Why eSpark Talent embedded developers different from others?`,
-          description: `Embedded developers at eSpark Talent are skilled at building firmware, RTOS, and device drivers. Furthermore, they also provide testing and maintenance services, all at an affordable price.`,
         },
         {
           id: 6,
@@ -7798,6 +7445,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -7812,18 +7460,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7836,18 +7479,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -7860,18 +7499,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -7998,7 +7633,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified ASP.Net Developers`,
       descrcipton: `Our developers, masters in the art of Shopify development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Shopify programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -8009,14 +7644,19 @@ goals and requirements.
           description: `eSpark Talent would decide the cost of hiring a Shopify developer after analyzing the project scope and requirements.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `What skills do our Shopify Developers have?`,
           description: `Shopify developers at eSpark Talent are skilled at store setup, API integration and product management.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `Is it worth it to hire a Shopify expert?`,
           description: `Shopify developer would ensure that your online store is capable enough by integrating various features, APIs and security measures.`,
+        },
+        {
+          id: 2,
+          heading: `Why eSpark Talent Shopify developer different from other?`,
+          description: `Shopify developers from eSpark Talent are not only experts at building customized online stores but also maintaining them and providing necessary support.`,
         },
         {
           id: 4,
@@ -8024,14 +7664,9 @@ goals and requirements.
           description: `Shopify developers are in high demand as they hold expertise in building online stores and maintaining them.`,
         },
         {
-          id: 5,
+          id: 6,
           heading: `Can We Get Started Right Away?`,
           description: `eSpark Talent would assign a developer after analyzing the project scope and requirements.`,
-        },
-        {
-          id: 6,
-          heading: `Why eSpark Talent Shopify developer different from other?`,
-          description: `Shopify developers from eSpark Talent are not only experts at building customized online stores but also maintaining them and providing necessary support.`,
         },
       ],
     },
@@ -8084,8 +7719,7 @@ goals and requirements.
         {
           icon: `/images/service/wordpress/experties/icon2.svg`,
           title: `Plugin development`,
-          paragraph: `Our developers are skilled at customizing existing plugins to increase the functionalities provided by the existing ones.
-          `,
+          paragraph: `Our developers are skilled at customizing existing plugins to increase the functionalities provided by the existing ones.`,
         },
         {
           icon: `/images/service/wordpress/experties/icon3.svg`,
@@ -8136,6 +7770,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8150,18 +7785,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8174,18 +7804,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8198,18 +7824,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -8257,7 +7879,7 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce <br /> websites with features like payment gateways,  product filters and shopping carts.
+          text: `Our experts at developing e-commerce</br> websites with features like payment gateways,br> product filters and shopping carts.
           `,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
@@ -8338,7 +7960,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Wordpress Developers`,
       descrcipton: `Our developers, masters in the art of WordPress development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the WordPress programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -8349,22 +7971,22 @@ goals and requirements.
           description: `Hire top-notch WordPress developer from eSpark Talent that possess the skills and experience to built a customized software solution.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `Are WordPress Developer in Demand?`,
           description: `WordPress developers are in high demand due to their expertise in SEO optimization, e-commerce development and robust security implementation.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `Why should you hire a WordPress developer from eSpark?`,
           description: `WordPress developers at eSpark Talent have the expertise of working on a vast variety of projects. They will provide skills and guidance at an affordable price.`,
         },
         {
-          id: 4,
+          id: 2,
           heading: `Why do so many companies use WordPress?`,
           description: `Many companies prefer WordPress developer because it ensures e-commerce integration, SEO optimization, maintainance services and website development.`,
         },
         {
-          id: 5,
+          id: 4,
           heading: `How much does a WordPress expert cost?`,
           description: `eSpark Talent would decide the cost of hiring a WordPress developer after analyzing the project scope and requirements.`,
         },
@@ -8380,11 +8002,11 @@ goals and requirements.
     path: `hire-performence-marketers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Performance<br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Marketers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span>Performance<br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Marketer </span>',
       description:
         'Hire a performance Marketer from eSpark Talent to optimize the process of marketing at an affordable price. To target the correct audience by using appropriate data analysis techniques, marketers at eSpark use numerous strategies.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Marketer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -8411,7 +8033,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers '</span> <br/>Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developers`,
+      btnText: `Hire a Marketer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -8424,8 +8046,7 @@ goals and requirements.
         {
           icon: `/images/service/performence/experties/icon2.svg`,
           title: `Analytics`,
-          paragraph: `Our Marketers are experts at using various analytics tools like Adobe Analytics to generate dashboards and reports.
-            `,
+          paragraph: `Our Marketers are experts at using various analytics tools like Adobe Analytics to generate dashboards and reports.   `,
         },
         {
           icon: `/images/service/performence/experties/icon3.svg`,
@@ -8481,6 +8102,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8495,18 +8117,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8519,18 +8136,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8543,18 +8156,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-developer/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -8681,7 +8290,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Performance Marketing Specialists`,
       descrcipton: `Our specialists, masters in the art of Performance Marketing, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Performance Marketers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-developer/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -8692,23 +8301,23 @@ goals and requirements.
           description: `Hire the best performance marketers from eSpark Talent that would assist you in targeting the correct audience and enhancing the performance of your project.`,
         },
         {
-          id: 2,
-          heading: `How much does it cost to hire a performance marketer?`,
-          description: `eSpark Talent would decide the cost of hiring a performance marketer after analyzing the project scope and requirements.`,
-        },
-        {
           id: 3,
           heading: `Is Performance marketing in demand?`,
           description: `Performance marketing is in high demand as it helps to enhance the scalability and visibility metrics of your project.`,
         },
         {
-          id: 4,
+          id: 5,
+          heading: `How much does it cost to hire a performance marketer?`,
+          description: `eSpark Talent would decide the cost of hiring a performance marketer after analyzing the project scope and requirements.`,
+        },
+        {
+          id: 2,
           heading: `Why eSpark Talent Performance marketers different from others?`,
           description: `Performance marketers at eSpark Talent have the skills for planning campaigns, data analysis, affiliate marketing, and much more all available at an affordable price.`,
         },
         {
-          id: 5,
-          heading: `HWhy hire a Performance Marketer?`,
+          id: 4,
+          heading: `Why hire a Performance Marketer?`,
           description: `To streamline the overall campaign planning, CRO implementation, and data analytics, hire a performance marketer.`,
         },
         {
@@ -8822,6 +8431,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -8836,18 +8446,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8860,18 +8465,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -8884,18 +8485,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -9023,7 +8620,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified SEO Experts`,
       descrcipton: `Our developers, masters in the art of SEO, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the SEO Experts to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-expert/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -9034,22 +8631,22 @@ goals and requirements.
           description: `eSpark Talent would decide the cost depending upon your project scope and requirements.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `Why eSpark Talent SEO expert different from other?`,
           description: `Our experts are skilled at conducting on page and off page optimization along with extensive keyword research.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `Why I choose eSpark Talent to hire seo expert?`,
           description: `SEO experts at eSpark Talent would conduct audits, research, analysis and website optimization at an affordable price.`,
         },
         {
-          id: 4,
+          id: 2,
           heading: `Can We Get Started Right Away?`,
           description: `After analysing your requirements, eSpark Talent would assign SEO expert for your project.`,
         },
         {
-          id: 5,
+          id: 4,
           heading: `Why eSpark Talent SEO experts different from other?`,
           description: `Our SEO experts are dedicated to make your website rank higher among all your competitors by doing a detailed research about keywords and content.`,
         },
@@ -9170,6 +8767,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -9184,18 +8782,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -9208,18 +8801,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -9232,22 +8821,17 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
-
     whyHire: {
       title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> </br> From eSpark Talent ?`,
       subTitle: `Hire a dedicated PPC specialist from eSpark Talent as they have a lot of qualifications that make them a perfect choice for your project.`,
@@ -9371,7 +8955,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PPC Specialist`,
       descrcipton: `Our specialists, masters in the art of PPC, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PPC experts to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-expert/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -9382,12 +8966,17 @@ goals and requirements.
           description: `PPC specialists are experts in managing campaigns, keyword research, bid management, and ad creation.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `Why hire a PPC specialist?`,
           description: `Hire a PPC specialist as they hold the expertise to handle the PPC campaigns by using the appropriate techniques and streamlining the process.`,
         },
         {
-          id: 3,
+          id: 5,
+          heading: `Why eSpark Talent PPC Specialist different from others?`,
+          description: `PPC specialists at eSpark Talent possess the skills and experience that will assist you in making your project successful.`,
+        },
+        {
+          id: 2,
           heading: `Which job is better SEO or PPC?`,
           description: `Depending upon the project scope and requirements, the decision to opt for either SEO or PPC can be taken.`,
         },
@@ -9395,11 +8984,6 @@ goals and requirements.
           id: 4,
           heading: `Is PPC in demand?`,
           description: `Due to increasing demand for PPC campaigns on platforms like Google ads, the demand for PPC is also rising.`,
-        },
-        {
-          id: 5,
-          heading: `Why eSpark Talent PPC Specialist different from others?`,
-          description: `PPC specialists at eSpark Talent possess the skills and experience that will assist you in making your project successful.`,
         },
         {
           id: 6,
@@ -9512,6 +9096,7 @@ goals and requirements.
         },
       ],
     },
+    perkBtnTitle: '',
     perkTitle:
       'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
     perks: [
@@ -9526,18 +9111,13 @@ goals and requirements.
           heading: `Hire Full-Time Salaried Developers`,
           paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
           list: [
-            {
-              item: `Collaborative Work Environment,`,
-            },
+            { item: `Collaborative Work Environment,` },
             { item: `Stability in Payroll, ` },
-            {
-              item: `High-Value Contract Partnership,`,
-            },
+            { item: `High-Value Contract Partnership,` },
             { item: `Work- Life Balance Focus, ` },
           ],
-
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -9550,18 +9130,14 @@ goals and requirements.
           heading: `Hire Hourly Developers`,
           paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
           list: [
-            {
-              item: `Efficient Task Allocation.`,
-            },
+            { item: `Efficient Task Allocation.` },
             { item: `Flexibility in Scheduling, ` },
-            {
-              item: `Dynamic Response to Workload.`,
-            },
+            { item: `Dynamic Response to Workload.` },
             { item: `Adherence to Labor Laws.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
       {
@@ -9574,18 +9150,14 @@ goals and requirements.
           heading: `Hire a Dedicated Team`,
           paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
           list: [
-            {
-              item: `Cost Efficiency.`,
-            },
+            { item: `Cost Efficiency.` },
             { item: `Faster Project Turnaround.` },
-            {
-              item: `Specialized Expertise,`,
-            },
+            { item: `Specialized Expertise,` },
             { item: `Strategic Project Planning.` },
           ],
           listIcon: `/images/homepage/our-perks/list-icon.svg`,
           buttonText: `Hire a Developer`,
-          buttonLink: `/hire-a-frontend-expert/#form`,
+          buttonLink: `/book-a-demo`,
         },
       },
     ],
@@ -9713,7 +9285,7 @@ goals and requirements.
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Social Media Specialists`,
       descrcipton: `Our specialists, masters in the art of Social Media, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Social Media experts to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
-      btnLink: `/hire-a-frontend-expert/#form`,
+      btnLink: `/book-a-demo`,
     },
     faqs: {
       title: `Check Out Our Common Questions`,
@@ -9724,12 +9296,12 @@ goals and requirements.
           description: `Social Media Experts are responsible for managing social media platforms and content creation to enhance brand visibility and engagement.`,
         },
         {
-          id: 2,
+          id: 3,
           heading: `How much does it cost to hire a social media expert?`,
           description: `eSpark Talent would decide the cost after analyzing the project scope and requirements.`,
         },
         {
-          id: 3,
+          id: 5,
           heading: `Does a Social Media Expert have a good future?`,
           description: `With growing advancements in digital media, the demand for social media experts is increasing day by day.`,
         },

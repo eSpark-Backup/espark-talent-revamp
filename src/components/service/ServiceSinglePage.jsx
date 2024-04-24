@@ -16,7 +16,6 @@ import ServiceFaq from './ServiceFaq';
 
 const ServiceSinglePage = ({ data }) => {
   //  hiring services page components
-
   return (
     <>
       <ServiceHeroSection data={data?.servicesHeroSection} />
@@ -43,6 +42,7 @@ const ServiceSinglePage = ({ data }) => {
       <FifthSection data={data?.technologies} />
       <Perks
         data={data?.perks}
+        btnTitle={data?.perkBtnTitle}
         link={'/book-a-demo'}
         target={'_blank'}
         title={data?.perkTitle}
