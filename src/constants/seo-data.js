@@ -738,11 +738,11 @@ export const HIRE_SEO = [
       'Explore our top-rated SEO experts for hire. Boost your online presence with tailored strategies and proven results to drive organic traffic and growth.',
   },
   {
-    path: 'hire-performence-marketers',
-    url: 'https://esparktalent.com/hire-performence-marketers',
-    title: 'Hire Top Performence Marketer | eSpark Talent',
+    path: 'hire-performance-marketers',
+    url: 'https://esparktalent.com/hire-performance-marketers',
+    title: 'Hire Top Performance Marketer | eSpark Talent',
     image:
-      'https://esparktalent.com/_next/image?url=%2Fimages%2Fservice%2Fperformence%2Fperformance.png&w=640&q=85',
+      'https://esparktalent.com/_next/image?url=%2Fimages%2Fservice%2Fperformance%2Fperformance.png&w=640&q=85',
     description:
       'Want to hire a performance marketer? Our specialists craft effective strategies to upgrade your marketing success. Connect with us to improve your brand!',
   },
