@@ -105,8 +105,12 @@ const FifthSection = ({ data }) => {
                   pathname.includes('engineers')
                     ? { xs: '0%', sm: '5%', md: '5%', lg: '12%' }
                     : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
-              }}
-            >
+
+                  '@media (min-width:760px) and (max-width: 1919px)': {
+                      px: pathname === '/hire-firmware-developers' ? '20%' : ''
+                    },
+                  }}
+           >
               {data?.descrcipton}
             </Typography>
           </Box>
@@ -136,8 +140,12 @@ const FifthSection = ({ data }) => {
                     lineHeight: '40px',
                     color: '#029894',
                     fontSize: {
-                      xs: '22px',
-                      sm: '22px',
+                      xs:  pathname.includes('developers') ||
+                      pathname.includes('designers') ||
+                      pathname.includes('engineers') ? '20px' : '22px',
+                      sm: pathname.includes('developers') ||
+                      pathname.includes('designers') ||
+                      pathname.includes('engineers') ? '20px' :'22px',
                       md: '22px',
                       lg: '22px',
                       xl: '22px',

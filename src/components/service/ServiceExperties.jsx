@@ -3,8 +3,10 @@ import React from 'react';
 import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Link from 'next/link';
 import ServiceExpertiesResponsive from './ServiceExpertiesResponsive';
+import { usePathname } from 'next/navigation';
 
 const ServiceExperties = ({ data }) => {
+  const pathName = usePathname()
   return (
     <>
       {data && (
@@ -58,6 +60,10 @@ const ServiceExperties = ({ data }) => {
                       md: '50px',
                       lg: '65px',
                     },
+                    '@media(min-width: 420px) and (max-width: 480px)': {
+                      px: pathName === '/hire-mean-stack-developers' ? '20px' : '0px'
+                      
+                    },
                   }}
                   dangerouslySetInnerHTML={{ __html: data?.title }}
                 />
@@ -106,7 +112,7 @@ const ServiceExperties = ({ data }) => {
                       flexDirection: 'column',
                       borderRadius: '20px',
                       background: '#fff',
-                      boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.2)',
+                      boxShadow: '0px 0px 10px rgba(0, 0, 0.3, 0.2)',
                     }}
                   >
                     <Box
@@ -185,7 +191,7 @@ const ServiceExperties = ({ data }) => {
               sx={{ py: { xs: 0.5, md: 2 } }}
             >
               {data?.btnLink && (
-                <Link href={data?.btnLink || '#'}>
+                <Link href={data?.btnLink || '#'} target="_blank">
                   <Button
                     sx={{
                       width: { xs: '102.29px', sm: '130px', md: '210px' },
