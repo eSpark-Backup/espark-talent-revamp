@@ -676,7 +676,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Full Stack Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Full Stack Developers'</span> Expertise`,
       paragraph: `eSpark Talent aims to provide industry professional full-stack developers to build
       your system.`,
       btnLink: `/book-a-demo`,
@@ -1041,7 +1041,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">MEAN Stack Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">MEAN Stack Developers'</span> Expertise`,
       paragraph: `MEAN stack developers are experts in creating a wide variety of software solutions using this technology.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
@@ -1395,7 +1395,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">MERN Stack Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">MERN Stack Developers'</span> Expertise`,
       paragraph: `MERN stack developers at eSpark Talent have skills in using this technology to build a vast variety of software applications.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -2100,7 +2100,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Fintech Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Fintech Developers'</span> Expertise`,
       paragraph: `Fintech developers are experts in providing a vast variety of technological solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -2800,7 +2800,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">AngularJS Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">AngularJS Developers'</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch AngularJS developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -3132,7 +3132,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ReactJS Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ReactJS Developers'</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
       React JS developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
@@ -3462,7 +3462,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">JavaScript Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">JavaScript Developers'</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
       JavaScript developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
@@ -3796,7 +3796,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Next.js Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Next.js Developers'</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
       JavaScript developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
@@ -4128,7 +4128,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Android Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Android Developers'</span> Expertise`,
       paragraph: `Android developers at eSpark are highly talented at building applications for various devices.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -4455,7 +4455,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Flutter Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Flutter Developers'</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
       Flutter developers to cater to your requirements.
       `,
@@ -5422,7 +5422,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PHP Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PHP Developers'</span> Expertise`,
       paragraph: `PHP developers at eSpark Talent are proficient at using this technology to develop a vast variety of projects.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
@@ -5674,7 +5674,7 @@ goals and requirements.
       image: `/images/hire-developer/business.svg`,
       leftImage: `/images/hire-developer/round.svg`,
       bgImage: `/images/service/pipe.svg`,
-      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP Developers`,
       descrcipton: `Our developers, masters in the art of PHP development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PHP programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
       btnLink: `/book-a-demo`,
@@ -5747,7 +5747,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Python Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Python Developers'</span> Expertise`,
       paragraph: `Python developers at eSpark Talent are experts at using this technology for a wide variety of software applications.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
@@ -6061,7 +6061,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Node.js Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Node.js Developers'</span> Expertise`,
       paragraph: `Node.js developers are skilled in developing a vast variety of tech-based solutions that are advanced and dynamic.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
@@ -6385,7 +6385,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Firmware Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Firmware Developers'</span> Expertise`,
       paragraph: `Firmware developers at eSpark are experts at using this technology to build a vast variety of projects.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
@@ -7038,7 +7038,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Embedded Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Embedded Developers'</span> Expertise`,
       paragraph: `eSpark Talent guarantees to provide you with top-notch embedded developers to develop various technical solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire A Developer`,
