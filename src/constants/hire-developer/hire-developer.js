@@ -7671,7 +7671,7 @@ goals and requirements.
       ],
     },
   },
-  { 
+  {
     path: `hire-wordpress-developers`,
     servicesHeroSection: {
       title:

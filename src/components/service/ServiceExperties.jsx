@@ -6,7 +6,7 @@ import ServiceExpertiesResponsive from './ServiceExpertiesResponsive';
 import { usePathname } from 'next/navigation';
 
 const ServiceExperties = ({ data }) => {
-  const pathName = usePathname()
+  const pathName = usePathname();
   return (
     <>
       {data && (
@@ -61,8 +61,10 @@ const ServiceExperties = ({ data }) => {
                       lg: '65px',
                     },
                     '@media(min-width: 420px) and (max-width: 480px)': {
-                      px: pathName === '/hire-mean-stack-developers' ? '20px' : '0px'
-                      
+                      px:
+                        pathName === '/hire-mean-stack-developers'
+                          ? '20px'
+                          : '0px',
                     },
                   }}
                   dangerouslySetInnerHTML={{ __html: data?.title }}
