@@ -36,10 +36,10 @@ const ServiceFaq = ({ data }) => {
               backgroundColor: '#F7F8FF',
             }}
           >
-            <AccordionSummary sx={{
-              
-              alignItems: 'flex-start', // Align accordion items to the top
-            }}
+            <AccordionSummary
+              sx={{
+                alignItems: 'flex-start', // Align accordion items to the top
+              }}
               expandIcon={
                 expanded === 'panel' ? (
                   <ArrowDropUpIcon
