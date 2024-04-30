@@ -841,7 +841,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: `02`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `Hiring a full-stack developer can be a good <br /> asset as you don't have to invest in <br /> hiring separate frontend and backend developers.`,
           image: `/images/service/full-stack/why-hire/icon2.svg`,
           isReverse: false,
@@ -5587,7 +5587,7 @@ goals and requirements.
         },
         {
           id: `04`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `PHP developers allow development using an <br /> open source technology which helps to save <br /> the resources allocated for development`,
           image: `/images/service/php/why-hire/icon4.svg`,
           alignment: 'left',
@@ -5642,7 +5642,7 @@ goals and requirements.
         },
         {
           id: `04`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `PHP developers allow development using an open source technology which helps to save the resources allocated for development.`,
           image: `/images/service/php/why-hire/icon4.svg`,
           alignment: 'left',
@@ -8173,7 +8173,7 @@ goals and requirements.
       processes: [
         {
           id: `01`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
           image: `/images/service/performance/why-hire/icon1.svg`,
           alignment: 'right',
@@ -8228,7 +8228,7 @@ goals and requirements.
       responsiveProcesses: [
         {
           id: `01`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
           image: `/images/service/performance/why-hire/icon1.svg`,
           alignment: 'right',
@@ -8865,7 +8865,7 @@ goals and requirements.
         },
         {
           id: `04`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
           image: `/images/service/ppc/why-hire/icon4.svg`,
           alignment: 'left',
@@ -8920,7 +8920,7 @@ goals and requirements.
         },
         {
           id: `04`,
-          title: `Cost-effective`,
+          title: `Cost-Effective`,
           text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
           image: `/images/service/ppc/why-hire/icon4.svg`,
           alignment: 'left',

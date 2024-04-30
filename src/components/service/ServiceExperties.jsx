@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Link from 'next/link';
 import ServiceExpertiesResponsive from './ServiceExpertiesResponsive';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceExperties = ({ data }) => {
   return (
@@ -142,7 +143,7 @@ const ServiceExperties = ({ data }) => {
                           fontWeight: 600,
                         }}
                       >
-                        {item?.title}
+                        {capitalizeFirstLetter(item?.title)}
                       </Typography>
                     </Box>
                     <Box
