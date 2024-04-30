@@ -47,15 +47,15 @@ const ServiceProcess = ({ data, windowWidth }) => {
               width: '100%',
               display: 'flex',
               '@media(min-width: 1024px) and (max-width:1439px)': {
-                width: '990px',
+                width: '100%',
                 ml: 0,
                 mx: 0,
-                justifyContent: 'space-between',
+                justifyContent: 'space-evenly',
               },
               '@media (min-width:1440px)': {
                 justifyContent: 'start',
-                gap: 3.5,
-                ml: -4,
+                gap: 2,
+                ml: -3,
                 mr: 2,
               },
             }}
@@ -78,9 +78,9 @@ const ServiceProcess = ({ data, windowWidth }) => {
                 position: 'absolute',
                 top:
                   path?.includes(full_stack) || path?.includes(mern_stack)
-                    ? 390
-                    : 350,
-                left: 425,
+                    ? 400
+                    : 370,
+                left: 420,
                 '@media(min-width: 1024px) and (max-width:1439px)': {
                   display: 'none',
                 },
@@ -93,9 +93,9 @@ const ServiceProcess = ({ data, windowWidth }) => {
                 position: 'absolute',
                 top:
                   path?.includes(full_stack) || path?.includes(mern_stack)
-                    ? 390
-                    : 350,
-                left: 110,
+                    ? 400
+                    : 370,
+                left: 100,
                 '@media(min-width: 1024px) and (max-width:1439px)': {
                   display: 'none',
                 },
@@ -108,9 +108,9 @@ const ServiceProcess = ({ data, windowWidth }) => {
                 position: 'absolute',
                 top:
                   path?.includes(full_stack) || path?.includes(mern_stack)
-                    ? 390
-                    : 350,
-                left: 530,
+                    ? 400
+                    : 370,
+                left: 510,
                 '@media(min-width: 1024px) and (max-width:1439px)': {
                   display: 'none',
                 },
@@ -123,9 +123,9 @@ const ServiceProcess = ({ data, windowWidth }) => {
                 position: 'absolute',
                 top:
                   path?.includes(full_stack) || path?.includes(mern_stack)
-                    ? 390
-                    : 350,
-                right: 300,
+                    ? 400
+                    : 370,
+                right: 320,
                 '@media(min-width: 1024px) and (max-width:1439px)': {
                   display: 'none',
                 },
@@ -138,9 +138,9 @@ const ServiceProcess = ({ data, windowWidth }) => {
                 position: 'absolute',
                 top:
                   path?.includes(full_stack) || path?.includes(mern_stack)
-                    ? 390
-                    : 350,
-                right: 180,
+                    ? 400
+                    : 370,
+                right: 200,
                 '@media(min-width: 1024px) and (max-width:1439px)': {
                   display: 'none',
                 },
@@ -176,15 +176,15 @@ const ServiceProcess = ({ data, windowWidth }) => {
               width: '100%',
               display: 'flex',
               '@media(min-width: 1024px) and (max-width:1439px)': {
-                width: '990px',
+                width: '100%',
                 mt: 12,
                 mr: 0,
-                justifyContent: 'space-between',
+                justifyContent: 'space-evenly',
               },
               '@media (min-width:1440px)': {
                 justifyContent: 'flex-end',
-                gap: 3,
-                mr:1,
+                gap: 2,
+                mr: 1,
                 ml: 6,
               },
             }}
@@ -211,6 +211,10 @@ const ServiceProcess = ({ data, windowWidth }) => {
 export default ServiceProcess;
 
 const ProcessCardTop = ({ data }) => {
+  const full_stack = 'full-stack';
+  const mern_stack = 'mern-stack';
+  const path = usePathname();
+
   return (
     <Box
       sx={{
@@ -220,8 +224,9 @@ const ProcessCardTop = ({ data }) => {
         zIndex: 1,
         '@media (min-width:1440px)': {
           width: '400px',
-        }, '@media (min-width:1024px) and (max-width: 1439px)': {
-          width: '300px',
+        },
+        '@media (min-width:1024px) and (max-width: 1439px)': {
+          width: '330px',
         },
       }}
     >
@@ -247,7 +252,10 @@ const ProcessCardTop = ({ data }) => {
           lineHeight: 1.6,
           fontSize: '15px',
           textAlign: 'center',
-          minHeight: '90px',
+          minHeight:
+            path?.includes(full_stack) || path?.includes(mern_stack)
+              ? '120px'
+              : '90px',
           '@media(min-width: 1024px) and (max-width:1439px)': {
             fontSize: '12px',
           },
