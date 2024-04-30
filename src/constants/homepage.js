@@ -273,7 +273,7 @@ export const EXPERTIES_DATA = {
             },
             {
               title: 'ReactJS Developer',
-              link: '/hire-react-js-developers',
+              link: '/hire-reactjs-developers',
             },
             {
               title: 'JavaScript Developer',
