@@ -184,7 +184,7 @@ const ServiceProcess = ({ data, windowWidth }) => {
               '@media (min-width:1440px)': {
                 justifyContent: 'flex-end',
                 gap: 3,
-                mr: -5,
+                mr:1,
                 ml: 6,
               },
             }}
@@ -220,6 +220,8 @@ const ProcessCardTop = ({ data }) => {
         zIndex: 1,
         '@media (min-width:1440px)': {
           width: '400px',
+        }, '@media (min-width:1024px) and (max-width: 1439px)': {
+          width: '300px',
         },
       }}
     >
@@ -279,7 +281,7 @@ const ProcessCardBottom = ({ data }) => {
           width: '400px',
         },
         '@media (min-width:1024px) and (max-width: 1439px)': {
-          width: '350px',
+          width: '330px',
         },
       }}
     >

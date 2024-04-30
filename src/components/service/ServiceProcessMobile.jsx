@@ -146,8 +146,8 @@ const ServiceProcessMobile = ({ data }) => {
                   height: 100,
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
-                  width: '80px',
-                  height: '80px',
+                  width: '150px',
+                  height: '150px',
                 },
                 '@media (min-width: 280px) and (max-width: 359px)': {
                   width: '80px',
