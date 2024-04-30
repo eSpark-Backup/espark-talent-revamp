@@ -7,7 +7,9 @@ import { usePathname } from 'next/navigation';
 const ServiceHosts = ({ data }) => {
   const pathname = usePathname();
   console.log(pathname, 'pathname');
-  const isTetsPath = pathname === '/hire-performance-marketers' || pathname === '/hire-react-native-developers';
+  const isTetsPath =
+    pathname === '/hire-performance-marketers' ||
+    pathname === '/hire-react-native-developers';
   return (
     <>
       <Box sx={{ my: 2, mt: { xs: '230px' } }}>
@@ -72,7 +74,7 @@ const ServiceHosts = ({ data }) => {
                     lg: '65px',
                   },
                   color: '#001C63',
-                  maxWidth: isTetsPath? null:{ md: '1000px', lg: '1000px' },
+                  maxWidth: isTetsPath ? null : { md: '1000px', lg: '1000px' },
                   letterSpacing: '0em',
                   textAlign: 'center',
                   WebkitBoxOrient: 'vertical',
