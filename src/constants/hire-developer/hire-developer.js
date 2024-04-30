@@ -24,7 +24,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/hire-developer/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Front-End Developers`,
       descrcipton: `Our developers, masters in the art of front-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest front-end engineers to ensure the most suitable match for your project.`,
-      btnText: `Hire a Developer`,
+      btnText: `Hire A Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
     },
     customizedSolution: {
@@ -172,7 +172,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/hire-developer/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Back-End Developers`,
       descrcipton: `Our developers, masters in the art of back-end development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest back-end engineers to ensure the most suitable match for your project.`,
-      btnText: `Hire a Developer`,
+      btnText: `Hire A Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
     },
     customizedSolution: {
@@ -605,7 +605,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified UI/UX Designers`,
       descrcipton: `Our designers, masters in the art of UI/UX development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest UI/UX designers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Designer`,
+      btnText: `Hire a Designer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -970,7 +970,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Full Stack Developers`,
       descrcipton: `Our developers, masters in the art of Full Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Full Stack programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -1017,7 +1017,7 @@ export const HIRE_DEVELOPERS = [
       description:
         'Hire skilled MEAN stack developers from eSpark Talent as they ensure the delivery of feature-rich software products. Using MongoDB, Express.js, AngularJS, and Node.js, Our professionals hold expertise in creating web and mobile applications. Hire a MEAN stack developer from eSpark Talent now to optimize your journey of software development.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -1044,7 +1044,7 @@ export const HIRE_DEVELOPERS = [
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">MEAN Stack Developers'</span> Expertise`,
       paragraph: `MEAN stack developers are experts in creating a wide variety of software solutions using this technology.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -1324,7 +1324,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified MEAN Stack Developers`,
       descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -1679,7 +1679,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified MERN Stack Developers`,
       descrcipton: `Our developers, masters in the art of MERN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MERN Stack programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -2029,7 +2029,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified DevOps Engineer`,
       descrcipton: `Our developers, masters in the art of DevOps engineering, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest DevOps programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -2379,7 +2379,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Fintech Developers`,
       descrcipton: `Our developers, masters in the art of Fintech development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Fintech programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -2729,7 +2729,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified QA Engineer`,
       descrcipton: `Our developers, masters in the art of QA Engineer, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest QA Engineers to ensure the most suitable match for your project.`,
-      btnText: `Hire A QA`,
+      btnText: `Hire a QA`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -3061,7 +3061,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Angular JS Developers`,
       descrcipton: `Our developers, masters in the art of AngularJS development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest AngularJS programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -3391,7 +3391,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified React Developers`,
       descrcipton: `Our developers, masters in the art of React JS development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest React JS programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -3725,7 +3725,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified JavaScript Developers`,
       descrcipton: `Our developers, masters in the art of Javascript development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Javascript programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -4057,7 +4057,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Next.js Developers`,
       descrcipton: `Our developers, masters in the art of Next.js development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Next.Js programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -4384,7 +4384,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Android Developers`,
       descrcipton: `Our developers, masters in the art of Android development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Android programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -4713,7 +4713,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Flutter Developers`,
       descrcipton: `Our developers, masters in the art of Flutter development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Flutter programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -4756,7 +4756,7 @@ goals and requirements.
       description:
         'Hire the best React Native developers from eSpark Talent to build cross-platform projects. We aim to provide you with top-notch developers to develop a fine software application for your startups or enterprises. Hire dedicated and skilled from eSpark Talent to bring advancements to the development process.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -4783,7 +4783,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers</span> <br/>Expertise`,
       paragraph: `React Native developers at eSpark Talent are experts at using this technology to build a vast variety of software solutions.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -5042,7 +5042,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;"> Top-Notch 1%</span> Of Globally Certified React Native Developers`,
       descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -5084,7 +5084,7 @@ goals and requirements.
       description:
         'Hire the best ASP.net developers from eSpark Talent to build robust web applications. Our developers are skilled in understanding your requirements to tailor a fine software product matching your needs. To ensure scalability and optimum performance of the system, hire an ASP.net developer from eSpark.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -5111,7 +5111,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers</span> <br/>Expertise`,
       paragraph: `ASP.net developers at eSpark Talent are skilled at using this technology to develop scalable and reliable software solutions.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -5366,7 +5366,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified ASP.Net Developers`,
       descrcipton: `Our developers, masters in the art of ASP.Net development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest ASP.Net programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -5398,7 +5398,7 @@ goals and requirements.
       description:
         'Hire top-notch PHP developers from eSpark Talent who possess detailed knowledge about creating scalable and dynamic web solutions. We aim to provide professionals with experience in working with varying project sizes at cost-effective rates.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -5425,7 +5425,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">PHP Developers'</span> Expertise`,
       paragraph: `PHP developers at eSpark Talent are proficient at using this technology to develop a vast variety of projects.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -5676,7 +5676,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP Developers`,
       descrcipton: `Our developers, masters in the art of PHP development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PHP programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -5723,7 +5723,7 @@ goals and requirements.
       description:
         'Hire a Python developer from eSpark Talent to bring a vast level of versatility in various domains of development like data science and web development. Due to the growing appeal of Python for software projects, eSpark Talent would be a great asset in providing you with the best developers for your software project.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -5750,7 +5750,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Python Developers'</span> Expertise`,
       paragraph: `Python developers at eSpark Talent are experts at using this technology for a wide variety of software applications.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -6000,7 +6000,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Python Developers`,
       descrcipton: `Our developers, masters in the art of Python development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Python programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -6037,7 +6037,7 @@ goals and requirements.
       description:
         'Hire the best Node.js developer from eSpark Talent to help you develop scalable and reliable software products. Our developers are well-trained to use this technology to build real-time applications that would allow your software product to stand out among the best software projects. To bring revolution to the development process, hire a Node.js developer from eSpark Talent.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -6064,7 +6064,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Node.js Developers'</span> Expertise`,
       paragraph: `Node.js developers are skilled in developing a vast variety of tech-based solutions that are advanced and dynamic.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -6314,7 +6314,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Node.js Developers`,
       descrcipton: `Our developers, masters in the art of Node.js development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Node.js programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -6361,7 +6361,7 @@ goals and requirements.
       description:
         'Hire a Firmware developer from eSpark Talent to ensure the security, reliability, and performance of the embedded systems. If you want to make sure to have an optimal embedded system for your IoT, healthcare, or automotive industry, hire a developer from eSpark Talent.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -6388,7 +6388,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Firmware Developers'</span> Expertise`,
       paragraph: `Firmware developers at eSpark are experts at using this technology to build a vast variety of projects.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -6648,7 +6648,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Firmware Developers`,
       descrcipton: `Our developers, masters in the art of Firmware development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Firmware programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -6695,7 +6695,7 @@ goals and requirements.
       description:
         'Hiring a PCB designer from eSpark Talent could be an invaluable asset in building circuit layouts. Our professional designers would ensure the scalability, reliability, and quality of designs. PCB designers at eSpark Talent are well-versed in several technologies to ensure a fine product.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -6722,7 +6722,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">PCB Designers'</span> Expertise`,
       paragraph: `PCB designers at eSpark Talent are skilled at using technology to create fine products.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -6972,7 +6972,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified PCB Designer`,
       descrcipton: `Our developers, masters in the art of PCB Designing, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PCB designers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -7014,7 +7014,7 @@ goals and requirements.
       description:
         'Hire embedded developers from eSpark Talent who are skilled at product development, testing, and maintenance. They would make sure to fulfill all your project requirements by turning them into a fine product. To get a reliable, scalable, and secure product, hire the best embedded developers from eSpark.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -7041,7 +7041,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Embedded Developers'</span> Expertise`,
       paragraph: `eSpark Talent guarantees to provide you with top-notch embedded developers to develop various technical solutions.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -7299,7 +7299,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;">Top-Notch 1%</span> Of Globally Certified Embedded Developers`,
       descrcipton: `Our developers, masters in the art of Embedded development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Embedded programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -7346,7 +7346,7 @@ goals and requirements.
       description:
         'eSpark Talent holds expertise at providing the best Shopify developers. Our developers aim to create customized websites for your online stores by integrating various advanced functionalities like product filters, shopping cart and payment gateways. To make your online platform compete against the best, hire Shopify developers from eSpark Talent.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -7373,7 +7373,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers</span> <br/>Expertise`,
       paragraph: `Developers at eSpark Talent are experts at using Shopify for various tasks.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -7632,7 +7632,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified ASP.Net Developers`,
       descrcipton: `Our developers, masters in the art of Shopify development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Shopify programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -7679,7 +7679,7 @@ goals and requirements.
       description:
         'Hire WordPress developer from eSpark Talent as they possess in-depth knowledge and expertise of WordPress, SEO optimization and e-commerce development. Combining all these strengths, they would ensure to provide you with the best software solution.',
       button: {
-        label: 'Hire A Developer',
+        label: 'Hire a Developer',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -7706,7 +7706,7 @@ goals and requirements.
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers</span> <br/>Expertise`,
       paragraph: `WordPress developer at eSpark Talent are experts at using this technology to develop a fine software product.`,
       btnLink: `/book-a-demo`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
       arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
@@ -7959,7 +7959,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Wordpress Developers`,
       descrcipton: `Our developers, masters in the art of WordPress development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the WordPress programmers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -8289,7 +8289,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Performance Marketing Specialists`,
       descrcipton: `Our specialists, masters in the art of Performance Marketing, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Performance Marketers to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -8954,7 +8954,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PPC Specialist`,
       descrcipton: `Our specialists, masters in the art of PPC, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PPC experts to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -9284,7 +9284,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Social Media Specialists`,
       descrcipton: `Our specialists, masters in the art of Social Media, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Social Media experts to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {

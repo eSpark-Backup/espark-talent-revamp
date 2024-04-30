@@ -10,3 +10,7 @@ export function runMiddleware(req, res, fn) {
     });
   });
 }
+
+export function capitalizeFirstLetter(text) {
+  return text.replace(/\b\w/g, (match) => match.toUpperCase());
+}

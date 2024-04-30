@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceHosts = ({ data }) => {
   return (
@@ -123,7 +124,7 @@ const ServiceHosts = ({ data }) => {
                     borderRadius: '6.42px',
                   }}
                 >
-                  {data?.btnText || ''}
+                  {capitalizeFirstLetter(data?.btnText) || ''}
                 </Typography>
               </Link>
             </Box>

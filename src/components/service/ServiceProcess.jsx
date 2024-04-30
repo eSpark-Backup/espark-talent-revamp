@@ -2,6 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceProcess = ({ data, windowWidth }) => {
   const full_stack = 'full-stack';
@@ -235,7 +236,7 @@ const ProcessCardTop = ({ data }) => {
           },
         }}
       >
-        {data?.title}
+        {capitalizeFirstLetter(data?.title)}
       </Typography>
       <Typography
         sx={{
@@ -308,7 +309,7 @@ const ProcessCardBottom = ({ data }) => {
           },
         }}
       >
-        {data?.title}
+        {capitalizeFirstLetter(data?.title)}
       </Typography>
       <Typography
         sx={{
