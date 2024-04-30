@@ -133,6 +133,46 @@ export const GLOBAL_SEO = [
 
 export const BLOGS_SEO = [
   {
+    path: 'why-do-we-need-payroll-outsourcing',
+    title: 'Time to Learn Why Do We Need Payroll Outsourcing?',
+    description: `Find out why do we need payroll outsourcing. Learn about all the benefits of payroll outsourcing and other insights here.`,
+    url: 'https://www.esparktalent.com/blogs/why-do-we-need-payroll-outsourcing',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2F365c1148b68ca6fde50b04d3932d16fc12cb83bc-860x570.jpg&w=1080&q=85',
+  },
+  {
+    path: 'top-10-outsourcing-trends-2024',
+    title: 'Top 10 Outsourcing Trends In 2024 - eSpark Talent Blogs ',
+    description: `Hey dear technical heads, the new year is here, so as our top outsourcing trends in 2024. Let's find out what’s new this time.`,
+    url: 'https://www.esparktalent.com/blogs/top-10-outsourcing-trends-2024',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2Fcd8afa1d74f0c47568ed5a4544772fff0a0110f1-860x570.jpg&w=1080&q=85',
+  },
+  {
+    path: 'outsourcing-strategies-for-building-successful-remote-teams',
+    title: 'Maximizing Outsourcing for Successful Remote Teams',
+    description: `Outsourcing is transforming the IoT-related service offering approaches. Learn about strategies for building successful remote teams through outsourcing here.`,
+    url: 'https://www.esparktalent.com/blogs/outsourcing-strategies-for-building-successful-remote-teams',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2Fd670fe7476e16250dee64cc43e78ea0962ab69ac-860x570.jpg&w=1080&q=85',
+  },
+  {
+    path: 'employee-outsourcing',
+    title: 'Everything You Need to Know About Employee Outsourcing',
+    description: `Check out our 2024 guide on employee outsourcing! Dive into this informative blog to learn everything you need to know and make informed decisions.`,
+    url: 'https://www.esparktalent.com/blogs/employee-outsourcing',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2Fa2627d3bd0495d78f2449d190922712d0ad3db1e-860x570.jpg&w=1080&q=85',
+  },
+  {
+    path: 'outsourcing-agreements',
+    title: 'Everything to know about Outsourcing Agreements ',
+    description: `Explore legal aspects of successful outsourcing agreements, covering performance guarantees, intellectual property rights, compliance, and more.`,
+    url: 'https://www.esparktalent.com/blogs/outsourcing-agreements',
+    image:
+      'https://www.esparktalent.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F93d1bm1e%2Fproduction%2F663827086549db38d83d418bab62e8ab815e272e-860x570.jpg&w=1080&q=85',
+  },
+  {
     path: 'outsourcing-trends-for-2024',
     title: 'Exploring Outsourcing Trends For 2024 & Beyond ',
     description: `Optimize your business strategy with eSpark Talent's insights on outsourcing trends for 2024. Stay informed, stay successful.Explore now!`,
@@ -495,255 +535,233 @@ export const HIRE_SEO = [
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
   },
   {
-    path: 'hire-a-ui-ux-designers',
-    title: 'Hire Top UI UX Designers Quickly | eSpark Talent',
+    path: 'hire-ui-ux-designers',
+    url: 'https://esparktalent.com/hire-ui-ux-designers',
+    title: 'Best UI/UX designer for hire within 48 hours',
+    image: '/_next/image?url=%2Fimages%2Fservice%2Fuiux%2Fmain.png&w=640&q=85',
     description:
-      'Quickly hire top UI/UX designers at eSpark Talent. Elevate your digital presence effortlessly. Seamless hiring for exceptional results. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-ui-ux-designers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Hire talented UI/UX designers from eSpark Talent. Our experts excel in graphic, interactive, and industrial design for outstanding digital products.',
   },
   {
-    path: 'hire-a-full-stack-developers',
+    path: 'hire-full-stack-developers',
+    url: 'https://esparktalent.com/hire-full-stack-developers',
     title: 'Hire Full Stack Developers in 2 Days | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire skilled Full Stack Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-full-stack-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Ffull-stack%2Ffullstack-main.png&w=640&q=85',
+    description:
+      'Want to hire a Full Stack Developer? Get matched with top developers who are perfect for your specific product and business requirements. Hire Now!',
   },
   {
-    path: 'hire-a-mean-stack-developers',
-    title: 'Hire Professional MEAN Stack Developers | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Dedicated MEAN Stack Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-mean-stack-developers',
+    path: 'hire-mean-stack-developers',
+    url: 'https://esparktalent.com/hire-mean-stack-developers',
+    title: 'Hire MEAN stack specialists from eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fservices%2Fservice-hero-image.png&w=640&q=85',
+    description:
+      'Want to hire MEAN stack developers? eSpark Talent provides skilled experts for crafting web apps using MongoDB, Express, Angular, and Node.js. Hire Now!',
   },
   {
-    path: 'hire-a-mern-stack-developers',
+    path: 'hire-mern-stack-developers',
+    url: 'https://esparktalent.com/hire-mern-stack-developers',
     title: 'Hire MERN Stack Developers Within 24 Hours | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Professioanl MERN Stack Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-mern-stack-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fmern%2Fmern-stack.png&w=640&q=85',
+    description:
+      'Want to hire MERN stack developers? eSpark Talent provides skilled experts for crafting web apps using MongoDB, Express, React, and Node.js. Hire Now!',
   },
   {
-    path: 'hire-a-devops-engineers',
+    path: 'hire-devops-engineers',
+    url: 'https://esparktalent.com/hire-devops-engineers',
     title: 'Hire Expert DevOps Engineers | Affordable & Ease',
-    description:
-      'Quickly Hire a Top DevOps Engineer at eSpark Talent. Grow your tech operations effortlessly. Smoothly hiring for outstanding results. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-devops-engineers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2FdevOps%2FdevOps.png&w=640&q=85',
+    description:
+      'Want to hire DevOps engineers? Our skilled experts streamline your development and deployment, automating business processes for efficiency. Hire Now!',
   },
   {
-    path: 'hire-a-fintech-developers',
+    path: 'hire-fintech-developers',
+    url: 'https://esparktalent.com/hire-fintech-developers',
     title: 'Top Fintech Developers for Hire | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Fintech Developers from eSpark Talent who can build scalable and secure Fintech Software solutions.',
-    url: 'https://esparktalent.com/hire-a-fintech-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Ffintech%2Ffintech.png&w=640&q=85',
+    description:
+      'Are you looking for a Fintech Developer? Hire from eSpark Talent to design digital wallets, banking portals, payment gateways, Robo advisors, and more.',
   },
   {
-    path: 'hire-a-software-developers',
-    title: 'Hire Professional Software Developers for Your Team',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-software-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
-  },
-  {
-    path: 'hire-a-qa-engineers',
+    path: 'hire-qa-engineers',
+    url: 'https://esparktalent.com/hire-qa-engineers',
     title: 'Hire Dedicated QA Engineers & Software Testers | eSpark Talent',
+    image: '/_next/image?url=%2Fimages%2Fservice%2Fqa%2Fqa-main.png&w=640&q=85',
     description:
-      'Start with No Management Fee for First Employee. Hire QA and Software Testing Engineers to Conduct all Quality Assurance Measures, be it Automated or Manual.',
-    url: 'https://esparktalent.com/hire-a-qa-engineers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Hire dedicated QA engineers and software testers at eSpark Talent. Ensure the quality and performance of your software with our skilled professionals.',
   },
   {
-    path: 'hire-a-angular-developers',
+    path: 'hire-angular-developers',
+    url: 'https://esparktalent.com/hire-angular-developers',
     title: 'Hire Experienced Angular JS Developers Quickly | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Skillful Angular Js Developers in just 4 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-angular-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fangular%2Fangular.png&w=640&q=85',
+    description:
+      'Want to hire Angular JS developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Reach out to us now!',
   },
   {
-    path: 'hire-a-reactjs-developers',
+    path: 'hire-reactjs-developers',
+    url: 'https://esparktalent.com/hire-reactjs-developers',
     title: 'Hire Dedicated ReactJS Developers | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Dedicated React Js Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-reactjs-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Freact%2Freact-main.png&w=640&q=85',
+    description:
+      'Hire ReactJS developers with flexible models. Our React programmers craft top-tier web and mobile apps to meet your business needs.',
   },
   {
-    path: 'hire-a-javascript-developers',
+    path: 'hire-javascript-developers',
+    url: 'https://esparktalent.com/hire-javascript-developers',
     title: 'Top-Rated JavaScript Developers for Hire | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced JavaScript Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-javascript-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fjavascript%2Fjavascript-main.png&w=640&q=85',
+    description:
+      'Want to hire JavaScript developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Hire Now!',
   },
   {
-    path: 'hire-a-nextjs-developers',
-    title: 'Hire Next.Js Developers | Dedicated Next.Js Developers',
-    description:
-      'Start with No Management Fee for First Employee. Hire dedicated NextJs Developer & Programmers? to build high-performance leading-edge apps. Book Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-nextjs-developers',
+    path: 'hire-nextjs-developers',
+    url: 'https://esparktalent.com/hire-nextjs-developers',
+    title: 'Hire Dedicated Next.js Developers for your Project',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fnextjs%2Fnextjs-main.png&w=640&q=85',
+    description:
+      'Are you looking for Next.js developers? Hire skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Contact Us!',
   },
   {
-    path: 'hire-a-android-developers',
+    path: 'hire-android-developers',
+    url: 'https://esparktalent.com/hire-android-developers',
     title: 'Hire Top Android Developers Within 72 Hours | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-android-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fandroid%2Fandroid-main.png&w=640&q=85',
+    description:
+      'Looking for Android developers quickly? Hire top talent from eSpark Talent and onboard experts within 72 hours. Get started with us today!',
   },
   {
-    path: 'hire-a-flutter-developers',
+    path: 'hire-flutter-developers',
+    url: 'https://esparktalent.com/hire-flutter-developers',
     title: 'Best Flutter Developer to Hire in Two Days | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-flutter-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fflutter%2Fflutter.png&w=640&q=85',
+    description:
+      'Want to hire a skilled flutter developer? Hire flutter developers from eSpark talent on an hourly or full-time basis to build high-quality apps.',
   },
   {
-    path: 'hire-a-react-native-developers',
+    path: 'hire-react-native-developers',
+    url: 'https://esparktalent.com/hire-react-native-developers',
     title: 'Hire Top React Native Developers for your Workspace',
+    image: '/images/service/react-native/react-native.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-react-native-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Want to hire React Native developers? Choose eSpark Talent to find skilled experts ready to upgrade your mobile app projects. Connect with us today!',
   },
   {
-    path: 'hire-a-asp-dot-net-developers',
+    path: 'hire-asp-dot-net-developers',
+    url: 'https://esparktalent.com/hire-asp-dot-net-developers',
     title: 'Hire Dedicated ASP.Net Developers & Programmers',
+    image: '/images/service/asp.net/asp.net.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-asp-dot-net-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Hire dedicated ASP.Net developers and programmers at eSpark Talent. Find skilled experts to boost your web projects. Connect with us today!',
   },
   {
-    path: 'hire-a-php-developers',
-    title: 'Hire Dedicated PHP Developer | PHP Coders',
+    path: 'hire-php-developers',
+    url: 'https://esparktalent.com/hire-php-developers',
+    title: 'Hire the best PHP developer for your project within 48 hours',
+    image: '/images/service/php/php.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-php-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Want to hire PHP developers? eSpark Talent offers rapid hiring to get skilled professionals on board for your project quickly. Reach out to us now!',
   },
   {
-    path: 'hire-a-python-developers',
+    path: 'hire-python-developers',
+    url: 'https://esparktalent.com/hire-python-developers',
     title: 'Hire the Best Python Developers & Programmers in (48 Hours)',
+    image: '/images/service/python/python.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-python-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Want to hire Python developers quickly? At eSpark Talent, we connect you with top experts ready to contribute to your projects. Get started with us!',
   },
   {
-    path: 'hire-a-nodejs-developers',
+    path: 'hire-nodejs-developers',
+    url: 'https://esparktalent.com/hire-nodejs-developers',
     title: 'Hire Skilled Node.js Developers | Expert Developers Within Hours',
+    image: '/images/service/node-js/node-js.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-nodejs-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Looking to hire Node.js developers? Find skilled experts quickly with eSpark Talent. Get expert developers on board within hours. Contact us today!',
   },
   {
-    path: 'hire-a-firmware-developers',
+    path: 'hire-firmware-developers',
+    url: 'https://esparktalent.com/hire-firmware-developers',
     title: 'Hire Top-notch Firmware Developer | eSpark Talent',
+    image: '/images/service/firmware/firmware.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-firmware-developers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Want to hire Firmware Developer? Join eSpark Talent and find the perfect fit for your projects quickly. Contact us and get started today!',
   },
   {
-    path: 'hire-a-pcb-designers',
+    path: 'hire-pcb-designers',
+    url: 'https://esparktalent.com/hire-pcb-designers',
     title: 'Hire Experienced PCB Designer | eSpark Talent',
+    image: '/images/service/pcb/pcb.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-pcb-designers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Looking to hire an experienced PCB Designer? Choose eSpark Talent for skilled experts ready to elevate your projects. Connect with us now!',
   },
   {
-    path: 'hire-a-embedded-system-engineers',
+    path: 'hire-embedded-system-engineers',
+    url: 'https://esparktalent.com/hire-embedded-system-engineers',
     title: 'Hire Embedded Software Engineers Quickly | eSpark Talent',
+    image: '/images/service/embedded/embedded.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-embedded-system-engineers',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Fast-track your projects with top Embedded Software Engineers from eSpark Talent. Hire skilled professionals to upgrade your tech solutions. Contact us now!',
   },
   {
-    path: 'hire-a-social-media-experts',
+    path: 'hire-social-media-experts',
+    url: 'https://esparktalent.com/hire-social-media-experts',
     title: 'Hire Top Social Media Expert | eSpark Talent',
+    image: '/images/service/social/social.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-social-media-experts',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      "Looking for a social media expert? Our specialists create engaging content and strategies to boost your brand's online presence. Connect with us!",
   },
   {
-    path: 'hire-a-ppc-specialists',
+    path: 'hire-ppc-specialists',
+    url: 'https://esparktalent.com/hire-ppc-specialists',
     title: 'Hire Certified PPC Specialist Quickly | eSpark Talent',
+    image: '/images/service/ppc/ppc.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-ppc-specialists',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Looking to hire dedicated PPC experts? Boost website traffic and revenue with our certified Google Ads specialists and paid marketing managers. Hire now!',
   },
   {
-    path: 'hire-a-seo-experts',
+    path: 'hire-seo-experts',
+    url: 'https://esparktalent.com/hire-seo-experts',
     title: 'Hire Skilled SEO Expert in 2 Days | eSpark Talent',
+    image: '/images/service/seo/seo.svg',
     description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-seo-experts',
-    image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'Explore our top-rated SEO experts for hire. Boost your online presence with tailored strategies and proven results to drive organic traffic and growth.',
   },
   {
-    path: 'hire-a-performence-marketers',
-    title: 'Hire Top Performence Marketer | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-performence-marketers',
+    path: 'hire-performance-marketers',
+    url: 'https://esparktalent.com/hire-performance-marketers',
+    title: 'Hire Top Performance Marketer | eSpark Talent',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      'https://esparktalent.com/_next/image?url=%2Fimages%2Fservice%2Fperformance%2Fperformance.png&w=640&q=85',
+    description:
+      'Want to hire a performance marketer? Our specialists craft effective strategies to upgrade your marketing success. Connect with us to improve your brand!',
   },
   {
-    path: 'hire-a-wordpress-developers',
+    path: 'hire-wordpress-developers',
+    url: 'https://esparktalent.com/hire-wordpress-developers',
     title: 'Hire Experienced WordPress Developers | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Experienced Software Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-wordpress-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fwordpress%2Fwordpress.png&w=640&q=85',
+    description:
+      'Hire skilled WordPress developers for custom, mobile-friendly sites that enhance your online presence. Get started with our specialized development services.',
   },
   {
-    path: 'hire-a-shopify-developers',
+    path: 'hire-shopify-developers',
+    url: 'https://esparktalent.com/hire-shopify-developers',
     title: 'Hire the Best Shopify Developer Quickly | eSpark Talent',
-    description:
-      'Start with No Management Fee for First Employee. Hire Shopify Developers in just 2 days with eSpark Talent. Book a Meeting Now!',
-    url: 'https://esparktalent.com/hire-a-shopify-developers',
     image:
-      'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',
+      '/_next/image?url=%2Fimages%2Fservice%2Fshopify%2Fshopify.png&w=640&q=85',
+    description:
+      'Want to hire a Shopify developer? Our skilled experts excel in Shopify design and development. Contact us for a quote and enhance your online store.',
   },
 ];
