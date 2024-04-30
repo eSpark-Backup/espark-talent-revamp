@@ -34,7 +34,6 @@ const ServiceWhyHire = ({ data }) => {
                 variant="h4"
                 textAlign="center"
                 sx={{
-                  textTransform: 'capitalize',
                   fontSize: {
                     xs: '20px',
                     sm: '25px',
