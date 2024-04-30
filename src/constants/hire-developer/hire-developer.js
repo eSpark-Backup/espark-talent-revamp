@@ -676,7 +676,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Full Stack Developers</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Full Stack Developers'</span> Expertise`,
       paragraph: `eSpark Talent aims to provide industry professional full-stack developers to build
       your system.`,
       btnLink: `/book-a-demo`,
@@ -1324,7 +1324,7 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified MEAN Stack Developers`,
       descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
-      btnText: `Book A Demo`,
+      btnText: `Hire A Developer`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
@@ -5674,7 +5674,7 @@ goals and requirements.
       image: `/images/hire-developer/business.svg`,
       leftImage: `/images/hire-developer/round.svg`,
       bgImage: `/images/service/pipe.svg`,
-      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PHP Developers`,
       descrcipton: `Our developers, masters in the art of PHP development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PHP programmers to ensure the most suitable match for your project.`,
       btnText: `Hire A Developer`,
       btnLink: `/book-a-demo`,
@@ -8332,7 +8332,7 @@ goals and requirements.
     path: `hire-seo-experts`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> SEO <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> SEO <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Expert </span>',
       description:
         'Hire SEO expert from eSpark Talent to enhance the online visibility of your website on the search engine. They possess expertise to conduct thorough research about the algorithms and techniques to make your website rank higher among all the other competing websites.',
       button: {
@@ -8619,7 +8619,7 @@ goals and requirements.
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified SEO Experts`,
       descrcipton: `Our developers, masters in the art of SEO, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the SEO Experts to ensure the most suitable match for your project.`,
-      btnText: `Hire A Developer`,
+      btnText: `Hire a SEO Expert`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
