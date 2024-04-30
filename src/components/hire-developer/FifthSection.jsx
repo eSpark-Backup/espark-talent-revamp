@@ -22,7 +22,10 @@ const FifthSection = ({ data }) => {
           backgroundColor:
             pathname.includes('developers') ||
             pathname.includes('designers') ||
-            pathname.includes('engineers')
+            pathname.includes('engineers') ||
+            pathname.includes('marketers') ||
+            pathname.includes('specialists') ||
+            pathname.includes('experts')
               ? isSmallScreen
                 ? '#F7F8FF'
                 : '#F7F8FF'
@@ -38,7 +41,10 @@ const FifthSection = ({ data }) => {
               py:
                 pathname.includes('developers') ||
                 pathname.includes('designers') ||
-                pathname.includes('engineers')
+                pathname.includes('engineers') ||
+                pathname.includes('marketers') ||
+                pathname.includes('specialists') ||
+                pathname.includes('experts')
                   ? 0
                   : 2,
             }}
@@ -60,7 +66,10 @@ const FifthSection = ({ data }) => {
                 px:
                   pathname.includes('developers') ||
                   pathname.includes('designers') ||
-                  pathname.includes('engineers')
+                  pathname.includes('engineers') ||
+                  pathname.includes('marketers') ||
+                  pathname.includes('specialists') ||
+                  pathname.includes('experts')
                     ? { xs: '0%', sm: '5%', md: '10%', lg: '15%' }
                     : { xs: '9%', sm: '9%', md: '10%', lg: '15%' },
               }}
@@ -76,7 +85,10 @@ const FifthSection = ({ data }) => {
                   xs:
                     pathname.includes('developers') ||
                     pathname.includes('designers') ||
-                    pathname.includes('engineers')
+                    pathname.includes('engineers') ||
+                    pathname.includes('marketers') ||
+                    pathname.includes('specialists') ||
+                    pathname.includes('experts')
                       ? '11px'
                       : '13px',
                   sm: '15px',
@@ -90,21 +102,37 @@ const FifthSection = ({ data }) => {
                 pt:
                   pathname.includes('developers') ||
                   pathname.includes('designers') ||
-                  pathname.includes('engineers')
+                  pathname.includes('engineers') ||
+                  pathname.includes('marketers') ||
+                  pathname.includes('specialists') ||
+                  pathname.includes('experts')
                     ? 1
                     : 0,
                 pb:
                   pathname.includes('developers') ||
                   pathname.includes('designers') ||
-                  pathname.includes('engineers')
-                    ? 2
+                  pathname.includes('engineers') ||
+                  pathname.includes('marketers') ||
+                  pathname.includes('specialists') ||
+                  pathname.includes('experts')
+                    ? 4
                     : 0,
                 px:
                   pathname.includes('developers') ||
                   pathname.includes('designers') ||
-                  pathname.includes('engineers')
-                    ? { xs: '0%', sm: '5%', md: '5%', lg: '12%' }
+                  pathname.includes('engineers') ||
+                  pathname.includes('marketers') ||
+                  pathname.includes('experts')
+                    ? { xs: '0%', sm: '5%', md: '5%', lg: '12%', xl: '14%' }
                     : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+
+                '@media (min-width:760px) and (max-width: 1919px)': {
+                  px:
+                    pathname === '/hire-firmware-developers' ||
+                    pathname === '/hire-ppc-specialists'
+                      ? '20%'
+                      : '',
+                },
               }}
             >
               {data?.descrcipton}
@@ -136,8 +164,24 @@ const FifthSection = ({ data }) => {
                     lineHeight: '40px',
                     color: '#029894',
                     fontSize: {
-                      xs: '22px',
-                      sm: '22px',
+                      xs:
+                        pathname.includes('developers') ||
+                        pathname.includes('designers') ||
+                        pathname.includes('engineers') ||
+                        pathname.includes('marketers') ||
+                        pathname.includes('specialists') ||
+                        pathname.includes('experts')
+                          ? '20px'
+                          : '22px',
+                      sm:
+                        pathname.includes('developers') ||
+                        pathname.includes('designers') ||
+                        pathname.includes('engineers') ||
+                        pathname.includes('marketers') ||
+                        pathname.includes('specialists') ||
+                        pathname.includes('experts')
+                          ? '20px'
+                          : '22px',
                       md: '22px',
                       lg: '22px',
                       xl: '22px',
@@ -224,6 +268,13 @@ const FifthSection = ({ data }) => {
                                     : '18px',
                                 lineHeight: '15px',
                               },
+                            '@media (min-width: 360px) and (max-width: 399px)':
+                              {
+                                fontSize: pathname.includes('embedded')
+                                  ? '12.8px !important'
+                                  : '18px',
+                                lineHeight: '15px',
+                              },
                           }}
                           dangerouslySetInnerHTML={{ __html: chip }}
                         ></Typography>
@@ -234,7 +285,10 @@ const FifthSection = ({ data }) => {
                         maxWidth:
                           pathname.includes('developers') ||
                           pathname.includes('designers') ||
-                          pathname.includes('engineers')
+                          pathname.includes('engineers') ||
+                          pathname.includes('marketers') ||
+                          pathname.includes('specialists') ||
+                          pathname.includes('experts')
                             ? { xs: '964px', md: '964px !important' }
                             : { xs: '264px' },
                         backgroundColor: '#E9ECF6',

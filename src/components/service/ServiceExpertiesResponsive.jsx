@@ -83,28 +83,23 @@ const ServiceExpertiesResponsive = ({
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    // width: '100%',
                     width: { xs: '253.24px', sm: '400px' },
-                    minHeight: '170px',
+                    minHeight: '135px',
                     height: 'auto',
                     borderRadius: '13.57px',
                     border: '1px solid lightGray',
-                    // border: '2px solid green',
                     boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 
                     '@media (min-width: 280px) and (max-width: 293px)': {
                       height: '144px',
                     },
-                    //  '@media (max-width: 370px)': {
-                    //     width:'253.24px'
-                    // },
                   }}
                 >
                   <Box
                     sx={{
                       display: 'flex',
                       height: { xs: '56px', md: '70.972px' },
-                      borderRadius: '13.57px',
+                      borderRadius: '13.57px 13.57px 0px 0px',
                       background: '#F7F8FB',
                       borderTop: '1px solid lightGray',
                       p: '20px',
@@ -125,21 +120,12 @@ const ServiceExpertiesResponsive = ({
                       }}
                     />
                     <Typography
-                      //   component="h4"
-                      //   color="secondary"
                       sx={{
                         fontSize: { xs: '12.6px', sm: '14px', md: '20px ' },
                         fontWeight: 600,
                         lineHeight: { xs: '15.11px' },
                         color: '#001C63',
                         ml: 2,
-                        // '@media (min-width: 375px) and (max-width: 424px)': {
-                        //   fontSize: '18px !important',
-                        // },
-                        // '@media (min-width: 280px) and (max-width: 374px)': {
-                        //   ml: 1,
-                        //   fontSize: '15px !important',
-                        // },
                       }}
                     >
                       {item?.title}
@@ -150,17 +136,12 @@ const ServiceExpertiesResponsive = ({
                       p: '8px 15px',
                       borderRadius: '0 0 20px 20px',
                       backgroundColor: '#fff',
-                      height: '100%',
                     }}
                   >
                     <Typography
-                      //   component={'p'}
                       sx={{
                         fontSize: { xs: '10.08px', sm: '12px', md: '14px' },
                         lineHeight: { xs: '14.56px', sm: '20px' },
-                        // '@media (min-width: 280px) and (max-width: 374px)': {
-                        //   fontSize: '12px !important',
-                        // },
                         fontWeight: 400,
                         color: '#000',
                       }}

@@ -65,8 +65,10 @@ const ServiceHeroSection = ({ data }) => {
                 )}
                 {data?.description && (
                   <Typography
-                    color={data?.descColor}
-                    fontWeight={400}
+                    sx={{
+                      color: '#0E1155',
+                    }}
+                    fontWeight={500}
                     lineHeight={'30px'}
                     fontSize={{
                       xs: '13px',
@@ -110,7 +112,7 @@ const ServiceHeroSection = ({ data }) => {
                           <Typography
                             sx={{
                               mt: { xs: 0, md: 1 },
-                              py: { xs: 1, sm: 1.5, md: 2.5 },
+                              py: { xs: 1, sm: 1.5, md: 1.8, lg: 2.5 },
                               px: 2.5,
                               borderRadius: '50px',
                               backgroundColor: '#029894',

@@ -687,7 +687,7 @@ export const HIRE_DEVELOPERS = [
       items: [
         {
           icon: `/images/service/full-stack/experts/frontend.svg`,
-          title: `Frontend Developmen`,
+          title: `Frontend Development`,
           paragraph: `Full Stack developers build user interfaces using HTML, CSS, and JavaScript, along with their frameworks like React, Vue.js, and Angular.`,
         },
         {
@@ -712,7 +712,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           icon: `/images/service/full-stack/experts/service.svg`,
-          title: `Deployment and Maintenance `,
+          title: `Deployment and Adaptation`,
           paragraph: `Full-stack developers deploy applications as well after development. Also, they are required to know about changing technological trends and practices.`,
         },
       ],
@@ -1416,7 +1416,7 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/mern/database.svg`,
           title: `Database Management`,
-          paragraph: `MERN stack developers use MongoDB to manage data storage and retrieval to enhance the performance of the system.`,
+          paragraph: `Our MERN stack developers use MongoDB for efficient data storage and retrieval to enhance the performance and scalability of the system.`,
         },
         {
           icon: `/images/service/mern/api.svg`,
@@ -1426,12 +1426,12 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/mern/testing.svg`,
           title: `Testing`,
-          paragraph: `MERN stack developers at eSpark handle testing as well as development. Carrying out various testing types like unit, integration, and system testing, they aim to provide the best quality software product.`,
+          paragraph: `MERN stack developers at eSpark handle testing and development, conducting unit, integration, and system testing to deliver quality software.`,
         },
         {
           icon: `/images/service/mern/development.svg`,
           title: `Deployment and Maintenance `,
-          paragraph: `After thorough testing, MERN stack developers are also responsible for the deployment, maintenance, and monitoring of the system. This helps to optimize the system's performance.`,
+          paragraph: `After thorough testing, MERN stack developers are responsible for deployment, maintenance, and monitoring to optimize the system's performance`,
         },
       ],
     },
@@ -1441,29 +1441,24 @@ export const HIRE_DEVELOPERS = [
       items: [
         {
           id: 1,
-          title: `Frontend Framework`,
+          title: `Programming Language`,
           gridLg: 4,
           gridmd: 4,
-          items: [`React.js`],
+          items: [`JavaScript (ES6+)`, `JavaScript (Node.js)`],
         },
         {
           id: 2,
-          title: `Backend Framework`,
+          title: `Frameworks & Libraries`,
           gridLg: 4,
           gridmd: 4,
-          items: [`Node.js`, `Express.js`],
+          items: [`React.js`, `Redux`, `Axios`],
         },
         {
           id: 3,
-          title: `Database and Development Tools`,
+          title: `Development Tools`,
           gridLg: 4,
           gridmd: 4,
-          items: [
-            `MongoDB`,
-            `MongoDB Compass`,
-            `npm (Node Package Manager)`,
-            `React Developer Tools`,
-          ],
+          items: [`Visual Studio Code`, `Postman (for API testing)`],
         },
       ],
     },
@@ -4132,8 +4127,8 @@ goals and requirements.
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
       items: [
         {
-          icon: `/images/service/android/experts/icon1.svg`,
-          title: `App development`,
+          icon: `/images/service/android/experts/app-maintenance.svg`,
+          title: `App Development`,
           paragraph: `Android developers at eSpark are skilled at building a vast variety of applications for different devices using languages like Java.`,
         },
         {
@@ -4143,22 +4138,22 @@ goals and requirements.
         },
         {
           icon: `/images/service/android/experts/uiux.svg`,
-          title: `UI/UX design`,
+          title: `UI/UX Design`,
           paragraph: `Developers at eSpark Talent create designs following the Android design guidelines to ensure a smooth user experience.          `,
         },
         {
           icon: `/images/service/android/experts/app.svg`,
-          title: `App maintenance`,
+          title: `App Maintenance`,
           paragraph: `Android developers at eSpark Talent maintain the applications for updates and bug fixing to optimize the performance.`,
         },
         {
           icon: `/images/service/android/experts/api.svg`,
-          title: `API integration `,
+          title: `API Integration `,
           paragraph: `They are also responsible for integrating third-party APIs to introduce features like payment gateways, ads, authentication, etc.`,
         },
         {
           icon: `/images/service/android/experts/app-deployment.svg`,
-          title: `App deployment`,
+          title: `App Deployment`,
           paragraph: `After development, they are also responsible for launching the built applications on the Google Play Store.`,
         },
       ],
@@ -4775,7 +4770,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers'</span> <br/>Expertise`,
       paragraph: `React Native developers at eSpark Talent are experts at using this technology to build a vast variety of software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -5103,7 +5098,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers'</span> Expertise`,
       paragraph: `ASP.net developers at eSpark Talent are skilled at using this technology to develop scalable and reliable software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -5123,7 +5118,7 @@ goals and requirements.
         },
         {
           icon: `/images/service/asp.net/experties/legacy-system.svg`,
-          title: `Legacy system`,
+          title: `Legacy System`,
           paragraph: `ASP.net developers are experts at migrating legacy systems to ASP.net by ensuring optimum performance and compatibility.`,
         },
         {
@@ -5133,7 +5128,7 @@ goals and requirements.
         },
         {
           icon: `/images/service/asp.net/experties/ui-ux.svg`,
-          title: `Custom software`,
+          title: `Custom Software`,
           paragraph: `Our professionals hold expertise in building customized software applications to cater to your requirements and objectives.`,
         },
         {
@@ -5149,7 +5144,7 @@ goals and requirements.
       items: [
         {
           id: 1,
-          title: `Programming Language`,
+          title: `Programming Languages`,
           gridLg: 4,
           gridmd: 4,
           items: [`C#`, `Visual Basic .NET (VB.NET)`],
@@ -5428,7 +5423,7 @@ goals and requirements.
         {
           icon: `/images/service/php/experties/web-development.svg`,
           title: `Web Development`,
-          paragraph: `PHPPHP developers at eSpark Talent are skilled at using different frameworks of PHP to develop dynamic web applications`,
+          paragraph: `PHP developers at eSpark Talent are skilled at using different frameworks of PHP to develop dynamic web applications`,
         },
         {
           icon: `/images/service/php/experties/e-commerce-web.svg`,
@@ -6119,7 +6114,7 @@ goals and requirements.
           title: `Additional Libraries & Frameworks`,
           gridLg: 4,
           gridmd: 4,
-          items: [`GitSocket.io`, `Sequelize`],
+          items: [`Socket.io`, `Sequelize`],
         },
       ],
     },
@@ -6414,7 +6409,7 @@ goals and requirements.
           paragraph: `Firmware developers are also responsible for performing detailed testing to ensure the quality and reliability of embedded systems.`,
         },
         {
-          icon: `/images/service/node-js/experties/performance.svg`,
+          icon: `/images/service/node-js/experties/maintainance.svg`,
           title: `Maintenance`,
           paragraph: `With technological advancements, developers at eSpark incorporate updates to keep the system reliable and compatible.`,
         },
@@ -7074,7 +7069,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;"> Embedded Developer </span> Technologies <br /> We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;"> Embedded Developer </span> Technologies We Use For Your Project`,
       descrcipton: `Embedded developers at eSpark Talent are skilled at using numerous tools and frameworks.`,
       items: [
         {
@@ -7365,7 +7360,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers'</span> Expertise`,
       paragraph: `Developers at eSpark Talent are experts at using Shopify for various tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -7698,7 +7693,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers'</span> Expertise`,
       paragraph: `WordPress developer at eSpark Talent are experts at using this technology to develop a fine software product.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -8066,7 +8061,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Performance Marketer</span> Tools We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Performance Marketer</span> Tools We Use  For Your Project`,
       descrcipton: `Our dedicated Performance marketers have a detailed knowledge of various Paid ads and campaign management tools, Conversion rate optimization tools, performance tracking tools`,
       items: [
         {
@@ -8365,7 +8360,7 @@ goals and requirements.
       items: [
         {
           icon: `/images/service/seo/experties/icon1.svg`,
-          title: `SEO audits`,
+          title: `SEO Audits`,
           paragraph: `SEO experts are responsible for conducting audits to identify opportunities and issues to optimize the website.`,
         },
         {
@@ -8390,13 +8385,13 @@ goals and requirements.
         },
         {
           icon: `/images/service/seo/experties/icon6.svg`,
-          title: `SEO guidance`,
+          title: `SEO Guidance`,
           paragraph: `Apart from implementation, these experts also provide guidance for best SEO methods and practices. `,
         },
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use  For Your </br> Project`,
       descrcipton: `SEO expert at eSpark Talent have detailed knowledge about different research and analytics tools.`,
       items: [
         {
@@ -8657,7 +8652,7 @@ goals and requirements.
     path: `hire-ppc-specialists`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> PPC Specialist <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> PPC  <br /> <span style="font-weight: 700"> Specialist </span>',
       description:
         'Hire a PPC specialist from eSpark Talent to ensure maximum visibility and enhanced campaign performance. Our Specialists can optimize the performance of your PPC campaigns at a cost-effective rate. To make your PPC campaigns streamlined and customized to match your requirements, get an outsourced PPC specialist from eSpark Talent.',
       button: {
@@ -8726,7 +8721,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >PPC </span> Tools We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >PPC </span> Tools We Use For Your Project`,
       descrcipton: `Our dedicated PPC specialists are skilled in several research, ads management & Analytics tools.`,
       items: [
         {
@@ -9061,7 +9056,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use  For Your Project`,
       descrcipton: `Hire professional social media experts from eSpark Talent who have proficiency in numerous tools and technologies.`,
       items: [
         {
@@ -9069,7 +9064,7 @@ goals and requirements.
           title: `Social Media Platforms`,
           gridLg: 4,
           gridmd: 4,
-          items: [`Facebook`, `Instagram `, `Twitter`, `SpyFu`],
+          items: [`Facebook`, `Instagram `, `Twitter`],
         },
         {
           id: 2,
@@ -9086,7 +9081,7 @@ goals and requirements.
           items: [
             `Facebook Insights`,
             `Instagram Insights`,
-            `Twitter Insights`,
+            `Twitter Analytics`,
           ],
         },
       ],
@@ -9181,7 +9176,7 @@ goals and requirements.
         },
         {
           id: `03`,
-          title: `Customized Techniques`,
+          title: `Correct audience `,
           text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
           image: `/images/service/social/why-hire/icon3.svg`,
           alignment: 'right',
@@ -9236,7 +9231,7 @@ goals and requirements.
         },
         {
           id: `03`,
-          title: `Customized Techniques`,
+          title: `Correct audience `,
           text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
           image: `/images/service/social/why-hire/icon3.svg`,
           alignment: 'right',

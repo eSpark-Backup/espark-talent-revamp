@@ -50,6 +50,7 @@ const ServiceProcessMobile = ({ data }) => {
             '@media (min-width: 360px) and (max-width: 599px)': {
               fontSize: '23px !important',
               lineHeight: '22px',
+              px: '10%',
             },
             '@media (min-width: 280px) and (max-width: 359px)': {
               fontSize: '20px !important',
