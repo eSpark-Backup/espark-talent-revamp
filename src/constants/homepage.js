@@ -234,29 +234,29 @@ export const EXPERTIES_DATA = {
         {
           heading: 'Trending',
           listItems: [
-            { title: 'UI UX Designer', link: '/esparkwiki/ui-ux-designer' },
+            { title: 'UI UX Designer', link: '/hire-ui-ux-designers' },
             {
               title: 'Full Stack Developer',
-              link: '/esparkwiki/full-stack-developer',
+              link: '/hire-full-stack-developers',
             },
             {
               title: 'MEAN Stack Developer',
-              link: '/esparkwiki/mean-stack-developer',
+              link: '/hire-mean-stack-developers',
             },
             {
               title: 'MERN Stack Developer',
-              link: '/esparkwiki/mern-stack-developer',
+              link: '/hire-mern-stack-developers',
             },
-            { title: 'DevOps Engineer', link: '/esparkwiki/devops-engineer' },
+            { title: 'DevOps Engineer', link: '/hire-devops-engineers' },
             {
               title: 'Fintech Developer',
-              link: '/esparkwiki/fintech-developer',
+              link: '/hire-fintech-developers',
             },
-            {
-              title: 'Software Developer',
-              link: '/esparkwiki/software-developer',
-            },
-            { title: 'QA Engineer', link: '/esparkwiki/qa-engineer' },
+            // {
+            //   title: 'Software Developer',
+            //   link: '',
+            // },
+            { title: 'QA Engineer', link: '/hire-qa-engineers' },
           ],
         },
       ],
@@ -269,19 +269,19 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'AngularJS Developer',
-              link: '/esparkwiki/angular-developer',
+              link: '/hire-angular-developers',
             },
             {
               title: 'ReactJS Developer',
-              link: '/esparkwiki/react-js-developer',
+              link: '/hire-react-js-developers',
             },
             {
               title: 'JavaScript Developer',
-              link: '/esparkwiki/javascript-developer',
+              link: '/hire-javascript-developers',
             },
             {
               title: 'NextJS Developer',
-              link: '/esparkwiki/next-js-developer',
+              link: '/hire-nextjs-developers',
             },
           ],
         },
@@ -290,15 +290,15 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'Android Developer',
-              link: '/esparkwiki/android-app-developer',
+              link: '/hire-android-developers',
             },
             {
               title: 'Flutter Developer',
-              link: '/esparkwiki/flutter-developer',
+              link: '/hire-flutter-developers',
             },
             {
               title: 'React Native Developer',
-              link: '/esparkwiki/react-native-developer',
+              link: '/hire-react-native-developers',
             },
           ],
         },
@@ -312,11 +312,11 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'ASP .NET Developer',
-              link: '/esparkwiki/asp-net-developer',
+              link: '/hire-asp-dot-net-developers',
             },
-            { title: 'PHP Developer', link: '/esparkwiki/php-developer' },
-            { title: 'Python Developer', link: '/esparkwiki/python-developer' },
-            { title: 'NodeJS Developer', link: '/esparkwiki/nodejs-developer' },
+            { title: 'PHP Developer', link: '/hire-php-developers' },
+            { title: 'Python Developer', link: '/hire-python-developers' },
+            { title: 'NodeJS Developer', link: '/hire-nodejs-developers' },
           ],
         },
         {
@@ -324,12 +324,12 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'Firmware Developer',
-              link: '/esparkwiki/firmware-developer',
+              link: '/hire-firmware-developers',
             },
-            { title: 'PCB Designer', link: '/esparkwiki/pcb-designer' },
+            { title: 'PCB Designer', link: '/hire-pcb-designers' },
             {
               title: 'Embedded System Engineer',
-              link: '/esparkwiki/embedded-system-engineer',
+              link: '/hire-embedded-system-engineers',
             },
           ],
         },
@@ -343,13 +343,13 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'Social Media Expert',
-              link: '/esparkwiki/social-media-expert',
+              link: '/hire-social-media-experts',
             },
-            { title: 'PPC Specialist', link: '/esparkwiki/ppc-specialist' },
-            { title: 'SEO Expert', link: '/esparkwiki/seo-expert' },
+            { title: 'PPC Specialist', link: '/hire-ppc-specialists' },
+            { title: 'SEO Expert', link: '/hire-seo-experts' },
             {
               title: 'Performance Marketer',
-              link: '/esparkwiki/performance-marketer',
+              link: '/hire-performance-marketers',
             },
           ],
         },
@@ -358,11 +358,11 @@ export const EXPERTIES_DATA = {
           listItems: [
             {
               title: 'WordPress Developer',
-              link: '/esparkwiki/wordpress-developer',
+              link: '/hire-wordpress-developers',
             },
             {
               title: 'Shopify Developer',
-              link: '/esparkwiki/shopify-developer',
+              link: '/hire-shopify-developers',
             },
           ],
         },
