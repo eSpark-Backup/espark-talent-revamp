@@ -129,7 +129,7 @@ const FifthSection = ({ data }) => {
                 '@media (min-width:760px) and (max-width: 1919px)': {
                   px:
                     pathname === '/hire-firmware-developers' ||
-                    '/hire-ppc-specialists'
+                    pathname === '/hire-ppc-specialists'
                       ? '20%'
                       : '',
                 },
@@ -268,7 +268,7 @@ const FifthSection = ({ data }) => {
                                     : '18px',
                                 lineHeight: '15px',
                               },
-                            '@media (min-width: 360px) and (max-width: 400px)':
+                            '@media (min-width: 360px) and (max-width: 399px)':
                               {
                                 fontSize: pathname.includes('embedded')
                                   ? '12.8px !important'
