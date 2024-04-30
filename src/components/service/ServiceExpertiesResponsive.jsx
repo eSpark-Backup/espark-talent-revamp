@@ -83,9 +83,8 @@ const ServiceExpertiesResponsive = ({
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    // width: '100%',
                     width: { xs: '253.24px', sm: '400px' },
-                    minHeight: '100px',
+                    minHeight: '135px',
                     height: 'auto',
                     borderRadius: '13.57px',
                     border: '1px solid lightGray',
@@ -94,9 +93,6 @@ const ServiceExpertiesResponsive = ({
                     '@media (min-width: 280px) and (max-width: 293px)': {
                       height: '144px',
                     },
-                    //  '@media (max-width: 370px)': {
-                    //     width:'253.24px'
-                    // },
                   }}
                 >
                   <Box
@@ -124,8 +120,6 @@ const ServiceExpertiesResponsive = ({
                       }}
                     />
                     <Typography
-                      //   component="h4"
-                      //   color="secondary"
                       sx={{
                         fontSize: { xs: '12.6px', sm: '14px', md: '20px ' },
                         fontWeight: 600,
@@ -142,11 +136,9 @@ const ServiceExpertiesResponsive = ({
                       p: '8px 15px',
                       borderRadius: '0 0 20px 20px',
                       backgroundColor: '#fff',
-                      // height: '100%',
                     }}
                   >
                     <Typography
-                      //   component={'p'}
                       sx={{
                         fontSize: { xs: '10.08px', sm: '12px', md: '14px' },
                         lineHeight: { xs: '14.56px', sm: '20px' },

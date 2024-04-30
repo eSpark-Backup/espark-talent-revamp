@@ -31,7 +31,9 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                 ? '0%'
                 : pathName.includes('developers') ||
                     pathName.includes('designers') ||
-                    pathName.includes('engineers')
+                    pathName.includes('engineers') ||
+                    pathName.includes('marketers') ||
+                    pathName.includes('experts')
                   ? '2%'
                   : '5%',
             pb: `${pathName === book_a_demo_meeting ? '3%' : '0%'}`,
@@ -39,7 +41,9 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
             pt:
               pathName.includes('developers') ||
               pathName.includes('designers') ||
-              pathName.includes('engineers')
+              pathName.includes('engineers') ||
+              pathName.includes('marketers') ||
+              pathName.includes('experts')
                 ? '30px'
                 : '0px',
           }}
@@ -66,6 +70,12 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                   },
                   '@media(min-width: 461px) and (max-width:480px)': {
                     px: '39px',
+                  },
+                  '@media(min-width: 361px) and (max-width:412px)': {
+                    px: '30px',
+                  },
+                  '@media(min-width: 413px) and (max-width:600px)': {
+                    px: '60px',
                   },
                 }}
                 dangerouslySetInnerHTML={{

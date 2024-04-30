@@ -77,7 +77,12 @@ const ServiceExperties = ({ data }) => {
                     fontSize: { xs: '11px', sm: '14px', md: '19px' },
                     fontWeight: 400,
                     lineHeight: { xs: '19px', sm: '22px', md: '33px' },
-                    px: { xs: '5%', sm: '8%', md: '20%' },
+                    px:
+                      pathName === '/hire-shopify-developers' ||
+                      pathName === '/hire-seo-experts' ||
+                      pathName === '/hire-ppc-specialists'
+                        ? { xs: '5%', sm: '8%', md: '23.5%', lg: '28%' }
+                        : { xs: '5%', sm: '8%', md: '20%' },
                     mt: { xs: '-10px !important', md: '0px !important' },
                     mb: { xs: '-25px !important', md: '0px !important' },
                   }}
