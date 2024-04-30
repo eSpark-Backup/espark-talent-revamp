@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const ServiceHosts = ({ data }) => {
   const pathname = usePathname();
   console.log(pathname, 'pathname');
-  const isTetsPath = pathname === '/hire-performance-marketers';
+  const isTetsPath = pathname === '/hire-performance-marketers' || pathname === '/hire-react-native-developers';
   return (
     <>
       <Box sx={{ my: 2, mt: { xs: '230px' } }}>

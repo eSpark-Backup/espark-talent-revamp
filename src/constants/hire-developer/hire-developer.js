@@ -5036,7 +5036,7 @@ goals and requirements.
       leftImage: `/images/hire-developer/round.svg`,
       bgImage: `/images/service/pipe.svg`,
       title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;"> Top-Notch 1%</span> Of Globally Certified React Native Developers`,
-      descrcipton: `Our developers, masters in the art of MEAN Stack development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest MEAN Stack programmers to ensure the most suitable match for your project.`,
+      descrcipton: `Our developers, masters in the art of React Native development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest React Native programmers to ensure the most suitable match for your project.`,
       btnText: `Hire a Developer`,
       btnLink: `/book-a-demo`,
     },
@@ -5045,7 +5045,7 @@ goals and requirements.
       questions: [
         {
           id: 1,
-          heading: `How much does it cost to hire React Native Developer?`,
+          heading: `How much does it cost to Hire a React Native Developer?`,
           description: `eSpark Talent would decide the cost after analyzing the project requirements and scope.`,
         },
         {
