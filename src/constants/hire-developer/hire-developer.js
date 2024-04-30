@@ -3641,7 +3641,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `qOur JavaScript developers prioritize clear <br /> communication throughout development for <br /> successful project completion.`,
+          text: `Our JavaScript developers prioritize clear <br /> communication throughout development for <br /> successful project completion.`,
           image: `/images/service/javascript/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3792,8 +3792,8 @@ export const HIRE_DEVELOPERS = [
     },
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Next.js Developers'</span> Expertise`,
-      paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
-      JavaScript developers to cater to your requirements.`,
+      paragraph: `eSpark is a tech company, that provides skilled Next.js developers proficient in
+turning your requirements into a quality product.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -3839,7 +3839,7 @@ export const HIRE_DEVELOPERS = [
       items: [
         {
           id: 1,
-          title: `Programming Languagesn`,
+          title: `Programming Languages`,
           gridLg: 4,
           gridmd: 4,
           items: [`JavaScript`, `TypeScript`],
@@ -4132,7 +4132,7 @@ goals and requirements.
       arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
       items: [
         {
-          icon: `/images/service/android/experts/app.svg`,
+          icon: `/images/service/android/experts/icon1.svg`,
           title: `App development`,
           paragraph: `Android developers at eSpark are skilled at building a vast variety of applications for different devices using languages like Java.`,
         },
@@ -4498,7 +4498,7 @@ goals and requirements.
       items: [
         {
           id: 1,
-          title: `Programming Languagesn`,
+          title: `Programming Languages`,
           gridLg: 4,
           gridmd: 4,
           items: [`Dart`],
@@ -6230,8 +6230,8 @@ goals and requirements.
         },
         {
           id: `05`,
-          title: `Communication`,
-          text: `Our Python developers prioritize clear and timely <br /> communication to keep you informed about <br /> your project's progress.`,
+          title: `Real-time applications`,
+          text: `Our developers have the skills and experience</br> to build real-time applications like chat apps</br> that manage numerous concurrent</br> connections effectively.`,
           image: `/images/service/node-js/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7005,7 +7005,7 @@ goals and requirements.
     path: `hire-embedded-system-engineers`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Embedded <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Designer </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Embedded <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
       description:
         'Hire embedded developers from eSpark Talent who are skilled at product development, testing, and maintenance. They would make sure to fulfill all your project requirements by turning them into a fine product. To get a reliable, scalable, and secure product, hire the best embedded developers from eSpark.',
       button: {
@@ -8947,9 +8947,9 @@ goals and requirements.
       image: `/images/hire-expert/business.svg`,
       leftImage: `/images/hire-expert/round.svg`,
       bgImage: `/images/service/pipe.svg`,
-      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PPC Specialist`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified PPC Specialists`,
       descrcipton: `Our specialists, masters in the art of PPC, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest PPC experts to ensure the most suitable match for your project.`,
-      btnText: `Hire a Developer`,
+      btnText: `Hire a PPC Expert`,
       btnLink: `/book-a-demo`,
     },
     faqs: {
