@@ -12,6 +12,7 @@ import ParagraphTitle from './ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const OurExperties = ({ data, link }) => {
   const pathName = usePathname();
@@ -154,19 +155,19 @@ const OurExperties = ({ data, link }) => {
                                   height={60}
                                 />
                               </Box>
-                              {/* <Link href={item?.link} target="_blank"> */}
-                              <Typography
-                                variant="body1"
-                                sx={{
-                                  py: '0px',
-                                  color: '#000',
-                                  fontSize: '14px !important',
-                                  fontWeight: 400,
-                                }}
-                              >
-                                {item?.title}
-                              </Typography>
-                              {/* </Link> */}
+                              <Link href={item?.link} target="_blank">
+                                <Typography
+                                  variant="body1"
+                                  sx={{
+                                    py: '0px',
+                                    color: '#000',
+                                    fontSize: '14px !important',
+                                    fontWeight: 400,
+                                  }}
+                                >
+                                  {item?.title}
+                                </Typography>
+                              </Link>
                             </Box>
                           ))}
                         </Box>
