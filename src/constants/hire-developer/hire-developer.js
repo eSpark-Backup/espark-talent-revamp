@@ -1702,7 +1702,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 2,
-          heading: `What are the benefits of Hiring MERN developer from eSpark Talent?`,
+          heading: `What are the benefits of Hiring MERN Developer from eSpark Talent?`,
           description: `MERN stack developers from eSaprk talent possess sikill and experience. They can assist you in turning your requirements into the best software product at a reasonable cost.`,
         },
         {
