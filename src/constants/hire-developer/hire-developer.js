@@ -1583,7 +1583,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: `05`,
-          title: `Cross-platform benefit`,
+          title: `Cross-Platform benefit`,
           text: `Hiring MERN stack developers could be highly <br />  advantageous as they build <br />  applications that could be used over a variety <br /> of platforms including mobiles, <br /> desktops, web, etc.`,
           image: `/images/service/mern/why-hire/icon5.svg`,
           isReverse: false,
@@ -1650,7 +1650,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: `05`,
-          title: `Cross-platform benefit`,
+          title: `Cross-Platform benefit`,
           text: `Hiring MERN stack developers could be highly advantageous as they build applications that could be used over a variety of platforms including mobiles, desktops, web, etc.`,
           image: `/images/service/mern/why-hire/icon5.svg`,
           isReverse: false,
@@ -3143,7 +3143,7 @@ export const HIRE_DEVELOPERS = [
         },
         {
           icon: `/images/service/react/cross.svg`,
-          title: `Cross-platform development`,
+          title: `Cross-Platform development`,
           paragraph: `React JS developers implement cross-platform development, enabling code reusability for Android platforms. This speeds up the development process.`,
         },
         {
@@ -4462,7 +4462,7 @@ goals and requirements.
       items: [
         {
           icon: `/images/service/flutter/experts/cross.svg`,
-          title: `Cross-platform development`,
+          title: `Cross-Platform development`,
           paragraph: `Flutter developers at eSpark Talent are skilled at using this technology to build a vast variety of software projects.`,
         },
         {
@@ -4591,7 +4591,7 @@ goals and requirements.
       processes: [
         {
           id: `01`,
-          title: `Cross-platform `,
+          title: `Cross-Platform `,
           text: `Our Flutter developers excel in cross-platform <br /> projects for Android, saving time and cost<br /> with a single codebase.          `,
           image: `/images/service/flutter/why-hire/icon1.svg`,
           alignment: 'right',
@@ -4646,7 +4646,7 @@ goals and requirements.
       responsiveProcesses: [
         {
           id: `01`,
-          title: `<span style="color: #029894; font-weight: 700">Cross-platform </span>`,
+          title: `<span style="color: #029894; font-weight: 700">Cross-Platform </span>`,
           text: `Our Flutter developers excel in cross-platform projects for Android, saving time and cost with a single codebase.`,
           image: `/images/service/flutter/why-hire/icon1.svg`,
           alignment: 'right',
@@ -4921,7 +4921,7 @@ goals and requirements.
       processes: [
         {
           id: `01`,
-          title: `Cross-platform projects`,
+          title: `Cross-Platform projects`,
           text: `React Native developers are proficient at <br /> creating cross-platform apps for iOS and <br /> Android, saving time, effort, and money for development.`,
           image: `/images/service/react-native/why-hire/icon1.svg`,
           alignment: 'right',
@@ -4976,7 +4976,7 @@ goals and requirements.
       responsiveProcesses: [
         {
           id: `01`,
-          title: `<span style="color: #029894; font-weight: 700"> Cross-platform projects </span>`,
+          title: `<span style="color: #029894; font-weight: 700"> Cross-Platform projects </span>`,
           text: `React Native developers are proficient at creating cross-platform apps for iOS and Android, saving time, effort, and money for development.`,
           image: `/images/service/react-native/why-hire/icon1.svg`,
           alignment: 'right',
@@ -7874,7 +7874,7 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce</br> websites with features like payment gateways,br> product filters and shopping carts.
+          text: `Our experts at developing e-commerce</br> websites with features like payment gateways<br/> product filters and shopping carts.
           `,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
@@ -7930,7 +7930,7 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce</br> websites with features like payment gateways,br> product filters and shopping carts.`,
+          text: `Our experts at developing e-commerce</br> websites with features like payment gateways<br/> product filters and shopping carts.`,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7962,13 +7962,13 @@ goals and requirements.
       questions: [
         {
           id: 1,
-          heading: `How do I hire a WordPress developer?`,
-          description: `Hire top-notch WordPress developer from eSpark Talent that possess the skills and experience to built a customized software solution.`,
+          heading: `Are WordPress Developer in Demand?`,
+          description: `WordPress developers are in high demand due to their expertise in SEO optimization, e-commerce development and robust security implementation.`,
         },
         {
           id: 3,
-          heading: `Are WordPress Developer in Demand?`,
-          description: `WordPress developers are in high demand due to their expertise in SEO optimization, e-commerce development and robust security implementation.`,
+          heading: `How much does a WordPress expert cost?`,
+          description: `eSpark Talent would decide the cost of hiring a WordPress developer after analyzing the project scope and requirements.`,
         },
         {
           id: 5,
@@ -7977,13 +7977,13 @@ goals and requirements.
         },
         {
           id: 2,
-          heading: `Why do so many companies use WordPress?`,
-          description: `Many companies prefer WordPress developer because it ensures e-commerce integration, SEO optimization, maintainance services and website development.`,
+          heading: `How do I hire a WordPress developer?`,
+          description: `Hire top-notch WordPress developer from eSpark Talent that possess the skills and experience to built a customized software solution.`,
         },
         {
           id: 4,
-          heading: `How much does a WordPress expert cost?`,
-          description: `eSpark Talent would decide the cost of hiring a WordPress developer after analyzing the project scope and requirements.`,
+          heading: `Why do so many companies use WordPress?`,
+          description: `Many companies prefer WordPress developer because it ensures e-commerce integration, SEO optimization, maintainance services and website development.`,
         },
         {
           id: 6,
