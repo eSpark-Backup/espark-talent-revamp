@@ -164,6 +164,7 @@ const FifthSection = ({ data }) => {
                       lineHeight: '30px',
                       pb: 1,
                     },
+                    border:'1px solid green'
                   }}
                 >
                   {item?.title}
