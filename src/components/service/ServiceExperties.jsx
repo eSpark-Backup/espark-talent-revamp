@@ -4,6 +4,7 @@ import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Link from 'next/link';
 import ServiceExpertiesResponsive from './ServiceExpertiesResponsive';
 import { usePathname } from 'next/navigation';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceExperties = ({ data }) => {
   const pathName = usePathname();
@@ -155,7 +156,7 @@ const ServiceExperties = ({ data }) => {
                           fontWeight: 600,
                         }}
                       >
-                        {item?.title}
+                        {capitalizeFirstLetter(item?.title)}
                       </Typography>
                     </Box>
                     <Box

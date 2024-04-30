@@ -147,8 +147,8 @@ const ServiceProcessMobile = ({ data }) => {
                   height: 100,
                 },
                 '@media (min-width: 360px) and (max-width: 599px)': {
-                  width: '65px',
-                  height: '65px',
+                  width: '150px',
+                  height: '150px',
                 },
                 '@media (min-width: 280px) and (max-width: 359px)': {
                   width: '80px',
@@ -169,8 +169,8 @@ const ServiceProcessMobile = ({ data }) => {
                 gap: 0.5,
               },
               '@media (min-width: 360px) and (max-width: 599px)': {
-                pl: process?.alignment == 'right' ? 1 : 0,
-                pr: process?.alignment == 'left' ? 0.5 : 0,
+                pl: process?.alignment == 'right' ? 1 : 1,
+                pr: process?.alignment == 'left' ? 1 : 1,
                 width: '100%',
                 height: 'auto',
                 gap: 0,
@@ -189,7 +189,7 @@ const ServiceProcessMobile = ({ data }) => {
               justifyContent: 'center',
               backgroundColor: '#F7F8FF',
               order: `${process?.alignment == 'right' ? 1 : 1}`,
-              px: 1,
+              px: 2,
               pl: {
                 sm: process?.alignment == 'right' ? 1 : 1,
                 lg: process?.alignment == 'right' ? 2.3 : 0.5,
@@ -214,11 +214,16 @@ const ServiceProcessMobile = ({ data }) => {
                   lineHeight: '20px',
                   fontWeight: 700,
                 },
+                '@media (max-width: 360px)': {
+                  fontSize: '16px !important',
+                  lineHeight: '20px',
+                  fontWeight: 700,
+                },
                 lineHeight: { sm: '28.621px' },
                 fontSize: { md: '25px !important', lg: '28px !important' },
               }}
               dangerouslySetInnerHTML={{ __html: process?.title }}
-            ></Typography>
+            />
             <Typography
               component="Box"
               sx={{

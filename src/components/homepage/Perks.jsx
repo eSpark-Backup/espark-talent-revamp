@@ -362,6 +362,7 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                               btnTitle ||
                               data[selectedCard]?.content?.buttonText
                             }
+                            size={'200px'}
                             link={link}
                             hover={'#fff'}
                             target={target}

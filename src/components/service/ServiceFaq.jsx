@@ -111,7 +111,7 @@ const ServiceFaq = ({ data }) => {
             fontSize: { xs: '20px', md: '32px ' },
             fontWeight: 700,
             color: '#001C63',
-            pb: { md: 2 },
+            pb: { lg: 4, md: 2 },
           }}
         >
           {data?.title}
