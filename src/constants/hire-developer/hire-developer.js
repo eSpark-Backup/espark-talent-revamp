@@ -7507,7 +7507,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `Our developers aim to provide high- <br /> performance applications by ensuring <br /> features like memory management and <br /> caching mechanisms.`,
+          text: `Shopify developers are experts at developing</br> customized online stores to enhance your</br> presence on the internet.`,
           image: `/images/service/shopify/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
