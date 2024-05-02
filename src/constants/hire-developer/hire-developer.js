@@ -8025,7 +8025,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers '</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers </span> Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Marketer`,
@@ -8163,7 +8163,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Performance Marketing Expert</span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Performance Marketing Expert</span> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Performance Marketer from eSpark Talent as it would improve the overall marketing process for your project.`,
       processes: [
         {
