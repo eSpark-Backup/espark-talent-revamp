@@ -8020,7 +8020,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers</span> Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Marketer`,
