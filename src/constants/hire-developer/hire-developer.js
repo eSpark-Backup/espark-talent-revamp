@@ -618,13 +618,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 3,
-          heading: `What does a UI UX designer do?`,
-          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
+          heading: `Can your UI UX designers work on both web and mobile projects?`,
+          description: `Yes. Our designers work on both web and mobile applications.`,
         },
         {
           id: 5,
-          heading: `Can your UI UX designers work on both web and mobile projects?`,
-          description: `Yes. Our designers work on both web and mobile applications.`,
+          heading: `What does a UI UX designer do?`,
+          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
         },
         {
           id: 2,
@@ -2032,8 +2032,8 @@ export const HIRE_DEVELOPERS = [
       questions: [
         {
           id: 1,
-          heading: `What is the role of a DevOps engineer?`,
-          description: `DevOps engineers bridge the gap between the development and operations teams to ensure that you are delivered with a secure, scalable, and reliable project.`,
+          heading: `We have a DevOps project, can you finish it?`,
+          description: `Yes. Depending upon the project requirments and scope, the timeline for the projcet would be decided.`,
         },
         {
           id: 3,
@@ -2042,8 +2042,8 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 5,
-          heading: `We have a DevOps project, can you finish it?`,
-          description: `Yes. Depending upon the project requirments and scope, the timeline for the projcet would be decided.`,
+          heading: `What is the role of a DevOps engineer?`,
+          description: `DevOps engineers bridge the gap between the development and operations teams to ensure that you are delivered with a secure, scalable, and reliable project.`,
         },
         {
           id: 2,
@@ -2397,11 +2397,6 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `What are the best ways to hire a fintech software engineer?`,
-          description: `Hire a dedicated Fintech software engineer from eSpark Talent to ensure the development of a scalable, reliable, innovative, and secure software solution.`,
-        },
-        {
-          id: 6,
           heading: `Are fintech jobs in demand? `,
           description: `Fintech jobs are in high demand due to numeous reasons: technology innovation, rvolving regulatory requirements, job diversity, etc.`,
         },
@@ -7635,13 +7630,13 @@ goals and requirements.
         },
         {
           id: 3,
-          heading: `What skills do our Shopify Developers have?`,
-          description: `Shopify developers at eSpark Talent are skilled at store setup, API integration and product management.`,
+          heading: `Is it worth it to hire a Shopify expert?`,
+          description: `Shopify developer would ensure that your online store is capable enough by integrating various features, APIs and security measures.`,
         },
         {
           id: 5,
-          heading: `Is it worth it to hire a Shopify expert?`,
-          description: `Shopify developer would ensure that your online store is capable enough by integrating various features, APIs and security measures.`,
+          heading: `What skills do our Shopify Developers have?`,
+          description: `Shopify developers at eSpark Talent are skilled at store setup, API integration and product management.`,
         },
         {
           id: 2,
@@ -8627,13 +8622,13 @@ goals and requirements.
         },
         {
           id: 5,
-          heading: `Why I choose eSpark Talent to hire seo expert?`,
-          description: `SEO experts at eSpark Talent would conduct audits, research, analysis and website optimization at an affordable price.`,
+          heading: `Can We Get Started Right Away?`,
+          description: `After analysing your requirements, eSpark Talent would assign SEO expert for your project.`,
         },
         {
           id: 2,
-          heading: `Can We Get Started Right Away?`,
-          description: `After analysing your requirements, eSpark Talent would assign SEO expert for your project.`,
+          heading: `Why I choose eSpark Talent to hire seo expert?`,
+          description: `SEO experts at eSpark Talent would conduct audits, research, analysis and website optimization at an affordable price.`,
         },
         {
           id: 4,
@@ -8846,7 +8841,7 @@ goals and requirements.
         },
         {
           id: `03`,
-          title: `Customized Techniques`,
+          title: `Correct Audience`,
           text: `PPC specialists can customize techniques to</br> enhance website traffic or sales to improve</br> overall visibility.`,
           image: `/images/service/ppc/why-hire/icon3.svg`,
           alignment: 'right',
@@ -9080,8 +9075,8 @@ goals and requirements.
           gridmd: 4,
           items: [
             `Facebook Insights`,
-            `Instagram Insights`,
             `Twitter Analytics`,
+            `Instagram Insights`,
           ],
         },
       ],
