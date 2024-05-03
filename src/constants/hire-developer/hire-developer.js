@@ -9292,7 +9292,8 @@ goals and requirements.
         },
       ],
     },
-  }, {
+  },
+  {
     path: `hire-software-developers`,
     servicesHeroSection: {
       title:
@@ -9374,25 +9375,14 @@ and frameworks for this technology.`,
           title: `Programming Languages`,
           gridLg: 4,
           gridmd: 4,
-          items: [
-            'Python',
-            'C++',
-            'PHP',
-            'JavaScript',
-            'C#'
-          ],
+          items: ['Python', 'C++', 'PHP', 'JavaScript', 'C#'],
         },
         {
           id: 2,
           title: `Frameworks and Libraries`,
           gridLg: 4,
           gridmd: 4,
-          items: [
-            'Node.js',
-            'Angular',
-            'Django',
-            'React'
-          ],
+          items: ['Node.js', 'Angular', 'Django', 'React'],
         },
         {
           id: 3,
@@ -9647,7 +9637,6 @@ and frameworks for this technology.`,
           heading: `Are your Software Developers experienced?`,
           description: `Software developers at eSpark Talent have expertise in working on different domains and languages to fulfill your business objectives.`,
         },
-
       ],
     },
   },
