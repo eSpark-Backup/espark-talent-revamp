@@ -194,7 +194,7 @@ const ServiceProcessMobile = ({ data }) => {
               order: `${process?.alignment == 'right' ? 1 : 1}`,
               px: 2,
               pl: {
-                sm: process?.alignment == 'right' ? 1 : 1,
+                sm: process?.alignment == 'right' ? 2 : 2,
                 lg: process?.alignment == 'right' ? 2.3 : 0.5,
               },
               textAlign: `${process?.textAlignment == 'right' ? 'right' : 'left'}`,
