@@ -123,7 +123,7 @@ const FifthSection = ({ data }) => {
                   pathname.includes('engineers') ||
                   pathname.includes('marketers') ||
                   pathname.includes('experts')
-                    ? { xs: '0%', sm: '5%', md: '5%', lg: '12%', xl: '14%' }
+                    ? { xs: '0%', sm: '5%', md: '15%', lg: '15%', xl: '15%' }
                     : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
 
                 '@media (min-width:760px) and (max-width: 1919px)': {

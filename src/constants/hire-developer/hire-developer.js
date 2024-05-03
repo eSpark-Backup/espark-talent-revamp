@@ -1714,7 +1714,7 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    path: `hire-devops-engineers`,
+    path: `hire-devOps-engineers`,
     servicesHeroSection: {
       title:
         '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> DevOps <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
@@ -4765,7 +4765,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers'</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers</span> Expertise`,
       paragraph: `React Native developers at eSpark Talent are experts at using this technology to build a vast variety of software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -5093,7 +5093,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers</span> Expertise`,
       paragraph: `ASP.net developers at eSpark Talent are skilled at using this technology to develop scalable and reliable software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -7355,7 +7355,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers</span> Expertise`,
       paragraph: `Developers at eSpark Talent are experts at using Shopify for various tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -7688,7 +7688,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers</span> Expertise`,
       paragraph: `WordPress developer at eSpark Talent are experts at using this technology to develop a fine software product.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -8345,7 +8345,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">SEO Experts</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">SEO Experts</span> Expertise`,
       paragraph: `SEO experts at eSpark Talent are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a SEO Expert`,
@@ -8675,7 +8675,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist</span> Expertise`,
       paragraph: `PPC specialists at eSpark are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a PPC Expert`,
@@ -9010,7 +9010,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists </span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists </span> Expertise`,
       paragraph: `Hire the best social media experts from eSpark talent to optimize the strategy for social media advertisement.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Expert`,
