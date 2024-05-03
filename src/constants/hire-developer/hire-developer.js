@@ -1714,7 +1714,7 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    path: `hire-devOps-engineers`,
+    path: `hire-devops-engineers`,
     servicesHeroSection: {
       title:
         '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> DevOps <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Engineer </span>',
