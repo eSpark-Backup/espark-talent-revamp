@@ -8540,7 +8540,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `To enhance visibility of your website on the</br> search engine, our experts implement various</br> strategies and algorithms`,
+          text: `To enhance visibility of your website on the search engine, our experts implement various strategies and algorithms`,
           image: `/images/service/seo/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8549,7 +8549,7 @@ goals and requirements.
         {
           id: `02`,
           title: `On Page Optimization`,
-          text: `Our SEO experts enhance various website</br> elements including images, headings, meta</br> tags, and content structure.`,
+          text: `Our SEO experts enhance various website elements including images, headings, meta tags, and content structure.`,
           image: `/images/service/seo/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8558,7 +8558,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for</br> conducting extensive keyword research to make the website visible to a larger audience.`,
+          text: `SEO experts are also responsible for conducting extensive keyword research to make the website visible to a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8567,7 +8567,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Off page optimization`,
-          text: `Experts at eSpark Talent are skilled at building</br> back links by using various off page SEO</br> methods.`,
+          text: `Experts at eSpark Talent are skilled at building back links by using various off page SEO methods.`,
           image: `/images/service/seo/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8585,7 +8585,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Competition`,
-          text: `Hiring SEO expert from eSpark Talent would</br> help you to make your website stand out</br> among all your competitors.`,
+          text: `Hiring SEO expert from eSpark Talent would help you to make your website stand out among all your competitors.`,
           image: `/images/service/seo/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
