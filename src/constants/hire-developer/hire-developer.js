@@ -9459,7 +9459,7 @@ and frameworks for this technology.`,
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Full Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Software Developers</span> <br> From eSpark Talent ?`,
       subTitle: `eSpark Talent makes sure to provide a skilled full-stack developer to make your
       requirements turn into a fine software product`,
       coverImage: `/images/service/why-hire/cover-image.png`,
