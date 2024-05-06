@@ -1528,7 +1528,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MERN Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MERN Stack Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hiring MERN stack developers from eSpark Talent would be a beneficial asset for the development of your software project due to multiple factors.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -1878,7 +1878,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >DevOps Engineer</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >DevOps Engineer</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent is a renowned tech firm specializing in providing the best DevOps engineer for the development of your software project.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -2223,7 +2223,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Fintech Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Fintech Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Fintech developer from eSpark Talent to bring revolution to the conventional development process.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -2568,7 +2568,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >QA Engineer</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >QA Engineer</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire top-notch QA engineers from eSpark Talent to ensure that your product is credible enough to compete amongst the best ones in the market.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -2924,7 +2924,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Angular JS Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Angular JS Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced AngularJS developers to turn your business objectives into a real-world software product.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -3252,7 +3252,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >ReactJS Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >ReactJS Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced React JS
  developers to turn your business objectives into a real-world software product.
  `,
@@ -3585,7 +3585,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >JavaScript Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >JavaScript Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced JavaScript
  developers to turn your business objectives into a real-world software product.
  
@@ -3914,7 +3914,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Next.js Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Next.js Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide experienced Next.js developers to turn your business objectives into a good software product.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -3948,7 +3948,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `Our Next.js developers are well equipped with the skill of delivering products on time without<br />any hassle.`,
+          text: `Our Next.js developers are well equipped with the skill of delivering products on time without any hassle.`,
           image: `/images/service/nextjs/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4242,7 +4242,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Android Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Android Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Android developer from eSpark Talent as they possess an extensive skillset.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -4571,7 +4571,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Flutter Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Flutter Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire dedicated Flutter developers from eSpark Talent who possess the skills and experience to develop a fine software product`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -6083,7 +6083,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Node.js</span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Node.js</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Node.js developers at eSpark Talent are proficient with the use of different tools, libraries, and frameworks used to build a variety of software products.`,
       items: [
         {
@@ -6175,7 +6175,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Node.js Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Node.js Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hiring a top-notch node.js developer from eSpark Talent could be an invaluable asset to bring improvements to the conventional development lifecycle.`,
       processes: [
         {
@@ -6407,7 +6407,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Firmware</span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Firmware</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Firmware developers possess a thorough knowledge of various tools and frameworks.`,
       items: [
         {
@@ -6509,7 +6509,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Firmware Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Firmware Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Firmware developer from eSpark Talent as they aim to provide you with the best software solution.`,
       processes: [
         {
@@ -6741,7 +6741,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;"> PCB Designer </span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;"> PCB Designer </span> Technologies We <br /> Use For Your Project`,
       descrcipton: `PCB designers at eSpark Talent have good know-how about different tools and technologies.`,
       items: [
         {
@@ -6833,7 +6833,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PCB Designers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PCB Designers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated PCB designer from eSpark Talent as they possess a wide range of quality attributes that would ensure you get a quality product.`,
       processes: [
         {
@@ -7160,7 +7160,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Embedded Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Embedded Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Embedded developer from eSpark talent who possesses a knack for using this technology to build products.`,
       processes: [
         {
@@ -7553,7 +7553,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `Our developers aim to provide high- performance applications by ensuring features like memory management and <br /> caching mechanisms.`,
+          text: `Our developers aim to provide high- performance applications by ensuring features like memory management and  caching mechanisms.`,
           image: `/images/service/shopify/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -9454,7 +9454,7 @@ and frameworks for this technology.`,
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Software Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Software Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Software Developer from eSpark Talent to ensure that you get good software products.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
