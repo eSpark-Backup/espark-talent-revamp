@@ -618,13 +618,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 3,
-          heading: `Can your UI UX designers work on both web and mobile projects?`,
-          description: `Yes. Our designers work on both web and mobile applications.`,
+          heading: `What does a UI UX designer do?`,
+          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
         },
         {
           id: 5,
-          heading: `What does a UI UX designer do?`,
-          description: `UI/UX designers are entrusted with the task of creating user interfaces that are functional as well as visually appealing.`,
+          heading: `Can your UI UX designers work on both web and mobile projects?`,
+          description: `Yes. Our designers work on both web and mobile applications.`,
         },
         {
           id: 2,
@@ -633,13 +633,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `How much does it cost to hire a UX designer?`,
-          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
+          heading: `How do I hire the best UI UX designer?`,
+          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
         },
         {
           id: 6,
-          heading: `How do I hire the best UI UX designer?`,
-          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
+          heading: `How much does it cost to hire a UX designer?`,
+          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
         },
       ],
     },
@@ -9460,8 +9460,7 @@ and frameworks for this technology.`,
     ],
     whyHire: {
       title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Software Developers</span> <br> From eSpark Talent ?`,
-      subTitle: `eSpark Talent makes sure to provide a skilled full-stack developer to make your
-      requirements turn into a fine software product`,
+      subTitle: `Hire a dedicated Software Developer from eSpark Talent to ensure that you get good software products.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {

@@ -38,7 +38,7 @@ const ServiceFaq = ({ data }) => {
           >
             <AccordionSummary
               sx={{
-                alignItems: 'flex-start', // Align accordion items to the top
+                alignItems: 'flex-start',
               }}
               expandIcon={
                 expanded === 'panel' ? (
