@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceExpertiesResponsive = ({
   items,
@@ -128,7 +129,7 @@ const ServiceExpertiesResponsive = ({
                         ml: 2,
                       }}
                     >
-                      {item?.title}
+                      {capitalizeFirstLetter(item?.title)}
                     </Typography>
                   </Box>
                   <Box

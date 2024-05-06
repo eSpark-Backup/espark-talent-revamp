@@ -252,10 +252,10 @@ export const EXPERTIES_DATA = {
               title: 'Fintech Developer',
               link: '/hire-fintech-developers',
             },
-            // {
-            //   title: 'Software Developer',
-            //   link: '',
-            // },
+            {
+              title: 'Software Developer',
+              link: '/hire-software-developers',
+            },
             { title: 'QA Engineer', link: '/hire-qa-engineers' },
           ],
         },
