@@ -13,7 +13,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-frontend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Front-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Front-End Solution? <br/><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized front-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in front-end development. Let's connect and enhance your front-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
@@ -161,7 +161,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-backend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Back-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Back-End Solution? <br/><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in back-end development. Let's connect and enhance your back-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
@@ -459,14 +459,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >UI/UX Designers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >UI/UX Designers</span> <br/> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide a skillful, and experienced UI/UX designer to turn your business goals into an appealing design.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `User Experience`,
-          text: `Our designers are proficient in creating <br/> interactive user interfaces that increase<br/> the consumer retention rate.`,
+          text: `Our designers are proficient in creating interactive user interfaces that increase the consumer retention rate.`,
           image: `/images/service/uiux/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -477,7 +477,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Enhanced Engagement`,
-          text: ` Hiring professional designers could bring<br/> long-term benefits like maximizing user <br/>engagement and loyalty.`,
+          text: ` Hiring professional designers could bring long-term benefits like maximizing user engagement and loyalty.`,
           image: `/images/service/uiux/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -488,7 +488,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Competition`,
-          text: `In today's highly digital world, you need the<br/>best UI/UX designer to make your product <br/> different from your competitors.`,
+          text: `In today's highly digital world, you need the best UI/UX designer to make your product different from your competitors.`,
           image: `/images/service/uiux/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -499,7 +499,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Increased Usability`,
-          text: `To ensure that your product is easy to use<br/> and doesn't cause user frustration, you<br/> need a good UI/UX designer.`,
+          text: `To ensure that your product is easy to use and doesn't cause user frustration, you need a good UI/UX designer.`,
           image: `/images/service/uiux/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -510,7 +510,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Brand Image`,
-          text: `Designers at eSpark Talent guarantee that your<br/> brand looks credible and modern with the<br/> help of their designs.`,
+          text: `Designers at eSpark Talent guarantee that your brand looks credible and modern with the help of their designs.`,
           image: `/images/service/uiux/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -520,7 +520,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Low Development Costs`,
-          text: `Hiring UI/UX designers could prove to be a <br /> good investment as it helps to reduce <br /> future development costs.`,
+          text: `Hiring UI/UX designers could prove to be a good investment as it helps to reduce future development costs.`,
           image: `/images/service/uiux/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -577,7 +577,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Brand Image`,
-          text: `Designers at eSpark Talent guarantee that your brand looks credible and modern with the  help of their designs`,
+          text: `Designers at eSpark Talent guarantee that your brand looks credible and modern with the help of their designs`,
           image: `/images/service/uiux/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -633,13 +633,13 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `How much does it cost to hire a UX designer?`,
-          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
+          heading: `How do I hire the best UI UX designer?`,
+          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
         },
         {
           id: 6,
-          heading: `How do I hire the best UI UX designer?`,
-          description: `eSpark Talent aims to provide the best UI/UX designers who are skilled and experienced.`,
+          heading: `How much does it cost to hire a UX designer?`,
+          description: `Depending upon the project scope and timeline, the cost for the project is decided.`,
         },
       ],
     },
@@ -678,7 +678,7 @@ export const HIRE_DEVELOPERS = [
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Full Stack Developers</span> Expertise`,
       paragraph: `eSpark Talent aims to provide industry professional full-stack developers to build
-      your system.`,
+ your system.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -720,7 +720,7 @@ export const HIRE_DEVELOPERS = [
     technologies: {
       title: `<span style="color:#029894;font-weight:600;" >Full Stack</span> Technologies We Use For Your Project`,
       descrcipton: `Hire the best full-stack developer from eSpark Talent who possesses detailed
-      knowledge of languages, frameworks, and tools.`,
+ knowledge of languages, frameworks, and tools.`,
       items: [
         {
           id: 1,
@@ -823,15 +823,15 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Full Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Full Stack Developers</span> <br/> From eSpark Talent ?`,
       subTitle: `eSpark Talent makes sure to provide a skilled full-stack developer to make your
-      requirements turn into a fine software product`,
+ requirements turn into a fine software product`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Creative`,
-          text: `Full-stack developers are immensely creative <br /> and proficient in working with both <br /> frontend and backend technologies`,
+          text: `Full-stack developers are immensely creative and proficient in working with both frontend and backend technologies`,
           image: `/images/service/full-stack/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -842,7 +842,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Cost-Effective`,
-          text: `Hiring a full-stack developer can be a good <br /> asset as you don't have to invest in <br /> hiring separate frontend and backend developers.`,
+          text: `Hiring a full-stack developer can be a good asset as you don't have to invest in hiring separate frontend and backend developers.`,
           image: `/images/service/full-stack/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -853,7 +853,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `High efficiency`,
-          text: `eSpark Talent aims to provide full-stack <br /> developers that would minimize the <br />communication issue between developers <br /> and different teams by handling multiple <br /> jobs on their own.`,
+          text: `eSpark Talent aims to provide full-stack  developers that would minimize the communication issue between developers and different teams by handling multiple jobs on their own.`,
           image: `/images/service/full-stack/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -864,7 +864,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Quick development`,
-          text: `By developing both the front-end and back-<br />end of a project, full-stack developers <br /> would deliver projects at a quicker pace. `,
+          text: `By developing both the front-end and back-end of a project, full-stack developers would deliver projects at a quicker pace. `,
           image: `/images/service/full-stack/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -875,7 +875,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `In-depth knowledge`,
-          text: `Full Stack developers are more experts at <br /> problem-solving and decision making <br /> enhancing the overall quality of a software <br /> application.`,
+          text: `Full Stack developers are more experts at problem-solving and decision making enhancing the overall quality of a software application.`,
           image: `/images/service/full-stack/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -885,7 +885,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Adaptability`,
-          text: `Full-stack developers are flexible to learn new <br /> tools and frameworks, making them <br /> a suitable option for dynamic projects.`,
+          text: `Full-stack developers are flexible to learn new tools and frameworks, making them a suitable option for dynamic projects.`,
           image: `/images/service/full-stack/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1004,7 +1004,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 6,
           heading: `What languages does a Full Stack developer use most often?`,
-          description: `Full-stack developers most often use HTML, CSS, or JavaScript for frontend  development and PHP or Python for backend development. However, choosing a language depends upon the project requirements.`,
+          description: `Full-stack developers most often use HTML, CSS, or JavaScript for frontend development and PHP or Python for backend development. However, choosing a language depends upon the project requirements.`,
         },
       ],
     },
@@ -1082,7 +1082,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies</br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies<br/>We Use For Your Project`,
       descrcipton: `MEAN stack developers at eSpark Talent are well-versed in the languages, tools, and frameworks for this technology.`,
       items: [
         {
@@ -1178,14 +1178,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated MEAN stack developer from eSpark Talent as they can bring multiple benefits to the development and growth of your software project.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Full stack development`,
-          text: `Our developers excel in handling both frontend <br/> and backend development, ideal for complex <br/>software projects.`,
+          text: `Our developers excel in handling both frontend and backend development, ideal for complex software projects.`,
           image: `/images/service/mean-stack/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1196,7 +1196,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Real-time software`,
-          text: ` Our MEAN stack developers are the best<br/> choice because they have experience in <br/>creating such real-time applications.`,
+          text: ` Our MEAN stack developers are the best choice because they have experience in creating such real-time applications.`,
           image: `/images/service/mean-stack/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1207,7 +1207,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Consistency`,
-          text: `MEAN stack developers reduce the need for<br/> context switching, improving the<br/> usability and productivity of code.`,
+          text: `MEAN stack developers reduce the need for context switching, improving the usability and productivity of code.`,
           image: `/images/service/mean-stack/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1218,7 +1218,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Scalability`,
-          text: `MERN stack developers are professionals at<br/> scaling projects to changing trends<br/> and requirements.`,
+          text: `MERN stack developers are professionals at scaling projects to changing trends and requirements.`,
           image: `/images/service/mean-stack/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1229,7 +1229,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Community driven`,
-          text: `Strong collaboration and communication <br/> among MEAN developers boosts tool, framework, <br/> and library usage and sharing.`,
+          text: `Strong collaboration and communication among MEAN developers boosts tool, framework, and library usage and sharing.`,
           image: `/images/service/mean-stack/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1239,7 +1239,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Latest tech stack `,
-          text: `Using up-to-date technologies like React.js<br/> and Node.js ensures that the applications<br/> built are efficient and modern. `,
+          text: `Using up-to-date technologies like React.js and Node.js ensures that the applications built are efficient and modern. `,
           image: `/images/service/mean-stack/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1528,14 +1528,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MERN Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MERN Stack Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hiring MERN stack developers from eSpark Talent would be a beneficial asset for the development of your software project due to multiple factors.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Full Stack Development`,
-          text: `MERN stack developers are skilled with<br /> the knowledge of both frontend and <br />backend technologies. It is cost-effective<br/> as they handle the entire development<br /> process on their own.`,
+          text: `MERN stack developers are skilled withthe knowledge of both frontend and backend technologies. It is cost-effective as they handle the entire development process on their own.`,
           image: `/images/service/mern/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1546,7 +1546,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Pace of development`,
-          text: `The use of pre-built frameworks and libraries <br /> fastens up the pace of development, <br /> allowing quick delivery of projects by MERN <br /> stack developers.`,
+          text: `The use of pre-built frameworks and libraries fastens up the pace of development, allowing quick delivery of projects by MERN stack developers.`,
           image: `/images/service/mern/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1557,7 +1557,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Language Command`,
-          text: `Using libraries and frameworks of JavaScript <br /> for the development of the entire <br /> project, both frontend and backend has <br /> minimized the complexity of building a <br /> software application`,
+          text: `Using libraries and frameworks of JavaScript for the development of the entire project, both frontend and backend has minimized the complexity of building a software application`,
           image: `/images/service/mern/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1568,7 +1568,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Scalability`,
-          text: `MERN stack developers are professionals at <br /> scaling projects to changing trends <br /> and requirements.`,
+          text: `MERN stack developers are professionals at scaling projects to changing trends and requirements.`,
           image: `/images/service/mern/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1579,7 +1579,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Cross-Platform benefit`,
-          text: `Hiring MERN stack developers could be highly <br />  advantageous as they build <br />  applications that could be used over a variety <br /> of platforms including mobiles, <br /> desktops, web, etc.`,
+          text: `Hiring MERN stack developers could be highly advantageous as they build applications that could be used over a variety of platforms including mobiles, desktops, web, etc.`,
           image: `/images/service/mern/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1589,7 +1589,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Latest Tech Stack`,
-          text: `Using up-to-date technologies like React.js <br /> and Node.js for backend and frontend <br /> development ensures that the applications <br /> built are efficient and modern.`,
+          text: `Using up-to-date technologies like React.js and Node.js for backend and frontend development ensures that the applications built are efficient and modern.`,
           image: `/images/service/mern/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1878,14 +1878,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >DevOps Engineer</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >DevOps Engineer</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent is a renowned tech firm specializing in providing the best DevOps engineer for the development of your software project.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Increased Automation`,
-          text: `Our DevOps engineers automate tasks like <br /> testing and monitoring, reducing errors and <br /> freeing time for innovation.`,
+          text: `Our DevOps engineers automate tasks like testing and monitoring, reducing errors and freeing time for innovation.`,
           image: `/images/service/devOps/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1896,7 +1896,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Cost Efficiency`,
-          text: `Automation of processes and the optimum <br/>usage of resources by our engineers help in <br/>reducing the cost.`,
+          text: `Automation of processes and the optimum usage of resources by our engineers help in reducing the cost.`,
           image: `/images/service/devOps/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1907,7 +1907,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Security`,
-          text: `eSpark DevOps engineers implement security <br/> measures to ensure software meets security <br />  requirements.`,
+          text: `eSpark DevOps engineers implement security measures to ensure software meets security requirements.`,
           image: `/images/service/devOps/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1918,7 +1918,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `CI/CD`,
-          text: `DevOps engineers at eSpark Talent implement<br/> CI/CD pipelines for faster software <br/> development.`,
+          text: `DevOps engineers at eSpark Talent implement CI/CD pipelines for faster software development.`,
           image: `/images/service/devOps/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1929,7 +1929,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Scalability`,
-          text: `Our expert engineers ensure scalable software <br/> handling increasing workloads without <br/> compromising performance.`,
+          text: `Our expert engineers ensure scalable software handling increasing workloads without compromising performance.`,
           image: `/images/service/devOps/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -1939,7 +1939,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Reliability`,
-          text: `DevOps engineers ensure the creation of <br/> reliable projects through continuous <br /> monitoring and testing.`,
+          text: `DevOps engineers ensure the creation of reliable projects through continuous monitoring and testing.`,
           image: `/images/service/devOps/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -1963,7 +1963,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `<span style="color: #029894; font-weight: 700">Security</span>`,
-          text: `eSpark DevOps engineers implement security measures to ensure software meets security  requirements.`,
+          text: `eSpark DevOps engineers implement security measures to ensure software meets security requirements.`,
           image: `/images/service/devOps/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2032,8 +2032,8 @@ export const HIRE_DEVELOPERS = [
       questions: [
         {
           id: 1,
-          heading: `What is the role of a DevOps engineer?`,
-          description: `DevOps engineers bridge the gap between the development and operations teams to ensure that you are delivered with a secure, scalable, and reliable project.`,
+          heading: `We have a DevOps project, can you finish it?`,
+          description: `Yes. Depending upon the project requirments and scope, the timeline for the projcet would be decided.`,
         },
         {
           id: 3,
@@ -2042,8 +2042,8 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 5,
-          heading: `We have a DevOps project, can you finish it?`,
-          description: `Yes. Depending upon the project requirments and scope, the timeline for the projcet would be decided.`,
+          heading: `What is the role of a DevOps engineer?`,
+          description: `DevOps engineers bridge the gap between the development and operations teams to ensure that you are delivered with a secure, scalable, and reliable project.`,
         },
         {
           id: 2,
@@ -2223,14 +2223,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Fintech Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Fintech Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Fintech developer from eSpark Talent to bring revolution to the conventional development process.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Expertise`,
-          text: `eSpark Talent fintech developers excel in<br /> blockchain, payment systems, and data <br /> analytics.`,
+          text: `eSpark Talent fintech developers excel in blockchain, payment systems, and data analytics.`,
           image: `/images/service/fintech/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2241,7 +2241,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Enhanced Security`,
-          text: `eSpark’s Fintech developers ensure secure <br /> financial solutions through encryption, secure <br />coding, and data authentication`,
+          text: `eSpark’s Fintech developers ensure secure financial solutions through encryption, secure coding, and data authentication`,
           image: `/images/service/fintech/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2252,7 +2252,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Regulatory Reasons `,
-          text: `Our Fintech developers work by regulatory to <br /> ensure software solutions meet laws like <br /> GDPR, KYC/AML, and PCI DSS.`,
+          text: `Our Fintech developers work by regulatory to ensure software solutions meet laws like GDPR, KYC/AML, and PCI DSS.`,
           image: `/images/service/fintech/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2263,7 +2263,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Scalability`,
-          text: `Our experts excel at building scalable <br /> infrastructure for handling high data volumes <br /> and concurrent users.`,
+          text: `Our experts excel at building scalable infrastructure for handling high data volumes and concurrent users.`,
           image: `/images/service/fintech/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2274,7 +2274,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Integration Abilities`,
-          text: `eSpark Talent developers manage APIs, cloud <br /> services, and payment to boost software <br /> efficiency and reliability.`,
+          text: `eSpark Talent developers manage APIs, cloud services, and payment to boost software efficiency and reliability.`,
           image: `/images/service/fintech/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2284,7 +2284,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Innovation`,
-          text: `eSpark Talent developers use AI, ML, Blockchain, <br /> and data analytics for customized Fintech<br /> solutions.`,
+          text: `eSpark Talent developers use AI, ML, Blockchain, and data analytics for customized Fintech solutions.`,
           image: `/images/service/fintech/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2397,11 +2397,6 @@ export const HIRE_DEVELOPERS = [
         },
         {
           id: 4,
-          heading: `What are the best ways to hire a fintech software engineer?`,
-          description: `Hire a dedicated Fintech software engineer from eSpark Talent to ensure the development of a scalable, reliable, innovative, and secure software solution.`,
-        },
-        {
-          id: 6,
           heading: `Are fintech jobs in demand? `,
           description: `Fintech jobs are in high demand due to numeous reasons: technology innovation, rvolving regulatory requirements, job diversity, etc.`,
         },
@@ -2416,7 +2411,7 @@ export const HIRE_DEVELOPERS = [
       description:
         'Hire the best QA engineers from eSpark Talent to ensure that the developed software product meets high-quality standards. Our engineers will ensure that your product reaches the highest customer satisfaction by critically analyzing the software product.',
       button: {
-        label: 'Hire a  QA',
+        label: 'Hire a QA',
         link: '/book-a-demo',
         btnVarient: 'primary',
         btnColor: 'secondary',
@@ -2573,14 +2568,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >QA Engineer</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >QA Engineer</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire top-notch QA engineers from eSpark Talent to ensure that your product is credible enough to compete amongst the best ones in the market.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Quality`,
-          text: `Our engineers make sure that your product <br /> fulfills high-quality standards by finding<br /> and fixing bugs.`,
+          text: `Our engineers make sure that your product fulfills high-quality standards by finding and fixing bugs.`,
           image: `/images/service/qa/why-hire/icon1.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2591,7 +2586,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `Cost-efficient `,
-          text: `QA engineers at eSpark Talent identify bugs <br/> during the initial stages of development, more <br /> cost-effective than finding them later.`,
+          text: `QA engineers at eSpark Talent identify bugs during the initial stages of development, more cost-effective than finding them later.`,
           image: `/images/service/qa/why-hire/icon2.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2602,7 +2597,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Customer satisfaction`,
-          text: `High-quality products help retain customers, <br /> increasing overall loyalty and satisfaction for <br />the software application.`,
+          text: `High-quality products help retain customers, increasing overall loyalty and satisfaction for the software application.`,
           image: `/images/service/qa/why-hire/icon3.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2613,7 +2608,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Risk mitigation `,
-          text: `QA engineers assist in assessing potential <br/> risks during development, enhancing stability <br /> and product quality.`,
+          text: `QA engineers assist in assessing potential risks during development, enhancing stability and product quality.`,
           image: `/images/service/qa/why-hire/icon4.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2624,7 +2619,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Compliance`,
-          text: `Our QA engineers also make sure that your <br/> software product does not violate any legal <br/> or ethical constraint.`,
+          text: `Our QA engineers also make sure that your software product does not violate any legal or ethical constraint.`,
           image: `/images/service/qa/why-hire/icon5.svg`,
           isReverse: false,
           alignment: 'right',
@@ -2634,7 +2629,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Continuous enhancement `,
-          text: `To bring continuous improvements in quality <br /> assurance, QA engineers at eSpark Talent <br /> provide feedback and strategies.`,
+          text: `To bring continuous improvements in quality assurance, QA engineers at eSpark Talent provide feedback and strategies.`,
           image: `/images/service/qa/why-hire/icon6.svg`,
           isReverse: false,
           alignment: 'left',
@@ -2801,7 +2796,7 @@ export const HIRE_DEVELOPERS = [
         {
           icon: `/images/service/angular/web.svg`,
           title: `Web Application`,
-          paragraph: `Our professional AngularJS developers  design dynamic web pages and responsive apps compatible with all browsers on both desktop and mobile devices.`,
+          paragraph: `Our professional AngularJS developers design dynamic web pages and responsive apps compatible with all browsers on both desktop and mobile devices.`,
         },
         {
           icon: `/images/service/angular/angular-cms.svg`,
@@ -2929,14 +2924,14 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Angular JS Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Angular JS Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced AngularJS developers to turn your business objectives into a real-world software product.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Design`,
-          text: `Our AngularJS developers hold expertise in<br /> creating interactive user interfaces <br /> that align with the latest trends.`,
+          text: `Our AngularJS developers hold expertise in creating interactive user interfaces that align with the latest trends.`,
           image: `/images/service/angular/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -2945,7 +2940,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `We Match Your Need`,
-          text: `Our AngularJS developers collaborate with <br /> you to align the end product with your <br /> business objectives and requirements.`,
+          text: `Our AngularJS developers collaborate with you to align the end product with business objectives and requirements.`,
           image: `/images/service/angular/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -2954,7 +2949,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Work With Experts`,
-          text: `Our experts in AngularJS are well-versed in <br /> the knowledge and technicalities to deliver <br /> high-end software solutions.`,
+          text: `Our experts in AngularJS are well-versed in the knowledge and technicalities to deliver high-end software solutions.`,
           image: `/images/service/angular/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -2963,7 +2958,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `We provide a smooth and seamless <br />development lifecycle for our clients starting <br /> from the design  till the deployment.`,
+          text: `We provide a smooth and seamless development lifecycle for our clients starting from the design till the deployment.`,
           image: `/images/service/angular/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -2972,7 +2967,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `Communication is the key to the success of any <br /> project. Our developers maintain transparency <br /> and clarity  throughout the development.`,
+          text: `Communication is the key to the success of any project. Our developers maintain transparency and clarity throughout the development.`,
           image: `/images/service/angular/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -2980,7 +2975,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `We provide cost-effective rates for our <br /> AngularJS services that best to both your <br /> budget and requirements.`,
+          text: `We provide cost-effective rates for our AngularJS services that best to both your budget and requirements.`,
           image: `/images/service/angular/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3018,7 +3013,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `We provide a smooth and seamless development lifecycle for our clients starting from the design  till the deployment.`,
+          text: `We provide a smooth and seamless development lifecycle for our clients starting from the design till the deployment.`,
           image: `/images/service/angular/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -3027,7 +3022,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `Communication is the key to the success of any project. Our developers maintain transparency and clarity  throughout the development.`,
+          text: `Communication is the key to the success of any project. Our developers maintain transparency and clarity throughout the development.`,
           image: `/images/service/angular/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -3124,7 +3119,7 @@ export const HIRE_DEVELOPERS = [
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">ReactJS Developers</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
-      React JS developers to cater to your requirements.`,
+ React JS developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -3166,7 +3161,7 @@ export const HIRE_DEVELOPERS = [
     technologies: {
       title: `<span style="color:#029894;font-weight:600;" >React JS</span> Technologies For Your Project`,
       descrcipton: `Hire dedicated React JS developers from eSpark Talent who have in-depth
-      knowledge of languages, tools, and frameworks.`,
+ knowledge of languages, tools, and frameworks.`,
       items: [
         {
           id: 1,
@@ -3257,16 +3252,16 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >ReactJS Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >ReactJS Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced React JS
-      developers to turn your business objectives into a real-world software product.
-      `,
+ developers to turn your business objectives into a real-world software product.
+ `,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Design`,
-          text: `eSpark's React JS developers deliver top-notch<br /> solutions with interactive interfaces,<br /> enhancing user experience..`,
+          text: `eSpark's React JS developers deliver top-notch solutions with interactive interfaces, enhancing user experience..`,
           image: `/images/service/react/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3275,7 +3270,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `We Match Your Need`,
-          text: `Our React JS experts align your business <br /> goals, crafting reliable and innovative <br /> software solutions.`,
+          text: `Our React JS experts align your business goals, crafting reliable and innovative software solutions.`,
           image: `/images/service/react/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -3284,7 +3279,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Work With Experts`,
-          text: `We have a team of professionals that ensure <br /> high-end code and a smooth software <br /> development life cycle.`,
+          text: `We have a team of professionals that ensure high-end code and a smooth software development life cycle.`,
           image: `/images/service/react/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3293,7 +3288,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `eSpark's ReactJS experts skilled in reducing <br /> complexities of development and giving<br /> high-quality software products.`,
+          text: `eSpark's ReactJS experts skilled in reducing complexities of development and giving high-quality software products.`,
           image: `/images/service/react/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3302,7 +3297,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `We ensure transparency and clarity throughout <br /> development, aligning the end product with <br /> your requirements.`,
+          text: `We ensure transparency and clarity throughout development, aligning the end product with your requirements.`,
           image: `/images/service/react/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3310,7 +3305,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `While providing high-end services, we ensure <br /> that our pricing remains affordable and <br /> aligns with your project budget.`,
+          text: `While providing high-end services, we ensure that our pricing remains affordable and aligns with your project budget.`,
           image: `/images/service/react/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3454,7 +3449,7 @@ export const HIRE_DEVELOPERS = [
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">JavaScript Developers</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
-      JavaScript developers to cater to your requirements.`,
+ JavaScript developers to cater to your requirements.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -3496,7 +3491,7 @@ export const HIRE_DEVELOPERS = [
     technologies: {
       title: `<span style="color:#029894;font-weight:600;" >JavaScript</span> Technologies We Use For Your Project`,
       descrcipton: `Hire dedicated JavaScript developers from eSpark Talent who have in-depth
-      knowledge of languages, tools, and frameworks.`,
+ knowledge of languages, tools, and frameworks.`,
       items: [
         {
           id: 1,
@@ -3590,17 +3585,17 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >JavaScript Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >JavaScript Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide professional, skillful, and experienced JavaScript
-      developers to turn your business objectives into a real-world software product.
-      
-      `,
+ developers to turn your business objectives into a real-world software product.
+ 
+ `,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Design`,
-          text: `Hire JavaScript developers from eSpark <br /> Talent ensures highly user-friendly results <br /> with top UI/UX design practices.`,
+          text: `Hire JavaScript developers from eSpark Talent ensures highly user-friendly results with top UI/UX design practices.`,
           image: `/images/service/javascript/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3609,7 +3604,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `02`,
           title: `We Match Your Need`,
-          text: `Our JavaScript developers create software <br /> solutions that align with your business goals, <br /> ensuring reliability and innovation.`,
+          text: `Our JavaScript developers create software solutions that align with your business goals, ensuring reliability and innovation.`,
           image: `/images/service/javascript/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -3618,7 +3613,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `03`,
           title: `Work With Experts`,
-          text: `eSpark's JavaScript developers bring extensive <br /> expertise in tools, frameworks, and libraries to <br /> deliver high-end applications.`,
+          text: `eSpark's JavaScript developers bring extensive expertise in tools, frameworks, and libraries to deliver high-end applications.`,
           image: `/images/service/javascript/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3627,7 +3622,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `Our developers follow agile methodology for <br /> smooth collaboration with stakeholders <br /> throughout development.`,
+          text: `Our developers follow agile methodology for smooth collaboration with stakeholders throughout development.`,
           image: `/images/service/javascript/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3636,7 +3631,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `Our JavaScript developers prioritize clear <br /> communication throughout development for <br /> successful project completion.`,
+          text: `Our JavaScript developers prioritize clear communication throughout development for successful project completion.`,
           image: `/images/service/javascript/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3644,7 +3639,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `With quality, value, and efficiency, we make <br /> sure to offer affordable price rates for <br /> our services. `,
+          text: `With quality, value, and efficiency, we make sure to offer affordable price rates for our services. `,
           image: `/images/service/javascript/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3787,8 +3782,7 @@ export const HIRE_DEVELOPERS = [
     },
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Next.js Developers</span> Expertise`,
-      paragraph: `eSpark is a tech company, that provides skilled Next.js developers proficient in
-turning your requirements into a quality product.`,
+      paragraph: `eSpark is a tech company, that provides skilled Next.js developers proficient in turning your requirements into a quality product.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -3808,7 +3802,7 @@ turning your requirements into a quality product.`,
         {
           icon: `/images/service/nextjs/web.svg`,
           title: `Web Portals`,
-          paragraph: `Hire Next.js developers to develop web portals and dashboards with data gathering capabilities, intuitive elements, and real-time updates.          `,
+          paragraph: `Hire Next.js developers to develop web portals and dashboards with data gathering capabilities, intuitive elements, and real-time updates. `,
         },
         {
           icon: `/images/service/nextjs/hybird.svg`,
@@ -3829,8 +3823,7 @@ turning your requirements into a quality product.`,
     },
     technologies: {
       title: `<span style="color:#029894;font-weight:600;" >Next.Js</span> Technologies For Your Project`,
-      descrcipton: `Hire Next.js developers from eSpark Talent who have an extensive understanding
-      of languages, tools, and frameworks.`,
+      descrcipton: `Hire Next.js developers from eSpark Talent who have an extensive understanding of languages, tools, and frameworks.`,
       items: [
         {
           id: 1,
@@ -3921,16 +3914,14 @@ turning your requirements into a quality product.`,
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Next.js Developers</span> <br> From eSpark Talent ?`,
-      subTitle: `eSpark Talent aims to provide experienced Next.js developers to turn your
-      business objectives into a good software product.      
-      `,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Next.js Developers</span> <br /> From eSpark Talent ?`,
+      subTitle: `eSpark Talent aims to provide experienced Next.js developers to turn your business objectives into a good software product.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Design`,
-          text: `Next.js developers at eSpark excel <br /> at implementing intuitive designs into web <br /> applications.          `,
+          text: `Next.js developers at eSpark excel at implementing intuitive designs into web applications. `,
           image: `/images/service/nextjs/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3939,7 +3930,7 @@ turning your requirements into a quality product.`,
         {
           id: `02`,
           title: `We Match Your Need`,
-          text: `We make sure that our Next.js developers <br /> provide solutions that align with your <br /> goals and requirements.          `,
+          text: `We make sure that our Next.js developers provide solutions that align with your goals and requirements. `,
           image: `/images/service/nextjs/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -3948,7 +3939,7 @@ turning your requirements into a quality product.`,
         {
           id: `03`,
           title: `Work With Experts`,
-          text: `Developers at eSpark Talent possess a high <br /> degree of skills in building high-performance <br /> web applications using Next.js.`,
+          text: `Developers at eSpark Talent possess a high degree of skills in building high-performance web applications using Next.js.`,
           image: `/images/service/nextjs/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -3957,7 +3948,7 @@ turning your requirements into a quality product.`,
         {
           id: `04`,
           title: `Hassle-Free Development`,
-          text: `Our Next.js developers are well equipped with <br /> the skill of delivering products on time without<br />any hassle.`,
+          text: `Our Next.js developers are well equipped with the skill of delivering products on time without any hassle.`,
           image: `/images/service/nextjs/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -3966,7 +3957,7 @@ turning your requirements into a quality product.`,
         {
           id: `05`,
           title: `Clear Communication`,
-          text: `During development, eSpark Talent developers <br /> collaborate closely with you, keeping you <br /> informed about progress and milestones.achieved.`,
+          text: `During development, eSpark Talent developers collaborate closely with you, keeping you informed about progress and milestones.achieved.`,
           image: `/images/service/nextjs/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -3974,7 +3965,7 @@ turning your requirements into a quality product.`,
         {
           id: `06`,
           title: `Competitive Pricing`,
-          text: `We offer top-notch software solutions at <br />affordable rates that match your project <br /> budget perfectly.  `,
+          text: `We offer top-notch software solutions at affordable rates that match your project budget perfectly. `,
           image: `/images/service/nextjs/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4066,7 +4057,7 @@ goals and requirements.
         {
           id: 5,
           heading: `How can I track the progress of my project?`,
-          description: `  We aim to provide transparent communication through different channels to guide   you about the progress and milestones of your project.`,
+          description: ` We aim to provide transparent communication through different channels to guide you about the progress and milestones of your project.`,
         },
         {
           id: 2,
@@ -4139,7 +4130,7 @@ goals and requirements.
         {
           icon: `/images/service/android/experts/uiux.svg`,
           title: `UI/UX Design`,
-          paragraph: `Developers at eSpark Talent create designs following the Android design guidelines to ensure a smooth user experience.          `,
+          paragraph: `Developers at eSpark Talent create designs following the Android design guidelines to ensure a smooth user experience. `,
         },
         {
           icon: `/images/service/android/experts/app.svg`,
@@ -4251,14 +4242,14 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Android Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Android Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Android developer from eSpark Talent as they possess an extensive skillset.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Platform skills`,
-          text: `Our developers are highly efficient at <br /> integrating the Android architecture and <br /> design to build interactive applications.          `,
+          text: `Our developers are highly efficient at integrating the Android architecture and design to build interactive applications.          `,
           image: `/images/service/android/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4267,7 +4258,7 @@ goals and requirements.
         {
           id: `02`,
           title: `User Experience`,
-          text: `Android developers are skilled at creating <br />interactive user interfaces to maximize user <br /> satisfaction.          `,
+          text: `Android developers are skilled at creating interactive user interfaces to maximize user  satisfaction.          `,
           image: `/images/service/android/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4276,7 +4267,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Device compatibility`,
-          text: `Developers at eSpark build Android applications <br /> that are compatible with devices with different <br /> screen sizes, versions, and resolutions.`,
+          text: `Developers at eSpark build Android applications that are compatible with devices with different  screen sizes, versions, and resolutions.`,
           image: `/images/service/android/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4285,7 +4276,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Performance enhancement`,
-          text: `Android developers at eSpark Talent are <br /> responsible for making the applications <br /> responsive by making the code efficient.`,
+          text: `Android developers at eSpark Talent are  responsible for making the applications  responsive by making the code efficient.`,
           image: `/images/service/android/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4294,7 +4285,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Testing`,
-          text: `Android developers perform thorough testing to <br /> ensure the performance and reliability of <br /> applications.`,
+          text: `Android developers perform thorough testing to ensure the performance and reliability of  applications.`,
           image: `/images/service/android/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -4302,7 +4293,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Maintenance`,
-          text: `To keep the applications updated with <br /> changing versions, Android developers <br /> maintain the applications for updates.  `,
+          text: `To keep the applications updated with changing versions, Android developers maintain the applications for updates.  `,
           image: `/images/service/android/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4447,8 +4438,8 @@ goals and requirements.
     experties: {
       title: `eSpark Talent <span style="color: #029894; font-weight: 600">Flutter Developers</span> Expertise`,
       paragraph: `eSpark is a renowned tech company, known for its expertise in providing top-notch
-      Flutter developers to cater to your requirements.
-      `,
+ Flutter developers to cater to your requirements.
+ `,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
       arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
@@ -4468,7 +4459,7 @@ goals and requirements.
         {
           icon: `/images/service/flutter/experts/uiux.svg`,
           title: `UI/UX services`,
-          paragraph: `Flutter developers create interactive designs using widgets to ensure a smooth user experience.         `,
+          paragraph: `Flutter developers create interactive designs using widgets to ensure a smooth user experience. `,
         },
         {
           icon: `/images/service/flutter/experts/app.svg`,
@@ -4580,14 +4571,14 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Flutter Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Flutter Developers</span> <br /> From eSpark Talent ?`,
       subTitle: `Hire dedicated Flutter developers from eSpark Talent who possess the skills and experience to develop a fine software product`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
         {
           id: `01`,
           title: `Cross-Platform `,
-          text: `Our Flutter developers excel in cross-platform <br /> projects for Android, saving time and cost<br /> with a single codebase.          `,
+          text: `Our Flutter developers excel in cross-platform projects for Android, saving time and cost with a single codebase.          `,
           image: `/images/service/flutter/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4596,7 +4587,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Integration`,
-          text: `Our developers can efficiently integrate with <br /> native code to use several functionalities and<br /> APIs.        `,
+          text: `Our developers can efficiently integrate with native code to use several functionalities and APIs.        `,
           image: `/images/service/flutter/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4605,7 +4596,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Interactive UIs`,
-          text: `Flutter has a wide range of UI frameworks and <br /> widgets that help our developers create visually <br /> appealing user interfaces.`,
+          text: `Flutter has a wide range of UI frameworks and widgets that help our developers create visually appealing user interfaces.`,
           image: `/images/service/flutter/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4614,7 +4605,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Performance`,
-          text: `Developers at eSpark Talent have a knack for <br /> creating apps with seamless user experience <br /> and optimal performance.`,
+          text: `Developers at eSpark Talent have a knack for creating apps with seamless user experience and optimal performance.`,
           image: `/images/service/flutter/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4623,7 +4614,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Fast development`,
-          text: `Flutter developers are efficient at tracking the <br /> changes in real-time causing a fast pace in <br /> development.`,
+          text: `Flutter developers are efficient at tracking the changes in real-time causing a fast pace in development.`,
           image: `/images/service/flutter/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -4631,7 +4622,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Strong community`,
-          text: `Due to high collaboration and extensive <br /> documentation, our developers stay updated <br /> with the latest changes.  `,
+          text: `Due to high collaboration and extensive documentation, our developers stay updated with the latest changes.  `,
           image: `/images/service/flutter/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4770,7 +4761,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers'</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">React Native Developers</span> Expertise`,
       paragraph: `React Native developers at eSpark Talent are experts at using this technology to build a vast variety of software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -4811,7 +4802,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies</br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies<br/>We Use For Your Project`,
       descrcipton: `React Native developers at eSpark Talent possess a thorough knowledge of different languages, tools, and frameworks.`,
       items: [
         {
@@ -4911,13 +4902,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated React Native from eSpark Talent as they assist you in creating the best software products.`,
       processes: [
         {
           id: `01`,
           title: `Cross-Platform projects`,
-          text: `React Native developers are proficient at <br /> creating cross-platform apps for iOS and <br /> Android, saving time, effort, and money for development.`,
+          text: `React Native developers are proficient atcreating cross-platform apps for iOS and Android, saving time, effort, and money for development.`,
           image: `/images/service/react-native/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4926,7 +4917,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Maintenance`,
-          text: `React Native developers at eSpark Talent stay <br /> updated with all the changing trends and <br /> updates to maintain the apps for new OS <br /> versions.`,
+          text: `React Native developers at eSpark Talent stay updated with all the changing trends and updates to maintain the apps for new OS versions.`,
           image: `/images/service/react-native/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -4935,7 +4926,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Scalability`,
-          text: `Our developers are experts at scaling React <br /> Native apps to handle increasing traffic loads <br /> and feature improvements.`,
+          text: `Our developers are experts at scaling React Native apps to handle increasing traffic loads and feature improvements.`,
           image: `/images/service/react-native/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -4944,7 +4935,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Efficiency`,
-          text: `Most of the React Native developers can <br /> easily transition from React to React Native, <br /> speeding up the pace of development.`,
+          text: `Most of the React Native developers can easily transition from React to React Native, speeding up the pace of development.`,
           image: `/images/service/react-native/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -4953,7 +4944,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Native developers`,
-          text: `They use native components to build <br /> applications which is far more effective than <br /> hybrid frameworks.`,
+          text: `They use native components to build applications which is far more effective than hybrid frameworks.`,
           image: `/images/service/react-native/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -4961,7 +4952,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Community`,
-          text: `React Native developers have a large <br /> community that shares knowledge about <br /> tools, resources, and frameworks.`,
+          text: `React Native developers have a large community that shares knowledge about tools, resources, and frameworks.`,
           image: `/images/service/react-native/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5098,7 +5089,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">ASP.net Developers</span> Expertise`,
       paragraph: `ASP.net developers at eSpark Talent are skilled at using this technology to develop scalable and reliable software solutions.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -5139,7 +5130,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `ASP.net developers at eSpark Talent are well-versed in various languages, tools, and frameworks to build software products.`,
       items: [
         {
@@ -5235,13 +5226,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated ASP.net developers from eSpark Talent to avail numerous benefits for software development.`,
       processes: [
         {
           id: `01`,
           title: `Performance`,
-          text: `Our developers aim to provide high- <br /> performance applications by ensuring <br /> features like memory management and <br /> caching mechanisms.`,
+          text: `Our developers aim to provide high- performance applications by ensuring features like memory management and caching mechanisms.`,
           image: `/images/service/asp.net/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5250,7 +5241,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Productivity`,
-          text: `ASP.net developers at eSpark Talent are very <br /> productive at writing clean code <br /> and automating routine tasks to enhance the <br /> overall development process.`,
+          text: `ASP.net developers at eSpark Talent are very productive at writing clean code and automating routine tasks to enhance the overall development process.`,
           image: `/images/service/asp.net/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -5259,7 +5250,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Regulatory Reasons`,
-          text: `Fintech developers work by regulatory and <br /> compliance requirements to ensure that the <br /> software solutions fulfill laws like GDPR, KYC/ <br /> AML, and PCI DSS.`,
+          text: `Fintech developers work by regulatory and compliance requirements to ensure that the software solutions fulfill laws like GDPR, KYC/ AML, and PCI DSS.`,
           image: `/images/service/asp.net/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5268,7 +5259,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Scalability`,
-          text: `ASP.net developers are skilled at using this <br /> framework to build scalable applications to <br /> handle increasing traffic loads.`,
+          text: `ASP.net developers are skilled at using this framework to build scalable applications to handle increasing traffic loads.`,
           image: `/images/service/asp.net/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5277,7 +5268,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Integration`,
-          text: `ASP.net developers are skilled at integrating <br /> applications with other APIs, databases, and <br /> libraries.`,
+          text: `ASP.net developers are skilled at integrating applications with other APIs, databases, and libraries.`,
           image: `/images/service/asp.net/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -5285,7 +5276,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Community`,
-          text: `The strong collaboration and communication <br /> between ASP.net developers are highly <br /> beneficial for building efficient software <br /> products.`,
+          text: `The strong collaboration and communication between ASP.net developers are highly beneficial for building efficient software products.`,
           image: `/images/service/asp.net/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5453,7 +5444,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For </br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `PHP developers at eSpark Talent have extensive knowledge of various tools, frameworks, and libraries.`,
       items: [
         {
@@ -5545,13 +5536,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire the best PHP developers from eSpark Talent as they are trained to provide you with a quality software product.`,
       processes: [
         {
           id: `01`,
           title: `Fast development`,
-          text: `Our PHP developers leverage simplicity and pre- <br /> built libraries for faster system development, <br /> saving time and money.`,
+          text: `Our PHP developers leverage simplicity and pre-built libraries for faster system development, saving time and money.`,
           image: `/images/service/php/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5560,7 +5551,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Versatility`,
-          text: `eSpark Talent's PHP developers excel in creating <br /> diverse software solutions, including CMS, web <br /> apps, and e-commerce websites.`,
+          text: `eSpark Talent's PHP developers excel in creating diverse software solutions, including CMS, web apps, and e-commerce websites.`,
           image: `/images/service/php/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -5569,7 +5560,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Scalability`,
-          text: `PHP developers from eSpark Talent are  skillful <br /> at working on small projects as well as large <br /> enterprises.`,
+          text: `PHP developers from eSpark Talent are skillful at working on small projects as well as large enterprises.`,
           image: `/images/service/php/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5578,7 +5569,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Cost-Effective`,
-          text: `PHP developers allow development using an <br /> open source technology which helps to save <br /> the resources allocated for development`,
+          text: `PHP developers allow development using an open source technology which helps to save the resources allocated for development`,
           image: `/images/service/php/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5587,7 +5578,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Compatibility`,
-          text: `PHP is compatible with a variety of operating <br /> systems, making it an optimal tool for <br /> development.`,
+          text: `PHP is compatible with a variety of operating systems, making it an optimal tool for development.`,
           image: `/images/service/php/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -5595,7 +5586,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Smooth integration`,
-          text: `Our developers are trained to integrate this <br /> technology smoothly with databases and <br /> APIs for robust systems.`,
+          text: `Our developers are trained to integrate this technology smoothly with databases and APIs for robust systems.`,
           image: `/images/service/php/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5624,7 +5615,7 @@ goals and requirements.
         {
           id: `03`,
           title: `<span style="color: #029894; font-weight: 700; text-align: start"> Scalability </span>`,
-          text: `PHP developers from eSpark Talent are  skillful at working on small projects as well as large enterprises.`,
+          text: `PHP developers from eSpark Talent are skillful at working on small projects as well as large enterprises.`,
           image: `/images/service/php/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -5778,7 +5769,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For </br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `Python developer at eSpark Talent possesses good know-how about different tools, libraries, and frameworks.`,
       items: [
         {
@@ -5870,13 +5861,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Python developer from eSpark Talent as our basic motive is to provide you with the best software solution that fulfills all your objectives and requirements.`,
       processes: [
         {
           id: `01`,
           title: `Fast development`,
-          text: `Due to the simplicity and ease of use of this <br /> technology, our developers will develop your <br /> product at a faster pace.`,
+          text: `Due to the simplicity and ease of use of this technology, our developers will develop your product at a faster pace.`,
           image: `/images/service/python/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5885,7 +5876,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Maintainability`,
-          text: `Python developers at eSpark Talent are <br /> proficient at collaborating on different projects, <br /> allowing easy maintenance of projects.`,
+          text: `Python developers at eSpark Talent are proficient at collaborating on different projects, allowing easy maintenance of projects.`,
           image: `/images/service/python/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -5894,7 +5885,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Scalability`,
-          text: `Hire a Python developer from eSpark Talent, <br /> skilled at working on small projects as well as  <br /> large enterprises.`,
+          text: `Hire a Python developer from eSpark Talent, skilled at working on small projects as well aslarge enterprises.`,
           image: `/images/service/python/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -5903,7 +5894,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Cost-Effective`,
-          text: `Hiring a Python developer would be valuable <br /> for development due to the open-source <br /> nature of Python, making it cost-effective.`,
+          text: `Hiring a Python developer would be valuable for development due to the open-source nature of Python, making it cost-effective.`,
           image: `/images/service/python/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -5912,7 +5903,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Communication`,
-          text: `Our Python developers prioritize clear and timely <br /> communication to keep you informed about <br /> your project's progress.`,
+          text: `Our Python developers prioritize clear and timely communication to keep you informed about your project's progress.`,
           image: `/images/service/python/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -5920,7 +5911,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Large library`,
-          text: `Hiring a Python developer could be beneficial <br /> as Python has a vast variety of libraries and <br /> tools to enhance the process of development.`,
+          text: `Hiring a Python developer could be beneficial as Python has a vast variety of libraries and tools to enhance the process of development.`,
           image: `/images/service/python/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6092,7 +6083,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Node.js</span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Node.js</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Node.js developers at eSpark Talent are proficient with the use of different tools, libraries, and frameworks used to build a variety of software products.`,
       items: [
         {
@@ -6184,13 +6175,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Node.js Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Node.js Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hiring a top-notch node.js developer from eSpark Talent could be an invaluable asset to bring improvements to the conventional development lifecycle.`,
       processes: [
         {
           id: `01`,
           title: `Performance`,
-          text: `Due to the asynchronous and non-blocking <br /> nature of Node.js, these developers are <br /> preferred to develop high-performance <br /> software solutions.`,
+          text: `Due to the asynchronous and non-blocking nature of Node.js, these developers are preferred to develop high-performance software solutions.`,
           image: `/images/service/node-js/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6199,7 +6190,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Efficiency`,
-          text: `These developers are good at utilizing server <br /> resources due to the non-blocking, event- <br /> driven architecture of NODE.js.`,
+          text: `These developers are good at utilizing server resources due to the non-blocking, event- driven architecture of NODE.js.`,
           image: `/images/service/node-js/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -6208,7 +6199,7 @@ goals and requirements.
         {
           id: `03`,
           title: `JavaScript expertise`,
-          text: `Node.js developers at eSpark Talent have the <br /> expertise in conducting full-stack <br /> development due to their proficiency in <br /> JavaScript.`,
+          text: `Node.js developers at eSpark Talent have the expertise in conducting full-stack development due to their proficiency in JavaScript.`,
           image: `/images/service/node-js/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6217,7 +6208,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Scalability`,
-          text: `Node.js developers are skilled at scaling a <br /> software project to a larger level so that it is <br /> capable of handling increasing traffic load.`,
+          text: `Node.js developers are skilled at scaling a software project to a larger level so that it is capable of handling increasing traffic load.`,
           image: `/images/service/node-js/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6226,7 +6217,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Real-time applications`,
-          text: `Our developers have the skills and experience</br> to build real-time applications like chat apps</br> that manage numerous concurrent</br> connections effectively.`,
+          text: `Our developers have the skills and experience to build real-time applications like chat apps that manage numerous concurrent connections effectively.`,
           image: `/images/service/node-js/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -6234,7 +6225,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Vast Ecosystem`,
-          text: `Node.js developers excel at the fast <br /> development of software solutions due to <br /> the availability of an extensive amount of <br /> libraries, tools, and frameworks.`,
+          text: `Node.js developers excel at the fast development of software solutions due to the availability of an extensive amount of libraries, tools, and frameworks.`,
           image: `/images/service/node-js/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6416,7 +6407,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Firmware</span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Firmware</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Firmware developers possess a thorough knowledge of various tools and frameworks.`,
       items: [
         {
@@ -6518,13 +6509,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Firmware Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Firmware Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Firmware developer from eSpark Talent as they aim to provide you with the best software solution.`,
       processes: [
         {
           id: `01`,
           title: `Expertise`,
-          text: `Firmware developers at eSpark are skilled in <br /> languages like C which are mainly used to <br /> develop embedded systems.`,
+          text: `Firmware developers at eSpark are skilled in languages like C which are mainly used to develop embedded systems.`,
           image: `/images/service/firmware/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6533,7 +6524,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Optimal performance`,
-          text: `Our developers make the code optimized to <br /> enhance the overall stability and performance <br /> of the built systems.`,
+          text: `Our developers make the code optimized to enhance the overall stability and performance of the built systems.`,
           image: `/images/service/firmware/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -6542,7 +6533,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization`,
-          text: `Developers at eSpark will customize the <br /> firmware to incorporate the features and <br /> specifications you suggest.`,
+          text: `Developers at eSpark will customize the firmware to incorporate the features and specifications you suggest.`,
           image: `/images/service/firmware/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6551,7 +6542,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Hardware integration`,
-          text: `Firmware developers are experts at <br /> integrating firmware with hardware devices <br /> in an efficient manner.`,
+          text: `Firmware developers are experts at integrating firmware with hardware devices in an efficient manner.`,
           image: `/images/service/firmware/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6560,7 +6551,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Security`,
-          text: `To protect the devices from potential threats, <br /> firmware developers implement necessary <br /> security measures.`,
+          text: `To protect the devices from potential threats, firmware developers implement necessary security measures.`,
           image: `/images/service/firmware/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -6568,7 +6559,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Testing`,
-          text: `After development, our developers will test <br /> the firmware to detect bugs and improve the <br /> quality.`,
+          text: `After development, our developers will test the firmware to detect bugs and improve the quality.`,
           image: `/images/service/firmware/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6750,7 +6741,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;"> PCB Designer </span> Technologies We <br> Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;"> PCB Designer </span> Technologies We <br /> Use For Your Project`,
       descrcipton: `PCB designers at eSpark Talent have good know-how about different tools and technologies.`,
       items: [
         {
@@ -6842,13 +6833,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PCB Designers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PCB Designers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated PCB designer from eSpark Talent as they possess a wide range of quality attributes that would ensure you get a quality product.`,
       processes: [
         {
           id: `01`,
           title: `Customized Designs`,
-          text: `They build customized designs by ensuring <br /> that the final design is reliable and <br /> scalable.`,
+          text: `They build customized designs by ensuring that the final design is reliable and scalable.`,
           image: `/images/service/pcb/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6857,7 +6848,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Quality`,
-          text: `Our designers ensure that the design caters <br /> to all the industry objectives by minimizing <br /> the risk of failures and defects.`,
+          text: `Our designers ensure that the design caters to all the industry objectives by minimizing the risk of failures and defects.`,
           image: `/images/service/pcb/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -6866,7 +6857,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Expertise`,
-          text: `PCB designers at eSpark Talent are experts at <br /> developing efficient circuit layouts with features <br /> like thermal management.`,
+          text: `PCB designers at eSpark Talent are experts at developing efficient circuit layouts with features like thermal management.`,
           image: `/images/service/pcb/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -6875,7 +6866,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Enhanced Technology`,
-          text: `PCB designers possess detailed knowledge <br /> about various tools and technologies so that <br /> they build intuitive designs.`,
+          text: `PCB designers possess detailed knowledge about various tools and technologies so that they build intuitive designs.`,
           image: `/images/service/pcb/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6884,7 +6875,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Manufacturability `,
-          text: `PCB designers at eSpark Talent are good at <br /> making designs that are easy to manufacture, <br /> reducing the overall cost.`,
+          text: `PCB designers at eSpark Talent are good at making designs that are easy to manufacture, reducing the overall cost.`,
           image: `/images/service/pcb/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -6892,7 +6883,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Streamlined`,
-          text: `Hiring an outsourced PCB designer from <br /> eSpark Talent would assist you in focusing on <br /> other aspects of development.`,
+          text: `Hiring an outsourced PCB designer from eSpark Talent would assist you in focusing on other aspects of development.`,
           image: `/images/service/pcb/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -6985,7 +6976,7 @@ goals and requirements.
         },
         {
           id: 2,
-          heading: `What makes eSpark  PCB designer Different?`,
+          heading: `What makes eSpark PCB designer Different?`,
           description: `Our designers are good at developing effective designs as well as communicating with the manufacturers to ensure optimal performance.`,
         },
         {
@@ -7169,13 +7160,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Embedded Developers </span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Embedded Developers </span> <br /> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Embedded developer from eSpark talent who possesses a knack for using this technology to build products.`,
       processes: [
         {
           id: `01`,
           title: `Product Development`,
-          text: `Embedded developers are involved in the <br /> entire development lifecycle starting with the <br /> project planning till maintenance.`,
+          text: `Embedded developers are involved in the entire development lifecycle starting with the project planning till maintenance.`,
           image: `/images/service/embedded/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7184,7 +7175,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Expertise`,
-          text: `Our developers are experts at programming <br /> languages like C++ for developing embedded <br /> systems.`,
+          text: `Our developers are experts at programming languages like C++ for developing embedded systems.`,
           image: `/images/service/embedded/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -7193,7 +7184,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Optimization`,
-          text: `Embedded developer at eSpark Talent makes <br /> code efficient to handle issues like power <br /> consumption and memory usage.`,
+          text: `Embedded developer at eSpark Talent makes code efficient to handle issues like power consumption and memory usage.`,
           image: `/images/service/embedded/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7202,7 +7193,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Security`,
-          text: `To protect the system against cyber threats, <br /> embedded developers implement the best <br /> security measures.`,
+          text: `To protect the system against cyber threats, embedded developers implement the best security measures.`,
           image: `/images/service/embedded/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7211,7 +7202,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Customization`,
-          text: `Developers are eSpark Talent customize the <br /> product based on your requirements to <br /> incorporate your desired functionalities.`,
+          text: `Developers are eSpark Talent customize the product based on your requirements to incorporate your desired functionalities.`,
           image: `/images/service/embedded/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7219,7 +7210,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Testing`,
-          text: `Embedded developers at eSpark Talent <br /> conduct thorough testing to validate the <br /> security and scalability of systems.`,
+          text: `Embedded developers at eSpark Talent conduct thorough testing to validate the security and scalability of systems.`,
           image: `/images/service/embedded/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7360,7 +7351,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Shopify Developers</span> Expertise`,
       paragraph: `Developers at eSpark Talent are experts at using Shopify for various tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -7401,7 +7392,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `Shopify developers at eSpark have detailed knowledge about numerous tools and frameworks.`,
       items: [
         {
@@ -7501,13 +7492,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated Shopify developers from eSpark Talent as they possess a wide variety of quality attributes.`,
       processes: [
         {
           id: `01`,
           title: `Experties`,
-          text: `Shopify developers are experts at developing</br> customized online stores to enhance your</br> presence on the internet.`,
+          text: `Shopify developers are experts at developing customized online stores to enhance your presence on the internet.`,
           image: `/images/service/shopify/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7515,8 +7506,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `Optimization  `,
-          text: `To enhance customer satisfaction, our developers</br> optimize the speed and functionalities of your</br> Shopify store.`,
+          title: `Optimization `,
+          text: `To enhance customer satisfaction, our developers optimize the speed and functionalities of your Shopify store.`,
           image: `/images/service/shopify/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -7525,7 +7516,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization `,
-          text: `Developers at eSpark Talent customize the</br> online store according to your scope and</br> requirements.`,
+          text: `Developers at eSpark Talent customize the online store according to your scope and requirements.`,
           image: `/images/service/shopify/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7534,7 +7525,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Interactive design`,
-          text: `Shopify developers create intuitive designs so</br> that your online store is responsive across a</br> range of mobile devices.`,
+          text: `Shopify developers create intuitive designs so that your online store is responsive across a range of mobile devices.`,
           image: `/images/service/shopify/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7543,7 +7534,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Technical guidance`,
-          text: `After development, Shopify developers at</br> eSpark provide guidance to keep your store</br> updated.`,
+          text: `After development, Shopify developers at eSpark provide guidance to keep your store updated.`,
           image: `/images/service/shopify/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7551,7 +7542,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Security`,
-          text: `To keep your store secure from cyber threats,</br> our developers implement robust security</br> measures.`,
+          text: `To keep your store secure from cyber threats, our developers implement robust security measures.`,
           image: `/images/service/shopify/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7562,7 +7553,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `Our developers aim to provide high- <br /> performance applications by ensuring <br /> features like memory management and <br /> caching mechanisms.`,
+          text: `Our developers aim to provide high- performance applications by ensuring features like memory management and  caching mechanisms.`,
           image: `/images/service/shopify/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7570,8 +7561,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `Optimization  `,
-          text: `To enhance customer satisfaction, our developers</br> optimize the speed and functionalities of your</br> Shopify store.`,
+          title: `Optimization `,
+          text: `To enhance customer satisfaction, our developers optimize the speed and functionalities of your Shopify store.`,
           image: `/images/service/shopify/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -7580,7 +7571,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization `,
-          text: `Developers at eSpark Talent customize the</br> online store according to your scope and</br> requirements.`,
+          text: `Developers at eSpark Talent customize the online store according to your scope and requirements.`,
           image: `/images/service/shopify/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7589,7 +7580,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Interactive design`,
-          text: `Shopify developers create intuitive designs so</br> that your online store is responsive across a</br> range of mobile devices.`,
+          text: `Shopify developers create intuitive designs so that your online store is responsive across a range of mobile devices.`,
           image: `/images/service/shopify/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -7598,7 +7589,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Technical guidance`,
-          text: `After development, Shopify developers at</br> eSpark provide guidance to keep your store</br> updated.`,
+          text: `After development, Shopify developers at eSpark provide guidance to keep your store updated.`,
           image: `/images/service/shopify/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7607,7 +7598,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Community`,
-          text: `To keep your store secure from cyber threats,</br> our developers implement robust security</br> measures.`,
+          text: `To keep your store secure from cyber threats, our developers implement robust security measures.`,
           image: `/images/service/shopify/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -7635,13 +7626,13 @@ goals and requirements.
         },
         {
           id: 3,
-          heading: `What skills do our Shopify Developers have?`,
-          description: `Shopify developers at eSpark Talent are skilled at store setup, API integration and product management.`,
+          heading: `Is it worth it to hire a Shopify expert?`,
+          description: `Shopify developer would ensure that your online store is capable enough by integrating various features, APIs and security measures.`,
         },
         {
           id: 5,
-          heading: `Is it worth it to hire a Shopify expert?`,
-          description: `Shopify developer would ensure that your online store is capable enough by integrating various features, APIs and security measures.`,
+          heading: `What skills do our Shopify Developers have?`,
+          description: `Shopify developers at eSpark Talent are skilled at store setup, API integration and product management.`,
         },
         {
           id: 2,
@@ -7693,7 +7684,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers'</span> Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Wordpress Developers</span> Expertise`,
       paragraph: `WordPress developer at eSpark Talent are experts at using this technology to develop a fine software product.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Developer`,
@@ -7734,7 +7725,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Wordpress </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Wordpress </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `WordPress developers at eSpark Talent have detailed knowledge about different languages, libraries and frameworks.`,
       items: [
         {
@@ -7827,13 +7818,13 @@ goals and requirements.
     ],
 
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Wordpress Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Wordpress Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated WordPress developer from eSpark Talent as they make sure to provide you with a fine software application.`,
       processes: [
         {
           id: `01`,
           title: `Experties`,
-          text: `WordPress developers at eSpark Talent have<br /> knowledge about this technology to ensure that<br /> you get a professional website. `,
+          text: `WordPress developers at eSpark Talent have knowledge about this technology to ensure thatyou get a professional website. `,
           image: `/images/service/wordpress/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7841,8 +7832,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `SEO Optimization  `,
-          text: `Our developers make sure to integrate SEO</br> techniques so that your website rank higher on<br /> the search engine.`,
+          title: `SEO Optimization `,
+          text: `Our developers make sure to integrate SEO techniques so that your website rank higher on the search engine.`,
           image: `/images/service/wordpress/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -7851,7 +7842,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization `,
-          text: `Developers at eSpark Talent can modify existing<br /> plugins, themes and features according to your<br /> requirements.`,
+          text: `Developers at eSpark Talent can modify existing plugins, themes and features according to your requirements.`,
           image: `/images/service/wordpress/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -7860,7 +7851,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Interactive design`,
-          text: `Our WordPress experts create a user-friendly</br> design to ensure high customer satisfaction</br> and loyalty to the product.`,
+          text: `Our WordPress experts create a user-friendly design to ensure high customer satisfaction and loyalty to the product.`,
           image: `/images/service/wordpress/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7869,8 +7860,8 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce</br> websites with features like payment gateways<br/> product filters and shopping carts.
-          `,
+          text: `Our experts at developing e-commerce websites with features like payment gateways product filters and shopping carts.
+ `,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -7878,7 +7869,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Security `,
-          text: `To protect your website from cyber threats, <br /> our developers implement security measures <br /> like encryption and controls.`,
+          text: `To protect your website from cyber threats, our developers implement security measures like encryption and controls.`,
           image: `/images/service/wordpress/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -7889,7 +7880,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `WordPress developers at eSpark Talent have<br /> knowledge about this technology to ensure that<br /> you get a professional website. `,
+          text: `WordPress developers at eSpark Talent have knowledge about this technology to ensure that you get a professional website. `,
           image: `/images/service/wordpress/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7897,8 +7888,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `Optimization  `,
-          text: `To enhance customer satisfaction, our developers</br> optimize the speed and functionalities of your</br> Wordpress store.`,
+          title: `Optimization `,
+          text: `To enhance customer satisfaction, our developers optimize the speed and functionalities of your<br/> Wordpress store.`,
           image: `/images/service/wordpress/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -7907,7 +7898,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customization `,
-          text: `Developers at eSpark Talent can modify existing<br /> plugins, themes and features according to your<br /> requirements.`,
+          text: `Developers at eSpark Talent can modify existing plugins, themes and features according to your requirements.`,
           image: `/images/service/wordpress/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7916,7 +7907,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Interactive design`,
-          text: `Our WordPress experts create a user-friendly</br> design to ensure high customer satisfaction</br> and loyalty to the product.`,
+          text: `Our WordPress experts create a user-friendly design to ensure high customer satisfaction and loyalty to the product.`,
           image: `/images/service/wordpress/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -7925,7 +7916,7 @@ goals and requirements.
         {
           id: `05`,
           title: `E-commerce development `,
-          text: `Our experts at developing e-commerce</br> websites with features like payment gateways<br/> product filters and shopping carts.`,
+          text: `Our experts at developing e-commerce websites with features like payment gateways product filters and shopping carts.`,
           image: `/images/service/wordpress/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -7934,7 +7925,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Security `,
-          text: `To protect your website from cyber threats, our</br> developers implement security measures like</br> encryption and controls.`,
+          text: `To protect your website from cyber threats, our developers implement security measures like encryption and controls.`,
           image: `/images/service/wordpress/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8020,7 +8011,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Performance Marketers</span> Expertise`,
       paragraph: `Performance Marketers at eSpark Talent are proficient in turning your project into a success.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Marketer`,
@@ -8036,12 +8027,12 @@ goals and requirements.
         {
           icon: `/images/service/performance/experties/icon2.svg`,
           title: `Analytics`,
-          paragraph: `Our Marketers are experts at using various analytics tools like Adobe Analytics to generate dashboards and reports.   `,
+          paragraph: `Our Marketers are experts at using various analytics tools like Adobe Analytics to generate dashboards and reports. `,
         },
         {
           icon: `/images/service/performance/experties/icon3.svg`,
           title: `CRO`,
-          paragraph: `To optimize the user experience, Our marketing experts  implement different Conversion Rate Optimization strategies.`,
+          paragraph: `To optimize the user experience, Our marketing experts implement different Conversion Rate Optimization strategies.`,
         },
         {
           icon: `/images/service/performance/experties/icon4.svg`,
@@ -8061,7 +8052,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Performance Marketer</span> Tools We Use  For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Performance Marketer</span> Tools We Use For Your Project`,
       descrcipton: `Our dedicated Performance marketers have a detailed knowledge of various Paid ads and campaign management tools, Conversion rate optimization tools, performance tracking tools`,
       items: [
         {
@@ -8085,7 +8076,7 @@ goals and requirements.
         },
         {
           id: 3,
-          title: `Performance Tracking  Tools`,
+          title: `Performance Tracking Tools`,
           gridLg: 4,
           gridmd: 4,
           items: [`Google Analytics`, `Mixpanel`, `Heap`],
@@ -8158,13 +8149,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Performance Marketing Expert</span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Performance Marketing Expert</span> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Performance Marketer from eSpark Talent as it would improve the overall marketing process for your project.`,
       processes: [
         {
           id: `01`,
           title: `Cost-Effective`,
-          text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
+          text: `Performance marketers make the marketing process cost-effective by making payments when desired actions are performed. `,
           image: `/images/service/performance/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8172,8 +8163,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `Result oriented  `,
-          text: `Marketers at eSpark Talent use appropriate</br>  data analytics tools to generate results to</br> improve performance.`,
+          title: `Result oriented `,
+          text: `Marketers at eSpark Talent use appropriate data analytics tools to generate results to improve performance.`,
           image: `/images/service/performance/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -8182,7 +8173,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Scalability `,
-          text: `Our performance marketers are skilled at</br>  scaling the process to match your</br>  requirements.`,
+          text: `Our performance marketers are skilled at scaling the process to match your requirements.`,
           image: `/images/service/performance/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8191,7 +8182,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Data-Driven`,
-          text: `Performance Marketers are experts at</br>  analyzing the data to enhance the Return on</br>  Investment (ROI).`,
+          text: `Performance Marketers are experts at analyzing the data to enhance the Return on Investment (ROI).`,
           image: `/images/service/performance/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8200,7 +8191,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Eperties `,
-          text: `Marketers at eSpark Talent have proficiency in </br> different marketing channels like email </br> marketing, social media advertising, etc.`,
+          text: `Marketers at eSpark Talent have proficiency in different marketing channels like email marketing, social media advertising, etc.`,
           image: `/images/service/performance/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -8208,7 +8199,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Correct audience `,
-          text: `Our experts are trained to target appropriate</br>  audiences based on demographics and</br>  purchase behavior.`,
+          text: `Our experts are trained to target appropriate audiences based on demographics and purchase behavior.`,
           image: `/images/service/performance/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8219,7 +8210,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Cost-Effective`,
-          text: `Performance marketers make the marketing</br> process cost-effective by making payments</br> when desired actions are performed. `,
+          text: `Performance marketers make the marketing process cost-effective by making payments when desired actions are performed. `,
           image: `/images/service/performance/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8227,8 +8218,8 @@ goals and requirements.
         },
         {
           id: `02`,
-          title: `Result oriented  `,
-          text: `Marketers at eSpark Talent use appropriate</br>  data analytics tools to generate results to</br> improve performance.`,
+          title: `Result oriented `,
+          text: `Marketers at eSpark Talent use appropriate data analytics tools to generate results to improve performance.`,
           image: `/images/service/performance/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8237,7 +8228,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Scalability `,
-          text: `Our performance marketers are skilled at</br>  scaling the process to match your</br>  requirements.`,
+          text: `Our performance marketers are skilled at scaling the process to match your requirements.`,
           image: `/images/service/performance/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8246,7 +8237,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Data-Driven`,
-          text: `Performance Marketers are experts at</br>  analyzing the data to enhance the Return on</br>  Investment (ROI).`,
+          text: `Performance Marketers are experts at analyzing the data to enhance the Return on Investment (ROI).`,
           image: `/images/service/performance/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8255,7 +8246,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Eperties `,
-          text: `Marketers at eSpark Talent have proficiency in</br> different marketing channels like email marketing,</br> social media advertising, etc.`,
+          text: `Marketers at eSpark Talent have proficiency in different marketing channels like email marketing, social media advertising, etc.`,
           image: `/images/service/performance/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8264,7 +8255,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Correct audience `,
-          text: `Our experts are trained to target appropriate</br>  audiences based on demographics and</br>  purchase behavior.`,
+          text: `Our experts are trained to target appropriate audiences based on demographics and purchase behavior.`,
           image: `/images/service/performance/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8350,7 +8341,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">SEO Experts</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">SEO Experts</span> Expertise`,
       paragraph: `SEO experts at eSpark Talent are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a SEO Expert`,
@@ -8391,7 +8382,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use  For Your </br> Project`,
+      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use For Your <br/> Project`,
       descrcipton: `SEO expert at eSpark Talent have detailed knowledge about different research and analytics tools.`,
       items: [
         {
@@ -8488,13 +8479,13 @@ goals and requirements.
     ],
 
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> SEO Experts </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> SEO Experts </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated SEO expert from eSpark talent to avail multiple advantages in overall SEO optimization process.`,
       processes: [
         {
           id: `01`,
           title: `Experties`,
-          text: `To enhance visibility of your website on the</br> search engine, our experts implement various</br> strategies and algorithms`,
+          text: `To enhance visibility of your website on the search engine, our experts implement various strategies and algorithms`,
           image: `/images/service/seo/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8503,7 +8494,7 @@ goals and requirements.
         {
           id: `02`,
           title: `On Page Optimization`,
-          text: `Our SEO experts enhance various website</br> elements including images, headings, meta</br> tags, and content structure.`,
+          text: `Our SEO experts enhance various website elements including images, headings, meta tags, and content structure.`,
           image: `/images/service/seo/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -8512,7 +8503,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for </br> conducting extensive keyword research to make </br> the website visible to a larger audience.`,
+          text: `SEO experts are also responsible for conducting extensive keyword research to make the website visible to a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8521,7 +8512,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Off page optimization`,
-          text: `Experts at eSpark Talent are skilled at building</br> back links by using various off page SEO</br> methods.`,
+          text: `Experts at eSpark Talent are skilled at building back links by using various off page SEO methods.`,
           image: `/images/service/seo/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8530,7 +8521,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Technical SEO`,
-          text: `Our experts are professionals to enhance the</br> mobile friendliness and speed for search engine</br> indexing.`,
+          text: `Our experts are professionals to enhance the mobile friendliness and speed for search engine indexing.`,
           image: `/images/service/seo/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -8538,7 +8529,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Competition`,
-          text: `Hiring SEO expert from eSpark Talent would</br> help you to make your website stand out</br> among all your competitors.`,
+          text: `Hiring SEO expert from eSpark Talent would help you to make your website stand out among all your competitors.`,
           image: `/images/service/seo/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8549,7 +8540,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `To enhance visibility of your website on the</br> search engine, our experts implement various</br> strategies and algorithms`,
+          text: `To enhance visibility of your website on the search engine, our experts implement various strategies and algorithms`,
           image: `/images/service/seo/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8558,7 +8549,7 @@ goals and requirements.
         {
           id: `02`,
           title: `On Page Optimization`,
-          text: `Our SEO experts enhance various website</br> elements including images, headings, meta</br> tags, and content structure.`,
+          text: `Our SEO experts enhance various website elements including images, headings, meta tags, and content structure.`,
           image: `/images/service/seo/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8567,7 +8558,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Keyword Optimization `,
-          text: `SEO experts are also responsible for</br> conducting extensive keyword research to make the website visible to</br> a larger audience.`,
+          text: `SEO experts are also responsible for conducting extensive keyword research to make the website visible to a larger audience.`,
           image: `/images/service/seo/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8576,7 +8567,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Off page optimization`,
-          text: `Experts at eSpark Talent are skilled at building</br> back links by using various off page SEO</br> methods.`,
+          text: `Experts at eSpark Talent are skilled at building back links by using various off page SEO methods.`,
           image: `/images/service/seo/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8585,7 +8576,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Technical SEO`,
-          text: `Our experts are professionals to enhance the</br> mobile friendliness and speed for search engine</br> indexing.`,
+          text: `Our experts are professionals to enhance the mobile friendliness and speed for search engine indexing.`,
           image: `/images/service/seo/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8594,7 +8585,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Competition`,
-          text: `Hiring SEO expert from eSpark Talent would</br> help you to make your website stand out</br> among all your competitors.`,
+          text: `Hiring SEO expert from eSpark Talent would help you to make your website stand out among all your competitors.`,
           image: `/images/service/seo/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8627,13 +8618,13 @@ goals and requirements.
         },
         {
           id: 5,
-          heading: `Why I choose eSpark Talent to hire seo expert?`,
-          description: `SEO experts at eSpark Talent would conduct audits, research, analysis and website optimization at an affordable price.`,
+          heading: `Can We Get Started Right Away?`,
+          description: `After analysing your requirements, eSpark Talent would assign SEO expert for your project.`,
         },
         {
           id: 2,
-          heading: `Can We Get Started Right Away?`,
-          description: `After analysing your requirements, eSpark Talent would assign SEO expert for your project.`,
+          heading: `Why I choose eSpark Talent to hire seo expert?`,
+          description: `SEO experts at eSpark Talent would conduct audits, research, analysis and website optimization at an affordable price.`,
         },
         {
           id: 4,
@@ -8652,7 +8643,7 @@ goals and requirements.
     path: `hire-ppc-specialists`,
     servicesHeroSection: {
       title:
-        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> PPC  <br /> <span style="font-weight: 700"> Specialist </span>',
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> PPC <br /> <span style="font-weight: 700"> Specialist </span>',
       description:
         'Hire a PPC specialist from eSpark Talent to ensure maximum visibility and enhanced campaign performance. Our Specialists can optimize the performance of your PPC campaigns at a cost-effective rate. To make your PPC campaigns streamlined and customized to match your requirements, get an outsourced PPC specialist from eSpark Talent.',
       button: {
@@ -8680,7 +8671,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist</span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">PPC specialist</span> Expertise`,
       paragraph: `PPC specialists at eSpark are skilled at performing a vast variety of tasks.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a PPC Expert`,
@@ -8823,13 +8814,13 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated PPC specialist from eSpark Talent as they have a lot of qualifications that make them a perfect choice for your project.`,
       processes: [
         {
           id: `01`,
           title: `Experties`,
-          text: `These specialists possess the expertise to hold</br> PPC campaigns on numerous platforms like</br>  Google ads.`,
+          text: `These specialists possess the expertise to hold PPC campaigns on numerous platforms like Google ads.`,
           image: `/images/service/ppc/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8838,7 +8829,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Data Analysis`,
-          text: `Specialists at eSpark Talent critically analyze</br> the performance metrics of the campaigns to</br> check various factors like conversion rates.`,
+          text: `Specialists at eSpark Talent critically analyze the performance metrics of the campaigns to check various factors like conversion rates.`,
           image: `/images/service/ppc/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -8846,8 +8837,8 @@ goals and requirements.
         },
         {
           id: `03`,
-          title: `Customized Techniques`,
-          text: `PPC specialists can customize techniques to</br> enhance website traffic or sales to improve</br> overall visibility.`,
+          title: `Correct Audience`,
+          text: `PPC specialists can customize techniques to enhance website traffic or sales to improve overall visibility.`,
           image: `/images/service/ppc/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -8856,7 +8847,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Cost-Effective`,
-          text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
+          text: `Our specialists can maximize ROI to the right audience and minimize ad spend, making the campaign cost-effective.`,
           image: `/images/service/ppc/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8865,7 +8856,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Streamlined`,
-          text: `You can benefit a lot by outsourcing PPC</br> management by saving time and effort</br> and utilizing it for other aspects of the business.`,
+          text: `You can benefit a lot by outsourcing PPC management by saving time and effort and utilizing it for other aspects of the business.`,
           image: `/images/service/ppc/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -8873,7 +8864,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Adaptable`,
-          text: `PPC specialists can quickly analyze</br> modifications in policies and algorithms to</br> guarantee that your campaign is efficient.`,
+          text: `PPC specialists can quickly analyze modifications in policies and algorithms to guarantee that your campaign is efficient.`,
           image: `/images/service/ppc/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -8884,7 +8875,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `These specialists possess the expertise to hold</br> PPC campaigns on numerous platforms like</br>  Google ads.`,
+          text: `These specialists possess the expertise to hold PPC campaigns on numerous platforms like Google ads.`,
           image: `/images/service/ppc/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8893,7 +8884,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Data Analysis`,
-          text: `Specialists at eSpark Talent critically analyze</br> the performance metrics of the campaigns to</br> check various factors like conversion rates.`,
+          text: `Specialists at eSpark Talent critically analyze the performance metrics of the campaigns to check various factors like conversion rates.`,
           image: `/images/service/ppc/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8902,7 +8893,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Customized Techniques`,
-          text: `PPC specialists can customize techniques to</br> enhance website traffic or sales to improve</br> overall visibility.`,
+          text: `PPC specialists can customize techniques to enhance website traffic or sales to improve overall visibility.`,
           image: `/images/service/ppc/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8911,7 +8902,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Cost-Effective`,
-          text: `Our specialists can maximize ROI to the right</br> audience and minimize ad spend, making</br> the campaign cost-effective.`,
+          text: `Our specialists can maximize ROI to the right audience and minimize ad spend, making the campaign cost-effective.`,
           image: `/images/service/ppc/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8920,7 +8911,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Streamlined`,
-          text: `You can benefit a lot by outsourcing PPC</br> management by saving time and effort</br> and utilizing it for other aspects of the business.`,
+          text: `You can benefit a lot by outsourcing PPC management by saving time and effort and utilizing it for other aspects of the business.`,
           image: `/images/service/ppc/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -8929,7 +8920,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Adaptable`,
-          text: `PPC specialists can quickly analyze</br> modifications in policies and algorithms to</br> guarantee that your campaign is efficient.`,
+          text: `PPC specialists can quickly analyze modifications in policies and algorithms to guarantee that your campaign is efficient.`,
           image: `/images/service/ppc/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -9015,7 +9006,7 @@ goals and requirements.
       ],
     },
     experties: {
-      title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists </span> <br/>Expertise`,
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600"> Social Media Specialists </span> Expertise`,
       paragraph: `Hire the best social media experts from eSpark talent to optimize the strategy for social media advertisement.`,
       btnLink: `/book-a-demo`,
       btnText: `Hire a Expert`,
@@ -9056,7 +9047,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use  For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use For Your Project`,
       descrcipton: `Hire professional social media experts from eSpark Talent who have proficiency in numerous tools and technologies.`,
       items: [
         {
@@ -9080,8 +9071,8 @@ goals and requirements.
           gridmd: 4,
           items: [
             `Facebook Insights`,
-            `Instagram Insights`,
             `Twitter Analytics`,
+            `Instagram Insights`,
           ],
         },
       ],
@@ -9151,15 +9142,14 @@ goals and requirements.
         },
       },
     ],
-
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Social Media Expert </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Social Media Expert </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Social Media Expert from eSpark Talent to elevate the progress of your brand`,
       processes: [
         {
           id: `01`,
           title: `Experties`,
-          text: `Social Media Expert have the skills to manage<br> various social media platforms like YouTube,<br> Pinterest, Twitter, etc.`,
+          text: `Social Media Expert have the skills to manage various social media platforms like YouTube, Pinterest, Twitter, etc.`,
           image: `/images/service/social/why-hire/icon1.svg`,
           alignment: 'right',
           color: '#029894',
@@ -9168,7 +9158,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Planning`,
-          text: `Experts at eSpark Talent make various plans to<br> enhance your engagement on different social<br> media platforms.`,
+          text: `Experts at eSpark Talent make various plans to enhance your engagement on different social media platforms.`,
           image: `/images/service/social/why-hire/icon2.svg`,
           alignment: 'left',
           color: '#029894',
@@ -9177,7 +9167,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Correct audience `,
-          text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
+          text: `Social Media Experts have the proficiency to build communities by tracking mentions, messages, and comments.`,
           image: `/images/service/social/why-hire/icon3.svg`,
           alignment: 'right',
           color: '#029894',
@@ -9186,7 +9176,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Content Creation`,
-          text: `They develop creative and visually appealing<br> content using videos, images, articles, posts,<br> etc.`,
+          text: `They develop creative and visually appealing content using videos, images, articles, posts, etc.`,
           image: `/images/service/social/why-hire/icon4.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -9195,7 +9185,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Data Analytics`,
-          text: `Experts at eSpark Talent use the data metrics to<br> track audience interaction on numerous<br> platforms.`,
+          text: `Experts at eSpark Talent use the data metrics to track audience interaction on numerous platforms.`,
           image: `/images/service/social/why-hire/icon5.svg`,
           alignment: 'right',
           color: '#001C63',
@@ -9203,7 +9193,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Brand visibility`,
-          text: `Using hashtags, partnerships, and trends,<br> social media experts improve the overall<br> visibility of your project.`,
+          text: `Using hashtags, partnerships, and trends, social media experts improve the overall visibility of your project.`,
           image: `/images/service/social/why-hire/icon6.svg`,
           alignment: 'left',
           color: '#001C63',
@@ -9214,7 +9204,7 @@ goals and requirements.
         {
           id: `01`,
           title: `Experties`,
-          text: `Social Media Expert have the skills to manage<br> various social media platforms like YouTube,<br> Pinterest, Twitter, etc.`,
+          text: `Social Media Expert have the skills to manage various social media platforms like YouTube, Pinterest, Twitter, etc.`,
           image: `/images/service/social/why-hire/icon1.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -9223,7 +9213,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Planning`,
-          text: `Experts at eSpark Talent make various plans to<br> enhance your engagement on different social<br> media platforms.`,
+          text: `Experts at eSpark Talent make various plans to enhance your engagement on different social media platforms.`,
           image: `/images/service/social/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -9232,7 +9222,7 @@ goals and requirements.
         {
           id: `03`,
           title: `Correct audience `,
-          text: `Social Media Experts have the proficiency to<br> build communities by tracking mentions,<br> messages, and comments.`,
+          text: `Social Media Experts have the proficiency to build communities by tracking mentions, messages, and comments.`,
           image: `/images/service/social/why-hire/icon3.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -9241,7 +9231,7 @@ goals and requirements.
         {
           id: `04`,
           title: `Content Creation`,
-          text: `They develop creative and visually appealing<br> content using videos, images, articles, posts,<br> etc.`,
+          text: `They develop creative and visually appealing content using videos, images, articles, posts, etc.`,
           image: `/images/service/social/why-hire/icon4.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -9250,7 +9240,7 @@ goals and requirements.
         {
           id: `05`,
           title: `Data Analytics`,
-          text: `Experts at eSpark Talent use the data metrics to<br> track audience interaction on numerous<br> platforms.`,
+          text: `Experts at eSpark Talent use the data metrics to track audience interaction on numerous platforms.`,
           image: `/images/service/social/why-hire/icon5.svg`,
           alignment: 'right',
           textAlignment: 'left',
@@ -9259,7 +9249,7 @@ goals and requirements.
         {
           id: `06`,
           title: `Brand visibility`,
-          text: `Using hashtags, partnerships, and trends,<br> social media experts improve the overall<br> visibility of your project.`,
+          text: `Using hashtags, partnerships, and trends, social media experts improve the overall visibility of your project.`,
           image: `/images/service/social/why-hire/icon6.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -9294,6 +9284,352 @@ goals and requirements.
           id: 5,
           heading: `Does a Social Media Expert have a good future?`,
           description: `With growing advancements in digital media, the demand for social media experts is increasing day by day.`,
+        },
+      ],
+    },
+  },
+  {
+    path: `hire-software-developers`,
+    servicesHeroSection: {
+      title:
+        '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> Software <br /> <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
+      description:
+        'Hire a software developer from eSpark Talent to ensure the development of a reliable, scalable, and quality software product. Our developers are experts at the development, testing, and maintenance of your software project to guarantee maximum customer satisfaction.',
+      button: {
+        label: 'Hire a Developer',
+        link: '/book-a-demo',
+        btnVarient: 'primary',
+        btnColor: 'secondary',
+      },
+      image: '/images/service/software/software-main.png',
+      imageAlt: `Hire world class experts' team for your business with espark talent`,
+      imageWidth: 435,
+      imageHeight: 431,
+      bgColor: '#fff',
+      bgImage: '/images/homepage/hero-section/hero-section-background.png',
+      spacing: '5%',
+      titleVariant: 'h1',
+      titleColor: 'primary',
+      descVarient: 'body1',
+      descColor: 'secondary',
+      awardsSection: [
+        { image: '/images/service/icons/award1.svg', alt: 'awd1' },
+        { image: '/images/service/icons/award2.svg', alt: 'awd2' },
+        { image: '/images/service/icons/award3.svg', alt: 'awd4' },
+        { image: '/images/service/icons/award4.svg', alt: 'awd3' },
+      ],
+    },
+    experties: {
+      title: `eSpark Talent <span style="color: #029894; font-weight: 600">Software Developers</span> Expertise`,
+      paragraph: `Software Developers at eSpark Talent are skilled at building customized software applications to match your needs.`,
+      btnLink: `/book-a-demo`,
+      btnText: `Hire a Developer`,
+      arrowIconLeft: '/images/whatwedo/why-choose-our-hr/Prev.png',
+      arrowIconRight: '/images/whatwedo/why-choose-our-hr/Next.png',
+      arrowIconCircle: '/images/whatwedo/why-choose-our-hr/Circle.png',
+      items: [
+        {
+          icon: `/images/service/software/experts/icon1.svg`,
+          title: `Requirements analysis`,
+          paragraph: `Software developers at eSpark Talent collect the requirements from stakeholders to define the scope of the project.`,
+        },
+        {
+          icon: `/images/service/software/experts/icon2.svg`,
+          title: `Design`,
+          paragraph: `They are responsible for building designs for different modules to validate the performance and maintainability of functionalities.`,
+        },
+        {
+          icon: `/images/service/software/experts/icon3.svg`,
+          title: `Developments`,
+          paragraph: `Our professional Developers at eSpark Talent use various programming languages like Java, C++, and Python to build software applications.`,
+        },
+        {
+          icon: `/images/service/software/experts/icon4.svg`,
+          title: `Testing`,
+          paragraph: `To detect bugs and issues, software developers carry out detailed testing such as unit testing, system testing, regression testing, etc.`,
+        },
+        {
+          icon: `/images/service/software/experts/icon5.svg`,
+          title: `Deployment`,
+          paragraph: `Software developers at eSpark Talent deploy the built product at app stores or production environments, ensuring seamless integration.`,
+        },
+        {
+          icon: `/images/service/software/experts/icon6.svg`,
+          title: `Maintenance`,
+          paragraph: `To keep the app updated with the latest trends and to fix bugs, software developers also provide maintenance services, ensuring optimal performance.`,
+        },
+      ],
+    },
+    technologies: {
+      title: `<span style="color:#029894;font-weight:600;" >Software</span> Technologies We Use For Your Project`,
+      descrcipton: `Software developers at eSpark Talent are well-versed in the languages, tools,
+and frameworks for this technology.`,
+      items: [
+        {
+          id: 1,
+          title: `Programming Languages`,
+          gridLg: 4,
+          gridmd: 4,
+          items: ['Python', 'C++', 'PHP', 'JavaScript', 'C#'],
+        },
+        {
+          id: 2,
+          title: `Frameworks and Libraries`,
+          gridLg: 4,
+          gridmd: 4,
+          items: ['Node.js', 'Angular', 'Django', 'React'],
+        },
+        {
+          id: 3,
+          title: `Database`,
+          gridLg: 4,
+          gridmd: 4,
+          items: ['SQL', 'MongoDB'],
+        },
+      ],
+    },
+    perkBtnTitle: '',
+    perkTitle:
+      'Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds',
+    perks: [
+      {
+        sno: `01`,
+        title: `Hire Salary Based Developers `,
+        icon: `/images/homepage/our-perks/icon1.svg`,
+        activeIcon: `/images/homepage/our-perks/icon1a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        listIcon: `/images/homepage/our-perks/list-icon.svg`,
+        content: {
+          heading: `Hire Full-Time Salaried Developers`,
+          paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
+          list: [
+            { item: `Collaborative Work Environment,` },
+            { item: `Stability in Payroll, ` },
+            { item: `High-Value Contract Partnership,` },
+            { item: `Work- Life Balance Focus, ` },
+          ],
+          buttonText: `Hire a developer`,
+          buttonLink: `/book-a-demo`,
+        },
+      },
+      {
+        sno: `02`,
+        title: `Hire Hourly Based Developers`,
+        icon: `/images/homepage/our-perks/icon2.svg`,
+        activeIcon: `/images/homepage/our-perks/icon2a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire Hourly Developers`,
+          paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
+          list: [
+            { item: `Efficient Task Allocation.` },
+            { item: `Flexibility in Scheduling, ` },
+            { item: `Dynamic Response to Workload.` },
+            { item: `Adherence to Labor Laws.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a developer`,
+          buttonLink: `/book-a-demo`,
+        },
+      },
+      {
+        sno: `03`,
+        title: `Hire a Dedicated Team`,
+        icon: `/images/homepage/our-perks/icon3.svg`,
+        activeIcon: `/images/homepage/our-perks/icon3a.svg`,
+        hoverIcons: `/images/homepage/our-perks/hover-icon.svg`,
+        content: {
+          heading: `Hire a Dedicated Team`,
+          paragraph: `Elevate your tasks with eSpark Talent's project-based Developers. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
+          list: [
+            { item: `Cost Efficiency.` },
+            { item: `Faster Project Turnaround.` },
+            { item: `Specialized Expertise,` },
+            { item: `Strategic Project Planning.` },
+          ],
+          listIcon: `/images/homepage/our-perks/list-icon.svg`,
+          buttonText: `Hire a developer`,
+          buttonLink: `/book-a-demo`,
+        },
+      },
+    ],
+    whyHire: {
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Software Developers</span> <br /> From eSpark Talent ?`,
+      subTitle: `Hire a dedicated Software Developer from eSpark Talent to ensure that you get good software products.`,
+      coverImage: `/images/service/why-hire/cover-image.png`,
+      processes: [
+        {
+          id: `01`,
+          title: `Expertise`,
+          text: `Software developers at eSpark are skilled in languages and tools to ensure that your requirements turn into a product.`,
+          image: `/images/service/software/why-hire/icon1.svg`,
+          isReverse: false,
+          alignment: 'right',
+          color: '#029894',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `02`,
+          title: `Innovation`,
+          text: `To keep your system updated with the latest trends, our developers implement creative functionalities and features.`,
+          image: `/images/service/software/why-hire/icon2.svg`,
+          isReverse: false,
+          alignment: 'left',
+          color: '#029894',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_2.svg',
+        },
+        {
+          id: `03`,
+          title: `Customization`,
+          text: `Developers at eSpark are experts at customizing software solutions to match your requirements.`,
+          image: `/images/service/software/why-hire/icon3.svg`,
+          isReverse: false,
+          alignment: 'right',
+          color: '#029894',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_1.svg',
+        },
+        {
+          id: `04`,
+          title: `Scalability`,
+          text: `Software developers can scale your product to adjust to increasing user volume and features as your business expands.`,
+          image: `/images/service/software/why-hire/icon4.svg`,
+          isReverse: false,
+          alignment: 'left',
+          color: '#001C63',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_3.svg',
+        },
+        {
+          id: `05`,
+          title: `Testing`,
+          text: `After development, our experts conduct thorough testing to ensure the reliability and performance of system`,
+          image: `/images/service/software/why-hire/icon5.svg`,
+          isReverse: false,
+          alignment: 'right',
+          color: '#001C63',
+          xs: '3.4',
+        },
+        {
+          id: `06`,
+          title: `Cost-effective`,
+          text: `Developers at eSpark can help reduce the cost in the long run for tools and technologies.`,
+          image: `/images/service/software/why-hire/icon6.svg`,
+          isReverse: false,
+          alignment: 'left',
+          color: '#001C63',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_4.svg',
+        },
+      ],
+      responsiveProcesses: [
+        {
+          id: `01`,
+          title: `<span style="color: #029894; font-weight: 700"> Expertise </span>`,
+          text: `Software developers at eSpark are skilled in languages and tools to ensure that your requirements turn into a product.`,
+          image: `/images/service/software/why-hire/icon1.svg`,
+          isReverse: false,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+          xs: '3.4',
+        },
+        {
+          id: `02`,
+          title: `<span style="color: #029894; font-weight: 700">Innovation</span>`,
+          text: `To keep your system updated with the latest trends, our developers implement creative functionalities and features.`,
+          image: `/images/service/software/why-hire/icon2.svg`,
+          isReverse: false,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#029894',
+          xs: '3.4',
+        },
+        {
+          id: `03`,
+          title: `<span style="color: #029894; font-weight: 700; text-align: start">Customization</span>`,
+          text: `Developers at eSpark are experts at customizing software solutions to match your requirements.`,
+          image: `/images/service/software/why-hire/icon3.svg`,
+          isReverse: false,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#029894',
+          xs: '3.4',
+        },
+        {
+          id: `04`,
+          title: `Scalability`,
+          text: `Software developers can scale your product to adjust to increasing user volume and features as your business expands.`,
+          image: `/images/service/software/why-hire/icon4.svg`,
+          isReverse: false,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+          xs: '3.4',
+        },
+        {
+          id: `05`,
+          title: `Testing`,
+          text: `After development, our experts conduct thorough testing to ensure the reliability and performance of system`,
+          image: `/images/service/software/why-hire/icon5.svg`,
+          isReverse: false,
+          alignment: 'right',
+          textAlignment: 'left',
+          color: '#001C63',
+          xs: '3.4',
+        },
+        {
+          id: `06`,
+          title: `Cost-effective`,
+          text: `ourcing a software developer can help reduce the cost in the long run for tools and technologies.`,
+          image: `/images/service/software/why-hire/icon6.svg`,
+          isReverse: false,
+          alignment: 'left',
+          textAlignment: 'right',
+          color: '#001C63',
+          xs: '3.4',
+          vec: '/images/service/icons/vec_4.svg',
+        },
+      ],
+    },
+    hosts: {
+      image: `/images/hire-developer/business.svg`,
+      leftImage: `/images/hire-developer/round.svg`,
+      bgImage: `/images/service/pipe.svg`,
+      title: `eSpark Talent Hosts The <span style="color:#029894;font-weight:600;" >Top-Notch 1%</span> Of Globally Certified Software Developers`,
+      descrcipton: `Our developers, masters in the art of Software development, are meticulously selected through rigorous interviews and tests. From every corner of the world, we handpick the finest Software developers to ensure the most suitable match for your project.`,
+      btnText: `Hire a Developer`,
+      btnLink: `/book-a-demo`,
+    },
+    faqs: {
+      title: `Check Out Our Common Questions`,
+      questions: [
+        {
+          id: 1,
+          heading: `Why did I choose eSpark Talent to hire a Software Developer?`,
+          description: `eSpark Talent provides the best software developers who are skilled at gathering requirements from stakeholders and turning them into a fine software product.`,
+        },
+        {
+          id: 3,
+          heading: `What should I know before hiring a developer?`,
+          description: `Some of the key factors that you must keep in mind before hiring a developer are the timeline, budget, and skills of the hired developer.`,
+        },
+        {
+          id: 5,
+          heading: `What is the role of a Software Developer? `,
+          description: `Software Developers are responsible for providing design, development, testing, and maintenance services to validate that all your requirements are incorporated in the developed software product.`,
+        },
+        {
+          id: 2,
+          heading: `How much does it cost to hire a software developer?`,
+          description: `The cost of hiring a software developer would be decided by eSpark Talent after analyzing your project scope and requirements.`,
+        },
+        {
+          id: 4,
+          heading: `Are your Software Developers experienced?`,
+          description: `Software developers at eSpark Talent have expertise in working on different domains and languages to fulfill your business objectives.`,
         },
       ],
     },

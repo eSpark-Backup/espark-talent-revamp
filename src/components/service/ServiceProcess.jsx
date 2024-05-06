@@ -291,6 +291,9 @@ const ProcessCardBottom = ({ data }) => {
         '@media (min-width:1024px) and (max-width: 1439px)': {
           width: '330px',
         },
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
       <Box
@@ -328,6 +331,7 @@ const ProcessCardBottom = ({ data }) => {
           lineHeight: 1.6,
           fontSize: '14px',
           textAlign: 'center',
+          maxWidth: '300px',
           '@media(min-width: 1024px) and (max-width:1439px)': {
             fontSize: '12px',
           },

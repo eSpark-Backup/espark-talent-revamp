@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import { capitalizeFirstLetter } from '@/utils/cors';
 
 const ServiceProcessMobile = ({ data }) => {
   return (
@@ -58,7 +59,9 @@ const ServiceProcessMobile = ({ data }) => {
             },
             px: { xs: '13px' },
           }}
-          dangerouslySetInnerHTML={{ __html: data?.title }}
+          dangerouslySetInnerHTML={{
+            __html: capitalizeFirstLetter(data?.title),
+          }}
         />
         <Typography
           component={'p'}
@@ -169,8 +172,8 @@ const ServiceProcessMobile = ({ data }) => {
                 gap: 0.5,
               },
               '@media (min-width: 360px) and (max-width: 599px)': {
-                pl: process?.alignment == 'right' ? 1 : 1,
-                pr: process?.alignment == 'left' ? 1 : 1,
+                pl: process?.alignment == 'right' ? 1.5 : 1.5,
+                pr: process?.alignment == 'left' ? 1.5 : 1.5,
                 width: '100%',
                 height: 'auto',
                 gap: 0,
@@ -191,7 +194,7 @@ const ServiceProcessMobile = ({ data }) => {
               order: `${process?.alignment == 'right' ? 1 : 1}`,
               px: 2,
               pl: {
-                sm: process?.alignment == 'right' ? 1 : 1,
+                sm: process?.alignment == 'right' ? 2 : 2,
                 lg: process?.alignment == 'right' ? 2.3 : 0.5,
               },
               textAlign: `${process?.textAlignment == 'right' ? 'right' : 'left'}`,
@@ -222,7 +225,9 @@ const ServiceProcessMobile = ({ data }) => {
                 lineHeight: { sm: '28.621px' },
                 fontSize: { md: '25px !important', lg: '28px !important' },
               }}
-              dangerouslySetInnerHTML={{ __html: process?.title }}
+              dangerouslySetInnerHTML={{
+                __html: capitalizeFirstLetter(process?.title),
+              }}
             />
             <Typography
               component="Box"
