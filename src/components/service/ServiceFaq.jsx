@@ -38,7 +38,7 @@ const ServiceFaq = ({ data }) => {
           >
             <AccordionSummary
               sx={{
-                alignItems: 'flex-start', // Align accordion items to the top
+                alignItems: 'flex-start',
               }}
               expandIcon={
                 expanded === 'panel' ? (
@@ -72,11 +72,6 @@ const ServiceFaq = ({ data }) => {
                   },
                   fontWeight: expanded === panel ? 600 : 400,
                   lineHeight: { xs: '12.86px', md: '26px' },
-                  // '@media only screen and (min-width: 1100px)' : {
-                  //   maxWidth: '90%',
-                  //   border:'1px solid red'
-
-                  // },
                 }}
               >
                 {item?.heading}
