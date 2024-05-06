@@ -123,7 +123,7 @@ const FifthSection = ({ data }) => {
                   pathname.includes('engineers') ||
                   pathname.includes('marketers') ||
                   pathname.includes('experts')
-                    ? { xs: '0%', sm: '5%', md: '5%', lg: '12%', xl: '14%' }
+                    ? { xs: '0%', sm: '5%', md: '15%', lg: '15%', xl: '15%' }
                     : { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
 
                 '@media (min-width:760px) and (max-width: 1919px)': {
@@ -237,21 +237,16 @@ const FifthSection = ({ data }) => {
                             lineHeight: '35px',
                             textAlign: 'left',
                             color: '#000000',
-                            '@media (min-width: 280px) and (max-width: 359px)':
-                              {
-                                fontSize: '13.1px',
-                                lineHeight: '15px',
-                              },
-                            '@media (min-width: 280px) and (max-width: 300px)':
+                            '@media (min-width: 280px) and (max-width: 400px)':
                               {
                                 fontSize:
-                                  pathname.includes('native') ||
-                                  pathname.includes('flutter') ||
-                                  pathname.includes('javascript') ||
-                                  pathname.includes('angular') ||
-                                  pathname.includes('asp') ||
-                                  pathname.includes('shopify')
-                                    ? '11.1px'
+                                  pathname.includes('marketers') ||
+                                  pathname.includes('developers') ||
+                                  pathname.includes('designers') ||
+                                  pathname.includes('engineers') ||
+                                  pathname.includes('experts') ||
+                                  pathname.includes('specialists')
+                                    ? '12.1px !important'
                                     : '13px',
                                 lineHeight: '15px',
                               },
@@ -264,15 +259,17 @@ const FifthSection = ({ data }) => {
                                   pathname.includes('angular') ||
                                   pathname.includes('asp') ||
                                   pathname.includes('shopify')
-                                    ? '15.1px'
-                                    : '18px',
+                                    ? '12.1px'
+                                    : '15px',
                                 lineHeight: '15px',
                               },
                             '@media (min-width: 360px) and (max-width: 399px)':
                               {
-                                fontSize: pathname.includes('embedded')
-                                  ? '12.8px !important'
-                                  : '18px',
+                                fontSize:
+                                  pathname.includes('embedded') ||
+                                  pathname.includes('marketers')
+                                    ? '11.8px !important'
+                                    : '18px',
                                 lineHeight: '15px',
                               },
                           }}
@@ -292,6 +289,7 @@ const FifthSection = ({ data }) => {
                             ? { xs: '964px', md: '964px !important' }
                             : { xs: '264px' },
                         backgroundColor: '#E9ECF6',
+                        minHeight: '43px',
                         color: '#000',
                         borderRadius: '3px',
                         mb: '10px',
