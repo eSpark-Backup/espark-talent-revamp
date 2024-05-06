@@ -13,7 +13,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-frontend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Front-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Front-End Solution? <br/><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized front-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in front-end development. Let's connect and enhance your front-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
@@ -161,7 +161,7 @@ export const HIRE_DEVELOPERS = [
       btnLink: `/hire-a-backend-developer/#form`,
     },
     secondSection: {
-      title: `Searching for a Personalized Back-End Solution? </br><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
+      title: `Searching for a Personalized Back-End Solution? <br/><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
       descrcipton: `Your search for personalized back-end development solutions concludes here. With us, it's more than a service – you're entering a world of customized excellence in back-end development. Let's connect and enhance your back-end journey together.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-backend-developer/#form`,
@@ -459,7 +459,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >UI/UX Designers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >UI/UX Designers</span> <br/> From eSpark Talent ?`,
       subTitle: `eSpark Talent aims to provide a skillful, and experienced UI/UX designer to turn your business goals into an appealing design.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -823,7 +823,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Full Stack Developers</span> <br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >Full Stack Developers</span> <br/> From eSpark Talent ?`,
       subTitle: `eSpark Talent makes sure to provide a skilled full-stack developer to make your
  requirements turn into a fine software product`,
       coverImage: `/images/service/why-hire/cover-image.png`,
@@ -1082,7 +1082,7 @@ export const HIRE_DEVELOPERS = [
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies</br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies<br/>We Use For Your Project`,
       descrcipton: `MEAN stack developers at eSpark Talent are well-versed in the languages, tools, and frameworks for this technology.`,
       items: [
         {
@@ -1178,7 +1178,7 @@ export const HIRE_DEVELOPERS = [
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >MEAN Stack Developers</span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated MEAN stack developer from eSpark Talent as they can bring multiple benefits to the development and growth of your software project.`,
       coverImage: `/images/service/why-hire/cover-image.png`,
       processes: [
@@ -4802,7 +4802,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies</br>We Use For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies<br/>We Use For Your Project`,
       descrcipton: `React Native developers at eSpark Talent possess a thorough knowledge of different languages, tools, and frameworks.`,
       items: [
         {
@@ -4902,7 +4902,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;" >React Native Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated React Native from eSpark Talent as they assist you in creating the best software products.`,
       processes: [
         {
@@ -5130,7 +5130,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `ASP.net developers at eSpark Talent are well-versed in various languages, tools, and frameworks to build software products.`,
       items: [
         {
@@ -5226,7 +5226,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> ASP.NET Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated ASP.net developers from eSpark Talent to avail numerous benefits for software development.`,
       processes: [
         {
@@ -5444,7 +5444,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For </br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `PHP developers at eSpark Talent have extensive knowledge of various tools, frameworks, and libraries.`,
       items: [
         {
@@ -5536,7 +5536,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PHP Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire the best PHP developers from eSpark Talent as they are trained to provide you with a quality software product.`,
       processes: [
         {
@@ -5769,7 +5769,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For </br> Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `Python developer at eSpark Talent possesses good know-how about different tools, libraries, and frameworks.`,
       items: [
         {
@@ -5861,7 +5861,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Python Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Python developer from eSpark Talent as our basic motive is to provide you with the best software solution that fulfills all your objectives and requirements.`,
       processes: [
         {
@@ -7392,7 +7392,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `Shopify developers at eSpark have detailed knowledge about numerous tools and frameworks.`,
       items: [
         {
@@ -7492,7 +7492,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Shopify Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated Shopify developers from eSpark Talent as they possess a wide variety of quality attributes.`,
       processes: [
         {
@@ -7725,7 +7725,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >Wordpress </span> Technologies We Use </br> For Your Project`,
+      title: `<span style="color:#029894;font-weight:600;" >Wordpress </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `WordPress developers at eSpark Talent have detailed knowledge about different languages, libraries and frameworks.`,
       items: [
         {
@@ -7818,7 +7818,7 @@ goals and requirements.
     ],
 
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Wordpress Developers </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Wordpress Developers </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated WordPress developer from eSpark Talent as they make sure to provide you with a fine software application.`,
       processes: [
         {
@@ -7889,7 +7889,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Optimization `,
-          text: `To enhance customer satisfaction, our developers optimize the speed and functionalities of your</br> Wordpress store.`,
+          text: `To enhance customer satisfaction, our developers optimize the speed and functionalities of your<br/> Wordpress store.`,
           image: `/images/service/wordpress/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
@@ -8382,7 +8382,7 @@ goals and requirements.
       ],
     },
     technologies: {
-      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use For Your </br> Project`,
+      title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use For Your <br/> Project`,
       descrcipton: `SEO expert at eSpark Talent have detailed knowledge about different research and analytics tools.`,
       items: [
         {
@@ -8479,7 +8479,7 @@ goals and requirements.
     ],
 
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> SEO Experts </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> SEO Experts </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire dedicated SEO expert from eSpark talent to avail multiple advantages in overall SEO optimization process.`,
       processes: [
         {
@@ -8814,7 +8814,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> PPC Specialist </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated PPC specialist from eSpark Talent as they have a lot of qualifications that make them a perfect choice for your project.`,
       processes: [
         {
@@ -9143,7 +9143,7 @@ goals and requirements.
       },
     ],
     whyHire: {
-      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Social Media Expert </span> </br> From eSpark Talent ?`,
+      title: `Why Hire Dedicated <span style="color:#029894;font-weight:600;"> Social Media Expert </span> <br/> From eSpark Talent ?`,
       subTitle: `Hire a dedicated Social Media Expert from eSpark Talent to elevate the progress of your brand`,
       processes: [
         {
