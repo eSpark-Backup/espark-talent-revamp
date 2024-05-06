@@ -8219,7 +8219,7 @@ goals and requirements.
         {
           id: `02`,
           title: `Result oriented `,
-          text: `Marketers at eSpark Talent use appropriate< data analytics tools to generate results to improve performance.`,
+          text: `Marketers at eSpark Talent use appropriate data analytics tools to generate results to improve performance.`,
           image: `/images/service/performance/why-hire/icon2.svg`,
           alignment: 'left',
           textAlignment: 'right',
