@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
     author: `eSpark Talent`,
     alternates: {
-      canonical: `https://www.esparktalent.com/blogs/${filteredData?.path}`,
+      canonical: `https://www.esparktalent.com/${filteredData?.path}`,
       languages: {
         'en-US': '/en-US',
         'en-UK': '/en-UK',
