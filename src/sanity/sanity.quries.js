@@ -12,10 +12,10 @@ export async function getJob() {
       location,
       "slug": slug.current,
       title,
-      metaTitle,
-      metaDescription,
-      url,
-      "metaImage":metaImage.asset->url
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
     }`,
     {
       next: {
@@ -40,10 +40,10 @@ export async function getBlog() {
       subtitle,
       tags,
       title,
-      metaTitle,
-      metaDescription,
-      url,
-      "metaImage":metaImage.asset->url
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
     }`,
     {
       next: {
@@ -69,10 +69,10 @@ export async function getSingleBlog(slug) {
       subtitle,
       tags,
       title,
-      metaTitle,
-      metaDescription,
-      url,
-      "metaImage":metaImage.asset->url
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
     }`,
     { slug },
     {
@@ -98,10 +98,10 @@ export async function getWiki() {
       salary,
       shortDescription,
       title,
-      metaTitle,
-      metaDescription,
-      url,
-      "metaImage":metaImage.asset->url
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
     } `,
     {
       next: {
@@ -126,10 +126,10 @@ export async function getSingleWiki(slug) {
       salary,
       shortDescription,
       title,
-      metaTitle,
-      metaDescription,
-      url,
-      "metaImage":metaImage.asset->url
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
     }`,
     { slug },
     {
@@ -169,6 +169,45 @@ export async function getAuthor() {
       lastName,
       role
     } `,
+    {
+      next: {
+        revalidate: 1800,
+      },
+    }
+  );
+}
+
+export async function getSingleHire(slug) {
+  return client.fetch(
+    `*[_type == "hire" && slug.current == $slug][0]
+    {
+      _id,
+      "slug": slug.current,
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
+    }`,
+    { slug },
+    {
+      next: {
+        revalidate: 1800,
+      },
+    }
+  );
+}
+export async function getSingleService(slug) {
+  return client.fetch(
+    `*[_type == "service" && slug.current == $slug][0]
+    {
+      _id,
+      "slug": slug.current,
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url
+    }`,
+    { slug },
     {
       next: {
         revalidate: 1800,

@@ -2,24 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
-import { BLOGS_SEO, GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo-data';
+
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 
 export async function generateMetadata({ params }) {
-  // read route params
   const slug = params.blog;
-
-  const filteredData =
-    BLOGS_SEO.find((item) => item.path === slug) || GLOBAL_SEO[0];
+  const blog = await getSingleBlog(slug);
+  const filteredData = blog || GLOBAL_SEO[0];
   const metadata = {
     metadataBase: new URL('https://www.esparktalent.com/'),
-    title: filteredData?.title,
-    description: filteredData?.description,
+    title: filteredData?.metaTitle,
+    description: filteredData?.metaDescription,
     keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
     author: `eSpark Talent`,
     alternates: {
-      canonical: `https://www.esparktalent.com/blogs/${filteredData?.path}`,
+      canonical: `https://www.esparktalent.com/blogs/${filteredData?.slug}`,
       languages: {
         'en-US': '/en-US',
         'en-UK': '/en-UK',
@@ -28,8 +27,8 @@ export async function generateMetadata({ params }) {
     robots: `index, follow`,
     openGraph: {
       metadataBase: new URL('https://www.esparktalent.com/'),
-      title: filteredData?.title,
-      description: filteredData?.description,
+      title: filteredData?.metaTitle,
+      description: filteredData?.metaDescription,
       type: 'article',
       publishedTime: '2023-01-01T00:00:00.000Z',
       authors: ['eSpark Talent', 'Mehdi Raza'],
@@ -37,8 +36,8 @@ export async function generateMetadata({ params }) {
       locale: `en_US`,
       images: [
         {
-          url: filteredData?.image,
-          alt: filteredData?.title,
+          url: filteredData?.metaImage,
+          alt: filteredData?.metaTitle,
           width: 1200,
           height: 630,
         },
@@ -47,11 +46,11 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: `summary_large_image`,
       metadataBase: new URL('https://www.esparktalent.com/'),
-      title: filteredData?.title,
-      description: filteredData?.description,
+      title: filteredData?.metaTitle,
+      description: filteredData?.metaDescription,
       siteId: `@eSparkTalent`,
       creator: `@eSparkTalent`,
-      images: [`${filteredData?.image}`],
+      images: [`${filteredData?.metaImage}`],
     },
   };
 
