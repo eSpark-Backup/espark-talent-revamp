@@ -1,15 +1,17 @@
 import React from 'react';
 import BookADemo from '@/components/book-a-demo/BookADemo';
 import { GLOBAL_SEO } from '@/constants/seo-data';
+import { getPageSeo } from '@/sanity/sanity.quries';
 
 const pathname = '/book-a-demo';
+const seo = await getPageSeo();
 const filteredData =
-  GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
+  seo.find((item) => item.path === pathname) || GLOBAL_SEO[0];
 
 export const metadata = {
   metadataBase: new URL('https://www.esparktalent.com/'),
-  title: filteredData?.title,
-  description: filteredData?.description,
+  title: filteredData?.metaTitle,
+  description: filteredData?.metaDescription,
   keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
   author: `eSpark Talent`,
   alternates: {
@@ -22,8 +24,8 @@ export const metadata = {
   robots: `index, follow`,
   openGraph: {
     metadataBase: new URL('https://www.esparktalent.com/'),
-    title: filteredData?.title,
-    description: filteredData?.description,
+    title: filteredData?.metaTitle,
+    description: filteredData?.metaDescription,
     type: 'article',
     publishedTime: '2023-01-01T00:00:00.000Z',
     authors: ['eSpark Talent', 'Mehdi Raza'],
@@ -31,7 +33,7 @@ export const metadata = {
     locale: `en_US`,
     images: [
       {
-        url: filteredData?.image,
+        url: filteredData?.metaImage,
         alt: filteredData?.title,
         width: 1200,
         height: 630,
@@ -41,11 +43,11 @@ export const metadata = {
   twitter: {
     card: `summary_large_image`,
     metadataBase: new URL('https://www.esparktalent.com/'),
-    title: filteredData?.title,
-    description: filteredData?.description,
+    title: filteredData?.metaTitle,
+    description: filteredData?.metaDescription,
     siteId: `@eSparkTalent`,
     creator: `@eSparkTalent`,
-    images: [`${filteredData?.image}`],
+    images: [`${filteredData?.metaImage}`],
   },
 };
 

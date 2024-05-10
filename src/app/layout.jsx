@@ -13,6 +13,7 @@ import Header from '@/components/global/Header/Header';
 import TawkToWidget from '@/components/global/TawkToWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
+import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
@@ -25,12 +26,14 @@ const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
 export const revalidate = 1800;
 
 const pathname = '/';
+const seo = await getPageSeo();
 const filteredData =
-  GLOBAL_SEO.find((item) => item.path === pathname) || GLOBAL_SEO[0];
+  seo.find((item) => item.path === pathname) || GLOBAL_SEO[0];
+
 export const metadata = {
   metadataBase: new URL('https://www.esparktalent.com/'),
-  title: filteredData?.title,
-  description: filteredData?.description,
+  title: filteredData?.metaTitle,
+  description: filteredData?.metaDescription,
   keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
   author: `eSpark Talent`,
   alternates: {
@@ -43,8 +46,8 @@ export const metadata = {
   robots: `index, follow`,
   openGraph: {
     metadataBase: new URL('https://www.esparktalent.com/'),
-    title: filteredData?.title,
-    description: filteredData?.description,
+    title: filteredData?.metaTitle,
+    description: filteredData?.metaDescription,
     type: 'article',
     publishedTime: '2023-01-01T00:00:00.000Z',
     authors: ['eSpark Talent', 'Mehdi Raza'],
@@ -52,7 +55,7 @@ export const metadata = {
     locale: `en_US`,
     images: [
       {
-        url: filteredData?.image,
+        url: filteredData?.metaImage,
         alt: filteredData?.title,
         width: 1200,
         height: 630,
@@ -62,13 +65,14 @@ export const metadata = {
   twitter: {
     card: `summary_large_image`,
     metadataBase: new URL('https://www.esparktalent.com/'),
-    title: filteredData?.title,
-    description: filteredData?.description,
+    title: filteredData?.metaTitle,
+    description: filteredData?.metaDescription,
     siteId: `@eSparkTalent`,
     creator: `@eSparkTalent`,
-    images: [`${filteredData?.image}`],
+    images: [`${filteredData?.metaImage}`],
   },
 };
+
 export default async function RootLayout({ children }) {
   return (
     <html lang="en">
