@@ -57,7 +57,7 @@ export async function generateMetadata({ params }) {
   return metadata;
 }
 
-const Page = async ({ params }) => {
+const Page = ({ params }) => {
   const slug = params.hire;
   const data = HIRE_DEVELOPERS?.filter((item) => item?.path === slug)[0];
 
