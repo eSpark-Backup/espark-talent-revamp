@@ -155,7 +155,7 @@ const OurExperties = ({ data, link }) => {
                                   height={60}
                                 />
                               </Box>
-                              <Link href={item?.link} target="_blank">
+                              <Link href={item?.link}>
                                 <Typography
                                   variant="body1"
                                   sx={{

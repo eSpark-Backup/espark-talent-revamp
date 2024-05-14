@@ -5,8 +5,7 @@ import ServiceProcessMobile from './ServiceProcessMobile';
 import ServiceProcess from './ServiceProcess';
 
 const ServiceWhyHire = ({ data }) => {
-  const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
-
+  const [windowWidth, setWindowWidth] = useState(1920);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window?.innerWidth);
