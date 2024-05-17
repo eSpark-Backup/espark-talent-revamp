@@ -12,7 +12,7 @@ import {
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
-const ServiceFaq = ({ data }) => {
+const ServiceFaq = ({ data, color }) => {
   const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -33,7 +33,7 @@ const ServiceFaq = ({ data }) => {
             sx={{
               mb: { xs: 1, md: 4 },
               position: 'relative',
-              backgroundColor: '#F7F8FF',
+              backgroundColor: color || '#F7F8FF',
             }}
           >
             <AccordionSummary
@@ -81,7 +81,7 @@ const ServiceFaq = ({ data }) => {
               <Typography
                 sx={{
                   color: '#09114A !important ',
-                  textAlign: 'justify',
+                  // textAlign: 'justify',
                   fontWeight: 400,
                   fontSize: {
                     lg: '18px',

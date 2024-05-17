@@ -15,6 +15,7 @@ export const SUBMENU_ITEMS = {
         'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
     },
   ],
+
   Solutions: [
     {
       label: 'Start-Ups',
@@ -54,6 +55,14 @@ export const SUBMENU_ITEMS = {
         'Join a dynamic team and build your career in an innovative environment.',
     },
   ],
+  'Hire A Talent': [
+    {
+      label: '',
+      link: '',
+      icon: '',
+      description: '',
+    },
+  ],
   Partnership: [
     {
       label: 'Partnership Program',
@@ -65,6 +74,13 @@ export const SUBMENU_ITEMS = {
   ],
 };
 
-export const PAGES = ['Our Company', 'Solutions', 'Resources', 'Partnership'];
+export const PAGES = [
+  'Our Company',
+  'Solutions',
+  'Resources',
+  'Hire A Talent',
+  'Partnership',
+];
 export const HIRE_A_TALENT = 'Hire a Talent';
+export const BOOK_A_DEMO = 'Book a Demo';
 export const HIRE_A_TALENT_LINK = '/book-a-demo';
