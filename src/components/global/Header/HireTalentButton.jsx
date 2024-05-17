@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { Button } from '@mui/material';
 import Link from 'next/link';
-import { HIRE_A_TALENT, HIRE_A_TALENT_LINK } from '@/constants/global/header';
+import { BOOK_A_DEMO, HIRE_A_TALENT_LINK } from '@/constants/global/header';
 
 const HireTalentButton = ({ handleOpenUserMenu, display }) => {
   return (
@@ -29,7 +29,7 @@ const HireTalentButton = ({ handleOpenUserMenu, display }) => {
             alignItems: 'center',
           }}
         >
-          {HIRE_A_TALENT}
+          {BOOK_A_DEMO}
         </Button>{' '}
       </Link>
     </Box>

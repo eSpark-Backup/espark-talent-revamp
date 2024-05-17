@@ -42,7 +42,14 @@ const ClientSlider = ({
   const isMediumScreen = useMediaQuery('(max-width:769px)');
 
   return (
-    <Box sx={{ backgroundColor: bgColor, PY: '2.5%', width: '100%' }}>
+    <Box
+      sx={{
+        backgroundColor: bgColor,
+        PY: '2.5%',
+        width: '100%',
+        boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
+      }}
+    >
       <Container sx={{ pb: pb || '10px' }}>
         {isMediumScreen ? (
           <Typography
