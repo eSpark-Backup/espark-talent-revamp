@@ -398,6 +398,7 @@ span {
     top: 360px !important;
   }
 }
+
 @media (min-width: 280px) and (max-width: 300px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
@@ -412,18 +413,22 @@ span {
     top: 360px !important;
   }
 }
+
 @media (min-width: 280px) and (max-width: 300px) {
   .reviews-swiper .swiper-slide {
     width: 90% !important;
     height: 370px !important;
   }
+
   .reviews-swiper .swiper-button-prev {
     top: 360px !important;
   }
+
   .reviews-swiper .swiper-button-next {
     top: 360px !important;
   }
 }
+
 .hrFirmResponsive {
   display: none;
 }
@@ -1625,6 +1630,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 425px) {
+
   .mui-10bxxrr {
     width: 100% !important;
     height: 100vh !important;
@@ -1634,4 +1640,162 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .scroll {
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+@keyframes fontSizeAnimation {
+  0% {
+    font-size: 60px;
+  }
+
+  20% {
+    font-size: 60px;
+  }
+
+  30% {
+    font-size: 50px;
+  }
+
+  50% {
+    font-size: 50px;
+  }
+
+  60% {
+    font-size: 60px;
+  }
+
+  100% {
+    font-size: 60px;
+  }
+}
+
+@keyframes fontSizeAnimationXS {
+  0% {
+    font-size: 27px;
+
+  }
+
+  20% {
+    font-size: 27px;
+  }
+
+  30% {
+    font-size: 26px;
+  }
+
+  50% {
+    font-size: 26px;
+  }
+
+  60% {
+    font-size: 27px;
+  }
+
+  100% {
+    font-size: 27px;
+  }
+}
+
+@keyframes fontSizeAnimationSM {
+  0% {
+    font-size: 28px;
+
+  }
+
+  20% {
+    font-size: 28px;
+  }
+
+  30% {
+    font-size: 30px;
+  }
+
+  50% {
+    font-size: 30px;
+  }
+
+  60% {
+    font-size: 28px;
+  }
+
+  100% {
+    font-size: 28px;
+  }
+}
+
+@keyframes fontSizeAnimationMD {
+  0% {
+    font-size: 42px;
+  }
+
+  20% {
+    font-size: 42px;
+  }
+
+  30% {
+    font-size: 40px;
+  }
+
+  50% {
+    font-size: 40px;
+  }
+
+  60% {
+    font-size: 42px;
+  }
+
+  100% {
+    font-size: 42px;
+  }
+}
+
+@keyframes fontSizeAnimationLG {
+  0% {
+    font-size: 60px;
+  }
+
+  20% {
+    font-size: 60px;
+  }
+
+  30% {
+    font-size: 55px;
+  }
+
+  50% {
+    font-size: 55px;
+  }
+
+  60% {
+    font-size: 60px;
+  }
+
+  100% {
+    font-size: 60px;
+  }
+}
+
+@keyframes fontSizeAnimationXL {
+  0% {
+    font-size: 60px;
+  }
+
+  20% {
+    font-size: 60px;
+  }
+
+  30% {
+    font-size: 55px;
+  }
+
+  50% {
+    font-size: 55px;
+  }
+
+  60% {
+    font-size: 60px;
+  }
+
+  100% {
+    font-size: 60px;
+  }
 }

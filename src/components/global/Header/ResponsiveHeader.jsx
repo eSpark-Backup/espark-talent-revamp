@@ -14,6 +14,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentResponsiveButton from './HireTalentResponsiveButton';
+import HireLinks from '@/components/homepage/HireLinks';
+import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
@@ -122,55 +124,63 @@ const ResponsiveHeader = ({
                   <AccordionDetails
                     sx={{ backgroundColor: '#fff !important ' }}
                   >
-                    {SUBMENU_ITEMS[page]?.map((submenuItem, index) => (
-                      <MenuItem
-                        key={index}
-                        onClick={() => handleSubmenuItemClicked(submenuItem)}
-                      >
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                          }}
-                        >
-                          <Image
-                            quality="85"
-                            priority={true}
-                            src={submenuItem.icon}
-                            width={30}
-                            height={30}
-                            alt="icon"
-                            style={{ marginRight: '2px' }}
-                          />
-                          <Box sx={{ mx: 2 }}>
-                            <Typography
-                              variant="subtitle1"
+                    {page === 'Hire A Talent' ? (
+                      <HireLinks data={HIRE_A_TALENT_MENU} />
+                    ) : (
+                      <>
+                        {SUBMENU_ITEMS[page]?.map((submenuItem, index) => (
+                          <MenuItem
+                            key={index}
+                            onClick={() =>
+                              handleSubmenuItemClicked(submenuItem)
+                            }
+                          >
+                            <Box
                               sx={{
-                                color: '#222',
-                                fontSize: '17.566px',
-                                fontWeight: 600,
-                                lineHeight: '17px',
-                                mb: 1,
+                                display: 'flex',
+                                alignItems: 'center',
                               }}
                             >
-                              {submenuItem.label}
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              sx={{
-                                color: '#000',
-                                fontSize: '12px',
-                                fontWeight: 400,
-                                lineHeight: '16px',
-                                whiteSpace: 'normal',
-                              }}
-                            >
-                              {submenuItem.description}
-                            </Typography>
-                          </Box>
-                        </Box>
-                      </MenuItem>
-                    ))}
+                              <Image
+                                quality="85"
+                                priority={true}
+                                src={submenuItem.icon}
+                                width={30}
+                                height={30}
+                                alt="icon"
+                                style={{ marginRight: '2px' }}
+                              />
+                              <Box sx={{ mx: 2 }}>
+                                <Typography
+                                  variant="subtitle1"
+                                  sx={{
+                                    color: '#222',
+                                    fontSize: '17.566px',
+                                    fontWeight: 600,
+                                    lineHeight: '17px',
+                                    mb: 1,
+                                  }}
+                                >
+                                  {submenuItem.label}
+                                </Typography>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    color: '#000',
+                                    fontSize: '12px',
+                                    fontWeight: 400,
+                                    lineHeight: '16px',
+                                    whiteSpace: 'normal',
+                                  }}
+                                >
+                                  {submenuItem.description}
+                                </Typography>
+                              </Box>
+                            </Box>
+                          </MenuItem>
+                        ))}
+                      </>
+                    )}
                   </AccordionDetails>
                 )}
               </Accordion>
