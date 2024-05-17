@@ -2,7 +2,7 @@ import React from 'react';
 import AwardAchievement from './AwardAchiefment';
 import { ACHIEVEMENTS_DATA } from '@/constants/homepage';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import Faq from '../FAQ/Faq';
+import ServiceFaq from '../service/ServiceFaq';
 
 const HomeBottom = () => {
   return (
@@ -12,7 +12,7 @@ const HomeBottom = () => {
         design={1}
         background={'#F7F8FB'}
       />
-      <Faq data={FAQ_DATA} />
+      <ServiceFaq data={FAQ_DATA} color={'#fff'} />
     </>
   );
 };
