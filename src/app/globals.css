@@ -1670,28 +1670,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @keyframes fontSizeAnimationXS {
   0% {
-    font-size: 27px;
+    font-size: 25px;
 
   }
 
   20% {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   30% {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   50% {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   60% {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   100% {
-    font-size: 27px;
+    font-size: 25px;
   }
 }
 
@@ -1724,27 +1724,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @keyframes fontSizeAnimationMD {
   0% {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   20% {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   30% {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   50% {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   60% {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   100% {
-    font-size: 42px;
+    font-size: 32px;
   }
 }
 

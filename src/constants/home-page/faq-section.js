@@ -3,21 +3,21 @@ export const FAQ_DATA = {
   questions: [
     {
       id: 1,
-      heading: 'What are the examples of HR outsourcing?',
-      description:
-        'HR outsourcing examples include Professional Employer Organization (PEO), Human Resources Outsourcing (HRO), and Business Process Outsourcing (BPO).',
-    },
-    {
-      id: 3,
       heading: 'What are the models of HR outsourcing?',
       description:
         'There are various types of HR outsourcing. However, four prime models that cover all of them. PEO, HRO, ASO, BPO.',
     },
     {
-      id: 5,
+      id: 3,
       heading: 'What is the purpose of HR outsourcing?',
       description:
         'HR outsourcing services enhance operational efficiency and focus on core business goals. Moreover, outstaffing supports the available workforce by lowering their daily workload.',
+    },
+    {
+      id: 5,
+      heading: 'What are the examples of HR outsourcing?',
+      description:
+        'HR outsourcing examples include Professional Employer Organization (PEO), Human Resources Outsourcing (HRO), and Business Process Outsourcing (BPO).',
     },
     {
       id: 2,

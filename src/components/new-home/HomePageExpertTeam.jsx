@@ -32,14 +32,14 @@ const HomePageExpertTeam = ({ data }) => {
         >
           <Typography
             sx={{
-              fontSize: { xs: '18px', sm: '20px', md: '45px', lg: '65px' },
-              fontWeight: 700,
+              fontSize: { xs: '18px', sm: '30px', md: '45px', lg: '65px' },
+              fontWeight: 600,
               lineHeight: { xs: 'auto', lg: '78.66px' },
             }}
           >
             {data?.title || ''}
           </Typography>
-          <Box sx={{ width: 'auto', mt: 2.5 }}>
+          <Box sx={{ width: 'auto', mt: { xs: 0.5, md: 2.5 } }}>
             <Button
               onClick={() => window?.open(data?.btnLink || '', '_blank')}
               sx={{
