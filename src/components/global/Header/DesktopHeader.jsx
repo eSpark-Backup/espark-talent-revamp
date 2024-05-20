@@ -73,6 +73,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
         {PAGES?.map((page, index) => (
           <Box key={index}>
             <Button
+              onMouseEnter={(event) => handleClick(event, page)}
               sx={{
                 my: 2,
                 mx: { md: 0.5, lg: 1 },
@@ -88,7 +89,6 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
             >
               <Typography
                 aria-describedby={id}
-                onMouseEnter={(event) => handleClick(event, page)}
                 sx={{
                   color: '#222',
                   fontSize: { xs: '16px', lg: '18px' },
@@ -100,7 +100,6 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                 {page}
               </Typography>
               <Image
-                onMouseEnter={(event) => handleClick(event, page)}
                 quality="85"
                 priority={true}
                 src={'/images/header/arrow.svg'}
