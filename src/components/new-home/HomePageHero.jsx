@@ -100,12 +100,7 @@ const HomePageHero = ({ data }) => {
                 color: '#fff',
                 textWrap: 'nowrap',
                 fontWeight: 'bold',
-                lineHeight: {
-                  xs: '40px',
-                  sm: '45px',
-                  md: '55px',
-                  lg: '80px',
-                },
+                lineHeight: 1.2,
                 animation: isXS
                   ? 'fontSizeAnimationXS 3s ease-in-out infinite'
                   : isSM

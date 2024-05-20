@@ -66,7 +66,8 @@ const HomePageDifference = ({ data }) => {
                     sx={{
                       display: 'flex',
                       height: '70.972px',
-                      borderRadius: '13.57px',
+                      borderTopLeftRadius: '13.57px',
+                      borderTopRightRadius: '13.57px',
                       background: '#F7F8FB',
                       borderTop: '1px solid lightGray',
                       p: '20px',
