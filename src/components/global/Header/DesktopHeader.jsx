@@ -88,7 +88,6 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
             >
               <Typography
                 aria-describedby={id}
-                onClick={(event) => handleClick(event, page)}
                 onMouseEnter={(event) => handleClick(event, page)}
                 sx={{
                   color: '#222',
@@ -101,6 +100,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                 {page}
               </Typography>
               <Image
+                onMouseEnter={(event) => handleClick(event, page)}
                 quality="85"
                 priority={true}
                 src={'/images/header/arrow.svg'}
