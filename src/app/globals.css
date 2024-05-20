@@ -1670,28 +1670,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @keyframes fontSizeAnimationXS {
   0% {
-    font-size: 25px;
-
+    font-size: 27px;
   }
 
   20% {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   30% {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   50% {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   60% {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   100% {
-    font-size: 25px;
+    font-size: 27px;
   }
 }
 
