@@ -1674,23 +1674,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   20% {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   30% {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   50% {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   60% {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   100% {
-    font-size: 27px;
+    font-size: 25px;
   }
 }
 
@@ -1780,7 +1780,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   20% {
     font-size: 60px;
-  }
+  }==
 
   30% {
     font-size: 55px;
