@@ -249,3 +249,26 @@ export const TERMS_CONDITIONS_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+
+export const JOIN_CREW_HERO_DATA = {
+  title: 'Join The eSpark Talent Crew.',
+  description:
+    `You're Just a few click away from your Dream Job.
+    Get Register With eSpark Talent & our details will be considered for future suitable roles.`,
+  image: '/images/join-crew/join-crew.png',
+  imageAlt: 'Explore the Corporate world with eSpark Talent',
+  imageWidth: 350,
+  imageHeight: 420,
+  bgImage: '/images/join-crew/gradient-bg.png',
+  spacing: '2%',
+  titleVariant: 'h1',
+  titleColor: '#fff',
+  descVarient: 'body1',
+  descColor: '#fff',
+  button: {
+    label: 'Register Now',
+    link: null,
+    btnVarient: 'primary',
+    btnColor: 'secondary',
+  },
+};
