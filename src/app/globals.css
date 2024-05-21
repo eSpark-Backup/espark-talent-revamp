@@ -1731,11 +1731,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   30% {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   50% {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   60% {
@@ -1780,7 +1780,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   20% {
     font-size: 60px;
-  }==
+  }
 
   30% {
     font-size: 55px;
