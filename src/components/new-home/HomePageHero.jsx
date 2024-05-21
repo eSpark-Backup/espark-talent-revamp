@@ -77,18 +77,24 @@ const HomePageHero = ({ data }) => {
             <Typography
               sx={{
                 fontSize: { xs: '27px', sm: '30px', md: '32px' },
+                lineHeight: {
+                  xs: 'calc(1.3 * 27px)',
+                  sm: 'calc(1.3 * 30px)',
+                  md: 'calc(1.3 * 32px)',
+                },
                 fontWeight: 'bold',
                 // mb: 2,
-                lineHeight: 1.2,
-
                 '@media (min-width: 1366px)': {
                   fontSize: '46px',
+                  lineHeight: 'calc(1.3 * 46px)',
                 },
                 '@media (min-width: 1440px)': {
                   fontSize: '49px',
+                  lineHeight: 'calc(1.3 * 49px)',
                 },
                 '@media (min-width: 1650px)': {
                   fontSize: '55px',
+                  lineHeight: 'calc(1.3 * 55px)',
                 },
               }}
             >
@@ -100,7 +106,19 @@ const HomePageHero = ({ data }) => {
                 color: '#fff',
                 textWrap: 'nowrap',
                 fontWeight: 'bold',
-                lineHeight: 1.2,
+                lineHeight: {
+                  xs: 'calc(1.3 * 27px)',
+                  sm: 'calc(1.3 * 30px)',
+                  md: 'calc(1.3 * 32px)',
+                },
+                '@media (min-width: 1440px)': {
+                  fontSize: '49px',
+                  lineHeight: 'calc(1.3 * 49px)',
+                },
+                '@media (min-width: 1650px)': {
+                  fontSize: '55px',
+                  lineHeight: 'calc(1.3 * 55px)',
+                },
                 animation: isXS
                   ? 'fontSizeAnimationXS 3s ease-in-out infinite'
                   : isSM

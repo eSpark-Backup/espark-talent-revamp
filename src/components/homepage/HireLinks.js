@@ -44,7 +44,7 @@ const HireLinks = ({ data }) => {
   return (
     <Box
       sx={{
-        my: 3,
+        my: 3.7,
         width: '100%',
         background: '#F7F8FBFA',
         '@media (max-width: 987px)': {
