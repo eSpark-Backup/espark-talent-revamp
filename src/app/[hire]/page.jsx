@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import { HIRES_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 import { getSingleHire } from '@/sanity/sanity.quries';
@@ -64,13 +64,13 @@ const Page = ({ params }) => {
   if (!params || !params.hire) {
     return (
       <div>
-        <NotFoundPage data={HIRES_NOT_FOUND_DATA} />
+        <NotFoundPage data={NOT_FOUND_DATA} />
       </div>
     );
   }
   try {
     if (!data) {
-      return <NotFoundPage data={HIRES_NOT_FOUND_DATA} />;
+      return <NotFoundPage data={NOT_FOUND_DATA} />;
     }
     return (
       <>
@@ -81,7 +81,7 @@ const Page = ({ params }) => {
     console.error('Error fetching data:', error);
     return (
       <div>
-        <NotFoundPage data={HIRES_NOT_FOUND_DATA} />
+        <NotFoundPage data={NOT_FOUND_DATA} />
       </div>
     );
   }

@@ -14,6 +14,13 @@ export const SUBMENU_ITEMS = {
       description:
         'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
     },
+    {
+      label: 'Partnership Program',
+      link: '/partnership-program',
+      icon: '/images/header/partnership.svg',
+      description:
+        'Collaborate and excel in our referral program for shared achievements and success.',
+    },
   ],
 
   Solutions: [
@@ -47,13 +54,6 @@ export const SUBMENU_ITEMS = {
       description:
         'Explore the section of job description templates and learn about market demands.',
     },
-    {
-      label: 'Careers',
-      link: '/careers',
-      icon: '/images/header/career.svg',
-      description:
-        'Join a dynamic team and build your career in an innovative environment.',
-    },
   ],
   'Hire A Talent': [
     {
@@ -63,13 +63,19 @@ export const SUBMENU_ITEMS = {
       description: '',
     },
   ],
-  Partnership: [
+  Careers: [
     {
-      label: 'Partnership Program',
-      link: '/partnership-program',
-      icon: '/images/header/partnership.svg',
+      label: 'Current Job Openings',
+      link: '/careers',
+      icon: '/images/header/careers.svg',
       description:
-        'Collaborate and excel in our referral program for shared achievements and success.',
+        'Join a dynamic team and build your career in an innovative environment.',
+    },
+    {
+      label: 'Join eSpark Crew',
+      link: '/join-espark-crew',
+      icon: '/images/header/join-crew.svg',
+      description: 'Get register With eSpark Talent for Future suitable roles',
     },
   ],
 };
@@ -79,7 +85,7 @@ export const PAGES = [
   'Solutions',
   'Resources',
   'Hire A Talent',
-  'Partnership',
+  'Careers',
 ];
 export const HIRE_A_TALENT = 'Hire a Talent';
 export const BOOK_A_DEMO = 'Book a Demo';
