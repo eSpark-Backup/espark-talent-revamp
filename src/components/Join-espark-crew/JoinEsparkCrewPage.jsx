@@ -4,12 +4,71 @@ import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
 import { BENEFITS, KEYS } from '@/constants/join-espark-crew';
+import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
+import { useState } from 'react';
 
 export default function JoinEsparkCrewPage() {
-  const handleClick = () => {
-    console.log('openModal');
-    //modal opening login
+  const [registrationModal, setRegistrationModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone_num: "",
+    cnic: "",
+    linkedin_profile: "",
+    salary_expection: "",
+    experience: "",
+    availability: "",
+    prefrences: "",
+    education: "",
+    github_profile: "",
+    job_type: "",
+    projects: "",
+    city: "",
+    field: "",
+    subField: "",
+    position: "",
+    tags: [],
+    cv: "",
+  });
+
+  const handleChange = (name, value) => {
+    switch (name) {
+      case "field":
+        setForm((prev) => ({
+          ...prev,
+          subField: "",
+          position: "",
+          [name]: value,
+
+        }));
+        break;
+      case "subField":
+        setForm((prev) => ({
+          ...prev,
+          position: "",
+          [name]: value,
+        }));
+        break;
+      case "position":
+        setForm((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+        break;
+      default:
+        setForm((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+        break;
+    }
   };
+
+  const handleClick = () => {
+    setRegistrationModal(true);
+  };
+
   return (
     <>
       <Hero
@@ -281,6 +340,20 @@ export default function JoinEsparkCrewPage() {
           </Box>
         </Stack>
       </Stack>
+
+
+      {/* Registration Modal  */}
+      <JoinEsparkRegistrationModal
+        open={registrationModal}
+        handleClose={() => setRegistrationModal(false)}
+        loading={loading}
+        handleChange={handleChange}
+        handleSubmit={() => console.log(form)}
+        form={form}
+      />
     </>
+
+
+
   );
 }

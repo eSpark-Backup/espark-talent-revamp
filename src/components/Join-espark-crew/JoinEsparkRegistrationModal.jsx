@@ -1,0 +1,342 @@
+import { APPLY_FOR_FIELDS, PERSONAL_INFO_FIELDS, URL_EXPRESSION } from '@/constants/join-espark-crew';
+import { Box, Modal, Stack, Tooltip, Typography } from '@mui/material'
+import { useTheme } from "@mui/material/styles";
+import React from 'react'
+import CustomInput from '../global/Inputs/CustomInput';
+import Dropdown from '../global/Inputs/Dropdown';
+import InfoIcon from '@mui/icons-material/Info';
+import { TagsInput } from 'react-tag-input-component';
+import TextArea from '../global/Inputs/TextArea';
+import ImgUploader from '../global/Inputs/ImageUpload';
+
+const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleChange, handleSubmit }) => {
+  const theme = useTheme();
+
+  return (
+    <Modal
+      open={open}
+      onClose={handleClose}
+      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <>
+        <Box component="form"
+          sx={{
+            boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+            borderRadius: '10px',
+            width: '70%',
+            backgroundColor: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            maxHeight: '95vh',
+            overflowY: 'auto',
+          }}
+          onSubmit={handleSubmit}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+
+              [theme.breakpoints.up("xs")]: {
+                flexDirection: "column",
+                padding: "20px 10px",
+                rowGap: "10px",
+              },
+
+              [theme.breakpoints.up("md")]: {
+                flexDirection: "row",
+                padding: "30px",
+              },
+            }}
+          >
+            <Box sx={{ width: "100%" }}>
+              <Typography mb={1}
+                fontSize={25}
+                textAlign="left" sx={{ color: "black" }}>
+                Personal Info
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                  border: "1px solid #ccc",
+                  padding: "10px",
+                  borderRadius: "5px",
+                  rowGap: "6px"
+                }}
+              >
+                {PERSONAL_INFO_FIELDS?.map((item, index) => (
+                  <Box
+                    sx={{
+                      [theme.breakpoints.up("xs")]: {
+                        width: "100%",
+                      },
+
+                      [theme.breakpoints.up("md")]: {
+                        width:
+                          item?.name === "city" ||
+                            item?.name === "job_type" ||
+                            item.name === "projects"
+                            ? "100%"
+                            : "30%",
+                      },
+                    }}
+                  >
+                    {item?.type !== "select" &&
+                      item?.type !== "tags" &&
+                      item?.type !== "textarea" ? (
+                      <CustomInput
+                        required
+                        label={item?.label}
+                        type={item?.type}
+                        name={item?.name}
+                        placeholder={item?.placeholder}
+                        tooltip={item?.tooltip}
+                        onChange={handleChange}
+                        maxLength={item?.maxLength && item?.maxLength}
+                      />
+                    ) : item?.type !== "tags" && item?.type !== "textarea" ? (
+                      <Dropdown
+                        showTooltip={true}
+                        name={item?.name}
+                        label={item?.label}
+                        placeholder={item?.placeholder}
+                        tooltip={item?.tooltip}
+                        options={
+                          item?.name === "subField"
+                            ? item?.options[form?.field?.value]
+                            : item?.name === "position"
+                              ? item?.options[form?.subField?.value]
+                              : item?.options
+                        }
+                        onChange={handleChange}
+                        className={
+                          item?.name === "subField" && !form.field
+                            ? "hide"
+                            : item?.name === "position" && !form.subField
+                              ? "hide"
+                              : item?.name === "position" &&
+                                form.subField &&
+                                form?.field?.value !== "Software Engineering"
+                                ? "hide"
+                                : ""
+                        }
+                      />
+                    ) : item?.type === "textarea" ? (
+                      <TextArea
+                        name={item?.name}
+                        placeholder={item?.placeholder}
+                        label={item?.label}
+                        title={item?.tooltip}
+                        tooltip={item?.tooltip}
+                        onChange={handleChange}
+                      />
+                    ) : (
+                      <Stack gap={1}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                        >
+
+                          <Typography sx={{ color: "black" }}>
+                            Skills, Technologies and Expertise
+                          </Typography>
+
+                          <Tooltip placement="top-start" title={
+                            item?.tooltip
+                          } >
+                            <InfoIcon
+                              style={{
+                                marginLeft: "5px",
+                                color: "rgb(97, 192, 224)",
+                                fontSize: "13px",
+                                marginBottom: "12px",
+                              }}
+                            />
+                          </Tooltip>
+                        </Box>
+                        <TagsInput
+                          value={form.tags}
+                          onChange={(e) => handleChange("tags", e)}
+                          name="skills"
+                          placeHolder="Start with #"
+                          beforeAddValidate={(tag) => {
+                            if (tag.trim().startsWith("#")) {
+                              return true;
+                            } else {
+                              return false;
+                            }
+                          }}
+                        />
+                      </Stack>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+            <Box sx={{ width: "100%" }}>
+              {
+                <>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    gap="10px"
+                  >
+                    <Stack direction={"row"}>
+                      <Typography
+                        fontSize={25}
+                        mb={1} textAlign="left" sx={{ color: "black" }}>
+                        Resume
+                      </Typography>
+                      <Tooltip placement="top-start" title={"Please choose a file to upload your resume, or you can share a link to your resume with us. Accepted formats are PDF, DOC, and DOCX."}>
+                        <InfoIcon
+                          style={{
+                            marginLeft: "5px",
+                            color: "rgb(97, 192, 224)",
+                            fontSize: "13px",
+                            marginBottom: "12px",
+                          }}
+                        />
+                      </Tooltip>
+                    </Stack>
+                    {form.cv !== "" && (
+                      <img
+                        width={25}
+                        src={
+                          (
+                            typeof form.cv === "string"
+                              ? form.cv.match(new RegExp(URL_EXPRESSION))
+                              : form.cv !== ""
+                          )
+                            ? "/tick.png"
+                            : "/cross.png"
+                        }
+                        alt="icon"
+                      />
+                    )}
+                  </Stack>
+                  <Stack
+                    sx={{
+                      border: "1px solid #ccc",
+                      padding: "10px",
+                      borderRadius: "5px",
+                      div: { width: "50%", div: { width: "100%" } },
+                    }}
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    gap="10px"
+                  >
+                    <ImgUploader
+                      disabled={typeof form.cv === "string" && form.cv !== ""}
+                      onChange={handleChange}
+                      name={"cv"}
+                      filename={form.cv?.name}
+                      form={true}
+                    />
+                    <Typography
+                      style={{ color: "black" }}
+                      mt={2} variant="subtitle2">
+                      OR
+                    </Typography>
+                    <CustomInput
+                      onChange={handleChange}
+                      type={"url"}
+                      placeholder={"Resume Link"}
+                      name={"cv"}
+                    />
+                  </Stack>
+                </>
+              }
+            </Box>
+            <Box sx={{ width: "100%" }}>
+              <Typography fontSize={25} mb={1} textAlign="left" sx={{ color: "black" }}>
+                Apply For
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                  border: "1px solid #ccc",
+                  padding: "10px",
+                  borderRadius: "5px",
+                }}
+              >
+                {APPLY_FOR_FIELDS?.map((item, index) => (
+                  <Box
+                    sx={{
+                      [theme.breakpoints.up("xs")]: {
+                        width: "100%",
+                      },
+
+                      [theme.breakpoints.up("md")]: {
+                        width:
+                          item?.name === "city" ||
+                            item?.name === "job_type" ||
+                            item.name === "projects"
+                            ? "100%"
+                            : "30%",
+                      },
+                    }}
+                  >
+                    <Dropdown
+                      name={item?.name}
+                      label={item?.label}
+                      value={form[item?.name]}
+                      placeholder={item?.placeholder}
+                      tooltip={item?.tooltip}
+                      options={
+                        item?.name === "subField"
+                          ? item?.options[form?.field?.value]
+                          : item?.name === "position"
+                            ? item?.options[form?.subField?.value]
+                            : item?.options
+                      }
+                      onChange={handleChange}
+                      className={
+                        item?.name === "subField" && !form.field
+                          ? "hide"
+                          : item?.name === "position" && !form.subField
+                            ? "hide"
+                            : item?.name === "position" &&
+                              form.subField &&
+                              form?.field?.value !== "Software Engineering"
+                              ? "hide"
+                              : ""
+                      }
+                    />
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "0px 30px",
+              width: "100%"
+            }}
+          >
+            <button className={loading ? "disabled" : ""} disabled={loading} type="submit">
+              {loading ? "loading..." : "Submit"}
+            </button>
+          </Box>
+        </Box>
+      </>
+    </Modal>
+  )
+}
+
+export default JoinEsparkRegistrationModal
