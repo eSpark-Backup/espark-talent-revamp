@@ -16,23 +16,29 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
     <Modal
       open={open}
       onClose={handleClose}
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        paddingTop: { xs: "1000px", md: "350px" },
+        overflowY: "scroll",
+        height: '95vh',
+        width: 'auto',
+      }}
     >
       <>
         <Box component="form"
           sx={{
             boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
             borderRadius: '10px',
-            width: '70%',
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            maxHeight: '95vh',
-            overflowY: 'auto',
+            width: { xs: '100%', md: '80%' },
           }}
           onSubmit={handleSubmit}>
           <Box
