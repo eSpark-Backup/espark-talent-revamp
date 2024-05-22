@@ -1,5 +1,6 @@
 import { useTheme } from "@emotion/react";
 import { Typography } from "@mui/material";
+import Image from "next/image";
 
 
 const ImgUploader = ({ label, name, onChange, disabled, filename, form, table }) => {
@@ -34,12 +35,19 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form, table })
               sx={{
                 backgroundColor: (theme) => !disabled ? theme.palette.primary.main : "#ccc",
                 color: '#fff',
-                padding: '8px 12px',
+                padding: '8px 25px',
                 borderRadius: '5px',
                 cursor: 'pointer',
 
               }}
-              >Upload</Typography>
+            >
+              <Image
+                width={22}
+                height={22}
+                src="/images/join-crew/join-ciew-resume-upload.png"
+              />
+
+            </Typography>
             {form && <p className="filename">{filename ? filename : "Choose Your File"}</p>}
           </div>
         </label>

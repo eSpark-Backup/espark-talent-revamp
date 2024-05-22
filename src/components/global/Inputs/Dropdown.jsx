@@ -13,6 +13,26 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
         backgroundColor: '#e6e9eb',
       },
       backgroundColor: state.isSelected ? '#90d1f5' : 'white',
+
+    }),
+    control: (provided) => ({
+      ...provided,
+      color: 'black',
+      fontSize: '16px',
+      minHeight: '51px',
+      boxShadow: 'none',
+      '&:hover': {
+        border: '1px solid #cccccc',
+      },
+      '&:focus': {
+        border: '1px solid #cccccc',
+      },
+      border: '1px solid #cccccc',
+    }),
+    menu: (provided) => ({
+      ...provided,
+      fontSize: '16px',
+      backgroundColor: '#F4F4F4',
     }),
   };
 
@@ -24,7 +44,7 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
           alignItems: "center",
         }}
       >
-        {label && <Typography style={{ color: "black" }}>{label}</Typography>}
+        {label && <Typography style={{ color: "black", fontSize: "18px" }}>{label}</Typography>}
         {showTooltip
           &&
           <Tooltip placement="top-start" title={tooltip}>
@@ -47,11 +67,6 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
         isSearchable={true}
         isClearable={true}
         onChange={(e) => onChange(name, e)}
-        // defaultValue={
-        //   name === "subField" || name === "position"
-        //     ? ""
-        //     : options[0]
-        // }
         value={value}
       />
     </Stack>

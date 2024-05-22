@@ -1807,7 +1807,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* PHONE TEL  */
 .react-tel-input .form-control{
   width: 100% !important;
-  height: 56px !important;
+  height: 51px !important;
 }
 
 .react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus{
@@ -1834,7 +1834,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* HIDDEN CLASS */
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .hidden-input {
@@ -1847,4 +1847,9 @@ input {
   border-radius: 5px;
   outline: none;
   border: 1px solid #cccccc;
+}
+
+.rti--input{
+  height: 28px !important;
+  font-size: 16px !important;
 }

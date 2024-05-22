@@ -34,7 +34,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
             flexDirection: 'column',
             justifyContent: 'flex-start',
             alignItems: 'center',
-            width: { md: '100%', lg:'70%' },
+            width: { xs: "100%", md: '90%', lg: '80%', xl: "70%" },
             overflowY: "scroll",
             height: '80vh',
           }}

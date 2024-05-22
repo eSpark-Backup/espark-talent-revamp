@@ -21,7 +21,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                         alignItems: "center",
                     }}
                 >
-                    <Typography mb={1} textAlign="  " sx={{ color: "black" }}>{label}</Typography>
+                    <Typography mb={1}  sx={{ color: "black", fontSize: "18px" }}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
                             sx={{
@@ -36,7 +36,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                 <PhoneInput
                     country={'pk'}
                     disableDropdown={true}
-                    inputStyle={{ color: "black" }}
+                    inputStyle={{ color: "black", fontSize: "16px" }}
                     countryCodeEditable={false}
                     onChange={handlePhoneChange}
                     value={phone}
@@ -51,7 +51,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                         alignItems: "center",
                     }}
                 >
-                    <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
+                    <Typography mb={1} textAlign="left" sx={{ color: "black", fontSize: "18px"  }}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
                             sx={{
@@ -74,7 +74,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                     allowLeadingZeros
                     thousandSeparator=","
                     onChange={(e) => onChange(name, e.target.value)}
-                    style={{ height: "56px", backgroundColor: "white", color: "black", BorderColor: "black", padding: "10px", width: "100%", resize: "vertical" }}
+                    style={{ height: "51px", fontSize: "16px", backgroundColor: "white", color: "black", BorderColor: "black", padding: "10px", width: "100%", resize: "vertical" }}
                 />
             </Stack>
         ) : (
@@ -87,7 +87,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                                 alignItems: "center",
                             }}
                         >
-                            <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
+                            <Typography mb={1} textAlign="left" sx={{ color: "black", fontSize: "18px"  }}>{label}</Typography>
                             <Tooltip placement="top-start" title={tooltip}>
                                 <InfoIcon
                                     sx={{
@@ -104,8 +104,16 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                 }
 
 
-                <TextField 
-                    
+                <input
+                    style={{
+                        height: "51px",
+                        fontSize: "16px",
+                        backgroundColor: "white",
+                        color: "black",
+                        padding: "10px",
+                        width: "100%",
+                        resize: "vertical"
+                    }}
                     disabled={disabled}
                     name={name}
                     onChange={(e) => onChange(name, type === "file" ? e.target.files[0] : e.target.value)}
@@ -113,7 +121,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                     placeholder={placeholder}
                     required={required}
                     {...(maxLength && { onInput: (e) => e.target.value = e.target.value.slice(0, maxLength) })}
-                    
+
                 />
             </Stack>
         )
