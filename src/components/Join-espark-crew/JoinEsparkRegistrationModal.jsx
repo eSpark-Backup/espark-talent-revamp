@@ -22,10 +22,6 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: { xs: "1000px", md: "350px" },
-        overflowY: "scroll",
-        height: '95vh',
-        width: 'auto',
       }}
     >
       <>
@@ -36,9 +32,11 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
             backgroundColor: 'white',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             alignItems: 'center',
-            width: { xs: '100%', md: '80%' },
+            width: { md: '100%', lg:'70%' },
+            overflowY: "scroll",
+            height: '80vh',
           }}
           onSubmit={handleSubmit}>
           <Box
@@ -159,9 +157,9 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                             item?.tooltip
                           } >
                             <InfoIcon
-                              style={{
+                              sx={{
+                                color: (theme) => theme.palette.primary.main,
                                 marginLeft: "5px",
-                                color: "rgb(97, 192, 224)",
                                 fontSize: "13px",
                                 marginBottom: "12px",
                               }}
@@ -204,9 +202,9 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                       </Typography>
                       <Tooltip placement="top-start" title={"Please choose a file to upload your resume, or you can share a link to your resume with us. Accepted formats are PDF, DOC, and DOCX."}>
                         <InfoIcon
-                          style={{
+                          sx={{
+                            color: (theme) => theme.palette.primary.main,
                             marginLeft: "5px",
-                            color: "rgb(97, 192, 224)",
                             fontSize: "13px",
                             marginBottom: "12px",
                           }}
@@ -335,9 +333,22 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
               width: "100%"
             }}
           >
-            <button className={loading ? "disabled" : ""} disabled={loading} type="submit">
+            <Box component={"button"}
+              sx={{
+                width: '100%',
+                height: '45px',
+                backgroundColor: (theme) => theme.palette.primary.main,
+                color: 'white',
+                margin: 'auto auto',
+                border: 'none',
+                fontSize: '22px',
+                cursor: 'pointer',
+                marginBottom: '10px',
+                borderRadius: '8px',
+              }}
+              className={loading ? "disabled" : ""} disabled={loading} type="submit">
               {loading ? "loading..." : "Submit"}
-            </button>
+            </Box>
           </Box>
         </Box>
       </>

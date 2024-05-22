@@ -1,6 +1,10 @@
+import { useTheme } from "@emotion/react";
 import { Typography } from "@mui/material";
 
-const ImgUploader = ({ label, name, onChange, disabled, filename, form, table}) => {
+
+const ImgUploader = ({ label, name, onChange, disabled, filename, form, table }) => {
+  const theme = useTheme();
+
   const handleFileChange = (e, name) => {
     if (e.target.files.length > 0) {
       const file = e.target.files[0];
@@ -15,22 +19,31 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form, table}) 
         </Typography>
       )}
       <div>
-      <label htmlFor="imageInput">
-        <input
-          disabled={disabled}
-          accept="application/pdf"
-          id="imageInput"
-          type="file"
-          onChange={(e) => handleFileChange(e, name)}
-          className="hidden-input"
-          name={name}
-        />
-        <div className={form ? `image-selector ${disabled ? 'disabled' : ''}` : ''}>
-          <p className={form || table ? "upload-btn" : "upload-btn2"}>Upload</p>
-          {form && <p className="filename">{filename ? filename : "Choose Your File"}</p>}
-        </div>
-      </label>
-        </div>
+        <label htmlFor="imageInput">
+          <input
+            disabled={disabled}
+            accept="application/pdf"
+            id="imageInput"
+            type="file"
+            onChange={(e) => handleFileChange(e, name)}
+            className="hidden-input"
+            name={name}
+          />
+          <div className={form ? `image-selector ${disabled ? 'disabled' : ''}` : ''}>
+            <Typography
+              sx={{
+                backgroundColor: (theme) => !disabled ? theme.palette.primary.main : "#ccc",
+                color: '#fff',
+                padding: '8px 12px',
+                borderRadius: '5px',
+                cursor: 'pointer',
+
+              }}
+              >Upload</Typography>
+            {form && <p className="filename">{filename ? filename : "Choose Your File"}</p>}
+          </div>
+        </label>
+      </div>
     </div>
   );
 };

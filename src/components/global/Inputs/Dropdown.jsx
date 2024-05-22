@@ -1,9 +1,10 @@
 import { Stack, Typography, Tooltip, Box } from "@mui/material";
 import React from "react";
 import Select from "react-select";
-import InfoIcon from '@mui/icons-material/Info';
+import InfoIcon from '@mui/icons-material/Info'
 
 const Dropdown = ({ name, label, placeholder, options, onChange, value, className, tooltip, showTooltip }) => {
+
   const customStyles = {
     option: (provided, state) => ({
       ...provided,
@@ -28,9 +29,9 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
           &&
           <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
-              style={{
+              sx={{
+                color: (theme) => theme.palette.primary.main,
                 marginLeft: "5px",
-                color: "rgb(97, 192, 224)",
                 fontSize: "13px",
                 marginBottom: "12px",
               }}

@@ -15,9 +15,9 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
                 <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
                 <Tooltip placement="top-start" title={tooltip}>
                     <InfoIcon
-                        style={{
+                        sx={{   
+                            color: (theme) => theme.palette.primary.main,
                             marginLeft: "5px",
-                            color: "rgb(97, 192, 224)",
                             fontSize: "13px",
                             marginBottom: "12px",
                         }}

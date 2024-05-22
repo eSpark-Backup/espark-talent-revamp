@@ -5,13 +5,11 @@ import { TextField, Typography, Stack, Tooltip, Box } from '@mui/material';
 import { NumericFormat } from 'react-number-format'; // Assuming NumericFormat is correctly imported
 import InfoIcon from '@mui/icons-material/Info';
 
+
 const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLength, disabled, phone, tooltip }) => {
+
     const handlePhoneChange = (value, country, e, formattedValue) => {
         onChange(name, formattedValue); // Assuming you want to pass the formatted phone number
-    };
-
-    const handleNumberChange = (values) => {
-        onChange(name, values.value);
     };
 
     return (
@@ -23,12 +21,12 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                         alignItems: "center",
                     }}
                 >
-                    <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
+                    <Typography mb={1} textAlign="  " sx={{ color: "black" }}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
-                            style={{
+                            sx={{
+                                color: (theme) => theme.palette.primary.main,
                                 marginLeft: "5px",
-                                color: "rgb(97, 192, 224)",
                                 fontSize: "13px",
                                 marginBottom: "12px",
                             }}
@@ -56,9 +54,9 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                     <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
-                            style={{
+                            sx={{
+                                color: (theme) => theme.palette.primary.main,
                                 marginLeft: "5px",
-                                color: "rgb(97, 192, 224)",
                                 fontSize: "13px",
                                 marginBottom: "12px",
                             }}
@@ -76,7 +74,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                     allowLeadingZeros
                     thousandSeparator=","
                     onChange={(e) => onChange(name, e.target.value)}
-                    style={{ height: "56px", backgroundColor: "white", color: "black" }}
+                    style={{ height: "56px", backgroundColor: "white", color: "black", BorderColor: "black", padding: "10px", width: "100%", resize: "vertical" }}
                 />
             </Stack>
         ) : (
@@ -92,9 +90,9 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                             <Typography mb={1} textAlign="left" sx={{ color: "black" }}>{label}</Typography>
                             <Tooltip placement="top-start" title={tooltip}>
                                 <InfoIcon
-                                    style={{
+                                    sx={{
+                                        color: (theme) => theme.palette.primary.main,
                                         marginLeft: "5px",
-                                        color: "rgb(97, 192, 224)",
                                         fontSize: "13px",
                                         marginBottom: "12px",
                                     }}
@@ -106,7 +104,8 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                 }
 
 
-                <TextField
+                <TextField 
+                    
                     disabled={disabled}
                     name={name}
                     onChange={(e) => onChange(name, type === "file" ? e.target.files[0] : e.target.value)}
