@@ -220,8 +220,8 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                               ? form.cv.match(new RegExp(URL_EXPRESSION))
                               : form.cv !== ""
                           )
-                            ? "/tick.png"
-                            : "/cross.png"
+                            ? "/images/join-crew/green-tick.png"
+                            : "/images/join-crew/cross.png"
                         }
                         alt="icon"
                       />

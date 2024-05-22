@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 
@@ -48,7 +48,16 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form, table })
               />
 
             </Typography>
-            {form && <p className="filename">{filename ? filename : "Choose Your File"}</p>}
+            {form && <Typography
+              sx={{
+                display: { sm: 'none', md: 'block' },
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+              }}
+            >{filename ?
+              filename.length > 15 ? filename.substring(0, 15) + '...' : filename
+              : "Choose Your File"}</Typography>}
           </div>
         </label>
       </div>
