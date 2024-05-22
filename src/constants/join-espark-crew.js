@@ -505,6 +505,9 @@ export const APPLY_FOR_FIELDS = [
   },
 ]
 
-
-
-
+  export const ABOUT = [
+    'Doing Great work energizes you',
+    'You bring Out of the box Ideas',
+    `You're an excellent team player`,
+    `You're good at anything you put your mind`,
+  ];

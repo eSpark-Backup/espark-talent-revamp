@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
-import { BENEFITS, KEYS } from '@/constants/join-espark-crew';
+import { BENEFITS, KEYS, ABOUT } from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
 import { useState } from 'react';
 
@@ -77,6 +77,103 @@ export default function JoinEsparkCrewPage() {
           button: { ...JOIN_CREW_HERO_DATA.button, handleClick },
         }}
       />
+      {/* About You */}
+      <Stack
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          width: '100%',
+          padding: '30px 50px 50px',
+          backgroundColor: '#FAFBFC',
+        }}
+      >
+        <Box sx={{ width: { sm: '100%', md: '80%' } }}>
+          <Typography
+            variant="h4"
+            fontSize={{ md: '32px', xs: '20px' }}
+            lineHeight={{ lg: '48px', xs: '26px' }}
+            fontWeight={700}
+            textAlign="center"
+            color="secondary"
+            mb="30px"
+          >
+            Who should work at eSpark Talent?
+          </Typography>
+          <Typography
+            fontSize={{ md: '12px', xs: '18px' }}
+            textAlign="center"
+            color="secondary"
+            mb="30px"
+          >
+            SOME THINGS ABOUT YOU
+          </Typography>
+          <Grid container spacing={2}>
+            {ABOUT.map((point, index) => {
+              return (
+                <Grid
+                  sx={{
+                    width: '100%',
+                    justifyContent: 'flex-end',
+                    display: { sm: 'inline-block', md: index === 0 && 'flex' },
+                  }}
+                  padding="10px"
+                  key={point}
+                  sm={12}
+                  md={6}
+                >
+                  <Stack
+                    direction={{
+                      sm: 'row',
+                      md: index % 2 === 0 ? 'row-reverse' : 'row',
+                    }}
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    gap="20px"
+                    sx={{
+                      width: {
+                        sm: '100%',
+                        md: index === 0 || index === 1 ? '80%' : '100%',
+                      },
+                      padding: '10px',
+                      boxShadow: '0px 4px 25.2px 0px #0000001F',
+                      borderRadius: '7px',
+                      position: 'relative',
+                      ':after': {
+                        content: "''",
+                        width: { sm: '3px', md: '3px' },
+                        height: '100%',
+                        position: 'absolute',
+                        top: '0px',
+                        left: { sm: '0px', md: 'auto !important' },
+                        [index % 2 !== 0 ? 'left' : 'right']: '0px !important',
+                        backgroundColor: '#029894',
+                      },
+                    }}
+                  >
+                    <Typography
+                      sx={{ letterSpacing: '5px' }}
+                      color="secondary"
+                      fontSize={20}
+                      fontWeight={600}
+                    >
+                      0{index + 1}
+                    </Typography>
+                    <Typography
+                      color="secondary"
+                      fontSize={18}
+                      fontWeight={500}
+                      textAlign={{ xs: 'center', md: 'initial' }}
+                    >
+                      {point}
+                    </Typography>
+                  </Stack>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
+      </Stack>
       {/* Key Points */}
       <Stack
         direction="row"
