@@ -6,7 +6,7 @@ import { BOOK_A_DEMO, HIRE_A_TALENT_LINK } from '@/constants/global/header';
 
 const HireTalentButton = ({ handleOpenUserMenu, display }) => {
   return (
-    <Box sx={{ flexGrow: 0, display, pt: 1.2 }} className="hireTalentBtnNav">
+    <Box sx={{ flexGrow: 0, display, pt: 1 }} className="hireTalentBtnNav">
       <Link href={HIRE_A_TALENT_LINK} target="_blank">
         <Button
           onClick={handleOpenUserMenu}
@@ -25,7 +25,7 @@ const HireTalentButton = ({ handleOpenUserMenu, display }) => {
             fontStyle: 'normal',
             fontWeight: 600,
             lineHeight: '27.49px',
-            padding: '9px 20px 9px 20px',
+            padding: '11px 20px 9px 20px',
             alignItems: 'center',
           }}
         >

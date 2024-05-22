@@ -19,7 +19,6 @@ import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [currentPage, setCurrentPage] = React.useState('');
-  const [isHovered, setIsHovered] = React.useState(false);
   const notificationPopupRef = React.useRef(null);
 
   const handleClick = (event, page) => {
@@ -35,27 +34,25 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
     setAnchorEl(null);
   };
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setTimeout(() => {
-      if (!isHovered) {
-        setAnchorEl(null);
-      }
-    }, 100);
+  const handleClickOutside = (event) => {
+    if (
+      notificationPopupRef?.current &&
+      !notificationPopupRef?.current?.contains(event.target)
+    ) {
+      setAnchorEl(null);
+    }
   };
 
   React.useEffect(() => {
-    if (!isHovered) {
-      const timer = setTimeout(() => {
-        setAnchorEl(null);
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [isHovered]);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box
@@ -76,6 +73,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
         {PAGES?.map((page, index) => (
           <Box key={index}>
             <Button
+              onMouseEnter={(event) => handleClick(event, page)}
               sx={{
                 my: 2,
                 mx: { md: 0.5, lg: 1 },
@@ -89,43 +87,33 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                 '&:hover': { background: 'none' },
               }}
             >
-              <Box
-                sx={{ display: 'flex' }}
-                onMouseEnter={(event) => {
-                  handleClick(event, page);
-                  handleMouseEnter();
+              <Typography
+                aria-describedby={id}
+                sx={{
+                  color: '#222',
+                  fontSize: { xs: '16px', lg: '18px' },
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '21.766px',
                 }}
-                onMouseLeave={handleMouseLeave}
               >
-                <Typography
-                  aria-describedby={id}
-                  sx={{
-                    color: '#222',
-                    fontSize: { xs: '16px', lg: '18px' },
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    lineHeight: '21.766px',
-                  }}
-                >
-                  {page}
-                </Typography>
-                <Image
-                  quality="85"
-                  priority={true}
-                  src={'/images/header/arrow.svg'}
-                  width={13}
-                  height={7}
-                  alt="arrow"
-                  style={{ marginLeft: '2px' }}
-                />
-              </Box>
+                {page}
+              </Typography>
+              <Image
+                quality="85"
+                priority={true}
+                src={'/images/header/arrow.svg'}
+                width={13}
+                height={7}
+                alt="arrow"
+                style={{ marginLeft: '2px' }}
+              />
             </Button>
             <Popper
               id={id}
               open={open}
               ref={notificationPopupRef}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={handleClose}
               anchorEl={anchorEl}
               placement={
                 currentPage?.includes('Hire A Talent')
@@ -157,7 +145,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                     bgcolor: 'background.paper',
                     boxShadow: 'rgba(0, 0, 0, 0.10) 0px 5px 8px',
                     borderRadius: '10px',
-                    mt: { lg: '30px', md: '30px' },
+                    mt: { lg: '22px', md: '22px' },
                   }}
                 >
                   {SUBMENU_ITEMS[currentPage]?.map((submenuItem, subIndex) => (
@@ -177,6 +165,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                             sx={{
                               display: 'flex',
                               alignItems: 'center',
+                              paddingRight: 19,
                             }}
                           >
                             <Image
