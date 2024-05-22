@@ -1,4 +1,4 @@
-import { APPLY_FOR_FIELDS, PERSONAL_INFO_FIELDS, URL_EXPRESSION } from '@/constants/join-espark-crew';
+import { APPLY_FOR_FIELDS, PERSONAL_INFO_FIELDS, URL_EXPRESSION, REGISTRATION_FORM_DATA } from '@/constants/join-espark-crew';
 import { Box, Modal, Stack, Tooltip, Typography } from '@mui/material'
 import { useTheme } from "@mui/material/styles";
 import React from 'react'
@@ -9,8 +9,11 @@ import { TagsInput } from 'react-tag-input-component';
 import TextArea from '../global/Inputs/TextArea';
 import ImgUploader from '../global/Inputs/ImageUpload';
 
+
 const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleChange, handleSubmit }) => {
   const theme = useTheme();
+
+  const { headings } = REGISTRATION_FORM_DATA;
 
   return (
     <Modal
@@ -60,8 +63,12 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
             <Box sx={{ width: "100%" }}>
               <Typography mb={1}
                 fontSize={25}
-                textAlign="left" sx={{ color: "black" }}>
-                Personal Info
+                textAlign="left"
+                color="secondary"
+                sx={{
+                  fontSize: { xs: "25px", lg: "30px", fontWeight: 600 }
+                }}>
+                {headings.PERSONAL_INFO}
               </Typography>
               <Box
                 sx={{
@@ -89,6 +96,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                             ? "100%"
                             : "30%",
                       },
+                      marginBottom: { xs: "10px", md: "15px" },
                     }}
                   >
                     {item?.type !== "select" &&
@@ -149,7 +157,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                           }}
                         >
 
-                          <Typography sx={{ color: "black" }}>
+                          <Typography color={"secondary"}  sx={{ fontSize: "18px"}}>
                             Skills, Technologies and Expertise
                           </Typography>
 
@@ -197,8 +205,12 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                     <Stack direction={"row"}>
                       <Typography
                         fontSize={25}
-                        mb={1} textAlign="left" sx={{ color: "black" }}>
-                        Resume
+                        mb={1} textAlign="left"
+                        color="secondary"
+                        sx={{
+                          fontSize: { xs: "20px", lg: "24px", fontWeight: 600 }
+                        }}>
+                        {headings.RESUME}
                       </Typography>
                       <Tooltip placement="top-start" title={"Please choose a file to upload your resume, or you can share a link to your resume with us. Accepted formats are PDF, DOC, and DOCX."}>
                         <InfoIcon
@@ -262,8 +274,12 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
               }
             </Box>
             <Box sx={{ width: "100%" }}>
-              <Typography fontSize={25} mb={1} textAlign="left" sx={{ color: "black" }}>
-                Apply For
+              <Typography fontSize={25} mb={1} textAlign="left"
+                color="secondary"
+                sx={{
+                  fontSize: { xs: "20px", lg: "24px", fontWeight: 600 }
+                }}>
+                {headings.APPLY_FOR}
               </Typography>
               <Box
                 sx={{
@@ -336,7 +352,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
             <Box component={"button"}
               sx={{
                 width: '100%',
-                height: '45px',
+                height: '50px',
                 backgroundColor: (theme) => theme.palette.primary.main,
                 color: 'white',
                 margin: 'auto auto',
@@ -347,7 +363,13 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                 borderRadius: '8px',
               }}
               className={loading ? "disabled" : ""} disabled={loading} type="submit">
+              <Typography 
+              sx={{
+                fontSize: "21.21px"
+              }}
+              >
               {loading ? "loading..." : "Submit"}
+              </Typography>
             </Box>
           </Box>
         </Box>

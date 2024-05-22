@@ -12,7 +12,7 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
                     alignItems: "center",
                 }}
             >
-                <Typography mb={1} textAlign="left" sx={{ color: "black", fontSize:"18px" }}>{label}</Typography>
+                <Typography mb={1} textAlign="left" color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>
                 <Tooltip placement="top-start" title={tooltip}>
                     <InfoIcon
                         sx={{   

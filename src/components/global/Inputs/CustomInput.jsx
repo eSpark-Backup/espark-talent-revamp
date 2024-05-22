@@ -21,7 +21,8 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                         alignItems: "center",
                     }}
                 >
-                    <Typography mb={1}  sx={{ color: "black", fontSize: "18px" }}>{label}</Typography>
+                    <Typography 
+                    color={"secondary"} mb={1}  sx={{ fontSize: "18px" }}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
                             sx={{
@@ -51,7 +52,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                         alignItems: "center",
                     }}
                 >
-                    <Typography mb={1} textAlign="left" sx={{ color: "black", fontSize: "18px"  }}>{label}</Typography>
+                    <Typography mb={1} textAlign="left" color={"secondary"} sx={{ fontSize: "18px"}}>{label}</Typography>
                     <Tooltip placement="top-start" title={tooltip}>
                         <InfoIcon
                             sx={{
@@ -87,7 +88,7 @@ const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLe
                                 alignItems: "center",
                             }}
                         >
-                            <Typography mb={1} textAlign="left" sx={{ color: "black", fontSize: "18px"  }}>{label}</Typography>
+                            <Typography mb={1} textAlign="left" color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>
                             <Tooltip placement="top-start" title={tooltip}>
                                 <InfoIcon
                                     sx={{

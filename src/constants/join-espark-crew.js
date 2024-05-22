@@ -511,3 +511,12 @@ export const APPLY_FOR_FIELDS = [
     `You're an excellent team player`,
     `You're good at anything you put your mind`,
   ];
+
+
+  export const  REGISTRATION_FORM_DATA = {
+     headings: {
+        PERSONAL_INFO: "Personal Info",
+        RESUME: 'Resume',
+        APPLY_FOR: 'Apply For',
+     }
+  }

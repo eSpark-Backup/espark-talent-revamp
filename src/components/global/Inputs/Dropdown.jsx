@@ -12,7 +12,8 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
       ':hover': {
         backgroundColor: '#e6e9eb',
       },
-      backgroundColor: state.isSelected ? '#90d1f5' : 'white',
+      backgroundColor: state.isSelected ? '#029894' : 'white',
+      zIndex: 9999,
 
     }),
     control: (provided) => ({
@@ -44,7 +45,7 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
           alignItems: "center",
         }}
       >
-        {label && <Typography style={{ color: "black", fontSize: "18px" }}>{label}</Typography>}
+        {label && <Typography color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>}
         {showTooltip
           &&
           <Tooltip placement="top-start" title={tooltip}>

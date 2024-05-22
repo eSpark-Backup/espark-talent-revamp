@@ -1,11 +1,15 @@
 'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
 import { BENEFITS, KEYS, ABOUT } from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
-import { useState } from 'react';
+import { toast } from "react-toastify";
+import supabase from '@/supabase/supabaseClient';
+
 
 export default function JoinEsparkCrewPage() {
   const [registrationModal, setRegistrationModal] = useState(false);
@@ -67,6 +71,109 @@ export default function JoinEsparkCrewPage() {
 
   const handleClick = () => {
     setRegistrationModal(true);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newPhone_num = form.phone_num.replace(/\s|-/g, "");
+
+    if (newPhone_num.length !== 13 || !newPhone_num.startsWith("+923")) {
+      toast.error("Invalid Phone Number");
+      return;
+    }
+    if (
+      form?.experience === "" ||
+      form?.availability === "" ||
+      form?.prefrences === "" ||
+      form?.tags.length <= 0 ||
+      form?.education === "" ||
+      form?.city === "" ||
+      form?.cv === ""
+    ) {
+      toast?.error("All Fields Are Required");
+      return;
+    }
+    if ((form?.cnic?.length || 0) !== 13) {
+      toast?.error("Invalid CNIC Number");
+      return;
+    }
+
+    if (form?.salary_expection <= 0) {
+      toast?.error("Invalid Salary");
+      return;
+    }
+
+    if (!form?.linkedin_profile.includes("linkedin")) {
+      toast?.error("Invalid Linked Profile URL");
+      return;
+    }
+    if (!form?.github_profile.includes("github")) {
+      toast?.error("Invalid Github Profile URL");
+      return;
+    }
+
+    if (form.cv instanceof File) {
+      const formData = new FormData();
+      formData.append("file", form.cv);
+
+      const response = await fetch("/api", {
+        method: "POST",
+        body: formData,
+      });
+
+      const { fileKey } = await response.json();
+
+      setForm((prev) => ({
+        ...prev,
+        cv: fileKey,
+      }));
+    } else {
+      setForm((prev) => ({
+        ...prev,
+        cv: form.cv,
+      }));
+    }
+
+    try {
+      const { data, error } = await supabase.from("Applicants").insert({
+        ...form,
+        availability: form.availability?.value,
+        city: form.city?.value,
+        cnic: form.cnic,
+        education: form.education?.value,
+        email: form.email,
+        experience: form.experience?.value,
+        field: form.field?.value,
+        github_profile: form.github_profile,
+        linkedin_profile: form.linkedin_profile,
+        name: form.name,
+        phone_num: newPhone_num,
+        prefrences: form.prefrences?.value,
+        salary_expection: form.salary_expection,
+        tags: form.tags,
+        subField: form.position?.value ? form.subField?.value : null,
+        position: !form.position?.value
+          ? form.subField?.value
+          : form.position?.value,
+        job_type: form.job_type?.value,
+        projects: form.projects,
+      });
+
+      if (error) {
+        console.log(error?.message);
+        toast.error("Something went wrong. Please try again");
+      }
+
+      if (data) {
+        toast.success("Application posted successfully");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again");
+      setForm((prev) => ({
+        ...prev,
+        cv: null,
+      }));
+    }
   };
 
   return (
@@ -445,7 +552,7 @@ export default function JoinEsparkCrewPage() {
         handleClose={() => setRegistrationModal(false)}
         loading={loading}
         handleChange={handleChange}
-        handleSubmit={() => console.log(form)}
+        handleSubmit={handleSubmit}
         form={form}
       />
     </>
