@@ -116,7 +116,7 @@ export default function JoinEsparkCrewPage() {
       const formData = new FormData();
       formData.append("file", form.cv);
 
-      const response = await fetch("/api", {
+      const response = await fetch("/api/resumeupload", {
         method: "POST",
         body: formData,
       });

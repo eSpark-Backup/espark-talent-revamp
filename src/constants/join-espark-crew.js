@@ -380,7 +380,7 @@ export const BENEFITS = [
         type: "number",
         name: "cnic",
         placeholder: "Enter CNIC Number",
-        tooltip: "Please enter your CNIC number as it appears on your identity card, including all dashes. eg: 42201-1234567-8",
+        tooltip: "Please enter your CNIC number as it appears on your identity card, including all dashes. eg: 4220112345678",
         maxLength: 13
     },
     {

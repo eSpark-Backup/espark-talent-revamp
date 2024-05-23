@@ -15,6 +15,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
+import  ToastProvider  from '@/components/global/ToastContainer';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,
@@ -79,20 +80,22 @@ export default async function RootLayout({ children }) {
       <body>
         <SkeletonTheme baseColor="#000" highlightColor="#000">
           <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              <Header />
-              <Box>{children}</Box>
-              <FooterCTA data={FOOTER_CTA_DATA} />
-              <Footer data={FOOTER_DATA} />
-              <TawkToWidget
-                propertyId={`6422c8a44247f20fefe86c9e`}
-                taskId={`1gsovfhm7`}
-              />
-              <GoogleTagManager gtmId="GTM-5JWLG8J2" />
-              <GoogleTagManager gtmId="G-N43EVHZHXM" />
-              <GoogleTag gtmId="G-N43EVHZHXM" />
-            </ThemeProvider>
+            <ToastProvider>
+              <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <Header />
+                <Box>{children}</Box>
+                <FooterCTA data={FOOTER_CTA_DATA} />
+                <Footer data={FOOTER_DATA} />
+                <TawkToWidget
+                  propertyId={`6422c8a44247f20fefe86c9e`}
+                  taskId={`1gsovfhm7`}
+                />
+                <GoogleTagManager gtmId="GTM-5JWLG8J2" />
+                <GoogleTagManager gtmId="G-N43EVHZHXM" />
+                <GoogleTag gtmId="G-N43EVHZHXM" />
+              </ThemeProvider>
+            </ToastProvider>
           </AppRouterCacheProvider>
         </SkeletonTheme>
       </body>

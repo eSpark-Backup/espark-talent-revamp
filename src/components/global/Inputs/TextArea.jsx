@@ -12,10 +12,10 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
                     alignItems: "center",
                 }}
             >
-                <Typography mb={1} textAlign="left" color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>
+                <Typography mb={1} textAlign="left" color={"secondary"} sx={{ fontSize: "18px" }}>{label}</Typography>
                 <Tooltip placement="top-start" title={tooltip}>
                     <InfoIcon
-                        sx={{   
+                        sx={{
                             color: (theme) => theme.palette.primary.main,
                             marginLeft: "5px",
                             fontSize: "13px",
@@ -25,21 +25,18 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
                 </Tooltip>
             </Box>
             <TextareaAutosize
-            style={{ 
-            border: "1px solid #cccccc",
-            backgroundColor: "white", 
-            color: "black", 
-            minHeight: "30px", 
-            padding: "10px", 
-            fontSize: "16px",
-            borderRadius: "8px", 
-            width: "100%", 
-            resize: "vertical",
-            '&:hover': {
-                border: '1px solid #cccccc',
-            },
-        }}
-            placeholder={placeholder} name={name} onChange={(e) => onChange(name, e.target.value)}  />
+                style={{
+                    border: "1px solid #cccccc",
+                    backgroundColor: "white",
+                    color: "black",
+                    minHeight: "30px",
+                    padding: "10px",
+                    fontSize: "16px",
+                    borderRadius: "8px",
+                    width: "100%",
+                }}
+                className='join-crew-textarea'
+                placeholder={placeholder} name={name} onChange={(e) => onChange(name, e.target.value)} />
         </Stack>
     )
 }
