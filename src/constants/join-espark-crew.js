@@ -665,7 +665,6 @@ export const POSITIONS_BY_SUB_FIELD = {
     { value: 'DevOps Engineer (Python)', label: 'DevOps Engineer (Python)' },
   ],
   ['Dot Net Developer']: [
-    ,
     { value: 'Web Developer', label: 'Web Developer' },
     { value: 'Backend Developer', label: 'Backend Developer' },
     {
@@ -677,7 +676,6 @@ export const POSITIONS_BY_SUB_FIELD = {
     { value: 'Integration Developer', label: 'Integration Developer' },
   ],
   ['Full-Stack Developer']: [
-    ,
     { value: 'MEAN/MERN Stack Developer', label: 'MEAN/MERN Stack Developer' },
     { value: 'LAMP Stack Developer', label: 'LAMP Stack Developer' },
     { value: 'JAMstack Developer', label: 'JAMstack Developer' },
@@ -686,7 +684,6 @@ export const POSITIONS_BY_SUB_FIELD = {
     { value: 'Microservices Developer', label: 'Microservices Developer' },
   ],
   ['LUA Developer']: [
-    ,
     { value: 'Lua Developer', label: 'Lua Developer' },
     { value: 'Game Developer', label: 'Game Developer' },
     { value: 'Scripting Engineer', label: 'Scripting Engineer' },
@@ -708,7 +705,7 @@ export const CITIES_OPTIONS = CITIES.map((city) => ({
 }));
 
 export const URL_EXPRESSION =
-  /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
+  /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/gi;
 
 // DATA, DESCRIPTIONS AND INPUTS
 

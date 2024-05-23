@@ -15,7 +15,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
-import  ToastProvider  from '@/components/global/ToastContainer';
+import ToastProvider from '@/components/global/ToastContainer';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,

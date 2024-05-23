@@ -350,6 +350,7 @@ export default function JoinEsparkCrewPage() {
             const desc = splitedKey[1];
             return (
               <Stack
+                key={key}
                 direction={{ xs: 'column', sm: 'row' }}
                 justifyContent="flex-start"
                 alignItems="flex-start"
@@ -433,9 +434,16 @@ export default function JoinEsparkCrewPage() {
             Why eSpark Talent
           </Typography>
           <Grid container spacing={2}>
-            {BENEFITS.map((benefit) => {
+            {BENEFITS.map((benefit, index) => {
               return (
-                <Grid sx={{ padding: '20px' }} item xs={12} sm={6} md={4}>
+                <Grid
+                  key={index}
+                  sx={{ padding: '20px' }}
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                >
                   <Stack
                     direction="row"
                     justifyContent="flex-start"

@@ -98,6 +98,7 @@ const JoinEsparkRegistrationModal = ({
               >
                 {PERSONAL_INFO_FIELDS?.map((item, index) => (
                   <Box
+                    key={index}
                     sx={{
                       [theme.breakpoints.up('xs')]: {
                         width: '100%',
@@ -321,6 +322,7 @@ const JoinEsparkRegistrationModal = ({
               >
                 {APPLY_FOR_FIELDS?.map((item, index) => (
                   <Box
+                    key={index}
                     sx={{
                       [theme.breakpoints.up('xs')]: {
                         width: '100%',

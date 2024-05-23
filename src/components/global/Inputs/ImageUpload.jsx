@@ -1,16 +1,7 @@
-import { useTheme } from '@emotion/react';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 
-const ImgUploader = ({
-  label,
-  name,
-  onChange,
-  disabled,
-  filename,
-  form,
-}) => {
-
+const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
   const handleFileChange = (e, name) => {
     if (e.target.files.length > 0) {
       const file = e.target.files[0];
