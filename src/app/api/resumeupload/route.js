@@ -7,11 +7,11 @@ import path from 'path';
 config();
 
 const s3Client = new S3Client({
-    endpoint: process.env.END_POINT,
-    region: process.env.REGION,
+    endpoint: process.env.END_POINT || 'https://s3.us-east-005.backblazeb2.com',
+    region: process.env.REGION || 'us-east-005',
     credentials: {
-        accessKeyId: process.env.B2_APPLICATION_KEY_ID,
-        secretAccessKey: process.env.B2_APPLICATION_KEY,
+        accessKeyId: process.env.B2_APPLICATION_KEY_ID || '005af8ef4030c480000000006',
+        secretAccessKey: process.env.B2_APPLICATION_KEY || 'K005mrciRfuX4ZpPDnJixDVIeS1Sp48',
     },
 });
 
@@ -37,7 +37,7 @@ export async function POST(req) {
 
         await s3Client.send(
             new PutObjectCommand({
-                Bucket: process.env.BUCKET_NAME,
+                Bucket: process.env.BUCKET_NAME || 'resumeportal',
                 Key: key,
                 Body: buffer,
             })
