@@ -10,7 +10,6 @@ import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import Header from '@/components/global/Header/Header';
-import TawkToWidget from '@/components/global/TawkToWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
@@ -85,10 +84,6 @@ export default async function RootLayout({ children }) {
               <Box>{children}</Box>
               <FooterCTA data={FOOTER_CTA_DATA} />
               <Footer data={FOOTER_DATA} />
-              <TawkToWidget
-                propertyId={`6422c8a44247f20fefe86c9e`}
-                taskId={`1gsovfhm7`}
-              />
               <GoogleTagManager gtmId="GTM-5JWLG8J2" />
               <GoogleTagManager gtmId="G-N43EVHZHXM" />
               <GoogleTag gtmId="G-N43EVHZHXM" />
