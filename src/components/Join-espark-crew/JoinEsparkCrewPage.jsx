@@ -92,7 +92,7 @@ export default function JoinEsparkCrewPage() {
       form?.city === "" ||
       form?.cv === "" ||
       form?.field === "" ||
-      form?.position === "" ||
+      form?.subField === "" ||
       form?.job_type === "" ||
       form?.projects === ""
     ) {
@@ -118,6 +118,8 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
+    let resumeKey;
+
     if (form.cv instanceof File) {
       const formData = new FormData();
       formData.append("file", form.cv);
@@ -130,6 +132,7 @@ export default function JoinEsparkCrewPage() {
       const { fileKey } = await response.json();
 
       console.log(fileKey, "fileKey");
+      resumeKey = fileKey
 
       setForm((prev) => ({
         ...prev,
@@ -165,6 +168,7 @@ export default function JoinEsparkCrewPage() {
           : form.position?.value,
         job_type: form.job_type?.value,
         projects: form.projects,
+        cv: resumeKey ? resumeKey : form.cv,
       });
 
       if (error) {
@@ -175,10 +179,9 @@ export default function JoinEsparkCrewPage() {
       if (data) {
         setRegistrationModal(false);
         setSuccessModal(true);
-        setForm({});
-
       }
     } catch (error) {
+      console.log(error?.message);
       toast.error("Something went wrong. Please try again");
       setForm((prev) => ({
         ...prev,
