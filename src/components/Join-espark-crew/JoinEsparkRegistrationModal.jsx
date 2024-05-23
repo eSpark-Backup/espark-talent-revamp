@@ -353,7 +353,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
               sx={{
                 width: '100%',
                 height: '50px',
-                backgroundColor: (theme) => theme.palette.primary.main,
+                backgroundColor: (theme) => !loading ? theme.palette.primary.main : '#ccc',
                 color: 'white',
                 margin: 'auto auto',
                 border: 'none',
@@ -368,7 +368,7 @@ const JoinEsparkRegistrationModal = ({ open, handleClose, form, loading, handleC
                 fontSize: "21.21px"
               }}
               >
-              {loading ? "loading..." : "Submit"}
+              {loading ? "Loading" : "Submit"}
               </Typography>
             </Box>
           </Box>

@@ -77,6 +77,7 @@ export default function JoinEsparkCrewPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const newPhone_num = form.phone_num.replace(/\s|-/g, "");
 
     if (newPhone_num.length !== 13 || !newPhone_num.startsWith("+923")) {
@@ -101,20 +102,24 @@ export default function JoinEsparkCrewPage() {
     }
     if ((form?.cnic?.length || 0) !== 13) {
       toast?.error("Invalid CNIC Number");
+      setLoading(false);
       return;
     }
 
     if (form?.salary_expection <= 0) {
       toast?.error("Invalid Salary");
+      setLoading(false);
       return;
     }
 
     if (!form?.linkedin_profile.includes("linkedin")) {
       toast?.error("Invalid Linked Profile URL");
+      setLoading(false);
       return;
     }
     if (!form?.github_profile.includes("github")) {
       toast?.error("Invalid Github Profile URL");
+      setLoading(false);
       return;
     }
 
@@ -174,15 +179,39 @@ export default function JoinEsparkCrewPage() {
       if (error) {
         console.log(error?.message);
         toast.error("Something went wrong. Please try again");
+        setLoading(false);
       }
 
       if (data) {
         setRegistrationModal(false);
+        setLoading(false);
         setSuccessModal(true);
+        setForm({
+          name: "",
+          email: "",
+          phone_num: "",
+          cnic: "",
+          linkedin_profile: "",
+          salary_expection: "",
+          experience: "",
+          availability: "",
+          prefrences: "",
+          education: "",
+          github_profile: "",
+          job_type: "",
+          projects: "",
+          city: "",
+          field: "",
+          subField: "",
+          position: "",
+          tags: [],
+          cv: "",
+        })
       }
     } catch (error) {
       console.log(error?.message);
       toast.error("Something went wrong. Please try again");
+      setLoading(false);
       setForm((prev) => ({
         ...prev,
         cv: null,
@@ -571,10 +600,7 @@ export default function JoinEsparkCrewPage() {
       />
 
       {/* SUCCESS MODAL  */}
-      <JoinEsparkSuccessModal open={successModal} handleClose={() => {setSuccessModal(false) }} />
-
-
-
+      <JoinEsparkSuccessModal open={successModal} handleClose={() => { setSuccessModal(false) }} />
     </>
 
 

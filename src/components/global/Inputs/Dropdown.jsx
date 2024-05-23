@@ -2,8 +2,10 @@ import { Stack, Typography, Tooltip, Box } from "@mui/material";
 import React from "react";
 import Select from "react-select";
 import InfoIcon from '@mui/icons-material/Info'
+import { APPLY_FOR_ENUMS } from "@/constants/join-espark-crew";
 
 const Dropdown = ({ name, label, placeholder, options, onChange, value, className, tooltip, showTooltip }) => {
+  const { FIELDS, SUB_FIELDS, POSITION } = APPLY_FOR_ENUMS
 
   const customStyles = {
     option: (provided, state) => ({
@@ -34,6 +36,7 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
       ...provided,
       fontSize: '16px',
       backgroundColor: '#F4F4F4',
+
     }),
   };
 
@@ -45,7 +48,7 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
           alignItems: "center",
         }}
       >
-        {label && <Typography color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>}
+        {label && <Typography color={"secondary"} sx={{ fontSize: "18px" }}>{label}</Typography>}
         {showTooltip
           &&
           <Tooltip placement="top-start" title={tooltip}>
@@ -69,6 +72,7 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
         isClearable={true}
         onChange={(e) => onChange(name, e)}
         value={value}
+        menuPlacement={name == FIELDS || name == SUB_FIELDS || name == POSITION ? 'top' : 'bottom'}
       />
     </Stack>
   );

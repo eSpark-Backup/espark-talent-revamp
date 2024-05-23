@@ -526,3 +526,9 @@ export const APPLY_FOR_FIELDS = [
     description: "Your form has been successfully submitted",
     buttonText: "Close"
   }
+
+  export const APPLY_FOR_ENUMS = {
+    FIELDS: "field",
+    SUB_FIELDS: "subField",
+    POSITION: "position"
+  }
