@@ -80,6 +80,7 @@ export default function JoinEsparkCrewPage() {
 
     if (newPhone_num.length !== 13 || !newPhone_num.startsWith('+923')) {
       toast.error('Invalid Phone Number');
+      setLoading(false);
       return;
     }
     if (
@@ -96,6 +97,7 @@ export default function JoinEsparkCrewPage() {
       form?.projects === ''
     ) {
       toast?.error('All Fields Are Required');
+      setLoading(false);
       return;
     }
     if ((form?.cnic?.length || 0) !== 13) {
