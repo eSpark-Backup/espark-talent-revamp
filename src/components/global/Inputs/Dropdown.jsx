@@ -62,7 +62,7 @@ const Dropdown = ({
           </Typography>
         )}
         {showTooltip && (
-          <Tooltip placement='top-start' title={tooltip}>
+          <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
               sx={{
                 color: (theme) => theme.palette.primary.main,

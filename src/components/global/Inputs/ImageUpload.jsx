@@ -20,21 +20,21 @@ const ImgUploader = ({
     }
   };
   return (
-    <div className='input-parent'>
+    <div className="input-parent">
       {label && (
-        <Typography mb={1} textAlign='left' sx={{ color: 'black' }}>
+        <Typography mb={1} textAlign="left" sx={{ color: 'black' }}>
           {label}
         </Typography>
       )}
       <div>
-        <label htmlFor='imageInput'>
+        <label htmlFor="imageInput">
           <input
             disabled={disabled}
-            accept='application/pdf'
-            id='imageInput'
-            type='file'
+            accept="application/pdf"
+            id="imageInput"
+            type="file"
             onChange={(e) => handleFileChange(e, name)}
-            className='hidden-input'
+            className="hidden-input"
             name={name}
           />
           <div
@@ -55,7 +55,7 @@ const ImgUploader = ({
               <Image
                 width={22}
                 height={22}
-                src='/images/join-crew/join-ciew-resume-upload.png'
+                src="/images/join-crew/join-ciew-resume-upload.png"
               />
             </Typography>
             {form && (

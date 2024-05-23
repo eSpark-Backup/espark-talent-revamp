@@ -19,13 +19,13 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
       >
         <Typography
           mb={1}
-          textAlign='left'
+          textAlign="left"
           color={'secondary'}
           sx={{ fontSize: '18px' }}
         >
           {label}
         </Typography>
-        <Tooltip placement='top-start' title={tooltip}>
+        <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon
             sx={{
               color: (theme) => theme.palette.primary.main,
@@ -47,7 +47,7 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
           borderRadius: '8px',
           width: '100%',
         }}
-        className='join-crew-textarea'
+        className="join-crew-textarea"
         placeholder={placeholder}
         name={name}
         onChange={(e) => onChange(name, e.target.value)}

@@ -30,8 +30,8 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby='modal-modal-title'
-        aria-describedby='modal-modal-description'
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <Typography
@@ -58,8 +58,8 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
               sx={{
                 padding: '5px 40px',
               }}
-              variant='contained'
-              color='primary'
+              variant="contained"
+              color="primary"
               onClick={handleClose}
             >
               {buttonText}
