@@ -1,11 +1,21 @@
-import { Stack, Typography, Tooltip, Box } from "@mui/material";
-import React from "react";
-import Select from "react-select";
-import InfoIcon from '@mui/icons-material/Info'
-import { APPLY_FOR_ENUMS } from "@/constants/join-espark-crew";
+import { Stack, Typography, Tooltip, Box } from '@mui/material';
+import React from 'react';
+import Select from 'react-select';
+import InfoIcon from '@mui/icons-material/Info';
+import { APPLY_FOR_ENUMS } from '@/constants/join-espark-crew';
 
-const Dropdown = ({ name, label, placeholder, options, onChange, value, className, tooltip, showTooltip }) => {
-  const { FIELDS, SUB_FIELDS, POSITION } = APPLY_FOR_ENUMS
+const Dropdown = ({
+  name,
+  label,
+  placeholder,
+  options,
+  onChange,
+  value,
+  className,
+  tooltip,
+  showTooltip,
+}) => {
+  const { FIELDS, SUB_FIELDS, POSITION } = APPLY_FOR_ENUMS;
 
   const customStyles = {
     option: (provided, state) => ({
@@ -16,7 +26,6 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
       },
       backgroundColor: state.isSelected ? '#029894' : 'white',
       zIndex: 9999,
-
     }),
     control: (provided) => ({
       ...provided,
@@ -36,7 +45,6 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
       ...provided,
       fontSize: '16px',
       backgroundColor: '#F4F4F4',
-
     }),
   };
 
@@ -44,24 +52,27 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
     <Stack className={className} gap={1}>
       <Box
         sx={{
-          display: "flex",
-          alignItems: "center",
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
-        {label && <Typography color={"secondary"} sx={{ fontSize: "18px" }}>{label}</Typography>}
-        {showTooltip
-          &&
-          <Tooltip placement="top-start" title={tooltip}>
+        {label && (
+          <Typography color={'secondary'} sx={{ fontSize: '18px' }}>
+            {label}
+          </Typography>
+        )}
+        {showTooltip && (
+          <Tooltip placement='top-start' title={tooltip}>
             <InfoIcon
               sx={{
                 color: (theme) => theme.palette.primary.main,
-                marginLeft: "5px",
-                fontSize: "13px",
-                marginBottom: "12px",
+                marginLeft: '5px',
+                fontSize: '13px',
+                marginBottom: '12px',
               }}
             />
           </Tooltip>
-        }
+        )}
       </Box>
 
       <Select
@@ -72,7 +83,11 @@ const Dropdown = ({ name, label, placeholder, options, onChange, value, classNam
         isClearable={true}
         onChange={(e) => onChange(name, e)}
         value={value}
-        menuPlacement={name == FIELDS || name == SUB_FIELDS || name == POSITION ? 'top' : 'bottom'}
+        menuPlacement={
+          name == FIELDS || name == SUB_FIELDS || name == POSITION
+            ? 'top'
+            : 'bottom'
+        }
       />
     </Stack>
   );

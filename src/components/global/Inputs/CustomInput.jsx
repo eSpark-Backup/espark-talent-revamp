@@ -5,128 +5,156 @@ import { TextField, Typography, Stack, Tooltip, Box } from '@mui/material';
 import { NumericFormat } from 'react-number-format'; // Assuming NumericFormat is correctly imported
 import InfoIcon from '@mui/icons-material/Info';
 
+const CustomInput = ({
+  required,
+  label,
+  type,
+  name,
+  onChange,
+  placeholder,
+  maxLength,
+  disabled,
+  phone,
+  tooltip,
+}) => {
+  const handlePhoneChange = (value, country, e, formattedValue) => {
+    onChange(name, formattedValue); // Assuming you want to pass the formatted phone number
+  };
 
-const CustomInput = ({ required, label, type, name, onChange, placeholder, maxLength, disabled, phone, tooltip }) => {
+  return type === 'tel' ? (
+    <Stack>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <Typography color={'secondary'} mb={1} sx={{ fontSize: '18px' }}>
+          {label}
+        </Typography>
+        <Tooltip placement='top-start' title={tooltip}>
+          <InfoIcon
+            sx={{
+              color: (theme) => theme.palette.primary.main,
+              marginLeft: '5px',
+              fontSize: '13px',
+              marginBottom: '12px',
+            }}
+          />
+        </Tooltip>
+      </Box>
+      <PhoneInput
+        country={'pk'}
+        disableDropdown={true}
+        inputStyle={{ color: 'black', fontSize: '16px' }}
+        countryCodeEditable={false}
+        onChange={handlePhoneChange}
+        value={phone}
+        onlyCountries={['pk']}
+      />
+    </Stack>
+  ) : name === 'salary_expection' ? (
+    <Stack direction='column'>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <Typography
+          mb={1}
+          textAlign='left'
+          color={'secondary'}
+          sx={{ fontSize: '18px' }}
+        >
+          {label}
+        </Typography>
+        <Tooltip placement='top-start' title={tooltip}>
+          <InfoIcon
+            sx={{
+              color: (theme) => theme.palette.primary.main,
+              marginLeft: '5px',
+              fontSize: '13px',
+              marginBottom: '12px',
+            }}
+          />
+        </Tooltip>
+      </Box>
 
-    const handlePhoneChange = (value, country, e, formattedValue) => {
-        onChange(name, formattedValue); // Assuming you want to pass the formatted phone number
-    };
+      <NumericFormat
+        allowNegative={false}
+        min={10}
+        placeholder={placeholder}
+        name={name}
+        allowLeadingZeros
+        thousandSeparator=','
+        onChange={(e) => onChange(name, e.target.value)}
+        style={{
+          height: '51px',
+          fontSize: '16px',
+          backgroundColor: 'white',
+          color: 'black',
+          BorderColor: 'black',
+          padding: '10px',
+          width: '100%',
+          resize: 'vertical',
+        }}
+      />
+    </Stack>
+  ) : (
+    <Stack direction='column'>
+      {!(name === 'cv') && (
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Typography
+            mb={1}
+            textAlign='left'
+            color={'secondary'}
+            sx={{ fontSize: '18px' }}
+          >
+            {label}
+          </Typography>
+          <Tooltip placement='top-start' title={tooltip}>
+            <InfoIcon
+              sx={{
+                color: (theme) => theme.palette.primary.main,
+                marginLeft: '5px',
+                fontSize: '13px',
+                marginBottom: '12px',
+              }}
+            />
+          </Tooltip>
+        </Box>
+      )}
 
-    return (
-        type === "tel" ? (
-            <Stack>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                    }}
-                >
-                    <Typography 
-                    color={"secondary"} mb={1}  sx={{ fontSize: "18px" }}>{label}</Typography>
-                    <Tooltip placement="top-start" title={tooltip}>
-                        <InfoIcon
-                            sx={{
-                                color: (theme) => theme.palette.primary.main,
-                                marginLeft: "5px",
-                                fontSize: "13px",
-                                marginBottom: "12px",
-                            }}
-                        />
-                    </Tooltip>
-                </Box>
-                <PhoneInput
-                    country={'pk'}
-                    disableDropdown={true}
-                    inputStyle={{ color: "black", fontSize: "16px" }}
-                    countryCodeEditable={false}
-                    onChange={handlePhoneChange}
-                    value={phone}
-                    onlyCountries={['pk']}
-                />
-            </Stack>
-        ) : name === "salary_expection" ? (
-            <Stack direction="column">
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                    }}
-                >
-                    <Typography mb={1} textAlign="left" color={"secondary"} sx={{ fontSize: "18px"}}>{label}</Typography>
-                    <Tooltip placement="top-start" title={tooltip}>
-                        <InfoIcon
-                            sx={{
-                                color: (theme) => theme.palette.primary.main,
-                                marginLeft: "5px",
-                                fontSize: "13px",
-                                marginBottom: "12px",
-                            }}
-                        />
-                    </Tooltip>
-
-
-                </Box>
-
-                <NumericFormat
-                    allowNegative={false}
-                    min={10}
-                    placeholder={placeholder}
-                    name={name}
-                    allowLeadingZeros
-                    thousandSeparator=","
-                    onChange={(e) => onChange(name, e.target.value)}
-                    style={{ height: "51px", fontSize: "16px", backgroundColor: "white", color: "black", BorderColor: "black", padding: "10px", width: "100%", resize: "vertical" }}
-                />
-            </Stack>
-        ) : (
-            <Stack direction="column">
-                {
-                    !(name === "cv") && (
-                        <Box
-                            sx={{
-                                display: "flex",
-                                alignItems: "center",
-                            }}
-                        >
-                            <Typography mb={1} textAlign="left" color={"secondary"}  sx={{ fontSize: "18px" }}>{label}</Typography>
-                            <Tooltip placement="top-start" title={tooltip}>
-                                <InfoIcon
-                                    sx={{
-                                        color: (theme) => theme.palette.primary.main,
-                                        marginLeft: "5px",
-                                        fontSize: "13px",
-                                        marginBottom: "12px",
-                                    }}
-                                />
-                            </Tooltip>
-
-                        </Box>
-                    )
-                }
-
-
-                <input
-                    style={{
-                        height: "51px",
-                        fontSize: "16px",
-                        backgroundColor: "white",
-                        color: "black",
-                        padding: "10px",
-                        width: "100%",
-                        resize: "vertical"
-                    }}
-                    disabled={disabled}
-                    name={name}
-                    onChange={(e) => onChange(name, type === "file" ? e.target.files[0] : e.target.value)}
-                    type={type ? type : "text"}
-                    placeholder={placeholder}
-                    required={required}
-                    {...(maxLength && { onInput: (e) => e.target.value = e.target.value.slice(0, maxLength) })}
-
-                />
-            </Stack>
-        )
-    );
-}
+      <input
+        style={{
+          height: '51px',
+          fontSize: '16px',
+          backgroundColor: 'white',
+          color: 'black',
+          padding: '10px',
+          width: '100%',
+          resize: 'vertical',
+        }}
+        disabled={disabled}
+        name={name}
+        onChange={(e) =>
+          onChange(name, type === 'file' ? e.target.files[0] : e.target.value)
+        }
+        type={type ? type : 'text'}
+        placeholder={placeholder}
+        required={required}
+        {...(maxLength && {
+          onInput: (e) => (e.target.value = e.target.value.slice(0, maxLength)),
+        })}
+      />
+    </Stack>
+  );
+};
 
 export default CustomInput;

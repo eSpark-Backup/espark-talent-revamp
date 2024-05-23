@@ -227,9 +227,9 @@ export default function JoinEsparkCrewPage() {
       />
       {/* About You */}
       <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
+        direction='row'
+        justifyContent='center'
+        alignItems='center'
         sx={{
           width: '100%',
           padding: '30px 50px 50px',
@@ -238,21 +238,21 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography
-            variant="h4"
+            variant='h4'
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}
-            textAlign="center"
-            color="secondary"
-            mb="30px"
+            textAlign='center'
+            color='secondary'
+            mb='30px'
           >
             Who should work at eSpark Talent?
           </Typography>
           <Typography
             fontSize={{ md: '12px', xs: '18px' }}
-            textAlign="center"
-            color="secondary"
-            mb="30px"
+            textAlign='center'
+            color='secondary'
+            mb='30px'
           >
             SOME THINGS ABOUT YOU
           </Typography>
@@ -265,7 +265,7 @@ export default function JoinEsparkCrewPage() {
                     justifyContent: 'flex-end',
                     display: { sm: 'inline-block', md: index === 0 && 'flex' },
                   }}
-                  padding="10px"
+                  padding='10px'
                   key={point}
                   sm={12}
                   md={6}
@@ -275,9 +275,9 @@ export default function JoinEsparkCrewPage() {
                       sm: 'row',
                       md: index % 2 === 0 ? 'row-reverse' : 'row',
                     }}
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    gap="20px"
+                    justifyContent='flex-start'
+                    alignItems='center'
+                    gap='20px'
                     sx={{
                       width: {
                         sm: '100%',
@@ -288,7 +288,7 @@ export default function JoinEsparkCrewPage() {
                       borderRadius: '7px',
                       position: 'relative',
                       ':after': {
-                        content: "''",
+                        content: '" "',
                         width: { sm: '3px', md: '3px' },
                         height: '100%',
                         position: 'absolute',
@@ -301,14 +301,14 @@ export default function JoinEsparkCrewPage() {
                   >
                     <Typography
                       sx={{ letterSpacing: '5px' }}
-                      color="secondary"
+                      color='secondary'
                       fontSize={20}
                       fontWeight={600}
                     >
                       0{index + 1}
                     </Typography>
                     <Typography
-                      color="secondary"
+                      color='secondary'
                       fontSize={18}
                       fontWeight={500}
                       textAlign={{ xs: 'center', md: 'initial' }}
@@ -324,9 +324,9 @@ export default function JoinEsparkCrewPage() {
       </Stack>
       {/* Key Points */}
       <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
+        direction='row'
+        justifyContent='center'
+        alignItems='center'
         sx={{
           width: '100%',
           padding: '30px 50px 50px',
@@ -334,13 +334,13 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%', lg: '70%', xl: '50%' } }}>
           <Typography
-            variant="h4"
+            variant='h4'
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}
-            textAlign="center"
-            color="secondary"
-            mb="30px"
+            textAlign='center'
+            color='secondary'
+            mb='30px'
           >
             Key Points To Consider:
           </Typography>
@@ -351,9 +351,9 @@ export default function JoinEsparkCrewPage() {
             return (
               <Stack
                 direction={{ xs: 'column', sm: 'row' }}
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                gap="10px"
+                justifyContent='flex-start'
+                alignItems='flex-start'
+                gap='10px'
                 sx={{
                   marginBottom: index !== KEYS.length - 1 ? '20px' : '0px',
                 }}
@@ -365,7 +365,7 @@ export default function JoinEsparkCrewPage() {
                     padding: '7px',
                     position: 'relative',
                     ':after': {
-                      content: "''",
+                      content: '" "',
                       position: 'absolute',
                       top: '40px',
                       left: '22px',
@@ -378,16 +378,16 @@ export default function JoinEsparkCrewPage() {
                   <Typography
                     sx={{ width: '30px', height: '30px' }}
                     lineHeight={1.6}
-                    textAlign="center"
+                    textAlign='center'
                     fontWeight={700}
-                    color="#fff"
+                    color='#fff'
                   >
                     {index + 1}
                   </Typography>
                 </Box>
 
                 <Typography
-                  mt="5px"
+                  mt='5px'
                   lineHeight={1.65}
                   fontWeight={500}
                   fontSize={{
@@ -397,7 +397,7 @@ export default function JoinEsparkCrewPage() {
                     lg: '20px',
                     xl: '20px',
                   }}
-                  color="secondary"
+                  color='secondary'
                 >
                   <span style={{ fontWeight: 700, color: '#001C63' }}>
                     {title}
@@ -411,9 +411,9 @@ export default function JoinEsparkCrewPage() {
       </Stack>
       {/* Benefits */}
       <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
+        direction='row'
+        justifyContent='center'
+        alignItems='center'
         sx={{
           width: '100%',
           padding: '30px 50px 50px',
@@ -422,13 +422,13 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography
-            variant="h4"
+            variant='h4'
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}
-            textAlign="center"
-            color="secondary"
-            mb="30px"
+            textAlign='center'
+            color='secondary'
+            mb='30px'
           >
             Why eSpark Talent
           </Typography>
@@ -437,10 +437,10 @@ export default function JoinEsparkCrewPage() {
               return (
                 <Grid sx={{ padding: '20px' }} item xs={12} sm={6} md={4}>
                   <Stack
-                    direction="row"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    gap="10px"
+                    direction='row'
+                    justifyContent='flex-start'
+                    alignItems='center'
+                    gap='10px'
                     sx={{
                       backgroundColor: '#E8F4FF66',
                       padding: '10px',
@@ -459,10 +459,10 @@ export default function JoinEsparkCrewPage() {
                       <Image
                         width={20}
                         height={20}
-                        src="/images/join-crew/tick.png"
+                        src='/images/join-crew/tick.png'
                       />
                     </Box>
-                    <Typography variant="subtitle2" color="secondary">
+                    <Typography variant='subtitle2' color='secondary'>
                       {benefit}
                     </Typography>
                   </Stack>
@@ -474,8 +474,8 @@ export default function JoinEsparkCrewPage() {
       </Stack>
       {/* Footer CTA */}
       <Stack
-        justifyContent="center"
-        alignItems="center"
+        justifyContent='center'
+        alignItems='center'
         sx={{
           backgroundColor: '#029894',
           backgroundImage: [
@@ -491,12 +491,12 @@ export default function JoinEsparkCrewPage() {
         }}
       >
         <Stack
-          justifyContent="center"
-          alignItems="center"
+          justifyContent='center'
+          alignItems='center'
           sx={{ width: { sm: '100%', md: '80%', lg: '70%' } }}
         >
           <Typography
-            variant="h2"
+            variant='h2'
             sx={{
               color: '#ECECED',
               fontSize: {

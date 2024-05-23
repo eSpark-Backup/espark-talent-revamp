@@ -40,7 +40,7 @@ const JoinEsparkRegistrationModal = ({
     >
       <>
         <Box
-          component="form"
+          component='form'
           sx={{
             boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
             borderRadius: '10px',
@@ -77,8 +77,8 @@ const JoinEsparkRegistrationModal = ({
               <Typography
                 mb={1}
                 fontSize={25}
-                textAlign="left"
-                color="secondary"
+                textAlign='left'
+                color='secondary'
                 sx={{
                   fontSize: { xs: '25px', lg: '30px', fontWeight: 600 },
                 }}
@@ -178,7 +178,7 @@ const JoinEsparkRegistrationModal = ({
                             Skills, Technologies and Expertise
                           </Typography>
 
-                          <Tooltip placement="top-start" title={item?.tooltip}>
+                          <Tooltip placement='top-start' title={item?.tooltip}>
                             <InfoIcon
                               sx={{
                                 color: (theme) => theme.palette.primary.main,
@@ -192,8 +192,8 @@ const JoinEsparkRegistrationModal = ({
                         <TagsInput
                           value={form.tags}
                           onChange={(e) => handleChange('tags', e)}
-                          name="skills"
-                          placeHolder="Start with #"
+                          name='skills'
+                          placeHolder='Start with #'
                           beforeAddValidate={(tag) => {
                             if (tag.trim().startsWith('#')) {
                               return true;
@@ -212,17 +212,17 @@ const JoinEsparkRegistrationModal = ({
               {
                 <>
                   <Stack
-                    direction="row"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    gap="10px"
+                    direction='row'
+                    justifyContent='space-between'
+                    alignItems='center'
+                    gap='10px'
                   >
                     <Stack direction={'row'}>
                       <Typography
                         fontSize={25}
                         mb={1}
-                        textAlign="left"
-                        color="secondary"
+                        textAlign='left'
+                        color='secondary'
                         sx={{
                           fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
                         }}
@@ -230,7 +230,7 @@ const JoinEsparkRegistrationModal = ({
                         {headings.RESUME}
                       </Typography>
                       <Tooltip
-                        placement="top-start"
+                        placement='top-start'
                         title={
                           'Please choose a file to upload your resume, or you can share a link to your resume with us. Accepted formats are PDF, DOC, and DOCX.'
                         }
@@ -257,7 +257,7 @@ const JoinEsparkRegistrationModal = ({
                             ? '/images/join-crew/green-tick.png'
                             : '/images/join-crew/cross.png'
                         }
-                        alt="icon"
+                        alt='icon'
                       />
                     )}
                   </Stack>
@@ -268,10 +268,10 @@ const JoinEsparkRegistrationModal = ({
                       borderRadius: '5px',
                       div: { width: '50%', div: { width: '100%' } },
                     }}
-                    direction="row"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    gap="10px"
+                    direction='row'
+                    justifyContent='space-between'
+                    alignItems='center'
+                    gap='10px'
                   >
                     <ImgUploader
                       disabled={typeof form.cv === 'string' && form.cv !== ''}
@@ -283,7 +283,7 @@ const JoinEsparkRegistrationModal = ({
                     <Typography
                       style={{ color: 'black' }}
                       mt={2}
-                      variant="subtitle2"
+                      variant='subtitle2'
                     >
                       OR
                     </Typography>
@@ -301,8 +301,8 @@ const JoinEsparkRegistrationModal = ({
               <Typography
                 fontSize={25}
                 mb={1}
-                textAlign="left"
-                color="secondary"
+                textAlign='left'
+                color='secondary'
                 sx={{
                   fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
                 }}
@@ -394,7 +394,7 @@ const JoinEsparkRegistrationModal = ({
               }}
               className={loading ? 'disabled' : ''}
               disabled={loading}
-              type="submit"
+              type='submit'
             >
               <Typography
                 sx={{
