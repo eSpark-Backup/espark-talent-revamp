@@ -7,56 +7,54 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
 import { BENEFITS, KEYS, ABOUT } from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 import supabase from '@/supabase/supabaseClient';
 import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
-
 
 export default function JoinEsparkCrewPage() {
   const [registrationModal, setRegistrationModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone_num: "",
-    cnic: "",
-    linkedin_profile: "",
-    salary_expection: "",
-    experience: "",
-    availability: "",
-    prefrences: "",
-    education: "",
-    github_profile: "",
-    job_type: "",
-    projects: "",
-    city: "",
-    field: "",
-    subField: "",
-    position: "",
+    name: '',
+    email: '',
+    phone_num: '',
+    cnic: '',
+    linkedin_profile: '',
+    salary_expection: '',
+    experience: '',
+    availability: '',
+    prefrences: '',
+    education: '',
+    github_profile: '',
+    job_type: '',
+    projects: '',
+    city: '',
+    field: '',
+    subField: '',
+    position: '',
     tags: [],
-    cv: "",
+    cv: '',
   });
 
   const handleChange = (name, value) => {
     switch (name) {
-      case "field":
+      case 'field':
         setForm((prev) => ({
           ...prev,
-          subField: "",
-          position: "",
-          [name]: value,
-
-        }));
-        break;
-      case "subField":
-        setForm((prev) => ({
-          ...prev,
-          position: "",
+          subField: '',
+          position: '',
           [name]: value,
         }));
         break;
-      case "position":
+      case 'subField':
+        setForm((prev) => ({
+          ...prev,
+          position: '',
+          [name]: value,
+        }));
+        break;
+      case 'position':
         setForm((prev) => ({
           ...prev,
           [name]: value,
@@ -78,47 +76,47 @@ export default function JoinEsparkCrewPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const newPhone_num = form.phone_num.replace(/\s|-/g, "");
+    const newPhone_num = form.phone_num.replace(/\s|-/g, '');
 
-    if (newPhone_num.length !== 13 || !newPhone_num.startsWith("+923")) {
-      toast.error("Invalid Phone Number");
+    if (newPhone_num.length !== 13 || !newPhone_num.startsWith('+923')) {
+      toast.error('Invalid Phone Number');
       return;
     }
     if (
-      form?.experience === "" ||
-      form?.availability === "" ||
-      form?.prefrences === "" ||
+      form?.experience === '' ||
+      form?.availability === '' ||
+      form?.prefrences === '' ||
       form?.tags.length <= 0 ||
-      form?.education === "" ||
-      form?.city === "" ||
-      form?.cv === "" ||
-      form?.field === "" ||
-      form?.subField === "" ||
-      form?.job_type === "" ||
-      form?.projects === ""
+      form?.education === '' ||
+      form?.city === '' ||
+      form?.cv === '' ||
+      form?.field === '' ||
+      form?.subField === '' ||
+      form?.job_type === '' ||
+      form?.projects === ''
     ) {
-      toast?.error("All Fields Are Required");
+      toast?.error('All Fields Are Required');
       return;
     }
     if ((form?.cnic?.length || 0) !== 13) {
-      toast?.error("Invalid CNIC Number");
+      toast?.error('Invalid CNIC Number');
       setLoading(false);
       return;
     }
 
     if (form?.salary_expection <= 0) {
-      toast?.error("Invalid Salary");
+      toast?.error('Invalid Salary');
       setLoading(false);
       return;
     }
 
-    if (!form?.linkedin_profile.includes("linkedin")) {
-      toast?.error("Invalid Linked Profile URL");
+    if (!form?.linkedin_profile.includes('linkedin')) {
+      toast?.error('Invalid Linked Profile URL');
       setLoading(false);
       return;
     }
-    if (!form?.github_profile.includes("github")) {
-      toast?.error("Invalid Github Profile URL");
+    if (!form?.github_profile.includes('github')) {
+      toast?.error('Invalid Github Profile URL');
       setLoading(false);
       return;
     }
@@ -127,17 +125,17 @@ export default function JoinEsparkCrewPage() {
 
     if (form.cv instanceof File) {
       const formData = new FormData();
-      formData.append("file", form.cv);
+      formData.append('file', form.cv);
 
-      const response = await fetch("/api/resumeupload", {
-        method: "POST",
+      const response = await fetch('/api/resumeupload', {
+        method: 'POST',
         body: formData,
       });
 
       const { fileKey } = await response.json();
 
-      console.log(fileKey, "fileKey");
-      resumeKey = fileKey
+      console.log(fileKey, 'fileKey');
+      resumeKey = fileKey;
 
       setForm((prev) => ({
         ...prev,
@@ -151,7 +149,7 @@ export default function JoinEsparkCrewPage() {
     }
 
     try {
-      const { data, error } = await supabase.from("Applicants").insert({
+      const { data, error } = await supabase.from('Applicants').insert({
         ...form,
         availability: form.availability?.value,
         city: form.city?.value,
@@ -178,7 +176,7 @@ export default function JoinEsparkCrewPage() {
 
       if (error) {
         console.log(error?.message);
-        toast.error("Something went wrong. Please try again");
+        toast.error('Something went wrong. Please try again');
         setLoading(false);
       }
 
@@ -187,30 +185,30 @@ export default function JoinEsparkCrewPage() {
         setLoading(false);
         setSuccessModal(true);
         setForm({
-          name: "",
-          email: "",
-          phone_num: "",
-          cnic: "",
-          linkedin_profile: "",
-          salary_expection: "",
-          experience: "",
-          availability: "",
-          prefrences: "",
-          education: "",
-          github_profile: "",
-          job_type: "",
-          projects: "",
-          city: "",
-          field: "",
-          subField: "",
-          position: "",
+          name: '',
+          email: '',
+          phone_num: '',
+          cnic: '',
+          linkedin_profile: '',
+          salary_expection: '',
+          experience: '',
+          availability: '',
+          prefrences: '',
+          education: '',
+          github_profile: '',
+          job_type: '',
+          projects: '',
+          city: '',
+          field: '',
+          subField: '',
+          position: '',
           tags: [],
-          cv: "",
-        })
+          cv: '',
+        });
       }
     } catch (error) {
       console.log(error?.message);
-      toast.error("Something went wrong. Please try again");
+      toast.error('Something went wrong. Please try again');
       setLoading(false);
       setForm((prev) => ({
         ...prev,
@@ -588,7 +586,6 @@ export default function JoinEsparkCrewPage() {
         </Stack>
       </Stack>
 
-
       {/* Registration Modal  */}
       <JoinEsparkRegistrationModal
         open={registrationModal}
@@ -600,10 +597,12 @@ export default function JoinEsparkCrewPage() {
       />
 
       {/* SUCCESS MODAL  */}
-      <JoinEsparkSuccessModal open={successModal} handleClose={() => { setSuccessModal(false) }} />
+      <JoinEsparkSuccessModal
+        open={successModal}
+        handleClose={() => {
+          setSuccessModal(false);
+        }}
+      />
     </>
-
-
-
   );
 }
