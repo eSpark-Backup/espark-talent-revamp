@@ -9,11 +9,13 @@ import { BENEFITS, KEYS, ABOUT } from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
 import { toast } from "react-toastify";
 import supabase from '@/supabase/supabaseClient';
+import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
 
 
 export default function JoinEsparkCrewPage() {
   const [registrationModal, setRegistrationModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -88,7 +90,11 @@ export default function JoinEsparkCrewPage() {
       form?.tags.length <= 0 ||
       form?.education === "" ||
       form?.city === "" ||
-      form?.cv === ""
+      form?.cv === "" ||
+      form?.field === "" ||
+      form?.position === "" ||
+      form?.job_type === "" ||
+      form?.projects === ""
     ) {
       toast?.error("All Fields Are Required");
       return;
@@ -122,6 +128,8 @@ export default function JoinEsparkCrewPage() {
       });
 
       const { fileKey } = await response.json();
+
+      console.log(fileKey, "fileKey");
 
       setForm((prev) => ({
         ...prev,
@@ -165,7 +173,10 @@ export default function JoinEsparkCrewPage() {
       }
 
       if (data) {
-        toast.success("Application posted successfully");
+        setRegistrationModal(false);
+        setSuccessModal(true);
+        setForm({});
+
       }
     } catch (error) {
       toast.error("Something went wrong. Please try again");
@@ -555,6 +566,12 @@ export default function JoinEsparkCrewPage() {
         handleSubmit={handleSubmit}
         form={form}
       />
+
+      {/* SUCCESS MODAL  */}
+      <JoinEsparkSuccessModal open={successModal} handleClose={() => {setSuccessModal(false) }} />
+
+
+
     </>
 
 

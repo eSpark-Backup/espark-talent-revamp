@@ -520,3 +520,9 @@ export const APPLY_FOR_FIELDS = [
         APPLY_FOR: 'Apply For',
      }
   }
+
+  export const REGISTRATION_FORM_SUCCESS_MODAL_DATA = {
+    title: "Thank you",
+    description: "Your form has been successfully submitted",
+    buttonText: "Close"
+  }
