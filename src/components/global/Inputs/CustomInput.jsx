@@ -32,7 +32,7 @@ const CustomInput = ({
         <Typography color={'secondary'} mb={1} sx={{ fontSize: '18px' }}>
           {label}
         </Typography>
-        <Tooltip placement='top-start' title={tooltip}>
+        <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon
             sx={{
               color: (theme) => theme.palette.primary.main,
@@ -54,7 +54,7 @@ const CustomInput = ({
       />
     </Stack>
   ) : name === 'salary_expection' ? (
-    <Stack direction='column'>
+    <Stack direction="column">
       <Box
         sx={{
           display: 'flex',
@@ -63,13 +63,13 @@ const CustomInput = ({
       >
         <Typography
           mb={1}
-          textAlign='left'
+          textAlign="left"
           color={'secondary'}
           sx={{ fontSize: '18px' }}
         >
           {label}
         </Typography>
-        <Tooltip placement='top-start' title={tooltip}>
+        <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon
             sx={{
               color: (theme) => theme.palette.primary.main,
@@ -87,7 +87,7 @@ const CustomInput = ({
         placeholder={placeholder}
         name={name}
         allowLeadingZeros
-        thousandSeparator=','
+        thousandSeparator=","
         onChange={(e) => onChange(name, e.target.value)}
         style={{
           height: '51px',
@@ -102,7 +102,7 @@ const CustomInput = ({
       />
     </Stack>
   ) : (
-    <Stack direction='column'>
+    <Stack direction="column">
       {!(name === 'cv') && (
         <Box
           sx={{
@@ -112,13 +112,13 @@ const CustomInput = ({
         >
           <Typography
             mb={1}
-            textAlign='left'
+            textAlign="left"
             color={'secondary'}
             sx={{ fontSize: '18px' }}
           >
             {label}
           </Typography>
-          <Tooltip placement='top-start' title={tooltip}>
+          <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
               sx={{
                 color: (theme) => theme.palette.primary.main,

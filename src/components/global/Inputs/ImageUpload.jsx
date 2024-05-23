@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Image from 'next/image';
 
 const ImgUploader = ({
@@ -9,9 +9,7 @@ const ImgUploader = ({
   disabled,
   filename,
   form,
-  table,
 }) => {
-  const theme = useTheme();
 
   const handleFileChange = (e, name) => {
     if (e.target.files.length > 0) {
