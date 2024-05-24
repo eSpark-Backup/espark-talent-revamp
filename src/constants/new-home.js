@@ -39,7 +39,7 @@ export const WORKS_DATA = {
     {
       step: `Step 01`,
       title: `Tell us your needs`,
-      description: `We discuss your requirments,<br/> budget and job details.`,
+      description: `We discuss your requirements,<br/> budget and job details.`,
       image: `images/new-home/process/icon1.png`,
     },
     {
@@ -201,6 +201,7 @@ export const EXPERTIES_DATA = {
     {
       id: 2,
       icon: 'images/new-home/experties/icon2.svg',
+      activeIcon: 'images/new-home/experties/activeIcon2.svg',
       heading: 'Front-End Developers',
       listItems: [
         {
@@ -224,6 +225,7 @@ export const EXPERTIES_DATA = {
     {
       id: 3,
       icon: 'images/new-home/experties/icon3.svg',
+      activeIcon: 'images/new-home/experties/activeIcon3.svg',
       heading: 'Back-End Developers',
       listItems: [
         {
@@ -238,6 +240,7 @@ export const EXPERTIES_DATA = {
     {
       id: 4,
       icon: 'images/new-home/experties/icon4.svg',
+      activeIcon: 'images/new-home/experties/activeIcon4.svg',
       heading: 'Digital Marketer',
       listItems: [
         {
@@ -255,6 +258,7 @@ export const EXPERTIES_DATA = {
     {
       id: 5,
       icon: 'images/new-home/experties/icon5.svg',
+      activeIcon: 'images/new-home/experties/activeIcon5.svg',
       heading: 'Embedded Developers',
       listItems: [
         {
@@ -271,6 +275,7 @@ export const EXPERTIES_DATA = {
     {
       id: 6,
       icon: 'images/new-home/experties/icon6.svg',
+      activeIcon: 'images/new-home/experties/activeIcon6.svg',
       heading: 'Ecommerce Developers',
       listItems: [
         {
@@ -286,6 +291,7 @@ export const EXPERTIES_DATA = {
     {
       id: 7,
       icon: 'images/new-home/experties/icon7.svg',
+      activeIcon: 'images/new-home/experties/activeIcon7.svg',
       heading: 'Mobile App Developers',
       listItems: [
         {
@@ -305,6 +311,7 @@ export const EXPERTIES_DATA = {
     {
       id: 1,
       icon: 'images/new-home/experties/icon1.svg',
+      activeIcon: 'images/new-home/experties/activeIcon1.svg',
       heading: 'Trending',
       listItems: [
         { title: 'UI UX Designer', link: '/hire-ui-ux-designers' },

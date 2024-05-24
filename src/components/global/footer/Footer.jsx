@@ -24,8 +24,8 @@ const Footer = ({ data }) => {
             }}
           >
             <Container>
-              <Grid container>
-                <Grid item lg={5} md={5} sm={12} xs={12}>
+              <Grid container spacing={0.8}>
+                <Grid item lg={5} md={4.5} sm={12} xs={12}>
                   <Link href={data?.logoLink}>
                     <Image
                       quality="85"
@@ -87,7 +87,7 @@ const Footer = ({ data }) => {
                 <Grid
                   item
                   lg={2}
-                  md={2}
+                  md={2.5}
                   sm={12}
                   xs={12}
                   sx={{
@@ -154,24 +154,21 @@ const Footer = ({ data }) => {
                     <Grid item lg={12} md={12} sm={6} xs={6}>
                       <Box
                         sx={{
-                          pr: { sm: '35%' },
+                          pr: { sm: '5%' },
                         }}
                       >
-                        <FooterItem2
-                          href={data?.contactUsSales?.link}
-                          label={data?.contactUsSales?.label}
-                        />
+                        <FooterItem2 section={data?.contactUs.topSection} />
                       </Box>
                     </Grid>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
                       <Box
                         sx={{
-                          pr: { sm: '35%' },
+                          pr: { sm: '5%' },
                         }}
                       >
                         <FooterItem2
-                          href={data?.contactUsInfo?.link}
-                          label={data?.contactUsInfo?.label}
+                          data={data?.contactUs}
+                          section={data?.contactUs.bottomSection}
                         />
                       </Box>
                     </Grid>

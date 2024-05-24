@@ -52,7 +52,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
     if (!isHovered) {
       const timer = setTimeout(() => {
         setAnchorEl(null);
-      }, 100);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [isHovered]);

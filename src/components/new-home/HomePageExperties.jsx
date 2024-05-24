@@ -14,8 +14,11 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const HomePageExperties = ({ data }) => {
+  const pathName = usePathname();
+  const hire_remote_developers = pathName === '/hire-remote-developers';
   const [expandedAccordion, setExpandedAccordion] = useState(null);
 
   const handleChangeAccordion = (panel) => (event, isExpanded) => {
@@ -54,7 +57,11 @@ const HomePageExperties = ({ data }) => {
                 id={`panel${index}bh-header`}
               >
                 <Image
-                  src={service?.icon}
+                  src={
+                    expandedAccordion === index
+                      ? service?.activeIcon
+                      : service?.icon
+                  }
                   alt={service?.heading}
                   height={25}
                   width={25}
@@ -68,6 +75,7 @@ const HomePageExperties = ({ data }) => {
                       md: '18px',
                     },
                     fontWeight: 400,
+                    color: expandedAccordion === index ? '#354899' : '#029894',
                   }}
                 >
                   {service?.heading}
@@ -93,6 +101,7 @@ const HomePageExperties = ({ data }) => {
                               fontWeight: 400,
                               lineHeight: 2.5,
                               color: '#000000',
+                              my: hire_remote_developers ? 0.5 : 0,
                             }}
                           >
                             {item.title}

@@ -75,13 +75,31 @@ export const FOOTER_DATA = {
       link: '/partnership-program',
     },
   ],
-  contactUsSales: {
+  contactUs: {
     label: 'Have questions about <span>our features</span>?',
-    link: 'sales@esparktalent.com',
-  },
-  contactUsInfo: {
-    label: 'Already using our service and need <span>some help</span>?',
-
-    link: 'info@esparktalent.com',
+    topSection: [
+      {
+        icon: '/images/footer/flag.png',
+        text: '<span style="font-weight:500;color:#001C63 !important;">USA</span>',
+        link: '',
+      },
+      {
+        icon: '/images/footer/location.png',
+        text: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
+        link: '',
+      },
+    ],
+    bottomSection: [
+      {
+        icon: '/images/footer/email.png',
+        text: 'sales@esparktalent.com',
+        link: 'mailto:sales@esparktalent.com',
+      },
+      {
+        icon: '/images/footer/phone.png',
+        text: '+17603380194',
+        link: 'tel:+17603380194',
+      },
+    ],
   },
 };
