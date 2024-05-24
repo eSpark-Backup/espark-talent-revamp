@@ -2,6 +2,7 @@
 import React from 'react';
 import HireDeveloper from './HireDeveloper';
 import ServiceSinglePage from '../service/ServiceSinglePage';
+import HireRemote from '../Hire-remote/HireRemote';
 
 const Hire = ({ data, slug }) => {
   if (
@@ -9,6 +10,8 @@ const Hire = ({ data, slug }) => {
     slug === 'hire-a-backend-developer'
   ) {
     return <HireDeveloper data={data} />;
+  } else if (slug === 'hire-remote-developers') {
+    return <HireRemote data={data} />;
   } else {
     return <ServiceSinglePage data={data} />;
   }
