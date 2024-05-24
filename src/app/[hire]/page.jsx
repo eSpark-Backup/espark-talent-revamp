@@ -6,6 +6,7 @@ import NotFoundPage from '@/components/global/NotFound';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 import { getSingleHire } from '@/sanity/sanity.quries';
 import Hire from '@/components/hire-developer/Hire';
+import Script from 'next/script';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
@@ -57,7 +58,11 @@ export async function generateMetadata({ params }) {
   return metadata;
 }
 
-const Page = ({ params }) => {
+export default async function Page({ params }) {
+  const path = params.hire;
+  const hire = await getSingleHire(path);
+  const filteredData = hire || GLOBAL_SEO[0];
+
   const slug = params.hire;
   const data = HIRE_DEVELOPERS?.filter((item) => item?.path === slug)[0];
 
@@ -74,6 +79,25 @@ const Page = ({ params }) => {
     }
     return (
       <>
+        <Script
+          id="CreativeWorkSeries"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org/',
+              '@type': 'CreativeWorkSeries',
+              name: filteredData?.ratingName,
+              image: filteredData?.ratingImage,
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: filteredData?.ratingValue,
+                bestRating: filteredData?.bestRating,
+                worstRating: filteredData?.worstRating,
+                ratingCount: filteredData?.ratingCount,
+              },
+            }),
+          }}
+        />
         <Hire data={data} slug={slug} />
       </>
     );
@@ -85,10 +109,8 @@ const Page = ({ params }) => {
       </div>
     );
   }
-};
+}
 
 Page.propTypes = {
   params: PropTypes.object.isRequired,
 };
-
-export default Page;
