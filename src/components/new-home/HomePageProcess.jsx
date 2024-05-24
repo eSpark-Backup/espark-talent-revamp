@@ -1,12 +1,20 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 
 const HomePageProcess = ({ data }) => {
+  const pathName = usePathname();
+  const hire_remote_developers = pathName === '/hire-remote-developers';
   const [selectedItem, setSelectedItem] = useState(data?.items[0]);
   return (
     <>
-      <Box sx={{ backgroundColor: '#F7F8FB', py: 3 }}>
+      <Box
+        sx={{
+          backgroundColor: hire_remote_developers ? '#fff' : '#F7F8FB',
+          py: 3,
+        }}
+      >
         <Container sx={{ p: 1 }}>
           <Box sx={{ pb: '30px' }}>
             <Typography
@@ -24,7 +32,7 @@ const HomePageProcess = ({ data }) => {
                 textAlign: {
                   xs: 'center',
                   md: 'center',
-                  lg: 'left',
+                  lg: hire_remote_developers ? 'center' : 'left',
                 },
               }}
             >
@@ -50,6 +58,7 @@ const HomePageProcess = ({ data }) => {
                   onMouseEnter={() => setSelectedItem(item)}
                   sx={{
                     width: { xs: 'auto', sm: 'auto', md: '33%', lg: 'auto' },
+                    mx: 1,
                     height: {
                       xs: '122px',
                       sm: '122px',
@@ -61,11 +70,19 @@ const HomePageProcess = ({ data }) => {
                     cursor: 'pointer',
                     px: { xs: 1.2, sm: 1.5, md: 2 },
                     py: { xs: 1.5, sm: 2.2, md: 2 },
-                    backgroundColor: selectedItem === item ? '#fff' : 'none',
+                    backgroundColor: hire_remote_developers
+                      ? selectedItem === item
+                        ? '#fff'
+                        : '#F7F8FB'
+                      : selectedItem === item
+                        ? '#fff'
+                        : 'none',
                     '&:hover': {
                       backgroundColor: '#fff',
                       borderLeft: '16px solid #596EA5',
-                      boxShadow: '0px 4px 4px rgba(3,3,3,0.58)',
+                      boxShadow: hire_remote_developers
+                        ? '0px 0.89px 3.94px 0px #03030394'
+                        : '0px 4px 4px rgba(3,3,3,0.58)',
                     },
                     borderLeft:
                       selectedItem === item
@@ -73,7 +90,9 @@ const HomePageProcess = ({ data }) => {
                         : '16px solid #F7F8FB',
                     boxShadow:
                       selectedItem === item
-                        ? '2px 4px 4px 0 rgba(3,3,3,0.3)'
+                        ? hire_remote_developers
+                          ? '0px 0.89px 3.94px 0px #03030394'
+                          : '2px 4px 4px 0 rgba(3,3,3,0.3)'
                         : 'none',
                     borderRadius: '18px',
                   }}

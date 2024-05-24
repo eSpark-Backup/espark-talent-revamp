@@ -9,7 +9,18 @@ import { usePathname } from 'next/navigation';
 const AwardAchievement = ({ data, design, background }) => {
   const pathName = usePathname();
   return (
-    <Box sx={{ py: pathName.includes('/book-a-meeting') ? null : '40px' }}>
+    <Box
+      sx={{
+        py: {
+          xs: '20px',
+          md:
+            pathName.includes('/book-a-meeting') ||
+            pathName.includes('/hire-remote-developers')
+              ? null
+              : '40px',
+        },
+      }}
+    >
       {design === 2 ? (
         <Container>
           <Box
@@ -74,7 +85,10 @@ const AwardAchievement = ({ data, design, background }) => {
           }}
         >
           <Container>
-            <ParagraphTitle title={data?.title} />
+            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+              <ParagraphTitle title={data?.title} />
+            </Box>
+
             <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
               {data?.items?.map((item, index) => (
                 <Grid

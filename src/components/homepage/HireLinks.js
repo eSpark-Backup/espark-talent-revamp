@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-const HireLinks = ({ data }) => {
+const HireLinks = ({ data, currentPage }) => {
   const swiperSettings = {
     slidesPerView: 1,
     // spaceBetween: 20,
@@ -44,7 +44,7 @@ const HireLinks = ({ data }) => {
   return (
     <Box
       sx={{
-        my: 3.7,
+        my: currentPage?.includes('hire-remote-deevelopers') ? 4 : 3.7,
         width: '100%',
         background: '#F7F8FBFA',
         '@media (max-width: 987px)': {
