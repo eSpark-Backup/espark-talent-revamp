@@ -186,26 +186,13 @@ export async function getSingleHire(slug) {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
-    }`,
-    { slug },
-    {
-      next: {
-        revalidate: 1800,
-      },
-    }
-  );
-}
-export async function getSingleService(slug) {
-  return client.fetch(
-    `*[_type == "service" && slug.current == $slug][0]
-    {
-      _id,
-      "slug": slug.current,
-      'metaTitle':seo.metaTitle,
-      "metaDescription":seo.metaDescription,
-      "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "ratingName":rating.name,
+      "ratingImage":rating.image.asset->url,
+      "worstRating":rating.worstRating,
+      "bestRating":rating.bestRating,
+      "ratingValue":rating.ratingValue,
+      "ratingCount":rating.ratingCount,
     }`,
     { slug },
     {
