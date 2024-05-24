@@ -37,6 +37,31 @@ export default function JoinEsparkCrewPage() {
     cv: '',
   });
 
+  const handleEmpty = () => {
+    setRegistrationModal(false);
+    setForm({
+      name: '',
+      email: '',
+      phone_num: '',
+      cnic: '',
+      linkedin_profile: '',
+      salary_expection: '',
+      experience: '',
+      availability: '',
+      prefrences: '',
+      education: '',
+      github_profile: '',
+      job_type: '',
+      projects: '',
+      city: '',
+      field: '',
+      subField: '',
+      position: '',
+      tags: [],
+      cv: '',
+    })
+  }
+
   const handleChange = (name, value) => {
     switch (name) {
       case 'field':
@@ -604,6 +629,7 @@ export default function JoinEsparkCrewPage() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         form={form}
+        handleEmpty={handleEmpty}
       />
 
       {/* SUCCESS MODAL  */}

@@ -734,6 +734,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Name',
     type: 'text',
     name: 'name',
+    required: true,
     placeholder: 'Enter Name',
     tooltip:
       'Please enter your full legal name, including first, middle (if applicable), and last name, as it appears on your official documents. eg: Mark Zuckerberg',
@@ -742,6 +743,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Email',
     type: 'email',
     name: 'email',
+    required: true,
     placeholder: 'Enter Email',
     tooltip:
       'Please enter your primary email address. This will be used for all official communications eg: mark@gmail.com',
@@ -750,6 +752,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Phone Number',
     type: 'tel',
     name: 'phone_num',
+    required: true,
     placeholder: 'Enter Phone Number',
     tooltip:
       'Please enter your primary phone number. This will be used for all official communications eg: 03001234567',
@@ -758,6 +761,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'CNIC',
     type: 'number',
     name: 'cnic',
+    required: true,
     placeholder: 'Enter CNIC Number',
     tooltip:
       'Please enter your CNIC number as it appears on your identity card, including all dashes. eg: 4220112345678',
@@ -767,6 +771,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'LinkedIn Profile Link',
     type: 'url',
     name: 'linkedin_profile',
+    required: false,
     placeholder: 'Enter LinkedIn Profile Link',
     tooltip:
       'Please enter the URL of your LinkedIn profile. This allows us to view your professional background and connect with you on LinkedIn. eg: https://www.linkedin.com/in/markzuckerberg',
@@ -775,6 +780,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Salary Expectation',
     type: 'number',
     name: 'salary_expection',
+    required: true,
     placeholder: 'Enter Expected Salary',
     tooltip:
       'Please enter your expected salary in PKR. This will help us understand your salary expectations and make you an offer accordingly. eg: 100000',
@@ -782,6 +788,7 @@ export const PERSONAL_INFO_FIELDS = [
   {
     type: 'select',
     name: 'experience',
+    required: true,
     label: 'Experience',
     placeholder: 'Experience',
     tooltip:
@@ -792,6 +799,7 @@ export const PERSONAL_INFO_FIELDS = [
     type: 'select',
     name: 'availability',
     label: 'Availability',
+    required: true,
     placeholder: 'Availability',
     tooltip: 'Please select the earliest you can start working with us.',
     options: AVIALABILITY_OPTIONS,
@@ -800,6 +808,7 @@ export const PERSONAL_INFO_FIELDS = [
     type: 'select',
     name: 'prefrences',
     label: 'Prefrences',
+    required: true,
     placeholder: 'Prefrences',
     tooltip:
       'Please select your work preferences. This will help us understand your work preferences and make you an offer accordingly.',
@@ -813,6 +822,7 @@ export const PERSONAL_INFO_FIELDS = [
   {
     type: 'select',
     name: 'education',
+    required: true,
     label: 'Education',
     placeholder: 'Education',
     tooltip: 'Please select your highest level of education.',
@@ -822,6 +832,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Github Link',
     type: 'url',
     name: 'github_profile',
+    required: false,
     tooltip:
       'Please enter the URL of your GitHub profile. This allows us to view your projects and contributions. eg: Github.com/username',
     placeholder: 'Enter Github Link',
@@ -830,6 +841,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Job Type',
     type: 'select',
     name: 'job_type',
+    required: true,
     placeholder: 'Enter Job type',
     tooltip:
       'Please select the type of job you are looking for eg: Full Time, Part Time, Contract',
@@ -852,6 +864,7 @@ export const PERSONAL_INFO_FIELDS = [
     label: 'Projects',
     type: 'textarea',
     name: 'projects',
+    required: true,
     placeholder:
       'Tell us about your role in projects, technologies used and outcomes achieved.',
     tooltip:
@@ -860,6 +873,7 @@ export const PERSONAL_INFO_FIELDS = [
   {
     type: 'select',
     name: 'city',
+    required: true,
     label: 'City',
     placeholder: 'City',
     tooltip: 'Please select the city you are currently residing in.',

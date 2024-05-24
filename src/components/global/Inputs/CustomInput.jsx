@@ -30,7 +30,7 @@ const CustomInput = ({
         }}
       >
         <Typography color={'secondary'} mb={1} sx={{ fontSize: '18px' }}>
-          {label}
+          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
         <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon
@@ -67,7 +67,7 @@ const CustomInput = ({
           color={'secondary'}
           sx={{ fontSize: '18px' }}
         >
-          {label}
+          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
         <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon
@@ -116,7 +116,7 @@ const CustomInput = ({
             color={'secondary'}
             sx={{ fontSize: '18px' }}
           >
-            {label}
+            {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>
           <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon

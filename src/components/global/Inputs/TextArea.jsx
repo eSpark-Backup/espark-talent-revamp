@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 
-const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
+const TextArea = ({ name, placeholder, onChange, label, tooltip, required }) => {
   return (
     <Stack>
       <Box
@@ -23,7 +23,7 @@ const TextArea = ({ name, placeholder, onChange, label, tooltip }) => {
           color={'secondary'}
           sx={{ fontSize: '18px' }}
         >
-          {label}
+          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
         <Tooltip placement="top-start" title={tooltip}>
           <InfoIcon

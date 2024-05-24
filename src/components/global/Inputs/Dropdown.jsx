@@ -14,6 +14,7 @@ const Dropdown = ({
   className,
   tooltip,
   showTooltip,
+  required,
 }) => {
   const { FIELDS, SUB_FIELDS, POSITION } = APPLY_FOR_ENUMS;
 
@@ -58,7 +59,7 @@ const Dropdown = ({
       >
         {label && (
           <Typography color={'secondary'} sx={{ fontSize: '18px' }}>
-            {label}
+            {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>
         )}
         {showTooltip && (
