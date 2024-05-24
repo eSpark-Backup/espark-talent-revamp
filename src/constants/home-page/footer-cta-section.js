@@ -1,8 +1,8 @@
 export const FOOTER_CTA_DATA = {
-  title: 'Boosts Your Company Faster with Amazing eSpark Talent',
+  title: 'The best way to build your software development team.',
   image: '/images/footer/footerCta.png',
   alt: 'Connect with eSpark Talent',
-  description: `Connect with skilled interviewers who will help  you find the right people for your company's growth.`,
-  buttonLabel: 'Schedule a Meeting',
+  description: `Getting started is 100% risk-free, and there is no cost until you hire.`,
+  buttonLabel: 'Book a Demo',
   buttonLink: '/book-a-demo',
 };
