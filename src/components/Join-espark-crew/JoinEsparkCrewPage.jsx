@@ -59,8 +59,8 @@ export default function JoinEsparkCrewPage() {
       position: '',
       tags: [],
       cv: '',
-    })
-  }
+    });
+  };
 
   const handleChange = (name, value) => {
     switch (name) {

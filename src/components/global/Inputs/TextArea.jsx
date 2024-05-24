@@ -8,7 +8,14 @@ import {
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 
-const TextArea = ({ name, placeholder, onChange, label, tooltip, required }) => {
+const TextArea = ({
+  name,
+  placeholder,
+  onChange,
+  label,
+  tooltip,
+  required,
+}) => {
   return (
     <Stack>
       <Box
