@@ -59,13 +59,21 @@ const HomePageProcess = ({ data }) => {
                   sx={{
                     width: { xs: 'auto', sm: 'auto', md: '33%', lg: 'auto' },
                     mx: 1,
-                    height: {
+                    minHeight: {
                       xs: '122px',
-                      sm: '122px',
+                      sm: '130px',
                       md: 'auto',
-                      lg: 'auto',
+                      lg: '170px',
                     },
-
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: { xs: 'center', md: 'start', lg: 'center' },
+                    '@media(min-width: 320px) and (max-width: 359px)': {
+                      minHeight: '130px',
+                    },
+                    '@media(min-width: 280px) and (max-width: 319px)': {
+                      minHeight: '165px',
+                    },
                     mb: 3,
                     cursor: 'pointer',
                     px: { xs: 1.2, sm: 1.5, md: 2 },
@@ -116,11 +124,12 @@ const HomePageProcess = ({ data }) => {
                   <Typography
                     variant="h6"
                     sx={{
+                      textWrap: { xs: 'wrap', md: 'nowrap' },
                       color: '#001C63',
                       fontSize: {
-                        xs: '23.97px',
-                        sm: '23.97px',
-                        md: '25px',
+                        xs: '23px',
+                        sm: '23px',
+                        md: '18px',
                         lg: '28px',
                         xl: '28px',
                       },
@@ -134,18 +143,18 @@ const HomePageProcess = ({ data }) => {
                     sx={{
                       color: '#000',
                       fontSize: {
-                        xs: '14px',
+                        xs: '13px',
                         sm: '15px',
-                        md: '16px',
+                        md: '14px',
                         lg: '17px',
-                        xl: '18px',
+                        xl: '17px',
                       },
                       fontWeight: 600,
                       lineHeight: 1.4,
                       pr: { xs: '0', sm: '3%', md: '5%' },
                     }}
                     dangerouslySetInnerHTML={{
-                      __html: `${item.description}`,
+                      __html: `${item?.description}`,
                     }}
                   />
                 </Box>
