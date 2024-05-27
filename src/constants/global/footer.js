@@ -91,8 +91,15 @@ export const FOOTER_DATA = {
     ],
     bottomSection: [
       {
+        icon: '',
+        text: 'Have questions about <span>our features</span>?',
+        link: '',
+        pr: '20px',
+      },
+      {
         icon: '/images/footer/email.png',
         text: 'sales@esparktalent.com',
+        target: '_top',
         link: 'mailto:sales@esparktalent.com',
       },
       {
