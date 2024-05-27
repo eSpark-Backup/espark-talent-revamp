@@ -39,7 +39,7 @@ export const WORKS_DATA = {
     {
       step: `Step 01`,
       title: `Tell us your needs`,
-      description: `We discuss your requirements,<br/> budget and job details.`,
+      description: `We discuss your requirements, budget and job details.`,
       image: `images/new-home/process/icon1.png`,
     },
     {
@@ -51,7 +51,7 @@ export const WORKS_DATA = {
     {
       step: `Step 03`,
       title: `Hire and Onboarding`,
-      description: `Decide who to hire, and we'll<br/> take care of the rest.`,
+      description: `Decide who to hire, and we'll take care of the rest.`,
       image: `images/new-home/process/icon3.png`,
     },
   ],

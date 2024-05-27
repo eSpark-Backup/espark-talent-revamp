@@ -95,7 +95,7 @@ const HireRemoteNavbar = () => {
       if (!isHovered) {
         setAnchorEl(null);
       }
-    }, 100);
+    }, 50);
   };
 
   React.useEffect(() => {
@@ -106,7 +106,6 @@ const HireRemoteNavbar = () => {
       return () => clearTimeout(timer);
     }
   }, [isHovered]);
-  //
 
   return (
     <>
