@@ -253,8 +253,8 @@ export const EXPERIENCE_OPTIONS = [
 
 export const AVIALABILITY_OPTIONS = [
   {
-    label: 'Less then 1 month',
-    value: 'Less then 1 month',
+    label: 'Less than 1 month',
+    value: 'Less than 1 month',
   },
   {
     label: '1 Month',
@@ -265,8 +265,8 @@ export const AVIALABILITY_OPTIONS = [
     value: '2 Months',
   },
   {
-    label: 'More then 2 Months',
-    value: 'More then 2 Months',
+    label: 'More than 2 Months',
+    value: 'More than 2 Months',
   },
 ];
 
