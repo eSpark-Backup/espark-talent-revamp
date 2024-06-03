@@ -817,7 +817,7 @@ export const PERSONAL_INFO_FIELDS = [
   {
     type: 'tags',
     tooltip:
-      'Please write the technologies you are proficient in. Also Please type # before the technology name. eg: #ReactJS, #NodeJS, #VueJS',
+      'Please write the technologies you are proficient in. Also Please type # before the technology name. Then press enter to add a tag. eg: #ReactJS, #NodeJS, #VueJS',
   },
   {
     type: 'select',
