@@ -59,7 +59,7 @@ const JoinEsparkRegistrationModal = ({
               flexDirection: 'column',
               justifyContent: 'flex-start',
               alignItems: 'center',
-              width: { xs: '100%', md: '90%', lg: '80%', xl: '70%' },
+              width: { xs: '97%', md: '90%', lg: '80%', xl: '70%' },
               overflowY: 'scroll',
               height: '80vh',
               position: 'relative',
@@ -103,7 +103,8 @@ const JoinEsparkRegistrationModal = ({
                   textAlign="left"
                   color="secondary"
                   sx={{
-                    fontSize: { xs: '25px', lg: '30px', fontWeight: 600 },
+                    fontSize: { xs: '18px',sm:"25px", lg: '30px', fontWeight: 600 },
+                    pl:{xs:"12px"}
                   }}
                 >
                   {headings.PERSONAL_INFO}
@@ -126,21 +127,18 @@ const JoinEsparkRegistrationModal = ({
                         [theme.breakpoints.up('xs')]: {
                           width: '100%',
                         },
-
                         [theme.breakpoints.up('md')]: {
                           width:
                             item?.name === 'city' ||
-                            item?.name === 'job_type' ||
-                            item.name === 'projects'
+                              item?.name === 'job_type' ||
+                              item.name === 'projects'
                               ? '100%'
                               : '30%',
                         },
                         marginBottom: { xs: '10px', md: '15px' },
                       }}
                     >
-                      {item?.type !== 'select' &&
-                      item?.type !== 'tags' &&
-                      item?.type !== 'textarea' ? (
+                      {item?.type === 'text' || item?.type === 'url' ? (
                         <CustomInput
                           required={item?.required}
                           label={item?.label}
@@ -151,92 +149,108 @@ const JoinEsparkRegistrationModal = ({
                           onChange={handleChange}
                           maxLength={item?.maxLength && item?.maxLength}
                         />
-                      ) : item?.type !== 'tags' && item?.type !== 'textarea' ? (
-                        <Dropdown
-                          required={item?.required}
-                          showTooltip={true}
-                          name={item?.name}
-                          label={item?.label}
-                          placeholder={item?.placeholder}
-                          tooltip={item?.tooltip}
-                          options={
-                            item?.name === 'subField'
-                              ? item?.options[form?.field?.value]
-                              : item?.name === 'position'
-                                ? item?.options[form?.subField?.value]
-                                : item?.options
-                          }
-                          onChange={handleChange}
-                          className={
-                            item?.name === 'subField' && !form.field
-                              ? 'hide'
-                              : item?.name === 'position' && !form.subField
-                                ? 'hide'
-                                : item?.name === 'position' &&
-                                    form.subField &&
-                                    form?.field?.value !==
-                                      'Software Engineering'
-                                  ? 'hide'
-                                  : ''
-                          }
-                        />
-                      ) : item?.type === 'textarea' ? (
-                        <TextArea
-                          required={item?.required}
-                          name={item?.name}
-                          placeholder={item?.placeholder}
-                          label={item?.label}
-                          title={item?.tooltip}
-                          tooltip={item?.tooltip}
-                          onChange={handleChange}
-                        />
                       ) : (
-                        <Stack gap={1}>
-                          <Box
-                            sx={{
-                              display: 'flex',
-                              alignItems: 'center',
-                            }}
-                          >
-                            <Typography
-                              color={'secondary'}
-                              sx={{ fontSize: '18px' }}
-                            >
-                              Skills, Technologies and Expertise{' '}
-                              <span style={{ color: '#ff0000' }}>*</span>
-                            </Typography>
-
-                            <Tooltip
-                              placement="top-start"
+                        <>
+                          {item?.type !== 'select' &&
+                            item?.type !== 'tags' &&
+                            item?.type !== 'textarea' ? (
+                            <CustomInput
+                              required={item?.required}
+                              label={item?.label}
+                              type={item?.type}
+                              name={item?.name}
+                              placeholder={item?.placeholder}
+                              tooltip={item?.tooltip}
+                              onChange={handleChange}
+                              maxLength={item?.maxLength && item?.maxLength}
+                            />
+                          ) : item?.type !== 'tags' && item?.type !== 'textarea' ? (
+                            <Dropdown
+                              required={item?.required}
+                              showTooltip={true}
+                              name={item?.name}
+                              label={item?.label}
+                              placeholder={item?.placeholder}
+                              tooltip={item?.tooltip}
+                              options={
+                                item?.name === 'subField'
+                                  ? item?.options[form?.field?.value]
+                                  : item?.name === 'position'
+                                    ? item?.options[form?.subField?.value]
+                                    : item?.options
+                              }
+                              onChange={handleChange}
+                              className={
+                                item?.name === 'subField' && !form.field
+                                  ? 'hide'
+                                  : item?.name === 'position' && !form.subField
+                                    ? 'hide'
+                                    : item?.name === 'position' &&
+                                      form.subField &&
+                                      form?.field?.value !== 'Software Engineering'
+                                      ? 'hide'
+                                      : ''
+                              }
+                            />
+                          ) : item?.type === 'textarea' ? (
+                            <TextArea
+                              required={item?.required}
+                              name={item?.name}
+                              placeholder={item?.placeholder}
+                              label={item?.label}
                               title={item?.tooltip}
-                            >
-                              <InfoIcon
+                              tooltip={item?.tooltip}
+                              onChange={handleChange}
+                            />
+                          ) : (
+                            <Stack gap={1}>
+                              <Box
                                 sx={{
-                                  color: (theme) => theme.palette.primary.main,
-                                  marginLeft: '5px',
-                                  fontSize: '13px',
-                                  marginBottom: '12px',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                }}
+                              >
+                                <Typography
+                                  color={'secondary'}
+                                  sx={{ fontSize: '18px' }}
+                                >
+                                  Skills, Technologies and Expertise{' '}
+                                  <span style={{ color: '#ff0000' }}>*</span>
+                                </Typography>
+                                <Tooltip
+                                  placement="top-start"
+                                  title={item?.tooltip}
+                                >
+                                  <InfoIcon
+                                    sx={{
+                                      color: (theme) => theme.palette.primary.main,
+                                      marginLeft: '5px',
+                                      fontSize: '13px',
+                                      marginBottom: '12px',
+                                    }}
+                                  />
+                                </Tooltip>
+                              </Box>
+                              <TagsInput
+                                value={form.tags}
+                                onChange={(e) => handleChange('tags', e)}
+                                name="skills"
+                                placeHolder="Start with #"
+                                beforeAddValidate={(tag) => {
+                                  if (tag.trim().startsWith('#')) {
+                                    return true;
+                                  } else {
+                                    return false;
+                                  }
                                 }}
                               />
-                            </Tooltip>
-                          </Box>
-                          <TagsInput
-                            value={form.tags}
-                            onChange={(e) => handleChange('tags', e)}
-                            name="skills"
-                            placeHolder="Start with #"
-                            beforeAddValidate={(tag) => {
-                              if (tag.trim().startsWith('#')) {
-                                return true;
-                              } else {
-                                return false;
-                              }
-                            }}
-                          />
-                        </Stack>
+                            </Stack>
+                          )}
+                        </>
                       )}
                     </Box>
                   ))}
+
                 </Box>
               </Box>
               <Box sx={{ width: '100%' }}>
@@ -254,12 +268,16 @@ const JoinEsparkRegistrationModal = ({
                           mb={1}
                           textAlign="left"
                           color="secondary"
+                          // sx={{
+                          //   fontSize: {
+                          //     xs: '20px',
+                          //     lg: '24px',
+                          //     fontWeight: 600,
+                          //   },
+                          // }}
                           sx={{
-                            fontSize: {
-                              xs: '20px',
-                              lg: '24px',
-                              fontWeight: 600,
-                            },
+                            fontSize: { xs: '18px',sm:"22px", lg: '24px', fontWeight: 600 },
+                            pl:{xs:"12px"}
                           }}
                         >
                           {headings.RESUME}{' '}
@@ -339,8 +357,12 @@ const JoinEsparkRegistrationModal = ({
                   mb={1}
                   textAlign="left"
                   color="secondary"
+                  // sx={{
+                  //   fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
+                  // }}
                   sx={{
-                    fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
+                    fontSize: { xs: '18px',sm:"22px", lg: '24px', fontWeight: 600 },
+                    pl:{xs:"12px"}
                   }}
                 >
                   {headings.APPLY_FOR}{' '}
@@ -367,8 +389,8 @@ const JoinEsparkRegistrationModal = ({
                         [theme.breakpoints.up('md')]: {
                           width:
                             item?.name === 'city' ||
-                            item?.name === 'job_type' ||
-                            item.name === 'projects'
+                              item?.name === 'job_type' ||
+                              item.name === 'projects'
                               ? '100%'
                               : '30%',
                         },
@@ -394,8 +416,8 @@ const JoinEsparkRegistrationModal = ({
                             : item?.name === 'position' && !form.subField
                               ? 'hide'
                               : item?.name === 'position' &&
-                                  form.subField &&
-                                  form?.field?.value !== 'Software Engineering'
+                                form.subField &&
+                                form?.field?.value !== 'Software Engineering'
                                 ? 'hide'
                                 : ''
                         }

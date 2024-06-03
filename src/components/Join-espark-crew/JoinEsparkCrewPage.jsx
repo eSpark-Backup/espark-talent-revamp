@@ -108,6 +108,21 @@ export default function JoinEsparkCrewPage() {
       setLoading(false);
       return;
     }
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(form?.name)) {
+      toast.error('Name should contain only alphabets');
+      setLoading(false);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast.error('Invalid Email Address');
+      setLoading(false);
+      return;
+    }
+
     if (
       form?.experience === '' ||
       form?.availability === '' ||
@@ -137,12 +152,12 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
-    if (!form?.linkedin_profile.includes('linkedin')) {
+    if (!form?.linkedin_profile.includes('linkedin') || !form?.linkedin_profile.includes(".com")) {
       toast?.error('Invalid Linked Profile URL');
       setLoading(false);
       return;
     }
-    if (!form?.github_profile.includes('github')) {
+    if (!form?.github_profile.includes('github') || !form?.github_profile.includes(".com")) {
       toast?.error('Invalid Github Profile URL');
       setLoading(false);
       return;
@@ -314,6 +329,7 @@ export default function JoinEsparkCrewPage() {
                       boxShadow: '0px 4px 25.2px 0px #0000001F',
                       borderRadius: '7px',
                       position: 'relative',
+                      minHeight:"149px",
                       ':after': {
                         content: '" "',
                         width: { sm: '3px', md: '3px' },

@@ -48,7 +48,7 @@ const TextArea = ({
           border: '1px solid #cccccc',
           backgroundColor: 'white',
           color: 'black',
-          minHeight: '30px',
+          minHeight: '20px',
           padding: '10px',
           fontSize: '16px',
           borderRadius: '8px',
