@@ -152,12 +152,18 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
-    if (!form?.linkedin_profile.includes('linkedin') || !form?.linkedin_profile.includes(".com")) {
+    if (
+      !form?.linkedin_profile.includes('linkedin') ||
+      !form?.linkedin_profile.includes('.com')
+    ) {
       toast?.error('Invalid Linked Profile URL');
       setLoading(false);
       return;
     }
-    if (!form?.github_profile.includes('github') || !form?.github_profile.includes(".com")) {
+    if (
+      !form?.github_profile.includes('github') ||
+      !form?.github_profile.includes('.com')
+    ) {
       toast?.error('Invalid Github Profile URL');
       setLoading(false);
       return;
@@ -329,7 +335,7 @@ export default function JoinEsparkCrewPage() {
                       boxShadow: '0px 4px 25.2px 0px #0000001F',
                       borderRadius: '7px',
                       position: 'relative',
-                      minHeight:"149px",
+                      minHeight: '149px',
                       ':after': {
                         content: '" "',
                         width: { sm: '3px', md: '3px' },

@@ -103,8 +103,13 @@ const JoinEsparkRegistrationModal = ({
                   textAlign="left"
                   color="secondary"
                   sx={{
-                    fontSize: { xs: '18px',sm:"25px", lg: '30px', fontWeight: 600 },
-                    pl:{xs:"12px"}
+                    fontSize: {
+                      xs: '18px',
+                      sm: '25px',
+                      lg: '30px',
+                      fontWeight: 600,
+                    },
+                    pl: { xs: '12px' },
                   }}
                 >
                   {headings.PERSONAL_INFO}
@@ -130,8 +135,8 @@ const JoinEsparkRegistrationModal = ({
                         [theme.breakpoints.up('md')]: {
                           width:
                             item?.name === 'city' ||
-                              item?.name === 'job_type' ||
-                              item.name === 'projects'
+                            item?.name === 'job_type' ||
+                            item.name === 'projects'
                               ? '100%'
                               : '30%',
                         },
@@ -152,8 +157,8 @@ const JoinEsparkRegistrationModal = ({
                       ) : (
                         <>
                           {item?.type !== 'select' &&
-                            item?.type !== 'tags' &&
-                            item?.type !== 'textarea' ? (
+                          item?.type !== 'tags' &&
+                          item?.type !== 'textarea' ? (
                             <CustomInput
                               required={item?.required}
                               label={item?.label}
@@ -164,7 +169,8 @@ const JoinEsparkRegistrationModal = ({
                               onChange={handleChange}
                               maxLength={item?.maxLength && item?.maxLength}
                             />
-                          ) : item?.type !== 'tags' && item?.type !== 'textarea' ? (
+                          ) : item?.type !== 'tags' &&
+                            item?.type !== 'textarea' ? (
                             <Dropdown
                               required={item?.required}
                               showTooltip={true}
@@ -186,8 +192,9 @@ const JoinEsparkRegistrationModal = ({
                                   : item?.name === 'position' && !form.subField
                                     ? 'hide'
                                     : item?.name === 'position' &&
-                                      form.subField &&
-                                      form?.field?.value !== 'Software Engineering'
+                                        form.subField &&
+                                        form?.field?.value !==
+                                          'Software Engineering'
                                       ? 'hide'
                                       : ''
                               }
@@ -223,7 +230,8 @@ const JoinEsparkRegistrationModal = ({
                                 >
                                   <InfoIcon
                                     sx={{
-                                      color: (theme) => theme.palette.primary.main,
+                                      color: (theme) =>
+                                        theme.palette.primary.main,
                                       marginLeft: '5px',
                                       fontSize: '13px',
                                       marginBottom: '12px',
@@ -250,7 +258,6 @@ const JoinEsparkRegistrationModal = ({
                       )}
                     </Box>
                   ))}
-
                 </Box>
               </Box>
               <Box sx={{ width: '100%' }}>
@@ -276,8 +283,13 @@ const JoinEsparkRegistrationModal = ({
                           //   },
                           // }}
                           sx={{
-                            fontSize: { xs: '18px',sm:"22px", lg: '24px', fontWeight: 600 },
-                            pl:{xs:"12px"}
+                            fontSize: {
+                              xs: '18px',
+                              sm: '22px',
+                              lg: '24px',
+                              fontWeight: 600,
+                            },
+                            pl: { xs: '12px' },
                           }}
                         >
                           {headings.RESUME}{' '}
@@ -361,8 +373,13 @@ const JoinEsparkRegistrationModal = ({
                   //   fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
                   // }}
                   sx={{
-                    fontSize: { xs: '18px',sm:"22px", lg: '24px', fontWeight: 600 },
-                    pl:{xs:"12px"}
+                    fontSize: {
+                      xs: '18px',
+                      sm: '22px',
+                      lg: '24px',
+                      fontWeight: 600,
+                    },
+                    pl: { xs: '12px' },
                   }}
                 >
                   {headings.APPLY_FOR}{' '}
@@ -389,8 +406,8 @@ const JoinEsparkRegistrationModal = ({
                         [theme.breakpoints.up('md')]: {
                           width:
                             item?.name === 'city' ||
-                              item?.name === 'job_type' ||
-                              item.name === 'projects'
+                            item?.name === 'job_type' ||
+                            item.name === 'projects'
                               ? '100%'
                               : '30%',
                         },
@@ -416,8 +433,8 @@ const JoinEsparkRegistrationModal = ({
                             : item?.name === 'position' && !form.subField
                               ? 'hide'
                               : item?.name === 'position' &&
-                                form.subField &&
-                                form?.field?.value !== 'Software Engineering'
+                                  form.subField &&
+                                  form?.field?.value !== 'Software Engineering'
                                 ? 'hide'
                                 : ''
                         }

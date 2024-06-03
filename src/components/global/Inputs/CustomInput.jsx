@@ -149,7 +149,7 @@ const CustomInput = ({
         type={type ? type : 'text'}
         placeholder={placeholder}
         required={required}
-        className='cnic-input'
+        className="cnic-input"
         {...(maxLength && {
           onInput: (e) => (e.target.value = e.target.value.slice(0, maxLength)),
         })}
