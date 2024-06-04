@@ -335,7 +335,7 @@ export default function JoinEsparkCrewPage() {
                       boxShadow: '0px 4px 25.2px 0px #0000001F',
                       borderRadius: '7px',
                       position: 'relative',
-                      minHeight: '149px',
+                      minHeight: '95px',
                       ':after': {
                         content: '" "',
                         width: { sm: '3px', md: '3px' },
