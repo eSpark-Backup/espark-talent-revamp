@@ -936,15 +936,16 @@ export const CONFIRMATION_MODAL_DATA = {
   heading: 'Are you sure?',
   description: 'If you close this modal your entered data will be lost',
   cancelButton: 'Cancel',
-  confirmationButton: 'Confirm'
-}
+  confirmationButton: 'Confirm',
+};
 
 export const JOINT_ESPARK_CREW_HEADING_DATA = {
   introSecHeading: 'Who should work at eSpark Talent?',
   AboutSecHeading: ' SOME THINGS ABOUT YOU',
-  keysPointSecHeading: "Key Points To Consider:",
+  keysPointSecHeading: 'Key Points To Consider:',
   benefitsSecHeading: 'Why eSpark Talent',
   footerSecHeading: 'Are you ready to join the team',
-  footerSecDescription: 'We are always looking for bright minds and enthusiastic people from diverse backgrounds, who want to be part of an outstanding team. Even if you don’t find a suitable position below, please do not hesitate to drop us your resume.',
-  jointusSecHeading: 'Join the eSpark Crew',
-}
+  footerSecDescription:
+    'We are always looking for bright minds and enthusiastic people from diverse backgrounds, who want to be part of an outstanding team. Even if you don’t find a suitable position below, please do not hesitate to drop us your resume.',
+  jointusSecHeading: 'Join us now',
+};

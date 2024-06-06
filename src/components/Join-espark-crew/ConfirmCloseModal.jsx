@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, Stack, Typography, Box, Modal } from '@mui/material';
-import { CONFIRMATION_MODAL_DATA } from '@/constants/join-espark-crew'; 
+import { CONFIRMATION_MODAL_DATA } from '@/constants/join-espark-crew';
 
 const style = {
   position: 'absolute',
@@ -23,9 +23,8 @@ export default function ConfirmCloseModal({
   handleClose,
   handleSuccess,
 }) {
-
-  const {heading, description, cancelButton, confirmationButton} = CONFIRMATION_MODAL_DATA
-
+  const { heading, description, cancelButton, confirmationButton } =
+    CONFIRMATION_MODAL_DATA;
 
   return (
     <div>
@@ -52,7 +51,7 @@ export default function ConfirmCloseModal({
               my: 3,
             }}
           >
-           {description}
+            {description}
           </Typography>
 
           <Stack

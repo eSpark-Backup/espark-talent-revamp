@@ -1,22 +1,33 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
-import { BENEFITS, KEYS, ABOUT, JOINT_ESPARK_CREW_HEADING_DATA } from '@/constants/join-espark-crew';
+import {
+  BENEFITS,
+  KEYS,
+  ABOUT,
+  JOINT_ESPARK_CREW_HEADING_DATA,
+} from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
 import { toast } from 'react-toastify';
 import supabase from '@/supabase/supabaseClient';
 import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
 import AboutCrewCard from './AboutCrewCard';
-import { Key } from '@mui/icons-material';
 import KeyPointCrewCard from './KeyPointCrewCard';
 import BenefitCrewCard from './BenefitCrewCard';
 
 export default function JoinEsparkCrewPage() {
-  const {introSecHeading, AboutSecHeading, keysPointSecHeading, benefitsSecHeading, footerSecHeading , footerSecDescription, jointusSecHeading} = JOINT_ESPARK_CREW_HEADING_DATA
+  const {
+    introSecHeading,
+    AboutSecHeading,
+    keysPointSecHeading,
+    benefitsSecHeading,
+    footerSecHeading,
+    footerSecDescription,
+    jointusSecHeading,
+  } = JOINT_ESPARK_CREW_HEADING_DATA;
 
   const [registrationModal, setRegistrationModal] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -312,15 +323,10 @@ export default function JoinEsparkCrewPage() {
           </Typography>
           <Grid container spacing={2}>
             {ABOUT.map((point, index) => {
-              return (
-                <AboutCrewCard key={index} point={point} index={index} />
-              );
+              return <AboutCrewCard key={index} point={point} index={index} />;
             })}
           </Grid>
         </Box>
-
-
-
       </Stack>
       {/* Key Points */}
       <Stack
@@ -349,12 +355,17 @@ export default function JoinEsparkCrewPage() {
             const title = `${splitedKey[0]}:`;
             const desc = splitedKey[1];
             return (
-              <KeyPointCrewCard KEYS={KEYS} title={title} desc={desc} index={index} />
+              <KeyPointCrewCard
+                KEYS={KEYS}
+                key={index}
+                title={title}
+                desc={desc}
+                index={index}
+              />
             );
           })}
         </Box>
       </Stack>
-
 
       {/* Benefits */}
       <Stack
@@ -382,7 +393,7 @@ export default function JoinEsparkCrewPage() {
           <Grid container spacing={2}>
             {BENEFITS.map((benefit, index) => {
               return (
-                 <BenefitCrewCard benefit={benefit} index={index} />
+                <BenefitCrewCard key={index} benefit={benefit} index={index} />
               );
             })}
           </Grid>
@@ -457,7 +468,7 @@ export default function JoinEsparkCrewPage() {
               textAlign: 'center',
             }}
           >
-          {footerSecDescription}
+            {footerSecDescription}
           </Typography>
 
           <Box
@@ -494,7 +505,7 @@ export default function JoinEsparkCrewPage() {
                 fontWeight: '700',
               }}
             >
-             {jointusSecHeading}
+              {jointusSecHeading}
             </Button>
           </Box>
         </Stack>
