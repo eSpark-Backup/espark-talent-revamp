@@ -5,13 +5,19 @@ import Image from 'next/image';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
-import { BENEFITS, KEYS, ABOUT } from '@/constants/join-espark-crew';
+import { BENEFITS, KEYS, ABOUT, JOINT_ESPARK_CREW_HEADING_DATA } from '@/constants/join-espark-crew';
 import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
 import { toast } from 'react-toastify';
 import supabase from '@/supabase/supabaseClient';
 import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
+import AboutCrewCard from './AboutCrewCard';
+import { Key } from '@mui/icons-material';
+import KeyPointCrewCard from './KeyPointCrewCard';
+import BenefitCrewCard from './BenefitCrewCard';
 
 export default function JoinEsparkCrewPage() {
+  const {introSecHeading, AboutSecHeading, keysPointSecHeading, benefitsSecHeading, footerSecHeading , footerSecDescription, jointusSecHeading} = JOINT_ESPARK_CREW_HEADING_DATA
+
   const [registrationModal, setRegistrationModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
@@ -294,7 +300,7 @@ export default function JoinEsparkCrewPage() {
             color="secondary"
             mb="30px"
           >
-            Who should work at eSpark Talent?
+            {introSecHeading}
           </Typography>
           <Typography
             fontSize={{ md: '12px', xs: '18px' }}
@@ -302,74 +308,19 @@ export default function JoinEsparkCrewPage() {
             color="secondary"
             mb="30px"
           >
-            SOME THINGS ABOUT YOU
+            {AboutSecHeading}
           </Typography>
           <Grid container spacing={2}>
             {ABOUT.map((point, index) => {
               return (
-                <Grid
-                  sx={{
-                    width: '100%',
-                    justifyContent: 'flex-end',
-                    display: { sm: 'inline-block', md: index === 0 && 'flex' },
-                  }}
-                  padding="10px"
-                  key={point}
-                  sm={12}
-                  md={6}
-                >
-                  <Stack
-                    direction={{
-                      sm: 'row',
-                      md: index % 2 === 0 ? 'row-reverse' : 'row',
-                    }}
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    gap="20px"
-                    sx={{
-                      width: {
-                        sm: '100%',
-                        md: index === 0 || index === 1 ? '80%' : '100%',
-                      },
-                      padding: '10px',
-                      boxShadow: '0px 4px 25.2px 0px #0000001F',
-                      borderRadius: '7px',
-                      position: 'relative',
-                      minHeight: '95px',
-                      ':after': {
-                        content: '" "',
-                        width: { sm: '3px', md: '3px' },
-                        height: '100%',
-                        position: 'absolute',
-                        top: '0px',
-                        left: { sm: '0px', md: 'auto !important' },
-                        [index % 2 !== 0 ? 'left' : 'right']: '0px !important',
-                        backgroundColor: '#029894',
-                      },
-                    }}
-                  >
-                    <Typography
-                      sx={{ letterSpacing: '5px' }}
-                      color="secondary"
-                      fontSize={20}
-                      fontWeight={600}
-                    >
-                      0{index + 1}
-                    </Typography>
-                    <Typography
-                      color="secondary"
-                      fontSize={18}
-                      fontWeight={500}
-                      textAlign={{ xs: 'center', md: 'initial' }}
-                    >
-                      {point}
-                    </Typography>
-                  </Stack>
-                </Grid>
+                <AboutCrewCard key={index} point={point} index={index} />
               );
             })}
           </Grid>
         </Box>
+
+
+
       </Stack>
       {/* Key Points */}
       <Stack
@@ -391,74 +342,20 @@ export default function JoinEsparkCrewPage() {
             color="secondary"
             mb="30px"
           >
-            Key Points To Consider:
+            {keysPointSecHeading}
           </Typography>
           {KEYS.map((key, index) => {
             const splitedKey = key.split(':');
             const title = `${splitedKey[0]}:`;
             const desc = splitedKey[1];
             return (
-              <Stack
-                key={key}
-                direction={{ xs: 'column', sm: 'row' }}
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                gap="10px"
-                sx={{
-                  marginBottom: index !== KEYS.length - 1 ? '20px' : '0px',
-                }}
-              >
-                <Box
-                  sx={{
-                    backgroundColor: (theme) => theme.palette.primary.main,
-                    borderRadius: '50%',
-                    padding: '7px',
-                    position: 'relative',
-                    ':after': {
-                      content: '" "',
-                      position: 'absolute',
-                      top: '40px',
-                      left: '22px',
-                      backgroundColor: '#029894',
-                      width: { xs: '0px', sm: '2px' },
-                      height: index !== KEYS.length - 1 ? '50px' : '0px',
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{ width: '30px', height: '30px' }}
-                    lineHeight={1.6}
-                    textAlign="center"
-                    fontWeight={700}
-                    color="#fff"
-                  >
-                    {index + 1}
-                  </Typography>
-                </Box>
-
-                <Typography
-                  mt="5px"
-                  lineHeight={1.65}
-                  fontWeight={500}
-                  fontSize={{
-                    xs: '12px',
-                    sm: '12px',
-                    md: '16px',
-                    lg: '20px',
-                    xl: '20px',
-                  }}
-                  color="secondary"
-                >
-                  <span style={{ fontWeight: 700, color: '#001C63' }}>
-                    {title}
-                  </span>
-                  {desc}
-                </Typography>
-              </Stack>
+              <KeyPointCrewCard KEYS={KEYS} title={title} desc={desc} index={index} />
             );
           })}
         </Box>
       </Stack>
+
+
       {/* Benefits */}
       <Stack
         direction="row"
@@ -480,55 +377,18 @@ export default function JoinEsparkCrewPage() {
             color="secondary"
             mb="30px"
           >
-            Why eSpark Talent
+            {benefitsSecHeading}
           </Typography>
           <Grid container spacing={2}>
             {BENEFITS.map((benefit, index) => {
               return (
-                <Grid
-                  key={index}
-                  sx={{ padding: '20px' }}
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                >
-                  <Stack
-                    direction="row"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    gap="10px"
-                    sx={{
-                      backgroundColor: '#E8F4FF66',
-                      padding: '10px',
-                      border: '0.67px solid #0000004D',
-                      borderRadius: '3.34px',
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        backgroundColor: (theme) => theme.palette.primary.main,
-                        width: '30px',
-                        borderRadius: '50%',
-                        padding: '7px',
-                      }}
-                    >
-                      <Image
-                        width={20}
-                        height={20}
-                        src="/images/join-crew/tick.png"
-                      />
-                    </Box>
-                    <Typography variant="subtitle2" color="secondary">
-                      {benefit}
-                    </Typography>
-                  </Stack>
-                </Grid>
+                 <BenefitCrewCard benefit={benefit} index={index} />
               );
             })}
           </Grid>
         </Box>
       </Stack>
+
       {/* Footer CTA */}
       <Stack
         justifyContent="center"
@@ -576,7 +436,7 @@ export default function JoinEsparkCrewPage() {
               pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
             }}
           >
-            Are you ready to join the team
+            {footerSecHeading}
           </Typography>
           <Typography
             sx={{
@@ -597,10 +457,7 @@ export default function JoinEsparkCrewPage() {
               textAlign: 'center',
             }}
           >
-            We are always looking for bright minds and enthusiastic people from
-            diverse backgrounds, who want to be part of an outstanding team.
-            Even if you don’t find a suitable position below, please do not
-            hesitate to drop us your resume.
+          {footerSecDescription}
           </Typography>
 
           <Box
@@ -637,7 +494,7 @@ export default function JoinEsparkCrewPage() {
                 fontWeight: '700',
               }}
             >
-              Join Us Now
+             {jointusSecHeading}
             </Button>
           </Box>
         </Stack>
