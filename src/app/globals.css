@@ -1798,3 +1798,101 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 60px;
   }
 }
+
+
+
+/* JOIN CREW REGISTRATION FORM */
+
+
+/* PHONE TEL  */
+.react-tel-input .form-control{
+  width: 100% !important;
+  height: 51px !important;
+}
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus{
+  background-color: #f5f5f5 !important;
+}
+
+
+.react-tel-input .country-list .country.highlight{
+  color: black !important;
+}
+
+/* IMAGE SELECTOR  */
+.image-selector {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* HIDDEN CLASS */
+
+.hide {
+  display: none !important;
+}
+
+.hidden-input {
+  display: none;
+}
+
+
+/* GENERAL  */
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cccccc;
+}
+
+
+/* INPUT TAGS  */
+
+.rti--container{
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+}
+
+.rti--input{
+  height: 33px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+}
+
+.rti--tag {
+  font-size: 16px !important;
+}
+
+
+/* TEXT AREA  */
+
+.join-crew-textarea {
+  outline: none;
+  border: 1px solid #cccccc;
+}
+
+
+/* TOASTER  */
+
+.toast-container {
+  font-size: 16px;
+}
+
+.cnic-input::-webkit-outer-spin-button,
+.cnic-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.cnic-input {
+  -moz-appearance: textfield;
+}
