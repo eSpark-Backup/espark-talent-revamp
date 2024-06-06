@@ -58,6 +58,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
     - run: |
-        npm ci --only=production --omit=dev
+        npm ci --only=production --ignore-scripts
         npm run build
         pm2 restart talent-main
