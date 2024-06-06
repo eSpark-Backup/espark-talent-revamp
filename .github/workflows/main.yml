@@ -16,7 +16,29 @@ jobs:
       matrix:
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    env:
+      HOSTNAME: ${{ secrets.HOSTNAME }}
+      PORT: ${{ secrets.PORT }}
+      HOST: ${{secrets.HOST}}
+      NODE_ENV: ${{ secrets.NODE_ENV }}
+      NEXT_PUBLIC_SANITY_USERID: ${{ secrets.NEXT_PUBLIC_SANITY_USERID }}
+      NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+      NEXT_PUBLIC_SANITY_API_VERSION: ${{secrets.NEXT_PUBLIC_SANITY_API_VERSION}}
+      NEXT_PUBLIC_SANITY_USE_CDN: ${{ secrets.NEXT_PUBLIC_SANITY_USE_CDN }}
+      NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID: ${{ secrets.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID }}
+      NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID: ${{ secrets.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID }}
+      NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID: ${{ secrets.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID }}
+      NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID: ${{ secrets.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID }}
+      NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID: ${{secrets.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID}}
+      NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID: ${{ secrets.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      END_POINT: ${{ secrets.END_POINT }}
+      REGION: ${{ secrets.REGION }}
+      B2_APPLICATION_KEY_ID: ${{ secrets.B2_APPLICATION_KEY_ID }}
+      B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+      BUCKET_NAME: ${{ secrets.BUCKET_NAME }}      
+      
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
