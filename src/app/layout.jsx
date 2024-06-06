@@ -10,7 +10,6 @@ import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import Header from '@/components/global/Header/Header';
-import TawkToWidget from '@/components/global/TawkToWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';

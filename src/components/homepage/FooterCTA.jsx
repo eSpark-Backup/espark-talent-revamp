@@ -11,13 +11,14 @@ import {
 } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { hideCtaPaths } from '@/constants/homepage';
 
 const FooterCTA = ({ data }) => {
   const pathName = usePathname();
   const is600Screen = useMediaQuery('(max-width:600px)');
   const is425Screen = useMediaQuery('(max-width:425px)');
   const is375Screen = useMediaQuery('(max-width:375px)');
-
+  const shouldHideCta = (path) => hideCtaPaths.includes(path);
   return (
     <>
       {pathName !== '/book-a-demo' &&
@@ -25,8 +26,8 @@ const FooterCTA = ({ data }) => {
         pathName !== '/join-espark-crew' &&
         pathName !== '/book-a-demo-meeting' &&
         pathName !== '/service/mean-stack-developer' &&
-        !pathName?.includes('/hire-') &&
-        pathName !== '/partnership-program' && (
+        pathName !== '/partnership-program' &&
+        !shouldHideCta(pathName) && (
           <Box
             sx={{
               backgroundColor: '#029894',
@@ -120,20 +121,21 @@ const FooterCTA = ({ data }) => {
                         >
                           <Button
                             sx={{
-                              py: {
-                                xs: '10px',
-                                sm: '12px',
-                                md: '15px',
-                                lg: '20px',
+                              width: {
+                                xs: '150px',
+                                sm: '160px',
+                                md: '180px',
+                                lg: '225px',
                               },
-                              px: {
-                                xs: '10px',
-                                sm: '15px',
-                                md: '25px',
-                                lg: '30px',
+                              height: {
+                                xs: '42px',
+                                sm: '50px',
+                                md: '50px',
+                                lg: '58px',
                               },
                               backgroundColor: '#fff',
                               '&:hover': {
+                                borderColor: '#fff',
                                 backgroundColor: '#fff',
                               },
                             }}
@@ -141,12 +143,12 @@ const FooterCTA = ({ data }) => {
                             <Typography
                               variant="body1"
                               sx={{
-                                fontWeight: 'bold',
+                                fontWeight: 700,
                                 fontSize: {
-                                  xs: '8px',
-                                  sm: '10px',
-                                  md: '14px',
-                                  lg: '16px',
+                                  xs: '14px',
+                                  sm: '16px',
+                                  md: '18px',
+                                  lg: '20px',
                                 },
                                 color: '#09114A',
                               }}
