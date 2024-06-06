@@ -131,23 +131,74 @@ const Hero = ({ data }) => {
                     xl: '20px',
                   }}
                 >
-                  <Link href={data.button?.link} target="_blank">
+                  {data?.button?.link ? (
+                    <Link href={data.button?.link} target="_blank">
+                      <Button
+                        sx={{
+                          backgroundColor:
+                            pathName == '/' || pathName == '/demo'
+                              ? '#001C63'
+                              : '#fff',
+
+                          '&:hover': {
+                            color:
+                              pathName == '/solutions/enterprises'
+                                ? '#fff'
+                                : '#fff',
+                            backgroundColor: `${
+                              pathName == '/solutions/enterprises'
+                                ? '#001C63'
+                                : '#029894'
+                            }`,
+                          },
+
+                          py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+                          px: {
+                            xs: '10px',
+                            sm: '10px',
+                            md: '12px',
+                            lg: '15px',
+                          },
+                          height: '50px',
+                          width: '160px',
+                          color:
+                            pathName == '/' || pathName == '/demo'
+                              ? '#fff'
+                              : '#001C63',
+                          fontWeight: '700',
+                        }}
+                      >
+                        {data.button?.label}
+                      </Button>
+                    </Link>
+                  ) : (
                     <Button
+                      onClick={data?.button?.handleClick}
                       sx={{
+                        border:
+                          pathName == '/join-espark-crew'
+                            ? '1px solid #fff'
+                            : '1px solid transparent',
                         backgroundColor:
                           pathName == '/' || pathName == '/demo'
                             ? '#001C63'
-                            : '#fff',
+                            : pathName == '/join-espark-crew'
+                              ? 'transparent'
+                              : '#fff',
 
                         '&:hover': {
                           color:
                             pathName == '/solutions/enterprises'
                               ? '#fff'
-                              : '#fff',
+                              : pathName == '/join-espark-crew'
+                                ? '#029894'
+                                : '#fff',
                           backgroundColor: `${
                             pathName == '/solutions/enterprises'
                               ? '#001C63'
-                              : '#029894'
+                              : pathName == '/join-espark-crew'
+                                ? '#ffffff'
+                                : '#029894'
                           }`,
                         },
 
@@ -156,7 +207,9 @@ const Hero = ({ data }) => {
                         height: '50px',
                         width: '160px',
                         color:
-                          pathName == '/' || pathName == '/demo'
+                          pathName == '/' ||
+                          pathName == '/demo' ||
+                          pathName == '/join-espark-crew'
                             ? '#fff'
                             : '#001C63',
                         fontWeight: '700',
@@ -164,7 +217,7 @@ const Hero = ({ data }) => {
                     >
                       {data.button?.label}
                     </Button>
-                  </Link>
+                  )}
                 </Box>
               )}
             </Grid>

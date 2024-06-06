@@ -23,6 +23,7 @@ const FooterCTA = ({ data }) => {
     <>
       {pathName !== '/book-a-demo' &&
         pathName !== '/careers' &&
+        pathName !== '/join-espark-crew' &&
         pathName !== '/book-a-demo-meeting' &&
         pathName !== '/service/mean-stack-developer' &&
         pathName !== '/partnership-program' &&
