@@ -58,6 +58,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
     - run: |
-        npm ci --legacy-peer-deps
+        npm ci
         npm run build
         pm2 restart talent-main
