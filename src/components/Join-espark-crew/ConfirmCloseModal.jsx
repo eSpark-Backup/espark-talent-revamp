@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Button, Stack, Typography, Box, Modal } from '@mui/material';
+import { CONFIRMATION_MODAL_DATA } from '@/constants/join-espark-crew'; 
 
 const style = {
   position: 'absolute',
@@ -22,6 +23,10 @@ export default function ConfirmCloseModal({
   handleClose,
   handleSuccess,
 }) {
+
+  const {heading, description, cancelButton, confirmationButton} = CONFIRMATION_MODAL_DATA
+
+
   return (
     <div>
       <Modal
@@ -37,7 +42,7 @@ export default function ConfirmCloseModal({
               fontWeight: 600,
             }}
           >
-            Are you sure?
+            {heading}
           </Typography>
           <Typography
             sx={{
@@ -47,7 +52,7 @@ export default function ConfirmCloseModal({
               my: 3,
             }}
           >
-            If you close this modal your entered data will be lost
+           {description}
           </Typography>
 
           <Stack
@@ -65,7 +70,7 @@ export default function ConfirmCloseModal({
               color="secondary"
               onClick={handleClose}
             >
-              Cancel
+              {cancelButton}
             </Button>
             <Button
               sx={{
@@ -75,7 +80,7 @@ export default function ConfirmCloseModal({
               color="primary"
               onClick={handleSuccess}
             >
-              Confirm
+              {confirmationButton}
             </Button>
           </Stack>
         </Box>

@@ -931,3 +931,10 @@ export const APPLY_FOR_ENUMS = {
   SUB_FIELDS: 'subField',
   POSITION: 'position',
 };
+
+export const CONFIRMATION_MODAL_DATA = {
+  heading: 'Are you sure?',
+  description: 'If you close this modal your entered data will be lost',
+  cancelButton: 'Cancel',
+  confirmationButton: 'Confirm'
+}

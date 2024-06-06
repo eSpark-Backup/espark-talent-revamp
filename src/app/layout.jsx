@@ -86,10 +86,6 @@ export default async function RootLayout({ children }) {
                 <Box>{children}</Box>
                 <FooterCTA data={FOOTER_CTA_DATA} />
                 <Footer data={FOOTER_DATA} />
-                {/* <TawkToWidget
-                  propertyId={`6422c8a44247f20fefe86c9e`}
-                  taskId={`1gsovfhm7`}
-                /> */}
                 <GoogleTagManager gtmId="GTM-5JWLG8J2" />
                 <GoogleTagManager gtmId="G-N43EVHZHXM" />
                 <GoogleTag gtmId="G-N43EVHZHXM" />
