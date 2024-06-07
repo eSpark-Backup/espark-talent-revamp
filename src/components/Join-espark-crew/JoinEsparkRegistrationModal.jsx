@@ -138,7 +138,7 @@ const JoinEsparkRegistrationModal = ({
                             item?.name === 'job_type' ||
                             item.name === 'projects'
                               ? '100%'
-                              : '30%',
+                              : '31%',
                         },
                         marginBottom: { xs: '10px', md: '15px' },
                       }}
