@@ -177,13 +177,15 @@ export default function JoinEsparkCrewPage() {
       setLoading(false);
       return;
     }
-    if (
-      !form?.github_profile.includes('github') ||
-      !form?.github_profile.includes('.com')
-    ) {
-      toast?.error('Invalid Github Profile URL');
-      setLoading(false);
-      return;
+    if (form?.github_profile !== '') {
+      if (
+        !form?.github_profile.includes('github') ||
+        !form?.github_profile.includes('.com')
+      ) {
+        toast?.error('Invalid Github Profile URL');
+        setLoading(false);
+        return;
+      }
     }
 
     let resumeKey;
