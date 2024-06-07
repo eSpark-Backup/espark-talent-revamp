@@ -31,11 +31,10 @@ const HireForm = ({ form }) => {
     no_of_employees: '',
   };
 
-  const adminId =
-    process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID || 'sales@esparktalent.com';
-  const adminTempleteId =
-    process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID ||
-    'd-d7ecc4af6b92408982123d695dd84498';
+  const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
+  const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
+  console.log(adminId, 'adminId');
+  console.log(adminTempleteId, 'adminTempleteId');
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()

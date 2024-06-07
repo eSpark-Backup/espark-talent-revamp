@@ -11,18 +11,16 @@ import axios from 'axios';
 import { CountryCode } from '@/constants/global/CountryCodes';
 import { PopupModal } from 'react-calendly';
 
-const adminId =
-  process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID || 'info@esparktalent.com';
-const adminTempleteId =
-  process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID ||
-  'd-8e727f584c7e464a8dc4d88bd3b74bab';
+const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
+const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
+console.log(adminId, 'adminId');
+console.log(adminTempleteId, 'adminTempleteId');
 
 const Form = ({ formContent }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
-  console.log(selectedOption, 'selectedOption');
   const handleClose = () => setOpen(false);
   const partnersRef = useRef(null);
   const PartnerFormData = {
