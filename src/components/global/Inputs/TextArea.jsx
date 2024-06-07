@@ -28,7 +28,7 @@ const TextArea = ({
           mb={1}
           textAlign="left"
           color={'secondary'}
-          sx={{ fontSize: '18px' }}
+          sx={{ fontSize: { xs: '14px', md: '18px' } }}
         >
           {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>

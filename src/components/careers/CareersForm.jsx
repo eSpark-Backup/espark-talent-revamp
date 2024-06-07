@@ -24,11 +24,8 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
     joining_date: '',
   };
 
-  const adminId =
-    process.env.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID || 'hr@esparktalent.com';
-  const adminTemplateId =
-    process.env.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID ||
-    'd-9ca98bbc8e4840f1b28264b7edd9cdb0';
+  const adminId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID;
+  const adminTemplateId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID;
 
   const profileValidationSchema = Yup.object().shape({
     full_name: Yup.string()

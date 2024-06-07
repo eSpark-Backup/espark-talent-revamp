@@ -138,7 +138,7 @@ const JoinEsparkRegistrationModal = ({
                             item?.name === 'job_type' ||
                             item.name === 'projects'
                               ? '100%'
-                              : '30%',
+                              : '31%',
                         },
                         marginBottom: { xs: '10px', md: '15px' },
                       }}
@@ -219,7 +219,7 @@ const JoinEsparkRegistrationModal = ({
                               >
                                 <Typography
                                   color={'secondary'}
-                                  sx={{ fontSize: '18px' }}
+                                  sx={{ fontSize: { xs: '14px', md: '18px' } }}
                                 >
                                   Skills, Technologies and Expertise{' '}
                                   <span style={{ color: '#ff0000' }}>*</span>
