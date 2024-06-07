@@ -29,7 +29,11 @@ const CustomInput = ({
           alignItems: 'center',
         }}
       >
-        <Typography color={'secondary'} mb={1} sx={{ fontSize: '18px' }}>
+        <Typography
+          color={'secondary'}
+          mb={1}
+          sx={{ fontSize: { xs: '14px', md: '18px' } }}
+        >
           {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
         <Tooltip placement="top-start" title={tooltip}>
@@ -65,7 +69,7 @@ const CustomInput = ({
           mb={1}
           textAlign="left"
           color={'secondary'}
-          sx={{ fontSize: '18px' }}
+          sx={{ fontSize: { xs: '14px', md: '18px' } }}
         >
           {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
@@ -114,7 +118,7 @@ const CustomInput = ({
             mb={1}
             textAlign="left"
             color={'secondary'}
-            sx={{ fontSize: '18px' }}
+            sx={{ fontSize: { xs: '14px', md: '18px' } }}
           >
             {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>

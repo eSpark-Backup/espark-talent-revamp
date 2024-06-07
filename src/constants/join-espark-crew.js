@@ -712,7 +712,7 @@ export const URL_EXPRESSION =
 export const BENEFITS = [
   'Work directly with global startups',
   'Market competitive salaries',
-  'Bi-annual increments',
+  'Annual increments',
   'Mentored by industry experts',
   'Insurance for you and your family',
   'Insane learning and growth',

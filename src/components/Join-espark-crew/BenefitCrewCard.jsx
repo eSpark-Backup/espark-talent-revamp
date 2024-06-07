@@ -16,6 +16,7 @@ const BenefitCrewCard = ({ benefit, index }) => {
           border: '0.67px solid #0000004D',
           borderRadius: '3.34px',
         }}
+        className="benifits-card"
       >
         <Box
           sx={{
@@ -25,7 +26,12 @@ const BenefitCrewCard = ({ benefit, index }) => {
             padding: '7px',
           }}
         >
-          <Image width={20} height={20} src="/images/join-crew/tick.png" />
+          <Image
+            width={20}
+            height={20}
+            src="/images/join-crew/tick.png"
+            alt="check"
+          />
         </Box>
         <Typography variant="subtitle2" color="secondary">
           {benefit}
