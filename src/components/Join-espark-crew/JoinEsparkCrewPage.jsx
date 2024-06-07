@@ -142,21 +142,38 @@ export default function JoinEsparkCrewPage() {
 
     if (
       form?.experience === '' ||
+      form?.experience === null ||
       form?.availability === '' ||
+      form?.availability === null ||
       form?.prefrences === '' ||
+      form?.prefrences === null ||
       form?.tags.length <= 0 ||
       form?.education === '' ||
+      form?.education === null ||
       form?.city === '' ||
+      form?.city === null ||
       form?.cv === '' ||
       form?.field === '' ||
+      form?.field === null ||
       form?.subField === '' ||
+      form?.subField === null ||
       form?.job_type === '' ||
+      form?.job_type === null ||
       form?.projects === ''
     ) {
       toast?.error('All Fields Are Required');
       setLoading(false);
       return;
     }
+
+    if (form?.field?.value === 'Software Engineering') {
+      if (form?.position === '' || form?.position === null) {
+        toast?.error('All Fields Are Required');
+        setLoading(false);
+        return;
+      }
+    }
+
     if ((form?.cnic?.length || 0) !== 13) {
       toast?.error('Invalid CNIC Number');
       setLoading(false);
@@ -305,7 +322,7 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography
-            variant="h4"
+            variant="h3"
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}
@@ -342,7 +359,7 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%', lg: '70%', xl: '50%' } }}>
           <Typography
-            variant="h4"
+            variant="h3"
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}
@@ -382,7 +399,7 @@ export default function JoinEsparkCrewPage() {
       >
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography
-            variant="h4"
+            variant="h3"
             fontSize={{ md: '32px', xs: '20px' }}
             lineHeight={{ lg: '48px', xs: '26px' }}
             fontWeight={700}

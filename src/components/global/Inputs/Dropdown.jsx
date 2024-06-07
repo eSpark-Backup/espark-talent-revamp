@@ -58,7 +58,10 @@ const Dropdown = ({
         }}
       >
         {label && (
-          <Typography color={'secondary'} sx={{ fontSize: '18px' }}>
+          <Typography
+            color={'secondary'}
+            sx={{ fontSize: { xs: '14px', md: '18px' } }}
+          >
             {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>
         )}

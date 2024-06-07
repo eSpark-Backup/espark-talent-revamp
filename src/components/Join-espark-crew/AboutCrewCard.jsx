@@ -13,6 +13,7 @@ const AboutCrewCard = ({ point, index }) => {
       key={point}
       sm={12}
       md={6}
+      item
     >
       <Stack
         direction={{

@@ -45,12 +45,14 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
                 width={22}
                 height={22}
                 src="/images/join-crew/join-ciew-resume-upload.png"
+                alt="Upload Icon"
               />
             </Typography>
             {form && (
               <Typography
                 sx={{
-                  display: { sm: 'none', md: 'block' },
+                  // display: { sm: 'none', md: 'block' },
+                  fontSize: { xs: '14px', md: '20px' },
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',

@@ -219,7 +219,7 @@ const JoinEsparkRegistrationModal = ({
                               >
                                 <Typography
                                   color={'secondary'}
-                                  sx={{ fontSize: '18px' }}
+                                  sx={{ fontSize: { xs: '14px', md: '18px' } }}
                                 >
                                   Skills, Technologies and Expertise{' '}
                                   <span style={{ color: '#ff0000' }}>*</span>
