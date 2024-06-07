@@ -26,8 +26,6 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
 
   const adminId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID;
   const adminTemplateId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID;
-  console.log(adminId, 'adminId');
-  console.log(adminTemplateId, 'adminTempleteId');
 
   const profileValidationSchema = Yup.object().shape({
     full_name: Yup.string()

@@ -32,8 +32,6 @@ const BookADemoForm = ({ form }) => {
 
   const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
   const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
-  console.log(adminId, 'adminId');
-  console.log(adminTempleteId, 'adminTempleteId');
 
   const profileValidationSchema = Yup.object().shape({
     first_name: Yup.string()
