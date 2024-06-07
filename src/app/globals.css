@@ -1896,3 +1896,10 @@ input {
 .cnic-input {
   -moz-appearance: textfield;
 }
+
+
+@media screen and (max-width:1250px){
+  .benifits-card{
+    height: 65px;
+  }
+}
