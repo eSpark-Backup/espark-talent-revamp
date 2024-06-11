@@ -39,10 +39,8 @@ const TrustpilotWidget = () => {
       </div>
       <style jsx>{`
         .trustpilot-widget-container {
-          position: fixed;
-          bottom: 0px;
-          right: 0px;
-          z-index: 9999;
+          padding-top: 10px;
+          width: 250px;
         }
       `}</style>
     </>

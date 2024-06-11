@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import HomeTop from '@/components/homepage/HomeTop';
 import HomeBottom from '@/components/homepage/HomeBottom';
-import TrustpilotWidget from '@/components/global/TrustpilotWidget';
 
 const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
   ssr: true,
@@ -21,7 +20,6 @@ const Page = () => {
       <HomeTop />
       <HomeBlogs />
       <HomeBottom />
-      <TrustpilotWidget />
     </>
   );
 };

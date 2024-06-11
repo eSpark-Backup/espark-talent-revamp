@@ -10,6 +10,7 @@ import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
 import FooterItem2 from './FooterItem2';
+import TrustpilotWidget from '../TrustpilotWidget';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -171,6 +172,7 @@ const Footer = ({ data }) => {
                           section={data?.contactUs.bottomSection}
                         />
                       </Box>
+                      <TrustpilotWidget />
                     </Grid>
                   </Grid>
                 </Grid>
