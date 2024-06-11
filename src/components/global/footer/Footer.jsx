@@ -172,7 +172,7 @@ const Footer = ({ data }) => {
                           section={data?.contactUs.bottomSection}
                         />
                       </Box>
-                      <TrustpilotWidget />
+                      {pathName == '/' && <TrustpilotWidget />}
                     </Grid>
                   </Grid>
                 </Grid>
