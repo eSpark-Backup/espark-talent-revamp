@@ -172,7 +172,23 @@ const Footer = ({ data }) => {
                           section={data?.contactUs.bottomSection}
                         />
                       </Box>
-                      {pathName == '/' && <TrustpilotWidget />}
+                      {pathName == '/' && (
+                        <Box sx={{ pt: 2 }}>
+                          <Link
+                            href={
+                              'https://www.trustpilot.com/review/esparktalent.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector'
+                            }
+                          >
+                            <Image
+                              src={
+                                '/images/footer/social-icons/TrustPilot2.svg'
+                              }
+                              height={70}
+                              width={200}
+                            />
+                          </Link>
+                        </Box>
+                      )}
                     </Grid>
                   </Grid>
                 </Grid>
