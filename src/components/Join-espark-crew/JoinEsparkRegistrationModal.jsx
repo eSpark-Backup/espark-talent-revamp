@@ -134,11 +134,13 @@ const JoinEsparkRegistrationModal = ({
                         },
                         [theme.breakpoints.up('md')]: {
                           width:
-                            item?.name === 'city' ||
                             item?.name === 'job_type' ||
                             item.name === 'projects'
                               ? '100%'
-                              : '31%',
+                              : item?.name === 'city' ||
+                                  item?.name === 'country'
+                                ? '48%'
+                                : '31%',
                         },
                         marginBottom: { xs: '10px', md: '15px' },
                       }}
@@ -196,7 +198,10 @@ const JoinEsparkRegistrationModal = ({
                                         form?.field?.value !==
                                           'Software Engineering'
                                       ? 'hide'
-                                      : ''
+                                      : item?.name === 'city' &&
+                                          form?.country?.value !== 'pakistan'
+                                        ? 'hide'
+                                        : ''
                               }
                             />
                           ) : item?.type === 'textarea' ? (
