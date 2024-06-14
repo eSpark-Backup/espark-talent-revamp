@@ -1823,7 +1823,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .image-selector {
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 56px;
+  height: 51px;
   display: flex;
   align-items: center;
   justify-content: flex-start;

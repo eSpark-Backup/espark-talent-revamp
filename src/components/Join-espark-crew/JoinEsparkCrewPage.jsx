@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
@@ -17,6 +17,7 @@ import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
 import AboutCrewCard from './AboutCrewCard';
 import KeyPointCrewCard from './KeyPointCrewCard';
 import BenefitCrewCard from './BenefitCrewCard';
+import { isValidPhoneNumber } from 'libphonenumber-js';
 
 export default function JoinEsparkCrewPage() {
   const {
@@ -52,6 +53,7 @@ export default function JoinEsparkCrewPage() {
     position: '',
     tags: [],
     cv: '',
+    country: '',
   });
 
   const handleEmpty = () => {
@@ -111,6 +113,10 @@ export default function JoinEsparkCrewPage() {
     }
   };
 
+  useEffect(() => {
+    console.log(form);
+  }, [form]);
+
   const handleClick = () => {
     setRegistrationModal(true);
   };
@@ -118,9 +124,8 @@ export default function JoinEsparkCrewPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const newPhone_num = form.phone_num.replace(/\s|-/g, '');
 
-    if (newPhone_num.length !== 13 || !newPhone_num.startsWith('+923')) {
+    if (!isValidPhoneNumber(form?.phone_num)) {
       toast.error('Invalid Phone Number');
       setLoading(false);
       return;
@@ -140,6 +145,56 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
+    if (form?.field?.value === 'Software Engineering') {
+      if (form?.position === '' || form?.position === null) {
+        toast?.error('Please Select the Position');
+        setLoading(false);
+        return;
+      }
+    }
+
+    if (form?.cnic?.length < 9) {
+      toast?.error('Invalid National ID Number');
+      setLoading(false);
+      return;
+    }
+
+    if (form?.salary_expection <= 0) {
+      toast?.error('Invalid Salary');
+      setLoading(false);
+      return;
+    }
+
+    if (form?.linkedin_profile !== '') {
+      if (
+        !form?.linkedin_profile.includes('linkedin') ||
+        !form?.linkedin_profile.includes('.com')
+      ) {
+        toast?.error('Invalid Linked Profile URL');
+        setLoading(false);
+        return;
+      }
+    }
+
+    if (form?.tags.length <= 0) {
+      toast?.error(
+        'Please enter skills in proper format as specified in tooltip and press enter eg: #react'
+      );
+      setLoading(false);
+      return;
+    }
+
+    if (form?.github_profile !== '') {
+      if (
+        !form?.github_profile.includes('github') ||
+        !form?.github_profile.includes('.com')
+      ) {
+        toast?.error('Invalid Github Profile URL');
+        setLoading(false);
+        return;
+      }
+    }
+
     if (
       form?.experience === '' ||
       form?.experience === null ||
@@ -147,11 +202,10 @@ export default function JoinEsparkCrewPage() {
       form?.availability === null ||
       form?.prefrences === '' ||
       form?.prefrences === null ||
-      form?.tags.length <= 0 ||
       form?.education === '' ||
       form?.education === null ||
-      form?.city === '' ||
-      form?.city === null ||
+      form?.country === '' ||
+      form?.country === null ||
       form?.cv === '' ||
       form?.field === '' ||
       form?.field === null ||
@@ -166,40 +220,9 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
-    if (form?.field?.value === 'Software Engineering') {
-      if (form?.position === '' || form?.position === null) {
-        toast?.error('All Fields Are Required');
-        setLoading(false);
-        return;
-      }
-    }
-
-    if ((form?.cnic?.length || 0) !== 13) {
-      toast?.error('Invalid CNIC Number');
-      setLoading(false);
-      return;
-    }
-
-    if (form?.salary_expection <= 0) {
-      toast?.error('Invalid Salary');
-      setLoading(false);
-      return;
-    }
-
-    if (
-      !form?.linkedin_profile.includes('linkedin') ||
-      !form?.linkedin_profile.includes('.com')
-    ) {
-      toast?.error('Invalid Linked Profile URL');
-      setLoading(false);
-      return;
-    }
-    if (form?.github_profile !== '') {
-      if (
-        !form?.github_profile.includes('github') ||
-        !form?.github_profile.includes('.com')
-      ) {
-        toast?.error('Invalid Github Profile URL');
+    if (form?.country?.value === 'pakistan') {
+      if (form?.city === '' || form?.city === null) {
+        toast?.error('Please select the city');
         setLoading(false);
         return;
       }
@@ -237,6 +260,7 @@ export default function JoinEsparkCrewPage() {
         ...form,
         availability: form.availability?.value,
         city: form.city?.value,
+        country: form.country?.value,
         cnic: form.cnic,
         education: form.education?.value,
         email: form.email,
@@ -245,7 +269,7 @@ export default function JoinEsparkCrewPage() {
         github_profile: form.github_profile,
         linkedin_profile: form.linkedin_profile,
         name: form.name,
-        phone_num: newPhone_num,
+        phone_num: form?.phone_num,
         prefrences: form.prefrences?.value,
         salary_expection: form.salary_expection,
         tags: form.tags,

@@ -66,20 +66,30 @@ const Dropdown = ({
           </Typography>
         )}
         {showTooltip && (
-          <Tooltip placement="top-start" title={tooltip}>
-            <InfoIcon
-              sx={{
-                color: (theme) => theme.palette.primary.main,
-                marginLeft: '5px',
-                fontSize: '13px',
-                marginBottom: '12px',
-              }}
-            />
-          </Tooltip>
+          <Box
+            sx={{
+              width: '20px',
+              height: '30px',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Tooltip placement="top-start" title={tooltip}>
+              <InfoIcon
+                sx={{
+                  color: (theme) => theme.palette.primary.main,
+                  marginLeft: '5px',
+                  fontSize: '13px',
+                  marginBottom: '12px',
+                }}
+              />
+            </Tooltip>
+          </Box>
         )}
       </Box>
 
       <Select
+        required={name == 'position' || name === 'city' ? false : true}
         styles={customStyles}
         placeholder={placeholder}
         options={options}
