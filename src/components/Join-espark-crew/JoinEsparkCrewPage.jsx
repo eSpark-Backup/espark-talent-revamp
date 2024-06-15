@@ -180,7 +180,7 @@ export default function JoinEsparkCrewPage() {
 
     if (form?.tags.length <= 0) {
       toast?.error(
-        'Please enter skills in proper format as specified in tooltip and press enter e.g., #react'
+        'Please enter skills in proper format as specified in tooltip and press enter eg: #react'
       );
       setLoading(false);
       return;
@@ -191,7 +191,7 @@ export default function JoinEsparkCrewPage() {
         !form?.github_profile.includes('github') ||
         !form?.github_profile.includes('.com')
       ) {
-        toast?.error('Invalid GitHub Profile URL');
+        toast?.error('Invalid Github Profile URL');
         setLoading(false);
         return;
       }
