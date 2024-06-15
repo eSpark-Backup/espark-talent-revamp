@@ -178,7 +178,13 @@ const CustomInput = ({
         type={type ? type : 'text'}
         placeholder={placeholder}
         required={required}
-        className="cnic-input"
+        className={
+          name === 'cnic'
+            ? 'cnic-input'
+            : name === 'github_profile'
+              ? 'github-input'
+              : ''
+        }
         {...(maxLength && {
           onInput: (e) => (e.target.value = e.target.value.slice(0, maxLength)),
         })}

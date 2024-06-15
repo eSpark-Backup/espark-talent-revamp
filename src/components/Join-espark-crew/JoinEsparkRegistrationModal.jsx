@@ -341,7 +341,7 @@ const JoinEsparkRegistrationModal = ({
                       }}
                       direction="row"
                       justifyContent="space-between"
-                      alignItems="center"
+                      // alignItems="center"
                       gap="10px"
                     >
                       <ImgUploader
