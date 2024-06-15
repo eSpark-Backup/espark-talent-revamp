@@ -131,6 +131,8 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
+    const newPhone_num = form.phone_num.replace(/[\s\-()]/g, '');
+
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!nameRegex.test(form?.name)) {
       toast.error('Name should contain only alphabets');
@@ -170,7 +172,7 @@ export default function JoinEsparkCrewPage() {
         !form?.linkedin_profile.includes('linkedin') ||
         !form?.linkedin_profile.includes('.com')
       ) {
-        toast?.error('Invalid Linked Profile URL');
+        toast?.error('Invalid LinkedIn Profile URL');
         setLoading(false);
         return;
       }
@@ -220,19 +222,24 @@ export default function JoinEsparkCrewPage() {
       return;
     }
 
-    if (form?.country?.value === 'pakistan') {
-      if (form?.city === '' || form?.city === null) {
+    // Create a copy of the form object and modify it as needed
+    const updatedForm = { ...form };
+
+    if (updatedForm?.country?.value === 'pakistan') {
+      if (updatedForm?.city === '' || updatedForm?.city === null) {
         toast?.error('Please select the city');
         setLoading(false);
         return;
       }
+    } else {
+      updatedForm.city = null;
     }
 
     let resumeKey;
 
-    if (form.cv instanceof File) {
+    if (updatedForm.cv instanceof File) {
       const formData = new FormData();
-      formData.append('file', form.cv);
+      formData.append('file', updatedForm.cv);
 
       const response = await fetch('/api/resumeupload', {
         method: 'POST',
@@ -251,35 +258,37 @@ export default function JoinEsparkCrewPage() {
     } else {
       setForm((prev) => ({
         ...prev,
-        cv: form.cv,
+        cv: updatedForm.cv,
       }));
     }
 
     try {
       const { data, error } = await supabase.from('Applicants').insert({
-        ...form,
-        availability: form.availability?.value,
-        city: form.city?.value,
-        country: form.country?.value,
-        cnic: form.cnic,
-        education: form.education?.value,
-        email: form.email,
-        experience: form.experience?.value,
-        field: form.field?.value,
-        github_profile: form.github_profile,
-        linkedin_profile: form.linkedin_profile,
-        name: form.name,
-        phone_num: form?.phone_num,
-        prefrences: form.prefrences?.value,
-        salary_expection: form.salary_expection,
-        tags: form.tags,
-        subField: form.position?.value ? form.subField?.value : null,
-        position: !form.position?.value
-          ? form.subField?.value
-          : form.position?.value,
-        job_type: form.job_type?.value,
-        projects: form.projects,
-        cv: resumeKey ? resumeKey : form.cv,
+        ...updatedForm,
+        availability: updatedForm.availability?.value,
+        city: updatedForm.city?.value,
+        country: updatedForm.country?.value,
+        cnic: updatedForm.cnic,
+        education: updatedForm.education?.value,
+        email: updatedForm.email,
+        experience: updatedForm.experience?.value,
+        field: updatedForm.field?.value,
+        github_profile: updatedForm.github_profile,
+        linkedin_profile: updatedForm.linkedin_profile,
+        name: updatedForm.name,
+        phone_num: newPhone_num,
+        prefrences: updatedForm.prefrences?.value,
+        salary_expection: updatedForm.salary_expection,
+        tags: updatedForm.tags,
+        subField: updatedForm.position?.value
+          ? updatedForm.subField?.value
+          : null,
+        position: !updatedForm.position?.value
+          ? updatedForm.subField?.value
+          : updatedForm.position?.value,
+        job_type: updatedForm.job_type?.value,
+        projects: updatedForm.projects,
+        cv: resumeKey ? resumeKey : updatedForm.cv,
       });
 
       if (error) {
