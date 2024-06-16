@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
@@ -240,10 +240,10 @@ export default function JoinEsparkCrewPage() {
 
       const response = await axios.post('/api/resumeupload', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          'Content-Type': 'multipart/form-data',
+        },
       });
-      
+
       const { fileKey } = response.data;
 
       resumeKey = fileKey;
