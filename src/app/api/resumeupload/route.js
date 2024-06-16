@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import { NextResponse } from 'next/server';
 import { config } from 'dotenv';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import path from 'path';
@@ -15,39 +14,59 @@ const s3Client = new S3Client({
   },
 });
 
-export async function POST(req) {
-  try {
+async function handler(req, res) {
+  if (req.method === 'POST') {
     const formData = await req?.formData();
 
-    const file = formData.get('file');
+    try {
+      const file = formData.get('file');
 
-    console.log(file, 'file');
+      console.log(file, 'file');
 
-    const buffer = await file.arrayBuffer();
+      const buffer = await file.arrayBuffer();
 
-    // Generate UUID for the file name
-    const uuid = uuidv4();
+      // Generate UUID for the file name
+      const uuid = uuidv4();
 
-    // Get the file extension
-    const fileExtension = path.extname(file.name);
+      // Get the file extension
+      const fileExtension = path.extname(file.name);
 
-    // Construct the key with UUID and file extension
-    const key = `${uuid}${fileExtension}`;
+      // Construct the key with UUID and file extension
+      const key = `${uuid}${fileExtension}`;
 
-    await s3Client.send(
-      new PutObjectCommand({
-        Bucket: process.env.BUCKET_NAME,
-        Key: key,
-        Body: buffer,
-      })
-    );
+      await s3Client.send(
+        new PutObjectCommand({
+          Bucket: process.env.BUCKET_NAME,
+          Key: key,
+          Body: buffer,
+        })
+      );
 
-    return NextResponse.json(
-      { Message: 'Success', fileKey: key },
-      { status: 201 }
-    );
-  } catch (error) {
-    console.error('Error uploading file:', error);
-    return NextResponse.json({ Message: 'Failed' }, { status: 500 });
+      return new Response(
+        JSON.stringify({ Message: 'Success', fileKey: key }),
+        {
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      return new Response(
+        JSON.stringify(
+          { Message: 'Failed to upload file' },
+          {
+            status: 500,
+          }
+        )
+      );
+    }
+    // });
+  } else {
+    res.setHeader('Allow', ['POST']);
+    Response.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 }
+
+export { handler as POST };
