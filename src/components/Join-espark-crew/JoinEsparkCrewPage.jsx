@@ -18,6 +18,7 @@ import AboutCrewCard from './AboutCrewCard';
 import KeyPointCrewCard from './KeyPointCrewCard';
 import BenefitCrewCard from './BenefitCrewCard';
 import { isValidPhoneNumber } from 'libphonenumber-js';
+import axios from 'axios';
 
 export default function JoinEsparkCrewPage() {
   const {
@@ -112,10 +113,6 @@ export default function JoinEsparkCrewPage() {
         break;
     }
   };
-
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
 
   const handleClick = () => {
     setRegistrationModal(true);
@@ -241,14 +238,14 @@ export default function JoinEsparkCrewPage() {
       const formData = new FormData();
       formData.append('file', updatedForm.cv);
 
-      const response = await fetch('/api/resumeupload', {
-        method: 'POST',
-        body: formData,
+      const response = await axios.post('/api/resumeupload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
+      
+      const { fileKey } = response.data;
 
-      const { fileKey } = await response.json();
-
-      console.log(fileKey, 'fileKey');
       resumeKey = fileKey;
 
       setForm((prev) => ({
