@@ -54,12 +54,13 @@ async function handler(req, res) {
     } catch (error) {
       console.error('Error uploading file:', error);
       return new Response(
-        JSON.stringify(
-          { Message: 'Failed to upload file' },
-          {
-            status: 500,
-          }
-        )
+        JSON.stringify({ Message: 'Failed to upload file' }),
+        {
+          status: 500,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
       );
     }
     // });
