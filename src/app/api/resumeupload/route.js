@@ -17,14 +17,21 @@ const s3Client = new S3Client({
 async function handler(req, res) {
   if (req.method === 'POST') {
     const formData = await req?.formData();
-
+    console.log(formData, 'formData');
     try {
       const file = formData.get('file');
-
+      if (!file) {
+        return new Response(JSON.stringify({ Message: 'File not found' }), {
+          status: 404,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+      }
       console.log(file, 'file');
 
       const buffer = await file.arrayBuffer();
-
+      console.log(buffer, 'buffer');
       // Generate UUID for the file name
       const uuid = uuidv4();
 
@@ -33,10 +40,11 @@ async function handler(req, res) {
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
+      console.log(key, 'key');
       console.log('before config');
       await s3Client.send(
         new PutObjectCommand({
-          Bucket: process.env.BUCKET_NAME,
+          Bucket: 'resumeportal',
           Key: key,
           Body: buffer,
         })
