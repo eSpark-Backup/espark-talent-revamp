@@ -55,7 +55,7 @@ async function handler(req, res) {
     } catch (error) {
       console.error('Error uploading file:', error);
       return new Response(
-        JSON.stringify({ Message: 'Failed to upload file' }),
+        JSON.stringify({ Message: 'Failed to upload file', error }),
         {
           status: 500,
           headers: {

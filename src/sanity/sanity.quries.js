@@ -177,6 +177,31 @@ export async function getAuthor() {
   );
 }
 
+export async function getHire() {
+  return client.fetch(
+    `*[_type == "hire"]
+    {
+      _id,
+      "slug": slug.current,
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url,
+      "ratingName":rating.name,
+      "ratingImage":rating.image.asset->url,
+      "worstRating":rating.worstRating,
+      "bestRating":rating.bestRating,
+      "ratingValue":rating.ratingValue,
+      "ratingCount":rating.ratingCount,
+    }`,
+    {
+      next: {
+        revalidate: 1800,
+      },
+    }
+  );
+}
+
 export async function getSingleHire(slug) {
   return client.fetch(
     `*[_type == "hire" && slug.current == $slug][0]
