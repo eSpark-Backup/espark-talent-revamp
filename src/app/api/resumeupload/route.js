@@ -6,32 +6,25 @@ import path from 'path';
 config();
 
 const s3Client = new S3Client({
-  endpoint: 'https://s3.us-east-005.backblazeb2.com',
-  region: 'us-east-005',
+  endpoint: process.env.NEXT_PUBLIC_END_POINT,
+  region: process.env.NEXT_PUBLIC_REGION,
   credentials: {
-    accessKeyId: '005af8ef4030c480000000006',
-    secretAccessKey: 'K005mrciRfuX4ZpPDnJixDVIeS1Sp48',
+    accessKeyId: process.env.NEXT_PUBLIC_B2_APPLICATION_KEY_ID,
+    secretAccessKey: process.env.NEXT_PUBLIC_B2_APPLICATION_KEY,
   },
 });
 
 async function handler(req, res) {
   if (req.method === 'POST') {
     const formData = await req?.formData();
-    console.log(formData, 'formData');
+
     try {
       const file = formData.get('file');
-      if (!file) {
-        return new Response(JSON.stringify({ Message: 'File not found' }), {
-          status: 404,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-      }
+
       console.log(file, 'file');
 
       const buffer = await file.arrayBuffer();
-      console.log(buffer, 'buffer');
+
       // Generate UUID for the file name
       const uuid = uuidv4();
 
@@ -40,16 +33,13 @@ async function handler(req, res) {
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
-      console.log(key, 'key');
-      console.log('before config');
       await s3Client.send(
         new PutObjectCommand({
-          Bucket: 'resumeportal',
+          Bucket: process.env.NEXT_PUBLIC_BUCKET_NAME,
           Key: key,
           Body: buffer,
         })
       );
-      console.log('after config');
 
       return new Response(
         JSON.stringify({ Message: 'Success', fileKey: key }),
@@ -63,7 +53,7 @@ async function handler(req, res) {
     } catch (error) {
       console.error('Error uploading file:', error);
       return new Response(
-        JSON.stringify({ Message: 'Failed to upload file', error }),
+        JSON.stringify({ Message: 'Failed to upload file' }),
         {
           status: 500,
           headers: {
