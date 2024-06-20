@@ -242,32 +242,35 @@ export default function JoinEsparkCrewPage() {
     }
 
     let resumeKey;
+    try {
+      if (updatedForm?.cv instanceof File) {
+        const formData = new FormData();
+        formData.append('file', updatedForm?.cv);
 
-    if (updatedForm?.cv instanceof File) {
-      const formData = new FormData();
-      formData.append('file', updatedForm?.cv);
+        const response = await axios.post('/api/resumeupload', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
 
-      const response = await axios?.post('/api/resumeupload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+        const { fileKey } = response?.data;
 
-      const { fileKey } = response.data;
+        resumeKey = fileKey;
 
-      resumeKey = fileKey;
-
-      setForm((prev) => ({
-        ...prev,
-        cv: fileKey,
-      }));
-    } else {
-      setForm((prev) => ({
-        ...prev,
-        cv: updatedForm?.cv,
-      }));
+        setForm((prev) => ({
+          ...prev,
+          cv: fileKey,
+        }));
+        console.log(response, 'success');
+      } else {
+        setForm((prev) => ({
+          ...prev,
+          cv: updatedForm?.cv,
+        }));
+      }
+    } catch (err) {
+      console.log(err, '<<<====error');
     }
-
     try {
       const { data, error } = await supabase.from('Applicants').insert({
         ...updatedForm,
