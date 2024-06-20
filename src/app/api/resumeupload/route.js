@@ -33,7 +33,7 @@ async function handler(req, res) {
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
-
+      console.log('before config');
       await s3Client.send(
         new PutObjectCommand({
           Bucket: process.env.BUCKET_NAME,
@@ -41,6 +41,7 @@ async function handler(req, res) {
           Body: buffer,
         })
       );
+      console.log('after config');
 
       return new Response(
         JSON.stringify({ Message: 'Success', fileKey: key }),
@@ -54,7 +55,7 @@ async function handler(req, res) {
     } catch (error) {
       console.error('Error uploading file:', error);
       return new Response(
-        JSON.stringify({ Message: 'Failed to upload file' }),
+        JSON.stringify({ Message: 'Failed to upload file', error }),
         {
           status: 500,
           headers: {
