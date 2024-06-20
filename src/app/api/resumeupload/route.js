@@ -33,7 +33,7 @@ async function handler(req, res) {
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
-      console.log("before config")
+      console.log('before config');
       await s3Client.send(
         new PutObjectCommand({
           Bucket: process.env.BUCKET_NAME,
@@ -41,7 +41,7 @@ async function handler(req, res) {
           Body: buffer,
         })
       );
-      console.log("after config")
+      console.log('after config');
 
       return new Response(
         JSON.stringify({ Message: 'Success', fileKey: key }),
