@@ -234,6 +234,7 @@ export default function JoinEsparkCrewPage() {
 
     let resumeKey;
 
+    try{
     if (updatedForm.cv instanceof File) {
       const formData = new FormData();
       formData.append('file', updatedForm.cv);
@@ -258,7 +259,11 @@ export default function JoinEsparkCrewPage() {
         cv: updatedForm.cv,
       }));
     }
-
+    console.log(response, "success")
+    }
+    catch(err){
+      console.log(err, "<<<====error")
+    }
     try {
       const { data, error } = await supabase.from('Applicants').insert({
         ...updatedForm,
