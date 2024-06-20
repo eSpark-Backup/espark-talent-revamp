@@ -253,7 +253,7 @@ export default function JoinEsparkCrewPage() {
           },
         });
 
-        const { fileKey } = response?.data;
+        const { fileKey } = response.data;
 
         resumeKey = fileKey;
 
