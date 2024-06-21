@@ -62,6 +62,7 @@ const HomePageHero = ({ data }) => {
               sx={{ width: { xs: '90%', sm: '62%' }, mt: 4, mb: 1 }}
             />
             <Typography
+              variant="h2"
               sx={{
                 fontSize: { xs: '22px', sm: '28px', md: '26px', lg: `42px` },
                 fontWeight: 400,
@@ -75,6 +76,7 @@ const HomePageHero = ({ data }) => {
             </Typography>
 
             <Typography
+              variant="h1"
               sx={{
                 fontSize: { xs: '27px', sm: '30px', md: '32px' },
                 lineHeight: {
@@ -101,7 +103,7 @@ const HomePageHero = ({ data }) => {
               {data?.title || '#'}
             </Typography>
             <Typography
-              component={'span'}
+              component={'h1'}
               sx={{
                 color: '#fff',
                 textWrap: 'nowrap',
