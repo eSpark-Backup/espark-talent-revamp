@@ -211,8 +211,6 @@ export default function JoinEsparkCrewPage() {
       form?.prefrences === null ||
       form?.education === '' ||
       form?.education === null ||
-      form?.city === '' ||
-      form?.city === null ||
       form?.country === '' ||
       form?.country === null ||
       form?.cv === '' ||
