@@ -248,7 +248,7 @@ const JoinEsparkRegistrationModal = ({
                                 value={form.tags}
                                 onChange={(e) => handleChange('tags', e)}
                                 name="skills"
-                                placeHolder="Start with #"
+                                placeHolder="Start with # and press enter"
                                 beforeAddValidate={(tag) => {
                                   if (tag.trim().startsWith('#')) {
                                     return true;

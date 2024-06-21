@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --mainColor: #029894;
   --optionalColor: #6f76a8;
@@ -1894,6 +1895,17 @@ input {
 }
 .cnic-input {
   -moz-appearance: textfield;
+}
+
+
+.github-input{
+  margin-top: 2.2px;
+}
+
+
+
+.Toastify__toast-theme--light{
+  margin: 3px 5px !important;
 }
 
 

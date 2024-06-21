@@ -72,8 +72,8 @@ const Hero = ({ data }) => {
                     xs: '22px',
                     sm: '25px',
                     md: '35px',
-                    lg: '50px',
-                    xl: '50px',
+                    lg: '45px',
+                    xl: '45px',
                   }}
                   textAlign={{
                     xs: 'center',
@@ -100,8 +100,8 @@ const Hero = ({ data }) => {
                     xs: '12px',
                     sm: '12px',
                     md: '16px',
-                    lg: '20px',
-                    xl: '20px',
+                    lg: '18px',
+                    xl: '18px',
                   }}
                   textAlign={{
                     xs: 'center',
@@ -127,8 +127,8 @@ const Hero = ({ data }) => {
                     xs: '14px',
                     sm: '14px',
                     md: '16px',
-                    lg: '20px',
-                    xl: '20px',
+                    lg: '18px',
+                    xl: '18px',
                   }}
                 >
                   {data?.button?.link ? (

@@ -105,6 +105,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                     fontStyle: 'normal',
                     fontWeight: 600,
                     lineHeight: '21.766px',
+                    fontFamily: 'Titillium Web, sans-serif',
                   }}
                 >
                   {page}
