@@ -48,7 +48,7 @@ const AboutCrewCard = ({ point, index }) => {
         <Typography
           sx={{ letterSpacing: '5px' }}
           color="secondary"
-          fontSize={20}
+          fontSize={18}
           fontWeight={600}
         >
           0{index + 1}
