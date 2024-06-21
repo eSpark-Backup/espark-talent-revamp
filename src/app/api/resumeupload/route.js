@@ -6,11 +6,11 @@ import path from 'path';
 config();
 
 const s3Client = new S3Client({
-  endpoint: process.env.END_POINT,
-  region: process.env.REGION,
+  endpoint: process.env.NEXT_PUBLIC_END_POINT,
+  region: process.env.NEXT_PUBLIC_REGION,
   credentials: {
-    accessKeyId: process.env.B2_APPLICATION_KEY_ID,
-    secretAccessKey: process.env.B2_APPLICATION_KEY,
+    accessKeyId: process.env.NEXT_PUBLIC_B2_APPLICATION_KEY_ID,
+    secretAccessKey: process.env.NEXT_PUBLIC_B2_APPLICATION_KEY,
   },
 });
 
@@ -33,15 +33,13 @@ async function handler(req, res) {
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
-      console.log('before config');
       await s3Client.send(
         new PutObjectCommand({
-          Bucket: process.env.BUCKET_NAME,
+          Bucket: process.env.NEXT_PUBLIC_BUCKET_NAME,
           Key: key,
           Body: buffer,
         })
       );
-      console.log('after config');
 
       return new Response(
         JSON.stringify({ Message: 'Success', fileKey: key }),
