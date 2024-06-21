@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Hero from '@/components/homepage/Hero';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { JOIN_CREW_HERO_DATA } from '@/constants/global/hero-sections';
@@ -10,15 +11,21 @@ import {
   ABOUT,
   JOINT_ESPARK_CREW_HEADING_DATA,
 } from '@/constants/join-espark-crew';
-import JoinEsparkRegistrationModal from './JoinEsparkRegistrationModal';
 import { toast } from 'react-toastify';
 import supabase from '@/supabase/supabaseClient';
-import JoinEsparkSuccessModal from './JoinEsparkSuccessModal';
-import AboutCrewCard from './AboutCrewCard';
-import KeyPointCrewCard from './KeyPointCrewCard';
-import BenefitCrewCard from './BenefitCrewCard';
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import axios from 'axios';
+
+// Dynamic imports
+const JoinEsparkRegistrationModal = dynamic(
+  () => import('./JoinEsparkRegistrationModal')
+);
+const JoinEsparkSuccessModal = dynamic(
+  () => import('./JoinEsparkSuccessModal')
+);
+const AboutCrewCard = dynamic(() => import('./AboutCrewCard'));
+const KeyPointCrewCard = dynamic(() => import('./KeyPointCrewCard'));
+const BenefitCrewCard = dynamic(() => import('./BenefitCrewCard'));
 
 export default function JoinEsparkCrewPage() {
   const {
@@ -79,6 +86,7 @@ export default function JoinEsparkCrewPage() {
       position: '',
       tags: [],
       cv: '',
+      country: '',
     });
   };
 
@@ -123,23 +131,23 @@ export default function JoinEsparkCrewPage() {
     setLoading(true);
 
     if (!isValidPhoneNumber(form?.phone_num)) {
-      toast.error('Invalid Phone Number');
+      toast?.error('Invalid Phone Number');
       setLoading(false);
       return;
     }
 
-    const newPhone_num = form.phone_num.replace(/[\s\-()]/g, '');
+    const newPhone_num = form?.phone_num?.replace(/[\s\-()]/g, '');
 
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!nameRegex.test(form?.name)) {
-      toast.error('Name should contain only alphabets');
+      toast?.error('Name should contain only alphabets');
       setLoading(false);
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) {
-      toast.error('Invalid Email Address');
+    if (!emailRegex?.test(form?.email)) {
+      toast?.error('Invalid Email Address');
       setLoading(false);
       return;
     }
@@ -166,8 +174,8 @@ export default function JoinEsparkCrewPage() {
 
     if (form?.linkedin_profile !== '') {
       if (
-        !form?.linkedin_profile.includes('linkedin') ||
-        !form?.linkedin_profile.includes('.com')
+        !form?.linkedin_profile?.includes('linkedin') ||
+        !form?.linkedin_profile?.includes('.com')
       ) {
         toast?.error('Invalid LinkedIn Profile URL');
         setLoading(false);
@@ -175,7 +183,7 @@ export default function JoinEsparkCrewPage() {
       }
     }
 
-    if (form?.tags.length <= 0) {
+    if (form?.tags?.length <= 0) {
       toast?.error(
         'Please enter skills in proper format as specified in tooltip and press enter eg: #react'
       );
@@ -185,8 +193,8 @@ export default function JoinEsparkCrewPage() {
 
     if (form?.github_profile !== '') {
       if (
-        !form?.github_profile.includes('github') ||
-        !form?.github_profile.includes('.com')
+        !form?.github_profile?.includes('github') ||
+        !form?.github_profile?.includes('.com')
       ) {
         toast?.error('Invalid Github Profile URL');
         setLoading(false);
@@ -221,7 +229,6 @@ export default function JoinEsparkCrewPage() {
 
     // Create a copy of the form object and modify it as needed
     const updatedForm = { ...form };
-
     if (updatedForm?.country?.value === 'pakistan') {
       if (updatedForm?.city === '' || updatedForm?.city === null) {
         toast?.error('Please select the city');
@@ -233,10 +240,9 @@ export default function JoinEsparkCrewPage() {
     }
 
     let resumeKey;
-
-    if (updatedForm.cv instanceof File) {
+    if (updatedForm?.cv instanceof File) {
       const formData = new FormData();
-      formData.append('file', updatedForm.cv);
+      formData.append('file', updatedForm?.cv);
 
       const response = await axios.post('/api/resumeupload', formData, {
         headers: {
@@ -255,42 +261,41 @@ export default function JoinEsparkCrewPage() {
     } else {
       setForm((prev) => ({
         ...prev,
-        cv: updatedForm.cv,
+        cv: updatedForm?.cv,
       }));
     }
-
     try {
       const { data, error } = await supabase.from('Applicants').insert({
         ...updatedForm,
-        availability: updatedForm.availability?.value,
-        city: updatedForm.city?.value,
-        country: updatedForm.country?.value,
-        cnic: updatedForm.cnic,
-        education: updatedForm.education?.value,
-        email: updatedForm.email,
-        experience: updatedForm.experience?.value,
-        field: updatedForm.field?.value,
-        github_profile: updatedForm.github_profile,
-        linkedin_profile: updatedForm.linkedin_profile,
-        name: updatedForm.name,
+        availability: updatedForm?.availability?.value,
+        city: updatedForm?.city?.value,
+        country: updatedForm?.country?.value,
+        cnic: updatedForm?.cnic,
+        education: updatedForm?.education?.value,
+        email: updatedForm?.email,
+        experience: updatedForm?.experience?.value,
+        field: updatedForm?.field?.value,
+        github_profile: updatedForm?.github_profile,
+        linkedin_profile: updatedForm?.linkedin_profile,
+        name: updatedForm?.name,
         phone_num: newPhone_num,
-        prefrences: updatedForm.prefrences?.value,
-        salary_expection: updatedForm.salary_expection,
-        tags: updatedForm.tags,
-        subField: updatedForm.position?.value
-          ? updatedForm.subField?.value
+        prefrences: updatedForm?.prefrences?.value,
+        salary_expection: updatedForm?.salary_expection,
+        tags: updatedForm?.tags,
+        subField: updatedForm?.position?.value
+          ? updatedForm?.subField?.value
           : null,
-        position: !updatedForm.position?.value
-          ? updatedForm.subField?.value
-          : updatedForm.position?.value,
-        job_type: updatedForm.job_type?.value,
-        projects: updatedForm.projects,
-        cv: resumeKey ? resumeKey : updatedForm.cv,
+        position: !updatedForm?.position?.value
+          ? updatedForm?.subField?.value
+          : updatedForm?.position?.value,
+        job_type: updatedForm?.job_type?.value,
+        projects: updatedForm?.projects,
+        cv: resumeKey ? resumeKey : updatedForm?.cv,
       });
 
       if (error) {
         console.log(error?.message);
-        toast.error('Something went wrong. Please try again');
+        toast?.error('Something went wrong. Please try again');
         setLoading(false);
       }
 
@@ -318,11 +323,12 @@ export default function JoinEsparkCrewPage() {
           position: '',
           tags: [],
           cv: '',
+          country: '',
         });
       }
     } catch (error) {
       console.log(error?.message);
-      toast.error('Something went wrong. Please try again');
+      toast?.error('Something went wrong. Please try again');
       setLoading(false);
       setForm((prev) => ({
         ...prev,
@@ -336,7 +342,7 @@ export default function JoinEsparkCrewPage() {
       <Hero
         data={{
           ...JOIN_CREW_HERO_DATA,
-          button: { ...JOIN_CREW_HERO_DATA.button, handleClick },
+          button: { ...JOIN_CREW_HERO_DATA?.button, handleClick },
         }}
       />
       {/* About You */}
@@ -371,7 +377,7 @@ export default function JoinEsparkCrewPage() {
             {AboutSecHeading}
           </Typography>
           <Grid container spacing={2}>
-            {ABOUT.map((point, index) => {
+            {ABOUT?.map((point, index) => {
               return <AboutCrewCard key={index} point={point} index={index} />;
             })}
           </Grid>
@@ -399,7 +405,7 @@ export default function JoinEsparkCrewPage() {
           >
             {keysPointSecHeading}
           </Typography>
-          {KEYS.map((key, index) => {
+          {KEYS?.map((key, index) => {
             const splitedKey = key.split(':');
             const title = `${splitedKey[0]}:`;
             const desc = splitedKey[1];
@@ -440,7 +446,7 @@ export default function JoinEsparkCrewPage() {
             {benefitsSecHeading}
           </Typography>
           <Grid container spacing={2}>
-            {BENEFITS.map((benefit, index) => {
+            {BENEFITS?.map((benefit, index) => {
               return (
                 <BenefitCrewCard key={index} benefit={benefit} index={index} />
               );
@@ -463,7 +469,6 @@ export default function JoinEsparkCrewPage() {
           ],
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-
           padding: '30px',
         }}
       >
@@ -494,6 +499,7 @@ export default function JoinEsparkCrewPage() {
               fontWeight: 700,
               py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
               pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
+              fontFamily: 'Titillium Web, sans-serif',
             }}
           >
             {footerSecHeading}
@@ -515,6 +521,7 @@ export default function JoinEsparkCrewPage() {
               py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
               pb: { lg: '3.5%', md: '3%', sm: '3%', xs: '3%' },
               textAlign: 'center',
+              fontFamily: 'Titillium Web, sans-serif',
             }}
           >
             {footerSecDescription}
@@ -532,8 +539,8 @@ export default function JoinEsparkCrewPage() {
               xs: '14px',
               sm: '14px',
               md: '16px',
-              lg: '20px',
-              xl: '20px',
+              lg: '18px',
+              xl: '18px',
             }}
           >
             <Button
@@ -545,13 +552,13 @@ export default function JoinEsparkCrewPage() {
                   color: '#029894',
                   backgroundColor: '#ffffff',
                 },
-
                 py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
                 px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
                 height: '50px',
                 width: '160px',
                 color: '#fff',
                 fontWeight: '700',
+                fontFamily: 'Titillium Web, sans-serif',
               }}
             >
               {jointusSecHeading}
@@ -571,7 +578,7 @@ export default function JoinEsparkCrewPage() {
         handleEmpty={handleEmpty}
       />
 
-      {/* SUCCESS MODAL  */}
+      {/* Success Modal */}
       <JoinEsparkSuccessModal
         open={successModal}
         handleClose={() => {
