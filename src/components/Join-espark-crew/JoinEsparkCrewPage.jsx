@@ -501,6 +501,7 @@ export default function JoinEsparkCrewPage() {
               fontWeight: 700,
               py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
               pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
+              fontFamily: 'Titillium Web, sans-serif',
             }}
           >
             {footerSecHeading}
@@ -522,6 +523,7 @@ export default function JoinEsparkCrewPage() {
               py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
               pb: { lg: '3.5%', md: '3%', sm: '3%', xs: '3%' },
               textAlign: 'center',
+              fontFamily: 'Titillium Web, sans-serif',
             }}
           >
             {footerSecDescription}
@@ -539,8 +541,8 @@ export default function JoinEsparkCrewPage() {
               xs: '14px',
               sm: '14px',
               md: '16px',
-              lg: '20px',
-              xl: '20px',
+              lg: '18px',
+              xl: '18px',
             }}
           >
             <Button
@@ -558,6 +560,7 @@ export default function JoinEsparkCrewPage() {
                 width: '160px',
                 color: '#fff',
                 fontWeight: '700',
+                fontFamily: 'Titillium Web, sans-serif',
               }}
             >
               {jointusSecHeading}

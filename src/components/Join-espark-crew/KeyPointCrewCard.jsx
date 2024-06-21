@@ -49,8 +49,8 @@ const KeyPointCrewCard = ({ KEYS, key, title, desc, index }) => {
           xs: '12px',
           sm: '12px',
           md: '16px',
-          lg: '20px',
-          xl: '20px',
+          lg: '18px',
+          xl: '18px',
         }}
         color="secondary"
       >
