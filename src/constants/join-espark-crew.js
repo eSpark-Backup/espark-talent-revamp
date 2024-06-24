@@ -1025,9 +1025,9 @@ export const PERSONAL_INFO_FIELDS = [
   {
     type: 'select',
     name: 'prefrences',
-    label: 'Prefrences',
+    label: 'Preferences',
     required: true,
-    placeholder: 'Prefrences',
+    placeholder: 'Preferences',
     tooltip:
       'Please select your work preferences. This will help us understand your work preferences and make you an offer accordingly.',
     options: PREFRENCES_OPTIONS,
