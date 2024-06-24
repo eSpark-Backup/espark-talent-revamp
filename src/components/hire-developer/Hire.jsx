@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import HireDeveloper from './HireDeveloper';
-import ServiceSinglePage from '../service/ServiceSinglePage';
-import HireRemote from '../Hire-remote/HireRemote';
+const HireDeveloper = React.lazy(() => import('./HireDeveloper'));
+const ServiceSinglePage = React.lazy(
+  () => import('../service/ServiceSinglePage')
+);
+const HireRemote = React.lazy(() => import('../Hire-remote/HireRemote'));
 
 const Hire = ({ data, slug }) => {
   if (
