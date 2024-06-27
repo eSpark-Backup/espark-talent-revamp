@@ -24,7 +24,10 @@ export const metadata = {
       'en-UK': '/en-UK',
     },
   },
-  robots: `index, follow`,
+  robots: {
+    index: filteredData?.index ?? true,
+    follow: filteredData?.follow ?? true,
+  },
   openGraph: {
     metadataBase: new URL('https://www.esparktalent.com/'),
     title: filteredData?.metaTitle,

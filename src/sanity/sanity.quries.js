@@ -15,7 +15,9 @@ export async function getJob() {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
     }`,
     {
       next: {
@@ -43,7 +45,9 @@ export async function getBlog() {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
     }`,
     {
       next: {
@@ -72,7 +76,9 @@ export async function getSingleBlog(slug) {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
     }`,
     { slug },
     {
@@ -101,7 +107,9 @@ export async function getWiki() {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
     } `,
     {
       next: {
@@ -129,7 +137,9 @@ export async function getSingleWiki(slug) {
       'metaTitle':seo.metaTitle,
       "metaDescription":seo.metaDescription,
       "url":seo.url,
-      "metaImage":seo.metaImage.asset->url
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
     }`,
     { slug },
     {
@@ -148,7 +158,9 @@ export async function getPageSeo() {
     metaTitle,
     metaDescription,
     url,
-    "metaImage":metaImage.asset->url
+    "metaImage":metaImage.asset->url,
+    "index":seo.index,
+    "follow":seo.follow,
   }`,
     {
       next: {
@@ -187,6 +199,8 @@ export async function getHire() {
       "metaDescription":seo.metaDescription,
       "url":seo.url,
       "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
       "ratingName":rating.name,
       "ratingImage":rating.image.asset->url,
       "worstRating":rating.worstRating,
@@ -212,6 +226,8 @@ export async function getSingleHire(slug) {
       "metaDescription":seo.metaDescription,
       "url":seo.url,
       "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
       "ratingName":rating.name,
       "ratingImage":rating.image.asset->url,
       "worstRating":rating.worstRating,
