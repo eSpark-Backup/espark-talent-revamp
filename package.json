@@ -6,12 +6,11 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "postinstall": "husky install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "npx prettier --check '**/*.{js,jsx}' --ignore-path .gitignore",
     "format:fix": "npx prettier --write '**/*.{js,jsx}' --ignore-path .gitignore",
-    "prepare": "husky install"
+    "prepare": "node husky/install.mjs"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -79,6 +78,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "husky": "^8.0.0",
+    "is-ci": "^3.0.1",
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
