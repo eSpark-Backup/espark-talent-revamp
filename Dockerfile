@@ -1,10 +1,9 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
-RUN apk add --no-cache git
-COPY ["prepare.js", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+COPY ["prepare.js", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./", "!**/.husky"]
 # Install all dependencies, including devDependencies
-RUN npm install --only=production --silent --no-optional
+RUN npm install --only=production --silent
 COPY . .
 RUN npm run build
 EXPOSE 3000
