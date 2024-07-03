@@ -1,10 +1,11 @@
 FROM node:lts-alpine
+COPY package.json package-lock.json* npm-shrinkwrap.json* ./
 RUN npm install --silent
 ENV NODE_ENV=production
 ENV HUSKY=0
 WORKDIR /usr/src/app
-COPY ["../.husky!(**)","install.mjs", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-# Install all dependencies, including devDependencies
+COPY ../.husky/ .husky/
+COPY install.mjs .
 COPY . .
 RUN npm run build
 EXPOSE 3000
