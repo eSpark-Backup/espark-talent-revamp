@@ -6,6 +6,7 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
+    "postinstall": "husky install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "npx prettier --check '**/*.{js,jsx}' --ignore-path .gitignore",
