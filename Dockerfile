@@ -1,5 +1,6 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
+ENV HUSKY=0
 WORKDIR /usr/src/app
 RUN apk add --no-cache git
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
