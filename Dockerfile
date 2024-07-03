@@ -5,6 +5,7 @@ RUN apk add --no-cache git
 COPY ["prepare.js", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", ".husky", "./"]
 RUN npm install --production && mv node_modules ../
 COPY . .
+RUN npm run prepare
 RUN npm run build
 EXPOSE 3000
 RUN chown -R node /usr/src/app
