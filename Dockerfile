@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
-COPY ["prepare.js", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+COPY ["../.husky", "prepare.js", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 # Install all dependencies, including devDependencies
 RUN npm install --only=production --silent
 COPY . .
