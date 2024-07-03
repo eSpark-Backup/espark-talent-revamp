@@ -4,7 +4,7 @@ ENV HUSKY=0
 WORKDIR /usr/src/app
 COPY ["../.husky!(**)", "install.mjs", "package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 # Install all dependencies, including devDependencies
-RUN npm install --only=production --silent
+RUN npm install --only=production --silent && mv node_modules ../
 COPY . .
 RUN npm run build
 EXPOSE 3000
