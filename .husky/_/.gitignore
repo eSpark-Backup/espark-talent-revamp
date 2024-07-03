@@ -1,0 +1,5 @@
+# # Ignore everything in .husky directory
+# *
+
+# # Except for install.mjs
+# !.husky/_install.mjs
