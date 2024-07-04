@@ -10,7 +10,7 @@ RUN npm run build
 FROM node:lts-alpine
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app/ ./
-RUN npm install --silent --production
+RUN npm pkg delete scripts.prepare && npm install --silent --production
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
