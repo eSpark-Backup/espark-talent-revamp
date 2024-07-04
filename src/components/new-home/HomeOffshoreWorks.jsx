@@ -77,7 +77,7 @@ const HomeOffshoreWorks = ({ data }) => {
                       alignItems: 'center',
                       backgroundColor: '#fff',
                       height: '200px',
-                      boxShadow: '0 4px 4px 0 rgba(0,0,0,.25)',
+                      boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
                       borderRadius: '25px',
                       gap: '7px',
                       mt: !item?.invert && '-30px',
