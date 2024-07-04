@@ -3,7 +3,7 @@ ENV NODE_ENV=production
 ENV HUSKY=0
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+RUN npm pkg delete scripts.prepare && npm install --production --silent
 COPY . .
 RUN npm run build
 EXPOSE 3000
