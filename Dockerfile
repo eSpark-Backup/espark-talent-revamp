@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm pkg delete scripts.prepare && npm install --production --silent
+RUN npm pkg delete scripts.prepare && npm install --omit=dev --silent
 ENV NODE_ENV=production
 ENV HUSKY=0
 WORKDIR /usr/src/app
