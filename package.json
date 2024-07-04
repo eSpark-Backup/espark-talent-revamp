@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "format": "npx prettier --check '**/*.{js,jsx}' --ignore-path .gitignore",
     "format:fix": "npx prettier --write '**/*.{js,jsx}' --ignore-path .gitignore",
-    "prepare": "node husky/install.mjs"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx}": [
