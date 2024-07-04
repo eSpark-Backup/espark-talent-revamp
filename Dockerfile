@@ -1,9 +1,9 @@
 FROM node:lts-alpine
+COPY package.json package-lock.json* npm-shrinkwrap.json* ./
+RUN npm install --production --silent
 ENV NODE_ENV=production
 ENV HUSKY=0
 WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
 COPY . .
 RUN npm run build
 EXPOSE 3000
