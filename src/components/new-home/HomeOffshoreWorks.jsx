@@ -7,13 +7,15 @@ import {
   Grid,
   Hidden,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
 import Image from 'next/image';
 
 const HomeOffshoreWorks = ({ data }) => {
+  const isSmallScreen = useMediaQuery('(max-width:670px)');
   return (
     <>
-      <Hidden mdDown>
+      <Hidden only={['xs', 'sm']}>
         <Box
           sx={{
             backgroundColor: '#F7F8FB',
@@ -130,7 +132,7 @@ const HomeOffshoreWorks = ({ data }) => {
           </Container>
         </Box>
       </Hidden>
-      <Hidden mdUp>
+      <Hidden only={['lg', 'xl']}>
         <Box
           sx={{
             backgroundColor: '#F7F8FB',
@@ -166,7 +168,7 @@ const HomeOffshoreWorks = ({ data }) => {
                   key={index}
                   item
                   xs={12}
-                  sm={5.5}
+                  sm={isSmallScreen ? 10 : 5.8}
                   md={5}
                   lg={4}
                   sx={{
@@ -198,17 +200,18 @@ const HomeOffshoreWorks = ({ data }) => {
                       alignItems: 'center',
                       backgroundColor: '#fff',
                       height: '150px',
-                      boxShadow: '0 4px 4px 0 rgba(0,0,0,.25)',
+                      boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
                       borderRadius: '25px',
                       gap: '7px',
                       mt: '-25px',
                       px: 1.5,
+                      minWidth: '100%',
                     }}
                   >
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '20px',
+                        fontSize: { xs: '16px', sm: '20px' },
                         lineHeight: '26px',
                         fontWeight: 700,
                         textAlign: 'center',
@@ -230,7 +233,7 @@ const HomeOffshoreWorks = ({ data }) => {
                         lineHeight: 1.5,
                         fontWeight: 500,
                         textAlign: 'center',
-                        px: 3,
+                        px: { xs: 2, sm: isSmallScreen ? 8 : 3 },
                       }}
                     >
                       {item?.description}
