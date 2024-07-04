@@ -1,9 +1,9 @@
 FROM node:lts-alpine
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm pkg delete scripts.prepare && npm install --silent
 ENV NODE_ENV=production
 ENV HUSKY=0
 WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm pkg delete scripts.prepare && npm install --silent
 RUN npm prune --production
 COPY . .
 RUN npm run build
