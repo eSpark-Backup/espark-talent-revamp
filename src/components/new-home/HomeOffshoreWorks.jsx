@@ -13,39 +13,76 @@ import Image from 'next/image';
 
 const HomeOffshoreWorks = ({ data }) => {
   const isSmallScreen = useMediaQuery('(max-width:670px)');
+  const isXS = useMediaQuery((theme) => theme.breakpoints.only('xs'));
+  const isSM = useMediaQuery((theme) => theme.breakpoints.only('sm'));
+  const isMD = useMediaQuery((theme) => theme.breakpoints.only('md'));
+  const isLG = useMediaQuery((theme) => theme.breakpoints.only('lg'));
   return (
-    <>
-      <Hidden only={['xs', 'sm']}>
-        <Box
-          sx={{
-            backgroundColor: '#F7F8FB',
-            py: 3,
-          }}
-        >
-          <Container sx={{ p: 1 }}>
-            <Box sx={{ pb: { xs: '20px', md: '25px', lg: '30px' } }}>
-              <Typography
-                variant={'h2'}
-                color={'secondary'}
+    <Box
+      sx={{
+        backgroundColor: '#F7F8FB',
+        py: 3,
+      }}
+    >
+      <Container sx={{ p: 1 }}>
+        <Box sx={{ pb: { xs: '20px', md: '25px', lg: '30px' } }}>
+          <Typography
+            variant={'h2'}
+            color={'secondary'}
+            sx={{
+              textAlign: 'center',
+              flexWrap: 'wrap',
+              fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+            }}
+          >
+            {data?.title}
+          </Typography>
+        </Box>
+        <Hidden only={['xs', 'sm']}>
+          <Grid
+            container
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            {data?.items?.map((item, index) => (
+              <Grid
+                key={index}
+                item
+                md={isSmallScreen ? 8 : 6}
+                lg={4}
+                xl={4}
                 sx={{
-                  textAlign: 'center',
-                  flexWrap: 'wrap',
-                  fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minwidth: '500px',
                 }}
               >
-                {data?.title}
-              </Typography>
-            </Box>
-            <Grid
-              container
-              sx={{ py: 2, px: 2, display: 'flex', justifyContent: 'center' }}
-            >
-              {data?.items?.map((item, index) => (
-                <Grid
-                  key={index}
-                  item
-                  md={6}
-                  lg={4}
+                <Box sx={{ height: isMD ? '50px' : isLG ? '75px' : '75px' }}>
+                  {!item?.invert && (
+                    <Image
+                      quality="85"
+                      priority={true}
+                      src={item?.icon}
+                      width={
+                        isXS ? 50 : isSM ? 50 : isMD ? 75 : isLG ? 85 : 100
+                      }
+                      height={
+                        isXS ? 50 : isSM ? 50 : isMD ? 75 : isLG ? 85 : 100
+                      }
+                      alt={`Experties Icon`}
+                      style={{
+                        zIndex: '99999',
+                        position: 'relative',
+                        top: !item?.invert && '35px',
+                      }}
+                    />
+                  )}
+                </Box>
+                <Box
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -54,41 +91,35 @@ const HomeOffshoreWorks = ({ data }) => {
                     backgroundImage: `url(${item?.invert ? data?.bgImageInvert : data?.bgImage})`,
                     backgroundSize: '100% 100%',
                     backgroundRepeat: 'no-repeat',
-                    minHeight: '100%',
-                    p: 2,
+                    minHeight: '200px',
+                    pt: item?.invert ? 2 : 2,
+                    pb: item?.invert ? 2 : 2,
+                    px: 3,
                   }}
                 >
-                  {!item?.invert && (
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.icon}
-                      width={100}
-                      height={100}
-                      alt={`Experties Icon`}
-                      style={{ zIndex: '99999' }}
-                    />
-                  )}
                   <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
-                      justifyContent: 'center',
-                      alignItems: 'center',
                       backgroundColor: '#fff',
-                      height: '200px',
+                      minHeight: '200px',
                       boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
                       borderRadius: '25px',
                       gap: '7px',
-                      mt: !item?.invert && '-30px',
-                      mb: item?.invert && '-30px',
-                      px: 2,
+                      pt: item?.invert ? 4 : 8,
+                      pb: item?.invert ? 8 : 4,
+                      px: 1,
                     }}
                   >
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '28.71px',
+                        fontSize: {
+                          xs: '16px',
+                          sm: '20px',
+                          lg: '28.71px',
+                          md: '24.71px',
+                        },
                         lineHeight: '26px',
                         fontWeight: 700,
                         textAlign: 'center',
@@ -106,71 +137,77 @@ const HomeOffshoreWorks = ({ data }) => {
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '16px',
-                        lineHeight: '26px',
+                        fontSize: { xs: '12px', sm: '14.95px' },
+                        fontSize: '15.95px',
                         fontWeight: 500,
+                        lineHeight: '26.32px',
                         textAlign: 'center',
-                        px: 4,
+                        px: 2,
                       }}
                     >
                       {item?.description}
                     </Typography>
                   </Box>
+                </Box>
+                <Box sx={{ height: isMD ? '50px' : isLG ? '75px' : '75px' }}>
                   {item?.invert && (
                     <Image
                       quality="85"
                       priority={true}
                       src={item?.icon}
-                      width={100}
-                      height={100}
+                      width={isXS ? 50 : isSM ? 50 : isMD ? 75 : 100}
+                      height={isXS ? 50 : isSM ? 50 : isMD ? 75 : 100}
                       alt={`Experties Icon`}
+                      style={{
+                        zIndex: '99999',
+                        position: 'relative',
+                        top: item?.invert && '-65px',
+                      }}
                     />
                   )}
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-      </Hidden>
-      <Hidden only={['lg', 'xl']}>
-        <Box
-          sx={{
-            backgroundColor: '#F7F8FB',
-            py: 3,
-          }}
-        >
-          <Container sx={{ p: 1 }}>
-            <Box sx={{ pb: { xs: '20px', md: '25px', lg: '30px' } }}>
-              <Typography
-                variant={'h2'}
-                color={'secondary'}
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Hidden>
+        <Hidden only={['md', 'lg', 'xl']}>
+          <Grid
+            container
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            {data?.items?.map((item, index) => (
+              <Grid
+                key={index}
+                item
+                xs={12}
+                sm={8}
+                md={6}
                 sx={{
-                  textAlign: 'center',
-                  flexWrap: 'wrap',
-                  fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
-                {data?.title}
-              </Typography>
-            </Box>
-            <Grid
-              container
-              sx={{
-                py: 2,
-                px: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                gap: 2,
-              }}
-            >
-              {data?.items?.map((item, index) => (
-                <Grid
-                  key={index}
-                  item
-                  xs={12}
-                  sm={isSmallScreen ? 10 : 5.8}
-                  md={5}
-                  lg={4}
+                <Box sx={{ height: isSM ? '50px' : isMD ? '75px' : '75px' }}>
+                  <Image
+                    quality="85"
+                    priority={true}
+                    src={item?.icon}
+                    width={isXS ? 75 : isSM ? 80 : isMD ? 100 : 100}
+                    height={isXS ? 75 : isSM ? 80 : isMD ? 100 : 100}
+                    alt={`Experties Icon`}
+                    style={{
+                      zIndex: '99999',
+                      position: 'relative',
+                      top: isXS ? '60px' : isSM ? '30px' : '45px',
+                    }}
+                  />
+                </Box>
+                <Box
                   sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -179,39 +216,35 @@ const HomeOffshoreWorks = ({ data }) => {
                     backgroundImage: `url(${data?.bgImage})`,
                     backgroundSize: '100% 100%',
                     backgroundRepeat: 'no-repeat',
-                    minHeight: '100%',
-                    p: 2,
+                    minHeight: '200px',
+                    pt: 2,
+                    pb: 2,
+                    px: 3,
                   }}
                 >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={item?.icon}
-                    width={75}
-                    height={75}
-                    alt={`Experties Icon`}
-                    style={{ zIndex: '99999' }}
-                  />
                   <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
-                      justifyContent: 'center',
-                      alignItems: 'center',
                       backgroundColor: '#fff',
-                      height: '150px',
+                      justifyContent: 'center',
                       boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
                       borderRadius: '25px',
                       gap: '7px',
-                      mt: '-25px',
-                      px: 1.5,
-                      minWidth: '100%',
+                      pt: 8,
+                      pb: 4,
+                      px: 2,
                     }}
                   >
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: { xs: '16px', sm: '20px' },
+                        fontSize: {
+                          xs: '20px',
+                          sm: '28.71px',
+                          md: '28.71px',
+                          lg: '28.71px',
+                        },
                         lineHeight: '26px',
                         fontWeight: 700,
                         textAlign: 'center',
@@ -222,30 +255,30 @@ const HomeOffshoreWorks = ({ data }) => {
                     <Divider
                       variant="middle"
                       sx={{
-                        width: '80%',
+                        width: '90%',
                         color: '#f00',
                       }}
                     />
                     <Typography
                       sx={{
                         color: '#001C63',
-                        fontSize: '12px',
-                        lineHeight: 1.5,
+                        fontSize: { xs: '12px', sm: '15.95px' },
                         fontWeight: 500,
+                        lineHeight: '26.32px',
                         textAlign: 'center',
-                        px: { xs: 2, sm: isSmallScreen ? 8 : 3 },
+                        px: 3,
                       }}
                     >
                       {item?.description}
                     </Typography>
                   </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-      </Hidden>
-    </>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Hidden>
+      </Container>
+    </Box>
   );
 };
 
