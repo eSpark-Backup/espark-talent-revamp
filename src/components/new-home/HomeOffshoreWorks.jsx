@@ -138,7 +138,6 @@ const HomeOffshoreWorks = ({ data }) => {
                       sx={{
                         color: '#001C63',
                         fontSize: { xs: '12px', sm: '14.95px' },
-                        fontSize: '15.95px',
                         fontWeight: 500,
                         lineHeight: '26.32px',
                         textAlign: 'center',
