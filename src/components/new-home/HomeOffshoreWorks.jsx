@@ -68,16 +68,18 @@ const HomeOffshoreWorks = ({ data }) => {
                       priority={true}
                       src={item?.icon}
                       width={
-                        isXS ? 50 : isSM ? 50 : isMD ? 75 : isLG ? 85 : 100
+                        isXS ? 100 : isSM ? 100 : isMD ? 80 : isLG ? 100 : 100
                       }
                       height={
-                        isXS ? 50 : isSM ? 50 : isMD ? 75 : isLG ? 85 : 100
+                        isXS ? 100 : isSM ? 100 : isMD ? 80 : isLG ? 100 : 100
                       }
                       alt={`Experties Icon`}
                       style={{
                         zIndex: '99999',
                         position: 'relative',
                         top: !item?.invert && '35px',
+                        boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+                        borderRadius: '50px',
                       }}
                     />
                   )}
@@ -103,7 +105,7 @@ const HomeOffshoreWorks = ({ data }) => {
                       flexDirection: 'column',
                       backgroundColor: '#fff',
                       minHeight: '200px',
-                      boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
+                      boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                       borderRadius: '25px',
                       gap: '7px',
                       pt: item?.invert ? 4 : 8,
@@ -154,13 +156,15 @@ const HomeOffshoreWorks = ({ data }) => {
                       quality="85"
                       priority={true}
                       src={item?.icon}
-                      width={isXS ? 50 : isSM ? 50 : isMD ? 75 : 100}
-                      height={isXS ? 50 : isSM ? 50 : isMD ? 75 : 100}
+                      width={isXS ? 100 : isSM ? 100 : isMD ? 80 : 100}
+                      height={isXS ? 100 : isSM ? 100 : isMD ? 80 : 100}
                       alt={`Experties Icon`}
                       style={{
                         zIndex: '99999',
                         position: 'relative',
                         top: item?.invert && '-65px',
+                        boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+                        borderRadius: '50px',
                       }}
                     />
                   )}
@@ -196,13 +200,15 @@ const HomeOffshoreWorks = ({ data }) => {
                     quality="85"
                     priority={true}
                     src={item?.icon}
-                    width={isXS ? 75 : isSM ? 80 : isMD ? 100 : 100}
-                    height={isXS ? 75 : isSM ? 80 : isMD ? 100 : 100}
+                    width={isXS ? 80 : isSM ? 80 : isMD ? 100 : 100}
+                    height={isXS ? 80 : isSM ? 80 : isMD ? 100 : 100}
                     alt={`Experties Icon`}
                     style={{
                       zIndex: '99999',
                       position: 'relative',
                       top: isXS ? '60px' : isSM ? '30px' : '45px',
+                      boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+                      borderRadius: '50px',
                     }}
                   />
                 </Box>
@@ -227,7 +233,7 @@ const HomeOffshoreWorks = ({ data }) => {
                       flexDirection: 'column',
                       backgroundColor: '#fff',
                       justifyContent: 'center',
-                      boxShadow: '0 4px 4px 2px rgba(0,0,0,.25)',
+                      boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
                       borderRadius: '25px',
                       gap: '7px',
                       pt: 8,
