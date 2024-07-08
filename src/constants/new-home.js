@@ -341,3 +341,30 @@ export const EXPERTIES_DATA = {
     },
   ],
 };
+
+export const OFFSHORE_DATA = {
+  title: `How offshoring works`,
+  bgImage: `/images/new-home/offshore-works/bg.png`,
+  bgImageInvert: `/images/new-home/offshore-works/bg-invert.png`,
+  items: [
+    {
+      invert: false,
+      icon: '/images/new-home/offshore-works/no1.svg',
+      title: 'Tell us your needs',
+      description: 'We discuss your requirments, budget and job details.',
+    },
+    {
+      invert: true,
+      icon: '/images/new-home/offshore-works/no2.svg',
+      title: 'Meet top candidates',
+      description:
+        'Connect directly with your best matches, fully vetted and highly responsive.',
+    },
+    {
+      invert: false,
+      icon: '/images/new-home/offshore-works/no3.svg',
+      title: 'Hire and Onboarding',
+      description: "Decide who to hire, and we'll take care of the rest.",
+    },
+  ],
+};
