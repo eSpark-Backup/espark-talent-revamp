@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 :root {
   --mainColor: #029894;
   --optionalColor: #6f76a8;
@@ -15,6 +10,17 @@
   --sub-heading: 40px;
   --card-heading: 22px;
   --main-heading-description: 20px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .menuResponsive .MuiPaper-root {
@@ -89,7 +95,7 @@ span {
   color: var(--whiteColor);
 }
 
-.hoverItem:hover>.hoverIcon {
+.hoverItem:hover > .hoverIcon {
   color: #fff;
 }
 
@@ -259,7 +265,6 @@ span {
     font-weight: 400;
   }
 }
-
 
 .our-team-swiper-image,
 .why-choose-our-hr-slide-icon {
@@ -445,7 +450,6 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
-
   /* .hrFirmResponsive {
     display: block;
   }
@@ -483,8 +487,8 @@ span {
   padding-left: 30px;
 }
 
-.blog-content h3+p,
-.blog-content h3+p+p {
+.blog-content h3 + p,
+.blog-content h3 + p + p {
   padding-left: 30px;
 }
 
@@ -568,8 +572,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 25px;
   }
 
@@ -596,8 +600,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -624,8 +628,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -650,8 +654,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -673,8 +677,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -1281,7 +1285,6 @@ span {
 }
 
 @media only screen and (max-width: 1024px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1301,7 +1304,6 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1322,7 +1324,6 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1342,7 +1343,6 @@ span {
 }
 
 @media only screen and (max-width: 360px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1563,7 +1563,7 @@ span {
   height: 9px;
   background: #95d3d4;
   padding: -1px !important;
-  margin: -.8px !important;
+  margin: -0.8px !important;
   border: 1px solid #95d3d4;
   border-radius: 0;
   opacity: 1;
@@ -1611,7 +1611,7 @@ span {
   }
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-calendar-picker-indicator {
   cursor: pointer;
   padding-right: 5px;
   height: 20px;
@@ -1631,7 +1631,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media screen and (max-width: 425px) {
-
   .mui-10bxxrr {
     width: 100% !important;
     height: 100vh !important;
@@ -1698,7 +1697,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @keyframes fontSizeAnimationSM {
   0% {
     font-size: 28px;
-
   }
 
   20% {
@@ -1800,23 +1798,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-
-
 /* JOIN CREW REGISTRATION FORM */
 
-
 /* PHONE TEL  */
-.react-tel-input .form-control{
+.react-tel-input .form-control {
   width: 100% !important;
   height: 51px !important;
 }
 
-.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus{
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
   background-color: #f5f5f5 !important;
 }
 
-
-.react-tel-input .country-list .country.highlight{
+.react-tel-input .country-list .country.highlight {
   color: black !important;
 }
 
@@ -1843,7 +1838,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-
 /* GENERAL  */
 
 input {
@@ -1854,16 +1848,15 @@ input {
   border: 1px solid #cccccc;
 }
 
-
 /* INPUT TAGS  */
 
-.rti--container{
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
-    margin-top: 4px;
+.rti--container {
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+  margin-top: 4px;
 }
 
-.rti--input{
+.rti--input {
   height: 33px !important;
   font-size: 16px !important;
   width: 100% !important;
@@ -1873,14 +1866,12 @@ input {
   font-size: 16px !important;
 }
 
-
 /* TEXT AREA  */
 
 .join-crew-textarea {
   outline: none;
   border: 1px solid #cccccc;
 }
-
 
 /* TOASTER  */
 
@@ -1897,31 +1888,41 @@ input {
   -moz-appearance: textfield;
 }
 
-
-.github-input{
+.github-input {
   margin-top: 2.2px;
 }
 
-
-
-.Toastify__toast-theme--light{
+.Toastify__toast-theme--light {
   margin: 3px 5px !important;
 }
 
-
-.github-input{
+.github-input {
   margin-top: 2.2px;
 }
 
-
-
-.Toastify__toast-theme--light{
+.Toastify__toast-theme--light {
   margin: 3px 5px !important;
 }
 
-
-@media screen and (max-width:1250px){
-  .benifits-card{
+@media screen and (max-width: 1250px) {
+  .benifits-card {
     height: 65px;
   }
+}
+
+/*  CUSTOM LOADER  */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.custom-style {
+  animation: pulse 2s infinite;
+  border-radius: 0.125rem;
+  background-color: #1d1d20;
 }

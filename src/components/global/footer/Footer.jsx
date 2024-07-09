@@ -184,6 +184,7 @@ const Footer = ({ data }) => {
                               }
                               height={70}
                               width={200}
+                              alt="TrustPilot"
                             />
                           </Link>
                         </Box>
