@@ -1033,9 +1033,13 @@ export const PERSONAL_INFO_FIELDS = [
     options: PREFRENCES_OPTIONS,
   },
   {
-    type: 'tags',
+    label: 'Skills, Technologies and Expertise',
+    type: 'text',
+    name: 'tags',
+    required: true,
+    placeholder: 'Enter Skills, Technologies and Expertise',
     tooltip:
-      'Please write the technologies you are proficient in. Also Please type # before the technology name. Then press enter to add a tag. eg: #ReactJS, #NodeJS, #VueJS',
+      'Please write the technologies you are proficient in. Also include your skills and expertise. This will help us understand your skills better.',
   },
   {
     type: 'select',
