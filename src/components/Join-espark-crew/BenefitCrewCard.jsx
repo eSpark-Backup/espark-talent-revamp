@@ -4,7 +4,7 @@ import React from 'react';
 
 const BenefitCrewCard = ({ benefit, index }) => {
   return (
-    <Grid key={index} sx={{ padding: '20px' }} item xs={12} sm={6} md={4}>
+    <Grid key={index} sx={{ padding: '20px' }} item xs={12} sm={6} lg={4}>
       <Stack
         direction="row"
         justifyContent="flex-start"
@@ -12,16 +12,18 @@ const BenefitCrewCard = ({ benefit, index }) => {
         gap="10px"
         sx={{
           backgroundColor: '#E8F4FF66',
-          padding: '10px',
+          padding: { xs: '8px', md: '10px' },
           border: '0.67px solid #0000004D',
           borderRadius: '3.34px',
+          // height:"auto"
         }}
         className="benifits-card"
       >
         <Box
           sx={{
             backgroundColor: (theme) => theme.palette.primary.main,
-            width: '35px',
+            minWidth: '35px',
+            maxWidth: '35px',
             borderRadius: '50%',
             // padding: '7px',
             height: '35px',
