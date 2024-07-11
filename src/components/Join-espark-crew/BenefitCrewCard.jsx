@@ -21,9 +21,13 @@ const BenefitCrewCard = ({ benefit, index }) => {
         <Box
           sx={{
             backgroundColor: (theme) => theme.palette.primary.main,
-            width: '30px',
+            width: '35px',
             borderRadius: '50%',
-            padding: '7px',
+            // padding: '7px',
+            height: '35px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Image
