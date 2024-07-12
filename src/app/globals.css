@@ -1815,6 +1815,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
   color: black !important;
 }
 
+.react-tel-input .country-list {
+  border-radius: 0px !important;
+}
+
 /* IMAGE SELECTOR  */
 .image-selector {
   border: 1px solid #ccc;
