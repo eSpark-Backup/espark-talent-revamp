@@ -204,40 +204,41 @@ export const handleSubmitJoinCrew = async (
     }));
   }
   try {
-    const { data, error } = await supabase.from('Applicants').insert({
-      ...updatedForm,
-      availability: updatedForm?.availability?.value,
-      city: updatedForm?.city?.value,
-      country: updatedForm?.country?.value,
-      cnic: updatedForm?.cnic,
-      education: updatedForm?.education?.value,
-      email: updatedForm?.email,
-      experience: updatedForm?.experience?.value,
-      field: updatedForm?.field?.value,
-      github_profile: updatedForm?.github_profile,
-      linkedin_profile: updatedForm?.linkedin_profile,
-      name: updatedForm?.name,
-      phone_num: newPhone_num,
-      prefrences: updatedForm?.prefrences?.value,
-      salary_expection: updatedForm?.salary_expection,
-      tags: updatedForm?.tags,
-      subField: updatedForm?.position?.value
-        ? updatedForm?.subField?.value
-        : null,
-      position: !updatedForm?.position?.value
-        ? updatedForm?.subField?.value
-        : updatedForm?.position?.value,
-      job_type: updatedForm?.job_type?.value,
-      projects: updatedForm?.projects,
-      cv: resumeKey ? resumeKey : updatedForm?.cv,
-    });
+    const { error } = await supabase.from('Applicants').insert(
+      {
+        ...updatedForm,
+        availability: updatedForm?.availability?.value,
+        city: updatedForm?.city?.value,
+        country: updatedForm?.country?.value,
+        cnic: updatedForm?.cnic,
+        education: updatedForm?.education?.value,
+        email: updatedForm?.email,
+        experience: updatedForm?.experience?.value,
+        field: updatedForm?.field?.value,
+        github_profile: updatedForm?.github_profile,
+        linkedin_profile: updatedForm?.linkedin_profile,
+        name: updatedForm?.name,
+        phone_num: newPhone_num,
+        prefrences: updatedForm?.prefrences?.value,
+        salary_expection: updatedForm?.salary_expection,
+        tags: updatedForm?.tags,
+        subField: updatedForm?.position?.value
+          ? updatedForm?.subField?.value
+          : null,
+        position: !updatedForm?.position?.value
+          ? updatedForm?.subField?.value
+          : updatedForm?.position?.value,
+        job_type: updatedForm?.job_type?.value,
+        projects: updatedForm?.projects,
+        cv: resumeKey ? resumeKey : updatedForm?.cv,
+      },
+      { returning: 'minimal' }
+    );
 
     if (error) {
       toast?.error('Something went wrong. Please try again');
       setLoading(false);
-    }
-
-    if (data) {
+    } else {
       setRegistrationModal(false);
       setLoading(false);
       setSuccessModal(true);
