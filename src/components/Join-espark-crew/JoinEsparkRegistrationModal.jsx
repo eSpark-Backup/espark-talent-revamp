@@ -52,8 +52,8 @@ const JoinEsparkRegistrationModal = ({
           <Box
             component="form"
             sx={{
-              boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-              borderRadius: '10px',
+              // boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+              // borderRadius: '10px',
               backgroundColor: 'white',
               display: 'flex',
               flexDirection: 'column',
