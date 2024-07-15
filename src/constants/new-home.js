@@ -4,7 +4,7 @@ export const HERO_DATA = {
   animateText: 'Just 48 Hours.',
   description: `Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.`,
   bgImage: '/images/homepage/hero/hero-img-res.svg',
-  responsiveImage: '/images/homepage/hero/hero-img-res.svg',
+  responsiveImage: '/images/homepage/hero/hero-img-res.png',
   btnTitle: `Book A Demo`,
   btnLink: `/book-a-demo`,
 };
