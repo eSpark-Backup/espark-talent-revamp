@@ -63,6 +63,14 @@ export const SUBMENU_ITEMS = {
       description: '',
     },
   ],
+  Pricing: [
+    {
+      label: 'Pricing',
+      link: '/pricing',
+      icon: '',
+      description: '',
+    },
+  ],
   Careers: [
     {
       label: 'Current Job Openings',
@@ -85,6 +93,7 @@ export const PAGES = [
   'Solutions',
   'Resources',
   'Hire A Talent',
+  'Pricing',
   'Careers',
 ];
 export const HIRE_A_TALENT = 'Hire a Talent';

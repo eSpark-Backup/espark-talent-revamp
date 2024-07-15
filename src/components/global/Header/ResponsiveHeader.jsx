@@ -95,7 +95,9 @@ const ResponsiveHeader = ({
               return (
                 <Accordion
                   key={index}
-                  expanded={expandedAccordion[page]}
+                  expanded={
+                    page === 'Pricing' ? false : expandedAccordion[page]
+                  }
                   onChange={handleAccordionChange(page)}
                   sx={{
                     boxShadow: 'none !important',
@@ -112,7 +114,9 @@ const ResponsiveHeader = ({
                 >
                   <AccordionSummary
                     expandIcon={
-                      <ExpandMoreIcon sx={{ color: '#222 !important' }} />
+                      page === 'Pricing' ? null : (
+                        <ExpandMoreIcon sx={{ color: '#222 !important' }} />
+                      )
                     }
                     aria-controls={`${page}-content`}
                     id={`${page}-header`}
@@ -121,17 +125,28 @@ const ResponsiveHeader = ({
                       boxShadow: 'none',
                     }}
                   >
-                    <Typography
-                      textAlign="center"
-                      sx={{
-                        color: '#222',
-                        fontSize: '18px',
-                        fontWeight: 600,
-                        lineHeight: '21px',
+                    <Box
+                      component={'div'}
+                      onClick={() => {
+                        if (page === 'Pricing') {
+                          window.open('/pricing', '_self');
+                        } else {
+                          null;
+                        }
                       }}
                     >
-                      {page}
-                    </Typography>
+                      <Typography
+                        textAlign="center"
+                        sx={{
+                          color: '#222',
+                          fontSize: '18px',
+                          fontWeight: 600,
+                          lineHeight: '21px',
+                        }}
+                      >
+                        {page}
+                      </Typography>
+                    </Box>
                   </AccordionSummary>
                   {hasSubmenu && (
                     <AccordionDetails
