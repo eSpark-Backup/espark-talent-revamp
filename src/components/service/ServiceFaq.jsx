@@ -77,7 +77,7 @@ const ServiceFaq = ({ data, color }) => {
                 {item?.heading}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ mt: { xs: '-15px', md: '0px' } }}>
+            <AccordionDetails sx={{ mt: { xs: '-10px', md: '0px' } }}>
               <Typography
                 sx={{
                   color: '#09114A !important ',
