@@ -33,7 +33,7 @@ const BlueCard = ({ data }) => {
               key={index}
               sx={{
                 width: '90%',
-                maxWidth: { xs: '320px', md: '300px', lg: '358px' },
+                maxWidth: { xs: '280px', md: '300px', lg: '358px' },
                 minHeight: { xs: '160px', sm: '200px', md: '459px' },
                 backgroundColor: '#ffffff',
                 boxShadow: '0px 4.21px 6.32px 0px rgba(0, 0, 0, 0.25)',

@@ -80,7 +80,7 @@ const PricingStrip = ({ key, feature, index }) => {
           src={feature.icon}
           sx={{
             width: { xs: '24px', sm: '33px', md: '44px', lg: '55px' },
-            mx: 1.5,
+            mx: { xs: 0.5, sm: 1.5 },
             height: 'auto',
           }}
           alt="asdasd"

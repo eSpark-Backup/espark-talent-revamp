@@ -4,6 +4,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   Container,
   Divider,
   Grid,
@@ -13,7 +14,6 @@ import ParagraphTitle from '../homepage/ParagraphTitle';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const HomePageExperties = ({ data }) => {
@@ -56,15 +56,15 @@ const HomePageExperties = ({ data }) => {
                 aria-controls={`panel${index}bh-content`}
                 id={`panel${index}bh-header`}
               >
-                <Image
+                <Box
+                  component={'img'}
                   src={
                     expandedAccordion === index
                       ? service?.activeIcon
                       : service?.icon
                   }
                   alt={service?.heading}
-                  height={25}
-                  width={25}
+                  sx={{ width: '25px', height: '25px' }}
                 />
                 <Typography
                   sx={{

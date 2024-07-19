@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -56,7 +55,7 @@ const ClientSays = ({ data }) => {
         <Container>
           <Box
             sx={{
-              mb: { sm: '55px', md: '40px' },
+              mb: { sm: '55px', md: '50px' },
               px: { xs: '2%', sm: '10%', md: '0' },
             }}
           >
@@ -139,31 +138,43 @@ const ClientSays = ({ data }) => {
                 >
                   {slider?.map((items, i) => (
                     <SwiperSlide key={i}>
-                      <Box className="reviews-area">
+                      <Box
+                        className="reviews-area"
+                        sx={{ minHeight: { xs: '300px', sm: '270px' } }}
+                      >
                         <Box
                           sx={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            pt: 4,
+                            pt: { xs: 3, sm: 4 },
                             px: { xs: 2 },
                           }}
                         >
                           <Box
                             sx={{
                               width: { xs: '100%', sm: '440px' },
+                              height: { xs: '28px', sm: '50px' },
                               display: 'flex',
+                              alignItems: 'center',
                               justifyContent: 'space-between',
                             }}
                           >
-                            <Box>
-                              <Image
+                            <Box
+                              sx={{
+                                height: { xs: '28px', sm: '34px' },
+                              }}
+                            >
+                              <Box
+                                component={'img'}
                                 quality="85"
                                 priority={true}
                                 src={items.image}
-                                width={174.981}
-                                height={34}
                                 alt="logo"
+                                sx={{
+                                  width: { xs: '134px', sm: '174px' },
+                                  height: { xs: '28px', sm: '34px' },
+                                }}
                               />
                             </Box>
                             <Box
@@ -232,10 +243,12 @@ const ClientSays = ({ data }) => {
                               <Box
                                 sx={{
                                   display: 'none',
+
                                   '@media (min-width: 300px) and (max-width: 599px) ':
                                     {
+                                      height: 30,
                                       display: 'flex',
-                                      mb: 3,
+                                      mb: 0,
                                     },
                                 }}
                               >
