@@ -44,13 +44,13 @@ export default function JoinEsparkCrewPage() {
     name: '',
     email: '',
     phone_num: '',
-    cnic: '',
     linkedin_profile: '',
     salary_expection: '',
     experience: '',
     availability: '',
     prefrences: '',
     education: '',
+    major: '',
     github_profile: '',
     job_type: '',
     projects: '',
@@ -61,6 +61,7 @@ export default function JoinEsparkCrewPage() {
     tags: '',
     cv: '',
     country: '',
+    gender: '',
   });
 
   const handleClick = () => {

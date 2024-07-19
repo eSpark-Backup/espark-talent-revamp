@@ -6,6 +6,7 @@ import { NumericFormat } from 'react-number-format'; // Assuming NumericFormat i
 import InfoIcon from '@mui/icons-material/Info';
 
 const CustomInput = ({
+  value,
   required,
   label,
   type,
@@ -16,6 +17,7 @@ const CustomInput = ({
   disabled,
   phone,
   tooltip,
+  className,
 }) => {
   const handlePhoneChange = (value, country, e, formattedValue) => {
     onChange(name, formattedValue); // Assuming you want to pass the formatted phone number
@@ -125,6 +127,7 @@ const CustomInput = ({
     <Stack direction="column">
       {!(name === 'cv') && (
         <Box
+          className={className}
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -161,6 +164,7 @@ const CustomInput = ({
       )}
 
       <input
+        value={value}
         style={{
           height: '51px',
           fontSize: '16px',
@@ -178,13 +182,13 @@ const CustomInput = ({
         type={type ? type : 'text'}
         placeholder={placeholder}
         required={required}
-        className={
+        className={`${className} ${
           name === 'cnic'
             ? 'cnic-input'
             : name === 'github_profile'
               ? 'github-input'
               : ''
-        }
+        }`}
         {...(maxLength && {
           onInput: (e) => (e.target.value = e.target.value.slice(0, maxLength)),
         })}
