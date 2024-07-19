@@ -5,6 +5,13 @@ import { toast } from 'react-toastify';
 
 export const handleChangeJoinCrew = (name, value, setState) => {
   switch (name) {
+    case 'education':
+      setState((prev) => ({
+        ...prev,
+        major: '',
+        [name]: value,
+      }));
+      break;
     case 'field':
       setState((prev) => ({
         ...prev,
@@ -40,7 +47,6 @@ export const handleEmptyJoinCrew = (setForm) => {
     name: '',
     email: '',
     phone_num: '',
-    cnic: '',
     linkedin_profile: '',
     salary_expection: '',
     experience: '',
@@ -57,6 +63,7 @@ export const handleEmptyJoinCrew = (setForm) => {
     tags: '',
     cv: '',
     country: '',
+    gender: '',
   });
 };
 
@@ -99,12 +106,6 @@ export const handleSubmitJoinCrew = async (
       setLoading(false);
       return;
     }
-  }
-
-  if (form?.cnic?.length < 9) {
-    toast?.error('Invalid National ID Number');
-    setLoading(false);
-    return;
   }
 
   if (form?.salary_expection <= 0) {
@@ -150,6 +151,8 @@ export const handleSubmitJoinCrew = async (
     form?.prefrences === null ||
     form?.education === '' ||
     form?.education === null ||
+    form?.major === '' ||
+    form?.major === null ||
     form?.country === '' ||
     form?.country === null ||
     form?.cv === '' ||
@@ -159,6 +162,8 @@ export const handleSubmitJoinCrew = async (
     form?.subField === null ||
     form?.job_type === '' ||
     form?.job_type === null ||
+    form?.gender === null ||
+    form?.gender === '' ||
     form?.projects === ''
   ) {
     toast?.error('All Fields Are Required');
@@ -208,6 +213,7 @@ export const handleSubmitJoinCrew = async (
       {
         ...updatedForm,
         availability: updatedForm?.availability?.value,
+        gender: updatedForm?.gender?.value,
         city: updatedForm?.city?.value,
         country: updatedForm?.country?.value,
         cnic: updatedForm?.cnic,
