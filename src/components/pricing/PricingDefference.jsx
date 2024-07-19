@@ -1,18 +1,39 @@
 'use client';
 import React from 'react';
 import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
+import { usePathname } from 'next/navigation';
 
 const PricingDefference = ({ data }) => {
+  const pathName = usePathname();
   const isSM = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <>
-      <Box sx={{ backgroundColor: '#F7F8FB' }}>
+      <Box
+        sx={{
+          backgroundColor: pathName?.includes('hire-remote-developers')
+            ? '#fff'
+            : '#F7F8FB',
+        }}
+      >
         <Box
           sx={{
             maxWidth: '1260px',
             p: 1.5,
             mx: 'auto',
-            py: { xs: '30px', md: '50px', lg: '75px' },
+            py: {
+              xs: '30px',
+              md: '50px',
+              lg: pathName?.includes('hire-remote-developers')
+                ? '100px'
+                : '75px',
+            },
+            pt: {
+              xs: '30px',
+              md: '50px',
+              lg: pathName?.includes('hire-remote-developers')
+                ? '130px'
+                : '75px',
+            },
           }}
         >
           {isSM ? (
@@ -141,7 +162,9 @@ const PricingDefference = ({ data }) => {
                       height: '100%',
                       '&:hover': {
                         backgroundColor: '#fff',
-                        boxShadow: 'transparent',
+                        boxShadow: pathName?.includes('hire-remote-developers')
+                          ? '0px 4px 10px 0px #0000001F'
+                          : 'none',
                       },
                     }}
                   >
