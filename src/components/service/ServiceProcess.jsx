@@ -155,7 +155,6 @@ const ServiceProcess = ({ data, windowWidth }) => {
             maxWidth: '1400px',
             display: 'flex',
             '@media (min-width:1440px)': {
-              // width: '1400px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -203,7 +202,6 @@ const ServiceProcess = ({ data, windowWidth }) => {
           </Box>
         </Box>
       </Box>
-      {/* </Box > */}
     </>
   );
 };
@@ -266,7 +264,8 @@ const ProcessCardTop = ({ data }) => {
         component={'img'}
         src={data?.image}
         sx={{
-          margin: '0 auto',
+          mx: 'auto',
+          display: 'flex',
           marginTop: '20px',
           width: 205,
           height: 235,
