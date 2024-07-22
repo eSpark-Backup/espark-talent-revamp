@@ -8,8 +8,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import Link from 'next/link';
 
-const HireLinks = ({ data, currentPage }) => {
+const HireLinks = ({ data, currentPage, setDropdown }) => {
   const swiperSettings = {
     slidesPerView: 1,
     // spaceBetween: 20,
@@ -46,7 +47,7 @@ const HireLinks = ({ data, currentPage }) => {
       sx={{
         my: currentPage?.includes('hire-remote-deevelopers') ? 4 : 3.7,
         width: '100%',
-        background: '#F7F8FBFA',
+        background: '#F7F8FB',
         '@media (max-width: 987px)': {
           background: '#fff',
           my: 0,
@@ -57,7 +58,7 @@ const HireLinks = ({ data, currentPage }) => {
         sx={{
           width: '100%',
           borderRadius: '6px',
-          background: '#F7F8FBFA',
+          background: '#F7F8FB',
           mx: 'auto',
           '@media (min-width:1500px)': {
             maxWidth: '1450px',
@@ -86,8 +87,9 @@ const HireLinks = ({ data, currentPage }) => {
                 }}
               >
                 {section?.lists?.map((list, listIndex) => (
-                  <>
+                  <div key={listIndex}>
                     <Typography
+                      key={listIndex}
                       variant="h5"
                       color="primary"
                       sx={{
@@ -106,6 +108,7 @@ const HireLinks = ({ data, currentPage }) => {
                     </Typography>
                     {list?.listItems?.map((item, itemIndex) => (
                       <Box
+                        onClick={() => setDropdown(null)}
                         key={`${index}-${listIndex}-${itemIndex}`}
                         sx={{
                           display: 'flex',
@@ -114,12 +117,15 @@ const HireLinks = ({ data, currentPage }) => {
                           my: 1.5,
                         }}
                       >
-                        <a href={item?.link}>
+                        <Link href={item?.link}>
                           <Typography
                             variant="body1"
                             sx={{
                               py: '0px',
                               color: 'black',
+                              '&:hover': {
+                                color: '#029894',
+                              },
                               fontSize: {
                                 xs: '14px',
                                 sm: '15px',
@@ -131,10 +137,10 @@ const HireLinks = ({ data, currentPage }) => {
                           >
                             {item?.title}
                           </Typography>
-                        </a>
+                        </Link>
                       </Box>
                     ))}
-                  </>
+                  </div>
                 ))}
               </Box>
             </SwiperSlide>

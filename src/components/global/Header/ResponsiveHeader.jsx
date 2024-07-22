@@ -36,6 +36,7 @@ const ResponsiveHeader = ({
   handleCloseNavMenu,
 }) => {
   const pathName = usePathname();
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (anchorElNav && !anchorElNav.contains(event.target)) {
