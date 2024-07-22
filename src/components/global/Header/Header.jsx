@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { usePathname, useRouter } from 'next/navigation';
@@ -67,39 +67,6 @@ const Header = () => {
               background: '#F7F7F7',
             }}
           >
-            <Box
-              backgroundColor={'#029894'}
-              sx={{
-                height: { lg: '26px', md: '40px' },
-                display: { xs: 'none', md: 'flex' },
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: 999,
-              }}
-            >
-              <Typography
-                color={'#fff'}
-                sx={{
-                  fontSize: {
-                    xs: '3px',
-                    sm: '15px !important',
-                  },
-                  fontWeight: 400,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                }}
-              >
-                Scale up your business with our exclusive offer! Start with No
-                Management Fee for First Employee.
-                <Box
-                  src="/images/homepage/rocket.svg"
-                  sx={{ mx: 0.5, width: '16px', height: '100%' }}
-                  component={'img'}
-                />
-              </Typography>
-            </Box>
             <AppBar
               position="static"
               sx={{
