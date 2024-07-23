@@ -7,7 +7,7 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
   return (
-    <Box sx={{ mb: { xs: '26px', md: '40px' } }}>
+    <Box sx={{ my: { xs: '40px', md: '60px', lg: '40px' } }}>
       <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>
         <Typography
           variant="h2"
@@ -43,7 +43,7 @@ const OurOutsourcing = ({ data }) => {
       <Container>
         <Grid container>
           <Grid item sm={12} md={6} lg={6.4}>
-            <Box>
+            <Box sx={{ px: 1.5 }}>
               <Typography
                 variant="h3"
                 sx={{
@@ -73,46 +73,48 @@ const OurOutsourcing = ({ data }) => {
                 {data?.description}
               </Typography>
             </Box>
-            {listItem?.map((item, index) => (
-              <Grid item sm={12} md={10} key={index}>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    textAlign: 'baseline',
-                    mx: { sm: '20%', md: '0%' },
-                  }}
-                >
-                  <ListItemIcon sx={{ minWidth: { xs: '28px', md: '30px' } }}>
-                    <TaskAltIcon
-                      fontSize="small"
-                      sx={{
-                        color: '#029894',
-                        fontSize: { xs: '15px', md: '22px' },
-                      }}
-                    />
-                  </ListItemIcon>
-                  <Typography
+            <Box sx={{ my: 2.5 }}>
+              {listItem?.map((item, index) => (
+                <Grid item sm={12} md={10} key={index}>
+                  <Box
                     sx={{
-                      mb: 2,
-                      color: '#001C63',
-                      fontSize: { xs: '11px', md: '14px' },
-                      lineHeight: { xs: '13.729px', md: '23.741px' },
-                      textAlign: 'left',
-                      fontWeight: 600,
+                      display: 'flex',
+                      textAlign: 'baseline',
+                      mx: { sm: '20%', md: '0%' },
                     }}
                   >
-                    {item?.description}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
+                    <ListItemIcon sx={{ minWidth: { xs: '28px', md: '30px' } }}>
+                      <TaskAltIcon
+                        fontSize="small"
+                        sx={{
+                          color: '#029894',
+                          fontSize: { xs: '15px', md: '22px' },
+                        }}
+                      />
+                    </ListItemIcon>
+                    <Typography
+                      sx={{
+                        mb: 2,
+                        color: '#001C63',
+                        fontSize: { xs: '11px', md: '14px' },
+                        lineHeight: { xs: '13.729px', md: '23.741px' },
+                        textAlign: 'left',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {item?.description}
+                    </Typography>
+                  </Box>
+                </Grid>
+              ))}
+            </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={5.6}>
             <Box
               sx={{
                 borderRadius: '17.311px',
                 backgroundColor: '#3B59980A',
-                pt: { lg: 1 },
+                p: { xs: 2 },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

@@ -107,7 +107,7 @@ const OutSourcingWonder = ({ data }) => {
                       background: ' #FFF',
                       border: '1px rgba(0, 0, 0, 0.25) solid',
                       display: 'flex',
-                      justifyContent: 'space-between',
+                      gap: { xs: 0.5 },
                       flexDirection: 'column',
                       mx: 'auto',
                     }}
