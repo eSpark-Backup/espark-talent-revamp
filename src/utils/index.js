@@ -1,4 +1,5 @@
 import supabase from '@/supabase/supabaseClient';
+import { useMediaQuery } from '@mui/material';
 import axios from 'axios';
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import { toast } from 'react-toastify';
@@ -259,3 +260,25 @@ export const handleSubmitJoinCrew = async (
     }));
   }
 };
+
+// home page hero untils
+
+export const getAnimation = () => {
+  const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl'].reduce((acc, key) => {
+    acc[`is_${key}`] = useMediaQuery((theme) => theme.breakpoints.only(key));
+    return acc;
+  }, {});
+
+  if (breakpoints.is_xl) return 'textSizeAnimation_Xl';
+  if (breakpoints.is_lg) return 'textSizeAnimation_lg';
+  if (breakpoints.is_md) return 'textSizeAnimation_md';
+  if (breakpoints.is_sm) return 'textSizeAnimation_sm';
+  if (breakpoints.is_xs) return 'textSizeAnimation_xs';
+  return null;
+};
+
+export const open = (link, target) => {
+  return window?.open(link || '', target);
+};
+
+// ************************ //
