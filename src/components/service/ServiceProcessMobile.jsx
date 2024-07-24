@@ -109,8 +109,6 @@ const ServiceProcessMobile = ({ data }) => {
             '@media (min-width: 360px) and (max-width: 599px)': {
               py: 2,
               gap: 2,
-              // justifyContent: `${process?.alignment == 'right' ? 'space-between' : 'space-between'
-              //   }`,
             },
             '@media (min-width: 280px) and (max-width: 359px)': {
               flexDirection: 'column',

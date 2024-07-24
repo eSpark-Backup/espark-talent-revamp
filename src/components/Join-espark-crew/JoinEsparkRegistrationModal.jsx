@@ -52,8 +52,8 @@ const JoinEsparkRegistrationModal = ({
           <Box
             component="form"
             sx={{
-              boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-              borderRadius: '10px',
+              // boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+              // borderRadius: '10px',
               backgroundColor: 'white',
               display: 'flex',
               flexDirection: 'column',
@@ -134,11 +134,12 @@ const JoinEsparkRegistrationModal = ({
                         },
                         [theme.breakpoints.up('md')]: {
                           width:
-                            item?.name === 'job_type' ||
                             item.name === 'projects'
                               ? '100%'
                               : item?.name === 'city' ||
-                                  item?.name === 'country'
+                                  item?.name === 'country' ||
+                                  item?.name === 'education' ||
+                                  item?.name === 'major'
                                 ? '48%'
                                 : '31%',
                         },
@@ -147,14 +148,38 @@ const JoinEsparkRegistrationModal = ({
                     >
                       {item?.type === 'text' || item?.type === 'url' ? (
                         <CustomInput
+                          value={form[item?.name]}
                           required={item?.required}
-                          label={item?.label}
+                          label={
+                            item?.name === 'major' &&
+                            (form?.education?.value === 'Bachelors' ||
+                              form?.education?.value === 'Masters')
+                              ? 'Degree'
+                              : item?.label
+                          }
                           type={item?.type}
                           name={item?.name}
-                          placeholder={item?.placeholder}
-                          tooltip={item?.tooltip}
+                          placeholder={
+                            item?.name === 'major' &&
+                            (form?.education?.value === 'Bachelors' ||
+                              form?.education?.value === 'Masters')
+                              ? 'Degree'
+                              : item?.placeholder
+                          }
+                          tooltip={
+                            item?.name === 'major' &&
+                            (form?.education?.value === 'Bachelors' ||
+                              form?.education?.value === 'Masters')
+                              ? 'Please enter your degree name'
+                              : item?.tooltip
+                          }
                           onChange={handleChange}
                           maxLength={item?.maxLength && item?.maxLength}
+                          className={
+                            item?.name === 'major' && !form?.education?.value
+                              ? 'hide'
+                              : ''
+                          }
                         />
                       ) : (
                         <>
@@ -248,7 +273,7 @@ const JoinEsparkRegistrationModal = ({
                                 value={form.tags}
                                 onChange={(e) => handleChange('tags', e)}
                                 name="skills"
-                                placeHolder="Start with # and press enter"
+                                placeHolder="Start with # and press enter to add a tag"
                                 beforeAddValidate={(tag) => {
                                   if (tag.trim().startsWith('#')) {
                                     return true;

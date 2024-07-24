@@ -9,11 +9,12 @@ import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SkeletonTheme } from 'react-loading-skeleton';
-import Header from '@/components/global/Header/Header';
+// import Header from '@/components/global/Header/Header';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
+import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
@@ -85,7 +86,7 @@ export default async function RootLayout({ children }) {
             <ToastProvider>
               <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <Header />
+                <AllpagesHeader />
                 <Box>{children}</Box>
                 <FooterCTA data={FOOTER_CTA_DATA} />
                 <Footer data={FOOTER_DATA} />

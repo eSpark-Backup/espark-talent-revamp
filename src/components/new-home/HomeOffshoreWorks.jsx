@@ -75,7 +75,7 @@ const HomeOffshoreWorks = ({ data }) => {
                       }
                       alt={`Experties Icon`}
                       style={{
-                        zIndex: '99999',
+                        zIndex: 500,
                         position: 'relative',
                         top: !item?.invert && '35px',
                         boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
@@ -160,7 +160,7 @@ const HomeOffshoreWorks = ({ data }) => {
                       height={isXS ? 100 : isSM ? 100 : isMD ? 80 : 100}
                       alt={`Experties Icon`}
                       style={{
-                        zIndex: '99999',
+                        zIndex: 500,
                         position: 'relative',
                         top: item?.invert && '-65px',
                         boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',

@@ -500,16 +500,24 @@ export const PREFRENCES_OPTIONS = [
 
 export const EDUCATION_OPTIONS = [
   {
+    label: 'Diploma',
+    value: 'Diploma',
+  },
+  {
+    label: 'Matriculate',
+    value: 'Matriculate',
+  },
+  {
     label: 'Intermediate',
     value: 'Intermediate',
   },
   {
-    label: 'Bachelor',
-    value: 'Bachelor',
+    label: 'Bachelors',
+    value: 'Bachelors',
   },
   {
-    label: 'Master',
-    value: 'Master',
+    label: 'Masters',
+    value: 'Masters',
   },
 ];
 
@@ -912,6 +920,21 @@ export const POSITIONS_BY_SUB_FIELD = {
   ],
 };
 
+export const genderOptions = [
+  {
+    value: 'male',
+    label: 'Male',
+  },
+  {
+    value: 'female',
+    label: 'Female',
+  },
+  {
+    value: 'prefer not to say',
+    label: 'Prefer Not To Say',
+  },
+];
+
 export const CITIES_OPTIONS = CITIES.map((city) => ({
   label: city,
   value: city.toLowerCase(), // Assuming value should be in lowercase
@@ -976,14 +999,13 @@ export const PERSONAL_INFO_FIELDS = [
       'Please enter your primary phone number. This will be used for all official communications eg: 03040207932, (555) 555-7890',
   },
   {
-    label: 'National ID',
-    type: 'number',
-    name: 'cnic',
+    type: 'select',
+    name: 'gender',
     required: true,
-    placeholder: 'Enter National ID Number',
-    tooltip:
-      'Please enter your National ID number as it appears on your identity card, excluding all dashes. eg: 4220112345678, 234567890',
-    maxLength: 13,
+    label: 'Gender',
+    placeholder: 'Select Gender',
+    tooltip: 'Please select your gender.',
+    options: genderOptions,
   },
   {
     label: 'LinkedIn Profile Link',
@@ -1033,18 +1055,13 @@ export const PERSONAL_INFO_FIELDS = [
     options: PREFRENCES_OPTIONS,
   },
   {
-    type: 'tags',
-    tooltip:
-      'Please write the technologies you are proficient in. Also Please type # before the technology name. Then press enter to add a tag. eg: #ReactJS, #NodeJS, #VueJS',
-  },
-  {
-    type: 'select',
-    name: 'education',
+    label: 'Skills, Technologies and Expertise',
+    type: 'text',
+    name: 'tags',
     required: true,
-    label: 'Education',
-    placeholder: 'Education',
-    tooltip: 'Please select your highest level of education.',
-    options: EDUCATION_OPTIONS,
+    placeholder: 'Enter Skills, Technologies and Expertise',
+    tooltip:
+      'Please write the technologies you are proficient in. Also include your skills and expertise. This will help us understand your skills better.',
   },
   {
     label: 'Github Link',
@@ -1087,6 +1104,24 @@ export const PERSONAL_INFO_FIELDS = [
       'Tell us about your role in projects, technologies used and outcomes achieved.',
     tooltip:
       'Please write about the projects you have worked on. Include the technologies you used, your role in the project, and the outcomes you achieved. This will help us understand your experience and skills better.',
+  },
+  {
+    type: 'select',
+    name: 'education',
+    required: true,
+    label: 'Education',
+    placeholder: 'Education',
+    tooltip: 'Please select your highest level of education.',
+    options: EDUCATION_OPTIONS,
+  },
+  {
+    type: 'text',
+    name: 'major',
+    required: true,
+    label: 'Certificate',
+    placeholder: 'Certificate',
+    tooltip:
+      'Please enter the major you studied in your highest level of education.',
   },
   {
     type: 'select',
