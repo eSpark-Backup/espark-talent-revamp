@@ -96,14 +96,23 @@ const HomePageHiringModal = ({ data }) => {
                   />
                 </Box>
                 <Box sx={{ p: 3 }}>
-                  <Typography component={'ul'}>
+                  <Typography component={'ul'} sx={{ pl: 0 }}>
                     {eachItem?.points?.map((item, index) => (
                       <Typography
                         key={index}
                         component={'li'}
-                        sx={{ display: 'flex', gap: 1, mb: 1 }}
+                        sx={{
+                          display: 'flex',
+                          gap: 1,
+                          mb: 1,
+                          alignItems: 'start',
+                        }}
                       >
-                        <Box component={'img'} src={item?.icon || ''} />{' '}
+                        <Box
+                          component={'img'}
+                          src={item?.icon || ''}
+                          sx={{ mt: 0.7 }}
+                        />
                         <Typography
                           component={'span'}
                           sx={{

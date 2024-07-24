@@ -91,6 +91,13 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
             >
               <Box
                 sx={{ display: 'flex' }}
+                onClick={() => {
+                  if (page === 'Pricing') {
+                    window.open('/pricing', '_self');
+                  } else {
+                    null;
+                  }
+                }}
                 onMouseEnter={(event) => {
                   handleClick(event, page);
                   handleMouseEnter();
@@ -110,20 +117,22 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                 >
                   {page}
                 </Typography>
-                <Image
-                  quality="85"
-                  priority={true}
-                  src={'/images/header/arrow.svg'}
-                  width={13}
-                  height={7}
-                  alt="arrow"
-                  style={{ marginLeft: '2px' }}
-                />
+                {page !== 'Pricing' && (
+                  <Image
+                    quality="85"
+                    priority={true}
+                    src={'/images/header/arrow.svg'}
+                    width={13}
+                    height={7}
+                    alt="arrow"
+                    style={{ marginLeft: '2px' }}
+                  />
+                )}
               </Box>
             </Button>
             <Popper
               id={id}
-              open={open}
+              open={currentPage === 'Pricing' ? null : open}
               ref={notificationPopupRef}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}

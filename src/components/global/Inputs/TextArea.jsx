@@ -67,6 +67,7 @@ const TextArea = ({
         placeholder={placeholder}
         name={name}
         onChange={(e) => onChange(name, e.target.value)}
+        required={required}
       />
     </Stack>
   );
