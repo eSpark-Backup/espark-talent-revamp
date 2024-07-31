@@ -28,7 +28,7 @@ const HomePageHero = ({ data }) => {
             flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
             justifyContent: 'flex-end',
-            py: { xs: 3, sm: 4, md: 0 },
+            py: { xs: 3, sm: 4, md: 6 },
             pl: 3,
             '@media (min-width: 1650px) and (max-width: 1920px)': {
               justifyContent: 'flex-end',
@@ -164,14 +164,14 @@ const HomePageHero = ({ data }) => {
             />
           </Box>
           <Box
+            component={'img'}
+            src={data?.bgImage || ''}
             sx={{
-              width: { sm: '500px', md: '726px' },
-              height: { sm: '400px', md: '639px' },
+              width: { xs: '46%' },
+              height: { xs: 'auto' },
+              maxWidth: '726px',
+              maxHeight: '639px',
               display: { xs: 'none', md: 'flex' },
-              background: `url(${data?.bgImage || ''})`,
-              backgroundSize: '100%',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
             }}
           />
           <Box

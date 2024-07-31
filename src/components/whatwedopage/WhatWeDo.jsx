@@ -27,10 +27,17 @@ const WhatWeDo = () => {
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
+        length={100}
+        fontSize={{
+          xs: '19px !important',
+          sm: '20px !important',
+          md: '22px !important',
+          lg: '24px !important',
+        }}
+        lineHeight={{ xs: '30px !important', sm: '25px !important' }}
+        fontWeight={500}
         bgColor={'#3B59980A'}
         txtColor={'#001C63'}
-        fontWeight={500}
-        fontSize={'24px !important'}
         compeleteTitle={
           'Meet our partners who trust our certified tech experts offering 100% business growth results'
         }

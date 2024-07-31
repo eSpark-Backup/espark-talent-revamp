@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const ServiceHeroSection = ({ data }) => {
-  const isSmallScreen = useMediaQuery('(max-width:425px)');
   const pathName = usePathname();
 
   return (
@@ -140,7 +138,7 @@ const ServiceHeroSection = ({ data }) => {
                   </Grid>
                   <Grid item xs={12} lg={8}>
                     <Box
-                      gap={{ xs: 2.3, sm: 3, md: 4 }}
+                      gap={{ xs: 2.3, sm: 3, md: 3 }}
                       sx={{
                         display: 'flex',
                         alignItems: 'center',
@@ -169,16 +167,15 @@ const ServiceHeroSection = ({ data }) => {
                       }}
                     >
                       {data?.awardsSection?.map((item, index) => (
-                        <Image
+                        <Box
+                          component={'img'}
                           key={index}
-                          src={item.image}
-                          width={
-                            index >= data.awardsSection.length - 2 ? 70 : 60
-                          }
-                          height={
-                            index >= data.awardsSection.length - 2 ? 60 : 40
-                          }
+                          src={item?.image}
                           alt={item.alt}
+                          sx={{
+                            width: { xs: '51px', sm: '70px' },
+                            height: { xs: '51px', sm: '65px' },
+                          }}
                         />
                       ))}
                     </Box>
@@ -196,13 +193,15 @@ const ServiceHeroSection = ({ data }) => {
                     justifyContent: 'right',
                   }}
                 >
-                  <Image
-                    quality="85"
-                    priority={true}
+                  <Box
+                    component={'img'}
                     src={data?.image}
-                    width={isSmallScreen ? 243 : data?.imageWidth || 450}
+                    quality="85"
                     alt={`${data?.imageAlt}`}
-                    height={data?.imageHeight || 450}
+                    sx={{
+                      width: { xs: 243, md: 450 },
+                      height: { xs: 'auto' },
+                    }}
                   />
                 </Grid>
               )}
