@@ -28,7 +28,7 @@ const GlobalLayout = ({
       <Box
         display="flex"
         alignItems="center"
-        px={{ xs: 2, sm: 2, md: 3, lg: 2 }}
+        px={{ xs: 2, sm: 2, md: 2.5, lg: 2 }}
         sx={{
           position: relative ? 'relative' : sticky ? 'sticky' : 'static',
           top: sticky ? 0 : 'unset',

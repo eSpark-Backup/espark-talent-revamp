@@ -28,8 +28,6 @@ const HomeTop = () => {
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-        bgColor={'#029894'}
-        txtColor={'#ffffff'}
         compeleteTitle={
           'Meet our partners who trust our certified tech experts'
         }
@@ -43,6 +41,8 @@ const HomeTop = () => {
         }}
         lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
+        bgColor={'#029894'}
+        txtColor={'#ffffff'}
       />
       <HomePageDifference data={DIFFERENCE_DATA} />
       <HomeOffshoreWorks data={OFFSHORE_DATA} />

@@ -1,12 +1,5 @@
 'use client';
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,10 +7,11 @@ import React from 'react';
 
 const Hero = ({ data }) => {
   const pathName = usePathname();
-  const isSmallScreen = useMediaQuery('(max-width:425px)');
+
   return (
     <>
       <Box
+        component={'div'}
         sx={{
           py: data?.spacing,
           pt: data?.pt,
@@ -61,7 +55,18 @@ const Hero = ({ data }) => {
               item
               xs={12}
               sm={data?.leftGrid || 7}
-              sx={{ display: 'flex', flexDirection: 'column' }}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                mt: pathName?.includes('/blogs')
+                  ? { xs: 3.5, sm: 0.5, md: 0 }
+                  : 0,
+                mb:
+                  pathName?.includes('/blogs') ||
+                  pathName?.includes('/business-startup')
+                    ? { xs: 0.5, sm: 0.5, md: 2 }
+                    : 0,
+              }}
             >
               {data?.title && (
                 <Typography
@@ -232,13 +237,16 @@ const Hero = ({ data }) => {
                   justifyContent: 'right',
                 }}
               >
-                <Image
+                <Box
+                  component={'img'}
                   quality="85"
                   priority={true}
                   src={data?.image}
-                  width={isSmallScreen ? 220 : data?.imageWidth || 450}
+                  sx={{
+                    width: { xs: '220px', md: '380px', lg: '450px' },
+                    height: 'auto',
+                  }}
                   alt={`${data?.imageAlt}`}
-                  height={data?.imageHeight || 450}
                 />
               </Grid>
             )}

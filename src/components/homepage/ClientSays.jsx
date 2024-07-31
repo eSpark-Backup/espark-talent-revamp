@@ -147,14 +147,14 @@ const ClientSays = ({ data }) => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            pt: { xs: 3, sm: 4 },
+                            pt: { xs: 3.5, sm: 3, md: 4 },
                             px: { xs: 2 },
                           }}
                         >
                           <Box
                             sx={{
                               width: { xs: '100%', sm: '440px' },
-                              height: { xs: '28px', sm: '50px' },
+                              height: { xs: '28px', sm: '38px', md: '50px' },
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'space-between',
@@ -162,7 +162,7 @@ const ClientSays = ({ data }) => {
                           >
                             <Box
                               sx={{
-                                height: { xs: '28px', sm: '34px' },
+                                height: { xs: '25px', sm: '10px', md: '34px' },
                               }}
                             >
                               <Box

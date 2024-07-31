@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
@@ -161,29 +160,32 @@ function DefaultNavbar({
                     data={HIRE_A_TALENT_MENU}
                     setDropdown={setDropdown}
                   />
-                ) : null}
-                {routes?.map(({ collapse, name }) => {
-                  if (
-                    name === dropdownName &&
-                    dropdownName !== 'Hire A Talent'
-                  ) {
-                    return collapse?.map(
-                      ({ name, icon, description, href }, index) => (
-                        <Box key={index}>
-                          <DropItems
-                            name={name}
-                            icon={icon}
-                            description={description}
-                            href={href}
-                            index={index}
-                            collapse={collapse}
-                            setDropdown={setDropdown}
-                          />
-                        </Box>
-                      )
-                    );
-                  }
-                })}
+                ) : (
+                  <>
+                    {routes?.map(({ collapse, name }) => {
+                      if (
+                        name === dropdownName &&
+                        dropdownName !== 'Hire A Talent'
+                      ) {
+                        return collapse?.map(
+                          ({ name, icon, description, href }, index) => (
+                            <Box key={index}>
+                              <DropItems
+                                name={name}
+                                icon={icon}
+                                description={description}
+                                href={href}
+                                index={index}
+                                collapse={collapse}
+                                setDropdown={setDropdown}
+                              />
+                            </Box>
+                          )
+                        );
+                      }
+                    })}
+                  </>
+                )}
               </Box>
             </Box>
           </Grow>

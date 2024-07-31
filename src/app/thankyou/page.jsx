@@ -11,17 +11,10 @@ import { THANKYOU_DATA } from '@/constants/thankyou/thankyou';
 const Page = () => {
   return (
     <>
-      {' '}
       <ThankYou data={THANKYOU_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-        bgColor={'##fff'}
-        txtColor={'#029894'}
-        shortTitle={'Meet our partners who trust our certified tech experts'}
-        compeleteTitle={
-          'Meet our partners who trust our certified tech experts offering 100% business growth results'
-        }
         length={100}
         fontSize={{
           xs: '19px !important',
@@ -31,6 +24,12 @@ const Page = () => {
         }}
         lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
+        bgColor={'#fff'}
+        txtColor={'#029894'}
+        compeleteTitle={
+          'Meet our partners who trust our certified tech experts offering 100% business growth results'
+        }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
       />
     </>
   );
