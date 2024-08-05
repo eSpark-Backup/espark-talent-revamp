@@ -15,29 +15,34 @@ const CARD_STYLE = {
   borderRadius: '10px',
   px: '30px',
   py: '20px',
-  m: '10px',
+  height: '100%',
   background: '#fff',
 };
 
 const WikiCards = ({ data }) => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [loading, setLoading] = useState(true);
   const wikis = data ? data : [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const wikiCategories = [...new Set(wikis?.map((item) => item?.wikiCategory))];
-  console.log(wikiCategories, 'wikiCategories');
+  const wikiCategories = [
+    ...new Set(wikis?.map((item) => item?.wikiCategory)?.filter(Boolean)),
+  ];
+  const all = wikiCategories?.length ? 'All' : null;
+  const new_wikiCategories = all ? [all, ...wikiCategories] : wikiCategories;
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      // setLoading(false);
-    }, 2000);
+      setLoading(false);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const onSelectCategory = (category) => {
-    setSelectedCategory(category ? category : 'all');
+    setSelectedCategory(category ? category : 'All');
   };
 
   const filteredData =
-    selectedCategory === 'all'
+    selectedCategory === 'All'
       ? wikis
       : wikis?.filter((item) => item?.wikiCategory === selectedCategory);
   filteredData?.sort((a, b) => a?.id - b?.id);
@@ -51,6 +56,7 @@ const WikiCards = ({ data }) => {
             justifyContent: 'center',
             alignItems: 'end',
             pt: '4%',
+            px: 1,
             gap: {
               xs: 1,
               sm: 1,
@@ -59,53 +65,54 @@ const WikiCards = ({ data }) => {
             },
           }}
         >
-          <Button
-            size="small"
-            onClick={() => onSelectCategory(null)}
-            variant={selectedCategory === 'all' ? 'contained' : ''}
-            color="primary"
-            sx={{ borderRadius: '50px' }}
-          >
-            <Typography
-              fontSize={{
-                xs: '10px',
-                sm: '12px',
-                md: '15px',
-                lg: '20px',
-              }}
-              color={selectedCategory === 'all' ? 'white' : '#001C63'}
-              fontWeight="600"
-            >
-              {wikiCategories ? 'All' : <Skeleton width={30} height={20} />}
-            </Typography>
-          </Button>
-          {wikiCategories?.map((category, index) => (
-            <Button
-              key={index}
-              onClick={() => onSelectCategory(category)}
-              variant={selectedCategory === category ? 'contained' : ''}
-              color="primary"
-              sx={{ borderRadius: '50px', fontWeight: 600 }}
-            >
-              <Typography
-                fontSize={{
-                  xs: '10px',
-                  sm: '12px',
-                  md: '15px',
-                  lg: '20px',
-                }}
-                color={selectedCategory === category ? 'white' : '#001C63'}
-                fontWeight="600"
-              >
-                {!category ? <Skeleton width={30} height={20} /> : category}
-              </Typography>
-            </Button>
+          {new_wikiCategories?.map((category, index) => (
+            <>
+              {!category || loading ? (
+                <Skeleton
+                  width={140}
+                  height={33}
+                  variant="rectangular"
+                  sx={{ borderRadius: '50px' }}
+                />
+              ) : (
+                <Button
+                  key={index}
+                  onClick={() => onSelectCategory(category)}
+                  variant={
+                    selectedCategory === category ? 'contained' : 'outlined'
+                  }
+                  color="primary"
+                  sx={{
+                    border: 'none',
+                    borderRadius: '50px',
+                    fontWeight: 600,
+                    fontSize: {
+                      xs: '12px',
+                      sm: '13px',
+                      md: '15px',
+                      lg: '20px',
+                    },
+                    px: 2.2,
+                    color: selectedCategory === category ? 'white' : '#001C63',
+                    '&:hover': {
+                      border: 'none',
+                    },
+                  }}
+                >
+                  {category}
+                </Button>
+              )}
+            </>
           ))}
         </Grid>
-        <Box sx={{ px: ['0%', '0%', '10%', '10%'] }}>
+        <Box sx={{ px: { md: '3%', lg: '10%' } }}>
           <Box sx={{ py: '3%' }}>
             <Container>
-              <Grid container sx={{ display: 'flex', justifyContent: 'left' }}>
+              <Grid
+                container
+                sx={{ display: 'flex', justifyContent: 'left' }}
+                spacing={2}
+              >
                 {filteredData?.map((item) => (
                   <Grid
                     key={item?.id}
@@ -125,7 +132,7 @@ const WikiCards = ({ data }) => {
                           pb: '15px',
                         }}
                       >
-                        {item?.iconImage ? (
+                        {!loading && item?.iconImage ? (
                           <Image
                             quality="85"
                             priority={true}
@@ -137,7 +144,7 @@ const WikiCards = ({ data }) => {
                         ) : (
                           <Skeleton width={40} height={40} />
                         )}
-                        {item?.title ? (
+                        {!loading && item?.title ? (
                           <Link href={`/esparkwiki/${item?.slug}`}>
                             <Typography
                               color="#000"
@@ -173,7 +180,7 @@ const WikiCards = ({ data }) => {
                             lg: '15px',
                           }}
                         >
-                          {item?.salary ? (
+                          {!loading && item?.salary ? (
                             'Average Salary'
                           ) : (
                             <Skeleton
@@ -193,7 +200,7 @@ const WikiCards = ({ data }) => {
                           }}
                           fontWeight={600}
                         >
-                          {item?.salary ? (
+                          {!loading && item?.salary ? (
                             `USD: $${item?.salary?.toLocaleString()} per month`
                           ) : (
                             <Skeleton
@@ -204,7 +211,7 @@ const WikiCards = ({ data }) => {
                         </Typography>
                       </Box>
                       <Box>
-                        {item?.slug ? (
+                        {!loading && item?.slug ? (
                           <Link href={`/esparkwiki/${item?.slug}`}>
                             <Typography
                               variant="body1"

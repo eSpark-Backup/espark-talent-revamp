@@ -38,10 +38,27 @@ const HomePageHero = ({ data }) => {
       >
         <Box
           sx={{
-            height: '100%',
-            pr: { xs: 3.5, sm: 2 },
-            width: { xs: 'auto', md: '850px', lg: '900px' },
-            '@media(min-width:1921px)': { mx: 'auto' },
+            width: '100%',
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            py: { xs: 3, sm: 4, md: 6 },
+            pl: 3,
+            '@media (min-width: 1650px) and (max-width: 1920px)': {
+              justifyContent: 'flex-end',
+              py: 6,
+              pl: 6,
+            },
+            '@media(min-width:1921px)': {
+              justifyContent: 'space-between',
+              maxWidth: '100%',
+              py: 6,
+              pl: 16,
+            },
+            '@media(min-width:1300px) and (max-width:1649px)': {
+              py: 5,
+            },
           }}
         >
           <Box
@@ -131,8 +148,25 @@ const HomePageHero = ({ data }) => {
             </Button>
           </Box>
           <Box
-            component={'hr'}
-            sx={{ width: { xs: '90%', sm: '100%' }, my: 2.5 }}
+            component={'img'}
+            src={data?.bgImage || ''}
+            sx={{
+              width: { xs: '46%' },
+              height: { xs: 'auto' },
+              maxWidth: '726px',
+              maxHeight: '639px',
+              display: { xs: 'none', md: 'flex' },
+            }}
+          />
+          <Box
+            component={'img'}
+            src={data?.responsiveImage || ''}
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              mt: 4,
+              ml: 'auto',
+              mr: 0,
+            }}
           />
         </Box>
         <Box

@@ -249,7 +249,10 @@ const ProcessCardTop = ({ data }) => {
           fontWeight: 400,
           lineHeight: 1.6,
           fontSize: '15px',
+          display: 'flex',
           textAlign: 'center',
+          maxWidth: '320px',
+          mx: 'auto',
           minHeight:
             path?.includes(full_stack) || path?.includes(mern_stack)
               ? '120px'
@@ -330,7 +333,7 @@ const ProcessCardBottom = ({ data }) => {
           lineHeight: 1.6,
           fontSize: '14px',
           textAlign: 'center',
-          maxWidth: '300px',
+          maxWidth: '330px',
           '@media(min-width: 1024px) and (max-width:1439px)': {
             fontSize: '12px',
           },

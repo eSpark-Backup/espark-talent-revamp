@@ -33,6 +33,7 @@ const OurQualityService = ({ ourQualityService }) => {
                       borderRadius: '5px',
                       py: '18px',
                       display: 'flex',
+                      minHeight: { xs: '85px', sm: 'auto' },
                       alignItems: 'center',
                       alignContent: 'center',
                       justifyContent: 'center',
