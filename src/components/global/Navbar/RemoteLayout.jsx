@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation'; // Import useRouter
 const RemoteLayout = ({
   relative,
   sticky,
-  Link,
   center,
   renderNavbarItems,
   action,
