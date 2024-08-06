@@ -3,8 +3,8 @@ export const HERO_DATA = {
   title: `Hire Top Talent On-Demand In`,
   animateText: 'Just 48 Hours.',
   description: `Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.`,
-  bgImage: '/images/homepage/hero/hero-img-res.svg',
-  responsiveImage: '/images/homepage/hero/hero-img-res.svg',
+  bgImage: '/images/homepage/hero/hero.png',
+  responsiveImage: '/images/homepage/hero/hero-img-res.png',
   btnTitle: `Book A Demo`,
   btnLink: `/book-a-demo`,
 };
@@ -338,6 +338,33 @@ export const EXPERTIES_DATA = {
         },
         { title: 'QA Engineer', link: '/hire-qa-engineers' },
       ],
+    },
+  ],
+};
+
+export const OFFSHORE_DATA = {
+  title: `How offshoring works`,
+  bgImage: `/images/new-home/offshore-works/bg.png`,
+  bgImageInvert: `/images/new-home/offshore-works/bg-invert.png`,
+  items: [
+    {
+      invert: false,
+      icon: '/images/new-home/offshore-works/no1.png',
+      title: 'Tell us your needs',
+      description: 'We discuss your requirments, budget and job details.',
+    },
+    {
+      invert: true,
+      icon: '/images/new-home/offshore-works/no2.png',
+      title: 'Meet top candidates',
+      description:
+        'Connect directly with your best matches, fully vetted and highly responsive.',
+    },
+    {
+      invert: false,
+      icon: '/images/new-home/offshore-works/no3.png',
+      title: 'Hire and Onboarding',
+      description: "Decide who to hire, and we'll take care of the rest.",
     },
   ],
 };

@@ -10,7 +10,6 @@ import {
   AccordionSummary,
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 const ServiceFaq = ({ data, color }) => {
   const [expanded, setExpanded] = useState(null);
@@ -41,21 +40,14 @@ const ServiceFaq = ({ data, color }) => {
                 alignItems: 'flex-start',
               }}
               expandIcon={
-                expanded === 'panel' ? (
-                  <ArrowDropUpIcon
-                    sx={{
-                      color: 'black',
-                      fontSize: { xs: '1.5em', md: '2em' },
-                    }}
-                  />
-                ) : (
-                  <ArrowDropDownIcon
-                    sx={{
-                      color: 'black',
-                      fontSize: { xs: '1.5em', md: '2em' },
-                    }}
-                  />
-                )
+                <ArrowDropDownIcon
+                  sx={{
+                    color: 'black',
+                    fontSize: { xs: '1.5em', md: '2em' },
+                    mt: expanded === panel ? 0 : 0.5,
+                    mb: expanded === panel ? 1.5 : 0,
+                  }}
+                />
               }
               aria-controls={`${panel}-content`}
               id={`${panel}-header`}
@@ -77,11 +69,10 @@ const ServiceFaq = ({ data, color }) => {
                 {item?.heading}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ mt: { xs: '-15px', md: '0px' } }}>
+            <AccordionDetails sx={{ mt: { xs: '-10px', md: '0px' } }}>
               <Typography
                 sx={{
                   color: '#09114A !important ',
-                  // textAlign: 'justify',
                   fontWeight: 400,
                   fontSize: {
                     lg: '18px',

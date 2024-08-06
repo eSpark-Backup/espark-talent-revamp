@@ -42,19 +42,21 @@ const Page = () => {
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-        bgColor={'#3B59980A'}
-        txtColor={'#001C63'}
-        fontWeight={500}
-        compeleteTitle={
-          'Meet our partners who trust our certified tech experts offering 100% business growth results'
-        }
-        shortTitle={'Meet our partners who trust our certified tech experts'}
+        length={100}
         fontSize={{
           xs: '19px !important',
           sm: '20px !important',
           md: '22px !important',
           lg: '24px !important',
         }}
+        lineHeight={{ xs: '30px !important', sm: '25px !important' }}
+        fontWeight={500}
+        bgColor={'#fff'}
+        txtColor={'#09114A'}
+        compeleteTitle={
+          'Meet our partners who trust our certified tech experts offering 100% business growth results'
+        }
+        shortTitle={'Meet our partners who trust our certified tech experts'}
       />
       <OutSourcingItem data={OUTSOURCING_LIST_DATA} />
       <OutSourcingAdvantage data={OUTSOURCING_ADVANTAGES_DATA} />

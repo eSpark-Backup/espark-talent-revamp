@@ -10,16 +10,16 @@ import {
   EXPERTIES_DATA,
   HERO_DATA,
   HIRING_DATA,
-  WORKS_DATA,
+  OFFSHORE_DATA,
 } from '@/constants/new-home';
 import ClientSays from './ClientSays';
 import ClientSlider from '../global/ClientSlider';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import HomePageProcess from '../new-home/HomePageProcess';
 import HomePageDifference from '../new-home/HomePageDifference';
 import HomePageHiringModal from '../new-home/HomePageHiringModal';
 import HomePageHero from '../new-home/HomePageHero';
+import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 
 const HomeTop = () => {
   return (
@@ -28,8 +28,6 @@ const HomeTop = () => {
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-        bgColor={'#029894'}
-        txtColor={'#ffffff'}
         compeleteTitle={
           'Meet our partners who trust our certified tech experts'
         }
@@ -43,9 +41,11 @@ const HomeTop = () => {
         }}
         lineHeight={{ xs: '30px !important', sm: '25px !important' }}
         fontWeight={500}
+        bgColor={'#029894'}
+        txtColor={'#ffffff'}
       />
       <HomePageDifference data={DIFFERENCE_DATA} />
-      <HomePageProcess data={WORKS_DATA} />
+      <HomeOffshoreWorks data={OFFSHORE_DATA} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <HomePageHiringModal data={HIRING_DATA} />

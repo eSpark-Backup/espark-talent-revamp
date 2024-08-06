@@ -12,10 +12,10 @@ const AwardAchievement = ({ data, design, background }) => {
     <Box
       sx={{
         py: {
-          xs: '20px',
+          xs: pathName.includes('hire-remote-developers') ? 0 : '20px',
           md:
             pathName.includes('/book-a-meeting') ||
-            pathName.includes('/hire-remote-developers')
+            pathName.includes('hire-remote-developers')
               ? null
               : '40px',
         },

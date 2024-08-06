@@ -12,6 +12,7 @@ import {
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { hideCtaPaths } from '@/constants/homepage';
+import { PRICING_DATA } from '@/constants/pricing';
 
 const FooterCTA = ({ data }) => {
   const pathName = usePathname();
@@ -19,6 +20,7 @@ const FooterCTA = ({ data }) => {
   const is425Screen = useMediaQuery('(max-width:425px)');
   const is375Screen = useMediaQuery('(max-width:375px)');
   const shouldHideCta = (path) => hideCtaPaths.includes(path);
+
   return (
     <>
       {pathName !== '/book-a-demo' &&
@@ -27,6 +29,7 @@ const FooterCTA = ({ data }) => {
         pathName !== '/book-a-demo-meeting' &&
         pathName !== '/service/mean-stack-developer' &&
         pathName !== '/partnership-program' &&
+        pathName !== '/hire-remote-developers' &&
         !shouldHideCta(pathName) && (
           <Box
             sx={{
@@ -39,22 +42,29 @@ const FooterCTA = ({ data }) => {
               ],
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              py: pathName === '/pricing' && 5,
             }}
           >
             <Container>
               <Grid
                 container
-                sx={{ display: 'flex', justifyContent: 'center' }}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: pathName === '/pricing' ? 'center' : 'start',
+                }}
               >
                 <Grid
                   item
                   lg={8.5}
                   md={8.5}
-                  sm={7}
-                  xs={7}
+                  sm={pathName === '/pricing' ? 12 : 7}
+                  xs={pathName === '/pricing' ? 12 : 7}
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
+                    flexDirection: 'column',
                     py: { lg: '1%', md: '1%' },
                   }}
                 >
@@ -66,16 +76,16 @@ const FooterCTA = ({ data }) => {
                         fontSize: {
                           lg: '50px',
                           md: '32px',
-                          sm: '20px',
-                          xs: '14px',
+                          sm: pathName === '/pricing' ? '37px' : '20px',
+                          xs: pathName === '/pricing' ? '31px' : '14px',
                         },
                         '@media (min-width: 280px) and (max-width:359px)': {
-                          fontSize: '12px',
+                          fontSize: pathName === '/pricing' ? '28px' : '12px',
                           lineHeight: 1.1,
                         },
                         '@media (min-width: 426px) and (max-width:459px)': {
-                          fontSize: '13px',
-                          lineHeight: 1,
+                          fontSize: pathName === '/pricing' ? '31px' : '13px',
+                          lineHeight: 1.2,
                         },
                         lineHeight: 1.3,
                         fontWeight: 700,
@@ -83,7 +93,9 @@ const FooterCTA = ({ data }) => {
                         pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
                       }}
                     >
-                      {data?.title}
+                      {pathName == '/pricing'
+                        ? PRICING_DATA?.cta.heading
+                        : data?.title}
                     </Typography>
                     {pathName !== '/thankyou' && (
                       <>
@@ -93,19 +105,23 @@ const FooterCTA = ({ data }) => {
                             fontSize: {
                               lg: '24px',
                               md: '20px',
-                              sm: '10px',
-                              xs: '10px',
+                              sm: pathName === '/pricing' ? '18px' : '10px',
+                              xs: pathName === '/pricing' ? '18px' : '10px',
                             },
                             '@media (min-width: 280px) and (max-width:359px)': {
-                              fontSize: '8px',
+                              fontSize:
+                                pathName === '/pricing' ? '18px' : '8px',
                             },
                             lineHeight: 1.3,
-                            fontWeight: 400,
+                            fontWeight: 300,
+                            letterSpacing: pathName === '/pricing' && '0.085em',
                             py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
                             pb: { lg: '3.5%', md: '3%', sm: '3%', xs: '3%' },
                           }}
                         >
-                          {data?.description}
+                          {pathName == '/pricing'
+                            ? PRICING_DATA?.cta.paragraph
+                            : data?.description}
                         </Typography>
                         <Link
                           href={
@@ -161,7 +177,7 @@ const FooterCTA = ({ data }) => {
                     )}
                   </Box>
                 </Grid>
-                {pathName !== '/thankyou' && (
+                {pathName !== '/thankyou' && pathName !== '/pricing' && (
                   <Grid
                     item
                     lg={3.5}

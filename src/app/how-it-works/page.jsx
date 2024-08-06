@@ -13,11 +13,7 @@ const filteredData =
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {
-  return (
-    <>
-      <HowitsWork />
-    </>
-  );
+  return <HowitsWork />;
 };
 
 export default Page;

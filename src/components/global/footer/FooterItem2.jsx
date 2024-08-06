@@ -4,12 +4,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 const FooterItem2 = ({ section }) => {
   return (
-    <Box
-      sx={{
-        pr: { xs: '5%', sm: '10%', md: '0%' },
-        pl: { xs: '5%', sm: '10%', md: '0%' },
-      }}
-    >
+    <Box>
       {section?.map((item, index) => (
         <Grid container alignItems="center" key={index} sx={{ pt: 1.5 }}>
           <Grid item>

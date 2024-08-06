@@ -95,7 +95,7 @@ span {
   color: var(--whiteColor);
 }
 
-.hoverItem:hover > .hoverIcon {
+.hoverItem:hover>.hoverIcon {
   color: #fff;
 }
 
@@ -450,6 +450,7 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
+
   /* .hrFirmResponsive {
     display: block;
   }
@@ -487,8 +488,8 @@ span {
   padding-left: 30px;
 }
 
-.blog-content h3 + p,
-.blog-content h3 + p + p {
+.blog-content h3+p,
+.blog-content h3+p+p {
   padding-left: 30px;
 }
 
@@ -572,8 +573,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3 + p,
-  .blog-content h3 + p + p {
+  .blog-content h3+p,
+  .blog-content h3+p+p {
     padding-left: 25px;
   }
 
@@ -600,8 +601,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3 + p,
-  .blog-content h3 + p + p {
+  .blog-content h3+p,
+  .blog-content h3+p+p {
     padding-left: 20px;
   }
 
@@ -628,8 +629,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3 + p,
-  .blog-content h3 + p + p {
+  .blog-content h3+p,
+  .blog-content h3+p+p {
     padding-left: 20px;
   }
 
@@ -654,8 +655,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3 + p,
-  .blog-content h3 + p + p {
+  .blog-content h3+p,
+  .blog-content h3+p+p {
     padding-left: 20px;
   }
 
@@ -677,8 +678,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3 + p,
-  .blog-content h3 + p + p {
+  .blog-content h3+p,
+  .blog-content h3+p+p {
     padding-left: 20px;
   }
 
@@ -748,11 +749,10 @@ span {
   max-width: 1115px !important;
 }
 
-.swiper-slide-team-card {
-  /* max-width: 556px !important; */
+/* .swiper-slide-team-card {
   width: 555px;
   width: 100%;
-}
+} */
 
 .mySwiper-its-our-job {
   max-width: 1200px !important;
@@ -801,7 +801,7 @@ span {
 
 .reviews-swiper .swiper-button-prev {
   bottom: 0px;
-  top: 71%;
+  top: 72%;
   left: 40%;
   right: 0px;
   margin-top: 0px;
@@ -811,7 +811,7 @@ span {
 
 .reviews-swiper .swiper-button-next {
   bottom: 0px;
-  top: 71%;
+  top: 72%;
   right: 0%;
   left: 58.6%;
   margin-top: 0px;
@@ -1285,6 +1285,7 @@ span {
 }
 
 @media only screen and (max-width: 1024px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1304,6 +1305,7 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1324,6 +1326,7 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1343,6 +1346,7 @@ span {
 }
 
 @media only screen and (max-width: 360px) {
+
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1642,161 +1646,66 @@ input[type='date']::-webkit-calendar-picker-indicator {
   overflow-y: auto;
 }
 
-@keyframes fontSizeAnimation {
+/* text amimation home page */
+@keyframes textSizeAnimation_Xl {
   0% {
     font-size: 60px;
-  }
-
-  20% {
-    font-size: 60px;
-  }
-
-  30% {
-    font-size: 50px;
-  }
-
-  50% {
-    font-size: 50px;
-  }
-
-  60% {
-    font-size: 60px;
+    line-height: 70px;
   }
 
   100% {
-    font-size: 60px;
+    font-size: 55px;
+    line-height: 70px;
   }
 }
 
-@keyframes fontSizeAnimationXS {
+@keyframes textSizeAnimation_lg {
+  0% {
+    font-size: 46px;
+  }
+
+  100% {
+    font-size: 48px;
+  }
+}
+
+@keyframes textSizeAnimation_md {
+  0% {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  100% {
+    font-size: 43px;
+    line-height: 60px;
+  }
+}
+
+@keyframes textSizeAnimation_sm {
+  0% {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  100% {
+    font-size: 33px;
+    line-height: 50px;
+  }
+}
+
+@keyframes textSizeAnimation_xs {
   0% {
     font-size: 27px;
-  }
-
-  20% {
-    font-size: 25px;
-  }
-
-  30% {
-    font-size: 27px;
-  }
-
-  50% {
-    font-size: 27px;
-  }
-
-  60% {
-    font-size: 25px;
+    line-height: 40px;
   }
 
   100% {
-    font-size: 25px;
+    line-height: 40px;
+    font-size: 29px;
   }
 }
 
-@keyframes fontSizeAnimationSM {
-  0% {
-    font-size: 28px;
-  }
-
-  20% {
-    font-size: 28px;
-  }
-
-  30% {
-    font-size: 30px;
-  }
-
-  50% {
-    font-size: 30px;
-  }
-
-  60% {
-    font-size: 28px;
-  }
-
-  100% {
-    font-size: 28px;
-  }
-}
-
-@keyframes fontSizeAnimationMD {
-  0% {
-    font-size: 32px;
-  }
-
-  20% {
-    font-size: 32px;
-  }
-
-  30% {
-    font-size: 30px;
-  }
-
-  50% {
-    font-size: 30px;
-  }
-
-  60% {
-    font-size: 32px;
-  }
-
-  100% {
-    font-size: 32px;
-  }
-}
-
-@keyframes fontSizeAnimationLG {
-  0% {
-    font-size: 60px;
-  }
-
-  20% {
-    font-size: 60px;
-  }
-
-  30% {
-    font-size: 55px;
-  }
-
-  50% {
-    font-size: 55px;
-  }
-
-  60% {
-    font-size: 60px;
-  }
-
-  100% {
-    font-size: 60px;
-  }
-}
-
-@keyframes fontSizeAnimationXL {
-  0% {
-    font-size: 60px;
-  }
-
-  20% {
-    font-size: 60px;
-  }
-
-  30% {
-    font-size: 55px;
-  }
-
-  50% {
-    font-size: 55px;
-  }
-
-  60% {
-    font-size: 60px;
-  }
-
-  100% {
-    font-size: 60px;
-  }
-}
+/*******/
 
 /* JOIN CREW REGISTRATION FORM */
 
@@ -1813,6 +1722,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .react-tel-input .country-list .country.highlight {
   color: black !important;
+}
+
+.react-tel-input .country-list {
+  border-radius: 0px !important;
 }
 
 /* IMAGE SELECTOR  */
@@ -1884,6 +1797,7 @@ input {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .cnic-input {
   -moz-appearance: textfield;
 }
@@ -1912,10 +1826,12 @@ input {
 
 /*  CUSTOM LOADER  */
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }

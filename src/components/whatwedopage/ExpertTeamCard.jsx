@@ -81,13 +81,17 @@ const ExpertTeamCard = ({ teamData }) => {
                   borderRadius: '11px',
                   backgroundColor: '#fff',
                   width: '320px',
+                  maxWidth: '382px',
                   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
                   mx: 'auto !important',
-                  p: { xs: '39px 28px 20px 28px', md: '48px 31px 24px 31px' },
+                  p: { xs: 5, md: 4 },
                   m: 1,
                   '@media (min-width: 768px) and (max-width: 890px)': {
                     width: '280px ',
                     height: '200.036px',
+                    px: 4,
+                    pt: 4,
+                    pb: 5,
                   },
                   '@media (min-width: 890px) and (max-width: 1050px)': {
                     width: '330px ',
@@ -150,6 +154,7 @@ const ExpertTeamCard = ({ teamData }) => {
                         fontWeight: 600,
                         lineHeight: { xs: '24.4px', md: '26.4px' },
                         mb: { xs: '9px', md: '11px' },
+                        textAlign: { xs: 'center', lg: 'start' },
                       }}
                     >
                       {item?.title}
@@ -158,10 +163,10 @@ const ExpertTeamCard = ({ teamData }) => {
                       sx={{
                         color: '#000',
                         fontSize: { lg: '16px', xs: '13.024px' },
-                        textAlign: 'justify',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '24px', md: '30.4px' },
+                        textAlign: { xs: 'center', lg: 'start' },
                       }}
                     >
                       {item?.paragraph}
