@@ -22,6 +22,7 @@ const RemoteLayout = ({
   dropdownName,
   mobileNavbarRef,
   dropdownMenu,
+  handleOpen,
 }) => {
   const [scroll, setScroll] = useState(
     typeof window !== 'undefined' ? 0 : window.scrollY
@@ -110,7 +111,7 @@ const RemoteLayout = ({
             >
               <Button
                 disableRipple
-                onClick={() => window?.open(action?.route || '#', '_blank')}
+                onClick={handleOpen}
                 sx={{ ...action?.style }}
               >
                 {action?.label || ''}

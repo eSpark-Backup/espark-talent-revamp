@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Container, Divider, Typography } from '@mui/material';
 import BlueCard from './BlueCard';
 
-const PricingCard = ({ data }) => {
+const PricingCard = ({ data, handleOpen }) => {
   return (
     <Box
       sx={{
@@ -119,7 +119,7 @@ const PricingCard = ({ data }) => {
           },
         }}
       >
-        <BlueCard data={data} />
+        <BlueCard data={data} handleOpen={handleOpen} />
       </Container>
     </Box>
   );

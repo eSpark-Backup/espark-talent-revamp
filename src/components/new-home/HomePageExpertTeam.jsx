@@ -1,7 +1,18 @@
+'use client';
 import { Box, Button, Typography } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const HomePageExpertTeam = ({ data }) => {
+const HomePageExpertTeam = ({ data, handleOpen }) => {
+  const pathname = usePathname();
+  const openForm = (link, target) => {
+    if (pathname?.includes('/hire-remote-developers')) {
+      return handleOpen();
+    } else {
+      return window?.open(link, target);
+    }
+  };
+
   return (
     <>
       <Box
@@ -41,7 +52,7 @@ const HomePageExpertTeam = ({ data }) => {
           </Typography>
           <Box sx={{ width: 'auto', mt: { xs: 0.5, md: 2.5 } }}>
             <Button
-              onClick={() => window?.open(data?.btnLink || '', '_blank')}
+              onClick={() => openForm(data?.btnLink || '', '_blank')}
               sx={{
                 backgroundColor: 'transparent',
                 border: '1px solid #fff',
