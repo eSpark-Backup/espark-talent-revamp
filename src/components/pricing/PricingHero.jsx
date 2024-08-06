@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import PricingCard from './PricingCard';
 
-const PricingHero = ({ data }) => {
+const PricingHero = ({ data, handleOpen }) => {
   return (
     <>
       <Box
@@ -17,7 +17,7 @@ const PricingHero = ({ data }) => {
           },
         }}
       >
-        <PricingCard data={data} />
+        <PricingCard data={data} handleOpen={handleOpen} />
       </Box>
     </>
   );
