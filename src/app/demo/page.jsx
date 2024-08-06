@@ -19,15 +19,6 @@ import OurExperties from '@/components/homepage/OurExperties';
 import BenefitsWorks from '@/components/homepage/BenefitsWorks';
 import DemoCta from '@/components/demo/DemoCta';
 import Process from '@/components/homepage/Process';
-import { getMetadata } from '@/components/global/seo';
-import { getPageSeo } from '@/sanity/sanity.quries';
-
-const pathname = '/demo';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
-export const metadata = getMetadata(filteredData);
 
 const Page = () => {
   useEffect(() => {
