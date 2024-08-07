@@ -53,7 +53,7 @@ export async function POST(req) {
         }
       }, 2000);
     });
-    
+
     return new Response(JSON.stringify({ sendGridResponse }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
