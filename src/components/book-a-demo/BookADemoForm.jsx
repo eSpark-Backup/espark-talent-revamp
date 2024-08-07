@@ -105,7 +105,9 @@ const BookADemoForm = ({ form, handleModalClose }) => {
               setModalText('Your data has been successfully submitted');
               setTimeout(() => {
                 handleClose();
-                handleModalClose();
+                if (handleModalClose) {
+                  handleModalClose();
+                }
               }, 3000);
             }, 2000);
           }
