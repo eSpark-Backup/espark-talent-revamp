@@ -175,7 +175,7 @@ export const ENTERPRISE_HERO_DATA = {
 export const PARTNERSHIP_HERO_DATA = {
   title: 'Introducing the eSpark Talent Referral Program.',
   description: `If you have a strong network worldwide, partnering with us can yield significant benefits. This collaboration opens doors to a multitude of advantages and empowers you to make a meaningful impact on global recruitment.`,
-  image: '/images/partnership/partnership-hero-main.svg',
+  image: '/images/partnership/partnership-hero-main.png',
   imageAlt: 'Partnership Program with eSpark Talent',
   imageWidth: 450,
   imageHeight: 450,
