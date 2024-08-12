@@ -20,11 +20,12 @@ export default function HireModal({ content, open, handleModalClose }) {
   return (
     <div>
       <Modal
+        disableScrollLock
+        closeAfterTransition
         open={open}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        closeAfterTransition
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
         <Slide direction="left" in={open} mountOnEnter unmountOnExit>
@@ -41,6 +42,7 @@ export default function HireModal({ content, open, handleModalClose }) {
                 backgroundColor: '#fff',
                 borderTopLeftRadius: '24px',
                 borderTopRightRadius: '24px',
+                overflow: '-moz-initial',
               }}
             >
               <Box
