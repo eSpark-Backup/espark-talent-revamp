@@ -4,11 +4,11 @@ import { Box, Button, Fade, IconButton } from '@mui/material';
 import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
 const RemoteLayout = ({
   relative,
   sticky,
-  Link,
   center,
   renderNavbarItems,
   action,
@@ -22,10 +22,10 @@ const RemoteLayout = ({
   dropdownName,
   mobileNavbarRef,
   dropdownMenu,
+  handleOpen,
 }) => {
-  const [scroll, setScroll] = useState(
-    typeof window !== 'undefined' ? 0 : window.scrollY
-  );
+  const [scroll, setScroll] = useState(0);
+  const router = useRouter(); // Initialize the router
 
   useEffect(() => {
     function boxShadow() {
@@ -42,7 +42,6 @@ const RemoteLayout = ({
         display="flex"
         alignItems="center"
         px={{ xs: 2, sm: 2, md: 3, lg: 2 }}
-        // p={1}
         sx={{
           position: relative ? 'relative' : sticky ? 'sticky' : 'static',
           top: sticky ? 0 : 'unset',
@@ -70,12 +69,17 @@ const RemoteLayout = ({
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 7 }}>
             <Box
-              component={Link}
+              component="a" // Change to anchor tag for direct navigation
               href="/"
               display="flex"
               alignItems="center"
               sx={{
                 width: { xs: '80px', md: '100px', lg: '115px', xl: '128px' },
+                cursor: 'pointer',
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                router.push('/'); // Use router.push for navigation
               }}
             >
               <Box component={'img'} src={'/images/header/logo.png'} />
@@ -110,7 +114,7 @@ const RemoteLayout = ({
             >
               <Button
                 disableRipple
-                onClick={() => window?.open(action?.route || '#', '_blank')}
+                onClick={handleOpen}
                 sx={{ ...action?.style }}
               >
                 {action?.label || ''}

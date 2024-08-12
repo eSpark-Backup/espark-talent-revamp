@@ -11,7 +11,7 @@ import BasicModal from './BookADemoModal';
 import { PopupModal } from 'react-calendly';
 import { usePathname } from 'next/navigation';
 
-const BookADemoForm = ({ form }) => {
+const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;
   const [open, setOpen] = React.useState(false);
   const [modalText, setModalText] = React.useState('');
@@ -20,6 +20,7 @@ const BookADemoForm = ({ form }) => {
   const partnersRef = useRef(null);
   const pathName = usePathname();
   const book_A_meeting = '/book-a-meeting';
+  const remote = '/hire-remote-developers';
 
   const Book_A_Demo_Keys = {
     first_name: '',
@@ -104,6 +105,9 @@ const BookADemoForm = ({ form }) => {
               setModalText('Your data has been successfully submitted');
               setTimeout(() => {
                 handleClose();
+                if (handleModalClose) {
+                  handleModalClose();
+                }
               }, 3000);
             }, 2000);
           }
@@ -149,9 +153,18 @@ const BookADemoForm = ({ form }) => {
             display: 'flex',
             flexDirection: 'column',
             mt: {
-              xs: pathName == book_A_meeting ? 0 : 5,
-              sm: pathName == book_A_meeting ? 0 : 5,
-              md: pathName == book_A_meeting ? 0 : 10,
+              xs:
+                pathName == book_A_meeting || pathName?.includes(remote)
+                  ? 0
+                  : 5,
+              sm:
+                pathName == book_A_meeting || pathName?.includes(remote)
+                  ? 0
+                  : 5,
+              md:
+                pathName == book_A_meeting || pathName?.includes(remote)
+                  ? 0
+                  : 10,
               lg: 0,
             },
             mb: {

@@ -14,6 +14,7 @@ import RemoteLayout from './RemoteLayout';
 
 function DefaultNavbar({
   routes,
+  handleOpen,
   light = false,
   action = false,
   sticky = false,
@@ -214,6 +215,7 @@ function DefaultNavbar({
           dropdownName={dropdownName}
           mobileNavbarRef={mobileNavbarRef}
           dropdownMenu={dropdownMenu}
+          handleOpen={handleOpen}
         />
       ) : (
         <GlobalLayout

@@ -1,60 +1,67 @@
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-async function handler(req, res) {
-  const request = await req.json();
-  if (req.method === 'POST') {
-    try {
-      const { toAdmin, toSubmitter, adminTemplateId, data } = request;
-      // Input validation
-      if (!toAdmin) {
-        throw new Error(
-          'Invalid request body. Required fields {toadmin} is missing.'
-        );
-      }
-      if (!toSubmitter) {
-        throw new Error(
-          'Invalid request body. Required fields {toSubmitter} are missing.'
-        );
-      }
-      if (!adminTemplateId) {
-        throw new Error(
-          'Invalid request body. Required fields {adminTemplateId} are missing.'
-        );
-      }
-      if (!data) {
-        throw new Error(
-          'Invalid request body. Required fields {data} are missing.'
-        );
-      }
-      // Sending emails
-      setTimeout(() => {
-        sgMail.send({
-          to: toAdmin,
-          from: toAdmin,
-          templateId: adminTemplateId,
-          dynamicTemplateData: data,
-        }),
-          2000;
-      });
 
-      // Success response
+export async function POST(req) {
+  const request = await req.json();
+
+  try {
+    const { toAdmin, toSubmitter, adminTemplateId, data } = request;
+
+    // Input validation
+    if (!toAdmin) {
       return new Response(
-        { success: true },
-        {
-          status: 200,
-        }
+        'Invalid request body. Required field {toAdmin} is missing.',
+        { status: 400 }
       );
-    } catch (error) {
-      console.error('Error sending emails:', error);
-      return new Response('An error occurred while sending emails', {
-        status: 500,
-      });
     }
-  } else {
-    // Method not allowed
-    res.setHeader('Allow', ['POST']);
-    Response.status(405).json({ error: `Method ${req.method} not allowed` });
+    if (!toSubmitter) {
+      return new Response(
+        'Invalid request body. Required field {toSubmitter} is missing.',
+        { status: 400 }
+      );
+    }
+    if (!adminTemplateId) {
+      return new Response(
+        'Invalid request body. Required field {adminTemplateId} is missing.',
+        { status: 400 }
+      );
+    }
+    if (!data) {
+      return new Response(
+        'Invalid request body. Required field {data} is missing.',
+        { status: 400 }
+      );
+    }
+
+    // Sending emails
+    let sendGridResponse;
+    await new Promise((resolve) => {
+      setTimeout(async () => {
+        try {
+          sendGridResponse = await sgMail.send({
+            to: toAdmin,
+            from: toAdmin,
+            templateId: adminTemplateId,
+            dynamicTemplateData: data,
+          });
+          resolve();
+        } catch (error) {
+          console.error('Error sending email:', error);
+          sendGridResponse = error;
+          resolve();
+        }
+      }, 2000);
+    });
+
+    return new Response(JSON.stringify({ sendGridResponse }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error('Error sending emails:', error);
+    return new Response('An error occurred while sending emails', {
+      status: 500,
+    });
   }
 }
-export { handler as POST };

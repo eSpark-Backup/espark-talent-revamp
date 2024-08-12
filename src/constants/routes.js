@@ -262,21 +262,21 @@ export const Hire_Remote_Routes = [
         description:
           'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
         href: '/what-we-do',
-        icon: '/images/header/whyeSpark.svg',
+        icon: '/images/header/whyeSpark.png',
       },
       {
         name: 'How it Works',
         description:
           'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
         href: '/how-it-works',
-        icon: '/images/header/howItsWork.svg',
+        icon: '/images/header/howItsWork.png',
       },
       {
         name: 'Partnership Program',
         description:
           'Collaborate and excel in our referral program for shared achievements and success.',
         href: '/partnership-program',
-        icon: '/images/header/partnership.svg',
+        icon: '/images/header/partnership.png',
       },
     ],
   },
@@ -289,14 +289,14 @@ export const Hire_Remote_Routes = [
         description:
           'Propel your startup with specialized support with our agile outsourcing assistance.',
         href: '/solutions/business-startup',
-        icon: '/images/header/startup.svg',
+        icon: '/images/header/startup.png',
       },
       {
         name: 'Enterprise',
         description:
           'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
         href: '/solutions/enterprises',
-        icon: '/images/header/enterPrice.svg',
+        icon: '/images/header/enterPrice.png',
       },
     ],
   },
