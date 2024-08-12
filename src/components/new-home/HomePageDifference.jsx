@@ -5,7 +5,7 @@ import HomePageDifferenceMobile from './HomePageDifferenceMobile';
 
 const HomePageDifference = ({ data }) => {
   return (
-    <Box sx={{ backgroundColor: '#F7F8FB' }}>
+    <Box sx={{ backgroundColor: '#fff' }}>
       <Box
         sx={{
           maxWidth: '1260px',
