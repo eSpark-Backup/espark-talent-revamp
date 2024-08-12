@@ -6,6 +6,7 @@ const HireRemoteBanner = ({ data, handleOpen }) => {
     <>
       <Box
         sx={{
+          mt: 10,
           width: '100%',
           height: '100%',
           pt: 4,
