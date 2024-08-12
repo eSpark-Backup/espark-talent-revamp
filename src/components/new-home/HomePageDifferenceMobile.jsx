@@ -42,6 +42,7 @@ const HomePageDifferenceMobile = ({ data }) => (
               borderTop: '1px solid lightGray',
               p: '20px',
               alignItems: 'center',
+              backgroundColor: '#F7F8FB',
             }}
           >
             <Box

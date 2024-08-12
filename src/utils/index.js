@@ -281,4 +281,11 @@ export const open = (link, target) => {
   return window?.open(link || '', target);
 };
 
+// home page expert team
+
+export const openForm = (link, target, path, handle) =>
+  path && path?.includes('/hire-remote-developers')
+    ? handle()
+    : window?.open(link, target);
+
 // ************************ //
