@@ -1,288 +1,146 @@
 'use client';
 import React from 'react';
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Hidden,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
-import Image from 'next/image';
+import { Box, Divider, Typography } from '@mui/material';
 
 const HomeOffshoreWorks = ({ data }) => {
-  const isSmallScreen = useMediaQuery('(max-width:670px)');
-  const isXS = useMediaQuery((theme) => theme.breakpoints.only('xs'));
-  const isSM = useMediaQuery((theme) => theme.breakpoints.only('sm'));
-  const isMD = useMediaQuery((theme) => theme.breakpoints.only('md'));
-  const isLG = useMediaQuery((theme) => theme.breakpoints.only('lg'));
   return (
-    <Box
-      sx={{
-        backgroundColor: '#F7F8FB',
-        py: 3,
-      }}
-    >
-      <Container sx={{ p: 1 }}>
-        <Box sx={{ pb: { xs: '20px', md: '25px', lg: '30px' } }}>
-          <Typography
-            variant={'h2'}
-            color={'secondary'}
+    <Box sx={{ backgroundColor: '#F7F8FB', py: 8 }}>
+      <Box sx={{ pb: 5 }}>
+        <Typography
+          variant={'h2'}
+          color={'secondary'}
+          sx={{
+            textAlign: 'center',
+            flexWrap: 'wrap',
+            fontSize: { xs: '22px', sm: '25px', md: '30px', lg: '40px' },
+          }}
+        >
+          {data?.title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'end',
+          flexWrap: 'wrap',
+          px: 1.5,
+        }}
+      >
+        {data?.items?.map((eachItem, index) => (
+          <Box
+            key={index}
             sx={{
-              textAlign: 'center',
-              flexWrap: 'wrap',
-              fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+              position: 'relative',
+              backgroundImage: {
+                xs: `url(${data?.bgImage})`,
+                md: `url(${eachItem?.invert ? data?.bgImageInvert : data?.bgImage})`,
+              },
+              backgroundRepeat: 'no-repeat',
+              zIndex: 0,
+              px: 3,
+              py: 2.5,
+              backgroundPosition: {
+                xs: 'bottom',
+                md: eachItem?.invert ? 'top' : 'bottom',
+              },
+              backgroundSize: '100%',
+              borderRadius: '25px',
+              my: 3,
+              '@media(max-width: 841px)': {
+                backgroundImage: `url(${data?.bgImage})`,
+              },
             }}
           >
-            {data?.title}
-          </Typography>
-        </Box>
-        <Hidden only={['xs', 'sm']}>
-          <Grid
-            container
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            {data?.items?.map((item, index) => (
-              <Grid
-                key={index}
-                item
-                md={isSmallScreen ? 8 : 6}
-                lg={4}
-                xl={4}
+            <Box
+              component={'img'}
+              src={eachItem?.icon}
+              alt={`Experties Icon`}
+              sx={{
+                zIndex: 3,
+                width: { xs: 75, sm: 90, lg: 100 },
+                height: 'auto',
+                position: 'absolute',
+                top: eachItem?.invert ? 'auto' : -30,
+                bottom: eachItem?.invert ? -30 : 'auto',
+                left: '50%',
+                transform: 'translate(-50%)',
+                boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+                borderRadius: '100%',
+                '@media (min-width: 481px) and (max-width: 841px)': {
+                  top: -30,
+                  bottom: 'auto',
+                },
+                '@media (max-width: 480px)': {
+                  top: -20,
+                  bottom: 'auto',
+                },
+              }}
+            />
+            <Box
+              sx={{
+                position: 'relative',
+                backgroundColor: `#fff`,
+                zIndex: 1,
+                maxWidth: '361px',
+                minHeight: { xs: '151px', md: '227px' },
+                maxHeight: { xs: 'auto', md: '227px' },
+                overflowY: 'auto',
+                px: 2,
+                pt: { md: eachItem?.invert ? 4.2 : 10 },
+                pb: { md: eachItem?.invert ? 7 : 5 },
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 1,
+                boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
+                borderRadius: '25px',
+                '@media(max-width: 841px)': {
+                  minHeight: '161px',
+                  pt: 7.5,
+                  pb: 3,
+                },
+              }}
+            >
+              <Typography
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  minwidth: '500px',
+                  color: '#001C63',
+                  fontSize: {
+                    xs: '18px',
+                    sm: '20px',
+                    lg: '28.71px',
+                    md: '24.71px',
+                  },
+                  lineHeight: '26px',
+                  fontWeight: 700,
+                  textAlign: 'center',
                 }}
               >
-                <Box sx={{ height: isMD ? '50px' : isLG ? '75px' : '75px' }}>
-                  {!item?.invert && (
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.icon}
-                      width={
-                        isXS ? 100 : isSM ? 100 : isMD ? 80 : isLG ? 100 : 100
-                      }
-                      height={
-                        isXS ? 100 : isSM ? 100 : isMD ? 80 : isLG ? 100 : 100
-                      }
-                      alt={`Experties Icon`}
-                      style={{
-                        zIndex: 500,
-                        position: 'relative',
-                        top: !item?.invert && '35px',
-                        boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
-                        borderRadius: '50px',
-                      }}
-                    />
-                  )}
-                </Box>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundImage: `url(${item?.invert ? data?.bgImageInvert : data?.bgImage})`,
-                    backgroundSize: '100% 100%',
-                    backgroundRepeat: 'no-repeat',
-                    minHeight: '200px',
-                    pt: item?.invert ? 2 : 2,
-                    pb: item?.invert ? 2 : 2,
-                    px: 3,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      backgroundColor: '#fff',
-                      minHeight: '200px',
-                      boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
-                      borderRadius: '25px',
-                      gap: '7px',
-                      pt: item?.invert ? 4 : 8,
-                      pb: item?.invert ? 8 : 4,
-                      px: 1,
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        color: '#001C63',
-                        fontSize: {
-                          xs: '16px',
-                          sm: '20px',
-                          lg: '28.71px',
-                          md: '24.71px',
-                        },
-                        lineHeight: '26px',
-                        fontWeight: 700,
-                        textAlign: 'center',
-                      }}
-                    >
-                      {item?.title}
-                    </Typography>
-                    <Divider
-                      variant="middle"
-                      sx={{
-                        width: '80%',
-                        color: '#f00',
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        color: '#001C63',
-                        fontSize: { xs: '12px', sm: '14.95px' },
-                        fontWeight: 500,
-                        lineHeight: '26.32px',
-                        textAlign: 'center',
-                        px: 2,
-                      }}
-                    >
-                      {item?.description}
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box sx={{ height: isMD ? '50px' : isLG ? '75px' : '75px' }}>
-                  {item?.invert && (
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={item?.icon}
-                      width={isXS ? 100 : isSM ? 100 : isMD ? 80 : 100}
-                      height={isXS ? 100 : isSM ? 100 : isMD ? 80 : 100}
-                      alt={`Experties Icon`}
-                      style={{
-                        zIndex: 500,
-                        position: 'relative',
-                        top: item?.invert && '-65px',
-                        boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
-                        borderRadius: '50px',
-                      }}
-                    />
-                  )}
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Hidden>
-        <Hidden only={['md', 'lg', 'xl']}>
-          <Grid
-            container
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            {data?.items?.map((item, index) => (
-              <Grid
-                key={index}
-                item
-                xs={12}
-                sm={8}
-                md={6}
+                {eachItem?.title}
+              </Typography>
+              <Divider
+                variant="middle"
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  mt: 1,
+                  width: '80%',
+                  color: '#f00',
+                }}
+              />
+              <Typography
+                sx={{
+                  color: '#001C63',
+                  fontSize: { xs: '13px', sm: '14.95px' },
+                  fontWeight: 500,
+                  lineHeight: '26.32px',
+                  textAlign: 'center',
+                  px: 1.5,
                 }}
               >
-                <Box sx={{ height: isSM ? '50px' : isMD ? '75px' : '75px' }}>
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={item?.icon}
-                    width={isXS ? 80 : isSM ? 80 : isMD ? 100 : 100}
-                    height={isXS ? 80 : isSM ? 80 : isMD ? 100 : 100}
-                    alt={`Experties Icon`}
-                    style={{
-                      zIndex: '500',
-                      position: 'relative',
-                      top: isXS ? '60px' : isSM ? '30px' : '45px',
-                      boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
-                      borderRadius: '50px',
-                    }}
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundImage: `url(${data?.bgImage})`,
-                    backgroundSize: '100% 100%',
-                    backgroundRepeat: 'no-repeat',
-                    minHeight: '200px',
-                    pt: 2,
-                    pb: 2,
-                    px: 3,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      backgroundColor: '#fff',
-                      justifyContent: 'center',
-                      boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
-                      borderRadius: '25px',
-                      gap: '7px',
-                      pt: 8,
-                      pb: 4,
-                      px: 2,
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        color: '#001C63',
-                        fontSize: {
-                          xs: '20px',
-                          sm: '28.71px',
-                          md: '28.71px',
-                          lg: '28.71px',
-                        },
-                        lineHeight: '26px',
-                        fontWeight: 700,
-                        textAlign: 'center',
-                      }}
-                    >
-                      {item?.title}
-                    </Typography>
-                    <Divider
-                      variant="middle"
-                      sx={{
-                        width: '90%',
-                        color: '#f00',
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        color: '#001C63',
-                        fontSize: { xs: '12px', sm: '15.95px' },
-                        fontWeight: 500,
-                        lineHeight: '26.32px',
-                        textAlign: 'center',
-                        px: 3,
-                      }}
-                    >
-                      {item?.description}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Hidden>
-      </Container>
+                {eachItem?.description}
+              </Typography>
+            </Box>
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };
