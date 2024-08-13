@@ -288,4 +288,10 @@ export const openForm = (link, target, path, handle) =>
     ? handle()
     : window?.open(link, target);
 
+// home page faqs
+
+export const handleChange = (panel, setExpanded) => (event, isExpanded) => {
+  setExpanded && setExpanded(isExpanded ? panel : null);
+};
+
 // ************************ //
