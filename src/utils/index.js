@@ -294,4 +294,19 @@ export const handleChange = (panel, setExpanded) => (event, isExpanded) => {
   setExpanded && setExpanded(isExpanded ? panel : null);
 };
 
+// ************************** //
+
+// what-we-do page
+
+export const getPathStatus = (pathName) => {
+  return {
+    isDemo: pathName === '/demo',
+    isHome: pathName === '/',
+    isEnterprise: pathName === '/solutions/enterprises',
+    isCrew: pathName === '/join-espark-crew',
+    isBlogOrStartup:
+      pathName?.includes('/blogs') || pathName?.includes('/business-startup'),
+  };
+};
+
 // ************************ //
