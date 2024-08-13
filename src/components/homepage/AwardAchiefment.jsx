@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import { Box, Grid, Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import Image from 'next/image';
 import ParagraphTitle from './ParagraphTitle';
 import { usePathname } from 'next/navigation';
@@ -31,43 +31,52 @@ const AwardAchievement = ({ data, design, background }) => {
               border: '1px solid rgba(170, 169, 169, 0.41)',
             }}
           >
-            <Grid
-              container
-              spacing={2}
+            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+              <ParagraphTitle title={data?.title} />
+            </Box>
+            <Box
               sx={{
+                display: 'flex',
+                flexWrap: { xs: 'wrap', md: 'noWrap' },
                 justifyContent: 'center',
                 alignItems: 'center',
-                py: '30px',
+                gap: { xs: 4, sm: 3, md: 5 },
+                px: { xs: 2 },
               }}
             >
-              <Grid item xs={12} md={12} lg={4} xl={4}>
-                <ParagraphTitle title={data?.title} />
-              </Grid>
               {data?.items?.map((item, index) => (
-                <Grid
+                <Box
                   key={index}
-                  item
-                  xs={6}
-                  md={3}
-                  lg={2}
-                  xl={2}
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
                 >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={item?.image}
-                    height={150}
-                    width={150}
-                    alt={`${item?.alt} -eSpark Talent`}
-                  />
-                </Grid>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: '105px',
+                        sm: '120px',
+                        md: '120px',
+                        lg: '150px',
+                      },
+                      height: 'auto',
+                    }}
+                  >
+                    <Image
+                      quality="85"
+                      priority={true}
+                      src={item?.image}
+                      layout="responsive"
+                      width={100}
+                      height={100}
+                      alt={`${item?.alt} - eSpark Talent`}
+                    />
+                  </Box>
+                </Box>
               ))}
-            </Grid>
+            </Box>
           </Box>
         </Container>
       ) : (
@@ -88,33 +97,49 @@ const AwardAchievement = ({ data, design, background }) => {
             <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
               <ParagraphTitle title={data?.title} />
             </Box>
-
-            <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: { xs: 'wrap', md: 'noWrap' },
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: { xs: 4, sm: 3, md: 5 },
+                px: { xs: 2 },
+              }}
+            >
               {data?.items?.map((item, index) => (
-                <Grid
+                <Box
                   key={index}
-                  item
-                  xs={6}
-                  md={3}
-                  lg={2}
-                  xl={2}
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
                 >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={item?.image}
-                    height={150}
-                    width={150}
-                    alt={`${item?.alt} - eSpark Talent`}
-                  />
-                </Grid>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: '110px',
+                        sm: '120px',
+                        md: '120px',
+                        lg: '150px',
+                      },
+                      height: 'auto',
+                    }}
+                  >
+                    <Image
+                      quality="85"
+                      priority={true}
+                      src={item?.image}
+                      layout="responsive"
+                      width={100}
+                      height={100}
+                      alt={`${item?.alt} - eSpark Talent`}
+                    />
+                  </Box>
+                </Box>
               ))}
-            </Grid>
+            </Box>
           </Container>
         </Box>
       )}
