@@ -30,17 +30,12 @@ const WhyChooseOurHr = ({ data }) => {
       <Container>
         <Grid container>
           <Grid item xs={12} sm={12} md={7} lg={7}>
-            <Box
-              sx={{
-                mt: { md: 2, lg: 3 },
-              }}
-            >
+            <Box sx={{ mt: { md: 2, lg: 3 }, px: 2 }}>
               <Typography
                 variant="h2"
                 sx={{
                   color: '#001C63',
                   fontSize: { md: '32px', xs: '20px' },
-                  fontStyle: 'normal',
                   fontWeight: { xs: 700, sm: 600 },
                   lineHeight: { md: '42.289px', xs: '27px' },
                   textAlign: { xs: 'center', md: 'left' },
@@ -60,7 +55,6 @@ const WhyChooseOurHr = ({ data }) => {
                   lineHeight: { lg: '31.863px', md: '22px', xs: '20px' },
                   pr: { md: '10px', lg: '80px' },
                   px: { xs: '5px', sm: '0' },
-
                   textAlign: { xs: 'center', md: 'justify' },
                 }}
               >
@@ -77,30 +71,17 @@ const WhyChooseOurHr = ({ data }) => {
               breakpoints={{
                 600: {
                   slidesPerView: 1,
-                  pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                  },
-                  containerClass: 'swiper-container',
-                  wrapperClass: 'swiper-wrapper',
-                  slideClass: 'swiper-slide',
+                  pagination: { el: '.swiper-pagination', clickable: true },
                 },
                 960: {
                   slidesPerView: 1,
-                  pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                  },
-                  containerClass: 'swiper-container',
-                  wrapperClass: 'swiper-wrapper',
-                  slideClass: 'swiper-slide',
+                  pagination: { el: '.swiper-pagination', clickable: true },
                 },
               }}
             >
               {data?.card?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Box
-                    variant="h3"
                     sx={{
                       display: 'flex',
                       alignItems: { lg: 'center' },
@@ -109,8 +90,10 @@ const WhyChooseOurHr = ({ data }) => {
                     }}
                   >
                     <Box
-                      className="whatWeBox"
                       sx={{
+                        display: 'flex',
+                        alignItems: { xs: 'center' },
+                        justifyContent: { xs: 'center' },
                         backgroundColor: '#fff',
                         boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
                         padding: '15px',
@@ -121,22 +104,28 @@ const WhyChooseOurHr = ({ data }) => {
                           md: '390px',
                           lg: '485px',
                         },
-                        height: {
-                          xs: 'auto',
+                        height: '100%',
+                        minHeight: {
+                          xs: '155px',
+                          sm: '140px',
+                          md: '100%',
                           lg: '180px',
                         },
+                        pr: 2.5,
                         mt: { xs: 1, md: 0 },
                         margin: '10px auto !important',
+                        '@media(min-width: 769px) and (max-width: 872px)': {
+                          py: 1.5,
+                          minHeight: '225px',
+                        },
+                        '@media(min-width: 280px) and (max-width: 319px)': {
+                          pr: 2.4,
+                          minHeight: '200px',
+                        },
                       }}
                     >
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          px: { lg: '25px' },
-                        }}
-                      >
+                      <Box sx={{ display: 'flex', px: { lg: '25px' } }}>
                         <Box
-                          className="imageBox"
                           sx={{
                             mr: 2,
                             pl: { xs: 1, lg: 0.5 },
@@ -146,11 +135,11 @@ const WhyChooseOurHr = ({ data }) => {
                           <ListItemIcon sx={{ minWidth: '30px' }}>
                             <Image
                               quality="85"
-                              priority={true}
+                              priority
                               src={item.icon}
                               width={isXsOrSm ? 205 : 260}
                               height={65}
-                              alt={`${item?.alt}`}
+                              alt={item?.alt}
                             />
                           </ListItemIcon>
                         </Box>
@@ -163,7 +152,6 @@ const WhyChooseOurHr = ({ data }) => {
                                 xs: '13.08px',
                                 md: '16px',
                               },
-                              fontStyle: 'normal',
                               fontWeight: 700,
                               lineHeight: { lg: '26.4px', xs: '17.266px' },
                               py: { xs: '5px', sm: 1, md: 0.5 },
@@ -172,9 +160,7 @@ const WhyChooseOurHr = ({ data }) => {
                           >
                             {item.title}
                           </Typography>
-
                           <Typography
-                            className="typo"
                             sx={{
                               color: '#000',
                               fontSize: {
@@ -183,7 +169,6 @@ const WhyChooseOurHr = ({ data }) => {
                                 sm: '11px',
                                 xs: '9.81px',
                               },
-                              fontStyle: 'normal',
                               fontWeight: { xs: 700, md: 400, lg: 400 },
                               lineHeight: {
                                 lg: '23.4px',
@@ -210,67 +195,37 @@ const WhyChooseOurHr = ({ data }) => {
                   my: { xs: 1, sm: 2 },
                 }}
               >
-                <Box
-                  sx={{
-                    minWidth: { xs: '18px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    onClick={() => {
-                      handleControlSwiper('next');
+                {['next', '', 'prev']?.map((type, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      minWidth: { xs: '18px', md: '23px' },
+                      height: { xs: '15px', md: '23px' },
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
-                    src={data.arrowIconLeft}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    minWidth: { xs: '12px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={data.arrowIconCircle}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    minWidth: { xs: '18px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    onClick={() => handleControlSwiper('prev')}
-                    src={data.arrowIconRight}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
+                  >
+                    <Image
+                      quality="85"
+                      priority
+                      onClick={() => type && handleControlSwiper(type)}
+                      src={
+                        data[
+                          type === 'next'
+                            ? 'arrowIconLeft'
+                            : type === 'prev'
+                              ? 'arrowIconRight'
+                              : 'arrowIconCircle'
+                        ]
+                      }
+                      width={17}
+                      height={17}
+                      alt={data?.alt}
+                      className="swiper-controller-icon"
+                    />
+                  </Box>
+                ))}
               </Box>
             </Swiper>
           </Grid>
