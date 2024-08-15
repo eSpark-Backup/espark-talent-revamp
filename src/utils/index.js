@@ -309,4 +309,18 @@ export const getPathStatus = (pathName) => {
   };
 };
 
+export const handleControlSwiper = (type, swiperRef) => {
+  switch (type) {
+    case 'next':
+      swiperRef?.current?.swiper?.slidePrev();
+      break;
+    case 'prev':
+      swiperRef?.current?.swiper?.slideNext();
+      break;
+
+    default:
+      break;
+  }
+};
+
 // ************************ //
