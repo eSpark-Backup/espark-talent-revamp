@@ -108,7 +108,7 @@ const QuestionAnswer = ({ data }) => {
               <Box
                 sx={{
                   display: 'flex',
-                  justifyContent: { md: 'start', xs: 'center' },
+                  justifyContent: { xs: 'center', lg: 'start' },
                   ml: { md: '30px', lg: '55px' },
                 }}
               >

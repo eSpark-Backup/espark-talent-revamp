@@ -74,7 +74,12 @@ export const cardStyle = {
   width: '100%',
   maxWidth: '382px',
   boxShadow: '0px 0px 5px 2px rgba(6, 6, 6, 0.12)',
-  '@media(min-width:769px) and (max-width:1023px)': {
+  '@media(min-width:900px) and (max-width:1024px)': {
+    mx: 1.4,
+    maxWidth: '100%',
+    minHeight: '250px',
+  },
+  '@media(min-width:769px) and (max-width:899px)': {
     mx: 1.4,
     maxWidth: '100%',
     minHeight: '230px',
@@ -99,6 +104,7 @@ export const headerStyle = {
 
 export const avatarStyle = {
   mb: 1,
+  ml: 2.5,
   width: { xs: '33px', sm: '40px', lg: '50px' },
   height: { xs: '33px', sm: '40px', lg: '50px' },
 };

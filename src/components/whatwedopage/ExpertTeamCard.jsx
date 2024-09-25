@@ -93,7 +93,7 @@ const ExpertTeamCard = ({ teamData }) => {
             769: {
               slidesPerView: 2,
             },
-            1024: {
+            900: {
               slidesPerView: 3,
             },
           }}

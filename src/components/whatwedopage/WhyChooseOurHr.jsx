@@ -4,23 +4,53 @@ import WhyChooseOurHrSlider from './WhyChooseOurHrSlider';
 
 const WhyChooseOurHr = ({ data }) => {
   return (
-    <Box sx={{ my: '4%' }}>
+    <Box sx={{ py: { xs: 5, sm: 7, md: 8 } }}>
       <Container>
-        <Grid container>
-          <Grid item xs={12} sm={12} md={7} lg={7}>
-            <Box sx={{ mt: { md: 2, lg: 3 }, px: 2 }}>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            rowGap: { xs: 1.5, sm: 2, md: 2.5 },
+            alignItems: 'center',
+            '@media(min-width:900px)': {
+              flexDirection: 'row',
+            },
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '700px',
+              '@media(min-width:900px)': {
+                maxWidth: 'calc(100% - 500px)',
+                pb: '50px',
+              },
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 2,
+                p: 2,
+                '@media(min-width:900px)': {
+                  alignItems: 'flex-start',
+                },
+              }}
+            >
               <Typography
                 variant="h2"
                 sx={{
                   color: '#001C63',
-                  fontSize: { md: '32px', xs: '20px' },
+                  fontSize: { xs: '20px', sm: '26px', md: '28px', lg: '32px' },
                   fontWeight: { xs: 700, sm: 600 },
-                  lineHeight: { md: '42.289px', xs: '27px' },
-                  textAlign: { xs: 'center', md: 'left' },
-                  pt: { xs: '10px', lg: '15px' },
-                  py: { xs: '10px' },
-                  px: { xs: '30px', sm: '0' },
-                  pr: { md: '5px' },
+                  lineHeight: { xs: '27px', sm: '32.289px', md: '42.289px' },
+                  textAlign: 'center',
+                  '@media(min-width:900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
                 {data?.title}
@@ -28,22 +58,29 @@ const WhyChooseOurHr = ({ data }) => {
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: { lg: '18px', md: '18px', sm: '11px', xs: '10px' },
-                  fontWeight: { xs: 700, md: 400 },
-                  lineHeight: { lg: '31.863px', md: '22px', xs: '20px' },
-                  pr: { md: '10px', lg: '80px' },
-                  px: { xs: '5px', sm: '0' },
-                  textAlign: { xs: 'center', md: 'justify' },
+                  fontSize: { xs: '11px', sm: '16px', md: '18px', lg: '18px' },
+                  fontWeight: { xs: 700, sm: 400 },
+                  lineHeight: { xs: 'auto', lg: '31.863px' },
+                  textAlign: 'center',
+                  '@media(min-width:900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
                 {data?.paragraph}
               </Typography>
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={12} md={5} lg={5}>
+          </Box>
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '500px',
+              mx: 'auto',
+            }}
+          >
             <WhyChooseOurHrSlider data={data} />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
