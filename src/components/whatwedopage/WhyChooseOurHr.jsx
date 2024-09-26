@@ -4,7 +4,9 @@ import WhyChooseOurHrSlider from './WhyChooseOurHrSlider';
 
 const WhyChooseOurHr = ({ data }) => {
   return (
-    <Box sx={{ py: { xs: 5, sm: 7, md: 8 } }}>
+    <Box
+      sx={{ pt: { xs: 5, sm: 6, md: 7.5, lg: 8 }, pb: { xs: 2, md: 6, lg: 7 } }}
+    >
       <Container>
         <Box
           sx={{

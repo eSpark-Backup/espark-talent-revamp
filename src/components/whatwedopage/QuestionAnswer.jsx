@@ -1,85 +1,88 @@
 import React from 'react';
-import Image from 'next/image';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 import ESparkButton from '../global/eSparkButton';
 
 const QuestionAnswer = ({ data }) => {
   return (
-    <Box sx={{ mb: { md: '4%', xs: '10%' } }}>
+    <Box sx={{ pb: { xs: 8, md: 12, lg: 15 } }}>
       <Container>
-        <Grid container>
-          <Grid
-            item
-            xs={12}
-            md={5}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            rowGap: 5,
+            columnGap: 5.5,
+            '@media(min-width: 900px)': {
+              flexDirection: 'row',
+            },
+          }}
+        >
+          <Box
             sx={{
-              order: { md: 2, xs: 2, sm: 2 },
-              display: { md: 'flex', lg: 'block' },
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              order: 2,
               alignItems: 'center',
               justifyContent: 'center',
+              maxHeight: { xs: 'auto', md: '400px', lg: '418px' },
+              maxWidth: { xs: '300px', md: '400px', lg: '500px' },
+              '@media(min-width: 900px)': {
+                order: 1,
+                width: 'calc(100% - 500px)',
+              },
             }}
           >
             <Box
-              sx={{
-                backgroundColor: 'rgba(59, 89, 152, 0.04)',
-                borderRadius: '17.311px',
-                mt: { xs: '40px', md: '0px' },
-              }}
-            >
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  pt: 5,
-                }}
-              >
-                <Image
-                  quality="85"
-                  priority={true}
-                  src={'/images/whatwedo/question-answer/QuesAns.png'}
-                  width={440}
-                  height={200}
-                  alt="We make easy for companies to expand their network with eSpark Talent"
-                />
-              </Box>
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={7}
+              component={'img'}
+              sx={{ width: '100%', height: 'auto' }}
+              src={'/images/whatwedo/question-answer/QuesAns.png'}
+              alt="We make easy for companies to expand their network with eSpark Talent"
+            />
+          </Box>
+
+          <Box
             sx={{
-              order: { md: 2, xs: 1, sm: 1 },
+              p: { xs: 2, sm: 4 },
+              order: 1,
+              width: '100%',
               display: 'flex',
-              alignItems: 'center',
+              '@media(min-width: 900px)': {
+                p: 0,
+                order: 2,
+                width: 'calc(100% - 500px)',
+              },
             }}
           >
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
+                gap: 1.5,
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               <Typography
                 variant="h2"
                 sx={{
                   color: '#09114A',
-                  textAlign: {
-                    xs: 'center',
-                    sm: 'center',
-                    md: 'center',
-                    lg: 'left',
-                  },
-                  fontSize: { md: '32px', xs: '20px' },
+                  textAlign: 'center',
+                  fontSize: { xs: '20px', sm: '25px', md: '28px', lg: '32px' },
                   fontWeight: 700,
                   fontStyle: 'normal',
-                  lineHeight: { md: '48px', xs: '36px' },
-                  ml: { md: '30px', lg: '50px' },
-                  px: { xs: '5px', md: '0px' },
-                  justifyContent: { xs: 'center', sm: 'flex-end' },
+                  lineHeight: {
+                    xs: '30px',
+                    sm: '35px',
+                    md: '38px',
+                    lg: '48px',
+                  },
+                  '@media(min-width: 900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
                 {data?.title}
@@ -87,29 +90,31 @@ const QuestionAnswer = ({ data }) => {
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: { md: '18px', xs: '10px' },
-                  fontWeight: { xs: 700, md: 400 },
+                  fontSize: { xs: '11px', sm: '15px', md: '17px', lg: '18px' },
+                  fontWeight: { xs: 700, sm: 400 },
                   fontStyle: 'normal',
-                  lineHeight: { md: '30.4px', xs: '18px' },
-                  justifyContent: { xs: 'center', sm: 'flex-end' },
-                  textAlign: {
-                    xs: 'center',
-                    sm: 'center',
-                    md: 'center',
-                    lg: 'left',
+                  textAlign: 'center',
+                  lineHeight: {
+                    xs: '18px',
+                    sm: '22px',
+                    md: '26px',
+                    lg: '30px',
                   },
-                  my: 1.5,
-                  ml: { md: '30px', lg: '55px' },
-                  px: { xs: '10px', md: '0px' },
+                  '@media(min-width: 900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
                 {data?.descrioption}
               </Typography>
               <Box
                 sx={{
+                  width: '100%',
                   display: 'flex',
-                  justifyContent: { xs: 'center', lg: 'start' },
-                  ml: { md: '30px', lg: '55px' },
+                  justifyContent: 'center',
+                  '@media(min-width: 900px)': {
+                    justifyContent: 'flex-start',
+                  },
                 }}
               >
                 <ESparkButton
@@ -121,8 +126,8 @@ const QuestionAnswer = ({ data }) => {
                 />
               </Box>
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
