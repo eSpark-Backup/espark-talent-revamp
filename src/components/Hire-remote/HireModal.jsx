@@ -14,6 +14,7 @@ const style = {
   boxShadow: '0px 4px 10.1px 0px rgba(0, 0, 0, 0.38)',
   display: 'flex',
   flexDirection: 'column',
+  overflow: 'hidden',
 };
 
 export default function HireModal({ content, open, handleModalClose }) {
@@ -32,15 +33,12 @@ export default function HireModal({ content, open, handleModalClose }) {
             <Box
               sx={{
                 width: '100%',
-                height: 'auto',
                 position: 'absolute',
                 display: 'flex',
                 justifyContent: 'flex-end',
-                py: { xs: 1.5, md: 1.5 },
-                px: { xs: 1.5, md: 1.5 },
                 backgroundColor: '#fff',
-                borderTopLeftRadius: '24px',
-                borderTopRightRadius: '24px',
+                py: 1.2,
+                px: 1.2,
               }}
             >
               <Box
@@ -49,8 +47,6 @@ export default function HireModal({ content, open, handleModalClose }) {
                   color: '#029894',
                   width: { xs: '25px', md: '30px' },
                   height: { xs: '25px', md: '30px' },
-                  margin: 0,
-                  padding: 0,
                   borderRadius: '100%',
                   cursor: 'pointer',
                   border: '2px solid',
@@ -69,9 +65,25 @@ export default function HireModal({ content, open, handleModalClose }) {
               sx={{
                 flex: 1,
                 overflowY: 'auto',
+                '&::-webkit-scrollbar': {
+                  width: '3px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'transparent',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: '#ccc',
+                  borderRadius: '10px',
+                  border: '2px solid transparent',
+                  backgroundClip: 'content-box',
+                },
+                scrollbarWidth: 'thin',
+                scrollbarColor: '#ccc transparent',
+                height: '500px',
+                maxHeight: '850px',
                 px: { xs: 2, sm: 3.5, md: 5 },
-                pt: { xs: 7, md: 6 },
-                pb: { xs: 1, sm: 6 },
+                pt: { xs: 3, sm: 0.2 },
+                my: { xs: 3, sm: 5 },
               }}
             >
               {content}

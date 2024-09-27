@@ -1842,3 +1842,104 @@ input {
   border-radius: 0.125rem;
   background-color: #1d1d20;
 }
+
+
+
+
+/********* careers dropdown styling ****************/
+.careers-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.careers-dropdown-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.careers-dropdown-select {
+  padding: 12px;
+  padding-right: 40px;
+  font-size: 20px;
+  font-family: __Poppins_017dd3,
+    __Poppins_Fallback_017dd3,
+    sans-serif;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/images/partners/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 17px;
+}
+
+.careers-dropdown-select:focus {
+  border-color: #029894 !important;
+}
+
+.careers-dropdown-select:hover {
+  border-color: #029894 !important;
+}
+
+.careers-dropdown-select .MuiMenuItem-root:hover {
+  background-color: rgba(2, 152, 148, 0.1) !important;
+  color: #333 !important;
+}
+
+.careers-dropdown-select option {
+  padding: 20px;
+  font-size: 20px;
+  font-family: __Poppins_017dd3,
+    __Poppins_Fallback_017dd3,
+    sans-serif;
+}
+
+@media (max-width: 899px) {
+  .careers-dropdown-container {
+    margin: 0px auto;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .careers-dropdown-select {
+    font-size: 17px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .careers-dropdown-select {
+    font-size: 15px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 319px) {
+  .careers-dropdown-select {
+    font-size: 13px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 13px;
+  }
+}
+
+/* ********************************* */

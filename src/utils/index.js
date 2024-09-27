@@ -324,3 +324,52 @@ export const handleControlSwiper = (type, swiperRef) => {
 };
 
 // ************************ //
+
+// careers page
+
+export const paginateData = (data, selectedCategory, page, perPage) => {
+  const filteredData =
+    selectedCategory === 'all'
+      ? data
+      : data?.filter((item) => item?.title === selectedCategory);
+
+  const startIndex = (page - 1) * perPage;
+  const endIndex = startIndex + perPage;
+
+  return filteredData?.slice(startIndex, endIndex);
+};
+
+export const totalPageCount = (data, selectedCategory, perPage) => {
+  const filteredData =
+    selectedCategory === 'all'
+      ? data
+      : data?.filter((item) => item?.title === selectedCategory);
+
+  return Math.ceil(filteredData?.length / perPage);
+};
+
+export const handleJobCategoryChange = (
+  event,
+  setSelectedCategory,
+  setPage
+) => {
+  setSelectedCategory(event?.target?.value);
+  setPage(1);
+};
+
+export const handlePaginationChange = (event, value, setPage) => {
+  setPage(value);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
+export const handleApplyButtonClick = (
+  selectedJobData,
+  handleOpen,
+  setJobData
+) => {
+  handleOpen();
+  setJobData(selectedJobData);
+};
