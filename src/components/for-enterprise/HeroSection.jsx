@@ -141,18 +141,18 @@ const HeroSection = ({ data }) => {
                     sx={titleTypographySx}
                     color={data?.titleColor || '#029894'}
                   >
-                    {data.title}
+                    {data?.title}
                   </Typography>
                 )}
                 {data?.description && (
                   <Typography component={'p'} sx={descriptionTypographySx}>
-                    {data.description}
+                    {data?.description}
                   </Typography>
                 )}
                 {data?.button?.link && data?.button?.label && (
-                  <Link href={data.button.link} target="_blank">
+                  <Link href={data?.button.link} target="_blank">
                     <Button color="secondary" variant="secondary" sx={buttonSx}>
-                      {data.button.label}
+                      {data?.button.label}
                     </Button>
                   </Link>
                 )}
@@ -161,7 +161,7 @@ const HeroSection = ({ data }) => {
                 <Box sx={imageBoxSx}>
                   <Box
                     component={'img'}
-                    src={data.image}
+                    src={data?.image}
                     alt={data?.imageAlt || 'Hero image'}
                     sx={imageSx}
                   />

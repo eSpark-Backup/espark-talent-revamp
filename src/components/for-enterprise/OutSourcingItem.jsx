@@ -95,7 +95,7 @@ const OutSourcingItem = ({ data }) => {
             <Swiper {...swiperSettings}>
               <Grid container spacing={2} justifyContent="center">
                 {data?.items?.length > 0 ? (
-                  data.items.map((item, index) => (
+                  data?.items.map((item, index) => (
                     <SwiperSlide key={index}>
                       <Grid item xs={12} sm={4} sx={gridItemSx}>
                         <Typography variant="h3" sx={itemTitleTypographySx}>

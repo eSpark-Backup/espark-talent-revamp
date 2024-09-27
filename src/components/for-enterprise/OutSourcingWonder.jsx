@@ -116,7 +116,7 @@ const OutSourcingWonder = ({ data }) => {
             <Swiper {...swiperSettings}>
               <Grid container sx={gridContainerSx}>
                 {data?.items?.length > 0 ? (
-                  data.items.map((item, index) => (
+                  data?.items.map((item, index) => (
                     <SwiperSlide key={index} className="outsourcing-slide">
                       <Grid sx={gridItemSx}>
                         <Box sx={iconBoxSx}>
