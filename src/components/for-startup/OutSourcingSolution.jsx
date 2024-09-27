@@ -4,48 +4,29 @@ import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
+import {
+  outerBoxStyle,
+  innerBoxStyle,
+  gridItemStyle,
+  itemBoxStyle,
+  titleTypographyStyle,
+} from './OutSourcingSolutionConstant';
 
 const OutSourcingSolution = ({ data }) => {
-  const outerBoxSx = {
-    py: ['2.5%', '5%'],
-    overflow: 'hidden',
-  };
-
-  const innerBoxSx = {
-    py: '2.5%',
-    textAlign: 'center',
-  };
-
-  const gridItemSx = {
-    display: 'flex',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    p: ['10px', '20px'],
-  };
-
-  const itemBoxSx = {
-    borderRadius: '30px',
-    p: '20px',
-    alignItems: 'center',
-    background: ' #FFF',
-    boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
-  };
-
-  const titleTypographySx = {
-    pr: '10%',
-  };
-
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
   return (
     <>
-      <Box sx={outerBoxSx}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={innerBoxSx}>
+          <Box sx={innerBoxStyle}>
             <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2} justifyContent="center">
             {data?.items?.map((item, index) => (
-              <Grid key={index} item xs={12} sm={4} sx={gridItemSx}>
-                <Box sx={itemBoxSx}>
+              <Grid key={index} item xs={12} sm={4} sx={gridItemStyle}>
+                <Box sx={itemBoxStyle}>
                   <Image
                     quality="85"
                     priority={true}
@@ -57,7 +38,7 @@ const OutSourcingSolution = ({ data }) => {
                   <Typography
                     variant="h5"
                     color="secondary"
-                    sx={titleTypographySx}
+                    sx={titleTypographyStyle}
                   >
                     {item?.title}
                   </Typography>
