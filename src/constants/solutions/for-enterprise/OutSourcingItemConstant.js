@@ -1,14 +1,14 @@
-const outerBoxSx = {
+const outerBoxStyle = {
   pt: { lg: '70px', md: '60px', sm: '40px', xs: '30px' },
   pb: { lg: '80px', md: '60px', sm: '40px', xs: '30px' },
 };
 
-const innerBoxSx = {
+const innerBoxStyle = {
   px: { md: '12.2%', sm: '10%', xs: '2%' },
   pb: { lg: '45px', md: '25px', sm: '15px', xs: '15px' },
 };
 
-const titleTypographySx = {
+const titleTypographyStyle = {
   textAlign: 'center',
   flexWrap: 'wrap',
   fontWeight: 600,
@@ -22,7 +22,7 @@ const titleTypographySx = {
   mx: { xs: '5.699px', sm: '0px' },
 };
 
-const subtitleTypographySx = {
+const subtitleTypographyStyle = {
   textAlign: 'center',
   fontSize: {
     xl: '20px',
@@ -33,7 +33,7 @@ const subtitleTypographySx = {
   },
 };
 
-const gridItemSx = {
+const gridItemStyle = {
   borderRadius: '20px',
   px: { lg: '19px', md: '19px', sm: '18px', xs: '17px' },
   py: { lg: '35px', md: '30px', sm: '25px', xs: '15px' },
@@ -59,7 +59,7 @@ const gridItemSx = {
   border: '1px solid #029894',
 };
 
-const itemTitleTypographySx = {
+const itemTitleTypographyStyle = {
   color: '#001C63',
   fontSize: {
     lg: '28px',
@@ -72,21 +72,21 @@ const itemTitleTypographySx = {
   fontStyle: 'normal',
 };
 
-const listBoxSx = {
+const listBoxStyle = {
   display: 'flex',
   marginTop: '10px',
 };
 
-const listItemIconSx = {
+const listItemIconStyle = {
   minWidth: { xs: '28px', md: '30px' },
 };
 
-const taskAltIconSx = {
+const taskAltIconStyle = {
   color: '#029894',
   fontSize: { xs: '15px', md: '22px' },
 };
 
-const listItemTypographySx = {
+const listItemTypographyStyle = {
   color: '#000',
   fontSize: {
     md: '14px',
@@ -98,14 +98,14 @@ const listItemTypographySx = {
 };
 
 export {
-  outerBoxSx,
-  innerBoxSx,
-  titleTypographySx,
-  subtitleTypographySx,
-  gridItemSx,
-  itemTitleTypographySx,
-  listBoxSx,
-  listItemIconSx,
-  taskAltIconSx,
-  listItemTypographySx,
+  outerBoxStyle,
+  innerBoxStyle,
+  titleTypographyStyle,
+  subtitleTypographyStyle,
+  gridItemStyle,
+  itemTitleTypographyStyle,
+  listBoxStyle,
+  listItemIconStyle,
+  taskAltIconStyle,
+  listItemTypographyStyle,
 };

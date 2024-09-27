@@ -2,13 +2,13 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme();
 
-const outerBoxSx = {
+const outerBoxStyle = {
   pt: '2%',
   mb: '2%',
   background: '#3B59980A',
 };
 
-const titleTypographySx = {
+const titleTypographyStyle = {
   fontSize: { xs: '20px', sm: '24px', md: '25px', lg: '28px' },
   lineHeight: { xs: '27px', sm: '30px', md: '42.289px' },
   color: '#001C63',
@@ -21,7 +21,7 @@ const titleTypographySx = {
   },
 };
 
-const paragraphTypographySx = {
+const paragraphTypographyStyle = {
   mb: { xs: 1, sm: 0 },
   fontSize: { xs: '14px', sm: '16px', md: '18px' },
   lineHeight: { xs: '20px', sm: '22px', md: '27.363px' },
@@ -33,19 +33,19 @@ const paragraphTypographySx = {
   },
 };
 
-const itemsGridContainerSx = {
+const itemsGridContainerStyle = {
   display: 'flex',
   mb: 3,
 };
 
-const itemBoxSx = {
+const itemBoxStyle = {
   display: 'flex',
   alignItems: 'start',
   gap: '10px',
   pb: '10px',
 };
 
-const itemTypographySx = {
+const itemTypographyStyle = {
   color: '#000',
   fontSize: {
     xs: '12px',
@@ -56,18 +56,18 @@ const itemTypographySx = {
   fontWeight: '400',
 };
 
-const imageGridSx = {
+const imageGridStyle = {
   display: 'flex',
   alignItems: 'center',
 };
 
 export {
   theme,
-  outerBoxSx,
-  titleTypographySx,
-  paragraphTypographySx,
-  itemsGridContainerSx,
-  itemBoxSx,
-  itemTypographySx,
-  imageGridSx,
+  outerBoxStyle,
+  titleTypographyStyle,
+  paragraphTypographyStyle,
+  itemsGridContainerStyle,
+  itemBoxStyle,
+  itemTypographyStyle,
+  imageGridStyle,
 };

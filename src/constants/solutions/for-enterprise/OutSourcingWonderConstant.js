@@ -1,12 +1,12 @@
-const outerBoxSx = {
+const outerBoxStyle = {
   py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' },
 };
 
-const titleBoxSx = {
+const titleBoxStyle = {
   textAlign: 'center',
 };
 
-const titleTypographySx = {
+const titleTypographyStyle = {
   color: '#001C63',
   textAlign: 'center',
   fontSize: { md: '32px', xs: '20px' },
@@ -17,11 +17,11 @@ const titleTypographySx = {
   mb: { xs: '25px', sm: '40px' },
 };
 
-const gridContainerSx = {
+const gridContainerStyle = {
   mx: 'auto',
 };
 
-const gridItemSx = {
+const gridItemStyle = {
   borderRadius: '23.172px',
   px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
   py: { lg: '40px', md: '45px', sm: '35px', xs: '25px' },
@@ -40,13 +40,13 @@ const gridItemSx = {
   mx: 'auto',
 };
 
-const iconBoxSx = {
+const iconBoxStyle = {
   mb: { xs: '10px', sm: '0px', lg: '10px' },
   width: { xs: '30px', md: '40px' },
   height: { xs: '30px', md: '40px' },
 };
 
-const itemTitleTypographySx = {
+const itemTitleTypographyStyle = {
   color: '#001C63',
   fontSize: {
     lg: '20px',
@@ -60,7 +60,7 @@ const itemTitleTypographySx = {
   fontStyle: 'normal',
 };
 
-const itemParagraphTypographySx = {
+const itemParagraphTypographyStyle = {
   color: '#000',
   fontSize: {
     lg: '16px',
@@ -73,12 +73,12 @@ const itemParagraphTypographySx = {
 };
 
 export {
-  outerBoxSx,
-  titleBoxSx,
-  titleTypographySx,
-  gridContainerSx,
-  gridItemSx,
-  iconBoxSx,
-  itemTitleTypographySx,
-  itemParagraphTypographySx,
+  outerBoxStyle,
+  titleBoxStyle,
+  titleTypographyStyle,
+  gridContainerStyle,
+  gridItemStyle,
+  iconBoxStyle,
+  itemTitleTypographyStyle,
+  itemParagraphTypographyStyle,
 };

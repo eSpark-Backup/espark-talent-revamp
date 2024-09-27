@@ -4,14 +4,14 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 import {
-  outerBoxSx,
-  titleTypographySx,
-  paragraphTypographySx,
-  itemsGridContainerSx,
-  itemBoxSx,
-  itemTypographySx,
-  imageGridSx,
-} from './OutSourcingAdvantageConstants';
+  outerBoxStyle,
+  titleTypographyStyle,
+  paragraphTypographyStyle,
+  itemsGridContainerStyle,
+  itemBoxStyle,
+  itemTypographyStyle,
+  imageGridStyle,
+} from '@/constants/solutions/for-enterprise/OutSourcingAdvantageConstants';
 
 const OutSourcingAdvantage = ({ data }) => {
   if (!data) {
@@ -20,25 +20,29 @@ const OutSourcingAdvantage = ({ data }) => {
 
   return (
     <>
-      <Box sx={outerBoxSx}>
+      <Box sx={outerBoxStyle}>
         <Container>
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid item xs={12} sm={6}>
-              <Typography variant="h2" color="secondary" sx={titleTypographySx}>
+              <Typography
+                variant="h2"
+                color="secondary"
+                sx={titleTypographyStyle}
+              >
                 {data?.title || 'Title not available'}
               </Typography>
               <Typography
                 variant="body1"
                 color="secondary"
-                sx={paragraphTypographySx}
+                sx={paragraphTypographyStyle}
               >
                 {data?.paragraph || 'Paragraph not available'}
               </Typography>
-              <Grid container sx={itemsGridContainerSx}>
+              <Grid container sx={itemsGridContainerStyle}>
                 {data?.items?.length > 0 ? (
                   data?.items.map((list, itemIndex) => (
                     <Grid item xs={12} md={6} key={itemIndex}>
-                      <Box sx={itemBoxSx}>
+                      <Box sx={itemBoxStyle}>
                         {list?.listIcon && (
                           <Image
                             quality="85"
@@ -53,7 +57,7 @@ const OutSourcingAdvantage = ({ data }) => {
                             }}
                           />
                         )}
-                        <Typography variant="body1" sx={itemTypographySx}>
+                        <Typography variant="body1" sx={itemTypographyStyle}>
                           {list?.title || 'Item not available'}
                         </Typography>
                       </Box>
@@ -64,7 +68,7 @@ const OutSourcingAdvantage = ({ data }) => {
                 )}
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={4} sx={imageGridSx}>
+            <Grid item xs={12} sm={4} sx={imageGridStyle}>
               {data?.image && (
                 <Image
                   quality="85"

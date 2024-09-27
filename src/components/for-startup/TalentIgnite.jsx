@@ -10,7 +10,7 @@ import {
   descriptionStyle,
   rightGridStyle,
   imageBoxStyle,
-} from './TalentIgniteConstant';
+} from '@/constants/solutions/for-business-startup/TalentIgniteConstant';
 
 const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
   const textAlignXs = isBestOutsourceComponent ? 'left' : 'center';
@@ -36,7 +36,9 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
             <Typography
               sx={descriptionStyle}
               textAlign={{ xs: textAlignXs, sm: 'center', md: 'justify' }}
-              dangerouslySetInnerHTML={{ __html: data?.description || 'Description not available' }}
+              dangerouslySetInnerHTML={{
+                __html: data?.description || 'Description not available',
+              }}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={5.4} sx={rightGridStyle}>

@@ -1,15 +1,15 @@
-const containerSx = {
+const containerStyle = {
   background: '#F7F8FB',
   py: '3%',
   my: '2%',
 };
 
-const headingBoxSx = {
+const headingBoxStyle = {
   pb: '30px',
   px: { md: '20%', sm: '10%', xs: '2%' },
 };
 
-const headingTypographySx = {
+const headingTypographyStyle = {
   textAlign: 'center',
   flexWrap: 'wrap',
   fontWeight: 600,
@@ -23,24 +23,24 @@ const headingTypographySx = {
   },
 };
 
-const descriptionTypographySx = {
+const descriptionTypographyStyle = {
   textAlign: 'center',
   fontSize: { xs: '14px', sm: '16px', md: '18px' },
   fontWeight: 400,
 };
 
-const gridContainerSx = {
+const gridContainerStyle = {
   justifyContent: 'center',
   gap: 2,
 };
 
-const itemBoxSx = {
+const itemBoxStyle = {
   py: '20px',
   display: 'flex',
   gap: '10px',
 };
 
-const itemTitleTypographySx = {
+const itemTitleTypographyStyle = {
   fontSize: {
     xs: '16px',
     sm: '18px',
@@ -50,7 +50,7 @@ const itemTitleTypographySx = {
   fontWeight: 500,
 };
 
-const itemParagraphTypographySx = {
+const itemParagraphTypographyStyle = {
   color: '#000',
   fontSize: {
     xs: '14px',
@@ -60,13 +60,13 @@ const itemParagraphTypographySx = {
   },
 };
 
-const buttonContainerSx = {
+const buttonContainerStyle = {
   pt: '40px',
   pb: { xs: '20px', md: '0', lg: '0' },
   textAlign: 'center',
 };
 
-const buttonSx = {
+const buttonStyle = {
   backgroundColor: '#001C63',
   '&:hover': {
     color: '#fff',
@@ -81,14 +81,14 @@ const buttonSx = {
 };
 
 export {
-  containerSx,
-  headingBoxSx,
-  headingTypographySx,
-  descriptionTypographySx,
-  gridContainerSx,
-  itemBoxSx,
-  itemTitleTypographySx,
-  itemParagraphTypographySx,
-  buttonContainerSx,
-  buttonSx,
+  containerStyle,
+  headingBoxStyle,
+  headingTypographyStyle,
+  descriptionTypographyStyle,
+  gridContainerStyle,
+  itemBoxStyle,
+  itemTitleTypographyStyle,
+  itemParagraphTypographyStyle,
+  buttonContainerStyle,
+  buttonStyle,
 };

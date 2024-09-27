@@ -19,15 +19,15 @@ import 'swiper/css/autoplay';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
 import {
-  outerBoxSx,
-  titleBoxSx,
-  titleTypographySx,
-  gridContainerSx,
-  gridItemSx,
-  iconBoxSx,
-  itemTitleTypographySx,
-  itemParagraphTypographySx,
-} from './OutSourcingWonderConstant';
+  outerBoxStyle,
+  titleBoxStyle,
+  titleTypographyStyle,
+  gridContainerStyle,
+  gridItemStyle,
+  iconBoxStyle,
+  itemTitleTypographyStyle,
+  itemParagraphTypographyStyle,
+} from '@/constants/solutions/for-enterprise/OutSourcingWonderConstant';
 
 const OutSourcingWonder = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -94,10 +94,10 @@ const OutSourcingWonder = ({ data }) => {
 
   return (
     <>
-      <Box sx={outerBoxSx}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={titleBoxSx}>
-            <Typography variant="h2" sx={titleTypographySx}>
+          <Box sx={titleBoxStyle}>
+            <Typography variant="h2" sx={titleTypographyStyle}>
               {data?.title || 'Title not available'}
             </Typography>
           </Box>
@@ -114,12 +114,12 @@ const OutSourcingWonder = ({ data }) => {
             </Box>
           ) : (
             <Swiper {...swiperSettings}>
-              <Grid container sx={gridContainerSx}>
+              <Grid container sx={gridContainerStyle}>
                 {data?.items?.length > 0 ? (
                   data?.items.map((item, index) => (
                     <SwiperSlide key={index} className="outsourcing-slide">
-                      <Grid sx={gridItemSx}>
-                        <Box sx={iconBoxSx}>
+                      <Grid sx={gridItemStyle}>
+                        <Box sx={iconBoxStyle}>
                           <Image
                             quality="85"
                             priority={true}
@@ -156,11 +156,11 @@ const OutSourcingWonder = ({ data }) => {
                               ? 'h4'
                               : 'h3'
                           }
-                          sx={itemTitleTypographySx}
+                          sx={itemTitleTypographyStyle}
                         >
                           {item?.title || 'Title not available'}
                         </Typography>
-                        <Typography sx={itemParagraphTypographySx}>
+                        <Typography sx={itemParagraphTypographyStyle}>
                           {item?.paragraph || 'Paragraph not available'}
                         </Typography>
                       </Grid>

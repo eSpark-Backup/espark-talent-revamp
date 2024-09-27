@@ -7,7 +7,7 @@ const HeroSection = ({ data }) => {
     return <Typography>Error: No data provided</Typography>;
   }
 
-  const outerBoxSx = {
+  const outerBoxStyle = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -16,7 +16,7 @@ const HeroSection = ({ data }) => {
     backgroundImage: `url(${data?.bgImage || ''})`,
   };
 
-  const containerBoxSx = {
+  const containerBoxStyle = {
     mx: 'auto',
     height: '100%',
     display: 'flex',
@@ -33,7 +33,7 @@ const HeroSection = ({ data }) => {
     },
   };
 
-  const contentBoxSx = {
+  const contentBoxStyle = {
     width: '100%',
     height: '100%',
     display: 'flex',
@@ -50,12 +50,12 @@ const HeroSection = ({ data }) => {
     },
   };
 
-  const textBoxSx = {
+  const textBoxStyle = {
     width: { sm: '40%', md: '50%' },
     pl: { md: 5, lg: 0 },
   };
 
-  const titleTypographySx = {
+  const titleTypographyStyle = {
     fontSize: {
       sm: '29px !important',
       md: '40px !important',
@@ -76,7 +76,7 @@ const HeroSection = ({ data }) => {
     fontWeight: 700,
   };
 
-  const descriptionTypographySx = {
+  const descriptionTypographyStyle = {
     pt: 0.5,
     pb: { sm: 2, md: 2.5 },
     color: '#1D4E72',
@@ -92,7 +92,7 @@ const HeroSection = ({ data }) => {
     },
   };
 
-  const buttonSx = {
+  const buttonStyle = {
     width: { sm: '170px', md: '207.981px' },
     height: { sm: '50px', md: '54.149px' },
     '@media (min-width: 300px) and (max-width: 767px)': {
@@ -108,14 +108,14 @@ const HeroSection = ({ data }) => {
     },
   };
 
-  const imageBoxSx = {
+  const imageBoxStyle = {
     width: { sm: 'auto', md: 'auto' },
     pr: { md: 5, lg: 0 },
     display: 'flex',
     alignItems: 'center',
   };
 
-  const imageSx = {
+  const imageStyle = {
     width: { sm: '300px', md: '400px', lg: '435.2px' },
     height: { sm: '290px', md: '390px', lg: '418.607px' },
     '@media (min-width: 600px) and (max-width: 767px)': {
@@ -130,40 +130,44 @@ const HeroSection = ({ data }) => {
 
   return (
     <>
-      <Box sx={outerBoxSx}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={containerBoxSx}>
-            <Box sx={contentBoxSx}>
-              <Box sx={textBoxSx}>
+          <Box sx={containerBoxStyle}>
+            <Box sx={contentBoxStyle}>
+              <Box sx={textBoxStyle}>
                 {data?.title && (
                   <Typography
                     component={'h1'}
-                    sx={titleTypographySx}
+                    sx={titleTypographyStyle}
                     color={data?.titleColor || '#029894'}
                   >
                     {data?.title}
                   </Typography>
                 )}
                 {data?.description && (
-                  <Typography component={'p'} sx={descriptionTypographySx}>
+                  <Typography component={'p'} sx={descriptionTypographyStyle}>
                     {data?.description}
                   </Typography>
                 )}
                 {data?.button?.link && data?.button?.label && (
                   <Link href={data?.button.link} target="_blank">
-                    <Button color="secondary" variant="secondary" sx={buttonSx}>
+                    <Button
+                      color="secondary"
+                      variant="secondary"
+                      sx={buttonStyle}
+                    >
                       {data?.button.label}
                     </Button>
                   </Link>
                 )}
               </Box>
               {data?.image && (
-                <Box sx={imageBoxSx}>
+                <Box sx={imageBoxStyle}>
                   <Box
                     component={'img'}
                     src={data?.image}
                     alt={data?.imageAlt || 'Hero image'}
-                    sx={imageSx}
+                    sx={imageStyle}
                   />
                 </Box>
               )}

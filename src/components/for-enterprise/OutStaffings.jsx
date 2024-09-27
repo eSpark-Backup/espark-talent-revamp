@@ -5,17 +5,17 @@ import Image from 'next/image';
 import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Link from 'next/link';
 import {
-  containerSx,
-  headingBoxSx,
-  headingTypographySx,
-  descriptionTypographySx,
-  gridContainerSx,
-  itemBoxSx,
-  itemTitleTypographySx,
-  itemParagraphTypographySx,
-  buttonContainerSx,
-  buttonSx,
-} from './OutStaffingsConstant';
+  containerStyle,
+  headingBoxStyle,
+  headingTypographyStyle,
+  descriptionTypographyStyle,
+  gridContainerStyle,
+  itemBoxStyle,
+  itemTitleTypographyStyle,
+  itemParagraphTypographyStyle,
+  buttonContainerStyle,
+  buttonStyle,
+} from '@/constants/solutions/for-enterprise/OutStaffingsConstant';
 
 const OutStaffings = ({ data }) => {
   if (!data) {
@@ -24,21 +24,21 @@ const OutStaffings = ({ data }) => {
 
   return (
     <>
-      <Box sx={containerSx}>
+      <Box sx={containerStyle}>
         <Container>
-          <Box sx={headingBoxSx}>
-            <Typography color={'secondary'} sx={headingTypographySx}>
+          <Box sx={headingBoxStyle}>
+            <Typography color={'secondary'} sx={headingTypographyStyle}>
               {data?.heading || 'Heading not available'}
             </Typography>
-            <Typography color={'secondary'} sx={descriptionTypographySx}>
+            <Typography color={'secondary'} sx={descriptionTypographyStyle}>
               {data?.description || 'Description not available'}
             </Typography>
           </Box>
-          <Grid container sx={gridContainerSx}>
+          <Grid container sx={gridContainerStyle}>
             {data?.items?.length > 0 ? (
               data?.items.map((list, itemIndex) => (
                 <Grid item xs={12} sm={5.5} key={itemIndex}>
-                  <Box sx={itemBoxSx}>
+                  <Box sx={itemBoxStyle}>
                     {list?.listIcon && (
                       <Image
                         quality="85"
@@ -53,12 +53,15 @@ const OutStaffings = ({ data }) => {
                         }}
                       />
                     )}
-                    <Typography sx={itemTitleTypographySx} color="secondary">
+                    <Typography sx={itemTitleTypographyStyle} color="secondary">
                       {list?.title || 'Title not available'}
                     </Typography>
                   </Box>
                   <Box>
-                    <Typography variant="body1" sx={itemParagraphTypographySx}>
+                    <Typography
+                      variant="body1"
+                      sx={itemParagraphTypographyStyle}
+                    >
                       {list?.paragraph || 'Paragraph not available'}
                     </Typography>
                   </Box>
@@ -68,10 +71,10 @@ const OutStaffings = ({ data }) => {
               <Typography>No items available</Typography>
             )}
           </Grid>
-          <Box item xs={12} sx={buttonContainerSx}>
+          <Box item xs={12} sx={buttonContainerStyle}>
             {data?.buttonLink && data?.buttonText ? (
               <Link href={data?.buttonLink} target="_blank" passHref>
-                <Button sx={buttonSx}>{data?.buttonText}</Button>
+                <Button sx={buttonStyle}>{data?.buttonText}</Button>
               </Link>
             ) : (
               <Typography>Button not available</Typography>

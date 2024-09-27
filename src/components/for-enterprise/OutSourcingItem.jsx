@@ -20,17 +20,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import {
-  outerBoxSx,
-  innerBoxSx,
-  titleTypographySx,
-  subtitleTypographySx,
-  gridItemSx,
-  itemTitleTypographySx,
-  listBoxSx,
-  listItemIconSx,
-  taskAltIconSx,
-  listItemTypographySx,
-} from './OutSourcingItemConstant';
+  outerBoxStyle,
+  innerBoxStyle,
+  titleTypographyStyle,
+  subtitleTypographyStyle,
+  gridItemStyle,
+  itemTitleTypographyStyle,
+  listBoxStyle,
+  listItemIconStyle,
+  taskAltIconStyle,
+  listItemTypographyStyle,
+} from '@/constants/solutions/for-enterprise/OutSourcingItemConstant';
 
 const OutSourcingItem = ({ data }) => {
   const [isClient, setIsClient] = useState(false);
@@ -80,13 +80,17 @@ const OutSourcingItem = ({ data }) => {
 
   return (
     <>
-      <Box sx={outerBoxSx}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={innerBoxSx}>
-            <Typography color={'secondary'} variant="h2" sx={titleTypographySx}>
+          <Box sx={innerBoxStyle}>
+            <Typography
+              color={'secondary'}
+              variant="h2"
+              sx={titleTypographyStyle}
+            >
               {data?.title || 'How Fast Are Our Outsourcing Services?'}
             </Typography>
-            <Typography color={'secondary'} sx={subtitleTypographySx}>
+            <Typography color={'secondary'} sx={subtitleTypographyStyle}>
               {data?.subtitle ||
                 'At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.'}
             </Typography>
@@ -97,22 +101,22 @@ const OutSourcingItem = ({ data }) => {
                 {data?.items?.length > 0 ? (
                   data?.items.map((item, index) => (
                     <SwiperSlide key={index}>
-                      <Grid item xs={12} sm={4} sx={gridItemSx}>
-                        <Typography variant="h3" sx={itemTitleTypographySx}>
+                      <Grid item xs={12} sm={4} sx={gridItemStyle}>
+                        <Typography variant="h3" sx={itemTitleTypographyStyle}>
                           {item?.title || 'Title not available'}
                         </Typography>
                         {item?.items?.length > 0 ? (
                           item.items.map((list, itemIndex) => (
-                            <Box key={itemIndex} sx={listBoxSx}>
-                              <ListItemIcon sx={listItemIconSx}>
+                            <Box key={itemIndex} sx={listBoxStyle}>
+                              <ListItemIcon sx={listItemIconStyle}>
                                 <TaskAltIcon
                                   fontSize="small"
-                                  sx={taskAltIconSx}
+                                  sx={taskAltIconStyle}
                                 />
                               </ListItemIcon>
                               <Typography
                                 variant="body1"
-                                sx={listItemTypographySx}
+                                sx={listItemTypographyStyle}
                               >
                                 {list?.title || 'Item not available'}
                               </Typography>
