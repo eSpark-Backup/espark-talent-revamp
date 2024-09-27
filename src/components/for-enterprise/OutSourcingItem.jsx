@@ -74,44 +74,70 @@ const OutSourcingItem = ({ data }) => {
     },
   };
 
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
   return (
     <>
       <Box sx={outerBoxSx}>
         <Container>
           <Box sx={innerBoxSx}>
             <Typography color={'secondary'} variant="h2" sx={titleTypographySx}>
-              {'How Fast Are Our Outsourcing Services?'}
+              {data?.title || 'How Fast Are Our Outsourcing Services?'}
             </Typography>
             <Typography color={'secondary'} sx={subtitleTypographySx}>
-              {`At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.`}
+              {data?.subtitle ||
+                'At eSpark Talent, our services move with the rhythm of urgency, promising a pace that surprises and a speed that advances.'}
             </Typography>
           </Box>
           {isClient ? (
             <Swiper {...swiperSettings}>
               <Grid container spacing={2} justifyContent="center">
-                {data?.items?.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <Grid item xs={12} sm={4} sx={gridItemSx}>
-                      <Typography variant="h3" sx={itemTitleTypographySx}>
-                        {item?.title}
-                      </Typography>
-                      {item?.items?.map((list, itemIndex) => (
-                        <Box key={itemIndex} sx={listBoxSx}>
-                          <ListItemIcon sx={listItemIconSx}>
-                            <TaskAltIcon fontSize="small" sx={taskAltIconSx} />
-                          </ListItemIcon>
-                          <Typography variant="body1" sx={listItemTypographySx}>
-                            {list?.title}
-                          </Typography>
-                        </Box>
-                      ))}
-                    </Grid>
-                  </SwiperSlide>
-                ))}
+                {data?.items?.length > 0 ? (
+                  data.items.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <Grid item xs={12} sm={4} sx={gridItemSx}>
+                        <Typography variant="h3" sx={itemTitleTypographySx}>
+                          {item?.title || 'Title not available'}
+                        </Typography>
+                        {item?.items?.length > 0 ? (
+                          item.items.map((list, itemIndex) => (
+                            <Box key={itemIndex} sx={listBoxSx}>
+                              <ListItemIcon sx={listItemIconSx}>
+                                <TaskAltIcon
+                                  fontSize="small"
+                                  sx={taskAltIconSx}
+                                />
+                              </ListItemIcon>
+                              <Typography
+                                variant="body1"
+                                sx={listItemTypographySx}
+                              >
+                                {list?.title || 'Item not available'}
+                              </Typography>
+                            </Box>
+                          ))
+                        ) : (
+                          <Typography>No items available</Typography>
+                        )}
+                      </Grid>
+                    </SwiperSlide>
+                  ))
+                ) : (
+                  <Typography>No items available</Typography>
+                )}
               </Grid>
             </Swiper>
           ) : (
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '200px',
+              }}
+            >
               <CircularProgress color="success" />
             </Box>
           )}

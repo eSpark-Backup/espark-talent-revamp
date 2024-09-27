@@ -14,6 +14,10 @@ import {
 } from './OutSourcingAdvantageConstants';
 
 const OutSourcingAdvantage = ({ data }) => {
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
   return (
     <>
       <Box sx={outerBoxSx}>
@@ -21,44 +25,60 @@ const OutSourcingAdvantage = ({ data }) => {
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid item xs={12} sm={6}>
               <Typography variant="h2" color="secondary" sx={titleTypographySx}>
-                {data?.title}
+                {data?.title || 'Title not available'}
               </Typography>
               <Typography
                 variant="body1"
                 color="secondary"
                 sx={paragraphTypographySx}
               >
-                {data?.paragraph}
+                {data?.paragraph || 'Paragraph not available'}
               </Typography>
               <Grid container sx={itemsGridContainerSx}>
-                {data?.items?.map((list, itemIndex) => (
-                  <Grid item xs={12} md={6} key={itemIndex}>
-                    <Box sx={itemBoxSx}>
-                      <Image
-                        quality="85"
-                        priority={true}
-                        src={list?.listIcon}
-                        alt="List Icon"
-                        width={15}
-                        height={15}
-                      />
-                      <Typography variant="body1" sx={itemTypographySx}>
-                        {list?.title}
-                      </Typography>
-                    </Box>
-                  </Grid>
-                ))}
+                {data?.items?.length > 0 ? (
+                  data.items.map((list, itemIndex) => (
+                    <Grid item xs={12} md={6} key={itemIndex}>
+                      <Box sx={itemBoxSx}>
+                        {list?.listIcon && (
+                          <Image
+                            quality="85"
+                            priority={true}
+                            src={list.listIcon}
+                            alt={list?.title || 'List Icon'}
+                            width={15}
+                            height={15}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = '/path/to/fallback/image.jpg';
+                            }}
+                          />
+                        )}
+                        <Typography variant="body1" sx={itemTypographySx}>
+                          {list?.title || 'Item not available'}
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  ))
+                ) : (
+                  <Typography>No items available</Typography>
+                )}
               </Grid>
             </Grid>
             <Grid item xs={12} sm={4} sx={imageGridSx}>
-              <Image
-                quality="85"
-                priority={true}
-                src={data?.image}
-                height={data?.imageHeight}
-                width={data?.imageWidth}
-                alt={`${data?.alt}`}
-              />
+              {data?.image && (
+                <Image
+                  quality="85"
+                  priority={true}
+                  src={data.image}
+                  height={data?.imageHeight || 300}
+                  width={data?.imageWidth || 300}
+                  alt={data?.alt || 'Image'}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/path/to/fallback/image.jpg';
+                  }}
+                />
+              )}
             </Grid>
           </Grid>
         </Container>

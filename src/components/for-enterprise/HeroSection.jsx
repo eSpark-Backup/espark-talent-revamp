@@ -3,13 +3,17 @@ import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 
 const HeroSection = ({ data }) => {
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
   const outerBoxSx = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     height: { xs: 'auto', sm: '550px' },
-    backgroundImage: `url(${data?.bgImage})`,
+    backgroundImage: `url(${data?.bgImage || ''})`,
   };
 
   const containerBoxSx = {
@@ -135,28 +139,30 @@ const HeroSection = ({ data }) => {
                   <Typography
                     component={'h1'}
                     sx={titleTypographySx}
-                    color={data?.titleColor}
+                    color={data?.titleColor || '#029894'}
                   >
-                    {data?.title}
+                    {data.title}
                   </Typography>
                 )}
                 {data?.description && (
                   <Typography component={'p'} sx={descriptionTypographySx}>
-                    {data?.description}
+                    {data.description}
                   </Typography>
                 )}
-                <Link href={data?.button?.link} target="_blank">
-                  <Button color="secondary" variant="secondary" sx={buttonSx}>
-                    {data?.button?.label}
-                  </Button>
-                </Link>
+                {data?.button?.link && data?.button?.label && (
+                  <Link href={data.button.link} target="_blank">
+                    <Button color="secondary" variant="secondary" sx={buttonSx}>
+                      {data.button.label}
+                    </Button>
+                  </Link>
+                )}
               </Box>
               {data?.image && (
                 <Box sx={imageBoxSx}>
                   <Box
                     component={'img'}
-                    src={data?.image}
-                    alt={data?.imageAlt}
+                    src={data.image}
+                    alt={data?.imageAlt || 'Hero image'}
                     sx={imageSx}
                   />
                 </Box>

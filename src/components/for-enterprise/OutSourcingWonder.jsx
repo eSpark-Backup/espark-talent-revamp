@@ -88,66 +88,87 @@ const OutSourcingWonder = ({ data }) => {
     },
   };
 
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
   return (
     <>
       <Box sx={outerBoxSx}>
         <Container>
           <Box sx={titleBoxSx}>
             <Typography variant="h2" sx={titleTypographySx}>
-              {data?.title}
+              {data?.title || 'Title not available'}
             </Typography>
           </Box>
           {isLoading ? (
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '200px',
+              }}
+            >
               <CircularProgress />
             </Box>
           ) : (
             <Swiper {...swiperSettings}>
               <Grid container sx={gridContainerSx}>
-                {data?.items?.map((item, index) => (
-                  <SwiperSlide key={index} className="outsourcing-slide">
-                    <Grid sx={gridItemSx}>
-                      <Box sx={iconBoxSx}>
-                        <Image
-                          quality="85"
-                          priority={true}
-                          src={item?.icon}
-                          alt={`${item?.title}`}
-                          height={
-                            isSmallScreen
-                              ? 30
-                              : isMediumScreen
+                {data?.items?.length > 0 ? (
+                  data.items.map((item, index) => (
+                    <SwiperSlide key={index} className="outsourcing-slide">
+                      <Grid sx={gridItemSx}>
+                        <Box sx={iconBoxSx}>
+                          <Image
+                            quality="85"
+                            priority={true}
+                            src={item?.icon || '/path/to/fallback/image.jpg'}
+                            alt={`${item?.title || 'Item icon'}`}
+                            height={
+                              isSmallScreen
                                 ? 30
-                                : isLargeScreen
-                                  ? 40
-                                  : 40
-                          }
-                          width={
-                            isSmallScreen
-                              ? 30
-                              : isMediumScreen
+                                : isMediumScreen
+                                  ? 30
+                                  : isLargeScreen
+                                    ? 40
+                                    : 40
+                            }
+                            width={
+                              isSmallScreen
                                 ? 30
-                                : isLargeScreen
-                                  ? 40
-                                  : 40
+                                : isMediumScreen
+                                  ? 30
+                                  : isLargeScreen
+                                    ? 40
+                                    : 40
+                            }
+                            pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = '/path/to/fallback/image.jpg';
+                            }}
+                          />
+                        </Box>
+                        <Typography
+                          variant={
+                            pathname === '/solutions/business-startup'
+                              ? 'h4'
+                              : 'h3'
                           }
-                          pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
-                        />
-                      </Box>
-                      <Typography
-                        variant={
-                          pathname === '/solutions/business-startup' ? 'h4' : 'h3'
-                        }
-                        sx={itemTitleTypographySx}
-                      >
-                        {item?.title}
-                      </Typography>
-                      <Typography sx={itemParagraphTypographySx}>
-                        {item?.paragraph}
-                      </Typography>
-                    </Grid>
-                  </SwiperSlide>
-                ))}
+                          sx={itemTitleTypographySx}
+                        >
+                          {item?.title || 'Title not available'}
+                        </Typography>
+                        <Typography sx={itemParagraphTypographySx}>
+                          {item?.paragraph || 'Paragraph not available'}
+                        </Typography>
+                      </Grid>
+                    </SwiperSlide>
+                  ))
+                ) : (
+                  <Typography>No items available</Typography>
+                )}
               </Grid>
             </Swiper>
           )}
