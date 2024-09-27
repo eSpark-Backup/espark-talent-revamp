@@ -34,6 +34,10 @@ const OutSourcingSolution = ({ data }) => {
                     alt={`${item?.title}`}
                     height={item?.iconHeight}
                     width={item?.iconWidth}
+                    onError={(e) => {
+                      e.target.src = '/path/to/default/icon.png';
+                      e.target.onerror = null;
+                    }}
                   />
                   <Typography
                     variant="h5"

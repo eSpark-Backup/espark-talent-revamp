@@ -20,7 +20,7 @@ import {
 } from './OurOutsourcingConstant';
 
 const OurOutsourcing = ({ data }) => {
-  const { listItem, heading, subHeading } = data;
+  const { listItem, heading, subHeading } = data || {};
   if (!data) {
     return <Typography>Error: No data provided</Typography>;
   }

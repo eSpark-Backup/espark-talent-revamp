@@ -16,10 +16,12 @@ import {
 } from './BusinessVentureConstant';
 
 const BusinessVenture = ({ data }) => {
-  const { listItem } = data;
   if (!data) {
     return <Typography>Error: No data provided</Typography>;
   }
+
+  const { listItem, title, image, alt } = data;
+
   return (
     <Box sx={outerBoxStyle}>
       <Container>
@@ -28,7 +30,7 @@ const BusinessVenture = ({ data }) => {
             <Box sx={leftGridStyle}>
               <Box>
                 <Typography variant="h3" sx={titleTypographyStyle}>
-                  {data?.title}
+                  {title}
                 </Typography>
               </Box>
             </Box>
@@ -50,10 +52,10 @@ const BusinessVenture = ({ data }) => {
               <Image
                 quality="85"
                 priority={true}
-                src={data?.image}
+                src={image}
                 width={380}
                 height={300}
-                alt={`${data?.alt}`}
+                alt={alt}
               />
             </Box>
           </Grid>

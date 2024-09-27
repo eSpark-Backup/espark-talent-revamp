@@ -31,12 +31,12 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
             sx={leftGridStyle}
           >
             <Typography variant="h3" sx={titleStyle}>
-              {data?.title}
+              {data?.title || 'Title not available'}
             </Typography>
             <Typography
               sx={descriptionStyle}
               textAlign={{ xs: textAlignXs, sm: 'center', md: 'justify' }}
-              dangerouslySetInnerHTML={{ __html: data?.description }}
+              dangerouslySetInnerHTML={{ __html: data?.description || 'Description not available' }}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={5.4} sx={rightGridStyle}>
@@ -44,10 +44,10 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
               <Image
                 quality="85"
                 priority={true}
-                src={data?.image}
+                src={data?.image || '/path/to/default/image.png'}
                 width={400}
                 height={300}
-                alt={`${data?.alt}`}
+                alt={`${data?.alt || 'Image Alt'}`}
               />
             </Box>
           </Grid>

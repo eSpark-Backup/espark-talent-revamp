@@ -14,10 +14,16 @@ import {
 } from './CustomizeOutsourceConstant';
 
 const CustomizeOutsource = ({ data }) => {
-  const { listItem } = data;
   if (!data) {
     return <Typography>Error: No data provided</Typography>;
   }
+
+  const { listItem, title, image, alt } = data;
+
+  if (!listItem || listItem.length === 0) {
+    return <Typography>Error: No list items provided</Typography>;
+  }
+
   return (
     <Box sx={outerBoxStyle}>
       <Container>
@@ -26,11 +32,11 @@ const CustomizeOutsource = ({ data }) => {
             <Box>
               <Box>
                 <Typography variant="h3" sx={titleTypographyStyle}>
-                  {data?.title}
+                  {title}
                 </Typography>
               </Box>
             </Box>
-            {listItem?.map((item, index) => (
+            {listItem.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
                 <Box sx={listItemBoxStyle}>
                   <ListItemIcon sx={listItemIconStyle}>
@@ -48,10 +54,10 @@ const CustomizeOutsource = ({ data }) => {
               <Image
                 quality="85"
                 priority={true}
-                src={data?.image}
+                src={image}
                 width={380}
                 height={300}
-                alt={`${data?.alt}`}
+                alt={alt}
               />
             </Box>
           </Grid>
