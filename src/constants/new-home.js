@@ -368,3 +368,114 @@ export const OFFSHORE_DATA = {
     },
   ],
 };
+
+// pricing Defference
+
+export const containerStyle = {
+  width: '100%',
+  maxWidth: 1210,
+  margin: 'auto',
+  padding: '8px 0',
+  position: 'relative',
+  py: { xs: 2, md: 4, lg: 7 },
+  mb: { xs: 3, md: 4, lg: 7 },
+};
+
+export const headingStyle = {
+  width: '100%',
+  mx: 'auto',
+  maxWidth: { xs: '75%', sm: '70%', md: '60%', lg: '65%' },
+  display: 'flex',
+  justifyContent: 'center',
+  pb: { xs: 2, sm: 3, md: 4, lg: 5 },
+};
+
+export const headingTextStyle = {
+  color: '#001C63',
+  textAlign: 'center',
+  fontSize: { xs: '20px', sm: '24px', md: '28px', lg: '32px' },
+  fontWeight: 700,
+  lineHeight: { xs: '30px', md: '48px' },
+};
+
+export const slideStyle = {
+  paddingTop: '20px',
+  paddingBottom: '20px',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100%',
+};
+
+export const cardStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  mx: { xs: 2, md: 1.5, lg: 1.5 },
+  height: '100%',
+  minHeight: { xs: '147px', sm: '160px', md: '243px', lg: '243px' },
+  width: '100%',
+  maxWidth: '400px',
+  backgroundColor: '#F7F8FB',
+  borderRadius: '15px',
+  border: '0.9px solid rgba(0, 0, 0, 0.5)',
+  '@media(min-width:1024px) and (max-width:1123px)': {
+    mx: 1.4,
+    maxWidth: '100%',
+    minHeight: '270px',
+    maxHeight: '100%',
+  },
+  '@media(min-width:952px) and (max-width:1023px)': {
+    mx: 1,
+    maxWidth: '100%',
+    minHeight: '200px',
+  },
+  '@media(min-width:900px) and (max-width:951px)': {
+    mx: 1,
+    maxWidth: '100%',
+    minHeight: '220px',
+  },
+  '@media(min-width:480px) and (max-width:768px)': {
+    mx: 1,
+    maxWidth: '350px',
+  },
+  '@media(min-width:320px) and (max-width:479px)': {
+    mx: 1,
+    maxWidth: '271px',
+  },
+};
+
+export const avatarStyle = {
+  width: { xs: '33px', sm: '40px', lg: '50px' },
+  height: { xs: '33px', sm: '40px', lg: '43px' },
+};
+
+export const titleStyle = {
+  color: '#001C63',
+  fontSize: {
+    xs: '19.27px',
+    sm: '24px',
+    md: '28px',
+    lg: '28.83px',
+  },
+  fontWeight: 600,
+  lineHeight: { md: 'auto', lg: 1.8 },
+};
+
+export const contentStyle = {
+  textAlign: { xs: 'center', lg: 'left' },
+  mx: 'auto',
+  pt: 0,
+};
+
+export const paragraphStyle = {
+  color: '#001C63',
+  fontSize: {
+    xs: '12px',
+    sm: '12px',
+    md: '17px',
+    lg: '18px',
+  },
+  fontWeight: 400,
+  lineHeight: 1.4,
+};
