@@ -98,7 +98,7 @@ const Hero = ({ data }) => {
                 }}
               >
                 {data?.button?.link ? (
-                  <Link href={data.button?.link} target="_blank">
+                  <Link href={data?.button?.link} target="_blank">
                     <Button
                       sx={{
                         backgroundColor: isHome || isDemo ? '#001C63' : '#fff',

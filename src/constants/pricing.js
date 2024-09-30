@@ -198,3 +198,215 @@ export const PRICING_DATA = {
     ],
   },
 };
+
+export const pricingCardContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  pt: 8,
+  '@media(max-width: 783px)': {
+    pb: 8,
+  },
+};
+
+export const pricingCardHeaderContainer = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textAlign: 'center',
+  gap: '10px',
+  width: '100%',
+  mt: 4,
+};
+
+export const pricingCardDividerStyle = {
+  display: 'block',
+  width: '100%',
+  maxWidth: { md: '410px', lg: '620px' },
+  height: '1px',
+  backgroundColor: '#fff',
+  '@media(max-width: 783px)': {
+    display: 'none',
+  },
+};
+
+export const typographyBox = {
+  maxWidth: { xs: '100%', sm: '580px', md: '700px', lg: '1050px' },
+  px: { xs: 2.5, sm: 5, md: 0 },
+};
+
+export const headingStyle = {
+  fontSize: {
+    xs: '24.33px',
+    sm: '29.33px',
+    md: '41.33px',
+    lg: '52.33px',
+    xl: '61.33px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'none', lg: 'inline-flex' },
+};
+
+export const subHeadingStyle = {
+  fontSize: {
+    xs: '24px',
+    sm: '29px',
+    md: '40px',
+    lg: '45px',
+    xl: '50px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'none', lg: 'inline-flex' },
+};
+
+export const bothHeadingsStyle = {
+  fontSize: {
+    xs: '24px',
+    sm: '29px',
+    md: '40px',
+    lg: '45px',
+    xl: '50px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'flex', lg: 'none' },
+};
+
+export const paragraphStyle = {
+  fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+  fontWeight: 400,
+  lineHeight: 1.5,
+  mx: { xs: 2, md: 5, lg: 15 },
+  mt: 0.8,
+  mb: 1,
+};
+
+export const blueCardMainContainerStyle = {
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  py: { xs: 0, md: 3 },
+  '@media (max-width:319px)': {
+    pb: 2,
+  },
+};
+
+export const blueCardContainerStyle = {
+  '@media(max-width: 783px)': {
+    display: 'none',
+  },
+};
+
+export const blueCardContainer = {
+  display: 'flex',
+  gap: '20px',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  mb: -9,
+  '@media(max-width: 783px)': {
+    mb: 0,
+  },
+};
+
+export const cardStyle = {
+  width: '90%',
+  maxWidth: { xs: '280px', md: '300px', lg: '358px' },
+  minHeight: { xs: '160px', sm: '200px', md: '459px' },
+  backgroundColor: '#ffffff',
+  boxShadow: '0px 4.21px 6.32px 0px rgba(0, 0, 0, 0.25)',
+  borderRadius: '9px',
+};
+
+export const titleAndButtonContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'left',
+  position: 'relative',
+  width: '100%',
+  height: { xs: '135px', sm: '171px' },
+  backgroundColor: '#001C63',
+  borderTopRightRadius: '7px',
+  borderTopLeftRadius: '7px',
+  pt: 3,
+  px: 3,
+};
+
+export const titleStyle = {
+  position: 'relative',
+  fontSize: {
+    xs: '17px',
+    sm: '22px',
+    md: '25px',
+    lg: '27px',
+  },
+  fontWeight: 500,
+  color: '#fff',
+  '@media (max-width:319px)': {
+    fontSize: '17px',
+  },
+};
+
+export const buttonStyle = {
+  width: { xs: '100px', sm: '131px' },
+  height: '31px',
+  backgroundColor: '#fff',
+  borderRadius: '7.04px',
+  p: 1,
+  color: '#001C63',
+  fontSize: { xs: '10.5px', sm: '14px' },
+  fontWeight: 600,
+  '&:hover': {
+    color: '#001C63',
+    backgroundColor: '#fff',
+  },
+};
+
+export const sideImageStyle = {
+  width: {
+    xs: '69px',
+    sm: '70px',
+    md: '70px',
+    lg: '98px',
+  },
+  right: '0px',
+  bottom: '0px',
+  position: 'absolute',
+  mr: 0,
+};
+
+export const listItemTitle = {
+  fontSize: {
+    xs: '15px',
+    sm: '17px',
+    md: '19px',
+    lg: '21px',
+  },
+  fontWeight: 500,
+  font: 'Gilroy-SemiBold',
+  color: '#001C63',
+  textTransform: 'capitalize',
+  ml: 0.3,
+  mb: 1,
+};
+
+export const listItemStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  gap: 0.8,
+  mb: 1,
+  alignItems: 'start',
+};
+
+export const listItemTextStyle = {
+  fontSize: {
+    xs: '12px',
+    sm: '13px',
+    md: '14px',
+    lg: '15px',
+  },
+  fontWeight: 500,
+  font: 'Mulish',
+  color: '#38383A',
+};
