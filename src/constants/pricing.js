@@ -199,6 +199,7 @@ export const PRICING_DATA = {
   },
 };
 
+// pricing card
 export const pricingCardContainerStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -409,4 +410,139 @@ export const listItemTextStyle = {
   fontWeight: 500,
   font: 'Mulish',
   color: '#38383A',
+};
+
+// Pricing Benifits
+
+export const BenifitsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  py: 7,
+  px: 1,
+};
+
+export const pricingBenifitsHeading = {
+  fontSize: { xs: '25px', sm: '30px', md: '34px', lg: '39px' },
+  fontWeight: 600,
+  textAlign: 'center',
+  mb: '5px',
+};
+
+export const pricingBenifitsSubHeading = {
+  fontSize: {
+    xs: '12px',
+    sm: '15px',
+    md: '17px',
+    lg: '21px',
+  },
+  fontWeight: 300,
+  textAlign: 'center',
+  mb: '20px',
+  mx: { xs: 2, md: 'auto' },
+  maxWidth: { xs: '100%', md: '600px', lg: '100%' },
+};
+
+export const pricingStripe = (index) => {
+  const pricingStripStackStyle = {
+    width: '100%',
+    maxWidth: {
+      xs: index === 0 || index === 1 ? '571px' : '625px',
+    },
+    padding: '10px',
+    boxShadow: '0px 4px 25.2px 0px #0000001F',
+    borderRadius: '5px',
+    position: 'relative',
+    minHeight: { xs: '60px', sm: '90px', md: '110px', lg: '115px' },
+    maxHeight: { xs: '90px', sm: 'auto', md: '110px', lg: '115px' },
+    flexDirection: {
+      xs: index % 2 === 0 ? 'row-reverse' : 'row',
+    },
+    ':after': {
+      content: '" "',
+      width: { xs: '5px', md: '5px' },
+      height: '100%',
+      position: 'absolute',
+      top: '0px',
+      backgroundColor: '#029894',
+      borderRadius: '5px',
+      py: 2,
+    },
+    '@media (max-width: 899px)': {
+      mx: index === 0 || (index === 2 && 'auto'),
+      mr: index !== 3 ? 'auto' : null,
+      ml: index !== 1 ? 'auto' : null,
+      maxWidth: index === 0 || index === 2 ? '82%' : '91%',
+      flexDirection: (index === 1 && 'row-reverse') || (index === 2 && 'row'),
+      ':after': {
+        [index === 2 || index === 3 ? 'left' : 'right']: '0px !important',
+      },
+    },
+    '@media (min-width: 900px)': {
+      ':after': {
+        content: '" "',
+        width: { xs: '5px', md: '5px' },
+        height: '100%',
+        position: 'absolute',
+        top: '0px',
+        [index % 2 !== 0 ? 'left' : 'right']: '0px',
+        backgroundColor: '#029894',
+        borderRadius: '5px',
+        py: 2,
+      },
+    },
+  };
+  const pricingStripGrid = {
+    width: '100%',
+    justifyContent: 'flex-end',
+    display: { sm: 'inline-block', md: index === 0 && 'flex' },
+    '@media (max-width: 899px)': {
+      order: (index === 1 && 3) || (index === 3 && 3),
+      flexBasis: '100%',
+      maxWidth: '100%',
+      justifyContent: 'center',
+      display: 'flex',
+    },
+  };
+
+  const stripImageStyle = {
+    width: { xs: '24px', sm: '33px', md: '44px', lg: '55px' },
+    mx: { xs: 0.5, sm: 1.5 },
+    height: 'auto',
+  };
+
+  const stripeTypographyBoxStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    pl: { xs: 0, lg: index % 2 !== 0 ? 0 : 3 },
+  };
+
+  const stripeTitleStyle = {
+    '@media (min-width: 900px)': {
+      textAlign: index % 2 !== 0 ? 'left' : 'right',
+    },
+    '@media (max-width: 899px)': {
+      textAlign: index === 2 || index === 3 ? 'left' : 'right',
+    },
+  };
+
+  const stripeDiscriptionStyle = {
+    '@media (min-width: 900px)': {
+      textAlign: index % 2 !== 0 ? 'left' : 'right',
+    },
+    '@media (max-width: 899px)': {
+      textAlign: index === 2 || index === 3 ? 'left' : 'right',
+    },
+  };
+
+  return {
+    pricingStripStackStyle,
+    pricingStripGrid,
+    stripImageStyle,
+    stripeTypographyBoxStyle,
+    stripeTitleStyle,
+    stripeDiscriptionStyle,
+  };
 };
