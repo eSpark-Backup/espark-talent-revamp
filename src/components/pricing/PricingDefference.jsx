@@ -4,7 +4,7 @@ import { Box, Card, Typography, CircularProgress } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import {
   avatarStyle,
   cardStyle,
@@ -61,7 +61,7 @@ const PricingDefference = ({ data }) => {
         backgroundColor: '#F7F8FB',
       }}
     >
-      <Box sx={containerStyle}>
+      <Box sx={containerStyle} id="pricing-difference">
         {loading ? (
           <Box
             sx={{
@@ -75,18 +75,19 @@ const PricingDefference = ({ data }) => {
           </Box>
         ) : (
           <Swiper
+            pagination={true}
             breakpoints={{
               0: {
                 slidesPerView: 1,
               },
-              769: {
+              768: {
                 slidesPerView: 2,
               },
               1024: {
                 slidesPerView: 3,
               },
             }}
-            modules={[Navigation]}
+            modules={[Navigation, Pagination]}
           >
             {data?.items?.map(renderSlide)}
           </Swiper>

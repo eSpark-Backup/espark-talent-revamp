@@ -546,3 +546,135 @@ export const pricingStripe = (index) => {
     stripeDiscriptionStyle,
   };
 };
+
+// pricing works
+
+export const worksContainerStyle = {
+  width: '100%',
+  maxWidth: 1200,
+  margin: 'auto',
+  padding: '8px 0',
+  position: 'relative',
+  pb: { xs: 4, sm: 5, md: 6, lg: 8 },
+};
+
+export const headingContainerStyle = {
+  px: 1,
+};
+
+export const worksMainHeadingTextStyle = {
+  px: { xs: '5%', md: '7%' },
+  fontSize: {
+    xs: '23px',
+    sm: '30px',
+    md: '35px',
+    lg: '39px',
+  },
+  mb: 1,
+  fontWeight: 600,
+  textAlign: 'center',
+  flexWrap: 'wrap',
+};
+
+export const worksSubHeadingtextStyle = {
+  fontSize: {
+    xs: '12px',
+    sm: '15px',
+    md: '17px',
+    lg: '21px',
+  },
+  fontWeight: 400,
+  textAlign: 'center',
+  px: { xs: '12%', sm: '15%', md: '11%' },
+  pb: '6px',
+};
+
+export const workSlideStyle = {
+  paddingTop: '30px',
+  paddingBottom: '30px',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100%',
+  mx: 'auto',
+};
+
+export const worksCardBorderRadius = (index) => {
+  return {
+    borderRadius: {
+      xs: '10px',
+      md: `${index == 0 ? `16px 80px 80px 16px` : '80px 16px 16px 80px'}`,
+    },
+  };
+};
+
+export const worksCardStyle = {
+  mx: 2,
+  width: '100%',
+  height: '100%',
+  maxWidth: { xs: '277px', sm: '353px', md: '555px' },
+  minHeight: { xs: '340px', sm: '425px', md: 'auto', lg: '499px' },
+  backgroundColor: '#fff',
+  boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, 0.35)',
+};
+
+export const headerStyle = {
+  flexDirection: 'column',
+  px: 2.5,
+  pt: { xs: 0, md: 3 },
+  pb: 0,
+  gap: { xs: 0.5, sm: 1 },
+};
+
+export const avatarStyle = {
+  mb: 1,
+  ml: 2.5,
+  width: { xs: '33px', sm: '40px', lg: '50px' },
+  height: { xs: '33px', sm: '40px', lg: '50px' },
+};
+
+export const listHeadingStyle = {
+  fontWeight: 600,
+  fontSize: { xs: '14px', sm: '17px', md: '19px' },
+  lineHeight: {
+    xs: '25px',
+    sm: '41.39px',
+    md: '43px',
+    lg: '45px',
+  },
+  color: '#001C63',
+  mb: { xs: 1, sm: 0 },
+};
+
+export const contentStyle = {
+  textAlign: { xs: 'center', lg: 'left' },
+  maxWidth: '325px',
+  mx: 'auto',
+  pt: 0,
+  pb: { xs: '0 !important', md: '24px !important' },
+};
+
+export const itemsStyle = {
+  fontWeight: 600,
+  fontSize: {
+    xs: '12px',
+    sm: '13px',
+    md: '14px',
+    lg: '15.69px',
+  },
+  lineHeight: {
+    xs: '13.15px',
+    sm: '18px',
+    md: '21px',
+    lg: '27.22px',
+  },
+  color: '#029894',
+};
+
+export const iconContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 1,
+  mt: 1,
+  pb: { xs: 1, sm: 3, md: 5, lg: 7 },
+};

@@ -1943,3 +1943,28 @@ input {
 }
 
 /* ********************************* */
+
+
+/********* pricing page *********/
+#pricing-difference .swiper-pagination-bullet {
+  margin-bottom: -15px !important;
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#pricing-difference .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+/* how it works  */
+#pricing-work .swiper-pagination-bullet {
+  margin-bottom: -15px !important;
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#pricing-work .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+/* ********************************* */

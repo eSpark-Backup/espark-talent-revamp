@@ -399,8 +399,8 @@ export const headingTextStyle = {
 };
 
 export const slideStyle = {
-  paddingTop: '20px',
-  paddingBottom: '20px',
+  paddingTop: '30px',
+  paddingBottom: '30px',
   display: 'flex',
   justifyContent: 'center',
   height: '100%',
@@ -413,7 +413,7 @@ export const cardStyle = {
   alignItems: 'center',
   mx: { xs: 2, md: 1.5, lg: 1.5 },
   height: '100%',
-  minHeight: { xs: '147px', sm: '160px', md: '243px', lg: '243px' },
+  minHeight: { xs: '147px', sm: '180px', md: '243px', lg: '243px' },
   width: '100%',
   maxWidth: '400px',
   backgroundColor: '#F7F8FB',
