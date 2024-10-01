@@ -443,6 +443,9 @@ export const cardStyle = {
     mx: 1,
     maxWidth: '271px',
   },
+  '&:hover': {
+    backgroundColor: 'rgb(255, 255, 255)',
+  },
 };
 
 export const avatarStyle = {

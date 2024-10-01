@@ -205,9 +205,6 @@ export const pricingCardContainerStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   pt: 8,
-  '@media(max-width: 783px)': {
-    pb: 8,
-  },
 };
 
 export const pricingCardHeaderContainer = {
@@ -284,37 +281,14 @@ export const paragraphStyle = {
   mb: 1,
 };
 
-export const blueCardMainContainerStyle = {
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center',
-  py: { xs: 0, md: 3 },
-  '@media (max-width:319px)': {
-    pb: 2,
-  },
-};
-
 export const blueCardContainerStyle = {
-  '@media(max-width: 783px)': {
-    display: 'none',
-  },
-};
-
-export const blueCardContainer = {
-  display: 'flex',
-  gap: '20px',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  mb: -9,
-  '@media(max-width: 783px)': {
-    mb: 0,
-  },
+  mb: { xs: -13, sm: -13, md: -13, lg: -10 },
 };
 
 export const cardStyle = {
   width: '90%',
-  maxWidth: { xs: '280px', md: '300px', lg: '358px' },
-  minHeight: { xs: '160px', sm: '200px', md: '459px' },
+  maxWidth: { xs: '280px', sm: '350px', md: '350px', lg: '348px' },
+  minHeight: { xs: '315px', sm: '500px', md: '550px', lg: '525px' },
   backgroundColor: '#ffffff',
   boxShadow: '0px 4.21px 6.32px 0px rgba(0, 0, 0, 0.25)',
   borderRadius: '9px',
@@ -325,7 +299,6 @@ export const titleAndButtonContainerStyle = {
   flexDirection: 'column',
   alignItems: 'left',
   position: 'relative',
-  width: '100%',
   height: { xs: '135px', sm: '171px' },
   backgroundColor: '#001C63',
   borderTopRightRadius: '7px',
