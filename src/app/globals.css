@@ -1055,6 +1055,7 @@ span {
   gap: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
+  flex-direction: row;
 }
 
 .partner-form .partner-form-firstname,
@@ -1113,8 +1114,8 @@ span {
 .partner-form .error-message {
   color: red;
   font-weight: 400;
-
   font-size: 11px;
+  margin-top: 6px;
 }
 
 .partner-country-dropdown {
@@ -1342,6 +1343,16 @@ span {
     height: 14px;
     width: 14px;
     margin-right: 14px;
+  }
+
+  .partner-form .partner-form-full-name {
+    flex-direction: column;
+  }
+
+  .partner-form .partner-form-firstname,
+  .partner-form-lastname,
+  .input {
+    width: 100% !important;
   }
 }
 
