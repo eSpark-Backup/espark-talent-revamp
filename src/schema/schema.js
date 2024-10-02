@@ -32,4 +32,35 @@ const partnerShipFormValidationSchema = Yup?.object()?.shape({
     .required('Phone number is required'),
 });
 
-export { partnerShipFormValidationSchema };
+const BookADemoFormValidationSchema = Yup.object().shape({
+  first_name: Yup.string()
+    .matches(/^[a-z A-Z]+$/, 'First Name must contain only letters')
+    .min(3, 'First Name must be at least 3 characters')
+    .max(25, 'First Name must be at most 25 characters')
+    .required('First Name is required'),
+  last_name: Yup.string()
+    .matches(/^[a-z A-Z]+$/, 'Last Name must contain only letters')
+    .min(3, 'Last Name must be at least 3 characters')
+    .max(25, 'Last Name must be at most 25 characters')
+    .required('Last Name is required'),
+  email: Yup.string()
+    .email('Invalid Email')
+    .matches(
+      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
+      'Invalid Email Address Format'
+    )
+    .required('Email is required'),
+  web_url: Yup.string()
+    .matches(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/, 'Invalid Url')
+    .required('Url is required'),
+  no_of_employees: Yup.number()
+    .min(1, 'Minimum 1 employees')
+    .required('No of employee is required'),
+  phone_number: Yup.string()
+    .test('phone', 'Invalid Phone Number', (value) =>
+      value ? isValidPhoneNumber(value) : true
+    )
+    .required('Phone Number is required'),
+});
+
+export { partnerShipFormValidationSchema, BookADemoFormValidationSchema };
