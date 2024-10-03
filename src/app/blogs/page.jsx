@@ -6,7 +6,7 @@ import { getPageSeo } from '@/sanity/sanity.quries';
 const pathname = '/blogs';
 const seo = await getPageSeo();
 const filteredData =
-  seo.find((item) => item.path === pathname) || GLOBAL_SEO[0];
+  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
 
 export const metadata = {
   metadataBase: new URL('https://www.esparktalent.com/'),
