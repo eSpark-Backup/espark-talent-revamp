@@ -22,224 +22,153 @@ const CARD_STYLE = {
 const WikiCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [loading, setLoading] = useState(true);
-  const wikis = data ? data : [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const wikis = data || [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const wikiCategories = [
     ...new Set(wikis?.map((item) => item?.wikiCategory)?.filter(Boolean)),
   ];
-  const all = wikiCategories?.length ? 'All' : null;
-  const new_wikiCategories = all ? [all, ...wikiCategories] : wikiCategories;
+  const categories = wikiCategories?.length
+    ? ['All', ...wikiCategories]
+    : wikiCategories;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  const onSelectCategory = (category) => {
-    setSelectedCategory(category ? category : 'All');
-  };
 
   const filteredData =
     selectedCategory === 'All'
       ? wikis
-      : wikis?.filter((item) => item?.wikiCategory === selectedCategory);
-  filteredData?.sort((a, b) => a?.id - b?.id);
+      : wikis.filter((item) => item?.wikiCategory === selectedCategory);
+
   return (
-    <>
-      <Box sx={{ backgroundColor: '#3b59980f' }}>
-        <Grid
-          container
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'end',
-            pt: '4%',
-            px: 1,
-            gap: {
-              xs: 1,
-              sm: 1,
-              md: 1.5,
-              lg: 2,
-            },
-          }}
-        >
-          {new_wikiCategories?.map((category, index) => (
-            <>
-              {!category || loading ? (
-                <Skeleton
-                  width={140}
-                  height={33}
-                  variant="rectangular"
-                  sx={{ borderRadius: '50px' }}
-                />
-              ) : (
-                <Button
-                  key={index}
-                  onClick={() => onSelectCategory(category)}
-                  variant={
-                    selectedCategory === category ? 'contained' : 'outlined'
-                  }
-                  color="primary"
-                  sx={{
-                    border: 'none',
-                    borderRadius: '50px',
-                    fontWeight: 600,
-                    fontSize: {
-                      xs: '12px',
-                      sm: '13px',
-                      md: '15px',
-                      lg: '20px',
-                    },
-                    px: 2.2,
-                    color: selectedCategory === category ? 'white' : '#001C63',
-                    '&:hover': {
-                      border: 'none',
-                    },
-                  }}
-                >
-                  {category}
-                </Button>
-              )}
-            </>
-          ))}
-        </Grid>
-        <Box sx={{ px: { md: '3%', lg: '10%' } }}>
-          <Box sx={{ py: '3%' }}>
-            <Container>
-              <Grid
-                container
-                sx={{ display: 'flex', justifyContent: 'left' }}
-                spacing={2}
-              >
-                {filteredData?.map((item) => (
-                  <Grid
-                    key={item?.id}
-                    item
-                    lg={4}
-                    md={4}
-                    sm={6}
-                    xs={12}
-                    gap="10px"
+    <Box sx={{ backgroundColor: '#3b59980f' }}>
+      <Grid
+        container
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'end',
+          pt: { xs: '5%', sm: '3%' },
+          px: 1,
+          gap: 1,
+        }}
+      >
+        {categories?.map((category, index) =>
+          loading ? (
+            <Skeleton
+              key={index}
+              width={140}
+              height={33}
+              variant="rectangular"
+              sx={{ borderRadius: '50px' }}
+            />
+          ) : (
+            <Button
+              key={index}
+              onClick={() => setSelectedCategory(category)}
+              variant={selectedCategory === category ? 'contained' : 'outlined'}
+              sx={{
+                borderRadius: '50px',
+                fontWeight: 600,
+                fontSize: { xs: '12px', sm: '13px', md: '15px', lg: '20px' },
+                px: 2.2,
+                color:
+                  selectedCategory === category ? '#fff' : 'rgb(0, 28, 99)',
+                border: 'none',
+                '&:hover': {
+                  border: 'none',
+                },
+              }}
+            >
+              {category}
+            </Button>
+          )
+        )}
+      </Grid>
+
+      <Box sx={{ px: { xs: '5%', md: '3%', lg: '10%' }, py: '3%' }}>
+        <Container>
+          <Grid container spacing={2}>
+            {filteredData?.map((item) => (
+              <Grid key={item?.id} item lg={4} md={4} sm={6} xs={12}>
+                <Box sx={CARD_STYLE}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      gap: '10px',
+                      alignItems: 'center',
+                      pb: '15px',
+                    }}
                   >
-                    <Box sx={CARD_STYLE}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          gap: '10px',
-                          alignItems: 'center',
-                          pb: '15px',
-                        }}
-                      >
-                        {!loading && item?.iconImage ? (
-                          <Image
-                            quality="85"
-                            priority={true}
-                            src={item?.iconImage}
-                            height={40}
-                            width={40}
-                            alt={`${item?.title}`}
-                          />
-                        ) : (
-                          <Skeleton width={40} height={40} />
-                        )}
-                        {!loading && item?.title ? (
-                          <Link href={`/esparkwiki/${item?.slug}`}>
-                            <Typography
-                              color="#000"
-                              variant="body1"
-                              fontWeight={600}
-                              fontSize={{
-                                xs: '15px',
-                                sm: '15px',
-                                md: '14px',
-                                lg: '18px',
-                              }}
-                            >
-                              {item?.title}
-                            </Typography>
-                          </Link>
-                        ) : (
-                          <Skeleton
-                            variant="text"
-                            sx={{ fontSize: '2rem' }}
-                            width={'100%'}
-                          />
-                        )}
-                      </Box>
-                      <Box sx={{ pb: '15px' }}>
-                        <Typography
-                          variant="body1"
-                          color="#667170"
-                          fontWeight={600}
-                          fontSize={{
-                            xs: '10px',
-                            sm: '12px',
-                            md: '12px',
-                            lg: '15px',
-                          }}
-                        >
-                          {!loading && item?.salary ? (
-                            'Average Salary'
-                          ) : (
-                            <Skeleton
-                              variant="text"
-                              sx={{ fontSize: '1rem' }}
-                            />
-                          )}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color="#3b5998"
-                          fontSize={{
-                            xs: '17px',
-                            sm: '17px',
-                            md: '15px',
-                            lg: '18px',
-                          }}
-                          fontWeight={600}
-                        >
-                          {!loading && item?.salary ? (
-                            `USD: $${item?.salary?.toLocaleString()} per month`
-                          ) : (
-                            <Skeleton
-                              variant="text"
-                              sx={{ fontSize: '2rem' }}
-                            />
-                          )}
-                        </Typography>
-                      </Box>
-                      <Box>
-                        {!loading && item?.slug ? (
-                          <Link href={`/esparkwiki/${item?.slug}`}>
-                            <Typography
-                              variant="body1"
-                              color="#029894"
-                              fontWeight={600}
-                              fontSize={{
-                                xs: '12px',
-                                sm: '12px',
-                                md: '14px',
-                                lg: '20px',
-                              }}
-                            >
-                              {'Job Description >'}
-                            </Typography>
-                          </Link>
-                        ) : (
-                          <Skeleton width={150} />
-                        )}
-                      </Box>
-                    </Box>
-                  </Grid>
-                ))}
+                    {loading ? (
+                      <Skeleton width={40} height={40} />
+                    ) : (
+                      <Image
+                        src={item?.iconImage}
+                        height={40}
+                        width={40}
+                        alt={item?.title}
+                        priority
+                        quality={85}
+                      />
+                    )}
+
+                    <Typography
+                      sx={{ width: '100%' }}
+                      fontWeight={600}
+                      color={'#000'}
+                      fontSize={{ xs: '15px', lg: '18px' }}
+                    >
+                      {loading ? (
+                        <Skeleton width="100%" />
+                      ) : (
+                        <Link href={`/esparkwiki/${item?.slug}`}>
+                          {item?.title}
+                        </Link>
+                      )}
+                    </Typography>
+                  </Box>
+                  <Box pb="15px">
+                    <Typography
+                      fontWeight={600}
+                      fontSize={{
+                        xs: '10px',
+                        sm: '12px',
+                        lg: '15px',
+                        color: '#667170',
+                      }}
+                    >
+                      {loading ? <Skeleton width="100%" /> : 'Average Salary'}
+                    </Typography>
+                    <Typography
+                      color="#3b5998"
+                      fontWeight={600}
+                      fontSize={{ xs: '17px', lg: '18px' }}
+                    >
+                      {loading ? (
+                        <Skeleton width="100%" />
+                      ) : (
+                        `USD: $${item?.salary?.toLocaleString()} per month`
+                      )}
+                    </Typography>
+                  </Box>
+                  <Link href={`/esparkwiki/${item?.slug}`}>
+                    <Typography
+                      color="#029894"
+                      fontWeight={600}
+                      fontSize={{ xs: '12px', lg: '20px' }}
+                    >
+                      {loading ? <Skeleton width={150} /> : 'Job Description >'}
+                    </Typography>
+                  </Link>
+                </Box>
               </Grid>
-            </Container>
-          </Box>
-        </Box>
+            ))}
+          </Grid>
+        </Container>
       </Box>
-    </>
+    </Box>
   );
 };
+
 export default WikiCards;
