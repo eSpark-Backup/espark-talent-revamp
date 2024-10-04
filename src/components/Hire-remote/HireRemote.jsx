@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 import HomePageExperties from '../new-home/HomePageExperties';
 import ClientSays from '../homepage/ClientSays';
 import {
@@ -26,6 +25,7 @@ import BookADemoForm from '../book-a-demo/BookADemoForm';
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import HireRemoteFooterCta from './HireRemoteFooterCta';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
+import ChceckSlider from '../new-home/ChceckSlider';
 
 const HireRemote = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -91,7 +91,8 @@ const HireRemote = ({ data }) => {
       </Box>
       <PricingBenifits data={PRICING_DATA?.benifits} />
       <PricingWorks data={PRICING_DATA?.howItWorks} />
-      <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />
+      {/* <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} /> */}
+      <ChceckSlider data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <AwardAchievement

@@ -404,6 +404,7 @@ export const slideStyle = {
   display: 'flex',
   justifyContent: 'center',
   height: '100%',
+  maxHeight: '400px',
 };
 
 export const cardStyle = {
