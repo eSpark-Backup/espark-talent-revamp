@@ -63,7 +63,11 @@ const HireRemote = ({ data }) => {
           },
         }}
       />
-      <HireRemoteBanner data={data?.heroSection} handleOpen={handleOpen} />
+      <HireRemoteBanner
+        data={data?.heroSection}
+        styles={data?.heroSection?.styles}
+        handleOpen={handleOpen}
+      />
       <HireModal
         content={
           <BookADemoForm form={form} handleModalClose={handleModalClose} />

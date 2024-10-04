@@ -1,7 +1,6 @@
 export const HIRE_DEVELOPERS = [
   {
     path: 'hire-remote-developers',
-
     heroSection: {
       bannerImage: `/images/service/remote/banner-img.png`,
       icon: `/images/service/remote/tick.svg`,
@@ -16,6 +15,134 @@ export const HIRE_DEVELOPERS = [
       description: `eSpark Talent connects you with top-tier remote developers from the booming tech scene, ready to supercharge your software projects. Our careful screening process ensures a perfect match for your needs, taking your projects to the next level.`,
       btnText: `Book a Demo`,
       btnLink: `/book-a-demo`,
+      styles: {
+        mainBoxStyle: {
+          width: '100%',
+          height: '100%',
+          pt: 4,
+          pb: { xs: 2, md: 6, lg: 1 },
+          backgroundColor: '#02989412',
+        },
+        containerStyle: {
+          mx: 'auto',
+          maxWidth: '1250px',
+          display: 'flex',
+          gap: { xs: 3, md: 8, lg: 3 },
+          '@media (min-width: 1024px)': {
+            justifyContent: 'center',
+            alignItems: 'center',
+            pl: 6,
+          },
+          '@media (max-width: 1023px)': {
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+            maxWidth: '100%',
+          },
+          '@media (min-width: 600px) and (max-width: 1023px)': {
+            px: 6,
+            pb: 0,
+          },
+        },
+        contentBoxStyle: {
+          display: 'flex',
+          flexDirection: 'column',
+          color: '#101828',
+          pb: { xs: 0, lg: 5 },
+          maxWidth: { md: '400px', lg: '500px', xl: '600px' },
+          '@media (min-width: 600px) and (max-width: 1023px)': {
+            maxWidth: '550px',
+            textAlign: 'center',
+            alignItems: 'center',
+          },
+          '@media (min-width: 280px) and (max-width: 599px)': {
+            maxWidth: '100%',
+            textAlign: 'center',
+            alignItems: 'center',
+            px: 4,
+          },
+        },
+        titleBoxStyle: {
+          '@media (max-width: 1023px)': {
+            width: '100%',
+            maxWidth: '350px',
+            mx: 'auto',
+          },
+        },
+        titleTextStyle: {
+          fontSize: {
+            xs: '30px',
+            sm: '30px',
+            md: '35px',
+            lg: '50px',
+            xl: '60px',
+          },
+          fontWeight: 600,
+          lineHeight: {
+            xs: '40px',
+            sm: '42px',
+            md: '52px',
+            lg: '62px',
+            xl: '72px',
+          },
+        },
+        descriptionTextStyle: {
+          fontSize: { xs: '10px', sm: '14px', md: '15px', lg: '17px' },
+          fontWeight: 400,
+          color: '#1D2939',
+          mt: { xs: 1.3, lg: 1 },
+        },
+        buttonStyle: {
+          width: { xs: '180px', md: '200px', lg: '223px' },
+          height: { xs: '44px', md: '46px', lg: '48px' },
+          backgroundColor: '#101828',
+          borderRadius: '100px',
+          color: '#fff',
+          fontSize: '20px',
+          mt: 2,
+          '&:hover': {
+            backgroundColor: '#1c4e72',
+            color: '#fff',
+          },
+        },
+        spanStyle: {
+          display: 'flex',
+          gap: { xs: 1 },
+          alignItems: 'start',
+          mt: 5,
+        },
+        textStyle: {
+          fontSize: { xs: '13px', sm: '14px', md: '16px' },
+          fontWeight: 400,
+          color: '#1D1C1C',
+        },
+        companyTextStyle: {
+          fontSize: '14px',
+          fontWeight: 400,
+          color: '#98A2B3',
+          mt: 3.5,
+        },
+        arrayBoxStyle: {
+          display: 'flex',
+          flexDirection: { xs: 'row' },
+          alignItems: 'center',
+          mt: { xs: 2.5, lg: 2 },
+          gap: { xs: 3, sm: 0 },
+        },
+        imageBoxStyle: {
+          width: '100%',
+          maxWidth: {
+            xs: '80%',
+            md: '45%',
+            lg: '95%',
+            xl: 'auto',
+          },
+          '@media (min-width: 600px) and (max-width: 1023px)': {
+            maxWidth: '400px',
+            mx: 'auto',
+          },
+        },
+      },
     },
 
     secondSection: {
@@ -9789,3 +9916,14 @@ and frameworks for this technology.`,
     },
   },
 ];
+
+export const hireRemoteimageStyle = (index) => {
+  return {
+    width: { xs: '35%', sm: 'auto' },
+    ml: {
+      xs: index === 0 ? 0.3 : -2.8,
+      sm: index === 0 ? 1.5 : -2.2,
+      md: -2.2,
+    },
+  };
+};

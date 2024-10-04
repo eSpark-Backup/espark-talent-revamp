@@ -13,9 +13,11 @@ import {
   slideStyle,
   titleStyle,
 } from '@/constants/new-home';
+import { usePathname } from 'next/navigation';
 
 const PricingDefference = ({ data }) => {
   const [loading, setLoading] = useState(true);
+  const pathName = usePathname();
 
   useEffect(() => {
     if (data) {
@@ -58,7 +60,9 @@ const PricingDefference = ({ data }) => {
   return (
     <Box
       sx={{
-        backgroundColor: '#F7F8FB',
+        backgroundColor: pathName?.includes('/hire-remote-developers')
+          ? '#fff'
+          : '#F7F8FB',
       }}
     >
       <Box sx={containerStyle} id="pricing-difference">

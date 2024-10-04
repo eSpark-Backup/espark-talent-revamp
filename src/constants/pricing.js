@@ -528,6 +528,7 @@ export const worksContainerStyle = {
   margin: 'auto',
   padding: '8px 0',
   position: 'relative',
+  pt: { xs: 3, md: 4, lg: 7 },
   pb: { xs: 4, sm: 5, md: 6, lg: 8 },
 };
 

@@ -378,7 +378,7 @@ export const containerStyle = {
   padding: '8px 0',
   position: 'relative',
   py: { xs: 2, md: 4, lg: 7 },
-  mb: { xs: 3, md: 4, lg: 7 },
+  // mb: { xs: 3, md: 4, lg: 7 },
 };
 
 export const headingStyle = {
