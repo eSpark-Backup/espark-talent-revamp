@@ -4,12 +4,12 @@ import ClientSays from '../homepage/ClientSays';
 import HowItsWork from './HowItsWork';
 import { OUR_CLIENT_SAYS } from '@/constants/homepage';
 import DemoLeverageTalent from './DemoLeverageTalent';
-import SecondSection from '../hire-developer/SecondSection';
 import { Box } from '@mui/material';
 import CustomComponent from '../hire-developer/CustomHeading';
 import Perks from '../homepage/Perks';
 import CustomizedSolution from '../hire-developer/CustomizedSolution';
 import { TeamBanner } from './TeamBanner';
+import LetsConnect from '../hire-developer/LetsConnect';
 
 const DemoMeetingPage = ({ data }) => {
   return (
@@ -33,7 +33,7 @@ const DemoMeetingPage = ({ data }) => {
         />
       </Box>
       <CustomizedSolution data={data?.customizedSolution} />
-      <SecondSection data={data?.secondSection} />
+      <LetsConnect data={data?.letsConnect} />
       <DemoLeverageTalent data={data?.leverageTalent} />
       <Box sx={{ position: 'relative' }}>
         <Box

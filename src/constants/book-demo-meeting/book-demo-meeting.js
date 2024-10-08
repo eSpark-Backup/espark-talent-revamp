@@ -75,11 +75,60 @@ export const DEMO_MEETING_DATA = {
       },
     ],
   },
-  secondSection: {
+  letsConnect: {
     title: `Searching for <span style="color:#029894;font-weight:700;" >Top Talent?</span>`,
     descrcipton: `Your search for specialized high-quality talent concludes here. With us, it's more than a service – you're entering a world of customized excellence in finding the best talent. Let's connect and enhance your journey together.`,
     btnText: `Let's Connect!`,
     btnLink: `/book-a-demo-meeting/#form`,
+    styles: {
+      mainStyle: { backgroundColor: '#F7F8FF', py: { md: 1, lg: 3 } },
+      titletextStyle: {
+        textTransform: 'capitalize',
+        fontSize: {
+          xs: '18px',
+          sm: '24px',
+          md: '35px',
+          lg: '43px',
+        },
+        fontWeight: 600,
+        lineHeight: '62.77px',
+        pb: { lg: '20px' },
+        pt: { lg: '33px' },
+        color: '#001C63',
+        px: { md: '11%', lg: '5%' },
+      },
+      descTypographyStyle: {
+        textAlign: 'center',
+        fontSize: {
+          xs: '11px',
+          sm: '13px',
+          md: '15px',
+          lg: '21px',
+        },
+        fontWeight: 400,
+        lineHeight: { xs: '25px', lg: '40px' },
+        color: '#001C63',
+        px: { xs: '0%', sm: '3%', md: '5.1%' },
+      },
+      btnStyle: {
+        width: { xs: '130px', md: '170px', lg: '210px' },
+        height: { xs: '30px', md: '50px', lg: '60px' },
+        borderRadius: '50px',
+        backgroundColor: '#029894',
+        color: '#fff',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        '&:hover': {
+          backgroundColor: 'rgba(0, 28, 99, 1)',
+        },
+      },
+      btnTypographyStyle: {
+        fontSize: { xs: '8.93px', md: '15px', lg: '20px' },
+        fontWeight: 500,
+        lineHeight: '30px',
+        textAlign: 'center',
+      },
+    },
   },
   leverageTalent: {
     bgImage: `/images/hire-developer/customized_background.svg`,

@@ -4,13 +4,13 @@ import HireHeroSection from './HireHeroSection';
 import ClientSays from '../homepage/ClientSays';
 import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
-import SecondSection from './SecondSection';
 import FifthSection from './FifthSection';
 import FormSection from './FormSection';
 import CustomComponent from './CustomHeading';
 import { Box } from '@mui/material';
 import Hosts from './Hosts';
 import CustomizedSolution from './CustomizedSolution';
+import LetsConnect from './LetsConnect';
 
 const HireDeveloper = ({ data }) => {
   //  hiring front-end & back-backend developer page components
@@ -18,7 +18,7 @@ const HireDeveloper = ({ data }) => {
   return (
     <>
       <HireHeroSection data={data?.heroSection} />
-      <SecondSection data={data?.secondSection} />
+      <LetsConnect data={data?.letsConnect} />
       {data?.bgImage && (
         <Box
           sx={{
