@@ -373,3 +373,14 @@ export const handleApplyButtonClick = (
   handleOpen();
   setJobData(selectedJobData);
 };
+
+// home page experties section
+
+export const handleChangeAccordion =
+  (panel, setExpandedAccordion) => (event, isExpanded) => {
+    setExpandedAccordion(isExpanded ? panel : null);
+  };
+
+export const checkingExpendedAccordion = (expandedAccordion, index) => {
+  return expandedAccordion === index ? true : false;
+};

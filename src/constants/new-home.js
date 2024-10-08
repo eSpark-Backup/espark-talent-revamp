@@ -450,6 +450,38 @@ export const EXPERTIES_DATA = {
       ],
     },
   ],
+  styles: {
+    containerStyle: { py: { xs: '50px', sm: '75px' } },
+    accordionStyle: { border: '1px solid #6A6565', boxShadow: 'none' },
+    accrodionSummaryStyle: {
+      display: 'flex',
+      gap: '10px',
+    },
+    imageStyle: { width: '25px', height: '25px' },
+    serviceTypographyStyle: (expandedAccordion, index) => ({
+      px: '10px',
+      fontSize: {
+        xs: '16px',
+        sm: '17px',
+        md: '18px',
+      },
+      fontWeight: 400,
+      color: expandedAccordion === index ? '#354899' : '#029894',
+    }),
+    titleStyle: (hire_remote_developers) => ({
+      fontSize: {
+        xs: '11.91px',
+        sm: '11.91px',
+        md: '16px',
+        lg: '14.28px',
+        xl: '14.28px',
+      },
+      fontWeight: 400,
+      lineHeight: 2.5,
+      color: '#000000',
+      my: hire_remote_developers ? 0.5 : 0,
+    }),
+  },
 };
 
 export const OFFSHORE_DATA = {
