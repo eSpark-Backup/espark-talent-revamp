@@ -292,6 +292,61 @@ export const HIRE_DEVELOPERS = [
       descrcipton: `Craft the future of user engagement with our front-end developers, molding your brand's vision into interactive web and mobile experiences. Our experts proficiently transform vision into captivating interfaces, delivering codes that exhibit visual wisdom with careful attention to detail.`,
       btnText: `Hire a Developer`,
       btnLink: `/hire-a-frontend-developer/#form`,
+      styles: {
+        containerBoxStyle: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        },
+        imageBoxStyle: {
+          mt: { xs: '15px', sm: '20px', md: '25px', lg: '35px' },
+          display: 'flex',
+          justifyContent: 'center',
+        },
+        titleTypographyStyle: {
+          fontSize: {
+            xs: '25px',
+            sm: '25px',
+            md: '50px',
+            lg: '87px',
+            xl: '87px',
+          },
+          fontWeight: 700,
+          lineHeight: '1.4',
+          textAlign: 'center',
+        },
+        descriptionTypographyStyle: {
+          fontSize: {
+            xs: '13px',
+            sm: '15px',
+            md: '16px',
+            lg: '19px',
+            xl: '19px',
+          },
+          color: '#6A6A6A',
+          fontWeight: '500',
+          textAlign: 'center',
+        },
+        buttonStyle: {
+          width: '210px',
+          height: '60px',
+          borderRadius: '50px',
+          backgroundColor: '#029894',
+          color: '#fff',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          '&:hover': {
+            backgroundColor: 'rgba(0, 28, 99, 1)',
+          },
+          btnTextStyle: {
+            fontSize: '20px',
+            fontWeight: 500,
+            lineHeight: '30px',
+            textAlign: 'center',
+          },
+        },
+      },
     },
     secondSection: {
       title: `Searching for a Personalized Front-End Solution? <br/><span style="color:#029894;font-weight:700;" >Let's Connect!</span>`,
@@ -9916,7 +9971,7 @@ and frameworks for this technology.`,
     },
   },
 ];
-
+// hire remote page
 export const hireRemoteimageStyle = (index) => {
   return {
     width: { xs: '35%', sm: 'auto' },
@@ -9925,5 +9980,15 @@ export const hireRemoteimageStyle = (index) => {
       sm: index === 0 ? 1.5 : -2.2,
       md: -2.2,
     },
+  };
+};
+// frontend developer page
+export const frontendHeroSectionMainBoxStyle = (bgImage) => {
+  return {
+    pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
+    backgroundImage: `url(${bgImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: `100%`,
+    color: '#fff',
   };
 };
