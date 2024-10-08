@@ -12,9 +12,7 @@ import AwardAchievement from '../homepage/AwardAchiefment';
 import HireRemoteBanner from './HireRemoteBanner';
 import PricingDefference from '../pricing/PricingDefference';
 import PricingHero from '../pricing/PricingHero';
-import BlueCard from '../pricing/BlueCard';
 import { PRICING_DATA } from '@/constants/pricing';
-import { Box } from '@mui/material';
 import PricingBenifits from '../pricing/PricingBenifits';
 import PricingWorks from '../pricing/PricingWorks';
 import DefaultNavbar from '../global/Navbar/DefaultNavbar';
@@ -25,7 +23,7 @@ import BookADemoForm from '../book-a-demo/BookADemoForm';
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import HireRemoteFooterCta from './HireRemoteFooterCta';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
-import ChceckSlider from '../new-home/ChceckSlider';
+import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 
 const HireRemote = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -77,22 +75,9 @@ const HireRemote = ({ data }) => {
       />
       <PricingDefference data={DIFFERENCE_DATA} />
       <PricingHero data={PRICING_DATA} handleOpen={handleOpen} />
-      <Box
-        sx={{
-          mt: 5,
-          mb: 3,
-          display: 'none',
-          '@media(max-width: 783px)': {
-            display: 'flex',
-          },
-        }}
-      >
-        <BlueCard data={PRICING_DATA} handleOpen={handleOpen} />
-      </Box>
       <PricingBenifits data={PRICING_DATA?.benifits} />
       <PricingWorks data={PRICING_DATA?.howItWorks} />
-      {/* <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} /> */}
-      <ChceckSlider data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />
+      <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <AwardAchievement

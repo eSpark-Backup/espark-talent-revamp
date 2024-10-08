@@ -1979,3 +1979,27 @@ input {
 }
 
 /* ********************************* */
+
+/********* hire remote page *********/
+#expert-team .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#expert-team .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (min-width: 769px) {
+  #expert-team .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+@media (max-width: 424px) {
+  #expert-team .swiper-pagination-bullet {
+    margin-right: -15px !important;
+  }
+}
+
+/* ********************************* */
