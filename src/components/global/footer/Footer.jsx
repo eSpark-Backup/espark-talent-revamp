@@ -10,9 +10,12 @@ import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
 import FooterItem2 from './FooterItem2';
+import { CAREERS_FOOTER_DATA } from '@/constants/global/footer';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
+  console.log(pathName, 'PATHNAME');
+
   return (
     <>
       {pathName !== '/book-a-demo' && (
@@ -166,10 +169,20 @@ const Footer = ({ data }) => {
                           pr: { sm: '5%' },
                         }}
                       >
-                        <FooterItem2
-                          data={data?.contactUs}
-                          section={data?.contactUs.bottomSection}
-                        />
+                        {pathName === '/join-espark-crew' ||
+                        pathName === '/careers' ? (
+                          <FooterItem2
+                            data={CAREERS_FOOTER_DATA?.contactUs}
+                            section={
+                              CAREERS_FOOTER_DATA?.contactUs.bottomSection
+                            }
+                          />
+                        ) : (
+                          <FooterItem2
+                            data={data?.contactUs}
+                            section={data?.contactUs.bottomSection}
+                          />
+                        )}
                       </Box>
                       {pathName == '/' && (
                         <Box sx={{ pt: 2 }}>

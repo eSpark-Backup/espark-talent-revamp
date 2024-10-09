@@ -3,6 +3,9 @@ import axios from 'axios';
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import { toast } from 'react-toastify';
 
+const adminId = process.env.NEXT_PUBLIC_JOIN_CREW_ADMIN_EMAIL_ID;
+const adminTempleteId = process.env.NEXT_PUBLIC_JOIN_CREW_ADMIN_TEMPLETE_ID;
+
 export const handleChangeJoinCrew = (name, value, setState) => {
   switch (name) {
     case 'education':
@@ -257,5 +260,58 @@ export const handleSubmitJoinCrew = async (
       ...prev,
       cv: null,
     }));
+  }
+  // Send data to API
+  try {
+    const response = await axios.post(
+      '/api/email',
+      {
+        toAdmin: adminId,
+        toSubmitter: updatedForm?.email,
+        adminTemplateId: adminTempleteId,
+        data: {
+          ...updatedForm,
+          availability: updatedForm?.availability?.value,
+          gender: updatedForm?.gender?.value,
+          city: updatedForm?.city?.value,
+          country: updatedForm?.country?.value,
+          cnic: updatedForm?.cnic,
+          education: updatedForm?.education?.value,
+          email: updatedForm?.email,
+          experience: updatedForm?.experience?.value,
+          field: updatedForm?.field?.value,
+          github_profile: updatedForm?.github_profile,
+          linkedin_profile: updatedForm?.linkedin_profile,
+          name: updatedForm?.name,
+          phone_num: newPhone_num,
+          prefrences: updatedForm?.prefrences?.value,
+          salary_expection: updatedForm?.salary_expection,
+          tags: updatedForm?.tags,
+          subField: updatedForm?.position?.value
+            ? updatedForm?.subField?.value
+            : null,
+          position: !updatedForm?.position?.value
+            ? updatedForm?.subField?.value
+            : updatedForm?.position?.value,
+          job_type: updatedForm?.job_type?.value,
+          projects: updatedForm?.projects,
+          cv: resumeKey ? resumeKey : updatedForm?.cv,
+        },
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      console.log('Your application has been successfully submitted');
+    } else {
+      console.log('Failed to submit your application');
+    }
+  } catch (error) {
+    console.error('Failed to submit your application');
+    console.error('Error submitting the form:', error);
   }
 };
