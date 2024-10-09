@@ -74,6 +74,51 @@ export const DEMO_MEETING_DATA = {
         paragraph: `Access a squad of remote developers, streamlining expenses and saving time without the need for in-house hiring and training.`,
       },
     ],
+    styles: {
+      typographyBoxStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: { xs: 1, lg: 0 },
+        alignItems: 'center',
+        width: 'auto',
+        px: 3.5,
+      },
+      titleTypographyStyle: {
+        fontSize: {
+          xs: '18px',
+          sm: '26px',
+          md: '35px',
+          lg: '48px',
+        },
+        fontWeight: 600,
+        lineHeight: {
+          xs: '28px',
+          sm: '40px',
+          md: '50px',
+          lg: '65px',
+        },
+        color: '#001C63',
+        maxWidth: { md: '1000px', lg: '1200px' },
+        textAlign: 'center',
+      },
+      mainLayoutStyle: {
+        mx: 'auto',
+        maxWidth: '900px',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridTemplateRows: '1fr 1fr 1fr',
+        '@media(min-width: 280px) and (max-width: 980px)': {
+          maxWidth: 'auto',
+          gridTemplateColumns: '1fr',
+          gridTemplateRows: '1fr',
+          rowGap: '50px',
+        },
+        pt: 10,
+        '@media(max-width: 425px)': {
+          pt: 8,
+        },
+      },
+    },
   },
   letsConnect: {
     title: `Searching for <span style="color:#029894;font-weight:700;" >Top Talent?</span>`,
