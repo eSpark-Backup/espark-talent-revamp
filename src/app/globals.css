@@ -2004,3 +2004,20 @@ input {
 
 /* ********************************* */
 
+/********* hire frontend & backend developer page *********/
+#customizes-solution-slider .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#customizes-solution-slider .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  #customizes-solution-slider .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+/* ********************************* */
