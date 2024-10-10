@@ -216,22 +216,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -252,7 +236,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -424,7 +407,7 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          pt: 10,
+          py: 10,
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -702,22 +685,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -738,7 +705,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -910,7 +876,7 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          pt: 10,
+          py: 10,
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -1188,22 +1154,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -1224,7 +1174,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -1396,7 +1345,7 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          pt: 10,
+          py: 10,
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -1855,22 +1804,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -1891,7 +1824,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -2344,22 +2276,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -2380,7 +2296,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -2822,22 +2737,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -2858,7 +2757,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -3296,22 +3194,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -3332,7 +3214,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -3770,22 +3651,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -3806,7 +3671,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -4239,22 +4103,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -4275,7 +4123,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -4708,22 +4555,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -4744,7 +4575,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -5164,22 +4994,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -5200,7 +5014,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -5618,22 +5431,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -5654,7 +5451,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -6076,22 +5872,6 @@ export const HIRE_DEVELOPERS = [
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -6112,7 +5892,6 @@ export const HIRE_DEVELOPERS = [
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -6528,22 +6307,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -6564,7 +6327,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -6979,22 +6741,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -7015,7 +6761,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -7432,22 +7177,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -7468,7 +7197,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -7885,22 +7613,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -7921,7 +7633,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -8333,22 +8044,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -8369,7 +8064,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -8767,22 +8461,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -8803,7 +8481,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -9215,22 +8892,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -9251,7 +8912,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -9653,22 +9313,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -9689,7 +9333,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -10111,22 +9754,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -10147,7 +9774,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -10559,22 +10185,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -10595,7 +10205,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -11010,22 +10619,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -11046,7 +10639,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -11467,22 +11059,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -11503,7 +11079,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -11918,22 +11493,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -11954,7 +11513,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -12372,22 +11930,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -12408,7 +11950,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -12826,22 +12367,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -12862,7 +12387,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -13285,22 +12809,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -13321,7 +12829,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -13738,22 +13245,6 @@ goals and requirements.
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -13774,7 +13265,6 @@ goals and requirements.
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -14198,22 +13688,6 @@ and frameworks for this technology.`,
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          mb: { xs: 45, sm: 32, md: 35, lg: 56 },
-          '@media(min-width:426px) and (max-width:539px)': {
-            mb: 40,
-          },
-          '@media(min-width:387px) and (max-width:425px)': {
-            mb: 40,
-          },
-          '@media(min-width:320px) and (max-width:386px)': {
-            mb: 45,
-          },
-          '@media(min-width:300px) and (max-width:319px)': {
-            mb: 42,
-          },
-          '@media(min-width:280px) and (max-width:299px)': {
-            mb: 42,
-          },
         },
         imageStyle: {
           display: { xs: 'none', lg: 'flex' },
@@ -14234,7 +13708,6 @@ and frameworks for this technology.`,
             md: '700px',
             lg: '961px',
           },
-          height: { xs: 'auto', sm: '400px', md: '565px', lg: '576px' },
         },
         titleDiscriptionBoxStyle: {
           width: { xs: '90%', lg: '1324px' },
@@ -14371,23 +13844,6 @@ export const frontendHeroSectionMainBoxStyle = (bgImage) => {
 
 export const frontendContentBoxStyle = (bgImage) => {
   return {
-    position: 'absolute',
-    top: { xs: 255, sm: 240, md: 280, lg: 440 },
-    '@media(min-width:426px) and (max-width:539px)': {
-      top: 270,
-    },
-    '@media(min-width:387px) and (max-width:425px)': {
-      top: 230,
-    },
-    '@media(min-width:320px) and (max-width:386px)': {
-      top: 255,
-    },
-    '@media(min-width:300px) and (max-width:319px)': {
-      top: 245,
-    },
-    '@media(min-width:280px) and (max-width:299px)': {
-      top: 241,
-    },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -14396,6 +13852,8 @@ export const frontendContentBoxStyle = (bgImage) => {
     backgroundPosition: 'center',
     width: '100%',
     height: '100%',
+    mt: { xs: -6, sm: -8, md: -13, lg: -15 },
+    py: { xs: 0, md: 3, lg: 5 },
   };
 };
 
