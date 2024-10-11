@@ -1,7 +1,7 @@
-import { frontendContentBoxStyle } from '@/constants/hire-developer/hire-developer';
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import { Box, Typography } from '@mui/material';
+import { frontendContentBoxStyle } from '@/constants/hire-developer/hire-developer';
 
 const Hosts = ({ data }) => {
   const {

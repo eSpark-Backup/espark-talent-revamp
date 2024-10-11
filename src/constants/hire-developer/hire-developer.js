@@ -485,9 +485,10 @@ export const HIRE_DEVELOPERS = [
         },
       },
     },
-    fifthSection: {
+    modernTechnologies: {
       title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >front-end technologies</span> for your project`,
       descrcipton: `We hire candidates with strong expertise in utilizing cutting-edge technologies, top-notch tools, and innovative approaches to craft and enhance your digital solutions. Unlock the tech wonders shaping this field:`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -534,6 +535,122 @@ export const HIRE_DEVELOPERS = [
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     formSection: {
       titleColor: `#001C63`,
@@ -954,9 +1071,10 @@ export const HIRE_DEVELOPERS = [
         },
       },
     },
-    fifthSection: {
+    modernTechnologies: {
       title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >front-end technologies</span> for your project`,
       descrcipton: `We hire candidates with strong expertise in utilizing cutting-edge technologies, top-notch tools, and innovative approaches to craft and enhance your digital solutions. Unlock the tech wonders shaping this field:`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -1003,6 +1121,122 @@ export const HIRE_DEVELOPERS = [
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     formSection: {
       titleColor: `#001C63`,
@@ -1423,9 +1657,10 @@ export const HIRE_DEVELOPERS = [
         },
       },
     },
-    fifthSection: {
+    modernTechnologies: {
       title: `Here is how we employ modern <span style="color:#029894;font-weight:600;" >back-end technologies</span> for your project`,
       descrcipton: `We hire candidates with strong expertise in utilizing cutting-edge technologies, top-notch tools, and innovative approaches to craft and enhance your digital solutions. Unlock the tech wonders shaping this field:`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -1465,6 +1700,122 @@ export const HIRE_DEVELOPERS = [
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     formSection: {
       titleColor: `#001C63`,
@@ -1549,9 +1900,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >UI/UX</span> Technologies We Use For Your Project`,
       descrcipton: `Hire a UI/UX designer from eSpark Talent who possesses a good understanding of designing and workflow tools.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -1581,6 +1933,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Zeplin`, `Asana`, `Abstract`, `Slack`, `Trello`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a Designer',
     perkTitle:
@@ -2013,10 +2481,11 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Full Stack</span> Technologies We Use For Your Project`,
       descrcipton: `Hire the best full-stack developer from eSpark Talent who possesses detailed
  knowledge of languages, frameworks, and tools.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -2052,6 +2521,122 @@ export const HIRE_DEVELOPERS = [
           items: [`PostgreSQL`, `Redis`, `MySQL`, `Cassandra`, `SQL Server`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -2484,9 +3069,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >MEAN Stack</span> Technologies<br/>We Use For Your Project`,
       descrcipton: `MEAN stack developers at eSpark Talent are well-versed in the languages, tools, and frameworks for this technology.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -2514,6 +3100,122 @@ export const HIRE_DEVELOPERS = [
           items: [`MongoDB`, `Mongoose`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -2945,9 +3647,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >MERN Stack</span> Technologies We Use For Your Project`,
       descrcipton: `MERN stack developers at eSpark have a thorough understanding of various tools, frameworks, and libraries.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -2971,6 +3674,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Visual Studio Code`, `Postman (for API testing)`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -3402,9 +4221,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >DevOps</span> Technologies We Use For Your Project`,
       descrcipton: `DevOps engineers have an extensive understanding of different tools & Technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -3428,6 +4248,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Docker`, `Kubernetes`, `Amazon ECS`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -3854,9 +4790,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Fintech</span> Technologies We Use For Your Project`,
       descrcipton: `Fintech developers at eSpark Talent are well-versed in different technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -3880,6 +4817,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Plaid`, `Yodlee`, `Stripe API`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -4306,9 +5359,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >QA Tools</span> We Use For Your Project`,
       descrcipton: `Hire top QA testers and engineers from eSpark Talent that possess extensive knowledge about various testing tools and technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -4332,6 +5386,122 @@ export const HIRE_DEVELOPERS = [
           items: [`JMeter`, `LoadRunner`, `OWASP ZAP`, `Burp Suite`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a QA',
     perkTitle:
@@ -4763,9 +5933,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >AngularJS</span> Technologies For Your Project`,
       descrcipton: `Hire dedicated AngularJS developers from eSpark Talent who have in-depth knowledge of various AngularJS technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -4795,6 +5966,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Angular CLI`, `Jasmine`, `Webpack`, `Karma`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a Developer',
     perkTitle:
@@ -5203,10 +6490,11 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >React JS</span> Technologies For Your Project`,
       descrcipton: `Hire dedicated React JS developers from eSpark Talent who have in-depth
  knowledge of languages, tools, and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -5230,6 +6518,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Node.js`, `npm(Node Package Manager)`, `React DevTools`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -5640,10 +7044,11 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >JavaScript</span> Technologies We Use For Your Project`,
       descrcipton: `Hire dedicated JavaScript developers from eSpark Talent who have in-depth
  knowledge of languages, tools, and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -5670,6 +7075,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Jest`, `Mocha`, `Cypress`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -6080,9 +7601,10 @@ export const HIRE_DEVELOPERS = [
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Next.Js</span> Technologies For Your Project`,
       descrcipton: `Hire Next.js developers from eSpark Talent who have an extensive understanding of languages, tools, and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -6106,6 +7628,122 @@ export const HIRE_DEVELOPERS = [
           items: [`Node.js`, `npm`, `React DevTools`, 'Next.js CLI'],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -6515,9 +8153,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Android Developer</span> Technologies We Use For Your Project`,
       descrcipton: `Android developers are proficient in several tools, libraries, and frameworks to build applications.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -6541,6 +8180,122 @@ goals and requirements.
           items: [`SQLite`, 'Firebase Realtime Database'],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a Devloper',
     perkTitle:
@@ -6951,9 +8706,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Flutter Developer</span> Technologies We Use For Your Project`,
       descrcipton: `Flutter developers have a thorough knowledge of different languages, libraries, and frameworks to build applications.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -6977,6 +8733,122 @@ goals and requirements.
           items: [`Android Studio with Flutter Plugin`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -7381,9 +9253,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >React Native </span> Technologies<br/>We Use For Your Project`,
       descrcipton: `React Native developers at eSpark Talent possess a thorough knowledge of different languages, tools, and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -7415,6 +9288,122 @@ goals and requirements.
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -7816,9 +9805,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >ASP.NET </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `ASP.net developers at eSpark Talent are well-versed in various languages, tools, and frameworks to build software products.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -7846,6 +9836,122 @@ goals and requirements.
           items: [`Visual Studio (IDE)`, `.NET CLI`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -8237,9 +10343,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >PHP</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `PHP developers at eSpark Talent have extensive knowledge of various tools, frameworks, and libraries.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -8263,6 +10370,122 @@ goals and requirements.
           items: [`MySQL`, `MariaDB`, `PostgreSQL`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -8669,9 +10892,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Python</span> Technologies We Use For <br/> Your Project`,
       descrcipton: `Python developer at eSpark Talent possesses good know-how about different tools, libraries, and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -8695,6 +10919,122 @@ goals and requirements.
           items: [`Git`, `GitHub`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -9090,9 +11430,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Node.js</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Node.js developers at eSpark Talent are proficient with the use of different tools, libraries, and frameworks used to build a variety of software products.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -9116,6 +11457,122 @@ goals and requirements.
           items: [`Socket.io`, `Sequelize`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -9521,9 +11978,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Firmware</span> Technologies We <br /> Use For Your Project`,
       descrcipton: `Firmware developers possess a thorough knowledge of various tools and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -9557,6 +12015,122 @@ goals and requirements.
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -9962,9 +12536,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;"> PCB Designer </span> Technologies We <br /> Use For Your Project`,
       descrcipton: `PCB designers at eSpark Talent have good know-how about different tools and technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -9988,6 +12563,122 @@ goals and requirements.
           items: [`Oscilloscopes`, `Logic Analyzers`, `Multimeters`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -10388,9 +13079,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;"> Embedded Developer </span> Technologies We Use For Your Project`,
       descrcipton: `Embedded developers at eSpark Talent are skilled at using numerous tools and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -10422,6 +13114,122 @@ goals and requirements.
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -10827,9 +13635,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Shopify </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `Shopify developers at eSpark have detailed knowledge about numerous tools and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -10861,6 +13670,122 @@ goals and requirements.
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -11267,9 +14192,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Wordpress </span> Technologies We Use <br/> For Your Project`,
       descrcipton: `WordPress developers at eSpark Talent have detailed knowledge about different languages, libraries and frameworks.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -11293,6 +14219,122 @@ goals and requirements.
           items: [`Code Editors `, `Version Control System`, `XAMPP`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:
@@ -11701,9 +14743,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Performance Marketer</span> Tools We Use For Your Project`,
       descrcipton: `Our dedicated Performance marketers have a detailed knowledge of various Paid ads and campaign management tools, Conversion rate optimization tools, performance tracking tools`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -11732,6 +14775,122 @@ goals and requirements.
           items: [`Google Analytics`, `Mixpanel`, `Heap`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a Marketer',
     perkTitle:
@@ -12138,9 +15297,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >SEO </span> Tools We Use For Your <br/> Project`,
       descrcipton: `SEO expert at eSpark Talent have detailed knowledge about different research and analytics tools.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -12168,6 +15328,122 @@ goals and requirements.
           items: [`Moz Link Explorer `, `BuzzSumo`, `Linkody`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a SEO Expert',
     perkTitle:
@@ -12575,9 +15851,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >PPC </span> Tools We Use For Your Project`,
       descrcipton: `Our dedicated PPC specialists are skilled in several research, ads management & Analytics tools.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -12611,6 +15888,122 @@ goals and requirements.
           items: [`Google Analytics `, `Google Tag Manager`, `Hotjar`],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a PPC Expert',
     perkTitle:
@@ -13017,9 +16410,10 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Social Media Expert </span> Technologies We Use For Your Project`,
       descrcipton: `Hire professional social media experts from eSpark Talent who have proficiency in numerous tools and technologies.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -13047,6 +16441,122 @@ goals and requirements.
           ],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: 'Hire a Expert',
     perkTitle:
@@ -13438,10 +16948,11 @@ goals and requirements.
         },
       ],
     },
-    technologies: {
+    modernTechnologies: {
       title: `<span style="color:#029894;font-weight:600;" >Software</span> Technologies We Use For Your Project`,
       descrcipton: `Software developers at eSpark Talent are well-versed in the languages, tools,
 and frameworks for this technology.`,
+      chipIcon: '/images/hire-developer/bulit.png',
       items: [
         {
           id: 1,
@@ -13465,6 +16976,122 @@ and frameworks for this technology.`,
           items: ['SQL', 'MongoDB'],
         },
       ],
+      styles: {
+        mainBoxStyle: {
+          backgroundColor: '#fff',
+          '@media(min-width: 1024px)': {
+            backgroundColor: '#F7F8FF',
+          },
+          py: 3,
+        },
+        titleStyle: {
+          textTransform: 'capitalize',
+          fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '48px' },
+          fontWeight: 600,
+          lineHeight: { xs: '30px', sm: '45px', md: '57px', lg: '67px' },
+          color: '#001C63',
+          px: { xs: '9%', sm: '9%', md: '10%', lg: '12%' },
+          mb: 1,
+        },
+        descriptionStyle: {
+          fontSize: {
+            xs: '12px',
+            sm: '15px',
+            md: '18px',
+            lg: '19px',
+            xl: '23px',
+          },
+          fontWeight: 400,
+          lineHeight: { xs: '19px', sm: '24px', md: '30px', lg: '34px' },
+          color: '#001C63',
+          pt: 1,
+          pb: 0,
+          px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+        },
+        swiperBoxStyle: {
+          width: '100%',
+          maxWidth: '800px',
+          '@media(min-width:1024px)': {
+            maxWidth: '100%',
+          },
+          mx: 'auto',
+          px: 1.5,
+        },
+        slideStyle: {
+          paddingTop: '20px',
+          paddingBottom: '35px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          '@media(min-width:1024px)': {
+            alignItems: 'flex-start',
+          },
+        },
+        cardTitleStyle: {
+          fontWeight: 700,
+          lineHeight: '32px',
+          color: '#029894',
+          fontSize: {
+            xs: '16px',
+            sm: '18px',
+            md: '20px',
+            lg: '22px',
+          },
+          textAlign: 'center',
+          '@media (max-width: 359px)': { lineHeight: '30px', pb: 1 },
+          '@media(min-width:1024px)': {
+            textAlign: 'left',
+          },
+        },
+        chipsBoxStyle: {
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          gap: 1.2,
+          alignItems: 'center',
+          maxWidth: { xs: 'auto', md: '400px', lg: 'auto' },
+          justifyContent: 'center',
+          '@media(min-width:1024px)': {
+            justifyContent: 'flex-start',
+          },
+        },
+        chipStyle: {
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: '#E9ECF6',
+
+          justifyContent: 'flex-start',
+          width: 'auto',
+          minWidth: 'auto',
+          maxWidth: 'auto',
+          minHeight: '22px',
+          maxHeight: 'auto',
+          pl: 0.8,
+          pr: 1.5,
+          py: '4px',
+          gap: 0.5,
+          borderRadius: '3px',
+        },
+        chipIconStyle: { width: '25px', height: '24px' },
+        chipTextStyle: {
+          fontSize: { xs: '14px', md: '16px', lg: '18px' },
+          fontWeight: 400,
+          lineHeight: '28px',
+          textAlign: 'left',
+          color: '#000000',
+          textWrap: 'wrap',
+          '@media (max-width: 400px)': {
+            fontSize: '13px',
+            lineHeight: '15px',
+          },
+        },
+      },
     },
     perkBtnTitle: '',
     perkTitle:

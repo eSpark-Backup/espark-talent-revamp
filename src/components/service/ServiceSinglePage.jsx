@@ -8,14 +8,14 @@ import Perks from '../homepage/Perks';
 import ClientSays from '../homepage/ClientSays';
 import ServiceHeroSection from './ServiceHeroSection';
 import ServiceHosts from './ServiceHosts';
-import FifthSection from '../hire-developer/FifthSection';
 import ServiceWhyHire from './ServiceWhyHire';
 import ServiceExperties from './ServiceExperties';
 import { Box } from '@mui/material';
 import ServiceFaq from './ServiceFaq';
-
+import ModernTechnologies from '../hire-developer/ModernTechnologies';
 const ServiceSinglePage = ({ data }) => {
   //  hiring services page components
+
   return (
     <>
       <ServiceHeroSection data={data?.servicesHeroSection} />
@@ -39,7 +39,7 @@ const ServiceSinglePage = ({ data }) => {
         fontWeight={500}
       />
       <ServiceExperties data={data?.experties} />
-      <FifthSection data={data?.technologies} />
+      <ModernTechnologies data={data?.modernTechnologies} />
       <Perks
         data={data?.perks}
         btnTitle={data?.perkBtnTitle}

@@ -4,13 +4,13 @@ import HireHeroSection from './HireHeroSection';
 import ClientSays from '../homepage/ClientSays';
 import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
-import FifthSection from './FifthSection';
 import FormSection from './FormSection';
 import CustomComponent from './CustomHeading';
 import { Box } from '@mui/material';
 import Hosts from './Hosts';
 import CustomizedSolution from './CustomizedSolution';
 import LetsConnect from './LetsConnect';
+import ModernTechnologies from './ModernTechnologies';
 
 const HireDeveloper = ({ data }) => {
   //  hiring front-end & back-backend developer page components
@@ -41,7 +41,7 @@ const HireDeveloper = ({ data }) => {
       )}
       <Hosts data={data?.hosts} />
       <CustomizedSolution data={data?.customizedSolution} />
-      <FifthSection data={data?.fifthSection} />
+      <ModernTechnologies data={data?.modernTechnologies} />
       <FormSection data={data?.formSection} />
     </>
   );

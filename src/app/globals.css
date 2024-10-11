@@ -2020,4 +2020,19 @@ input {
   }
 }
 
+#modern-technologies-slider .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#modern-technologies-slider .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  #modern-technologies-slider .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
 /* ********************************* */
