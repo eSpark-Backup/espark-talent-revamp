@@ -16,7 +16,14 @@ const HireDeveloper = ({ data }) => {
   //  hiring front-end & back-backend developer page components
 
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: { xs: 4, sm: 5, md: 7, lg: 10 },
+        pb: { xs: 5, sm: 6, md: 7, lg: 10 },
+      }}
+    >
       <HireHeroSection data={data?.heroSection} />
       <LetsConnect data={data?.letsConnect} />
       {data?.bgImage && (
@@ -43,7 +50,7 @@ const HireDeveloper = ({ data }) => {
       <CustomizedSolution data={data?.customizedSolution} />
       <ModernTechnologies data={data?.modernTechnologies} />
       <FormSection data={data?.formSection} />
-    </>
+    </Box>
   );
 };
 

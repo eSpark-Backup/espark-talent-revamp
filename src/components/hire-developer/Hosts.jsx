@@ -27,7 +27,7 @@ const Hosts = ({ data }) => {
   return (
     <>
       {data ? (
-        <Box sx={{ py: 3 }}>
+        <Box sx={{ py: 0 }}>
           <Box sx={mainBoxStyle}>
             <Box component={'img'} sx={imageStyle} src={`${leftImage || ''}`} />
             <Box sx={imageBoxStyle}>

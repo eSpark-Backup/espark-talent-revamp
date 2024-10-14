@@ -57,7 +57,15 @@ const ModernTechnologies = ({ data }) => {
     <>
       <Box sx={mainBoxStyle}>
         <Container>
-          <Box sx={{ py: 2 }}>
+          <Box
+            sx={
+              {
+                // py: { xs: 2, lg: 1 }, '@media(min-width: 1024px)': {
+                //   pt: 3
+                // }
+              }
+            }
+          >
             <Typography
               variant="h4"
               textAlign="center"

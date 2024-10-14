@@ -31,8 +31,8 @@ const BookADemoForm = ({ form, handleModalClose }) => {
   const handleClose = () => setOpen(false);
   const [isOpen, setIsOpen] = useState(false);
   const partnersRef = useRef(null);
-  const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
-  const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
+  const adminId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
+  const adminTempleteId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
   const pathName = usePathname();
   const book_A_meeting = '/book-a-meeting';
   const remote = '/hire-remote-developers';

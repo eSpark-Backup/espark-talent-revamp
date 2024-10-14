@@ -380,6 +380,76 @@ export const DEMO_MEETING_DATA = {
     pt: `25px`,
     title: `Let us empower you to hire the world's best talent in minutes!`,
     description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
+    styles: {
+      mainBoxStyle: {
+        px: { xs: 2, sm: 3, md: 5 },
+        backgroundSize: 'auto',
+        '@media(min-width: 1024px) and (max-width: 1200px) ': {
+          backgroundSize: '23%',
+        },
+      },
+      parentBoxStyle: {
+        mx: 'auto',
+        display: 'flex',
+        maxWidth: '1220px',
+        gap: { xs: 5, sm: 6 },
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        '@media(min-width: 1024px)': {
+          flexDirection: 'row',
+          gap: 6,
+        },
+      },
+      contentBoxStyle: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        gap: { xs: 2, sm: 3, md: 5, lg: 7 },
+        '@media(min-width: 1024px)': {
+          width: 'calc(100% - 500px)',
+          textAlign: 'left',
+        },
+      },
+      titleTypographyStyle: {
+        color: '#001C63',
+        fontSize: {
+          xs: '20px',
+          sm: '30px',
+          md: '40px',
+          lg: '41.04px',
+        },
+        lineHeight: {
+          xs: '28px',
+          sm: '45px',
+          md: '52px',
+          lg: '62.77px',
+        },
+        fontWeight: 600,
+      },
+      descriptionBoxStyle: {
+        mx: { xs: 'auto', md: 0 },
+        maxWidth: {
+          xs: '400px',
+          sm: '450px',
+          md: '650px',
+          lg: '660px',
+        },
+      },
+      formBoxStyle: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '500px',
+        mx: 'auto',
+        boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
+        borderRadius: '8px',
+        backgroundColor: '#F9F9F9',
+        py: { xs: 2, md: 3 },
+      },
+    },
   },
   seamlessHiringProcess: [
     {

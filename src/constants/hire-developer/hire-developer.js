@@ -407,7 +407,8 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          py: 10,
+          pt: 10,
+          pb: '63px',
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -661,6 +662,82 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/hire-developer/FormSectionbg.png`,
       title: `Let us empower you to hire the world's best talent in minutes!`,
       description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
+      styles: {
+        mainBoxStyle: {
+          px: { xs: 2, sm: 3, md: 5 },
+          backgroundSize: 'auto',
+          '@media(min-width: 1024px) and (max-width: 1200px) ': {
+            backgroundSize: '23%',
+          },
+          '@media(min-width: 1024px)': {
+            backgroundImage: `url('/images/hire-developer/Section.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: { md: 'calc(14vw + 90px)', lg: 'auto' },
+            backgroundPosition: '-130px center',
+          },
+        },
+        parentBoxStyle: {
+          mx: 'auto',
+          display: 'flex',
+          maxWidth: '1220px',
+          gap: { xs: 5, sm: 6 },
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          '@media(min-width: 1024px)': {
+            flexDirection: 'row',
+            gap: 6,
+          },
+        },
+        contentBoxStyle: {
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: { xs: 2, sm: 3, md: 5, lg: 7 },
+          '@media(min-width: 1024px)': {
+            width: 'calc(100% - 500px)',
+            textAlign: 'left',
+          },
+        },
+        titleTypographyStyle: {
+          color: '#001C63',
+          fontSize: {
+            xs: '20px',
+            sm: '30px',
+            md: '40px',
+            lg: '41.04px',
+          },
+          lineHeight: {
+            xs: '28px',
+            sm: '45px',
+            md: '52px',
+            lg: '62.77px',
+          },
+          fontWeight: 600,
+        },
+        descriptionBoxStyle: {
+          mx: { xs: 'auto', md: 0 },
+          maxWidth: {
+            xs: '400px',
+            sm: '450px',
+            md: '650px',
+            lg: '660px',
+          },
+        },
+        formBoxStyle: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '500px',
+          mx: 'auto',
+          boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
+          borderRadius: '8px',
+          backgroundColor: '#F9F9F9',
+          py: { xs: 2, md: 3 },
+        },
+      },
     },
   },
   {
@@ -993,7 +1070,8 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          py: 10,
+          pt: 10,
+          pb: '63px',
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -1126,8 +1204,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -1244,9 +1322,84 @@ export const HIRE_DEVELOPERS = [
       bgColor: `#fff`,
       spacing: `3%`,
       pt: `25px`,
-      bgImage: `/images/hire-developer/FormSectionbg.png`,
       title: `Let us empower you to hire the world's best talent in minutes!`,
       description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
+      styles: {
+        mainBoxStyle: {
+          px: { xs: 2, sm: 3, md: 5 },
+          backgroundSize: 'auto',
+          '@media(min-width: 1024px) and (max-width: 1200px) ': {
+            backgroundSize: '23%',
+          },
+          '@media(min-width: 1024px)': {
+            backgroundImage: `url('/images/hire-developer/Section.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: { md: 'calc(14vw + 90px)', lg: 'auto' },
+            backgroundPosition: '-130px center',
+          },
+        },
+        parentBoxStyle: {
+          mx: 'auto',
+          display: 'flex',
+          maxWidth: '1220px',
+          gap: { xs: 5, sm: 6 },
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          '@media(min-width: 1024px)': {
+            flexDirection: 'row',
+            gap: 6,
+          },
+        },
+        contentBoxStyle: {
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: { xs: 2, sm: 3, md: 5, lg: 7 },
+          '@media(min-width: 1024px)': {
+            width: 'calc(100% - 500px)',
+            textAlign: 'left',
+          },
+        },
+        titleTypographyStyle: {
+          color: '#001C63',
+          fontSize: {
+            xs: '20px',
+            sm: '30px',
+            md: '40px',
+            lg: '41.04px',
+          },
+          lineHeight: {
+            xs: '28px',
+            sm: '45px',
+            md: '52px',
+            lg: '62.77px',
+          },
+          fontWeight: 600,
+        },
+        descriptionBoxStyle: {
+          mx: { xs: 'auto', md: 0 },
+          maxWidth: {
+            xs: '400px',
+            sm: '450px',
+            md: '650px',
+            lg: '660px',
+          },
+        },
+        formBoxStyle: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '500px',
+          mx: 'auto',
+          boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
+          borderRadius: '8px',
+          backgroundColor: '#F9F9F9',
+          py: { xs: 2, md: 3 },
+        },
+      },
     },
   },
   {
@@ -1579,7 +1732,8 @@ export const HIRE_DEVELOPERS = [
           display: 'none',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr',
-          py: 10,
+          pt: 10,
+          pb: '63px',
           '@media(min-width: 1024px)': {
             display: 'grid',
           },
@@ -1705,8 +1859,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -1826,6 +1980,82 @@ export const HIRE_DEVELOPERS = [
       bgImage: `/images/hire-developer/FormSectionbg.png`,
       title: `Let us empower you to hire the world's best talent in minutes!`,
       description: `Our proven, cost-efficient outsourcing services are ready for you. Connect with us now to swiftly onboard your team of dedicated, professional outsourcing employees today!`,
+      styles: {
+        mainBoxStyle: {
+          px: { xs: 2, sm: 3, md: 5 },
+          backgroundSize: 'auto',
+          '@media(min-width: 1024px) and (max-width: 1200px) ': {
+            backgroundSize: '23%',
+          },
+          '@media(min-width: 1024px)': {
+            backgroundImage: `url('/images/hire-developer/Section.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: { md: 'calc(14vw + 90px)', lg: 'auto' },
+            backgroundPosition: '-130px center',
+          },
+        },
+        parentBoxStyle: {
+          mx: 'auto',
+          display: 'flex',
+          maxWidth: '1220px',
+          gap: { xs: 5, sm: 6 },
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          '@media(min-width: 1024px)': {
+            flexDirection: 'row',
+            gap: 6,
+          },
+        },
+        contentBoxStyle: {
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: { xs: 2, sm: 3, md: 5, lg: 7 },
+          '@media(min-width: 1024px)': {
+            width: 'calc(100% - 500px)',
+            textAlign: 'left',
+          },
+        },
+        titleTypographyStyle: {
+          color: '#001C63',
+          fontSize: {
+            xs: '20px',
+            sm: '30px',
+            md: '40px',
+            lg: '41.04px',
+          },
+          lineHeight: {
+            xs: '28px',
+            sm: '45px',
+            md: '52px',
+            lg: '62.77px',
+          },
+          fontWeight: 600,
+        },
+        descriptionBoxStyle: {
+          mx: { xs: 'auto', md: 0 },
+          maxWidth: {
+            xs: '400px',
+            sm: '450px',
+            md: '650px',
+            lg: '660px',
+          },
+        },
+        formBoxStyle: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          maxWidth: '500px',
+          mx: 'auto',
+          boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
+          borderRadius: '8px',
+          backgroundColor: '#F9F9F9',
+          py: { xs: 2, md: 3 },
+        },
+      },
     },
   },
   {
@@ -1938,8 +2168,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -2526,8 +2756,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -3105,8 +3335,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -3679,8 +3909,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -4253,8 +4483,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -4822,8 +5052,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -5391,8 +5621,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -5971,8 +6201,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -6523,8 +6753,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -7080,8 +7310,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -7633,8 +7863,8 @@ export const HIRE_DEVELOPERS = [
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -8185,8 +8415,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -8738,8 +8968,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -9293,8 +9523,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -9841,8 +10071,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -10375,8 +10605,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -10924,8 +11154,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -11462,8 +11692,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -12020,8 +12250,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -12568,8 +12798,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -13119,8 +13349,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -13675,8 +13905,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -14224,8 +14454,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -14780,8 +15010,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -15333,8 +15563,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -15893,8 +16123,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -16446,8 +16676,8 @@ goals and requirements.
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -16981,8 +17211,8 @@ and frameworks for this technology.`,
           backgroundColor: '#fff',
           '@media(min-width: 1024px)': {
             backgroundColor: '#F7F8FF',
+            pt: 3,
           },
-          py: 3,
         },
         titleStyle: {
           textTransform: 'capitalize',
@@ -17480,7 +17710,8 @@ export const frontendContentBoxStyle = (bgImage) => {
     width: '100%',
     height: '100%',
     mt: { xs: -6, sm: -8, md: -13, lg: -15 },
-    py: { xs: 0, md: 3, lg: 5 },
+    pt: { xs: 0, md: 3, lg: 6 },
+    pb: { xs: 0, md: 2, lg: 2 },
   };
 };
 
@@ -17492,8 +17723,8 @@ export const mainContainerStyleForCustomizeSolution = (bgImage, pathname) => {
     backgroundImage: `url(${bgImage})`,
     '@media(max-width:1023px)': {
       backgroundColor: `${pathname?.includes('hire-a') ? '#F7F8FF' : '#fff'}`,
+      py: 2,
     },
-    py: { xs: 2, sm: 3.5, md: 5, lg: 9 },
   };
 };
 export const descriptionTypographyStyleForCustomizeSolution = (
@@ -17875,5 +18106,45 @@ export const eachCardForCustomizeSolution = (index) => {
       },
       { display: 'none' },
     ],
+  };
+};
+
+export const TitleDescriptionBoxStyleForFormSection = (
+  pathName,
+  book_a_demo_meeting
+) => {
+  return {
+    display: 'flex',
+    maxWidth: { sm: '500px', md: '700px' },
+    flexDirection: 'column',
+    gap: { xs: 1, md: 1.5, lg: 1 },
+    pl: pathName?.includes(book_a_demo_meeting) ? 0 : { xs: 0, lg: 1 },
+    '@media(min-width: 1024px) and (max-width: 1399px)': {
+      pl: pathName?.includes(book_a_demo_meeting) ? 0 : '8%',
+    },
+  };
+};
+
+export const DescriptionBoxStyleForFormSection = (
+  pathName,
+  book_a_demo_meeting
+) => {
+  return {
+    fontSize: {
+      xs: '11px',
+      sm: '13px',
+      md: '18px',
+      lg: '23px',
+      xl: '23px',
+    },
+    color: pathName === book_a_demo_meeting ? '#001C63' : '#0E1155',
+    fontWeight: 400,
+    lineHeight: {
+      xs: '19.5px',
+      sm: '23px',
+      md: '33px',
+      lg: '43px',
+    },
+    px: { xs: '10px', sm: '0px' },
   };
 };
