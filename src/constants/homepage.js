@@ -158,7 +158,7 @@ export const PERKS_DATA = [
 export const DEVELOEPRS_PERKS_DATA = [
   {
     sno: '01',
-    title: 'Hire Salary Based Developers ​',
+    title: 'Hire Salary Based Developers',
     icon: '/images/homepage/our-perks/icon1.png',
     activeIcon: '/images/homepage/our-perks/icon1a.png',
     hoverIcons: '/images/homepage/our-perks/hover-icon.png',

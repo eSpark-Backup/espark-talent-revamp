@@ -42,7 +42,8 @@ const HireDeveloper = ({ data }) => {
           <Perks
             data={DEVELOEPRS_PERKS_DATA}
             target={'_self'}
-            link={'/hire-a-frontend-developer/#form'}
+            btnText={'Hire a Developer'}
+            btnLink={'/hire-a-frontend-developer/#form'}
           />
         </Box>
       )}
