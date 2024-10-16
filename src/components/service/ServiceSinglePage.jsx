@@ -2,6 +2,7 @@ import ClientSlider from '../global/ClientSlider';
 import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,
+  DEVELOEPRS_PERKS_DATA,
   OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
@@ -15,6 +16,7 @@ import ServiceFaq from './ServiceFaq';
 import ModernTechnologies from '../hire-developer/ModernTechnologies';
 const ServiceSinglePage = ({ data }) => {
   //  hiring services page components
+  const { styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
     <>
@@ -42,8 +44,9 @@ const ServiceSinglePage = ({ data }) => {
       <ModernTechnologies data={data?.modernTechnologies} />
       <Perks
         data={data?.perks}
-        btnTitle={data?.perkBtnTitle}
-        link={'/book-a-demo'}
+        styles={styles}
+        btnText={data?.perkBtnTitle}
+        btnLink={'/book-a-demo'}
         target={'_blank'}
         title={data?.perkTitle}
       />

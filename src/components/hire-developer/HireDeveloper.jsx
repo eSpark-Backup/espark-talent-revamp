@@ -5,7 +5,6 @@ import ClientSays from '../homepage/ClientSays';
 import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import Perks from '../homepage/Perks';
 import FormSection from './FormSection';
-import CustomComponent from './CustomHeading';
 import { Box } from '@mui/material';
 import Hosts from './Hosts';
 import CustomizedSolution from './CustomizedSolution';
@@ -14,6 +13,7 @@ import ModernTechnologies from './ModernTechnologies';
 
 const HireDeveloper = ({ data }) => {
   //  hiring front-end & back-backend developer page components
+  const { perksData, styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
     <Box
@@ -29,21 +29,23 @@ const HireDeveloper = ({ data }) => {
       {data?.bgImage && (
         <Box
           sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: { xs: 4, sm: 5, md: 7, lg: 10 },
             backgroundImage: `url(${data?.bgImage})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: `100%`,
+            backgroundPosition: `center`,
             color: '#fff',
           }}
         >
           <ClientSays data={OUR_CLIENT_SAYS} />
-          <CustomComponent
-            data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
-          />
           <Perks
-            data={DEVELOEPRS_PERKS_DATA}
+            data={perksData}
+            styles={styles}
             target={'_self'}
             btnText={'Hire a Developer'}
             btnLink={'/hire-a-frontend-developer/#form'}
+            title={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
           />
         </Box>
       )}

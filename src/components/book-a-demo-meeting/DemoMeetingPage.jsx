@@ -2,16 +2,17 @@ import React from 'react';
 import FormSection from '../hire-developer/FormSection';
 import ClientSays from '../homepage/ClientSays';
 import HowItsWork from './HowItsWork';
-import { OUR_CLIENT_SAYS } from '@/constants/homepage';
+import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import DemoLeverageTalent from './DemoLeverageTalent';
 import { Box } from '@mui/material';
-import CustomComponent from '../hire-developer/CustomHeading';
 import Perks from '../homepage/Perks';
 import CustomizedSolution from '../hire-developer/CustomizedSolution';
 import { TeamBanner } from './TeamBanner';
 import LetsConnect from '../hire-developer/LetsConnect';
 
 const DemoMeetingPage = ({ data }) => {
+  const { styles } = DEVELOEPRS_PERKS_DATA || {};
+
   return (
     <>
       <TeamBanner data={data?.teamBanner} />
@@ -23,13 +24,12 @@ const DemoMeetingPage = ({ data }) => {
           color: '#fff',
         }}
       >
-        <CustomComponent
-          data={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
-        />
         <Perks
-          data={data.seamlessHiringProcess}
+          data={data?.seamlessHiringProcess}
+          styles={styles}
           target={'_self'}
           link={'/book-a-demo-meeting/#form'}
+          title={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
         />
       </Box>
       <CustomizedSolution data={data?.customizedSolution} />

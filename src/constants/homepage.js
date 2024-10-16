@@ -155,69 +155,238 @@ export const PERKS_DATA = [
     },
   },
 ];
-export const DEVELOEPRS_PERKS_DATA = [
-  {
-    sno: '01',
-    title: 'Hire Salary Based Developers',
-    icon: '/images/homepage/our-perks/icon1.png',
-    activeIcon: '/images/homepage/our-perks/icon1a.png',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
-    listIcon: '/images/homepage/our-perks/list-icon.png',
-    content: {
-      heading: 'Hire Full-Time Salaried Developers',
-      paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
-      list: [
-        { item: 'Collaborative Work Environment,' },
-        { item: 'Stability in Payroll,' },
-        { item: 'High-Value Contract Partnership,' },
-        { item: 'Work-Life Balance Focus,' },
-      ],
+export const DEVELOEPRS_PERKS_DATA = {
+  perksData: [
+    {
+      sno: '01',
+      title: 'Hire Salary Based Developers',
+      icon: '/images/homepage/our-perks/icon1.png',
+      activeIcon: '/images/homepage/our-perks/icon1a.png',
+      hoverIcons: '/images/homepage/our-perks/hover-icon.png',
+      listIcon: '/images/homepage/our-perks/list-icon.png',
+      content: {
+        heading: 'Hire Full-Time Salaried Developers',
+        paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
+        list: [
+          { item: 'Collaborative Work Environment,' },
+          { item: 'Stability in Payroll,' },
+          { item: 'High-Value Contract Partnership,' },
+          { item: 'Work-Life Balance Focus,' },
+        ],
 
-      buttonText: 'Hire a Developer',
-      buttonLink: '/hire-a-frontend-developer/#form',
+        buttonText: 'Hire a Developer',
+        buttonLink: '/hire-a-frontend-developer/#form',
+      },
+    },
+    {
+      sno: '02',
+      title: 'Hire Hourly Based Developers',
+      icon: '/images/homepage/our-perks/icon2.png',
+      activeIcon: '/images/homepage/our-perks/icon2a.png',
+      hoverIcons: '/images/homepage/our-perks/hover-icon.png',
+      content: {
+        heading: 'Hire Hourly Developers',
+        paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
+        list: [
+          { item: 'Efficient Task Allocation.' },
+          { item: 'Flexibility in Scheduling,' },
+          { item: 'Dynamic Response to Workload.' },
+          { item: 'Adherence to Labor Laws.' },
+        ],
+        listIcon: '/images/homepage/our-perks/list-icon.png',
+        buttonText: 'Hire a Developer',
+        buttonLink: '/hire-a-frontend-developer/#form',
+      },
+    },
+    {
+      sno: '03',
+      title: 'Hire a Dedicated Team',
+      icon: '/images/homepage/our-perks/icon3.png',
+      activeIcon: '/images/homepage/our-perks/icon3a.png',
+      hoverIcons: '/images/homepage/our-perks/hover-icon.png',
+      content: {
+        heading: 'Hire a Dedicated Team',
+        paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
+        list: [
+          { item: 'Cost Efficiency.' },
+          { item: 'Faster Project Turnaround.' },
+          { item: 'Specialized Expertise,' },
+          { item: 'Strategic Project Planning.' },
+        ],
+        listIcon: '/images/homepage/our-perks/list-icon.png',
+        buttonText: 'Hire a Developer',
+        buttonLink: '/hire-a-frontend-developer/#form',
+      },
+    },
+  ],
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: 'auto',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    perksTitleStyle: {
+      width: '100%',
+      maxWidth: { xs: '400px', sm: '500px', md: '650px', lg: '800px' },
+      mx: 'auto',
+      px: 3,
+      textAlign: 'center',
+      mb: 2.5,
+      fontSize: { xs: '20px', sm: '32px', md: '38px', lg: '48px' },
+      fontWeight: 600,
+      lineHeight: { xs: '32px', sm: '45px', md: '55px', lg: '65px' },
+      color: '#001C63',
+      textTransform: 'capitalize',
+    },
+    perksBoxStyle: {
+      p: { xs: 2, sm: 5 },
+      gap: 5,
+      width: '95%',
+      mx: 'auto',
+      maxWidth: '1260px',
+      maxHeight: 'auto',
+      minHeight: '553px',
+      display: 'flex',
+      flexDirection: 'column',
+      borderRadius: '20px',
+      background: 'linear-gradient(97deg, #029894 0.53%, #036764 102.09%)',
+      '@media(min-width:1024px)': {
+        flexDirection: 'row',
+      },
+    },
+    perksButtonsBoxStyle: {
+      width: { xs: '100%', md: '100%', lg: '500px' },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: 3.5,
+      '@media(min-width:1024px)': {
+        width: { md: '400px', lg: '500px' },
+      },
+    },
+    perksButtonTextAndImageBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 2,
+    },
+    perksImageStyle: {
+      width: { xs: '24px', sm: '32px', lg: 'auto' },
+      height: { xs: '24px', sm: '32px', lg: 'auto' },
+    },
+    perksSerialNumberAndIconBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 2,
+    },
+    perksSerialNumberTextStyle: {
+      fontSize: {
+        xs: '42px',
+        sm: '45px',
+        md: '50px',
+        lg: '67.34px',
+      },
+      fontWeight: 700,
+      color: '#E0DDDDAD',
+    },
+    perksIconStyle: {
+      width: { xs: '18px', sm: '20px', lg: '24px' },
+      height: { xs: '18px', sm: '20px', lg: '24px' },
+    },
+    perksContentMainBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      '@media(min-width:1024px)': {
+        width: 'calc(100% - 500px)',
+      },
+    },
+    perksContentBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      textAlign: 'center',
+      gap: 1.5,
+      '@media(min-width:1024px)': {
+        textAlign: 'left',
+      },
+    },
+    perksContentHeadingStyle: {
+      fontSize: { xs: '20px', sm: '30px', md: '35px', lg: '37px' },
+      fontWeight: 700,
+      lineHeight: { xs: '30px', sm: '40px', md: '50px' },
+      color: '#FFFFFF',
+    },
+    perksContentParagraphStyle: {
+      fontSize: { xs: '12px', sm: '16px', md: '18px', lg: '20.84px' },
+      fontWeight: 400,
+      lineHeight: { xs: '20.85px', sm: '30px', md: '33.16px' },
+      color: '#FFFFFF',
+    },
+    perksContentUlStyle: {
+      display: 'grid',
+      pl: 0,
+      pt: 2,
+      listStyle: 'none',
+      gap: 2,
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      '@media(min-width: 1024px)': {
+        gridTemplateColumns: 'repeat(2, 1fr)',
+      },
+    },
+    perksContentLiBoxStyle: {
+      display: 'flex',
+      alignItems: 'start',
+      justifyContent: 'center',
+      gap: 1.2,
+      '@media(min-width: 1024px)': { justifyContent: 'flex-start' },
+    },
+    perksContentLiImageStyle: {
+      width: '14px',
+      height: '14px',
+      mt: { xs: '4px', sm: '6px' },
+    },
+    perksContentLiStyle: {
+      fontSize: {
+        xs: '10px',
+        sm: '13px',
+        md: '15px',
+        lg: '19px',
+      },
+      textAlign: 'left',
+      fontWeight: 400,
+      lineHeight: { xs: '22px', sm: '27.35px' },
+      color: '#FFFFFF',
+    },
+    perksButtonStyle: {
+      mt: 1,
+      mx: 'auto',
+      color: '#fff',
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '15px',
+        lg: '17.42px',
+      },
+      width: { xs: '150px', sm: '180px', lg: '200.6px' },
+      height: {
+        xs: '30px',
+        sm: '38px',
+        md: '43px',
+        lg: '53.89px',
+      },
+      backgroundColor: '#001C63',
+      borderRadius: '6.42px',
+      '&:hover': {
+        color: '#fff',
+        backgroundColor: '#001C63',
+      },
+      '@media(min-width: 1024px)': {
+        mx: 0,
+      },
     },
   },
-  {
-    sno: '02',
-    title: 'Hire Hourly Based Developers',
-    icon: '/images/homepage/our-perks/icon2.png',
-    activeIcon: '/images/homepage/our-perks/icon2a.png',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
-    content: {
-      heading: 'Hire Hourly Developers',
-      paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
-      list: [
-        { item: 'Efficient Task Allocation.' },
-        { item: 'Flexibility in Scheduling,' },
-        { item: 'Dynamic Response to Workload.' },
-        { item: 'Adherence to Labor Laws.' },
-      ],
-      listIcon: '/images/homepage/our-perks/list-icon.png',
-      buttonText: 'Hire a Developer',
-      buttonLink: '/hire-a-frontend-developer/#form',
-    },
-  },
-  {
-    sno: '03',
-    title: 'Hire a Dedicated Team',
-    icon: '/images/homepage/our-perks/icon3.png',
-    activeIcon: '/images/homepage/our-perks/icon3a.png',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
-    content: {
-      heading: 'Hire a Dedicated Team',
-      paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
-      list: [
-        { item: 'Cost Efficiency.' },
-        { item: 'Faster Project Turnaround.' },
-        { item: 'Specialized Expertise,' },
-        { item: 'Strategic Project Planning.' },
-      ],
-      listIcon: '/images/homepage/our-perks/list-icon.png',
-      buttonText: 'Hire a Developer',
-      buttonLink: '/hire-a-frontend-developer/#form',
-    },
-  },
-];
+};
 
 export const EXPERTIES_DATA = {
   title: 'Which Experts Will Drive Your Business?',
@@ -731,3 +900,65 @@ export const hideCtaPaths = [
   '/hire-ui-ux-designers',
   '/hire-wordpress-developers',
 ];
+
+export const buttonsStyleForPerksComponent = (index, ind) => {
+  return {
+    width: '100%',
+    height: '100%',
+    maxWidth: '100%',
+    maxHeight: '118px',
+    justifyContent: 'space-between',
+    gap: 1.5,
+    background:
+      index == ind
+        ? 'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF'
+        : '#fff',
+    boxShadow:
+      index == ind ? '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)' : 'none',
+    borderRadius: '20.59px',
+    transitionProperty: 'background',
+    transitionDelay: '1m',
+    transitionDuration: '1s',
+    '&:hover': {
+      backgroundColor: '#fff',
+      boxShadow:
+        index == ind ? '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)' : 'none',
+    },
+    '@media(min-width:1024px)': {
+      justifyContent: 'space-between',
+    },
+  };
+};
+
+export const buttonTextStyleForPerksComponent = (index, ind) => {
+  return {
+    width: '100%',
+    maxWidth: { xs: '135px', sm: '180px', md: '350px' },
+    fontSize: {
+      xs: '15px',
+      sm: '18px',
+      md: '20px',
+      lg: '24px',
+    },
+    fontWeight: 500,
+    lineHeight: {
+      xs: '21.27px',
+      sm: '25px',
+      md: '29px',
+      lg: '33.73px',
+    },
+    color: index == ind ? '#fff' : '#001C63',
+    textAlign: 'left',
+    pr: 0,
+    textWrap: 'wrap',
+    '@media(min-width: 1024px)': {
+      textAlign: 'left',
+      maxWidth: '240px',
+    },
+    '@media(min-width: 280px) and (max-Width:359px)': {
+      maxWidth: '80px',
+      py: 0.5,
+      fontSize: '12px',
+    },
+  };
+};

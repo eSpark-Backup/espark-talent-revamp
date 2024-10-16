@@ -20,7 +20,7 @@ const ClientSays = ({ data }) => {
           mb: { xs: '50%', sm: '25%', md: '20%', lg: '13%' },
           backgroundColor: pathName?.includes('book-a-demo-meeting')
             ? '#F7F8FF'
-            : '#fff',
+            : 'transparent',
           pt: pathName?.includes('book-a-demo-meeting')
             ? { xs: 3, sm: 5, md: 7 }
             : 0,
