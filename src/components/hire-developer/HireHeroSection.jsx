@@ -1,13 +1,6 @@
 'use client';
 import { frontendHeroSectionMainBoxStyle } from '@/constants/hire-developer/hire-developer';
-import {
-  Box,
-  Button,
-  Container,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
-import Image from 'next/image';
+import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 
@@ -21,13 +14,6 @@ const HireHeroSection = ({ data }) => {
     buttonStyle,
     btnTextStyle,
   } = styles || {};
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme?.breakpoints?.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme?.breakpoints?.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
 
   return (
     data && (
@@ -36,26 +22,10 @@ const HireHeroSection = ({ data }) => {
           <Box sx={containerBoxStyle}>
             <Box sx={imageBoxStyle}>
               <Link href={'/'}>
-                <Image
+                <Box
+                  component={'img'}
                   src={data?.logo}
-                  width={
-                    isSmallScreen
-                      ? 100
-                      : isMediumScreen
-                        ? 150
-                        : isLargeScreen
-                          ? 200
-                          : 200
-                  }
-                  height={
-                    isSmallScreen
-                      ? 50
-                      : isMediumScreen
-                        ? 75
-                        : isLargeScreen
-                          ? 100
-                          : 100
-                  }
+                  sx={{ width: 'auto', height: 'auto' }}
                   alt="Thankyou - eSpark Talent"
                 />
               </Link>
@@ -78,11 +48,11 @@ const HireHeroSection = ({ data }) => {
               </Link>
             </Box>
             <Box justifyContent={'center'} textAlign="center" pt={3}>
-              <Image
+              <Box
+                component={'img'}
                 src={data?.image}
                 alt={'Hire A Developer Cover Art'}
-                height={435}
-                width={435}
+                sx={{ width: 'auto', height: 'auto' }}
               />
             </Box>
           </Box>

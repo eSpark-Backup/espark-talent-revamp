@@ -6,7 +6,7 @@ const LetsConnect = ({ data }) => {
   const { title, descrcipton, btnLink, btnText, styles } = data || {};
   const {
     mainStyle,
-    titletextStyle,
+    titleTextStyle,
     descTypographyStyle,
     btnStyle,
     btnTypographyStyle,
@@ -21,7 +21,7 @@ const LetsConnect = ({ data }) => {
               <Typography
                 variant="h3"
                 textAlign="center"
-                sx={titletextStyle}
+                sx={titleTextStyle}
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}
