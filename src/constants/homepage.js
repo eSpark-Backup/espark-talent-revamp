@@ -684,32 +684,122 @@ export const OUR_CLIENT_SAYS = {
       title: 'Ricky Ye',
       subTitle: 'CEO',
       description: `We engaged eSpark Talent for PCB and embedded development, aiming to enhance system functionality. Navigating this complex field demanded precision, and eSpark Talent demonstrated unmatched professionalism. Their expert team not only understood technical details but also swiftly addressed urgent needs.`,
+      rating: 4,
     },
     {
       image: '/images/homepage/our-clients/konoozi.svg',
       title: 'Imran Khan',
       subTitle: 'CEO',
       description: `eSpark Talent's skill in .NET development and UI/UX design completely transformed our projects. Their quick response and dedicated team ensured tasks were completed smoothly. Surpassing expectations with efficiency and expertise, they've become our top choice. Enthusiastically recommending eSpark Talent for setting a new standard in reliability and excellence.`,
+      rating: 4,
     },
     {
       image: '/images/homepage/our-clients/equip.svg',
       title: 'Clarie Dennis',
       subTitle: 'CEO',
       description: `Choosing eSpark Talent for outsourcing was transformative. Their WordPress developer and performance marketer showcased exceptional speed and agility. Partnering with eSpark Talent was the right decision; the outstanding service ensures my return for future projects. Highly recommended for those who want to avail top-notch outsourcing services!`,
+      rating: 4,
     },
     {
       image: '/images/homepage/our-clients/project.svg',
       title: 'Jawad Ali',
       subTitle: 'CEO',
       description: `eSpark Talent is the dream team for digital excellence! From a WordPress Developer shaping my online presence to a Performance Marketer driving results, a Social Media Expert creating buzz, and a UI/UX Designer adding aesthetic magic – they nailed every role. Fully satisfied with their service, I'm excited for more collaborations. They're not just outsourcing; they're elevating my brand to new heights.`,
+      rating: 4,
     },
     {
       image: '/images/homepage/our-clients/robot.svg',
       title: 'Cole Benson',
       subTitle: 'Director',
       description: `Cheers to the tech experts at eSpark Talent! They've skillfully blended the latest tech into our online venture, making innovation smooth sailing. Affordable support aligns perfectly with our business goals, making groundbreaking ideas flow effortlessly. Thanks to eSpark Talent, success in Embedded System Engineering and Firmware Development is just within reach!`,
+      rating: 4,
     },
   ],
+  styles: {
+    headingStyle: {
+      px: { xs: '5%', md: '7%' },
+      fontSize: { xs: '22px', sm: '24px', md: '35px', lg: '43px' },
+      mb: 1,
+      fontWeight: 600,
+      textAlign: 'center',
+    },
+    subHeadingStyle: {
+      fontSize: { xs: '11px', sm: '13px', md: '16px', lg: '18px' },
+      fontWeight: 500,
+      textAlign: 'center',
+      px: { xs: '5%', md: '7%' },
+    },
+    clientSaySliderBoxStyle: {
+      width: '100%',
+      maxWidth: 1210,
+      margin: 'auto',
+      position: 'relative',
+      pt: 5,
+    },
+    clientSaySliderStyles: {
+      swiperSlideStyle: {
+        paddingTop: '0px',
+        paddingBottom: '0px',
+        display: 'flex',
+        justifyContent: 'center',
+        height: '100%',
+      },
+      cardStyle: {
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        minHeight: { xs: '220px', sm: '220px', md: '240px', lg: '225px' },
+        maxHeight: '100%',
+        backgroundColor: '#FFFFFF',
+        p: 3,
+      },
+      logoAndRatingBoxStyle: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      },
+      ratingBoxStyle: { display: { xs: 'none', md: 'inline-flex' }, gap: 0.7 },
+      cardTitle: { fontSize: '24px', fontWeight: 600, color: '#525252' },
+      subTitleAndRatingBoxStyle: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: 1,
+        pb: 1,
+      },
+      cardSubTitleStyle: {
+        fontSize: '18px',
+        fontWeight: 400,
+        color: '#525252',
+      },
+      subTitleRatingBoxStyle: {
+        display: { xs: 'inline-flex', md: 'none' },
+        gap: 0.7,
+      },
+      descriptionStyle: {
+        fontSize: { xs: '10px', md: '11px' },
+        fontWeight: 400,
+        color: '#525252',
+      },
+      paginationBoxStyle: {
+        width: '100%',
+        maxWidth: '495px',
+        position: 'absolute',
+        display: { xs: 'none', md: 'flex' },
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        top: 'auto',
+        bottom: { xs: 75, sm: 80, md: 100 },
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 100,
+      },
+      paginationStyle: {
+        width: { xs: '10px', md: 'auto' },
+        height: 'auto',
+        cursor: 'pointer',
+      },
+    },
+  },
 };
 
 export const DEMO_DATA = {
@@ -960,5 +1050,20 @@ export const buttonTextStyleForPerksComponent = (index, ind) => {
       py: 0.5,
       fontSize: '12px',
     },
+  };
+};
+
+export const mainContainerStyleForClientSlider = (
+  pathName,
+  book_a_demo_metting
+) => {
+  return {
+    pt: pathName?.includes(book_a_demo_metting)
+      ? { xs: '38px', sm: '45px', md: '55px', lg: '60px' }
+      : 0,
+    pb: { xs: 0, lg: !pathName?.includes(book_a_demo_metting) ? 2 : 0 },
+    backgroundColor: pathName?.includes(book_a_demo_metting)
+      ? '#F7F8FF'
+      : '#fff',
   };
 };

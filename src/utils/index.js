@@ -384,3 +384,15 @@ export const handleChangeAccordion =
 export const checkingExpendedAccordion = (expandedAccordion, index) => {
   return expandedAccordion === index ? true : false;
 };
+
+// Client Says section in hire-a-frontend-developer
+
+export const navigationImageDirection = (
+  direction,
+  left,
+  right,
+  prevRef,
+  nextRef
+) => {
+  return direction === left ? prevRef : direction === right ? nextRef : null;
+};

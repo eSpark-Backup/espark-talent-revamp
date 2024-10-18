@@ -1,97 +1,76 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
+import { Box, Card, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import { Box, Typography } from '@mui/material';
+import 'swiper/css/navigation';
+import { Navigation, EffectCoverflow } from 'swiper/modules';
 import StarRating from './StarRating';
+import { navigationImageDirection } from '@/utils';
 
-const ClientSaysSlider = ({ data }) => {
-  const renderSlideContent = (item) => (
+const ClientSaysSlider = ({ data, styles }) => {
+  const {
+    swiperSlideStyle,
+    cardStyle,
+    logoAndRatingBoxStyle,
+    ratingBoxStyle,
+    cardTitle,
+    subTitleAndRatingBoxStyle,
+    cardSubTitleStyle,
+    subTitleRatingBoxStyle,
+    descriptionStyle,
+    paginationBoxStyle,
+    paginationStyle,
+  } = styles || {};
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const touch_Allowed = useMediaQuery((theme) =>
+    theme?.breakpoints?.down('md')
+  );
+
+  const navigation = (direction, i) => (
     <Box
-      className="reviews-area"
-      sx={{ height: '100%', minHeight: { xs: '300px', sm: '270px' } }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          pt: { xs: 3.5, sm: 3, md: 4 },
-          px: { xs: 2 },
-        }}
-      >
-        <Box
-          sx={{
-            width: { xs: '100%', sm: '440px' },
-            height: { xs: '28px', sm: '38px', md: '50px' },
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
-          <Box
-            component={'img'}
-            quality="85"
-            priority={true}
-            src={item?.image}
-            alt="logo"
-            sx={{
-              width: { xs: '134px', sm: '174px' },
-              height: { xs: '28px', sm: '34px' },
-            }}
-          />
-          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-            <StarRating stars={4} />
+      key={i}
+      component="img"
+      sx={paginationStyle}
+      src={`/images/homepage/our-clients/${direction}.png`}
+      ref={navigationImageDirection(
+        direction,
+        'pagination-left',
+        'pagination-right',
+        prevRef,
+        nextRef
+      )}
+    />
+  );
+
+  const renderSlide = (card, index) => (
+    <SwiperSlide key={index} style={swiperSlideStyle}>
+      <Card sx={cardStyle}>
+        <Box sx={logoAndRatingBoxStyle}>
+          <Box component={'img'} src={card?.image} />
+          <Box sx={ratingBoxStyle}>
+            <StarRating stars={card?.rating} />
           </Box>
         </Box>
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          my: { xs: 2, sm: 3, md: 0.5 },
-        }}
-      >
-        <Box sx={{ width: { xs: '100%', sm: '420px' }, px: { xs: 2 } }}>
-          <Typography
-            variant="h5"
-            sx={{ fontSize: '24px', fontWeight: 600, color: '#525252' }}
-          >
-            {item?.title}
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{
-              fontSize: '18px !important',
-              fontWeight: 400,
-              color: '#525252',
-              my: 0.5,
-            }}
-          >
-            {item?.subTitle}
-            <Box sx={{ display: { xs: 'flex', sm: 'none' }, height: 35 }}>
-              <StarRating stars={4} />
+        <Box>
+          <Typography sx={cardTitle}>{card?.title}</Typography>
+          <Box sx={subTitleAndRatingBoxStyle}>
+            <Typography sx={cardSubTitleStyle}>{card?.subTitle}</Typography>
+            <Box sx={subTitleRatingBoxStyle}>
+              <StarRating stars={card?.rating} />
             </Box>
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: '10px !important', md: '12px !important' },
-              color: '#525252',
-              textAlign: 'justify',
-              lineHeight: '146%',
-              fontWeight: 400,
-            }}
-          >
-            {item?.description}
-          </Typography>
+          </Box>
+          <Typography sx={descriptionStyle}>{card?.description}</Typography>
         </Box>
-      </Box>
-    </Box>
+      </Card>
+    </SwiperSlide>
   );
 
   return (
     <>
       <Swiper
+        key={touch_Allowed}
         effect={'coverflow'}
         grabCursor={false}
         centeredSlides={true}
@@ -102,22 +81,28 @@ const ClientSaysSlider = ({ data }) => {
           depth: 440,
           modifier: 2,
           slideShadows: true,
+          slideBorder: false,
         }}
-        navigation={true}
+        navigation={{
+          prevEl: prevRef && prevRef?.current,
+          nextEl: nextRef && nextRef?.current,
+        }}
         loop={true}
-        allowTouchMove={false}
+        allowTouchMove={touch_Allowed}
         modules={[EffectCoverflow, Navigation]}
-        className="mySwiper reviews-swiper"
-        breakpoints={{
-          0: { slidesPerView: 'auto' },
-          425: { slidesPerView: 'auto' },
-          600: { slidesPerView: 'auto' },
+        onInit={(swiper) => {
+          swiper.params.allowTouchMove = touch_Allowed;
+          swiper.params.navigation.prevEl = prevRef && prevRef?.current;
+          swiper.params.navigation.nextEl = nextRef && nextRef?.current;
+          swiper?.navigation?.init();
+          swiper?.navigation?.update();
         }}
       >
-        {data?.slider?.map((item, i) => (
-          <SwiperSlide key={i}>{renderSlideContent(item)}</SwiperSlide>
-        ))}
+        {data?.map(renderSlide)}
       </Swiper>
+      <Box sx={paginationBoxStyle}>
+        {['pagination-left', 'pagination-right']?.map(navigation)}
+      </Box>
     </>
   );
 };
