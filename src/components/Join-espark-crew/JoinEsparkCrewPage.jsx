@@ -85,6 +85,20 @@ export default function JoinEsparkCrewPage() {
     padding: '30px 50px 50px',
   };
 
+  const aboutYouStackStyles = {
+    ...FlexBox,
+    backgroundColor: '#FAFBFC',
+  };
+
+  const keyPointsStackStyles = {
+    ...FlexBox,
+  };
+
+  const benefitsStackStyles = {
+    ...FlexBox,
+    backgroundColor: '#FAFBFC',
+  };
+
   return (
     <>
       <Hero
@@ -94,7 +108,7 @@ export default function JoinEsparkCrewPage() {
         }}
       />
       {/* About You */}
-      <Stack sx={{ ...FlexBox, backgroundColor: '#FAFBFC' }}>
+      <Stack sx={aboutYouStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {introSecHeading}
@@ -115,13 +129,13 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Key Points */}
-      <Stack sx={{ ...FlexBox }}>
+      <Stack sx={keyPointsStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%', lg: '70%', xl: '50%' } }}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {keysPointSecHeading}
           </Typography>
           {KEYS?.map((key, index) => {
-            const splitedKey = key.split(':');
+            const splitedKey = key?.split(':');
             const title = `${splitedKey[0]}:`;
             const desc = splitedKey[1];
             return (
@@ -137,7 +151,7 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Benefits */}
-      <Stack sx={{ ...FlexBox, backgroundColor: '#FAFBFC' }}>
+      <Stack sx={benefitsStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {benefitsSecHeading}

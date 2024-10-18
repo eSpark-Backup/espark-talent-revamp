@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Stack, Typography, Box, Modal } from '@mui/material';
 import { CONFIRMATION_MODAL_DATA } from '@/constants/join-espark-crew';
 
-const style = {
+const modalStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -16,6 +16,22 @@ const style = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+};
+
+const headingStyle = {
+  fontSize: '30px',
+  fontWeight: 600,
+};
+
+const descriptionStyle = {
+  fontSize: '15px',
+  textAlign: 'center',
+  color: 'black',
+  my: 3,
+};
+
+const buttonStyle = {
+  padding: '5px 40px',
 };
 
 export default function ConfirmCloseModal({
@@ -34,25 +50,9 @@ export default function ConfirmCloseModal({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Typography
-            sx={{
-              fontSize: '30px',
-              fontWeight: 600,
-            }}
-          >
-            {heading}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '15px',
-              textAlign: 'center',
-              color: 'black',
-              my: 3,
-            }}
-          >
-            {description}
-          </Typography>
+        <Box style={modalStyle}>
+          <Typography style={headingStyle}>{heading}</Typography>
+          <Typography style={descriptionStyle}>{description}</Typography>
 
           <Stack
             direction="row"
@@ -62,9 +62,7 @@ export default function ConfirmCloseModal({
             sx={{ mt: 2 }}
           >
             <Button
-              sx={{
-                padding: '5px 40px',
-              }}
+              style={buttonStyle}
               variant="outlined"
               color="secondary"
               onClick={handleClose}
@@ -72,9 +70,7 @@ export default function ConfirmCloseModal({
               {cancelButton}
             </Button>
             <Button
-              sx={{
-                padding: '5px 40px',
-              }}
+              style={buttonStyle}
               variant="contained"
               color="primary"
               onClick={handleSuccess}
