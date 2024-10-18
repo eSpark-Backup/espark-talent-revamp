@@ -581,15 +581,15 @@ export const worksCardBorderRadius = (index) => {
   };
 };
 
-export const worksCardStyle = {
+export const worksCardStyle = (pathName, currentPath) => ({
   mx: 2,
   width: '100%',
   height: '100%',
   maxWidth: { xs: '277px', sm: '353px', md: '555px' },
   minHeight: { xs: '340px', sm: '425px', md: 'auto', lg: '499px' },
-  backgroundColor: '#fff',
+  backgroundColor: pathName?.includes(currentPath) ? '#F7F8FF' : '#fff',
   boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, 0.35)',
-};
+});
 
 export const headerStyle = {
   flexDirection: 'column',

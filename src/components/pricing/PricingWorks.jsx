@@ -17,9 +17,12 @@ import {
   worksMainHeadingTextStyle,
   worksSubHeadingtextStyle,
 } from '@/constants/pricing';
+import { usePathname } from 'next/navigation';
 
 const PricingWorks = ({ data }) => {
   const [loading, setLoading] = useState(true);
+  const pathName = usePathname();
+  const book_a_demo_meeting = 'book-a-demo-meeting';
 
   useEffect(() => {
     if (data) {
@@ -33,7 +36,10 @@ const PricingWorks = ({ data }) => {
     <>
       <SwiperSlide key={index} style={workSlideStyle}>
         <Card
-          sx={{ ...worksCardStyle, ...worksCardBorderRadius(index) }}
+          sx={{
+            ...worksCardStyle(pathName, book_a_demo_meeting),
+            ...worksCardBorderRadius(index),
+          }}
           boxShadow={4}
         >
           <Box

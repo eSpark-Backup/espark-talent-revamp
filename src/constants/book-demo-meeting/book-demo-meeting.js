@@ -113,6 +113,20 @@ export const DEMO_MEETING_DATA = {
         },
       },
       customSectionSliderStyles: {
+        breakPoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 1.5,
+          },
+          680: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2.2,
+          },
+        },
         slideStyle: {
           paddingTop: '30px',
           paddingBottom: '50px',
@@ -278,6 +292,137 @@ export const DEMO_MEETING_DATA = {
         paragraph: `Experts in digital marketing, Demand Gen, content creation, Performance marketing, social media marketing, and more.`,
       },
     ],
+    styles: {
+      typographyBoxStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: { xs: 1, lg: 0 },
+        alignItems: 'center',
+        width: 'auto',
+        px: 3.5,
+      },
+      titleTypographyStyle: {
+        fontSize: {
+          xs: '18px',
+          sm: '26px',
+          md: '35px',
+          lg: '48px',
+        },
+        fontWeight: 600,
+        lineHeight: {
+          xs: '28px',
+          sm: '40px',
+          md: '50px',
+          lg: '65px',
+        },
+        color: '#001C63',
+        maxWidth: { md: '1000px', lg: '1200px' },
+        textAlign: 'center',
+      },
+      descriptionTypographyStyle: {
+        fontSize: {
+          xs: '11px',
+          sm: '15px',
+          md: '19px',
+          lg: '20px',
+        },
+        fontWeight: 500,
+        lineHeight: {
+          xs: '19.5px',
+          sm: '25px',
+          md: '30px',
+          lg: '40px',
+        },
+        color: '#0E1155',
+        textAlign: 'center',
+        maxWidth: '975.45px',
+      },
+      leverageTalentSliderStyles: {
+        breakPoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 1.5,
+          },
+          680: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2.2,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        },
+        slideStyle: {
+          paddingTop: '30px',
+          paddingBottom: '50px',
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
+        },
+        cardStyle: {
+          width: '100%',
+          height: '100%',
+          maxWidth: { xs: '267.39px', sm: '100%' },
+          maxHeight: { xs: '100%', sm: '100%' },
+          minHeight: { xs: '160px', sm: '240px', md: '230px' },
+          mx: 1,
+          boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
+          borderRadius: '20px',
+          '@media(min-width:1024px)': {
+            minHeight: '245px',
+          },
+          '@media(min-width:769px) and (max-width: 806px)': {
+            minHeight: '245px',
+          },
+          '@media(min-width:481px) and (max-width: 599px)': {
+            maxWidth: '75%',
+            minHeight: '245px',
+          },
+        },
+        headerBoxStyle: {
+          width: 'auto',
+          height: { xs: '60px', sm: '80px' },
+          backgroundColor: '#001C630A',
+          display: 'flex',
+          alignItems: 'center',
+          px: { xs: 1.5, sm: 2.5 },
+          gap: 1.5,
+        },
+        imageStyle: { width: '30px', height: '30px' },
+        titleStyle: {
+          fontSize: { xs: '13px', sm: '17px' },
+          lineHeight: { xs: '22px', sm: '26px' },
+          color: '#001C63',
+          fontWeight: 600,
+        },
+        descriptionBoxStyle: {
+          width: 'auto',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          p: { xs: 1.5, sm: 2.5 },
+        },
+        descriptionTextStyle: {
+          fontSize: { xs: '11px', sm: '16px' },
+          lineHeight: { xs: '15.41px', sm: '25px' },
+          color: '#000000',
+        },
+        swiperBoxStyle: {
+          display: 'block',
+          width: '100%',
+          maxWidth: 1210,
+          margin: 'auto',
+          position: 'relative',
+          pt: { xs: 1, md: 2 },
+          pb: { xs: 0 },
+          px: { xs: 3, md: 4 },
+        },
+      },
+    },
   },
   howItWorks: {
     title: 'How It Works?',
