@@ -2,16 +2,25 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import {
+  boxStyle,
+  containerGridStyle,
+  leftGridStyle,
+  titleStyle,
+  descriptionStyle,
+  rightGridStyle,
+  imageBoxStyle,
+} from '@/constants/solutions/for-business-startup/TalentIgniteConstant';
 
 const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
   const textAlignXs = isBestOutsourceComponent ? 'left' : 'center';
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
   return (
-    <Box sx={{ my: 4, pt: { sm: '7px', md: '10', lg: '15px' } }}>
+    <Box sx={boxStyle}>
       <Container>
-        <Grid
-          container
-          sx={{ flexDirection: { md: 'row', xs: 'row', alignItems: 'center' } }}
-        >
+        <Grid container sx={containerGridStyle}>
           <Grid
             item
             xs={12}
@@ -19,55 +28,28 @@ const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
             md={6.6}
             alignItems="center"
             justifyContent="center"
-            sx={{
-              order: { md: 2, xs: 1 },
-              pl: { xs: '0px', md: '23px', lg: '35px' },
-            }}
+            sx={leftGridStyle}
           >
-            <Typography
-              variant="h3"
-              sx={{
-                color: '#001C63',
-                fontSize: { xs: '20px', md: '28px' },
-                lineHeight: { xs: '31px', md: '41.547px' },
-                fontWeight: 500,
-                mb: { xs: '5px', md: '10px', lg: '15px' },
-                textAlign: { xs: 'center', md: 'left' },
-              }}
-            >
-              {data?.title}
+            <Typography variant="h3" sx={titleStyle}>
+              {data?.title || 'Title not available'}
             </Typography>
             <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: { xs: '13px', sm: '13px', md: '18px' },
-                lineHeight: { xs: '20px', md: '27.863px' },
-                fontWeight: 400,
-                mb: { xs: '15px', md: '0px' },
-                textAlign: { xs: textAlignXs, sm: 'center', md: 'justify' },
+              sx={descriptionStyle}
+              textAlign={{ xs: textAlignXs, sm: 'center', md: 'justify' }}
+              dangerouslySetInnerHTML={{
+                __html: data?.description || 'Description not available',
               }}
-              dangerouslySetInnerHTML={{ __html: data?.description }}
             />
           </Grid>
-          <Grid item xs={12} sm={12} md={5.4} sx={{ order: { md: 1, xs: 2 } }}>
-            <Box
-              sx={{
-                borderRadius: '17.311px',
-                backgroundColor: '#3B59980A',
-                py: { xs: 2, md: 5 },
-                px: { xs: 3, md: 3 },
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+          <Grid item xs={12} sm={12} md={5.4} sx={rightGridStyle}>
+            <Box sx={imageBoxStyle}>
               <Image
                 quality="85"
                 priority={true}
-                src={data?.image}
+                src={data?.image || '/path/to/default/image.png'}
                 width={400}
                 height={300}
-                alt={`${data?.alt}`}
+                alt={`${data?.alt || 'Image Alt'}`}
               />
             </Box>
           </Grid>

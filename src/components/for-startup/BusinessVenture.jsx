@@ -3,78 +3,59 @@ import React from 'react';
 import { Box, Grid, ListItemIcon, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import {
+  outerBoxStyle,
+  containerGridStyle,
+  leftGridStyle,
+  titleTypographyStyle,
+  listItemBoxStyle,
+  listItemIconStyle,
+  taskAltIconStyle,
+  listItemTypographyStyle,
+  imageBoxStyle,
+} from '@/constants/solutions/for-business-startup/BusinessVentureConstant';
 
 const BusinessVenture = ({ data }) => {
-  const { listItem } = data;
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
+  const { listItem, title, image, alt } = data;
+
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={outerBoxStyle}>
       <Container>
-        <Grid container>
-          <Grid item sm={12} md={6}>
-            <Box
-              sx={{
-                mt: { md: '72px' },
-                pb: '12px',
-              }}
-            >
+        <Grid container sx={containerGridStyle}>
+          <Grid item sm={12} md={6.4}>
+            <Box sx={leftGridStyle}>
               <Box>
-                <Typography
-                  sx={{
-                    color: '#001C63',
-                    fontSize: '28px',
-                    fontWeight: 500,
-                    lineHeight: '41.547px',
-                    mr: { lg: '20%', md: '5%' },
-                    textAlign: { xs: 'center', md: 'left' },
-                  }}
-                >
-                  {data.title}
+                <Typography variant="h3" sx={titleTypographyStyle}>
+                  {title}
                 </Typography>
               </Box>
             </Box>
             {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
-                <Box sx={{ display: 'flex', textAlign: 'baseline' }}>
-                  <ListItemIcon sx={{ minWidth: '30px' }}>
-                    <TaskAltIcon fontSize="small" sx={{ color: '#029894' }} />
+                <Box sx={listItemBoxStyle}>
+                  <ListItemIcon sx={listItemIconStyle}>
+                    <TaskAltIcon fontSize="small" sx={taskAltIconStyle} />
                   </ListItemIcon>
-                  <Typography
-                    sx={{
-                      mb: 2,
-                      color: '#001C63',
-                      fontSize: '14.838px',
-                      textAlign: 'justify',
-                      fontWeight: 600,
-                      fontStyle: 'normal',
-                      lineHeight: '23.741px',
-                    }}
-                  >
-                    {item.description}
+                  <Typography sx={listItemTypographyStyle}>
+                    {item?.description}
                   </Typography>
                 </Box>
               </Grid>
             ))}
           </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <Box
-              sx={{
-                borderRadius: '17.311px',
-                backgroundColor: '#3B59980A',
-                mt: 2,
-                pt: 1,
-                py: 3,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
+          <Grid item xs={12} sm={12} md={5.6}>
+            <Box sx={imageBoxStyle}>
               <Image
                 quality="85"
                 priority={true}
-                src={data.image}
+                src={image}
                 width={380}
                 height={300}
-                alt={`${data?.alt}`}
+                alt={alt}
               />
             </Box>
           </Grid>
