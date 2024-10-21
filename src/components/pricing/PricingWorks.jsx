@@ -106,7 +106,7 @@ const PricingWorks = ({ data }) => {
             height: '200px',
           }}
         >
-          <CircularProgress />
+          <CircularProgress sx={{ color: '#029894' }} />
         </Box>
       ) : (
         <Box

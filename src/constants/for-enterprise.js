@@ -194,3 +194,126 @@ export const OUTSOURCING_ADVANTAGES_DATA = {
     },
   ],
 };
+
+const containerBoxStyle = {
+  mx: 'auto',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  '@media (min-width: 600px) and (max-width: 767px)': {
+    width: '100%',
+    py: 7,
+  },
+  '@media (min-width: 300px) and (max-width: 625px)': {
+    textAlign: 'center',
+    width: '100%',
+    py: 5,
+  },
+};
+
+const contentBoxStyle = {
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  gap: { sm: 7, md: 9 },
+  '@media (min-width: 300px) and (max-width: 626px)': {
+    flexDirection: 'column',
+    gap: 5,
+  },
+  '@media (min-width: 600px) and (max-width: 700px)': {
+    px: 4,
+  },
+};
+
+const textBoxStyle = {
+  width: { sm: '40%', md: '50%' },
+  pl: { md: 5, lg: 0 },
+};
+
+const titleTypographyStyle = {
+  fontSize: {
+    sm: '29px !important',
+    md: '40px !important',
+    lg: '50px !important',
+  },
+  lineHeight: {
+    sm: '45px',
+    md: '62.067px',
+    lg: '66.067px',
+  },
+  '@media (min-width: 300px) and (max-width: 767px)': {
+    width: '320px',
+    fontSize: '25px !important',
+    lineHeight: '37px',
+  },
+  color: '#029894',
+  fontStyle: 'normal',
+  fontWeight: 700,
+};
+
+const descriptionTypographyStyle = {
+  pt: 0.5,
+  pb: { sm: 2, md: 2.5 },
+  color: '#1D4E72',
+  fontSize: '20px !important',
+  fontStyle: 'normal',
+  fontWeight: 400,
+  lineHeight: '33.312px',
+  '@media (min-width: 300px) and (max-width: 767px)': {
+    width: '320px',
+    fontSize: '13px !important',
+    lineHeight: '22px',
+    pb: 2,
+  },
+};
+
+const buttonStyle = {
+  width: { sm: '170px', md: '207.981px' },
+  height: { sm: '50px', md: '54.149px' },
+  '@media (min-width: 300px) and (max-width: 767px)': {
+    width: '170px',
+    height: '50px',
+    fontSize: '15px',
+  },
+  borderRadius: '6.448px',
+  fontSize: '17px',
+  fontWeight: 700,
+  '&:hover': {
+    backgroundColor: '#029894',
+  },
+};
+
+const imageBoxStyle = {
+  width: { sm: 'auto', md: 'auto' },
+  pr: { md: 5, lg: 0 },
+  display: 'flex',
+  alignItems: 'center',
+};
+
+const imageStyle = {
+  width: { sm: '300px', md: '400px', lg: '435.2px' },
+  height: { sm: '290px', md: '390px', lg: '418.607px' },
+  '@media (min-width: 600px) and (max-width: 767px)': {
+    width: '250px',
+    height: '246px',
+  },
+  '@media (min-width: 300px) and (max-width: 599px)': {
+    width: '200px',
+    height: '196px',
+  },
+};
+
+export {
+  containerBoxStyle,
+  contentBoxStyle,
+  textBoxStyle,
+  titleTypographyStyle,
+  descriptionTypographyStyle,
+  buttonStyle,
+  imageBoxStyle,
+  imageStyle,
+};

@@ -82,7 +82,7 @@ const ExpertTeamCard = ({ teamData }) => {
             height: '200px',
           }}
         >
-          <CircularProgress />
+          <CircularProgress sx={{ color: '#029894' }} />
         </Box>
       ) : (
         <Swiper

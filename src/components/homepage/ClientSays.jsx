@@ -50,7 +50,7 @@ const ClientSays = ({ data }) => {
                 height: '300px',
               }}
             >
-              <CircularProgress />
+              <CircularProgress sx={{ color: '#029894' }} />
             </Box>
           ) : (
             <Box id="client-says-slider">

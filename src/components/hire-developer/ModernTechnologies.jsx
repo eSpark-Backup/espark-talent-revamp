@@ -77,7 +77,7 @@ const ModernTechnologies = ({ data }) => {
                 height: '200px',
               }}
             >
-              <CircularProgress />
+              <CircularProgress sx={{ color: '#029894' }} />
             </Box>
           ) : (
             <Box id="modern-technologies-slider" sx={swiperBoxStyle}>

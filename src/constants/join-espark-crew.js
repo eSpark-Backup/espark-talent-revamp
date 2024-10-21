@@ -218,7 +218,7 @@ export const CITIES = [
   'Ziarat',
 ];
 
-const COUNTRIES = [
+export const COUNTRIES = [
   'Afghanistan',
   'Albania',
   'Algeria',
@@ -1210,4 +1210,181 @@ export const JOINT_ESPARK_CREW_HEADING_DATA = {
   footerSecDescription:
     'We are always looking for bright minds and enthusiastic people from diverse backgrounds, who want to be part of an outstanding team. Even if you don’t find a suitable position below, please do not hesitate to drop us your resume.',
   jointusSecHeading: 'Join us now',
+};
+
+export const modalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: { xs: '90%', md: 450 },
+  bgcolor: 'background.paper',
+  borderRadius: 2,
+  boxShadow: 24,
+  p: 2,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+
+export const headingStyle = {
+  fontSize: '30px',
+  fontWeight: 600,
+};
+
+export const descriptionStyle = {
+  fontSize: '15px',
+  textAlign: 'center',
+  color: 'black',
+  my: 3,
+};
+
+export const buttonStyle = {
+  padding: '5px 40px',
+};
+
+export const footerStackStyle = {
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#029894',
+  backgroundImage: [
+    '',
+    '',
+    `url(/images/footer-cta-main-bg.png)`,
+    `url(/images/footer-cta-main-bg.png)`,
+  ],
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  padding: '30px',
+};
+export const footerSubStackStyle = {
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: { sm: '100%', md: '80%', lg: '70%' },
+};
+export const footerSecHeadingStyle = {
+  color: '#ECECED',
+  fontSize: {
+    lg: '50px',
+    md: '32px',
+    sm: '20px',
+    xs: '14px',
+  },
+  '@media (min-width: 280px) and (max-width:359px)': {
+    fontSize: '12px',
+    lineHeight: 1.1,
+  },
+  '@media (min-width: 426px) and (max-width:459px)': {
+    fontSize: '13px',
+    lineHeight: 1,
+  },
+  lineHeight: 1.3,
+  fontWeight: 700,
+  py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
+  pb: { lg: '1%', md: '1%', sm: '2.5%', xs: '2.5%' },
+};
+export const footerSecDescriptionStyle = {
+  color: '#ECECED',
+  fontSize: {
+    lg: '24px',
+    md: '20px',
+    sm: '10px',
+    xs: '10px',
+  },
+  '@media (min-width: 280px) and (max-width:359px)': {
+    fontSize: '8px',
+  },
+  lineHeight: 1.3,
+  fontWeight: 400,
+  py: { lg: '1%', md: '1%', sm: '0', xs: '0' },
+  pb: { lg: '3.5%', md: '3%', sm: '3%', xs: '3%' },
+  textAlign: 'center',
+};
+export const footerSecButtonBoxStyle = {
+  mx: {
+    xs: 'auto',
+    sm: 'unset',
+    justifyContent: { xs: 'center', sm: 'flex-end' },
+  },
+  py: {
+    xs: '14px',
+    sm: '14px',
+    md: '16px',
+    lg: '20px',
+    xl: '20px',
+  },
+};
+export const footerSecButtonStyle = {
+  border: '1px solid #fff',
+  backgroundColor: 'transparent',
+  '&:hover': {
+    color: '#029894',
+    backgroundColor: '#ffffff',
+  },
+  py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
+  px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
+  height: '50px',
+  width: '160px',
+  color: '#fff',
+  fontWeight: '700',
+};
+
+export const pageTextStyles = {
+  fontSize: { md: '32px', xs: '20px' },
+  lineHeight: { lg: '48px', xs: '26px' },
+  fontWeight: 700,
+  textAlign: 'center',
+  mb: '30px',
+};
+
+export const pageFlexBox = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  padding: '30px 50px 50px',
+};
+
+export const pageAboutYouStackStyles = {
+  ...pageFlexBox,
+  backgroundColor: '#FAFBFC',
+};
+
+export const pageKeyPointsStackStyles = {
+  ...pageFlexBox,
+};
+
+export const pageBenefitsStackStyles = {
+  ...pageFlexBox,
+  backgroundColor: '#FAFBFC',
+};
+
+export const benefitStackStyle = {
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  gap: '10px',
+  backgroundColor: '#E8F4FF66',
+  padding: { xs: '8px', md: '10px' },
+  border: '0.67px solid #0000004D',
+  borderRadius: '3.34px',
+  // height:"auto"
+};
+export const benefitIconStyle = {
+  backgroundColor: (theme) => theme.palette.primary.main,
+  minWidth: '35px',
+  maxWidth: '35px',
+  borderRadius: '50%',
+  // padding: '7px',
+  height: '35px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+export const greenLoaderStyle = {
+  padding: '20px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 };

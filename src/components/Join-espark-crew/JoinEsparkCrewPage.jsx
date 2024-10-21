@@ -10,6 +10,10 @@ import {
   KEYS,
   ABOUT,
   JOINT_ESPARK_CREW_HEADING_DATA,
+  pageTextStyles,
+  pageAboutYouStackStyles,
+  pageKeyPointsStackStyles,
+  pageBenefitsStackStyles,
 } from '@/constants/join-espark-crew';
 import {
   handleChangeJoinCrew,
@@ -68,37 +72,6 @@ export default function JoinEsparkCrewPage() {
     setRegistrationModal(true);
   };
 
-  const textStyles = {
-    fontSize: { md: '32px', xs: '20px' },
-    lineHeight: { lg: '48px', xs: '26px' },
-    fontWeight: 700,
-    textAlign: 'center',
-    mb: '30px',
-  };
-
-  const FlexBox = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    padding: '30px 50px 50px',
-  };
-
-  const aboutYouStackStyles = {
-    ...FlexBox,
-    backgroundColor: '#FAFBFC',
-  };
-
-  const keyPointsStackStyles = {
-    ...FlexBox,
-  };
-
-  const benefitsStackStyles = {
-    ...FlexBox,
-    backgroundColor: '#FAFBFC',
-  };
-
   return (
     <>
       <Hero
@@ -108,9 +81,9 @@ export default function JoinEsparkCrewPage() {
         }}
       />
       {/* About You */}
-      <Stack sx={aboutYouStackStyles}>
+      <Stack sx={pageAboutYouStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
-          <Typography variant="h3" sx={textStyles} color="secondary">
+          <Typography variant="h3" sx={pageTextStyles} color="secondary">
             {introSecHeading}
           </Typography>
           <Typography
@@ -129,9 +102,9 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Key Points */}
-      <Stack sx={keyPointsStackStyles}>
+      <Stack sx={pageKeyPointsStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%', lg: '70%', xl: '50%' } }}>
-          <Typography variant="h3" sx={textStyles} color="secondary">
+          <Typography variant="h3" sx={pageTextStyles} color="secondary">
             {keysPointSecHeading}
           </Typography>
           {KEYS?.map((key, index) => {
@@ -151,9 +124,9 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Benefits */}
-      <Stack sx={benefitsStackStyles}>
+      <Stack sx={pageBenefitsStackStyles}>
         <Box sx={{ width: { sm: '100%', md: '80%' } }}>
-          <Typography variant="h3" sx={textStyles} color="secondary">
+          <Typography variant="h3" sx={pageTextStyles} color="secondary">
             {benefitsSecHeading}
           </Typography>
           <Grid container spacing={2}>

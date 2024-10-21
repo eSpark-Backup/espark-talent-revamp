@@ -78,7 +78,7 @@ const WhyChooseOurHrSlider = ({ data }) => {
             height: '200px',
           }}
         >
-          <CircularProgress />
+          <CircularProgress sx={{ color: '#029894' }} />
         </Box>
       ) : (
         <Swiper

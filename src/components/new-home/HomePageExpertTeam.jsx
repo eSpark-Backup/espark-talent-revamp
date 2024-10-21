@@ -99,7 +99,7 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
               height: '200px',
             }}
           >
-            <CircularProgress />
+            <CircularProgress sx={{ color: '#029894' }} />
           </Box>
         ) : (
           <Swiper
