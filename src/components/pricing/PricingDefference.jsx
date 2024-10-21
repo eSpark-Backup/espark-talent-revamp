@@ -57,6 +57,7 @@ const PricingDefference = ({ data, backgroundColor, cardStyle }) => {
   return (
     <Box
       sx={{
+        px: 1.5,
         backgroundColor: backgroundColor || '#fff',
       }}
     >
