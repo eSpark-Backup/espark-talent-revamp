@@ -63,7 +63,9 @@ const DemoMeetingPage = ({ data }) => {
           }}
         >
           <ClientSays data={OUR_CLIENT_SAYS} />
-          <FormSection data={data?.formSection} />
+          <Box sx={{ position: 'relative', zIndex: 3 }}>
+            <FormSection data={data?.formSection} />
+          </Box>
         </Box>
       </Box>
     </>

@@ -590,6 +590,16 @@ export const cardStyle = {
   },
 };
 
+export const cardStyleForHomePage = {
+  ...cardStyle,
+  boxShadow: '0',
+  border: '1px solid #F7F8FB',
+  '&:hover': {
+    backgroundColor: '#fff',
+    boxShadow: '0px 0px 11px 0 rgba(0,0,0,0.17)',
+  },
+};
+
 export const avatarStyle = {
   width: { xs: '33px', sm: '40px', lg: '50px' },
   height: { xs: '33px', sm: '40px', lg: '43px' },

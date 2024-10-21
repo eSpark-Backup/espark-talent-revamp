@@ -7,17 +7,14 @@ import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
 import {
   avatarStyle,
-  cardStyle,
   containerStyle,
   paragraphStyle,
   slideStyle,
   titleStyle,
 } from '@/constants/new-home';
-import { usePathname } from 'next/navigation';
 
-const PricingDefference = ({ data }) => {
+const PricingDefference = ({ data, backgroundColor, cardStyle }) => {
   const [loading, setLoading] = useState(true);
-  const pathName = usePathname();
 
   useEffect(() => {
     if (data) {
@@ -60,12 +57,25 @@ const PricingDefference = ({ data }) => {
   return (
     <Box
       sx={{
-        backgroundColor: pathName?.includes('/hire-remote-developers')
-          ? '#fff'
-          : '#F7F8FB',
+        backgroundColor: backgroundColor || '#fff',
       }}
     >
       <Box sx={containerStyle} id="pricing-difference">
+        {data?.title && (
+          <Box sx={{ pt: 2, px: 2 }}>
+            <Typography
+              variant="h2"
+              color="secondary"
+              sx={{
+                textAlign: 'center',
+                fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+                lineHeight: 1.5,
+              }}
+            >
+              {data?.title}
+            </Typography>
+          </Box>
+        )}
         {loading ? (
           <Box
             sx={{
