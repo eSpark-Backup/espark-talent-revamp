@@ -22,36 +22,80 @@ const ServiceWhyHire = ({ data }) => {
     };
   }, []);
 
+  const desktopStyle = {
+    pt: 5,
+    pb: 6,
+    my: 6,
+    backgroundColor: '#F7F8FF',
+  };
+
+  const mobileStyle = {
+    mx: 'auto',
+    maxWidth: { xs: 'auto', md: '1000px', lg: '1100px' },
+    pt: { sm: 9, md: 10 },
+    px: { sm: 5, md: 4, lg: 0 },
+    display: 'none',
+    '@media (max-width:1023px)': {
+      display: 'flex',
+    },
+    '@media (min-width: 720px) and (max-width: 767px)': {
+      px: 2,
+      py: 7,
+    },
+    '@media (min-width: 600px) and (max-width: 719px)': {
+      px: 2,
+      pt: 5,
+    },
+    '@media (min-width: 280px) and (max-width: 599px)': {
+      pt: 4,
+    },
+  };
+
+  const titleStyle = {
+    fontSize: {
+      xs: '20px',
+      sm: '25px',
+      md: '40px',
+      lg: '48px',
+    },
+    fontWeight: 600,
+    lineHeight: 1.4,
+    color: '#001C63',
+    '@media (min-width:1024px) and (max-width: 1439px)': {
+      fontSize: '35px',
+    },
+  };
+
+  const subTitleStyle = {
+    mt: 1.5,
+    textAlign: 'center',
+    fontSize: {
+      xs: '13px',
+      sm: '15px',
+      md: '18px',
+      lg: '21px',
+      xl: '21px',
+    },
+    '@media (min-width:1024px) and (max-width: 1439px)': {
+      fontSize: '19px',
+      lineHeight: 1.6,
+    },
+    fontWeight: 400,
+    lineHeight: 1.7,
+    color: '#001C63',
+    px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
+  };
+
   return (
     <>
       {data && windowWidth > 1023 ? (
-        <Box
-          sx={{
-            pt: 5,
-            pb: 6,
-            my: 6,
-            backgroundColor: '#F7F8FF',
-          }}
-        >
+        <Box sx={desktopStyle}>
           <Container>
             <Box py={2}>
               <Typography
                 variant="h4"
                 textAlign="center"
-                sx={{
-                  fontSize: {
-                    xs: '20px',
-                    sm: '25px',
-                    md: '40px',
-                    lg: '48px',
-                  },
-                  fontWeight: 600,
-                  lineHeight: 1.4,
-                  color: '#001C63',
-                  '@media (min-width:1024px) and (max-width: 1439px)': {
-                    fontSize: '35px',
-                  },
-                }}
+                sx={titleStyle}
                 dangerouslySetInnerHTML={{
                   __html: data?.title,
                 }}
@@ -59,25 +103,7 @@ const ServiceWhyHire = ({ data }) => {
               <Typography
                 variant="body1"
                 textAlign="center"
-                sx={{
-                  mt: 1.5,
-                  textAlign: 'center',
-                  fontSize: {
-                    xs: '13px',
-                    sm: '15px',
-                    md: '18px',
-                    lg: '21px',
-                    xl: '21px',
-                  },
-                  '@media (min-width:1024px) and (max-width: 1439px)': {
-                    fontSize: '19px',
-                    lineHeight: 1.6,
-                  },
-                  fontWeight: 400,
-                  lineHeight: 1.7,
-                  color: '#001C63',
-                  px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
-                }}
+                sx={subTitleStyle}
               >
                 {data?.subTitle}
               </Typography>
@@ -87,92 +113,7 @@ const ServiceWhyHire = ({ data }) => {
         </Box>
       ) : windowWidth === undefined || windowWidth === 0 ? (
         <>
-          <Box
-            sx={{
-              pt: 5,
-              pb: 6,
-              my: 6,
-              display: 'none',
-              backgroundColor: '#F7F8FF',
-              '@media (min-width:1024px)': {
-                display: 'flex',
-              },
-            }}
-          >
-            <Container>
-              <Box py={2}>
-                <Typography
-                  variant="h4"
-                  textAlign="center"
-                  sx={{
-                    fontSize: {
-                      xs: '20px',
-                      sm: '25px',
-                      md: '40px',
-                      lg: '48px',
-                    },
-                    fontWeight: 600,
-                    lineHeight: 1.4,
-                    color: '#001C63',
-                    '@media (min-width:1024px) and (max-width: 1439px)': {
-                      fontSize: '35px',
-                    },
-                  }}
-                  dangerouslySetInnerHTML={{
-                    __html: data?.title,
-                  }}
-                />
-                <Typography
-                  variant="body1"
-                  textAlign="center"
-                  sx={{
-                    mt: 1.5,
-                    textAlign: 'center',
-                    fontSize: {
-                      xs: '13px',
-                      sm: '15px',
-                      md: '18px',
-                      lg: '21px',
-                      xl: '21px',
-                    },
-                    '@media (min-width:1024px) and (max-width: 1439px)': {
-                      fontSize: '19px',
-                      lineHeight: 1.6,
-                    },
-                    fontWeight: 400,
-                    lineHeight: 1.7,
-                    color: '#001C63',
-                    px: { xs: '5%', sm: '5%', md: '5%', lg: '12%' },
-                  }}
-                >
-                  {data?.subTitle}
-                </Typography>
-              </Box>
-            </Container>
-          </Box>
-          <Box
-            sx={{
-              mx: 'auto',
-              maxWidth: { xs: 'auto', md: '1000px', lg: '1100px' },
-              pt: { sm: 9, md: 10 },
-              px: { sm: 5, md: 4, lg: 0 },
-              display: 'none',
-              '@media (max-width:1023px)': {
-                display: 'flex',
-              },
-              '@media (min-width: 720px) and (max-width: 767px)': {
-                px: 2,
-                py: 7,
-              },
-              '@media (min-width: 600px) and (max-width: 719px)': {
-                px: 2,
-                pt: 5,
-              },
-              '@media (min-width: 280px) and (max-width: 599px)': {
-                pt: 4,
-              },
-            }}
-          >
+          <Box sx={mobileStyle}>
             <Box
               sx={{
                 width: '100%',

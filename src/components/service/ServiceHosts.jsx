@@ -9,126 +9,126 @@ const ServiceHosts = ({ data }) => {
   const isTetsPath =
     pathname === '/hire-performance-marketers' ||
     pathname === '/hire-react-native-developers';
+  const boxStyle = {
+    my: 2,
+    mt: { xs: '230px' },
+  };
+  const innerBoxStyle = {
+    width: '100%',
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    mb: 10,
+  };
+  const imageBoxStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundImage: `url(${data?.bgImage || ''})`,
+    backgroundSize: '100%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    width: '100%',
+    height: '100%',
+    py: { xs: 0, lg: 7 },
+  };
+  const contentBoxStyle = {
+    mt: -5.9,
+    width: { xs: '90%', lg: '1324px' },
+    display: 'flex',
+    p: { xs: 2.1, md: 5 },
+    '@media(min-width:280px) and (max-width:320px)': {
+      p: 3,
+    },
+    justifyContent: 'center',
+    position: 'relative',
+    gap: 1.8,
+    alignItems: 'center',
+    flexDirection: 'column',
+    borderRadius: '20px',
+    boxShadow: '0px 9px 29.5px 0px #00000030',
+    backgroundColor: 'rgba(246, 241, 241, 0.78)',
+    border: '1px',
+  };
+  const titleStyle = {
+    fontSize: {
+      xs: '18px',
+      sm: '26px',
+      md: '35px',
+      lg: '47px',
+    },
+    fontWeight: 600,
+    lineHeight: {
+      xs: '28px',
+      sm: '40px',
+      md: '50px',
+      lg: '65px',
+    },
+    color: '#001C63',
+    maxWidth: isTetsPath ? null : { md: '1000px', lg: '1000px' },
+    letterSpacing: '0em',
+    textAlign: 'center',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
+  };
+  const descriptionStyle = {
+    fontSize: {
+      xs: '11px',
+      sm: '15px',
+      md: '19px',
+      lg: '20px',
+    },
+    fontWeight: 500,
+    lineHeight: {
+      xs: '19.5px',
+      sm: '25px',
+      md: '30px',
+      lg: '40px',
+    },
+    color: '#0E1155',
+    textAlign: 'center',
+    maxWidth: '975.45px',
+  };
+  const buttonStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#fff',
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      md: '15px',
+      lg: '17.42px',
+    },
+    width: { xs: '123px', sm: '180px', lg: '200.6px' },
+    height: {
+      xs: '30px',
+      sm: '38px',
+      md: '43px',
+      lg: '53.89px',
+    },
+    backgroundColor: '#001C63',
+    borderRadius: '6.42px',
+  };
   return (
     <>
-      <Box sx={{ my: 2, mt: { xs: '230px' } }}>
-        <Box
-          sx={{
-            width: '100%',
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-            mb: 10,
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundImage: `url(${data?.bgImage || ''})`,
-              backgroundSize: '100%',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              width: '100%',
-              height: '100%',
-              py: { xs: 0, lg: 7 },
-            }}
-          >
-            <Box
-              sx={{
-                mt: -5.9,
-                width: { xs: '90%', lg: '1324px' },
-                display: 'flex',
-                p: { xs: 2.1, md: 5 },
-                '@media(min-width:280px) and (max-width:320px)': {
-                  p: 3,
-                },
-                justifyContent: 'center',
-                position: 'relative',
-                gap: 1.8,
-                alignItems: 'center',
-                flexDirection: 'column',
-                borderRadius: '20px',
-                boxShadow: '0px 9px 29.5px 0px #00000030',
-                backgroundColor: 'rgba(246, 241, 241, 0.78)',
-                border: '1px',
-              }}
-            >
+      <Box sx={boxStyle}>
+        <Box sx={innerBoxStyle}>
+          <Box sx={imageBoxStyle}>
+            <Box sx={contentBoxStyle}>
               <Typography
-                sx={{
-                  fontSize: {
-                    xs: '18px',
-                    sm: '26px',
-                    md: '35px',
-                    lg: '47px',
-                  },
-                  fontWeight: 600,
-                  lineHeight: {
-                    xs: '28px',
-                    sm: '40px',
-                    md: '50px',
-                    lg: '65px',
-                  },
-                  color: '#001C63',
-                  maxWidth: isTetsPath ? null : { md: '1000px', lg: '1000px' },
-                  letterSpacing: '0em',
-                  textAlign: 'center',
-                  WebkitBoxOrient: 'vertical',
-                  WebkitLineClamp: 2,
-                }}
+                sx={titleStyle}
                 dangerouslySetInnerHTML={{
                   __html: `${data?.title || ''}`,
                 }}
               />
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: '11px',
-                    sm: '15px',
-                    md: '19px',
-                    lg: '20px',
-                  },
-                  fontWeight: 500,
-                  lineHeight: {
-                    xs: '19.5px',
-                    sm: '25px',
-                    md: '30px',
-                    lg: '40px',
-                  },
-                  color: '#0E1155',
-                  textAlign: 'center',
-                  maxWidth: '975.45px',
-                }}
-              >
+              <Typography sx={descriptionStyle}>
                 {data?.descrcipton || ''}
               </Typography>
               <Link href={`${data?.btnLink || ''}`} target="_blank">
-                <Typography
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#fff',
-                    fontSize: {
-                      xs: '12px',
-                      sm: '14px',
-                      md: '15px',
-                      lg: '17.42px',
-                    },
-                    width: { xs: '123px', sm: '180px', lg: '200.6px' },
-                    height: {
-                      xs: '30px',
-                      sm: '38px',
-                      md: '43px',
-                      lg: '53.89px',
-                    },
-                    backgroundColor: '#001C63',
-                    borderRadius: '6.42px',
-                  }}
-                >
+                <Typography sx={buttonStyle}>
                   {capitalizeFirstLetter(data?.btnText) || ''}
                 </Typography>
               </Link>
