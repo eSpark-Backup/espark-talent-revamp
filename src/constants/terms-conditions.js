@@ -99,3 +99,46 @@ Furthermore, the website doesn’t implement any practice that reveals the perso
     },
   ],
 };
+
+export const gridStyle = {
+  py: '5%',
+  display: 'flex',
+  justifyContent: 'center',
+};
+export const termsContentStyle = {
+  backgroundColor: '#fff',
+  p: { xs: '20px', md: '30px' },
+  borderRadius: '10px',
+  boxShadow: '0px 0px 7.800000190734863px 0px rgba(0, 0, 0, 0.25)',
+  textAlign: 'justify',
+};
+
+export const titleStyle = {
+  color: '#3B5998',
+  px: { sm: 0 },
+  py: '5px',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  textAlign: { xs: 'center', md: 'left' },
+};
+
+export const paragraphStyle = {
+  color: '#263238',
+  textAlign: { xs: 'center', md: 'justify' },
+  fontSize: { xs: '10px', md: '18px' },
+  fontWeight: 400,
+  lineHeight: { xs: '17px', md: '45.766px' },
+};
+
+export const listItemIconStyle = {
+  minWidth: { xs: '15px', md: '22px' },
+  mr: { xs: '10px', sx: '15px', md: '20px' },
+};
+
+export const listTextStyle = {
+  color: '#263238',
+  textAlign: 'justify',
+  fontSize: { xs: '10px', md: '18px ' },
+  fontWeight: 400,
+  lineHeight: { xs: '17px', md: '45.766px' },
+};
