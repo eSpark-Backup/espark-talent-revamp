@@ -36,10 +36,42 @@ const SERVICE_NOT_FOUND_DATA = {
   btnText: 'Back to Homepage',
 };
 
+const containerStyle = {
+  py: '5%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+const imageBoxStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+const titleStyle = {
+  mt: 4,
+  mb: 3,
+  textAlign: 'center',
+};
+const descStyle = {
+  mb: 4,
+  px: '25%',
+  textAlign: 'center',
+};
+const buttonBoxStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
 export {
   NOT_FOUND_DATA,
   WIKIS_NOT_FOUND_DATA,
   BLOGS_NOT_FOUND_DATA,
   HIRES_NOT_FOUND_DATA,
   SERVICE_NOT_FOUND_DATA,
+  containerStyle,
+  imageBoxStyle,
+  titleStyle,
+  descStyle,
+  buttonBoxStyle,
 };

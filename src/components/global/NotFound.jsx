@@ -2,26 +2,20 @@ import React from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import {
+  NOT_FOUND_DATA,
+  containerStyle,
+  imageBoxStyle,
+  titleStyle,
+  descStyle,
+  buttonBoxStyle,
+} from '@/constants/global/notfound';
 
 const NotFoundPage = ({ data }) => {
   return (
-    <Box
-      sx={{
-        py: '5%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <Box sx={containerStyle}>
       <Container>
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={imageBoxStyle}>
           <Image
             quality="85"
             priority={true}
@@ -32,24 +26,15 @@ const NotFoundPage = ({ data }) => {
           />
         </Box>
 
-        <Typography variant="h2" sx={{ mt: 4, mb: 3, textAlign: 'center' }}>
+        <Typography variant="h2" sx={titleStyle}>
           {data?.title || NOT_FOUND_DATA.title}
         </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{ mb: 4, px: '25%', textAlign: 'center' }}
-        >
+        <Typography variant="body1" sx={descStyle}>
           {data?.desc || NOT_FOUND_DATA.desc}
         </Typography>
 
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={buttonBoxStyle}>
           <Link href={data?.btnLink || NOT_FOUND_DATA.btnLink}>
             <Button variant="contained" color="primary">
               {data?.btnText || NOT_FOUND_DATA.btnText}
