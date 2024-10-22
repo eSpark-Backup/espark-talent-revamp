@@ -100,11 +100,7 @@ const ServiceWhyHire = ({ data }) => {
                   __html: data?.title,
                 }}
               />
-              <Typography
-                variant="body1"
-                textAlign="center"
-                sx={subTitleStyle}
-              >
+              <Typography variant="body1" textAlign="center" sx={subTitleStyle}>
                 {data?.subTitle}
               </Typography>
             </Box>
