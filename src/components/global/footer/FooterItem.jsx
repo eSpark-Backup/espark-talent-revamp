@@ -10,8 +10,14 @@ const FooterItem = ({ href, label }) => {
 
   return (
     <Typography
+      color={isBlackLabel ? '#000' : '#001C63'}
+      fontWeight={isBlackLabel ? 500 : 400}
+      my={!isBlackLabel ? 2 : 0}
+      mr={{
+        xs: isBlackLabel ? '15px' : '0px',
+        md: isBlackLabel ? '0px' : '0px',
+      }}
       sx={{
-        color: isBlackLabel ? '#000' : '#001C63',
         fontSize: {
           xs: '11px',
           sm: '12px',
@@ -19,13 +25,7 @@ const FooterItem = ({ href, label }) => {
           lg: '15px',
         },
         fontStyle: 'normal',
-        fontWeight: isBlackLabel ? 500 : 400,
         lineHeight: 'normal',
-        my: !isBlackLabel ? 2 : 0,
-        mr: {
-          xs: isBlackLabel ? '15px' : '0px',
-          md: isBlackLabel ? '0px' : '0px',
-        },
       }}
     >
       {isBlackLabel ? (

@@ -1,82 +1,3 @@
-// import React from 'react';
-// import { Typography } from '@mui/material';
-// import { Box } from '@mui/material';
-// import Link from 'next/link';
-
-// const Rights = ({ copyRights }) => {
-//   return (
-//     <Box
-//       sx={{
-//         display: 'flex',
-//         textAlign: 'center',
-//         px: { xs: 0, sx: 0, md: 2, lg: 2 },
-//         py: { xs: 1, sx: 1, md: 2, lg: 2 },
-//         gap: '20px',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//       }}
-//     >
-//       <Typography
-//         sx={{
-//           color: '#0E0F1D',
-//           fontSize: {
-//             xs: '10px',
-//             sm: '10px',
-//             md: '13px',
-//             lg: '15px',
-//             xl: '20px',
-//           },
-//           fontStyle: 'normal',
-//           fontWeight: 400,
-//           lineHeight: 'normal',
-//         }}
-//       >
-//         {copyRights}
-//       </Typography>
-//       <Link href="/privacy-policy">
-//         <Typography
-//           sx={{
-//             color: '#001C63',
-//             fontSize: {
-//               xs: '10px',
-//               sm: '10px',
-//               md: '13px',
-//               lg: '15px',
-//               xl: '20px',
-//             },
-//             fontStyle: 'normal',
-//             fontWeight: 400,
-//             lineHeight: 'normal',
-//           }}
-//         >
-//           {`Privacy Policy`}
-//         </Typography>
-//       </Link>
-//       <Link href="/terms-and-conditions">
-//         <Typography
-//           sx={{
-//             color: '#001C63',
-//             fontSize: {
-//               xs: '10px',
-//               sm: '10px',
-//               md: '13px',
-//               lg: '15px',
-//               xl: '20px',
-//             },
-//             fontStyle: 'normal',
-//             fontWeight: 400,
-//             lineHeight: 'normal',
-//           }}
-//         >
-//           {`Term & Conditions`}
-//         </Typography>
-//       </Link>
-//     </Box>
-//   );
-// };
-
-// export default Rights;
-
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
@@ -86,19 +7,57 @@ const Rights = ({ copyRights }) => {
     theme.breakpoints.between('xs', 'md')
   );
 
+  const mediumScreenStyle = {
+    textAlign: 'center',
+    px: { xs: 2, sx: 2, md: 2, lg: 2 },
+    pb: { xs: 2, sx: 2, md: 2, lg: 2 },
+    pt: '20px',
+    gap: '20px',
+  };
+
+  const linkStyle = {
+    color: '#001C63',
+    fontSize: {
+      xs: '12px',
+      sm: '12px',
+      md: '13px',
+      lg: '15px',
+      xl: '20px',
+    },
+    fontStyle: 'normal',
+    fontWeight: 400,
+    lineHeight: 'normal',
+  };
+
+  const copyrightStyle = {
+    color: '#0E0F1D',
+    fontSize: {
+      xs: '12px',
+      sm: '12px',
+      md: '13px',
+      lg: '15px',
+      xl: '20px',
+    },
+    fontStyle: 'normal',
+    fontWeight: 400,
+    lineHeight: 'normal',
+  };
+
+  const largeScreenStyle = {
+    display: 'flex',
+    textAlign: 'center',
+    px: { xs: 0, sx: 0, md: 2, lg: 2 },
+    py: { xs: 1, sx: 1, md: 2, lg: 2 },
+    gap: '20px',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
   return (
     <Box>
       {isMediumScreen ? (
         <Box>
-          <Box
-            sx={{
-              textAlign: 'center',
-              px: { xs: 2, sx: 2, md: 2, lg: 2 },
-              pb: { xs: 2, sx: 2, md: 2, lg: 2 },
-              pt: '20px',
-              gap: '20px',
-            }}
-          >
+          <Box sx={mediumScreenStyle}>
             <Box
               sx={{
                 display: 'flex',
@@ -108,131 +67,25 @@ const Rights = ({ copyRights }) => {
               }}
             >
               <Link href="/privacy-policy">
-                <Typography
-                  sx={{
-                    color: '#001C63',
-                    fontSize: {
-                      xs: '12px',
-                      sm: '12px',
-                      md: '13px',
-                      lg: '15px',
-                      xl: '20px',
-                    },
-                    fontStyle: 'normal',
-                    fontWeight: 400,
-                    lineHeight: 'normal',
-                  }}
-                >
-                  {`Privacy Policy`}
-                </Typography>
+                <Typography sx={linkStyle}>{`Privacy Policy`}</Typography>
               </Link>
               <Link href="/terms-and-conditions">
-                <Typography
-                  sx={{
-                    color: '#001C63',
-                    fontSize: {
-                      xs: '12px',
-                      sm: '12px',
-                      md: '13px',
-                      lg: '15px',
-                      xl: '20px',
-                    },
-                    fontStyle: 'normal',
-                    fontWeight: 400,
-                    lineHeight: 'normal',
-                  }}
-                >
-                  {`Term & Conditions`}
-                </Typography>
+                <Typography sx={linkStyle}>{`Term & Conditions`}</Typography>
               </Link>
             </Box>
             <Box>
-              <Typography
-                sx={{
-                  color: '#0E0F1D',
-                  fontSize: {
-                    xs: '12px',
-                    sm: '12px',
-                    md: '13px',
-                    lg: '15px',
-                    xl: '20px',
-                  },
-                  fontStyle: 'normal',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                }}
-              >
-                {copyRights}
-              </Typography>
+              <Typography sx={copyrightStyle}>{copyRights}</Typography>
             </Box>
           </Box>
         </Box>
       ) : (
-        <Box
-          sx={{
-            display: 'flex',
-            textAlign: 'center',
-            px: { xs: 0, sx: 0, md: 2, lg: 2 },
-            py: { xs: 1, sx: 1, md: 2, lg: 2 },
-            gap: '20px',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography
-            sx={{
-              color: '#0E0F1D',
-              fontSize: {
-                xs: '10px',
-                sm: '10px',
-                md: '13px',
-                lg: '15px',
-                xl: '20px',
-              },
-              fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: 'normal',
-            }}
-          >
-            {copyRights}
-          </Typography>
+        <Box sx={largeScreenStyle}>
+          <Typography sx={copyrightStyle}>{copyRights}</Typography>
           <Link href="/privacy-policy">
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: {
-                  xs: '10px',
-                  sm: '10px',
-                  md: '13px',
-                  lg: '15px',
-                  xl: '20px',
-                },
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-              }}
-            >
-              {`Privacy Policy`}
-            </Typography>
+            <Typography sx={linkStyle}>{`Privacy Policy`}</Typography>
           </Link>
           <Link href="/terms-and-conditions">
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: {
-                  xs: '10px',
-                  sm: '10px',
-                  md: '13px',
-                  lg: '15px',
-                  xl: '20px',
-                },
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-              }}
-            >
-              {`Term & Conditions`}
-            </Typography>
+            <Typography sx={linkStyle}>{`Term & Conditions`}</Typography>
           </Link>
         </Box>
       )}

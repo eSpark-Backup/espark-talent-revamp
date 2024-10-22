@@ -40,52 +40,74 @@ const ClientSlider = ({
       return originalImagePath.replace('_light', '_dark');
     }
   };
-
+  const boxStyle = {
+    width: {
+      sm: '184px',
+      md: '184px',
+      lg: '186px',
+    },
+    height: {
+      sm: '35px',
+      md: '35px',
+      lg: '37px',
+    },
+    '@media (min-width: 550px) and (max-width: 767px)': {
+      width: '160px',
+      height: '25px',
+    },
+    '@media (min-width: 375px) and (max-width: 549px)': {
+      width: '180px',
+      height: '25px',
+    },
+    '@media (min-width: 280px) and (max-width: 374px)': {
+      width: '180px',
+      height: '25px',
+    },
+  };
+  const completeTitleStyle = {
+    textAlign: 'center',
+    py: { xs: '16px', sm: '18px', md: '30px' },
+    pt: { xs: '17px', sm: '20px', md: '50px' },
+    display: 'none',
+    '@media (min-width:770px)': {
+      display: 'flex',
+    },
+  };
+  const shortTitleStyle = {
+    py: { xs: '16px', sm: '18px', md: '30px' },
+    pt: { xs: '17px', sm: '20px', md: '50px' },
+    textAlign: 'center',
+    display: 'none',
+    '@media (max-width:769px)': {
+      display: 'flex',
+    },
+  };
+  const sliderStyle = {
+    PY: '2.5%',
+    width: '100%',
+    boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
+  };
+  const containerStyle = { display: 'flex', justifyContent: 'center' };
   return (
-    <Box
-      sx={{
-        backgroundColor: bgColor,
-        PY: '2.5%',
-        width: '100%',
-        boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
-      }}
-    >
-      <Container
-        sx={{ pb: pb || '10px', display: 'flex', justifyContent: 'center' }}
-      >
+    <Box sx={{ ...sliderStyle, backgroundColor: bgColor }}>
+      <Container pb={pb || '10px'} sx={containerStyle}>
         <Typography
           variant={variant || 'h2'}
           color={txtColor}
-          sx={{
-            fontWeight: fontWeight,
-            py: { xs: '16px', sm: '18px', md: '30px' },
-            pt: { xs: '17px', sm: '20px', md: '50px' },
-            fontSize: fontSize,
-            lineHeight: lineHeight,
-            textAlign: 'center',
-            display: 'none',
-            '@media (max-width:769px)': {
-              display: 'flex',
-            },
-          }}
+          fontSize={fontSize}
+          lineHeight={lineHeight}
+          fontWeight={fontWeight}
+          sx={shortTitleStyle}
         >
           {shortTitle}
         </Typography>
         <Typography
           variant={variant || 'h2'}
           color={txtColor}
-          sx={{
-            textAlign: 'center',
-            fontWeight: fontWeight,
-            py: { xs: '16px', sm: '18px', md: '30px' },
-            pt: { xs: '17px', sm: '20px', md: '50px' },
-            fontSize: fontSize,
-            lineHeight: lineHeight,
-            display: 'none',
-            '@media (min-width:770px)': {
-              display: 'flex',
-            },
-          }}
+          fontWeight={fontWeight}
+          fontSize={fontSize}
+          lineHeight={lineHeight}
+          sx={completeTitleStyle}
         >
           {compeleteTitle}
         </Typography>
@@ -122,30 +144,7 @@ const ClientSlider = ({
                   src={getImagePath(item.image)}
                   alt={item.image}
                   height={'37px'}
-                  sx={{
-                    width: {
-                      sm: '184px',
-                      md: '184px',
-                      lg: '186px',
-                    },
-                    height: {
-                      sm: '35px',
-                      md: '35px',
-                      lg: '37px',
-                    },
-                    '@media (min-width: 550px) and (max-width: 767px)': {
-                      width: '160px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '180px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '180px',
-                      height: '25px',
-                    },
-                  }}
+                  sx={boxStyle}
                 />
               }
             </Box>
