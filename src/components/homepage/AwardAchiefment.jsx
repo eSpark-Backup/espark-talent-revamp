@@ -28,31 +28,28 @@ const AwardAchievement = ({ data, design, background }) => {
     width: { xs: '100px', sm: '120px', lg: '150px' },
     height: 'auto',
   };
-
+  const containerStyles = {
+    py: '2.5%',
+    px: '1%',
+    border: '1px solid rgba(170, 169, 169, 0.41)',
+  };
+  const paragraphTitleStyles = { px: { xs: '20%', md: '0' }, pt: '20px' };
+  const imageBoxStyles = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
   return (
     <Box sx={containerPadding}>
       <Container>
         {design === 2 ? (
-          <Box
-            sx={{
-              py: '2.5%',
-              px: '1%',
-              border: '1px solid rgba(170, 169, 169, 0.41)',
-            }}
-          >
-            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+          <Box sx={containerStyles}>
+            <Box sx={paragraphTitleStyles}>
               <ParagraphTitle title={data?.title} />
             </Box>
             <Box sx={boxStyles}>
               {data?.items?.map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
+                <Box key={index} sx={imageBoxStyles}>
                   <Box sx={imageStyles}>
                     <Image
                       quality="85"
@@ -78,19 +75,12 @@ const AwardAchievement = ({ data, design, background }) => {
               '@media (min-width:425px) and (max-width:480px)': { pb: '55px' },
             }}
           >
-            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+            <Box sx={paragraphTitleStyles}>
               <ParagraphTitle title={data?.title} />
             </Box>
             <Box sx={boxStyles}>
               {data?.items?.map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
+                <Box key={index} sx={imageBoxStyles}>
                   <Box sx={imageStyles}>
                     <Image
                       quality="85"
