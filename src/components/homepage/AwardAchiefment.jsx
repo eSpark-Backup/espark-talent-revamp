@@ -4,6 +4,14 @@ import { Box, Container } from '@mui/material';
 import Image from 'next/image';
 import ParagraphTitle from './ParagraphTitle';
 import { usePathname } from 'next/navigation';
+import {
+  boxStyle,
+  imageStyle,
+  containerStyle,
+  paragraphTitleStyle,
+  imageBoxStyle,
+  containerBoxStyle,
+} from '@/constants/global/award-achivements';
 
 const AwardAchievement = ({ data, design, background }) => {
   const pathName = usePathname();
@@ -16,44 +24,18 @@ const AwardAchievement = ({ data, design, background }) => {
       md: isMeetingPath || isSpecialPath ? null : '40px',
     },
   };
-  const boxStyles = {
-    display: 'flex',
-    flexWrap: { xs: 'wrap', md: 'noWrap' },
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: { xs: 4, sm: 3, md: 5 },
-    px: { xs: 2 },
-  };
-  const imageStyles = {
-    width: { xs: '100px', sm: '120px', lg: '150px' },
-    height: 'auto',
-  };
-
   return (
     <Box sx={containerPadding}>
       <Container>
         {design === 2 ? (
-          <Box
-            sx={{
-              py: '2.5%',
-              px: '1%',
-              border: '1px solid rgba(170, 169, 169, 0.41)',
-            }}
-          >
-            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+          <Box sx={containerStyle}>
+            <Box sx={paragraphTitleStyle}>
               <ParagraphTitle title={data?.title} />
             </Box>
-            <Box sx={boxStyles}>
+            <Box sx={boxStyle}>
               {data?.items?.map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Box sx={imageStyles}>
+                <Box key={index} sx={imageBoxStyle}>
+                  <Box sx={imageStyle}>
                     <Image
                       quality="85"
                       priority
@@ -69,29 +51,14 @@ const AwardAchievement = ({ data, design, background }) => {
             </Box>
           </Box>
         ) : (
-          <Box
-            sx={{
-              background: '#F7F8FB',
-              py: '1.5%',
-              pb: { xs: '40px', sm: '70px', lg: '50px' },
-              '@media (max-width:424px)': { pb: '30px' },
-              '@media (min-width:425px) and (max-width:480px)': { pb: '55px' },
-            }}
-          >
-            <Box sx={{ px: { xs: '20%', md: '0' }, pt: '20px' }}>
+          <Box sx={containerBoxStyle}>
+            <Box sx={paragraphTitleStyle}>
               <ParagraphTitle title={data?.title} />
             </Box>
-            <Box sx={boxStyles}>
+            <Box sx={boxStyle}>
               {data?.items?.map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Box sx={imageStyles}>
+                <Box key={index} sx={imageBoxStyle}>
+                  <Box sx={imageStyle}>
                     <Image
                       quality="85"
                       priority
