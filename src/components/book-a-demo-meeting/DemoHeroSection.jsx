@@ -17,9 +17,6 @@ const DemoHeroSection = ({ data }) => {
     <Box
       sx={{
         pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
-        // backgroundImage: `url(${data?.bgImage})`,
-        // backgroundRepeat: 'no-repeat',
-        // backgroundSize: `100%`,
         color: '#fff',
       }}
     >

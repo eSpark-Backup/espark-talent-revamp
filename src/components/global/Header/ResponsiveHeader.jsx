@@ -23,6 +23,7 @@ import {
 } from '@/constants/global/header';
 import HireTalentResponsiveButton from './HireTalentResponsiveButton';
 import HireLinks from '@/components/homepage/HireLinks';
+
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import { usePathname } from 'next/navigation';
 

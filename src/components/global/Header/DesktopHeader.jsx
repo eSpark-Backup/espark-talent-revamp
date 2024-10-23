@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Button,
   Typography,
@@ -8,13 +9,10 @@ import {
   MenuItem,
   Divider,
 } from '@mui/material';
-
-import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 import HireTalentButton from './HireTalentButton';
-
-import Link from 'next/link';
 import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
+import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
 
 const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);

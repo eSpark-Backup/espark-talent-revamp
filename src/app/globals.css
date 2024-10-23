@@ -987,9 +987,6 @@ span {
   }
 }
 
-@media (max-width: 520px) {
-  /* /// */
-}
 
 @media (min-width: 769px) and (max-width: 995px) {
   .partner-country-dropdown option {

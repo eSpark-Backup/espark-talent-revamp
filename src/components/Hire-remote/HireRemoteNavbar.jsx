@@ -1,5 +1,6 @@
 'use client';
-
+import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   Box,
   Button,
@@ -10,18 +11,15 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
-// import DesktopHeader from '../global/Header/DesktopHeader';
+import ResponsiveHeader from '../global/Header/ResponsiveHeader';
+import HireLinks from '@/components/homepage/HireLinks';
 import {
   BOOK_A_DEMO,
   HIRE_A_TALENT_LINK,
   REMOTE_PAGES,
 } from '@/constants/global/header';
 import { SUBMENU_ITEMS } from '@/constants/global/header';
-import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
-import Image from 'next/image';
-import ResponsiveHeader from '../global/Header/ResponsiveHeader';
 
 const HireRemoteNavbar = () => {
   // existing header work

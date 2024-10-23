@@ -91,7 +91,6 @@ const ThankYou = ({ data }) => {
             container
             sx={{
               justifyContent: 'center',
-              // alignItems: 'center',
             }}
           >
             {data.steps.map((step, index) => (

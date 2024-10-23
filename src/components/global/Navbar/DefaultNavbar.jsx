@@ -7,10 +7,11 @@ import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
 import DefaultNavbarDropdown from './DefaultNavbarDropdown';
 import DropItems from './DropItems';
-import HireLinks from '@/components/homepage/HireLinks';
+
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import GlobalLayout from './GlobalLayout';
 import RemoteLayout from './RemoteLayout';
+import HireLinks from '@/components/homepage/HireLinks';
 
 function DefaultNavbar({
   routes,
