@@ -32,6 +32,28 @@ export const DIFFERENCE_DATA = {
     },
   ],
 };
+export const DIFFERENCE_DATA_FOR_REMOTE = {
+  items: [
+    {
+      id: 1,
+      title: `Reduce costs`,
+      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      icon: `images/new-home/differnce/icon1.svg`,
+    },
+    {
+      id: 2,
+      title: `Increase quality`,
+      description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
+      icon: `images/new-home/differnce/icon2.svg`,
+    },
+    {
+      id: 3,
+      title: `Scale faster`,
+      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      icon: `images/new-home/differnce/icon3.svg`,
+    },
+  ],
+};
 
 export const WORKS_DATA = {
   title: `How offshoring works`,
@@ -509,6 +531,173 @@ export const OFFSHORE_DATA = {
       description: "Decide who to hire, and we'll take care of the rest.",
     },
   ],
+  styles: {
+    mainBoxStyle: { backgroundColor: '#F7F8FB' },
+    titleAndSwiperBoxStyle: {
+      width: '100%',
+      maxWidth: 1250,
+      margin: 'auto',
+      padding: '8px 0',
+      position: 'relative',
+      py: { xs: 5, sm: 6, md: 7, lg: 10 },
+      px: 2,
+    },
+    titleStyle: {
+      textAlign: 'center',
+      fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+      lineHeight: 1.5,
+    },
+    desktopSliderStyle: {
+      display: 'none',
+      '@media(min-width: 768px)': {
+        display: 'block',
+      },
+    },
+    mobileSliderStyle: {
+      display: 'none',
+      '@media(max-width: 767px)': {
+        display: 'block',
+      },
+    },
+    slideStyle: {
+      paddingTop: '30px',
+      paddingBottom: '40px',
+      display: 'flex',
+      justifyContent: 'center',
+      height: 'auto',
+    },
+    cardStyle: (index, bgImage, bgImageInvert) => ({
+      display: 'flex',
+      justifyContent: 'center',
+      position: 'relative',
+      backgroundImage: {
+        xs: `url(${bgImage})`,
+        md: `url(${index % 2 == 1 ? bgImageInvert : bgImage})`,
+      },
+      backgroundRepeat: 'no-repeat',
+      zIndex: 0,
+      px: 3,
+      py: 2.5,
+      backgroundPosition: {
+        xs: 'bottom',
+        md: index % 2 == 1 ? 'top' : 'bottom',
+      },
+      backgroundSize: '100% 100%',
+      borderRadius: '25px',
+      my: 3,
+      '@media(min-width: 768px) and (max-width: 1023px) ': {
+        backgroundSize: '90% 100%',
+        backgroundImage: `url(${index % 2 == 1 ? bgImageInvert : bgImage})`,
+      },
+      '@media(min-width: 481px) and (max-width: 767px) ': {
+        backgroundSize: '100% 100%',
+        backgroundImage: `url(${bgImage})`,
+      },
+      '@media(min-width: 280px) and (max-width: 480px) ': {
+        py: 4,
+      },
+    }),
+    imageStyle: (index) => ({
+      zIndex: 3,
+      width: { xs: 70, sm: 70, md: 80, lg: 100 },
+      height: 'auto',
+      position: 'absolute',
+      top: index % 2 == 1 ? 'auto' : -30,
+      bottom: index % 2 == 1 ? -30 : 'auto',
+      left: '50%',
+      transform: 'translate(-50%)',
+      boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+      borderRadius: '100%',
+      '@media (min-width: 481px) and (max-width: 767px)': {
+        top: -10,
+        bottom: 'auto',
+      },
+      '@media (max-width: 480px)': {
+        top: -8,
+        bottom: 'auto',
+      },
+    }),
+    innerCardStyle: (index) => ({
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      position: 'relative',
+      backgroundColor: `#fff`,
+      zIndex: 1,
+      maxWidth: '100%',
+      height: '100%',
+      px: 2,
+      '@media(min-width: 1400px)': {
+        maxWidth: '361px',
+        pt: index % 2 == 0 ? 1.5 : 0,
+        pb: index % 2 == 1 ? 2 : 0,
+        minHeight: index % 2 == 0 ? '209px' : '205px',
+        maxHeight: '197px',
+      },
+      '@media(min-width: 1024px) and (max-width:1399px)': {
+        maxWidth: '361px',
+        pt: index % 2 == 0 ? 1.5 : 0,
+        pb: index % 2 == 1 ? 2 : 0,
+        minHeight: index % 2 == 0 ? '200px' : '180px',
+        maxHeight: '197px',
+      },
+      '@media(min-width: 768px) and (max-width:1023px)': {
+        maxWidth: '80%',
+        pt: index % 2 == 0 ? 1.5 : 0,
+        pb: index % 2 == 1 ? 2 : 0,
+        minHeight: index % 2 == 0 ? '195px' : '170px',
+        maxHeight: '197px',
+      },
+      '@media(min-width: 481px) and (max-width:767px)': {
+        maxWidth: '320px',
+        pt: 1.5,
+        pb: 0,
+        minHeight: index % 2 == 0 ? '195px' : '170px',
+        maxHeight: '197px',
+      },
+      '@media(min-width: 360px) and (max-width:480px)': {
+        maxWidth: '320px',
+        pt: 1.5,
+        pb: 0,
+        minHeight: '170px',
+        maxHeight: 'auto',
+      },
+      '@media(min-width: 280px) and (max-width:359px)': {
+        maxWidth: '320px',
+        pt: 1.5,
+        pb: 0,
+        minHeight: '210px',
+        maxHeight: 'auto',
+      },
+      boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
+      borderRadius: '25px',
+    }),
+    cardTitleStyle: {
+      color: '#001C63',
+      fontSize: {
+        xs: '18px',
+        sm: '20px',
+        md: '22.71px',
+        lg: '28.71px',
+      },
+      lineHeight: '26px',
+      fontWeight: 700,
+      textAlign: 'center',
+    },
+    dividerStyle: {
+      mt: 1,
+      width: '80%',
+      color: '#f00',
+    },
+    descriptionStyle: {
+      color: '#001C63',
+      fontSize: { xs: '13px', sm: '14.95px' },
+      fontWeight: 500,
+      lineHeight: '26.32px',
+      textAlign: 'center',
+      px: 1.5,
+    },
+  },
 };
 
 // pricing Defference
@@ -587,6 +776,16 @@ export const cardStyle = {
   },
   '&:hover': {
     backgroundColor: 'rgb(255, 255, 255)',
+  },
+};
+
+export const cardStyleForHomePage = {
+  ...cardStyle,
+  boxShadow: '0',
+  border: '1px solid #F7F8FB',
+  '&:hover': {
+    backgroundColor: '#fff',
+    boxShadow: '0px 0px 11px 0 rgba(0,0,0,0.17)',
   },
 };
 

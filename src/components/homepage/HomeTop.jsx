@@ -5,6 +5,7 @@ import {
   OUR_CLIENT_SAYS,
 } from '@/constants/homepage';
 import {
+  cardStyleForHomePage,
   DIFFERENCE_DATA,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
@@ -16,10 +17,10 @@ import ClientSays from './ClientSays';
 import ClientSlider from '../global/ClientSlider';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import HomePageDifference from '../new-home/HomePageDifference';
 import HomePageHiringModal from '../new-home/HomePageHiringModal';
 import HomePageHero from '../new-home/HomePageHero';
 import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
+import PricingDefference from '../pricing/PricingDefference';
 
 const HomeTop = () => {
   return (
@@ -44,7 +45,10 @@ const HomeTop = () => {
         bgColor={'#029894'}
         txtColor={'#ffffff'}
       />
-      <HomePageDifference data={DIFFERENCE_DATA} />
+      <PricingDefference
+        data={DIFFERENCE_DATA}
+        cardStyle={cardStyleForHomePage}
+      />
       <HomeOffshoreWorks data={OFFSHORE_DATA} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />

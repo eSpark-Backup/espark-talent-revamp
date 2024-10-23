@@ -1,7 +1,6 @@
 import React from 'react';
 import FormSection from '../hire-developer/FormSection';
 import ClientSays from '../homepage/ClientSays';
-import HowItsWork from './HowItsWork';
 import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
 import DemoLeverageTalent from './DemoLeverageTalent';
 import { Box } from '@mui/material';
@@ -9,21 +8,21 @@ import Perks from '../homepage/Perks';
 import CustomizedSolution from '../hire-developer/CustomizedSolution';
 import { TeamBanner } from './TeamBanner';
 import LetsConnect from '../hire-developer/LetsConnect';
+import PricingWorks from '../pricing/PricingWorks';
 
 const DemoMeetingPage = ({ data }) => {
   const { styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
     <>
-      <TeamBanner data={data?.teamBanner} />
       <Box
         sx={{
-          backgroundImage: `url(${data?.bgImage})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: `100%`,
-          color: '#fff',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: { xs: 4, sm: 5, md: 7, lg: 10 },
         }}
       >
+        <TeamBanner data={data?.teamBanner} />
         <Perks
           data={data?.seamlessHiringProcess}
           styles={styles}
@@ -31,10 +30,12 @@ const DemoMeetingPage = ({ data }) => {
           link={'/book-a-demo-meeting/#form'}
           title={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
         />
+        <CustomizedSolution data={data?.customizedSolution} />
+        <Box sx={{ mt: { xs: -2, md: -2.5, lg: -3.5 } }}>
+          <LetsConnect data={data?.letsConnect} />
+        </Box>
+        <DemoLeverageTalent data={data?.leverageTalent} />
       </Box>
-      <CustomizedSolution data={data?.customizedSolution} />
-      <LetsConnect data={data?.letsConnect} />
-      <DemoLeverageTalent data={data?.leverageTalent} />
       <Box sx={{ position: 'relative' }}>
         <Box
           component={'img'}
@@ -52,9 +53,20 @@ const DemoMeetingPage = ({ data }) => {
             },
           }}
         />
-        <HowItsWork data={data?.howItWorks} />
-        <ClientSays data={OUR_CLIENT_SAYS} />
-        <FormSection data={data?.formSection} />
+        <PricingWorks data={data?.howItWorks} />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: { xs: 4, sm: 5, md: 7, lg: 10 },
+            pb: { xs: 5, sm: 6, md: 7, lg: 10 },
+          }}
+        >
+          <ClientSays data={OUR_CLIENT_SAYS} />
+          <Box sx={{ position: 'relative', zIndex: 3 }}>
+            <FormSection data={data?.formSection} />
+          </Box>
+        </Box>
       </Box>
     </>
   );

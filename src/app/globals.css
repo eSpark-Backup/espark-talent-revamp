@@ -1896,3 +1896,42 @@ input {
 }
 
 /* **************************************** */
+
+
+/* homeOffShoreWork of home page  */
+
+.home-off-shore-works .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+.home-off-shore-works .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  .home-off-shore-works .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .home-off-shore-works .swiper {
+    width: 350px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .home-off-shore-works .swiper {
+    width: 85%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 359px) {
+  .home-off-shore-works .swiper {
+    width: 90%;
+  }
+}
+
+
+/* ***************************************** */

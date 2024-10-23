@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import HomePageExperties from '../new-home/HomePageExperties';
 import ClientSays from '../homepage/ClientSays';
 import {
-  DIFFERENCE_DATA,
+  cardStyle,
+  DIFFERENCE_DATA_FOR_REMOTE,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
 } from '@/constants/new-home';
@@ -73,7 +74,10 @@ const HireRemote = ({ data }) => {
         open={open}
         handleModalClose={handleModalClose}
       />
-      <PricingDefference data={DIFFERENCE_DATA} />
+      <PricingDefference
+        data={DIFFERENCE_DATA_FOR_REMOTE}
+        cardStyle={cardStyle}
+      />
       <PricingHero data={PRICING_DATA} handleOpen={handleOpen} />
       <PricingBenifits data={PRICING_DATA?.benifits} />
       <PricingWorks data={PRICING_DATA?.howItWorks} />

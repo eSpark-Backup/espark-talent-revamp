@@ -9,6 +9,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
   const [loading, setLoading] = useState(true);
   const {
+    breakPoints,
     slideStyle,
     cardStyle,
     headerBoxStyle,
@@ -63,20 +64,7 @@ const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
         <Swiper
           id="hireDev"
           pagination={true}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            600: {
-              slidesPerView: 1.5,
-            },
-            680: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 2.2,
-            },
-          }}
+          breakpoints={breakPoints}
           modules={[Navigation, Pagination]}
         >
           {items?.map(renderSlide)}

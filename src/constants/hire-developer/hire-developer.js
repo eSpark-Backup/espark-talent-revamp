@@ -428,6 +428,20 @@ export const HIRE_DEVELOPERS = [
           },
         },
         customSectionSliderStyles: {
+          breakPoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 1.5,
+            },
+            680: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2.2,
+            },
+          },
           slideStyle: {
             paddingTop: '30px',
             paddingBottom: '50px',
@@ -1133,6 +1147,20 @@ export const HIRE_DEVELOPERS = [
           },
         },
         customSectionSliderStyles: {
+          breakPoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 1.5,
+            },
+            680: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2.2,
+            },
+          },
           slideStyle: {
             paddingTop: '30px',
             paddingBottom: '50px',
@@ -1837,6 +1865,20 @@ export const HIRE_DEVELOPERS = [
           },
         },
         customSectionSliderStyles: {
+          breakPoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 1.5,
+            },
+            680: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2.2,
+            },
+          },
           slideStyle: {
             paddingTop: '30px',
             paddingBottom: '50px',
