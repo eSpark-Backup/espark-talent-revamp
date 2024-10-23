@@ -10,6 +10,17 @@ import FooterItem from './FooterItem';
 import Rights from './Rights';
 import { usePathname } from 'next/navigation';
 import FooterItem2 from './FooterItem2';
+import {
+  boxStyle,
+  boxStyle2,
+  boxStyle3,
+  gridStyle,
+  gridStyle2,
+  marginBottomStyle,
+  rightsStyle,
+  socialMediaStyle,
+  typographyStyle,
+} from '@/constants/global/footer/Footer';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -17,12 +28,7 @@ const Footer = ({ data }) => {
     <>
       {pathName !== '/book-a-demo' && (
         <>
-          <Box
-            sx={{
-              background: '#ECECED',
-              pt: 4,
-            }}
-          >
+          <Box sx={boxStyle}>
             <Container>
               <Grid container spacing={0.8}>
                 <Grid item lg={5} md={4.5} sm={12} xs={12}>
@@ -30,46 +36,17 @@ const Footer = ({ data }) => {
                     <Image
                       quality="85"
                       priority={true}
-                      src={data?.logo}
                       width={120}
                       height={59}
                       alt={`${data?.alt}`}
-                      style={{ marginBottom: '10px' }}
+                      style={marginBottomStyle}
+                      src={data?.logo}
                     />
                   </Link>
-                  <Typography
-                    sx={{
-                      color: '#001C63',
-                      fontSize: {
-                        xs: '10px',
-                        sm: '10px',
-                        md: '13px',
-                        lg: '15px',
-                      },
-                      fontStyle: 'normal',
-                      fontWeight: 400,
-                      lineHeight: '24.32px',
-                      pr: {
-                        lg: '18%',
-                        md: '15%',
-                        sm: '10%',
-                      },
-                    }}
-                  >
+                  <Typography sx={typographyStyle}>
                     {data?.description}
                   </Typography>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      width: '140px',
-                      my: '10px',
-                      mb: {
-                        xs: '10px',
-                        lg: '0px',
-                      },
-                    }}
-                  >
+                  <Box sx={socialMediaStyle}>
                     {data?.socialMedia?.map((item, index) => (
                       <Link key={index} href={item?.link} target="_blank">
                         <Image
@@ -84,19 +61,7 @@ const Footer = ({ data }) => {
                     ))}
                   </Box>
                 </Grid>
-                <Grid
-                  item
-                  lg={2}
-                  md={2.5}
-                  sm={12}
-                  xs={12}
-                  sx={{
-                    mb: {
-                      xs: '10px',
-                      lg: '0px',
-                    },
-                  }}
-                >
+                <Grid item lg={2} md={2.5} sm={12} xs={12} sx={gridStyle}>
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.companyTitle} />
@@ -116,19 +81,7 @@ const Footer = ({ data }) => {
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid
-                  item
-                  lg={2}
-                  md={2}
-                  sm={12}
-                  xs={12}
-                  sx={{
-                    mb: {
-                      xs: '10px',
-                      lg: '0px',
-                    },
-                  }}
-                >
+                <Grid item lg={2} md={2} sm={12} xs={12} sx={gridStyle2}>
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
                       <FooterTitle title={data?.resourceTitle} />
@@ -152,27 +105,19 @@ const Footer = ({ data }) => {
                   <FooterTitle title={data?.contactUsTitle} />
                   <Grid container>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '5%' },
-                        }}
-                      >
+                      <Box sx={boxStyle3}>
                         <FooterItem2 section={data?.contactUs.topSection} />
                       </Box>
                     </Grid>
                     <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '5%' },
-                        }}
-                      >
+                      <Box sx={boxStyle3}>
                         <FooterItem2
                           data={data?.contactUs}
                           section={data?.contactUs.bottomSection}
                         />
                       </Box>
                       {pathName == '/' && (
-                        <Box sx={{ pt: 2 }}>
+                        <Box sx={boxStyle2}>
                           <Link
                             href={
                               'https://www.trustpilot.com/review/esparktalent.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector'
@@ -195,18 +140,7 @@ const Footer = ({ data }) => {
               </Grid>
             </Container>
           </Box>
-          <Box
-            sx={{
-              px: {
-                lg: '120px',
-              },
-              pt: {
-                xs: '25px',
-                lg: '25px',
-              },
-              background: '#ECECED',
-            }}
-          >
+          <Box sx={rightsStyle}>
             <Divider />
             <Rights copyRights={data?.copyRight} data={data?.socialMedia} />
           </Box>

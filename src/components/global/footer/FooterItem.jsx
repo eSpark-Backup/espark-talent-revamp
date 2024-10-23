@@ -1,13 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { Typography } from '@mui/material';
-
 import { FOOTER_DATA } from '@/constants/global/footer';
-
+import { footerItemStyle } from '@/constants/global/footer/FooterItem';
 const FooterItem = ({ href, label }) => {
   const isBlackLabel =
     label === FOOTER_DATA?.infoEmail || label === FOOTER_DATA?.salesEmail;
-
   return (
     <Typography
       color={isBlackLabel ? '#000' : '#001C63'}
@@ -17,16 +15,7 @@ const FooterItem = ({ href, label }) => {
         xs: isBlackLabel ? '15px' : '0px',
         md: isBlackLabel ? '0px' : '0px',
       }}
-      sx={{
-        fontSize: {
-          xs: '11px',
-          sm: '12px',
-          md: '13px',
-          lg: '15px',
-        },
-        fontStyle: 'normal',
-        lineHeight: 'normal',
-      }}
+      sx={footerItemStyle}
     >
       {isBlackLabel ? (
         <Link
