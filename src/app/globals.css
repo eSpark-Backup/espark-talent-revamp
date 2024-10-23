@@ -1935,3 +1935,36 @@ input {
 
 
 /* ***************************************** */
+
+
+/* Flexible hiring models for home page */
+
+#flexible-hiring-models .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#flexible-hiring-models .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+#flexible-hiring-models .swiper {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+}
+
+#flexible-hiring-models .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 9px;
+  padding-bottom: 40px;
+}
+
+#flexible-hiring-models .swiper-pagination-bullet {
+  margin-bottom: -10px !important;
+}
+
+/* *************************************** */
