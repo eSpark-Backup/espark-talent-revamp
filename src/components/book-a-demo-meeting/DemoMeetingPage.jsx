@@ -9,19 +9,18 @@ import CustomizedSolution from '../hire-developer/CustomizedSolution';
 import { TeamBanner } from './TeamBanner';
 import LetsConnect from '../hire-developer/LetsConnect';
 import PricingWorks from '../pricing/PricingWorks';
+import {
+  containerStyles,
+  contentStyles,
+  imageStyles,
+} from '@/constants/book-demo-meeting/book-demo-meeting';
 
 const DemoMeetingPage = ({ data }) => {
   const { styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
     <>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-        }}
-      >
+      <Box sx={containerStyles}>
         <TeamBanner data={data?.teamBanner} />
         <Perks
           data={data?.seamlessHiringProcess}
@@ -36,32 +35,10 @@ const DemoMeetingPage = ({ data }) => {
         </Box>
         <DemoLeverageTalent data={data?.leverageTalent} />
       </Box>
-      <Box sx={{ position: 'relative' }}>
-        <Box
-          component={'img'}
-          src={data?.bgImage}
-          sx={{
-            width: '100%',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            display: 'none',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 1,
-            '@media(min-width: 1300px)': {
-              display: 'flex',
-            },
-          }}
-        />
+      <Box sx={imageStyles}>
+        <Box component={'img'} src={data?.bgImage} />
         <PricingWorks data={data?.howItWorks} />
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-            pb: { xs: 5, sm: 6, md: 7, lg: 10 },
-          }}
-        >
+        <Box sx={contentStyles}>
           <ClientSays data={OUR_CLIENT_SAYS} />
           <Box sx={{ position: 'relative', zIndex: 3 }}>
             <FormSection data={data?.formSection} />

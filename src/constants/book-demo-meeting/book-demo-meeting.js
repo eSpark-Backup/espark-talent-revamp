@@ -843,3 +843,27 @@ export const DEMO_MEETING_DATA = {
   ],
   bgImage: 'images/book-a-demo-metting/background.svg',
 };
+
+export const containerStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: { xs: 4, sm: 5, md: 7, lg: 10 },
+};
+export const imageStyles = {
+  width: '100%',
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  display: 'none',
+  transform: 'translate(-50%, -50%)',
+  zIndex: 1,
+  '@media(min-width: 1300px)': {
+    display: 'flex',
+  },
+};
+export const contentStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: { xs: 4, sm: 5, md: 7, lg: 10 },
+  pb: { xs: 5, sm: 6, md: 7, lg: 10 },
+};
