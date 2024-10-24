@@ -12,8 +12,9 @@ import {
   numericFormatStyle,
   inputStyle,
   labelBoxStyle,
+  requiredStyle,
+  stackBoxStyle,
 } from '@/constants/global/inputs/CustomInput';
-import { labelBoxStyle } from '@/constants/global/inputs/taxtArea';
 
 const CustomInput = ({
   value,
@@ -54,14 +55,9 @@ const CustomInput = ({
     </Stack>
   ) : name === 'salary_expection' ? (
     <Stack direction="column">
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <Box sx={stackBoxStyle}>
         <Typography sx={labelStyle}>
-          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
+          {label} {required && <span style={requiredStyle}>*</span>}
         </Typography>
         <Box sx={tooltipBoxStyle}>
           <Tooltip placement="top-start" title={tooltip}>
@@ -84,13 +80,7 @@ const CustomInput = ({
   ) : (
     <Stack direction="column">
       {!(name === 'cv') && (
-        <Box
-          className={className}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
+        <Box className={className} sx={stackBoxStyle}>
           <Typography sx={labelStyle}>
             {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>

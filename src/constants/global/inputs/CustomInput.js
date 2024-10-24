@@ -52,6 +52,10 @@ const labelBoxStyle = {
 const requiredStyle = {
   color: '#ff0000',
 };
+const stackBoxStyle = {
+  display: 'flex',
+  alignItems: 'center',
+};
 
 export {
   labelStyle,
@@ -62,4 +66,5 @@ export {
   inputStyle,
   labelBoxStyle,
   requiredStyle,
+  stackBoxStyle,
 };

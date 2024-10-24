@@ -9,6 +9,11 @@ import { usePathname, useRouter } from 'next/navigation';
 
 import DesktopHeader from '@/components/global/Header/DesktopHeader.jsx';
 import ResponsiveHeader from '@/components/global/Header/ResponsiveHeader.jsx';
+import {
+  headerStyle,
+  appBarStyle,
+  toolBarStyle,
+} from '@/constants/global/header/Header';
 
 const Header = () => {
   const pathName = usePathname();
@@ -62,22 +67,10 @@ const Header = () => {
         pathName !== '/hire-a-frontend-developer' &&
         pathName !== '/hire-remote-developers' &&
         pathName !== '/book-a-demo-meeting' && (
-          <Box
-            sx={{
-              background: '#F7F7F7',
-            }}
-          >
-            <AppBar
-              position="static"
-              sx={{
-                background: '#F7F7F7',
-              }}
-            >
+          <Box sx={headerStyle}>
+            <AppBar position="static" sx={appBarStyle}>
               <Container>
-                <Toolbar
-                  disableGutters
-                  sx={{ justifyContent: 'space-between' }}
-                >
+                <Toolbar disableGutters sx={toolBarStyle}>
                   <Link href={'/'}>
                     <Image
                       quality="85"

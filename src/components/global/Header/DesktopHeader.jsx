@@ -13,6 +13,20 @@ import HireTalentButton from './HireTalentButton';
 import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import { PAGES, SUBMENU_ITEMS } from '@/constants/global/header';
+import {
+  boxStyle,
+  desktopNavStyle,
+  buttonStyle,
+  typographyStyle,
+  dividerStyle,
+  buttonBoxStyle,
+  popperBoxStyle,
+  menuItemStyle,
+  menuItemBoxStyle,
+  subMenuItemStyle,
+  subMenuItemDescriptionStyle,
+  subMenuItemBoxStyle,
+} from '@/constants/global/header/DesktopHeader';
 
 const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -55,40 +69,30 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
     }
   }, [isHovered]);
 
+  const popperStyle = {
+    mx: 'auto',
+    '@media (min-width:1500px)': {
+      px: 1,
+      width: currentPage?.includes('Hire A Talent') ? '100%' : 'auto',
+    },
+    '@media (max-width:1499px)': {
+      px: currentPage?.includes('Hire A Talent') ? 1 : 0,
+      width: currentPage?.includes('Hire A Talent') ? '100%' : 'auto',
+    },
+    height: 'auto',
+  };
+  const popperPlacement = currentPage?.includes('Hire A Talent')
+    ? 'bottom'
+    : 'bottom-start';
+
   return (
-    <Box
-      sx={{
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <Box
-        className="desktopNav"
-        sx={{
-          flexGrow: 1,
-          display: { xs: 'none', md: 'flex' },
-          ml: { md: '20px', lg: '30px' },
-        }}
-      >
+    <Box sx={boxStyle}>
+      <Box className="desktopNav" sx={desktopNavStyle}>
         {PAGES?.map((page, index) => (
           <Box key={index}>
-            <Button
-              sx={{
-                my: 2,
-                mx: { md: 0.5, lg: 1 },
-                color: '#222',
-                fontSize: '18px',
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '21.766px',
-                display: 'flex',
-                alignItems: 'center',
-                '&:hover': { background: 'none' },
-              }}
-            >
+            <Button sx={buttonStyle}>
               <Box
-                sx={{ display: 'flex' }}
+                sx={buttonBoxStyle}
                 onClick={() => {
                   if (page === 'Pricing') {
                     window.open('/pricing', '_self');
@@ -102,17 +106,7 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
                 }}
                 onMouseLeave={handleMouseLeave}
               >
-                <Typography
-                  aria-describedby={id}
-                  sx={{
-                    color: '#222',
-                    fontSize: { xs: '16px', lg: '18px' },
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    lineHeight: '21.766px',
-                    fontFamily: 'Titillium Web, sans-serif',
-                  }}
-                >
+                <Typography aria-describedby={id} sx={typographyStyle}>
                   {page}
                 </Typography>
                 {page !== 'Pricing' && (
@@ -135,99 +129,51 @@ const DesktopHeader = ({ handleOpenUserMenu, handleCloseUserMenu }) => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               anchorEl={anchorEl}
-              placement={
-                currentPage?.includes('Hire A Talent')
-                  ? 'bottom'
-                  : 'bottom-start'
-              }
-              sx={{
-                mx: 'auto',
-                '@media (min-width:1500px)': {
-                  px: 1,
-                  width: currentPage?.includes('Hire A Talent')
-                    ? '100%'
-                    : 'auto',
-                },
-                '@media (max-width:1499px)': {
-                  px: currentPage?.includes('Hire A Talent') ? 1 : 0,
-                  width: currentPage?.includes('Hire A Talent')
-                    ? '100%'
-                    : 'auto',
-                },
-                height: 'auto',
-              }}
+              placement={popperPlacement}
+              sx={popperStyle}
             >
               {currentPage?.includes('Hire A Talent') ? (
                 <HireLinks data={HIRE_A_TALENT_MENU} />
               ) : (
-                <Box
-                  sx={{
-                    bgcolor: 'background.paper',
-                    boxShadow: 'rgba(0, 0, 0, 0.10) 0px 5px 8px',
-                    borderRadius: '10px',
-                    mt: { lg: '30px', md: '30px' },
-                  }}
-                >
+                <Box sx={popperBoxStyle}>
                   {SUBMENU_ITEMS[currentPage]?.map((submenuItem, subIndex) => (
                     <Box key={subIndex}>
-                      <Link href={submenuItem.link}>
+                      <Link href={submenuItem?.link}>
                         <MenuItem
                           onClick={() =>
                             handleSubmenuItemClickedAndClose(submenuItem, page)
                           }
-                          sx={{
-                            width: '341px',
-                            height: 'auto',
-                            padding: 2,
-                          }}
+                          sx={menuItemStyle}
                         >
-                          <Box
-                            sx={{
-                              display: 'flex',
-                              alignItems: 'center',
-                            }}
-                          >
+                          <Box sx={menuItemBoxStyle}>
                             <Image
                               quality="85"
                               priority={true}
-                              src={submenuItem.icon}
+                              src={submenuItem?.icon}
                               width={30}
                               height={30}
                               alt="icon"
                               style={{ marginRight: '10px' }}
                             />
-                            <Box sx={{ mx: 2 }}>
+                            <Box sx={subMenuItemBoxStyle}>
                               <Typography
                                 variant="subtitle1"
-                                sx={{
-                                  color: '#222',
-                                  fontSize: '17.566px',
-                                  fontWeight: 600,
-                                  lineHeight: '17px',
-                                  mb: 1,
-                                }}
+                                sx={subMenuItemStyle}
                               >
                                 {submenuItem?.label}
                               </Typography>
                               <Typography
                                 variant="body2"
-                                sx={{
-                                  color: '#000',
-                                  fontSize: '12px',
-                                  fontWeight: 400,
-                                  lineHeight: '16px',
-                                  width: '240px',
-                                  whiteSpace: 'normal',
-                                }}
+                                sx={subMenuItemDescriptionStyle}
                               >
-                                {submenuItem.description}
+                                {submenuItem?.description}
                               </Typography>
                             </Box>
                           </Box>
                         </MenuItem>
                       </Link>
-                      {subIndex < SUBMENU_ITEMS[currentPage].length - 1 && (
-                        <Divider sx={{ mx: '20%' }} />
+                      {subIndex < SUBMENU_ITEMS[currentPage]?.length - 1 && (
+                        <Divider sx={dividerStyle} />
                       )}
                     </Box>
                   ))}

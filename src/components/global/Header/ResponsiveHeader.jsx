@@ -26,6 +26,21 @@ import HireLinks from '@/components/homepage/HireLinks';
 
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import { usePathname } from 'next/navigation';
+import {
+  responsiveHeaderStyle,
+  menuIconStyle,
+  accordionStyle,
+  accordionSummaryStyle,
+  typographyStyle,
+  expandMoreIconStyle,
+  accordionDetailsStyle,
+  menuItemStyle,
+  imageStyle,
+  boxStyle,
+  subtitle1Style,
+  body2Style,
+  buttonStyle,
+} from '@/constants/global/header/Responsiveheader';
 
 const ResponsiveHeader = ({
   handleAccordionChange,
@@ -54,10 +69,7 @@ const ResponsiveHeader = ({
     <Box
       id="menuResponsive"
       className="responsiveNav"
-      sx={{
-        display: { xs: 'flex', md: 'none' },
-        order: { xs: 2, md: 1 },
-      }}
+      sx={responsiveHeaderStyle}
     >
       <IconButton
         size="large"
@@ -66,9 +78,7 @@ const ResponsiveHeader = ({
         aria-haspopup="true"
         onClick={handleOpenNavMenu}
         color="primary"
-        sx={{
-          '&:hover': { background: 'none' },
-        }}
+        sx={menuIconStyle}
       >
         <MenuIcon sx={{ width: '50px', height: '50px', color: '#001C63' }} />
       </IconButton>
@@ -101,31 +111,17 @@ const ResponsiveHeader = ({
                     page === 'Pricing' ? false : expandedAccordion[page]
                   }
                   onChange={handleAccordionChange(page)}
-                  sx={{
-                    boxShadow: 'none !important',
-                    backgroundColor: 'none !important',
-                    width: '100%',
-                    border: 0,
-                    '.mui-bsh1p3-MuiPaper-root-MuiAccordion-root:before': {
-                      boxShadow: 'none !important',
-                      backgroundColor: 'transparent !important',
-                      left: 0,
-                      border: 0,
-                    },
-                  }}
+                  sx={accordionStyle}
                 >
                   <AccordionSummary
                     expandIcon={
                       page === 'Pricing' ? null : (
-                        <ExpandMoreIcon sx={{ color: '#222 !important' }} />
+                        <ExpandMoreIcon sx={expandMoreIconStyle} />
                       )
                     }
                     aria-controls={`${page}-content`}
                     id={`${page}-header`}
-                    sx={{
-                      backgroundColor: 'red #fff ',
-                      boxShadow: 'none',
-                    }}
+                    sx={accordionSummaryStyle}
                   >
                     <Box
                       component={'div'}
@@ -137,23 +133,13 @@ const ResponsiveHeader = ({
                         }
                       }}
                     >
-                      <Typography
-                        textAlign="center"
-                        sx={{
-                          color: '#222',
-                          fontSize: '18px',
-                          fontWeight: 600,
-                          lineHeight: '21px',
-                        }}
-                      >
+                      <Typography textAlign="center" sx={typographyStyle}>
                         {page}
                       </Typography>
                     </Box>
                   </AccordionSummary>
                   {hasSubmenu && (
-                    <AccordionDetails
-                      sx={{ backgroundColor: '#fff !important ' }}
-                    >
+                    <AccordionDetails sx={accordionDetailsStyle}>
                       {page === 'Hire A Talent' ? (
                         <HireLinks data={HIRE_A_TALENT_MENU} />
                       ) : (
@@ -165,45 +151,25 @@ const ResponsiveHeader = ({
                                 handleSubmenuItemClicked(submenuItem)
                               }
                             >
-                              <Box
-                                sx={{
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                }}
-                              >
+                              <Box sx={menuItemStyle}>
                                 <Image
                                   quality="85"
                                   priority={true}
-                                  src={submenuItem.icon}
+                                  src={submenuItem?.icon}
                                   width={30}
                                   height={30}
                                   alt="icon"
-                                  style={{ marginRight: '2px' }}
+                                  style={imageStyle}
                                 />
-                                <Box sx={{ mx: 2 }}>
+                                <Box sx={boxStyle}>
                                   <Typography
                                     variant="subtitle1"
-                                    sx={{
-                                      color: '#222',
-                                      fontSize: '17.566px',
-                                      fontWeight: 600,
-                                      lineHeight: '17px',
-                                      mb: 1,
-                                    }}
+                                    sx={subtitle1Style}
                                   >
-                                    {submenuItem.label}
+                                    {submenuItem?.label}
                                   </Typography>
-                                  <Typography
-                                    variant="body2"
-                                    sx={{
-                                      color: '#000',
-                                      fontSize: '12px',
-                                      fontWeight: 400,
-                                      lineHeight: '16px',
-                                      whiteSpace: 'normal',
-                                    }}
-                                  >
-                                    {submenuItem.description}
+                                  <Typography variant="body2" sx={body2Style}>
+                                    {submenuItem?.description}
                                   </Typography>
                                 </Box>
                               </Box>
@@ -228,46 +194,20 @@ const ResponsiveHeader = ({
                   key={index}
                   expanded={expandedAccordion[page]}
                   onChange={handleAccordionChange(page)}
-                  sx={{
-                    boxShadow: 'none !important',
-                    backgroundColor: 'none !important',
-                    width: '100%',
-                    border: 0,
-                    '.mui-bsh1p3-MuiPaper-root-MuiAccordion-root:before': {
-                      boxShadow: 'none !important',
-                      backgroundColor: 'transparent !important',
-                      left: 0,
-                      border: 0,
-                    },
-                  }}
+                  sx={accordionStyle}
                 >
                   <AccordionSummary
-                    expandIcon={
-                      <ExpandMoreIcon sx={{ color: '#222 !important' }} />
-                    }
+                    expandIcon={<ExpandMoreIcon sx={expandMoreIconStyle} />}
                     aria-controls={`${page}-content`}
                     id={`${page}-header`}
-                    sx={{
-                      backgroundColor: 'red #fff ',
-                      boxShadow: 'none',
-                    }}
+                    sx={accordionSummaryStyle}
                   >
-                    <Typography
-                      textAlign="center"
-                      sx={{
-                        color: '#222',
-                        fontSize: '18px',
-                        fontWeight: 600,
-                        lineHeight: '21px',
-                      }}
-                    >
+                    <Typography textAlign="center" sx={typographyStyle}>
                       {page}
                     </Typography>
                   </AccordionSummary>
                   {hasSubmenu && (
-                    <AccordionDetails
-                      sx={{ backgroundColor: '#fff !important ' }}
-                    >
+                    <AccordionDetails sx={accordionDetailsStyle}>
                       {page === 'Hire A Talent' ? (
                         <HireLinks data={HIRE_A_TALENT_MENU} />
                       ) : (
@@ -279,45 +219,25 @@ const ResponsiveHeader = ({
                                 handleSubmenuItemClicked(submenuItem)
                               }
                             >
-                              <Box
-                                sx={{
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                }}
-                              >
+                              <Box sx={menuItemStyle}>
                                 <Image
                                   quality="85"
                                   priority={true}
-                                  src={submenuItem.icon}
+                                  src={submenuItem?.icon}
                                   width={30}
                                   height={30}
                                   alt="icon"
-                                  style={{ marginRight: '2px' }}
+                                  style={imageStyle}
                                 />
-                                <Box sx={{ mx: 2 }}>
+                                <Box sx={boxStyle}>
                                   <Typography
                                     variant="subtitle1"
-                                    sx={{
-                                      color: '#222',
-                                      fontSize: '17.566px',
-                                      fontWeight: 600,
-                                      lineHeight: '17px',
-                                      mb: 1,
-                                    }}
+                                    sx={subtitle1Style}
                                   >
-                                    {submenuItem.label}
+                                    {submenuItem?.label}
                                   </Typography>
-                                  <Typography
-                                    variant="body2"
-                                    sx={{
-                                      color: '#000',
-                                      fontSize: '12px',
-                                      fontWeight: 400,
-                                      lineHeight: '16px',
-                                      whiteSpace: 'normal',
-                                    }}
-                                  >
-                                    {submenuItem.description}
+                                  <Typography variant="body2" sx={body2Style}>
+                                    {submenuItem?.description}
                                   </Typography>
                                 </Box>
                               </Box>
@@ -335,20 +255,7 @@ const ResponsiveHeader = ({
             <Button
               disableRipple
               onClick={() => window?.open(HIRE_A_TALENT_LINK || '#', '_blank')}
-              sx={{
-                ml: 1.7,
-                mt: 0.5,
-                width: { xs: '170px', md: '180px', lg: '223px' },
-                height: { xs: '44px', md: '46px', lg: '48px' },
-                backgroundColor: '#101828',
-                borderRadius: '100px',
-                color: '#fff',
-                fontSize: '20px',
-                '&:hover': {
-                  backgroundColor: '#101828',
-                  color: '#fff',
-                },
-              }}
+              sx={buttonStyle}
             >
               {BOOK_A_DEMO || ''}
             </Button>
