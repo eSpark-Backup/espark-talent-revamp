@@ -264,8 +264,8 @@ export const handleSubmitJoinCrew = async (
 // home page hero untils
 
 export const getAnimation = () => {
-  const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl'].reduce((acc, key) => {
-    acc[`is_${key}`] = useMediaQuery((theme) => theme.breakpoints.only(key));
+  const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl']?.reduce((acc, key) => {
+    acc[`is_${key}`] = useMediaQuery((theme) => theme?.breakpoints?.only(key));
     return acc;
   }, {});
 
