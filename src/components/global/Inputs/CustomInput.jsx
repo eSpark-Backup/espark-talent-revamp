@@ -4,6 +4,16 @@ import 'react-phone-input-2/lib/style.css';
 import { Typography, Stack, Tooltip, Box } from '@mui/material';
 import { NumericFormat } from 'react-number-format'; // Assuming NumericFormat is correctly imported
 import InfoIcon from '@mui/icons-material/Info';
+import {
+  labelStyle,
+  tooltipIconStyle,
+  tooltipBoxStyle,
+  phoneInputStyle,
+  numericFormatStyle,
+  inputStyle,
+  labelBoxStyle,
+} from '@/constants/global/inputs/CustomInput';
+import { labelBoxStyle } from '@/constants/global/inputs/taxtArea';
 
 const CustomInput = ({
   value,
@@ -22,45 +32,21 @@ const CustomInput = ({
   const handlePhoneChange = (value, country, e, formattedValue) => {
     onChange(name, formattedValue); // Assuming you want to pass the formatted phone number
   };
-
   return type === 'tel' ? (
     <Stack>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Typography
-          color={'secondary'}
-          mb={1}
-          sx={{ fontSize: { xs: '14px', md: '18px' } }}
-        >
-          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
+      <Box sx={labelBoxStyle}>
+        <Typography sx={labelStyle}>
+          {label} {required && <span style={requiredStyle}>*</span>}
         </Typography>
-        <Box
-          sx={{
-            width: '20px',
-            height: '30px',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={tooltipBoxStyle}>
           <Tooltip placement="top-start" title={tooltip}>
-            <InfoIcon
-              sx={{
-                color: (theme) => theme.palette.primary.main,
-                marginLeft: '5px',
-                fontSize: '13px',
-                marginBottom: '12px',
-              }}
-            />
+            <InfoIcon sx={tooltipIconStyle} />
           </Tooltip>
         </Box>
       </Box>
       <PhoneInput
         country={'pk'}
-        inputStyle={{ color: 'black', fontSize: '16px' }}
+        inputStyle={phoneInputStyle}
         countryCodeEditable={false}
         onChange={handlePhoneChange}
         value={phone}
@@ -74,31 +60,12 @@ const CustomInput = ({
           alignItems: 'center',
         }}
       >
-        <Typography
-          mb={1}
-          textAlign="left"
-          color={'secondary'}
-          sx={{ fontSize: { xs: '14px', md: '18px' } }}
-        >
+        <Typography sx={labelStyle}>
           {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
-        <Box
-          sx={{
-            width: '20px',
-            height: '30px',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={tooltipBoxStyle}>
           <Tooltip placement="top-start" title={tooltip}>
-            <InfoIcon
-              sx={{
-                color: (theme) => theme.palette.primary.main,
-                marginLeft: '5px',
-                fontSize: '13px',
-                marginBottom: '12px',
-              }}
-            />
+            <InfoIcon sx={tooltipIconStyle} />
           </Tooltip>
         </Box>
       </Box>
@@ -111,16 +78,7 @@ const CustomInput = ({
         allowLeadingZeros
         thousandSeparator=","
         onChange={(e) => onChange(name, e.target.value)}
-        style={{
-          height: '51px',
-          fontSize: '16px',
-          backgroundColor: 'white',
-          color: 'black',
-          BorderColor: 'black',
-          padding: '10px',
-          width: '100%',
-          resize: 'vertical',
-        }}
+        style={numericFormatStyle}
       />
     </Stack>
   ) : (
@@ -133,31 +91,12 @@ const CustomInput = ({
             alignItems: 'center',
           }}
         >
-          <Typography
-            mb={1}
-            textAlign="left"
-            color={'secondary'}
-            sx={{ fontSize: { xs: '14px', md: '18px' } }}
-          >
+          <Typography sx={labelStyle}>
             {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
           </Typography>
-          <Box
-            sx={{
-              width: '20px',
-              height: '30px',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
+          <Box sx={tooltipBoxStyle}>
             <Tooltip placement="top-start" title={tooltip}>
-              <InfoIcon
-                sx={{
-                  color: (theme) => theme.palette.primary.main,
-                  marginLeft: '5px',
-                  fontSize: '13px',
-                  marginBottom: '12px',
-                }}
-              />
+              <InfoIcon sx={tooltipIconStyle} />
             </Tooltip>
           </Box>
         </Box>
@@ -165,15 +104,7 @@ const CustomInput = ({
 
       <input
         value={value}
-        style={{
-          height: '51px',
-          fontSize: '16px',
-          backgroundColor: 'white',
-          color: 'black',
-          padding: '10px',
-          width: '100%',
-          resize: 'vertical',
-        }}
+        style={inputStyle}
         disabled={disabled}
         name={name}
         onChange={(e) =>

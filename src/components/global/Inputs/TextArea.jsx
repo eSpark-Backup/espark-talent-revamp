@@ -7,6 +7,14 @@ import {
   Typography,
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
+import {
+  textAreaStyle,
+  labelStyle,
+  requiredStyle,
+  infoIconStyle,
+  infoIconBoxStyle,
+  labelBoxStyle,
+} from '@/constants/global/inputs/taxtArea';
 
 const TextArea = ({
   name,
@@ -18,51 +26,18 @@ const TextArea = ({
 }) => {
   return (
     <Stack>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Typography
-          mb={1}
-          textAlign="left"
-          color={'secondary'}
-          sx={{ fontSize: { xs: '14px', md: '18px' } }}
-        >
-          {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
+      <Box sx={labelBoxStyle}>
+        <Typography sx={labelStyle}>
+          {label} {required && <span style={requiredStyle}>*</span>}
         </Typography>
-        <Box
-          sx={{
-            width: '20px',
-            height: '30px',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={infoIconBoxStyle}>
           <Tooltip placement="top-start" title={tooltip}>
-            <InfoIcon
-              sx={{
-                color: (theme) => theme.palette.primary.main,
-                marginLeft: '5px',
-                fontSize: '13px',
-                marginBottom: '12px',
-              }}
-            />
+            <InfoIcon sx={infoIconStyle} />
           </Tooltip>
         </Box>
       </Box>
       <TextareaAutosize
-        style={{
-          border: '1px solid #cccccc',
-          backgroundColor: 'white',
-          color: 'black',
-          minHeight: '20px',
-          padding: '10px',
-          fontSize: '16px',
-          borderRadius: '8px',
-          width: '100%',
-        }}
+        style={textAreaStyle}
         className="join-crew-textarea"
         placeholder={placeholder}
         name={name}

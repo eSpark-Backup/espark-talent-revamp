@@ -9,6 +9,7 @@ import {
   Grid,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { descriptionStyle } from '@/constants/global/faqs';
 
 const Faqs = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
@@ -41,13 +42,7 @@ const Faqs = ({ data }) => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography
-                    sx={{
-                      fontSize: '16px',
-                      fontWeight: '400',
-                      color: '#000000',
-                    }}
-                  >
+                  <Typography sx={descriptionStyle}>
                     {item?.description}
                   </Typography>
                 </AccordionDetails>

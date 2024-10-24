@@ -1,5 +1,10 @@
 import { Typography } from '@mui/material';
 import Image from 'next/image';
+import {
+  labelStyle,
+  imageSelectorStyle,
+  filenameStyle,
+} from '@/constants/global/inputs/ImageUpload';
 
 const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
   const handleFileChange = (e, name) => {
@@ -8,10 +13,11 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
       onChange(name, file);
     }
   };
+
   return (
     <div className="input-parent">
       {label && (
-        <Typography mb={1} textAlign="left" sx={{ color: 'black' }}>
+        <Typography mb={1} textAlign="left" sx={labelStyle}>
           {label}
         </Typography>
       )}
@@ -33,12 +39,9 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
           >
             <Typography
               sx={{
+                ...imageSelectorStyle,
                 backgroundColor: (theme) =>
                   !disabled ? theme.palette.primary.main : '#ccc',
-                color: '#fff',
-                padding: '8px 25px',
-                borderRadius: '5px',
-                cursor: 'pointer',
               }}
             >
               <Image
@@ -49,15 +52,7 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
               />
             </Typography>
             {form && (
-              <Typography
-                sx={{
-                  // display: { sm: 'none', md: 'block' },
-                  fontSize: { xs: '14px', md: '20px' },
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                }}
-              >
+              <Typography sx={filenameStyle}>
                 {filename
                   ? filename.length > 15
                     ? filename.substring(0, 15) + '...'

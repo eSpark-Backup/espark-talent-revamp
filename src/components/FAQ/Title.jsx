@@ -1,21 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-
+import titleStyle from '../../constants/global/title';
 const Title = ({ title }) => {
   return (
     <Box>
-      <Typography
-        sx={{
-          fontSize: '32px',
-          fontWeight: 700,
-          color: 'primary',
-          lineHeight: '44px',
-          textAlign: 'center',
-          my: 4,
-        }}
-      >
-        {title}
-      </Typography>
+      <Typography sx={titleStyle}>{title}</Typography>
     </Box>
   );
 };
