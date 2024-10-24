@@ -8,13 +8,13 @@ import { EffectCube, Navigation, Pagination } from 'swiper/modules';
 
 const HomeOffshoreWorks = ({ data }) => {
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(null);
+  const [renderKey, setRenderKey] = useState(0);
   const { title, bgImage, bgImageInvert, items, styles } = data || {};
   const {
     mainBoxStyle,
     titleAndSwiperBoxStyle,
     titleStyle,
-    desktopSliderStyle,
-    mobileSliderStyle,
     slideStyle,
     cardStyle,
     imageStyle,
@@ -31,6 +31,22 @@ const HomeOffshoreWorks = ({ data }) => {
       }, 500);
     }
   }, [data]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window?.innerWidth;
+      if (screenWidth <= 767 && !isMobile) {
+        setIsMobile(true);
+        setRenderKey((prevKey) => prevKey + 1);
+      } else if (screenWidth >= 768 && isMobile) {
+        setIsMobile(false);
+        setRenderKey((prevKey) => prevKey + 1);
+      }
+    };
+    handleResize();
+    window?.addEventListener('resize', handleResize);
+    return () => window?.removeEventListener('resize', handleResize);
+  }, [isMobile]);
 
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index} style={slideStyle}>
@@ -73,10 +89,17 @@ const HomeOffshoreWorks = ({ data }) => {
           </Box>
         ) : (
           <>
-            <Box className="home-off-shore-works" sx={desktopSliderStyle}>
+            <Box className="home-off-shore-works">
               <Swiper
-                effect={'cube'}
+                key={renderKey}
+                effect={isMobile ? 'cube' : 'slide'}
                 grabCursor={true}
+                cubeEffect={{
+                  shadow: true,
+                  slideShadows: true,
+                  shadowOffset: 10,
+                  shadowScale: 1,
+                }}
                 pagination={true}
                 breakpoints={{
                   0: {
@@ -87,27 +110,6 @@ const HomeOffshoreWorks = ({ data }) => {
                   },
                   1024: {
                     slidesPerView: 3,
-                  },
-                }}
-                modules={[Navigation, Pagination]}
-              >
-                {items?.map(renderSlide)}
-              </Swiper>
-            </Box>
-            <Box className="home-off-shore-works" sx={mobileSliderStyle}>
-              <Swiper
-                effect={'cube'}
-                grabCursor={true}
-                cubeEffect={{
-                  shadow: false,
-                  slideShadows: true,
-                  shadowOffset: 20,
-                  shadowScale: 0,
-                }}
-                pagination={true}
-                breakpoints={{
-                  0: {
-                    slidesPerView: 1,
                   },
                 }}
                 modules={[EffectCube, Navigation, Pagination]}

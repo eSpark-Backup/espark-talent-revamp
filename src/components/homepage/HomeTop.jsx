@@ -11,6 +11,7 @@ import {
   EXPERTIES_DATA,
   HERO_DATA,
   HIRING_DATA,
+  OFFSHORE_DATA,
 } from '@/constants/new-home';
 import ClientSays from './ClientSays';
 import ClientSlider from '../global/ClientSlider';
@@ -21,6 +22,7 @@ import HomePageHero from '../new-home/HomePageHero';
 import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import { Box } from '@mui/material';
+import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 
 const HomeTop = () => {
   return (
@@ -49,14 +51,14 @@ const HomeTop = () => {
         data={DIFFERENCE_DATA}
         cardStyle={cardStyleForHomePage}
       />
-      {/* <HomeOffshoreWorks data={OFFSHORE_DATA} /> */}
+      <HomeOffshoreWorks data={OFFSHORE_DATA} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          gap: { xs: 4, sm: 5, md: 7, lg: 10 },
+          gap: { xs: 5.5, sm: 6, md: 7, lg: 10 },
         }}
       >
         <HomePageHiringModel data={HIRING_DATA} />

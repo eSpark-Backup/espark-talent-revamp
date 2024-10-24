@@ -667,7 +667,7 @@ export const EXPERTIES_DATA = {
     },
   ],
   styles: {
-    containerStyle: { py: { xs: '50px', sm: '75px' } },
+    containerStyle: { py: { xs: 5.5, sm: 6, md: 7, lg: 10 } },
     accordionStyle: { border: '1px solid #6A6565', boxShadow: 'none' },
     accrodionSummaryStyle: {
       display: 'flex',
@@ -740,18 +740,6 @@ export const OFFSHORE_DATA = {
       textAlign: 'center',
       fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
       lineHeight: 1.5,
-    },
-    desktopSliderStyle: {
-      display: 'none',
-      '@media(min-width: 768px)': {
-        display: 'block',
-      },
-    },
-    mobileSliderStyle: {
-      display: 'none',
-      '@media(max-width: 767px)': {
-        display: 'block',
-      },
     },
     slideStyle: {
       paddingTop: '30px',
