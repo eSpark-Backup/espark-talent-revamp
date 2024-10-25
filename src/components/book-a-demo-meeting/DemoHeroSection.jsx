@@ -3,7 +3,11 @@ import { Box, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+import {
+  boxStyle,
+  containerStyle,
+  innerBoxStyle,
+} from '../../constants/book-demo-meeting/DemoHeroSection';
 const DemoHeroSection = ({ data }) => {
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
@@ -12,26 +16,7 @@ const DemoHeroSection = ({ data }) => {
     theme.breakpoints.between('sm', 'md')
   );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
-  const boxSx = {
-    pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
-    color: '#fff',
-  };
-
-  const containerSx = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-  };
-
-  const innerBoxSx = {
-    mt: { xs: '15px', sm: '20px', md: '25px', lg: '35px' },
-    display: 'flex',
-    justifyContent: 'center',
-  };
-
-  const imageSx = {
+  const imageStyle = {
     width: isSmallScreen
       ? 100
       : isMediumScreen
@@ -49,14 +34,14 @@ const DemoHeroSection = ({ data }) => {
   };
 
   return (
-    <Box sx={boxSx}>
+    <Box sx={boxStyle}>
       <Container>
-        <Box sx={containerSx}>
-          <Box sx={innerBoxSx}>
+        <Box sx={containerStyle}>
+          <Box sx={innerBoxStyle}>
             <Link href={'/'}>
               <Image
                 src={data?.logo}
-                sx={imageSx}
+                sx={imageStyle}
                 alt="Thankyou - eSpark Talent"
               />
             </Link>

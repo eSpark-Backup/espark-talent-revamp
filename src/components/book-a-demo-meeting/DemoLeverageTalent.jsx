@@ -11,17 +11,16 @@ const DemoLeverageTalent = ({ data }) => {
     descriptionTypographyStyle,
     leverageTalentSliderStyles,
   } = styles;
-
+  const titleBoxStyle = { display: 'flex', justifyContent: 'center' };
+  const containerBoxStyle = {
+    width: '100%',
+    height: 'auto',
+    backgroundColor: '#fff',
+  };
   return (
     <Container>
-      <Box
-        sx={{
-          width: '100%',
-          height: 'auto',
-          backgroundColor: '#fff',
-        }}
-      >
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={containerBoxStyle}>
+        <Box sx={titleBoxStyle}>
           <Box sx={typographyBoxStyle}>
             <Typography
               sx={titleTypographyStyle}

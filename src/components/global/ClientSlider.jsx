@@ -47,6 +47,13 @@ const ClientSlider = ({
       return originalImagePath.replace('_light', '_dark');
     }
   };
+
+  const slideStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+
   return (
     <Box sx={{ ...sliderStyle, backgroundColor: bgColor }}>
       <Container pb={pb || '10px'} sx={containerStyle}>
@@ -88,14 +95,7 @@ const ClientSlider = ({
         breakpoints={breakPoints}
       >
         {extendedData.clients.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          <SwiperSlide key={index} style={slideStyle}>
             <Box sx={{ pb: pb || 5 }}>
               {
                 <Box
