@@ -20,11 +20,13 @@ import HomePageDifference from '../new-home/HomePageDifference';
 import HomePageHiringModal from '../new-home/HomePageHiringModal';
 import HomePageHero from '../new-home/HomePageHero';
 import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
+import EmployeeSlider from '../new-home/EmployeeSlider';
 
 const HomeTop = () => {
   return (
     <>
       <HomePageHero data={HERO_DATA} />
+      <EmployeeSlider data={[1, 2, 3, 4, 5, 6, 7, 8]} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
