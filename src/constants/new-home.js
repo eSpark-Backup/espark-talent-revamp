@@ -8,6 +8,16 @@ export const HERO_DATA = {
   btnTitle: `Book A Demo`,
   btnLink: `/book-a-demo`,
 };
+export const EMPLOYMENT_HERO_DATA = {
+  subTitle: '75% of <span>Employers</span> Face Talent Shortages',
+  title: `Hire Top Talent Now`,
+  animateText: 'Just 48 Hours.',
+  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
+  bgImage: '/images/homepage/hero/hero-image.png',
+  responsiveImage: '/images/employee/eSpark-Animation.png',
+  btnTitle: `Book A Demo`,
+  btnLink: `/book-a-demo`,
+};
 
 export const DIFFERENCE_DATA = {
   title: `Why eSpark Talent Outsourcing Model is Different`,
