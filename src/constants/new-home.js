@@ -8,20 +8,20 @@ export const HERO_DATA = {
   btnTitle: `Book A Demo`,
   btnLink: `/book-a-demo`,
 };
-export const EMPLOYMENT_HERO_DATA = {
+export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
   title: `Hire Top Talent Now`,
   description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
   bgImage: '/images/homepage/hero/emp-hero.png',
   textureImage: '/images/homepage/hero/texture-img.png',
   responsiveImage: '/images/employee/eSpark-Animation.png',
-  btnTitle: `Get Hired`,
+  btnTitle: `Request Candidate`,
   btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: (bgImage) => ({
       width: '100%',
       height: '100%',
-      py: 5,
+      pt: 5,
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%',
       backgroundPosition: 'top',
@@ -29,6 +29,7 @@ export const EMPLOYMENT_HERO_DATA = {
       zIndex: 5,
       '@media(min-width:1024px)': {
         backgroundImage: `url(${bgImage})`,
+        pb: 5,
       },
     }),
     innerBoxStyle: {
@@ -121,7 +122,7 @@ export const EMPLOYMENT_HERO_DATA = {
       mt: { xs: 1.3, lg: 1 },
     },
     btnStyle: {
-      width: { xs: '144px', md: '150px', lg: '174px' },
+      width: { xs: '220px', md: '230px', lg: '240px' },
       height: { xs: '35px', md: '40px', lg: '44px' },
       backgroundColor: '#029894',
       borderRadius: '12px',

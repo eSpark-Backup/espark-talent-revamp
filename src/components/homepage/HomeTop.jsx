@@ -6,7 +6,7 @@ import {
 } from '@/constants/homepage';
 import {
   DIFFERENCE_DATA,
-  EMPLOYMENT_HERO_DATA,
+  EMPLOYEE_HERO_DATA,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
   HIRING_DATA,
@@ -24,7 +24,7 @@ import EmployeeBanner from '../employment/EmployeeBanner';
 const HomeTop = () => {
   return (
     <>
-      <EmployeeBanner data={EMPLOYMENT_HERO_DATA} />
+      <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}
