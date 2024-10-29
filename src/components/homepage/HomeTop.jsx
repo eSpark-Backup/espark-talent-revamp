@@ -6,6 +6,7 @@ import {
 } from '@/constants/homepage';
 import {
   DIFFERENCE_DATA,
+  EMPLOYEE_SLIDER_DATA,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
   HERO_DATA,
@@ -26,7 +27,7 @@ const HomeTop = () => {
   return (
     <>
       <HomePageHero data={HERO_DATA} />
-      <EmployeeSlider data={[1, 2, 3, 4, 5, 6, 7, 8]} />
+      <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
         breakPoints={CLIENT_SLIDER_BREAK_POINTS}

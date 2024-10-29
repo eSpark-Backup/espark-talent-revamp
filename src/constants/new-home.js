@@ -368,3 +368,55 @@ export const OFFSHORE_DATA = {
     },
   ],
 };
+
+export const EMPLOYEE_SLIDER_DATA = {
+  slides: [
+    {
+      id: 1,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 2,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 3,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 4,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 5,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 6,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 7,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+  ],
+  styles: {
+    swiperStyle: {
+      width: '100%',
+      height: '100%',
+      paddingTop: '20px',
+      paddingBottom: '20px',
+    },
+    swiperSlideStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    videoStyle: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      borderRadius: '16.08px',
+    },
+  },
+};
