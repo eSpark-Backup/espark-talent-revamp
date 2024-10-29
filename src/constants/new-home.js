@@ -373,23 +373,31 @@ export const EMPLOYEE_SLIDER_DATA = {
   slides: [
     {
       id: 1,
-      videoUrl: '/images/homepage/hero/gifs/gif-1.gif',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     },
     {
       id: 2,
-      videoUrl: '/images/homepage/hero/gifs/gif-2.gif',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     },
     {
       id: 3,
-      videoUrl: '/images/homepage/hero/gifs/gif-3.gif',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     },
     {
       id: 4,
-      videoUrl: '/images/homepage/hero/gifs/gif-4.gif',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     },
     {
       id: 5,
-      videoUrl: '/images/homepage/hero/gifs/gif-5.gif',
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 6,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    },
+    {
+      id: 7,
+      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     },
   ],
   styles: {
