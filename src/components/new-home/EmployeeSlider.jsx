@@ -7,8 +7,9 @@ import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import { Box, CircularProgress } from '@mui/material';
 import { duplicateSlides } from '@/utils';
+import Image from 'next/image';
 
-SwiperCore?.use([Autoplay]);
+SwiperCore.use([Autoplay]);
 
 const EmployeeSlider = ({ data }) => {
   const { slides, styles } = data || {};
@@ -17,23 +18,18 @@ const EmployeeSlider = ({ data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (data) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
+    if (data) setLoading(false);
   }, [data]);
 
   const renderSlide = (slide, index) => (
     <SwiperSlide key={index} style={swiperSlideStyle}>
-      <video
-        type="video/mp4"
-        src={slide?.videoUrl}
-        autoPlay
-        loop
-        muted
-        playsInline
+      <Image
+        width={100}
+        height={100}
+        src={slide.videoUrl}
         style={videoStyle}
+        onLoadingComplete={() => setLoading(false)}
+        loading="eager"
       />
     </SwiperSlide>
   );
@@ -54,16 +50,15 @@ const EmployeeSlider = ({ data }) => {
       ) : (
         <Box id="short-slider">
           <Swiper
-            slidesPerView={'auto'}
+            slidesPerView="auto"
             spaceBetween={20}
             modules={[Autoplay]}
-            loop={true}
-            navigation={false}
+            loop
             autoplay={{
-              delay: 500,
+              delay: 3000,
               disableOnInteraction: false,
             }}
-            speed={3000}
+            speed={1500}
             style={swiperStyle}
           >
             {duplicatedSlides?.map(renderSlide)}
