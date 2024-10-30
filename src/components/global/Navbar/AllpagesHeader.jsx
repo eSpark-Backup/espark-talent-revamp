@@ -39,13 +39,12 @@ const AllpagesHeader = () => {
                   background: '#029894',
                   justifyContent: 'space-between',
                   color: '#fff',
-                  pl: 2.5,
+                  pl: 3,
                   pr: 1.5,
+                  fontSize: '17px',
                   borderRadius: '36px',
                   '&:hover': {
                     backgroundColor: '#029894',
-                    boxShadow:
-                      '0px 5.63px 4.65px 0px #1DD6D1 inset, -4.23px 0px 5.63px 0px #217A78 inset, 0px 10px 10px 0px #00000029',
                     background: '#029894',
                     color: '#fff',
                   },

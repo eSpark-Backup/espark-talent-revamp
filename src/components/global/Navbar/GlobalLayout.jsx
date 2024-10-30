@@ -104,8 +104,8 @@ const GlobalLayout = ({
                 sx={{
                   ...action?.style,
                   '@media(min-width:1024px) and (max-width:1249px)': {
-                    fontSize: '11px',
-                    width: '180px',
+                    fontSize: '12px',
+                    width: '190px',
                   },
                 }}
                 onClick={() => window?.open(action?.route || '#', '_blank')}
@@ -118,6 +118,10 @@ const GlobalLayout = ({
                       p: 0.5,
                       backgroundColor: '#175A59',
                       borderRadius: '100%',
+                      '@media(min-width:1024px) and (max-width:1249px)': {
+                        width: '30px',
+                        height: '30px',
+                      },
                     }}
                   >
                     <Box

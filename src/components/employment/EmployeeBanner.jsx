@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
+import EmployeeSlider from '../new-home/EmployeeSlider';
+import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home';
 
 const EmployeeBanner = ({ data }) => {
   const {
@@ -7,7 +9,7 @@ const EmployeeBanner = ({ data }) => {
     subTitle,
     description,
     bgImage,
-    responsiveImage,
+    animatedVideo,
     btnTitle,
     btnLink,
     styles,
@@ -23,6 +25,7 @@ const EmployeeBanner = ({ data }) => {
     btnStyle,
     imageBoxStyle,
     imageStyle,
+    endIconStyle,
   } = styles || {};
 
   return (
@@ -42,16 +45,34 @@ const EmployeeBanner = ({ data }) => {
             <Typography sx={descriptionStyle}>{description}</Typography>
             <Button
               disableRipple
-              onClick={() => window?.open(btnLink, '_blank')}
               sx={btnStyle}
+              onClick={() => window?.open(btnLink, '_blank')}
+              endIcon={
+                <Box sx={endIconStyle}>
+                  <Box
+                    component={'img'}
+                    src="/images/header/topbar/rc-right.png"
+                  />
+                </Box>
+              }
             >
               {btnTitle}
             </Button>
           </Box>
           <Box sx={imageBoxStyle}>
-            <Box component={'img'} src={responsiveImage} sx={imageStyle} />
+            <Box
+              component={'video'}
+              typeof="webm"
+              autoPlay
+              preload="auto"
+              muted
+              loop
+              sx={imageStyle}
+              src={animatedVideo}
+            />
           </Box>
         </Box>
+        <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
       </Box>
     </>
   );
