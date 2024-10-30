@@ -14,7 +14,11 @@ SwiperCore?.use([Autoplay]);
 const EmployeeSlider = ({ data }) => {
   const { slides, styles } = data || {};
   const { swiperStyle, swiperSlideStyle, videoStyle } = styles || {};
-  const duplicatedSlides = [...slides, ...duplicateSlides(slides), ...duplicateSlides(slides)];
+  const duplicatedSlides = [
+    ...slides,
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+  ];
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -60,10 +64,10 @@ const EmployeeSlider = ({ data }) => {
             loop={true}
             navigation={false}
             autoplay={{
-              delay: 500,
+              delay: 0,
               disableOnInteraction: false,
             }}
-            speed={3000}
+            speed={2500}
             style={swiperStyle}
           >
             {duplicatedSlides?.map(renderSlide)}

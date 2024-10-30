@@ -6,7 +6,6 @@ import {
 import {
   DIFFERENCE_DATA,
   EMPLOYEE_HERO_DATA,
-  EMPLOYEE_SLIDER_DATA,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
   HIRING_DATA,
@@ -19,14 +18,12 @@ import HomePageDifference from '../new-home/HomePageDifference';
 import HomePageHiringModal from '../new-home/HomePageHiringModal';
 import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 import EmployeeBanner from '../employment/EmployeeBanner';
-import EmployeeSlider from '../new-home/EmployeeSlider';
 import { Box } from '@mui/material';
 
 const HomeTop = () => {
   return (
     <>
       <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
-      <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
       <HomePageDifference data={DIFFERENCE_DATA} />
       <HomeOffshoreWorks data={OFFSHORE_DATA} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />

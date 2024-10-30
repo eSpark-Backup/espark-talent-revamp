@@ -14,22 +14,28 @@ export const EMPLOYEE_HERO_DATA = {
   description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
   bgImage: '/images/homepage/hero/emp-hero.png',
   textureImage: '/images/homepage/hero/texture-img.png',
-  responsiveImage: '/images/employee/eSpark-Animation.png',
+  animatedVideo: '/images/homepage/hero/animation-header.webm',
   btnTitle: `Request Candidate`,
   btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: (bgImage) => ({
       width: '100%',
       height: '100%',
-      pt: 5,
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%',
       backgroundPosition: 'top',
       position: 'relative',
       zIndex: 5,
+      '@media(min-width:1024px) and (max-width:1399px)': {
+        pt: 6,
+        pb: 6,
+      },
       '@media(min-width:1024px)': {
         backgroundImage: `url(${bgImage})`,
-        pb: 5,
+      },
+
+      '@media(max-width:1023px)': {
+        pt: 5,
       },
     }),
     innerBoxStyle: {
@@ -122,19 +128,36 @@ export const EMPLOYEE_HERO_DATA = {
       mt: { xs: 1.3, lg: 1 },
     },
     btnStyle: {
-      width: { xs: '220px', md: '230px', lg: '240px' },
-      height: { xs: '35px', md: '40px', lg: '44px' },
-      backgroundColor: '#029894',
-      borderRadius: '12px',
+      width: '246px',
+      height: '44px',
+      background: '#029894',
+      justifyContent: 'space-between',
       color: '#fff',
-      fontSize: { xs: '15px', sm: '18px' },
-      boxShadow:
-        '0px 5.63px 4.65px 0px #1DD6D1 inset, -4.23px 0px 5.63px 0px #217A78 inset',
-      mt: 2,
+      pl: 3,
+      pr: 1.5,
+      mt: 3,
+      fontSize: '17px',
+      borderRadius: '36px',
       '&:hover': {
         backgroundColor: '#029894',
-        boxShadow:
-          '0px 5.63px 4.65px 0px #1DD6D1 inset, -4.23px 0px 5.63px 0px #217A78 inset, 0px 10px 10px 0px #00000029',
+        background: '#029894',
+        color: '#fff',
+      },
+      '@media(min-width:0) and (max-width:1249px)': {
+        fontSize: '12px',
+        width: '190px',
+      },
+    },
+    endIconStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      p: 0.5,
+      backgroundColor: '#175A59',
+      borderRadius: '100%',
+      '@media(min-width:1024px) and (max-width:1249px)': {
+        width: '30px',
+        height: '30px',
       },
     },
     imageBoxStyle: {
@@ -150,7 +173,11 @@ export const EMPLOYEE_HERO_DATA = {
         mx: 'auto',
       },
     },
-    imageStyle: { width: '100%', height: 'auto' },
+    imageStyle: {
+      width: { xs: 'auto', lg: '650px', xl: '704px' },
+      height: { xs: 'auto', lg: '650px', xl: '700px' },
+      '@media(min)': {},
+    },
   },
 };
 
