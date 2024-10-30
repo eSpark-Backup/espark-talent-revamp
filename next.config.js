@@ -11,6 +11,11 @@ const nextConfig = {
         hostname: 'cdn.sanity.io',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+        pathname: '**',
+      },
     ],
   },
   async headers() {

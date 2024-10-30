@@ -38,7 +38,7 @@ function DefaultNavbarDropdown({
         color={light ? 'white' : 'dark'}
         opacity={light ? 1 : 0.6}
         sx={{
-          height: '80px',
+          height: '95px',
           cursor: 'pointer',
           userSelect: 'none',
           gap: 0.7,
@@ -60,12 +60,15 @@ function DefaultNavbarDropdown({
             color={light ? 'white' : 'dark'}
             sx={{
               height: '100%',
-              fontSize: { sm: '16px', md: '14px', lg: '16px', xl: '18px' },
+              fontSize: { xs: '15px', md: '16px', lg: '17px', xl: '18px' },
               color: '#222222',
-              fontWeight: 600,
+              fontWeight: 400,
               ml: 0,
               mr: 0.25,
-              '@media(max-width: 1023px)': {
+              '@media(min-width: 1024px) and (max-width:1249px)': {
+                fontSize: '12px',
+              },
+              '@media(min-width: 1250px) and (max-width:1399px)': {
                 fontSize: '16px',
               },
             }}

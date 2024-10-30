@@ -8,6 +8,151 @@ export const HERO_DATA = {
   btnTitle: `Book A Demo`,
   btnLink: `/book-a-demo`,
 };
+export const EMPLOYEE_HERO_DATA = {
+  subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
+  title: `Hire Top Talent Now`,
+  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
+  bgImage: '/images/homepage/hero/emp-hero.png',
+  textureImage: '/images/homepage/hero/texture-img.png',
+  responsiveImage: '/images/employee/eSpark-Animation.png',
+  btnTitle: `Request Candidate`,
+  btnLink: `/book-a-demo`,
+  styles: {
+    mainBoxStyle: (bgImage) => ({
+      width: '100%',
+      height: '100%',
+      pt: 5,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '100%',
+      backgroundPosition: 'top',
+      position: 'relative',
+      zIndex: 5,
+      '@media(min-width:1024px)': {
+        backgroundImage: `url(${bgImage})`,
+        pb: 5,
+      },
+    }),
+    innerBoxStyle: {
+      mx: 'auto',
+      maxWidth: '1400px',
+      display: 'flex',
+      gap: { xs: 3, md: 8, lg: 0 },
+      '@media (min-width: 1024px)': {
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      '@media (max-width: 1023px)': {
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        maxWidth: '100%',
+      },
+      '@media (min-width: 600px) and (max-width: 1023px)': {
+        px: 6,
+        pb: 0,
+      },
+    },
+    contentBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      color: '#101828',
+      maxWidth: {
+        md: 'calc(100% - 620px)',
+        lg: `calc(100% - 715px)`,
+        xl: `calc(100% - 615px)`,
+      },
+      pl: { sm: 5, lg: 6, xl: 0 },
+      '@media (min-width: 600px) and (max-width: 1023px)': {
+        maxWidth: '550px',
+        textAlign: 'center',
+        alignItems: 'center',
+        pl: 0,
+      },
+      '@media (min-width: 280px) and (max-width: 599px)': {
+        maxWidth: '100%',
+        textAlign: 'center',
+        alignItems: 'center',
+        px: 4,
+      },
+    },
+    subTitleBoxStyle: {
+      '@media (max-width: 1023px)': {
+        width: '100%',
+        maxWidth: '400px',
+        mx: 'auto',
+      },
+    },
+    subTitleStyle: {
+      mb: 0.5,
+      color: '#0B395A',
+      fontSize: {
+        xs: '17px',
+        sm: '20px',
+        md: '23px',
+        lg: '28px',
+        xl: '36px',
+      },
+      fontWeight: 500,
+      lineHeight: {
+        xs: 1.2,
+      },
+    },
+    titleStyle: {
+      color: '#0B395A',
+      fontSize: {
+        xs: '30px',
+        sm: '40px',
+        md: '55px',
+        lg: '78px',
+      },
+      fontWeight: 600,
+      lineHeight: {
+        xs: '40px',
+        sm: '55px',
+        md: '65px',
+        lg: '85px',
+        xl: '85px',
+      },
+    },
+    descriptionStyle: {
+      fontSize: { xs: '10px', sm: '14px', md: '15px', lg: '18px' },
+      lineHeight: { xs: '19px', sm: '24px', md: '28px' },
+      fontWeight: 400,
+      color: '#1D2939',
+      mt: { xs: 1.3, lg: 1 },
+    },
+    btnStyle: {
+      width: { xs: '220px', md: '230px', lg: '240px' },
+      height: { xs: '35px', md: '40px', lg: '44px' },
+      backgroundColor: '#029894',
+      borderRadius: '12px',
+      color: '#fff',
+      fontSize: { xs: '15px', sm: '18px' },
+      boxShadow:
+        '0px 5.63px 4.65px 0px #1DD6D1 inset, -4.23px 0px 5.63px 0px #217A78 inset',
+      mt: 2,
+      '&:hover': {
+        backgroundColor: '#029894',
+        boxShadow:
+          '0px 5.63px 4.65px 0px #1DD6D1 inset, -4.23px 0px 5.63px 0px #217A78 inset, 0px 10px 10px 0px #00000029',
+      },
+    },
+    imageBoxStyle: {
+      width: '100%',
+      maxWidth: {
+        xs: '80%',
+        md: '50%',
+        lg: 'auto',
+        xl: 'auto',
+      },
+      '@media (min-width: 600px) and (max-width: 1023px)': {
+        maxWidth: '400px',
+        mx: 'auto',
+      },
+    },
+    imageStyle: { width: '100%', height: 'auto' },
+  },
+};
 
 export const DIFFERENCE_DATA = {
   title: `Why eSpark Talent Outsourcing Model is Different`,
@@ -367,4 +512,58 @@ export const OFFSHORE_DATA = {
       description: "Decide who to hire, and we'll take care of the rest.",
     },
   ],
+};
+
+export const EMPLOYEE_SLIDER_DATA = {
+  slides: [
+    {
+      id: 1,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 2,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 3,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 4,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 5,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+  ],
+  styles: {
+    swiperStyle: {
+      width: '100%',
+      height: '100%',
+      paddingTop: '20px',
+      paddingBottom: '20px',
+    },
+    swiperSlideStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    videoStyle: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      borderRadius: '16.08px',
+    },
+  },
 };
