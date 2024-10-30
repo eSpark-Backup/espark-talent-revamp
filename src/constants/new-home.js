@@ -373,31 +373,28 @@ export const EMPLOYEE_SLIDER_DATA = {
   slides: [
     {
       id: 1,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
     },
     {
       id: 2,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
     },
     {
       id: 3,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
     },
     {
       id: 4,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
     },
     {
       id: 5,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    },
-    {
-      id: 6,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    },
-    {
-      id: 7,
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
     },
   ],
   styles: {
@@ -420,3 +417,8 @@ export const EMPLOYEE_SLIDER_DATA = {
     },
   },
 };
+
+//
+//
+//
+//

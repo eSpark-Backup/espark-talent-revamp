@@ -7,6 +7,7 @@ import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import { Box, CircularProgress } from '@mui/material';
 import { duplicateSlides } from '@/utils';
+import Image from 'next/image';
 
 SwiperCore?.use([Autoplay]);
 
@@ -26,7 +27,7 @@ const EmployeeSlider = ({ data }) => {
 
   const renderSlide = (slide, index) => (
     <SwiperSlide key={index} style={swiperSlideStyle}>
-      <video
+      {/* <video
         type="video/mp4"
         src={slide?.videoUrl}
         autoPlay
@@ -34,6 +35,16 @@ const EmployeeSlider = ({ data }) => {
         muted
         playsInline
         style={videoStyle}
+      /> */}
+      <Image
+        src={slide?.videoUrl}
+        width={100}
+        height={100}
+        style={videoStyle}
+        priority={index === 0}
+        placeholder="blur"
+        blurDataURL={slide?.thumbnailUrl || '/placeholder.png'}
+        onLoadingComplete={() => setLoading(false)}
       />
     </SwiperSlide>
   );
