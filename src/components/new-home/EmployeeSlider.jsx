@@ -27,23 +27,12 @@ const EmployeeSlider = ({ data }) => {
 
   const renderSlide = (slide, index) => (
     <SwiperSlide key={index} style={swiperSlideStyle}>
-      {/* <video
-        type="video/mp4"
-        src={slide?.videoUrl}
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={videoStyle}
-      /> */}
       <Image
-        src={slide?.videoUrl}
+        src={slide?.videoUrl || slide?.thumbnailUrl}
         width={100}
         height={100}
         style={videoStyle}
         priority={index === 0}
-        placeholder="blur"
-        blurDataURL={slide?.thumbnailUrl || '/placeholder.png'}
         onLoadingComplete={() => setLoading(false)}
       />
     </SwiperSlide>
