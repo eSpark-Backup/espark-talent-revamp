@@ -44,7 +44,7 @@ const HireRemote = ({ data }) => {
           type: 'external',
           route: HIRE_A_TALENT_LINK,
           label: BOOK_A_DEMO,
-          color: 'info',
+          color: '#fff',
           style: {
             display: 'none',
             '@media(min-width: 988px)': {

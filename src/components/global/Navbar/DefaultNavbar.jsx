@@ -153,7 +153,7 @@ function DefaultNavbar({
                 shadow="lg"
                 borderRadius="lg"
                 p={dropdownName === 'Hire A Talent' ? 1 : 0}
-                mt={1}
+                mt={1.5}
                 sx={{ width: 'auto' }}
               >
                 {dropdownName === 'Hire A Talent' ? (

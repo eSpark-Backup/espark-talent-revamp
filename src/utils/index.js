@@ -315,3 +315,8 @@ export const handleSubmitJoinCrew = async (
     console.error('Error submitting the form:', error);
   }
 };
+
+// dublicates slides function for empoloyee slider from homepage
+export const duplicateSlides = (originalSlides) => {
+  return originalSlides?.map((slide) => ({ ...slide }));
+};

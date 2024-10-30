@@ -731,3 +731,53 @@ export const hideCtaPaths = [
   '/hire-ui-ux-designers',
   '/hire-wordpress-developers',
 ];
+
+export const TOP_BAR_DATA = {
+  mailText: 'info@esparktalent.com',
+  mailIcon: '/images/header/topbar/mail.svg',
+  socialIcons: [
+    {
+      img: '/images/header/topbar/fb.svg',
+      path: 'https://www.facebook.com/esparktalent/',
+    },
+    {
+      img: '/images/header/topbar/twitter.svg',
+      path: 'https://www.twitter.com/eSparkTalent',
+    },
+    {
+      img: '/images/header/topbar/in.svg',
+      path: 'https://www.linkedin.com/company/espark-talent/',
+    },
+    {
+      img: '/images/header/topbar/ins.svg',
+      path: 'https://www.instagram.com/esparktalent/',
+    },
+  ],
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '32px',
+      display: { xs: 'none', md: 'flex' },
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 999,
+      backgroundColor: '#029894',
+      px: { md: 6.5, lg: 0 },
+    },
+    topBarBoxStyle: {
+      width: '100%',
+      maxWidth: { xs: '1280px', xl: '1400px' },
+      display: { xs: 'none', md: 'flex' },
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    mailBoxStyle: { display: 'flex', alignItems: 'center', gap: 0.8 },
+    mailTextStyle: {
+      fontSize: { md: '13px', lg: '15px' },
+      fontWeight: 500,
+      color: '#fff',
+      textWrap: 'nowrap',
+    },
+    socialIconBoxStyle: { display: 'flex', alignItems: 'center', gap: 2.5 },
+  },
+};
