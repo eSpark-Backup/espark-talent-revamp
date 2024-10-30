@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import { Box, CircularProgress } from '@mui/material';
-import { duplicateSlides } from '@/utils';
+// import { duplicateSlides } from '@/utils';
 import Image from 'next/image';
 
 SwiperCore?.use([Autoplay]);
@@ -14,7 +14,7 @@ SwiperCore?.use([Autoplay]);
 const EmployeeSlider = ({ data }) => {
   const { slides, styles } = data || {};
   const { swiperStyle, swiperSlideStyle, videoStyle } = styles || {};
-  const duplicatedSlides = [...slides, ...duplicateSlides(slides)];
+  // const duplicatedSlides = [...slides, ...duplicateSlides(slides)];
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const EmployeeSlider = ({ data }) => {
             speed={3000}
             style={swiperStyle}
           >
-            {duplicatedSlides?.map(renderSlide)}
+            {slides?.map(renderSlide)}
           </Swiper>
         </Box>
       )}

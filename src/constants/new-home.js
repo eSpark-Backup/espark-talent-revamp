@@ -373,28 +373,23 @@ export const EMPLOYEE_SLIDER_DATA = {
   slides: [
     {
       id: 1,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      videoUrl: '/images/homepage/hero/gifs/gif-1.gif',
     },
     {
       id: 2,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      videoUrl: '/images/homepage/hero/gifs/gif-2.gif',
     },
     {
       id: 3,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      videoUrl: '/images/homepage/hero/gifs/gif-3.gif',
     },
     {
       id: 4,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      videoUrl: '/images/homepage/hero/gifs/gif-4.gif',
     },
     {
       id: 5,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      videoUrl: '/images/homepage/hero/gifs/gif-5.gif',
     },
   ],
   styles: {
@@ -417,8 +412,3 @@ export const EMPLOYEE_SLIDER_DATA = {
     },
   },
 };
-
-//
-//
-//
-//

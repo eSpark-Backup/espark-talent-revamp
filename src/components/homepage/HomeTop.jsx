@@ -9,7 +9,7 @@ import {
   EMPLOYEE_SLIDER_DATA,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
-  HERO_DATA,
+  // HERO_DATA,
   HIRING_DATA,
   OFFSHORE_DATA,
 } from '@/constants/new-home';
@@ -19,14 +19,14 @@ import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 import HomePageDifference from '../new-home/HomePageDifference';
 import HomePageHiringModal from '../new-home/HomePageHiringModal';
-import HomePageHero from '../new-home/HomePageHero';
+// import HomePageHero from '../new-home/HomePageHero';
 import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 import EmployeeSlider from '../new-home/EmployeeSlider';
 
 const HomeTop = () => {
   return (
     <>
-      <HomePageHero data={HERO_DATA} />
+      {/* <HomePageHero data={HERO_DATA} /> */}
       <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
