@@ -27,15 +27,14 @@ export const EMPLOYEE_HERO_DATA = {
       position: 'relative',
       zIndex: 5,
       '@media(min-width:1024px) and (max-width:1399px)': {
-        pt: 6,
-        pb: 6,
+        pt: 2.5,
       },
       '@media(min-width:1024px)': {
         backgroundImage: `url(${bgImage})`,
       },
 
       '@media(max-width:1023px)': {
-        pt: 5,
+        pt: 5.5,
       },
     }),
     innerBoxStyle: {
@@ -78,7 +77,7 @@ export const EMPLOYEE_HERO_DATA = {
         maxWidth: '100%',
         textAlign: 'center',
         alignItems: 'center',
-        px: 4,
+        px: 2,
       },
     },
     subTitleBoxStyle: {
@@ -94,11 +93,11 @@ export const EMPLOYEE_HERO_DATA = {
       fontSize: {
         xs: '17px',
         sm: '20px',
-        md: '23px',
-        lg: '28px',
-        xl: '36px',
+        md: '21px',
+        lg: '24px',
+        xl: '29px',
       },
-      fontWeight: 500,
+      fontWeight: 600,
       lineHeight: {
         xs: 1.2,
       },
@@ -109,7 +108,8 @@ export const EMPLOYEE_HERO_DATA = {
         xs: '30px',
         sm: '40px',
         md: '55px',
-        lg: '78px',
+        lg: '58px',
+        xl: '70px',
       },
       fontWeight: 600,
       lineHeight: {
@@ -119,6 +119,7 @@ export const EMPLOYEE_HERO_DATA = {
         lg: '85px',
         xl: '85px',
       },
+      maxWidth: '785px',
     },
     descriptionStyle: {
       fontSize: { xs: '10px', sm: '14px', md: '15px', lg: '18px' },
@@ -126,6 +127,10 @@ export const EMPLOYEE_HERO_DATA = {
       fontWeight: 400,
       color: '#1D2939',
       mt: { xs: 1.3, lg: 1 },
+      pr: { xs: 3, lg: 5, xl: 9 },
+      '@media (min-width: 280px) and (max-width: 599px)': {
+        px: 2,
+      },
     },
     btnStyle: {
       width: '246px',
@@ -174,8 +179,8 @@ export const EMPLOYEE_HERO_DATA = {
       },
     },
     imageStyle: {
-      width: { xs: 'auto', lg: '650px', xl: '704px' },
-      height: { xs: 'auto', lg: '650px', xl: '700px' },
+      width: { xs: 'auto', md: '580px', lg: '650px', xl: '704px' },
+      height: { xs: 'auto', lg: '650px' },
       '@media(min)': {},
     },
   },

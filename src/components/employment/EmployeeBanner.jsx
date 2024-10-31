@@ -72,7 +72,9 @@ const EmployeeBanner = ({ data }) => {
             />
           </Box>
         </Box>
-        <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
+        <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>
+          <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
+        </Box>
       </Box>
     </>
   );
