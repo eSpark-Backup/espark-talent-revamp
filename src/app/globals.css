@@ -1883,37 +1883,69 @@ input {
 
 /* ***************** */
 
+
+/* employee slide animation of home page */
+
+.sliderContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: inline-flex;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+}
+
+.slide {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
 @media (min-width: 1400px) {
-  #short-slider .swiper-slide {
-    width: 255px;
-    height: 281px;
+  #short-slider .slide {
+    width: 220px;
+    height: 250px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1399px) {
-  #short-slider .swiper-slide {
-    width: 200px;
-    height: 230px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  #short-slider .swiper-slide {
+  #short-slider .slide {
     width: 180px;
     height: 210px;
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  #short-slider .swiper-slide {
-    width: 150px;
+@media (min-width: 768px) and (max-width: 1023px) {
+  #short-slider .slide {
+    width: 160px;
     height: 190px;
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  #short-slider .swiper-slide {
-    width: 120px;
-    height: 150px;
+@media (min-width: 481px) and (max-width: 767px) {
+  #short-slider .slide {
+    width: 140px;
+    height: 170px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #short-slider .slide {
+    width: 120px;
+    height: 140px;
+  }
+}
+
+/* ***************** */

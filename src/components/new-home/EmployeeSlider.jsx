@@ -1,19 +1,12 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Autoplay } from 'swiper/modules';
-import SwiperCore from 'swiper';
 import { Box, CircularProgress } from '@mui/material';
 import { duplicateSlides } from '@/utils';
 import Image from 'next/image';
 
-SwiperCore?.use([Autoplay]);
-
 const EmployeeSlider = ({ data }) => {
-  const { slides, styles } = data || {};
-  const { swiperStyle, swiperSlideStyle, videoStyle } = styles || {};
+  const { slides, styles: styleData } = data || {};
+  const { swiperSlideStyle, videoStyle } = styleData || {};
   const duplicatedSlides = [
     ...slides,
     ...duplicateSlides(slides),
@@ -25,22 +18,9 @@ const EmployeeSlider = ({ data }) => {
     if (data) {
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 800);
     }
   }, [data]);
-
-  const renderSlide = (slide, index) => (
-    <SwiperSlide key={index} style={swiperSlideStyle}>
-      <Image
-        src={slide?.videoUrl || slide?.thumbnailUrl}
-        width={100}
-        height={100}
-        style={videoStyle}
-        priority={index === 0}
-        onLoadingComplete={() => setLoading(false)}
-      />
-    </SwiperSlide>
-  );
 
   return (
     <>
@@ -56,22 +36,21 @@ const EmployeeSlider = ({ data }) => {
           <CircularProgress />
         </Box>
       ) : (
-        <Box id="short-slider">
-          <Swiper
-            slidesPerView={'auto'}
-            spaceBetween={20}
-            modules={[Autoplay]}
-            loop={true}
-            navigation={false}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            speed={2500}
-            style={swiperStyle}
-          >
-            {duplicatedSlides?.map(renderSlide)}
-          </Swiper>
+        <Box id="short-slider" className={'sliderContainer'}>
+          <Box className={'sliderTrack'}>
+            {duplicatedSlides?.map((slide, index) => (
+              <Box key={index} className={'slide'} style={swiperSlideStyle}>
+                <Image
+                  alt=""
+                  src={slide?.videoUrl || slide?.thumbnailUrl}
+                  width={100}
+                  height={100}
+                  style={videoStyle}
+                  priority={index === 0}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       )}
     </>
