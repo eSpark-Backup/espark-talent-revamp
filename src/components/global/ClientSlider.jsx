@@ -124,9 +124,9 @@ const ClientSlider = ({
                   height={'37px'}
                   sx={{
                     width: {
-                      sm: '184px',
-                      md: '184px',
-                      lg: '186px',
+                      sm: '130px',
+                      md: '154px',
+                      lg: '175px',
                     },
                     height: {
                       sm: '35px',
@@ -138,11 +138,11 @@ const ClientSlider = ({
                       height: '25px',
                     },
                     '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '180px',
+                      width: '110px',
                       height: '25px',
                     },
                     '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '180px',
+                      width: '110px',
                       height: '25px',
                     },
                   }}
