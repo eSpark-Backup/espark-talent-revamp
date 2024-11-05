@@ -443,6 +443,20 @@ export const CLIENTS_SLIDER_DATA = {
       imageWidth: 185,
       imageHeight: 40,
     },
+    {
+      image: '/images/homepage/clients-slider/client11_dark.png',
+      imageAlt: 'Description for image 1',
+      link: '/',
+      imageWidth: 220,
+      imageHeight: 40,
+    },
+    {
+      image: '/images/homepage/clients-slider/client12.png',
+      imageAlt: 'Description for image 1',
+      link: '/',
+      imageWidth: 220,
+      imageHeight: 40,
+    },
   ],
 };
 
