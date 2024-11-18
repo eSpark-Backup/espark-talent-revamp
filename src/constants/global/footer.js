@@ -104,8 +104,8 @@ export const FOOTER_DATA = {
       },
       {
         icon: '/images/footer/phone.png',
-        text: '+17603380194',
-        link: 'tel:+17603380194',
+        text: '+1 (323) 790-6035',
+        link: 'tel:+1 (323) 790-6035',
       },
     ],
   },
@@ -146,8 +146,8 @@ export const CAREERS_FOOTER_DATA = {
       },
       {
         icon: '/images/footer/phone.png',
-        text: '+17603380194',
-        link: 'tel:+17603380194',
+        text: '+1 (323) 790-6035',
+        link: 'tel:+1 (323) 790-6035',
       },
     ],
   },
