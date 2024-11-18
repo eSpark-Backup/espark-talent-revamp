@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     // Set the minimum cache time-to-live for images
     minimumCacheTTL: 10000, // 2 hour 46 minutes
