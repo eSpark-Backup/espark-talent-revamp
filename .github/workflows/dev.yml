@@ -12,7 +12,7 @@ concurrency: ci-${{ github.repository }}-docker-pipeline
 env:
   path_to_dockerfile: "Dockerfile"
   docker_build_dir: "."
-  image_tag: "latest"
+  image_tag: "dev-latest"
   lifecycle_policy_file: "policy.json"
   backend_s3_bucket: "talent-terraform-bucket"
   backend_iam_role: "terraform-role"
