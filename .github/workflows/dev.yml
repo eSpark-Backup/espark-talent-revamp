@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: eSpark Talent Development CI-CD
+name: eSpark Talent Devel opment CI-CD
 
 on:
   push:
@@ -181,5 +181,5 @@ jobs:
         docker stop talent-dev || true
         docker rm talent-dev || true
         docker run -d \
-          --name talent-main \
+          --name talent-dev \
           -p ${{ secrets.DEV_DOCKER_EXPOSED_PORT }}:${{ secrets.DOCKER_APPLICATION_PORT }} "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
