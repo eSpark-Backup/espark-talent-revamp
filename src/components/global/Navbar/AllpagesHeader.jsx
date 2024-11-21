@@ -1,10 +1,14 @@
 'use client';
 import React from 'react';
 import routes from '@/constants/routes';
-import { BOOK_A_DEMO, HIRE_A_TALENT_LINK } from '@/constants/global/header';
+import {
+  HIRE_A_TALENT_LINK,
+  Request_Candidate,
+} from '@/constants/global/header';
 import Topbar from './Topbar';
 import { usePathname } from 'next/navigation';
 import DefaultNavbar from './DefaultNavbar';
+import { TOP_BAR_DATA } from '@/constants/homepage';
 
 const AllpagesHeader = () => {
   const pathName = usePathname();
@@ -19,7 +23,7 @@ const AllpagesHeader = () => {
         pathName !== '/hire-remote-developers' &&
         pathName !== '/book-a-demo-meeting' && (
           <>
-            <Topbar />
+            <Topbar data={TOP_BAR_DATA} />
             <DefaultNavbar
               routes={routes}
               pathName={pathName}
@@ -27,24 +31,23 @@ const AllpagesHeader = () => {
               action={{
                 type: 'external',
                 route: HIRE_A_TALENT_LINK,
-                label: BOOK_A_DEMO,
-                color: 'info',
+                label: Request_Candidate,
+                color: '#fff',
                 style: {
-                  border: '1.145px solid #222',
-                  borderRadius: '5.727px',
+                  width: '246px',
+                  height: '44px',
+                  background: '#029894',
+                  justifyContent: 'space-between',
+                  color: '#fff',
+                  pl: 3,
+                  pr: 1.5,
+                  fontSize: '17px',
+                  borderRadius: '36px',
                   '&:hover': {
+                    backgroundColor: '#029894',
                     background: '#029894',
                     color: '#fff',
-                    border: '1.145px solid #029894',
                   },
-                  color: '#222',
-                  textAlign: 'center',
-                  fontSize: '17.766px',
-                  fontStyle: 'normal',
-                  fontWeight: 600,
-                  lineHeight: '27.49px',
-                  padding: '11px 20px 9px 20px',
-                  alignItems: 'center',
                 },
               }}
             />

@@ -115,7 +115,7 @@ const DefaultNavbarMobile = ({ routes, open, mobileMenu, handleClose }) => {
                           textTransform="capitalize"
                           sx={{
                             color: '#222222',
-                            fontSize: { xs: '15px', md: '17px' },
+                            fontSize: { xs: '15px', md: '15px' },
                             fontWeight: 600,
                           }}
                         >

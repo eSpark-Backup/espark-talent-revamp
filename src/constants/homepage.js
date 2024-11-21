@@ -159,10 +159,10 @@ export const DEVELOEPRS_PERKS_DATA = [
   {
     sno: '01',
     title: 'Hire Salary Based Developers ​',
-    icon: '/images/homepage/our-perks/icon1.svg',
-    activeIcon: '/images/homepage/our-perks/icon1a.svg',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
-    listIcon: '/images/homepage/our-perks/list-icon.svg',
+    icon: '/images/homepage/our-perks/icon1.png',
+    activeIcon: '/images/homepage/our-perks/icon1a.png',
+    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
+    listIcon: '/images/homepage/our-perks/list-icon.png',
     content: {
       heading: 'Hire Full-Time Salaried Developers',
       paragraph: `This model of outstaffing advances your workforce with stable, fixed pay, regardless of weekly hours. Our commitment includes transparent communication and respecting your team's time and dedication.`,
@@ -180,9 +180,9 @@ export const DEVELOEPRS_PERKS_DATA = [
   {
     sno: '02',
     title: 'Hire Hourly Based Developers',
-    icon: '/images/homepage/our-perks/icon2.svg',
-    activeIcon: '/images/homepage/our-perks/icon2a.svg',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
+    icon: '/images/homepage/our-perks/icon2.png',
+    activeIcon: '/images/homepage/our-perks/icon2a.png',
+    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
     content: {
       heading: 'Hire Hourly Developers',
       paragraph: `These employees are compensated for actual hours worked, ensuring fair pay for dedicated work. Avail the benefits of a dedicated hourly workforce, usually receiving time-and-a-half for hours exceeding 45 per week.`,
@@ -192,7 +192,7 @@ export const DEVELOEPRS_PERKS_DATA = [
         { item: 'Dynamic Response to Workload.' },
         { item: 'Adherence to Labor Laws.' },
       ],
-      listIcon: '/images/homepage/our-perks/list-icon.svg',
+      listIcon: '/images/homepage/our-perks/list-icon.png',
       buttonText: 'Hire a Developer',
       buttonLink: '/hire-a-frontend-developer/#form',
     },
@@ -200,9 +200,9 @@ export const DEVELOEPRS_PERKS_DATA = [
   {
     sno: '03',
     title: 'Hire a Dedicated Team',
-    icon: '/images/homepage/our-perks/icon3.svg',
-    activeIcon: '/images/homepage/our-perks/icon3a.svg',
-    hoverIcons: '/images/homepage/our-perks/hover-icon.svg',
+    icon: '/images/homepage/our-perks/icon3.png',
+    activeIcon: '/images/homepage/our-perks/icon3a.png',
+    hoverIcons: '/images/homepage/our-perks/hover-icon.png',
     content: {
       heading: 'Hire a Dedicated Team',
       paragraph: `Elevate your tasks with eSpark Talent's project-based employees. This dynamic approach to project outstaffing ensures adaptability and collaboration, leading to consistently enhanced outcomes.`,
@@ -212,7 +212,7 @@ export const DEVELOEPRS_PERKS_DATA = [
         { item: 'Specialized Expertise,' },
         { item: 'Strategic Project Planning.' },
       ],
-      listIcon: '/images/homepage/our-perks/list-icon.svg',
+      listIcon: '/images/homepage/our-perks/list-icon.png',
       buttonText: 'Hire a Developer',
       buttonLink: '/hire-a-frontend-developer/#form',
     },
@@ -441,6 +441,20 @@ export const CLIENTS_SLIDER_DATA = {
       imageAlt: 'Description for image 1',
       link: '/',
       imageWidth: 185,
+      imageHeight: 40,
+    },
+    {
+      image: '/images/homepage/clients-slider/client11_dark.png',
+      imageAlt: 'Description for image 1',
+      link: '/',
+      imageWidth: 220,
+      imageHeight: 40,
+    },
+    {
+      image: '/images/homepage/clients-slider/client12.png',
+      imageAlt: 'Description for image 1',
+      link: '/',
+      imageWidth: 220,
       imageHeight: 40,
     },
   ],
@@ -731,3 +745,53 @@ export const hideCtaPaths = [
   '/hire-ui-ux-designers',
   '/hire-wordpress-developers',
 ];
+
+export const TOP_BAR_DATA = {
+  mailText: 'info@esparktalent.com',
+  mailIcon: '/images/header/topbar/mail.svg',
+  socialIcons: [
+    {
+      img: '/images/header/topbar/fb.svg',
+      path: 'https://www.facebook.com/esparktalent/',
+    },
+    {
+      img: '/images/header/topbar/twitter.svg',
+      path: 'https://www.twitter.com/eSparkTalent',
+    },
+    {
+      img: '/images/header/topbar/in.svg',
+      path: 'https://www.linkedin.com/company/espark-talent/',
+    },
+    {
+      img: '/images/header/topbar/ins.svg',
+      path: 'https://www.instagram.com/esparktalent/',
+    },
+  ],
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '32px',
+      display: { xs: 'none', md: 'flex' },
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 999,
+      backgroundColor: '#029894',
+      px: { md: 6.5, lg: 0 },
+    },
+    topBarBoxStyle: {
+      width: '100%',
+      maxWidth: { xs: '1280px', xl: '1400px' },
+      display: { xs: 'none', md: 'flex' },
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    mailBoxStyle: { display: 'flex', alignItems: 'center', gap: 0.8 },
+    mailTextStyle: {
+      fontSize: { md: '13px', lg: '15px' },
+      fontWeight: 500,
+      color: '#fff',
+      textWrap: 'nowrap',
+    },
+    socialIconBoxStyle: { display: 'flex', alignItems: 'center', gap: 2.5 },
+  },
+};

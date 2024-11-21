@@ -1,14 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Box, Button, Fade, IconButton } from '@mui/material';
 import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
 const RemoteLayout = ({
-  relative,
   sticky,
-  Link,
   center,
   renderNavbarItems,
   action,
@@ -22,37 +21,39 @@ const RemoteLayout = ({
   dropdownName,
   mobileNavbarRef,
   dropdownMenu,
+  handleOpen,
 }) => {
-  const [scroll, setScroll] = useState(
-    typeof window !== 'undefined' ? 0 : window.scrollY
-  );
+  const router = useRouter();
 
   useEffect(() => {
-    function boxShadow() {
-      setScroll(window.scrollY);
-    }
-    window.addEventListener('scroll', boxShadow);
-    boxShadow();
-    return () => window.removeEventListener('scroll', boxShadow);
+    const elementId = document.getElementById('navbar');
+
+    const handleScroll = () => {
+      if (window.scrollY > 95) {
+        elementId.classList.add('is-sticky');
+      } else {
+        elementId.classList.remove('is-sticky');
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
-    <>
+    <div id="navbar" className="navbar-area">
       <Box
+        className="navbar"
         display="flex"
         alignItems="center"
         px={{ xs: 2, sm: 2, md: 3, lg: 2 }}
-        // p={1}
         sx={{
-          position: relative ? 'relative' : sticky ? 'sticky' : 'static',
-          top: sticky ? 0 : 'unset',
-          zIndex: sticky ? 1100 : 'unset',
-          height: '80px',
-          backgroundColor: scroll > 0 ? '#fff' : '#edf8f7',
-          boxShadow: scroll > 0 ? '0px 4px 4px 0px #00000040' : 'none',
-          transition:
-            'box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out',
           '@media(max-width: 1023px)': {
+            height: '80px',
             backgroundColor: '#fff',
             boxShadow: '0px 4px 4px 0px #00000040',
           },
@@ -70,12 +71,17 @@ const RemoteLayout = ({
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 7 }}>
             <Box
-              component={Link}
+              component="a"
               href="/"
               display="flex"
               alignItems="center"
               sx={{
                 width: { xs: '80px', md: '100px', lg: '115px', xl: '128px' },
+                cursor: 'pointer',
+              }}
+              onClick={(e) => {
+                e?.preventDefault();
+                router?.push('/');
               }}
             >
               <Box component={'img'} src={'/images/header/logo.png'} />
@@ -110,7 +116,7 @@ const RemoteLayout = ({
             >
               <Button
                 disableRipple
-                onClick={() => window?.open(action?.route || '#', '_blank')}
+                onClick={handleOpen}
                 sx={{ ...action?.style }}
               >
                 {action?.label || ''}
@@ -166,7 +172,7 @@ const RemoteLayout = ({
         mobileNavbarRef={mobileNavbarRef}
       />
       {dropdownMenu}
-    </>
+    </div>
   );
 };
 

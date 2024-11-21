@@ -116,25 +116,21 @@ const BookClientSlider = ({
                   height={'37px'}
                   sx={{
                     width: {
-                      sm: '184px',
-                      md: '184px',
-                      lg: '186px',
+                      sm: '144px',
+                      md: '154px',
+                      lg: '150px',
                     },
-                    height: {
-                      sm: '35px',
-                      md: '35px',
-                      lg: '37px',
-                    },
+                    height: 'auto',
                     '@media (min-width: 550px) and (max-width: 767px)': {
                       width: '160px',
                       height: '25px',
                     },
                     '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '180px',
+                      width: '90px',
                       height: '25px',
                     },
                     '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '180px',
+                      width: '88px',
                       height: '25px',
                     },
                   }}

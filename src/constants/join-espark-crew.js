@@ -963,11 +963,11 @@ export const BENEFITS = [
 ];
 
 export const KEYS = [
-  'CV Submission and Storage: Your CV is kept on record, aligning you with suitable opportunities as they arise.',
-  'Active Job Search Is Crucial: Registration is a step forward, but actively seeking and applying for roles is essential.',
-  'Understand the Hiring Process: Registration is a step forward, but actively seeking and applying for roles is essential.',
-  'Priority for Perfect Matches: Registration is a step forward, but actively seeking and applying for roles is essential.',
-  'Proactive Participation Needed: Registration is a step forward, but actively seeking and applying for roles is essential.',
+  'CV Submission and Storage: Your CV is kept on record, aligning you with suitable opportunities as they arise.',
+  'Active Job Search Is Crucial: Registration is a step forward, but actively seeking and applying for roles is essential.',
+  'Understand the Hiring Process: Screening candidates, interviews, and final selection. Knowing each step helps you attract and hire top talent efficiently.',
+  'Priority for Perfect Matches: We focus on aligning skills and values to ensure the best fit for your team, leading to successful and lasting partnerships.',
+  'Proactive Participation Needed: Active involvement is essential for success. Your engagement ensures alignment and drives us toward our common goals.',
 ];
 
 export const PERSONAL_INFO_FIELDS = [

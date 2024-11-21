@@ -154,6 +154,7 @@ const ExpertTeamCard = ({ teamData }) => {
                         fontWeight: 600,
                         lineHeight: { xs: '24.4px', md: '26.4px' },
                         mb: { xs: '9px', md: '11px' },
+                        textAlign: { xs: 'center', lg: 'start' },
                       }}
                     >
                       {item?.title}
@@ -165,6 +166,7 @@ const ExpertTeamCard = ({ teamData }) => {
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: { xs: '24px', md: '30.4px' },
+                        textAlign: { xs: 'center', lg: 'start' },
                       }}
                     >
                       {item?.paragraph}

@@ -1,8 +1,18 @@
 'use client';
 import { Box, Button, Typography } from '@mui/material';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const BlueCard = ({ data }) => {
+const BlueCard = ({ data, handleOpen }) => {
+  const pathname = usePathname();
+  const openForm = (link, target) => {
+    if (pathname?.includes('/hire-remote-developers')) {
+      return handleOpen();
+    } else {
+      return window?.open(link, target);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -80,9 +90,7 @@ const BlueCard = ({ data }) => {
                   }}
                 >
                   <Button
-                    onClick={() =>
-                      window?.open(eachItem?.btnLink || '#', '_blank')
-                    }
+                    onClick={() => openForm(eachItem?.btnLink || '#', '_blank')}
                     disableRipple
                     variant="primary"
                     sx={{

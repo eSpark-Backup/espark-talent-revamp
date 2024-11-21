@@ -204,7 +204,7 @@ const HomeOffshoreWorks = ({ data }) => {
                     height={isXS ? 80 : isSM ? 80 : isMD ? 100 : 100}
                     alt={`Experties Icon`}
                     style={{
-                      zIndex: '99999',
+                      zIndex: '500',
                       position: 'relative',
                       top: isXS ? '60px' : isSM ? '30px' : '45px',
                       boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',

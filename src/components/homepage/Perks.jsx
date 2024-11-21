@@ -146,25 +146,20 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                             },
                           }}
                         >
-                          {index === selectedCard ? (
+                          {
                             <Image
                               quality="85"
                               priority={true}
-                              src={perk?.activeIcon}
-                              alt={perk.title}
+                              src={
+                                index === selectedCard
+                                  ? perk?.activeIcon
+                                  : perk?.icon
+                              }
+                              alt={perk?.title}
                               height={38}
                               width={38}
                             />
-                          ) : (
-                            <Image
-                              quality="85"
-                              priority={true}
-                              src={perk?.icon}
-                              alt={perk.title}
-                              height={38}
-                              width={38}
-                            />
-                          )}
+                          }
                         </Box>
                         <Typography
                           variant="h3"
@@ -306,7 +301,7 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                             <Image
                               quality="85"
                               priority={true}
-                              src={`/images/homepage/our-perks/list-icon.svg`}
+                              src={`/images/homepage/our-perks/list-icon.png`}
                               alt="List Icon"
                               height={
                                 isSmallScreen
