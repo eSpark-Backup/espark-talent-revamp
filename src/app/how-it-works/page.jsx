@@ -56,11 +56,7 @@ export const metadata = {
 };
 
 const Page = () => {
-  return (
-    <>
-      <HowitsWork />
-    </>
-  );
+  return <HowitsWork />;
 };
 
 export default Page;

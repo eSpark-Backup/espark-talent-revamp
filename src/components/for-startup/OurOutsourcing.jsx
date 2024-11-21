@@ -6,6 +6,7 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data;
+
   return (
     <Box sx={{ my: { xs: '40px', md: '60px', lg: '40px' } }}>
       <Box sx={{ m: { xs: '16px 0 8px 0', lg: '61px 0 75px 0' } }}>

@@ -98,6 +98,7 @@ export const PAGES = [
 ];
 export const HIRE_A_TALENT = 'Hire a Talent';
 export const BOOK_A_DEMO = 'Book a Demo';
+export const Request_Candidate = 'Request Candidate';
 export const HIRE_A_TALENT_LINK = '/book-a-demo';
 
 export const REMOTE_PAGES = ['Our Company', 'Solutions', 'Hire A Talent'];

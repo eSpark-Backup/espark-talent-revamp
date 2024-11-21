@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -16,8 +16,16 @@ import StarRating from './StarRating';
 import { usePathname } from 'next/navigation';
 
 const ClientSays = ({ data }) => {
+  const [loading, setLoading] = useState(true);
   const pathName = usePathname();
   const { slider, heading, subHeading } = data;
+
+  useEffect(() => {
+    if (slider) {
+      setLoading(false);
+    }
+  }, [slider]);
+
   return (
     data && (
       <Box
@@ -96,186 +104,204 @@ const ClientSays = ({ data }) => {
               {subHeading}
             </Typography>
           </Box>
+
           <Box className="mix-reviews-area">
             <Box className="main-review-area">
               <Box className="reviews-swiper">
-                <Swiper
-                  effect={'coverflow'}
-                  fadeEffect={{ crossFade: true }}
-                  grabCursor={false}
-                  centeredSlides={true}
-                  slidesPerView={'auto'}
-                  coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 440,
-                    modifier: 2,
-                    slideShadows: true,
-                  }}
-                  pagination={false}
-                  navigation={true}
-                  loop={true}
-                  allowTouchMove={false}
-                  draggable={false}
-                  modules={[
-                    EffectCoverflow,
-                    Navigation,
-                    Pagination,
-                    EffectFade,
-                  ]}
-                  className="mySwiper reviews-swiper"
-                  breakpoints={{
-                    0: {
-                      slidesPerView: 'auto',
-                    },
-                    425: {
-                      slidesPerView: 'auto',
-                    },
-                    600: {
-                      slidesPerView: 'auto',
-                    },
-                  }}
-                >
-                  {slider?.map((items, i) => (
-                    <SwiperSlide key={i}>
-                      <Box
-                        className="reviews-area"
-                        sx={{ minHeight: { xs: '300px', sm: '270px' } }}
-                      >
+                {loading ? (
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '300px', // Adjust the height as needed
+                    }}
+                  >
+                    <CircularProgress />
+                  </Box>
+                ) : (
+                  <Swiper
+                    effect={'coverflow'}
+                    fadeEffect={{ crossFade: true }}
+                    grabCursor={false}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                      rotate: 0,
+                      stretch: 0,
+                      depth: 440,
+                      modifier: 2,
+                      slideShadows: true,
+                    }}
+                    pagination={false}
+                    navigation={true}
+                    loop={true}
+                    allowTouchMove={false}
+                    draggable={false}
+                    modules={[
+                      EffectCoverflow,
+                      Navigation,
+                      Pagination,
+                      EffectFade,
+                    ]}
+                    className="mySwiper reviews-swiper"
+                    breakpoints={{
+                      0: {
+                        slidesPerView: 'auto',
+                      },
+                      425: {
+                        slidesPerView: 'auto',
+                      },
+                      600: {
+                        slidesPerView: 'auto',
+                      },
+                    }}
+                  >
+                    {slider?.map((items, i) => (
+                      <SwiperSlide key={i}>
                         <Box
-                          sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            pt: { xs: 3, sm: 4 },
-                            px: { xs: 2 },
-                          }}
+                          className="reviews-area"
+                          sx={{ minHeight: { xs: '300px', sm: '270px' } }}
                         >
                           <Box
                             sx={{
-                              width: { xs: '100%', sm: '440px' },
-                              height: { xs: '28px', sm: '50px' },
                               display: 'flex',
+                              justifyContent: 'center',
                               alignItems: 'center',
-                              justifyContent: 'space-between',
-                            }}
-                          >
-                            <Box
-                              sx={{
-                                height: { xs: '28px', sm: '34px' },
-                              }}
-                            >
-                              <Box
-                                component={'img'}
-                                quality="85"
-                                priority={true}
-                                src={items.image}
-                                alt="logo"
-                                sx={{
-                                  width: { xs: '134px', sm: '174px' },
-                                  height: { xs: '28px', sm: '34px' },
-                                }}
-                              />
-                            </Box>
-                            <Box
-                              sx={{
-                                display: 'flex',
-                                '@media (min-width: 300px) and (max-width: 599px) ':
-                                  {
-                                    display: 'none',
-                                  },
-                              }}
-                            >
-                              <StarRating stars={4} />
-                            </Box>
-                          </Box>
-                        </Box>
-
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            my: { sm: 4, md: 0.5 },
-                            '@media (min-width: 600px) and (max-width: 767px) ':
-                              {
-                                my: 3,
-                              },
-                            '@media (min-width: 425px) and (max-width: 599px) ':
-                              {
-                                my: 3,
-                              },
-                            '@media (min-width: 300px) and (max-width: 424px) ':
-                              {
-                                my: 2,
-                              },
-                          }}
-                        >
-                          <Box
-                            sx={{
-                              width: { xs: '100%', sm: '440px' },
+                              pt: { xs: 3.5, sm: 3, md: 4 },
                               px: { xs: 2 },
                             }}
                           >
-                            <Typography
-                              variant="h5"
+                            <Box
                               sx={{
-                                fontSize: '24px',
-                                fontWeight: 600,
-                                color: '#525252',
+                                width: { xs: '100%', sm: '440px' },
+                                height: { xs: '28px', sm: '38px', md: '50px' },
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
                               }}
                             >
-                              {items?.title}
-                            </Typography>
-                            <Typography
-                              variant="h6"
-                              sx={{
-                                fontSize: '18px !important',
-                                fontWeight: 400,
-
-                                color: '#525252',
-                                '@media (min-width: 300px) and (max-width: 599px) ':
-                                  {
-                                    mb: 1,
-                                  },
-                              }}
-                            >
-                              {items?.subTitle}
                               <Box
                                 sx={{
-                                  display: 'none',
-
+                                  height: {
+                                    xs: '25px',
+                                    sm: '10px',
+                                    md: '34px',
+                                  },
+                                }}
+                              >
+                                <Box
+                                  component={'img'}
+                                  quality="85"
+                                  priority={true}
+                                  src={items.image}
+                                  alt="logo"
+                                  sx={{
+                                    width: { xs: '134px', sm: '174px' },
+                                    height: { xs: '28px', sm: '34px' },
+                                  }}
+                                />
+                              </Box>
+                              <Box
+                                sx={{
+                                  display: 'flex',
                                   '@media (min-width: 300px) and (max-width: 599px) ':
                                     {
-                                      height: 30,
-                                      display: 'flex',
-                                      mb: 0,
+                                      display: 'none',
                                     },
                                 }}
                               >
                                 <StarRating stars={4} />
                               </Box>
-                            </Typography>
-                            <Typography
-                              sx={{
-                                fontSize: {
-                                  xs: '10px !important',
-                                  md: '12px !important',
+                            </Box>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              my: { sm: 4, md: 0.5 },
+                              '@media (min-width: 600px) and (max-width: 767px) ':
+                                {
+                                  my: 3,
                                 },
-                                color: ' #525252',
-                                textAlign: 'justify',
-                                lineHeight: ' 146%',
-                                fontWeight: 400,
-                                fontStyle: 'normal',
+                              '@media (min-width: 425px) and (max-width: 599px) ':
+                                {
+                                  my: 3,
+                                },
+                              '@media (min-width: 300px) and (max-width: 424px) ':
+                                {
+                                  my: 2,
+                                },
+                            }}
+                          >
+                            <Box
+                              sx={{
+                                width: { xs: '100%', sm: '440px' },
+                                px: { xs: 2 },
                               }}
                             >
-                              {items?.description}
-                            </Typography>
+                              <Typography
+                                variant="h5"
+                                sx={{
+                                  fontSize: '24px',
+                                  fontWeight: 600,
+                                  color: '#525252',
+                                }}
+                              >
+                                {items?.title}
+                              </Typography>
+                              <Typography
+                                variant="h6"
+                                sx={{
+                                  fontSize: '18px !important',
+                                  fontWeight: 400,
+
+                                  color: '#525252',
+                                  '@media (min-width: 300px) and (max-width: 599px) ':
+                                    {
+                                      mb: 1,
+                                    },
+                                }}
+                              >
+                                {items?.subTitle}
+                                <Box
+                                  sx={{
+                                    display: 'none',
+
+                                    '@media (min-width: 300px) and (max-width: 599px) ':
+                                      {
+                                        height: 30,
+                                        display: 'flex',
+                                        mb: 0,
+                                      },
+                                  }}
+                                >
+                                  <StarRating stars={4} />
+                                </Box>
+                              </Typography>
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xs: '10px !important',
+                                    md: '12px !important',
+                                  },
+                                  color: ' #525252',
+                                  textAlign: 'justify',
+                                  lineHeight: ' 146%',
+                                  fontWeight: 400,
+                                  fontStyle: 'normal',
+                                }}
+                              >
+                                {items?.description}
+                              </Typography>
+                            </Box>
                           </Box>
                         </Box>
-                      </Box>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                )}
               </Box>
             </Box>
           </Box>

@@ -3,9 +3,10 @@ import React from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { Container, Box, Typography, useMediaQuery } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
 
 const extendClients = (clients, length) => {
   const extendedClients = Array.from({ length }, (_, index) => ({
@@ -39,7 +40,6 @@ const ClientSlider = ({
       return originalImagePath.replace('_light', '_dark');
     }
   };
-  const isMediumScreen = useMediaQuery('(max-width:769px)');
 
   return (
     <Box
@@ -50,38 +50,45 @@ const ClientSlider = ({
         boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
       }}
     >
-      <Container sx={{ pb: pb || '10px' }}>
-        {isMediumScreen ? (
-          <Typography
-            variant={variant || 'h2'}
-            color={txtColor}
-            sx={{
-              textAlign: 'center',
-              fontWeight: fontWeight,
-              py: { xs: '16px', sm: '18px', md: '30px' },
-              pt: { xs: '17px', sm: '20px', md: '50px' },
-              fontSize: fontSize,
-              lineHeight: lineHeight,
-            }}
-          >
-            {shortTitle}
-          </Typography>
-        ) : (
-          <Typography
-            variant={variant || 'h2'}
-            color={txtColor}
-            sx={{
-              textAlign: 'center',
-              fontWeight: fontWeight,
-              py: { xs: '16px', sm: '18px', md: '30px' },
-              pt: { xs: '17px', sm: '20px', md: '50px' },
-              fontSize: fontSize,
-              lineHeight: lineHeight,
-            }}
-          >
-            {compeleteTitle}
-          </Typography>
-        )}
+      <Container
+        sx={{ pb: pb || '10px', display: 'flex', justifyContent: 'center' }}
+      >
+        <Typography
+          variant={variant || 'h2'}
+          color={txtColor}
+          sx={{
+            fontWeight: fontWeight,
+            py: { xs: '16px', sm: '18px', md: '30px' },
+            pt: { xs: '17px', sm: '20px', md: '50px' },
+            fontSize: fontSize,
+            lineHeight: lineHeight,
+            textAlign: 'center',
+            display: 'none',
+            '@media (max-width:769px)': {
+              display: 'flex',
+            },
+          }}
+        >
+          {shortTitle}
+        </Typography>
+        <Typography
+          variant={variant || 'h2'}
+          color={txtColor}
+          sx={{
+            textAlign: 'center',
+            fontWeight: fontWeight,
+            py: { xs: '16px', sm: '18px', md: '30px' },
+            pt: { xs: '17px', sm: '20px', md: '50px' },
+            fontSize: fontSize,
+            lineHeight: lineHeight,
+            display: 'none',
+            '@media (min-width:770px)': {
+              display: 'flex',
+            },
+          }}
+        >
+          {compeleteTitle}
+        </Typography>
       </Container>
       <Swiper
         spaceBetween={0}
@@ -117,9 +124,9 @@ const ClientSlider = ({
                   height={'37px'}
                   sx={{
                     width: {
-                      sm: '184px',
-                      md: '184px',
-                      lg: '186px',
+                      sm: '130px',
+                      md: '154px',
+                      lg: '175px',
                     },
                     height: {
                       sm: '35px',
@@ -131,11 +138,11 @@ const ClientSlider = ({
                       height: '25px',
                     },
                     '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '180px',
+                      width: '110px',
                       height: '25px',
                     },
                     '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '180px',
+                      width: '110px',
                       height: '25px',
                     },
                   }}

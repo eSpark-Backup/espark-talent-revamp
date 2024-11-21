@@ -1,5 +1,5 @@
 'use client';
-import { Box, Button, Fade, IconButton } from '@mui/material';
+import { Box, Button, Fade } from '@mui/material';
 import React from 'react';
 import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -28,14 +28,23 @@ const GlobalLayout = ({
       <Box
         display="flex"
         alignItems="center"
-        px={{ xs: 2, sm: 2, md: 3, lg: 2 }}
+        px={{ xs: 2, sm: 2, md: 2.5, lg: 2 }}
         sx={{
           position: relative ? 'relative' : sticky ? 'sticky' : 'static',
           top: sticky ? 0 : 'unset',
           zIndex: sticky ? 1100 : 'unset',
-          height: '80px',
+          height: '76px',
           backgroundColor: '#FFFFFF',
-          boxShadow: '0px 4px 4px 0px #00000040',
+          borderBottom: '1px solid black',
+          boxShadow: '0px 4px 22px 0px #00000016',
+
+          '@media(min-width:1250px)': {
+            height: '95px',
+          },
+
+          '@media(min-width:1024px) and (max-width:1249px)': {
+            height: '88px',
+          },
         }}
       >
         <Box
@@ -44,7 +53,7 @@ const GlobalLayout = ({
             alignItems: 'center',
             mx: 'auto',
             justifyContent: 'space-between',
-            maxWidth: { md: '1180px', lg: '1250px' },
+            maxWidth: { md: '96%', lg: '1260px', xl: '1380px' },
             width: '100%',
           }}
         >
@@ -55,7 +64,10 @@ const GlobalLayout = ({
               display="flex"
               alignItems="center"
               sx={{
-                width: { xs: '80px', md: '100px', lg: '115px', xl: '128px' },
+                width: { xs: '70px', md: '90px' },
+                '@media(min-width:1024px)': {
+                  width: { md: '110px', lg: '115px', xl: '128px' },
+                },
               }}
             >
               <Box component={'img'} src={'/images/header/logo.png'} />
@@ -89,8 +101,35 @@ const GlobalLayout = ({
             >
               <Button
                 disableRipple
+                sx={{
+                  ...action?.style,
+                  '@media(min-width:1024px) and (max-width:1249px)': {
+                    fontSize: '12px',
+                    width: '190px',
+                  },
+                }}
                 onClick={() => window?.open(action?.route || '#', '_blank')}
-                sx={{ ...action?.style }}
+                endIcon={
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      p: 0.5,
+                      backgroundColor: '#175A59',
+                      borderRadius: '100%',
+                      '@media(min-width:1024px) and (max-width:1249px)': {
+                        width: '30px',
+                        height: '30px',
+                      },
+                    }}
+                  >
+                    <Box
+                      component={'img'}
+                      src="/images/header/topbar/rc-right.png"
+                    />
+                  </Box>
+                }
               >
                 {action?.label || ''}
               </Button>
@@ -110,14 +149,16 @@ const GlobalLayout = ({
             }}
             onClick={openMobileNavbar}
           >
-            <IconButton
+            <Button
               disableRipple
               id="basic-button"
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
-              sx={{ '&:hover': { backgroundColor: 'transparent' } }}
+              sx={{
+                '&:hover': { backgroundColor: 'transparent' },
+              }}
             >
               {mobileMenu ? (
                 <>
@@ -134,7 +175,7 @@ const GlobalLayout = ({
                   />
                 </>
               )}
-            </IconButton>
+            </Button>
           </Box>
         </Box>
       </Box>

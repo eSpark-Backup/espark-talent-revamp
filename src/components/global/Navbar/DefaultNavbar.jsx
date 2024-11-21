@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
@@ -15,6 +14,7 @@ import RemoteLayout from './RemoteLayout';
 
 function DefaultNavbar({
   routes,
+  handleOpen,
   light = false,
   action = false,
   sticky = false,
@@ -153,7 +153,7 @@ function DefaultNavbar({
                 shadow="lg"
                 borderRadius="lg"
                 p={dropdownName === 'Hire A Talent' ? 1 : 0}
-                mt={1}
+                mt={1.5}
                 sx={{ width: 'auto' }}
               >
                 {dropdownName === 'Hire A Talent' ? (
@@ -161,29 +161,32 @@ function DefaultNavbar({
                     data={HIRE_A_TALENT_MENU}
                     setDropdown={setDropdown}
                   />
-                ) : null}
-                {routes?.map(({ collapse, name }) => {
-                  if (
-                    name === dropdownName &&
-                    dropdownName !== 'Hire A Talent'
-                  ) {
-                    return collapse?.map(
-                      ({ name, icon, description, href }, index) => (
-                        <Box key={index}>
-                          <DropItems
-                            name={name}
-                            icon={icon}
-                            description={description}
-                            href={href}
-                            index={index}
-                            collapse={collapse}
-                            setDropdown={setDropdown}
-                          />
-                        </Box>
-                      )
-                    );
-                  }
-                })}
+                ) : (
+                  <>
+                    {routes?.map(({ collapse, name }) => {
+                      if (
+                        name === dropdownName &&
+                        dropdownName !== 'Hire A Talent'
+                      ) {
+                        return collapse?.map(
+                          ({ name, icon, description, href }, index) => (
+                            <Box key={index}>
+                              <DropItems
+                                name={name}
+                                icon={icon}
+                                description={description}
+                                href={href}
+                                index={index}
+                                collapse={collapse}
+                                setDropdown={setDropdown}
+                              />
+                            </Box>
+                          )
+                        );
+                      }
+                    })}
+                  </>
+                )}
               </Box>
             </Box>
           </Grow>
@@ -212,6 +215,7 @@ function DefaultNavbar({
           dropdownName={dropdownName}
           mobileNavbarRef={mobileNavbarRef}
           dropdownMenu={dropdownMenu}
+          handleOpen={handleOpen}
         />
       ) : (
         <GlobalLayout

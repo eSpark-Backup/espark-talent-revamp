@@ -1,11 +1,12 @@
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 
-const HireRemoteBanner = ({ data }) => {
+const HireRemoteBanner = ({ data, handleOpen }) => {
   return (
     <>
       <Box
         sx={{
+          mt: 10,
           width: '100%',
           height: '100%',
           pt: 4,
@@ -99,7 +100,7 @@ const HireRemoteBanner = ({ data }) => {
             </Typography>
             <Button
               disableRipple
-              onClick={() => window?.open(data?.btnLink || '', '_blank')}
+              onClick={handleOpen}
               sx={{
                 width: { xs: '180px', md: '200px', lg: '223px' },
                 height: { xs: '44px', md: '46px', lg: '48px' },
