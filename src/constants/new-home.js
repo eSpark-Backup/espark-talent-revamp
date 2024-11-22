@@ -14,7 +14,7 @@ export const EMPLOYEE_HERO_DATA = {
   description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
   bgImage: '/images/homepage/hero/emp-hero.png',
   textureImage: '/images/homepage/hero/texture-img.png',
-  animatedVideo: '/images/homepage/hero/animation-header.webm',
+  animatedGif: '/images/homepage/hero/animated-gif.gif',
   btnTitle: `Request Candidate`,
   btnLink: `/book-a-demo`,
   styles: {
@@ -179,9 +179,9 @@ export const EMPLOYEE_HERO_DATA = {
       },
     },
     imageStyle: {
+      position: 'relative',
       width: { xs: 'auto', md: '580px', lg: '650px', xl: '704px' },
       height: { xs: 'auto', lg: '650px' },
-      '@media(min)': {},
     },
   },
 };
