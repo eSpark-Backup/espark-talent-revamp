@@ -1887,6 +1887,9 @@ input {
 /* employee slide animation of home page */
 
 .sliderContainer {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -1895,8 +1898,18 @@ input {
 
 .sliderTrack {
   display: inline-flex;
-  animation: scroll 25s linear infinite;
+  animation: scroll 120s linear infinite;
 }
+
+/* @keyframes scroll {
+  0% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+} */
 
 @keyframes scroll {
   0% {
@@ -1912,6 +1925,24 @@ input {
   flex-shrink: 0;
   margin-right: 20px;
 }
+
+@media (min-width: 2560px) {
+  .sliderTrack {
+    display: inline-flex;
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(1.5%);
+    }
+
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+}
+
 
 @media (min-width: 1400px) {
   #short-slider .slide {
