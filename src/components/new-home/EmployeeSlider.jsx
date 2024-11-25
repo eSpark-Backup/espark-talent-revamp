@@ -11,6 +11,16 @@ const EmployeeSlider = ({ data }) => {
     ...slides,
     ...duplicateSlides(slides),
     ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
   ];
   const [loading, setLoading] = useState(true);
 
