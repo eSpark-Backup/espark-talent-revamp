@@ -5,26 +5,70 @@ import Link from 'next/link';
 import React from 'react';
 
 const ThankYou = ({ data }) => {
+  const {
+    heading,
+    subHeading,
+    subTitle,
+    description,
+    stepstitle,
+    steps,
+    styles,
+  } = data || {};
+  const {
+    mainBoxStyle,
+    innerBoxStyle,
+    headingStyle,
+    subHeadingStyle,
+    subTitleStyle,
+    descriptionStyle,
+    stepsTitle,
+    imageBoxStyle,
+    gridContainerStyle,
+    stepTitle,
+    itemBoxStyle,
+    itemTyporaphyStyle,
+    listIconStyle,
+  } = styles || {};
+
+  const render = (item, idx) => (
+    <Box key={idx} sx={itemBoxStyle}>
+      <ListItemIcon sx={listIconStyle}>
+        <Image
+          src="/images/how-its-works/white.svg"
+          height={15}
+          width={15}
+          alt="Thankyou Icon - eSpark Talent"
+        />
+      </ListItemIcon>
+      <Typography variant="body1" sx={itemTyporaphyStyle} key={idx}>
+        {item}
+      </Typography>
+    </Box>
+  );
+
+  const renderSteps = (step, index) => (
+    <Grid item xs={12} sm={4} md={4} lg={4} key={index} py={'20px'}>
+      <Box sx={imageBoxStyle}>
+        <Image
+          src={step.icon}
+          height={70}
+          width={70}
+          alt="Hiring Steps - eSpark Talent"
+        />
+      </Box>
+      <Box>
+        <Typography variant="h3" sx={stepTitle}>
+          {step?.title}
+        </Typography>
+      </Box>
+      {step?.items?.map(render)}
+    </Grid>
+  );
+
   return (
-    <Box
-      className="thankyou-content"
-      sx={{
-        py: '50px',
-        backgroundImage: `url(${data?.bgimage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        color: '#fff',
-      }}
-    >
+    <Box className="thankyou-content" sx={mainBoxStyle(data)}>
       <Container>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-          }}
-        >
+        <Box sx={innerBoxStyle}>
           <Link href={'/'}>
             <Image
               src={data?.logo}
@@ -35,134 +79,29 @@ const ThankYou = ({ data }) => {
           </Link>
           <Typography
             variant="h1"
-            sx={{
-              fontSize: { xs: '30px', md: '35px' },
-              fontWeight: '700',
-              textAlign: 'center',
-            }}
-            dangerouslySetInnerHTML={{ __html: data?.heading }}
+            sx={headingStyle}
+            dangerouslySetInnerHTML={{ __html: heading }}
           />
           <Typography
             variant="h2"
-            sx={{
-              fontSize: { xs: '24px', md: '32px' },
-              fontWeight: '500',
-              textAlign: 'center',
-            }}
-            dangerouslySetInnerHTML={{ __html: data?.subHeading }}
+            sx={subHeadingStyle}
+            dangerouslySetInnerHTML={{ __html: subHeading }}
           />
           <Typography
             variant="h2"
-            sx={{
-              fontSize: { xs: '24px', md: '32px' },
-              fontWeight: '500',
-              textAlign: 'center',
-              pb: '15px',
-            }}
-            dangerouslySetInnerHTML={{ __html: data?.subTitle }}
+            sx={subTitleStyle}
+            dangerouslySetInnerHTML={{ __html: subTitle }}
           />
-
           <Typography
             variant="body1"
-            sx={{
-              fontSize: { xs: '14px', md: '16px' },
-              fontWeight: '400',
-              lineHeight: 2,
-              textAlign: 'center',
-              px: { xs: '5%', md: '0' },
-            }}
-            dangerouslySetInnerHTML={{ __html: data?.description }}
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: description }}
           />
-
-          <Typography
-            variant="h3"
-            sx={{
-              fontSize: { xs: '24px', md: '32px' },
-              fontWeight: '500',
-              textAlign: 'center',
-              pt: '20px',
-              pb: '20px',
-            }}
-          >
-            {data?.stepstitle}
+          <Typography variant="h3" sx={stepsTitle}>
+            {stepstitle}
           </Typography>
-
-          <Grid
-            container
-            sx={{
-              justifyContent: 'center',
-              // alignItems: 'center',
-            }}
-          >
-            {data.steps.map((step, index) => (
-              <Grid item xs={12} sm={4} md={4} lg={4} key={index} py={'20px'}>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    pb: '20px',
-                  }}
-                >
-                  <Image
-                    src={step.icon}
-                    height={70}
-                    width={70}
-                    alt="Hiring Steps - eSpark Talent"
-                  />
-                </Box>
-                <Box>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      fontSize: { xs: '18px', md: '20px' },
-                      fontWeight: '700',
-                      pb: '15px',
-                      textAlign: 'center',
-                    }}
-                  >
-                    {step.title}
-                  </Typography>
-                </Box>
-
-                {step.items.map((item, idx) => (
-                  <Box
-                    key={idx}
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      px: '10%',
-                    }}
-                  >
-                    <ListItemIcon
-                      sx={{
-                        minWidth: 'unset',
-                        mr: { lg: '20px', md: '20px', sm: '20px' },
-                      }}
-                    >
-                      <Image
-                        src="/images/how-its-works/white.svg"
-                        height={15}
-                        width={15}
-                        alt="Thankyou Icon - eSpark Talent"
-                      />
-                    </ListItemIcon>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        fontSize: { xs: '12px', md: '13px' },
-                        fontWeight: '400',
-                        lineHeight: 1.8,
-                      }}
-                      key={idx}
-                    >
-                      {item}
-                    </Typography>
-                  </Box>
-                ))}
-              </Grid>
-            ))}
+          <Grid container sx={gridContainerStyle}>
+            {steps?.map(renderSteps)}
           </Grid>
         </Box>
       </Container>

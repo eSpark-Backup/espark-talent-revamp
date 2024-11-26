@@ -1,197 +1,75 @@
-import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
-import { Pagination } from 'swiper/modules';
+'use client';
+import React, { useEffect, useState } from 'react';
+import { Box, Card, Typography, CircularProgress } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { usePathname } from 'next/navigation';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
 
-const CustomSectionSlider = ({ items }) => {
-  const pathname = usePathname();
+const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
+  const [loading, setLoading] = useState(true);
+  const {
+    breakPoints,
+    slideStyle,
+    cardStyle,
+    headerBoxStyle,
+    imageStyle,
+    titleStyle,
+    descriptionBoxStyle,
+    descriptionTextStyle,
+    swiperBoxStyle,
+  } = customSectionSliderStyles || {};
+
+  useEffect(() => {
+    if (items) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+    }
+  }, [items]);
+
+  const renderSlide = (card, index) => (
+    <SwiperSlide key={index} style={slideStyle}>
+      <Card sx={cardStyle}>
+        <Box sx={headerBoxStyle}>
+          <Box
+            component="img"
+            src={card?.icon || ''}
+            alt={card?.alt || ''}
+            sx={imageStyle}
+          />
+          <Typography sx={titleStyle}>{card?.title}</Typography>
+        </Box>
+        <Box sx={descriptionBoxStyle}>
+          <Typography sx={descriptionTextStyle}>{card?.paragraph}</Typography>
+        </Box>
+      </Card>
+    </SwiperSlide>
+  );
+
   return (
-    <Box sx={{ mx: 2 }}>
-      <Swiper
-        spaceBetween={1}
-        modules={[Pagination]}
-        className="mySwiper"
-        id="hireDev"
-        pagination={pathname?.includes('/book-a-demo-meeting') ? false : true}
-        breakpoints={{
-          280: {
-            slidesPerView: 1.2,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: false,
-            },
-            containerClass: 'swiper-container',
-            wrapperClass: 'swiper-wrapper',
-            slideClass: 'swiper-slide',
-          },
-          768: {
-            slidesPerView: 2,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: false,
-            },
-            containerClass: 'swiper-container',
-            wrapperClass: 'swiper-wrapper',
-            slideClass: 'swiper-slide',
-          },
-        }}
-      >
-        {items?.map((item, index) => (
-          <SwiperSlide key={index}>
-            <Grid
-              container
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                pt: 4,
-                pb: pathname?.includes('/book-a-demo-meeting') ? 0 : 4,
-              }}
-            >
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  height: `${pathname == '/hire-a-frontend-developer' ? '250px' : ''}`,
-                  width: '140px',
-                  my: 1,
-                }}
-              >
-                <Box
-                  sx={{
-                    position: 'relative',
-                    zIndex: 1,
-                    mx: 'auto',
-                    maxWidth: '401px',
-                    height: `${pathname == '/hire-a-frontend-developer' ? '250px' : ''}`,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    borderRadius: '20px',
-                    background: '#fff',
-                    boxShadow: '0 4px 4px 2px rgba(0,0,0,0.25)',
-                    '@media(max-width: 480px)': {
-                      mx: 0.8,
-                      height: 'auto',
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: 'auto',
-                      height: '59.498px',
-                      display: 'flex',
-                      borderRadius: '20px 20px 0 0 ',
-                      background: '#F7F8FB',
-                      p: '20px',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <Box
-                      component={'img'}
-                      src={item?.icon || ''}
-                      alt={item?.alt || ''}
-                      sx={{
-                        width: 42,
-                        height: 42,
-                        '@media(max-width: 480px)': {
-                          width: 35,
-                          height: 35,
-                        },
-                        '@media(max-width: 425px)': {
-                          width: 30,
-                          height: 30,
-                        },
-                        '@media(max-width: 280px)': {
-                          width: 25,
-                          height: 25,
-                        },
-                      }}
-                    />
-                    <Typography
-                      component={'h4'}
-                      color="secondary"
-                      sx={{
-                        ml: 2,
-                        color: '#001C63',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        '@media(max-width: 480px)': {
-                          fontSize: '15px',
-                        },
-                        '@media(max-width: 425px)': {
-                          fontSize: '13.34px',
-                        },
-                        '@media(max-width: 280px)': {
-                          fontSize: '13.34px',
-                        },
-                      }}
-                    >
-                      {item?.title || ''}
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      p: '10px 20px 20px 20px',
-                      borderRadius: '0 0 20px 20px',
-                      height: '100px',
-                      '@media(max-width: 480px)': {
-                        height: '100px',
-                      },
-                      '@media(min-width: 480px) and (max-width: 480px)': {
-                        height: '100px',
-                      },
-                      '@media(min-width: 4px) and (max-width: 480px)': {
-                        height: '100px',
-                      },
-                      '@media(max-width: 425px)': {
-                        height: '80px',
-                      },
-                      '@media(max-width: 375px)': {
-                        height: '100px',
-                      },
-                      '@media(max-width: 320px)': {
-                        height: '115px',
-                      },
-                      //   '@media(max-width: 280px)': {
-                      //     height: '100px',
-                      //   },
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <Typography
-                      component="p"
-                      sx={{
-                        fontSize: '15px',
-                        fontWeight: 500,
-                        lineHeight: '23px',
-                        '@media(max-width: 480px)': {
-                          fontSize: '12px',
-                          lineHeight: '18px',
-                        },
-                        '@media(max-width: 425px)': {
-                          fontSize: '10.67px',
-                          lineHeight: '15.41px',
-                        },
-                        '@media(max-width: 280px)': {
-                          fontSize: '10.67px',
-                        },
-                      }}
-                      color="initial"
-                    >
-                      {item?.paragraph || ''}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Box sx={swiperBoxStyle}>
+      {loading ? (
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '200px',
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      ) : (
+        <Swiper
+          id="hireDev"
+          pagination={true}
+          breakpoints={breakPoints}
+          modules={[Navigation, Pagination]}
+        >
+          {items?.map(renderSlide)}
+        </Swiper>
+      )}
     </Box>
   );
 };

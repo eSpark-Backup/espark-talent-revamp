@@ -151,18 +151,6 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
             height: { xs: 'auto', sm: '100%' },
             display: 'flex',
             flexDirection: 'column',
-            mt: {
-              xs: 2,
-              sm: 0,
-              md: 0,
-              lg: 0,
-            },
-            mb: {
-              xs: 2,
-              sm: 0,
-              md: 0,
-              lg: 0,
-            },
             px: 2,
             alignItems: { md: 'center' },
             justifyContent: { xs: 'auto', lg: 'center' },

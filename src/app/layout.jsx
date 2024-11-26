@@ -1,6 +1,5 @@
 import React from 'react';
 import './globals.css';
-import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
@@ -16,6 +15,8 @@ import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
 import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
+import Loading from '@/components/global/loading';
+
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
   ssr: false,
@@ -86,13 +87,15 @@ export default async function RootLayout({ children }) {
             <ToastProvider>
               <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <AllpagesHeader />
-                <Box>{children}</Box>
-                <FooterCTA data={FOOTER_CTA_DATA} />
-                <Footer data={FOOTER_DATA} />
-                <GoogleTagManager gtmId="GTM-5JWLG8J2" />
-                <GoogleTagManager gtmId="G-N43EVHZHXM" />
-                <GoogleTag gtmId="G-N43EVHZHXM" />
+                <Loading>
+                  <AllpagesHeader />
+                  {children}
+                  <FooterCTA data={FOOTER_CTA_DATA} />
+                  <Footer data={FOOTER_DATA} />
+                  <GoogleTagManager gtmId="GTM-5JWLG8J2" />
+                  <GoogleTagManager gtmId="G-N43EVHZHXM" />
+                  <GoogleTag gtmId="G-N43EVHZHXM" />
+                </Loading>
               </ThemeProvider>
             </ToastProvider>
           </AppRouterCacheProvider>

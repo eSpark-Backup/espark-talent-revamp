@@ -1,19 +1,18 @@
 'use client';
+import React from 'react';
 import {
-  Grid,
-  Typography,
   Box,
+  Typography,
   Container,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import React from 'react';
 import RectangleSharpIcon from '@mui/icons-material/RectangleSharp';
 import CircleIcon from '@mui/icons-material/Circle';
 import Form from './Form';
 
 const Partnership = ({ partnership }) => {
-  const { content, formContent } = partnership;
+  const { content, formContent, fields } = partnership;
   return (
     <Box
       sx={{
@@ -22,16 +21,30 @@ const Partnership = ({ partnership }) => {
       }}
     >
       <Container>
-        <Grid container>
-          <Grid item xs={12} md={7}>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            '@media(min-width: 1024px)': {
+              flexDirection: 'row',
+              gap: 1,
+            },
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%',
+              '@media(min-width: 1024px)': {
+                flexDirection: 'row',
+                width: 'calc(100% - 505px)',
+              },
+            }}
+          >
             <>
               {content.map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    pr: { md: 4 },
-                  }}
-                >
+                <Box key={index}>
                   <Typography
                     variant="h2"
                     sx={{
@@ -124,11 +137,20 @@ const Partnership = ({ partnership }) => {
                 </Box>
               ))}
             </>
-          </Grid>
-          <Grid item xs={12} sm={12} md={5}>
-            <Form formContent={formContent} />
-          </Grid>
-        </Grid>
+          </Box>
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '505px',
+              mx: 'auto',
+              '@media(min-width: 1024px)': {
+                width: '505px',
+              },
+            }}
+          >
+            <Form formContent={formContent} fields={fields} />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

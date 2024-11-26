@@ -1,231 +1,168 @@
 'use client';
 import React from 'react';
-import { Box, Divider, Typography, Grid } from '@mui/material';
-import { Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import FooterTitle from './FooterTitle';
-import FooterItem from './FooterItem';
-import Rights from './Rights';
 import { usePathname } from 'next/navigation';
-import FooterItem2 from './FooterItem2';
-import { CAREERS_FOOTER_DATA } from '@/constants/global/footer';
+import { FOOTER_STYLE, HIDDEN_PATHS } from '@/constants/global/footer';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
-  console.log(pathName, 'PATHNAME');
+  const {
+    logo,
+    logoLink,
+    description,
+    copyRight,
+    copyRightLinks,
+    pages,
+    socialMedia,
+    trustPilotLink,
+    trustPilotImage,
+  } = data || {};
+
+  const {
+    mainBoxStyle,
+    innerBoxStyle,
+    logoSectionBoxStyle,
+    imageBoxStyle,
+    imageStyle,
+    descriptionStyle,
+    socialMediaIconBoxStyle,
+    socialLinkBoxStyle,
+    iconStyle,
+    pagesBoxStyle,
+    pageBoxStyle,
+    labelAndUlBoxStyle,
+    lebelStyle,
+    ulStyle,
+    textIconAndValueBoxStyle,
+    iconBoxStyle,
+    pageLinkIconStyle,
+    valueStyle,
+    trustPilotImageBoxStyle,
+    trustPilotImageStyle,
+    pageNameStyle,
+    horizontalLineStyle,
+    copyRightBoxStyle,
+    copyRightTextStyle,
+    termsAndConditionBoxStyle,
+    termsAndConditionLinkStyle,
+    termsAndConditionTextStyle,
+  } = FOOTER_STYLE || {};
+
+  const renderSocialMediaIcons = (icon, index) => (
+    <Box key={index} sx={socialLinkBoxStyle}>
+      <Link href={icon?.link} target="_blank">
+        <Image
+          alt={icon?.alt}
+          src={icon?.img}
+          style={iconStyle}
+          quality={80}
+          fill
+        />
+      </Link>
+    </Box>
+  );
+
+  const renderFooterPages = (eachItem, index) => (
+    <Box key={index} sx={pageBoxStyle(index)}>
+      {eachItem?.item?.map((mp, mpIndex) => (
+        <Box key={mpIndex} sx={labelAndUlBoxStyle(mpIndex)}>
+          <Typography sx={lebelStyle}>{mp?.label}</Typography>
+          <Typography sx={ulStyle} component="ul">
+            {mp?.label === 'Contact Us' ? (
+              <>
+                {mp?.info?.map((_text, _textIndex) => (
+                  <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
+                    {_text?.icon && (
+                      <Box sx={iconBoxStyle(_textIndex)}>
+                        <Image
+                          alt=""
+                          src={_text?.icon}
+                          style={pageLinkIconStyle}
+                          quality={80}
+                          fill
+                        />
+                      </Box>
+                    )}
+                    <Typography
+                      sx={valueStyle(_textIndex)}
+                      component="li"
+                      dangerouslySetInnerHTML={{
+                        __html: _text?.link
+                          ? `<a href="${_text?.link}" style="text-decoration: none; color: inherit;">${_text?.value}</a>`
+                          : _text?.value || '',
+                      }}
+                    />
+                  </Box>
+                ))}
+                {pathName === '/' && (
+                  <Box sx={trustPilotImageBoxStyle}>
+                    <Link href={trustPilotLink || '#'}>
+                      <Image
+                        alt=""
+                        src={trustPilotImage}
+                        style={trustPilotImageStyle}
+                        quality={80}
+                        fill
+                      />
+                    </Link>
+                  </Box>
+                )}
+              </>
+            ) : (
+              mp?.pages?.map((_page, _pIndex) => (
+                <Typography
+                  key={_pIndex}
+                  sx={pageNameStyle(_pIndex)}
+                  component="li"
+                >
+                  <Link href={_page?.pgLink}>{_page?.pgName}</Link>
+                </Typography>
+              ))
+            )}
+          </Typography>
+        </Box>
+      ))}
+    </Box>
+  );
+
+  const renderCopyRightLinks = (link, linkIndex) => (
+    <Box key={linkIndex} sx={termsAndConditionBoxStyle(linkIndex)}>
+      <Link href={link?.link || '#'} style={termsAndConditionLinkStyle}>
+        <Typography sx={termsAndConditionTextStyle}>{link?.text}</Typography>
+      </Link>
+    </Box>
+  );
+
+  const shouldHideCTA = HIDDEN_PATHS?.includes(pathName);
+
+  if (shouldHideCTA) {
+    return null;
+  }
 
   return (
-    <>
-      {pathName !== '/book-a-demo' && (
-        <>
-          <Box
-            sx={{
-              background: '#ECECED',
-              pt: 4,
-            }}
-          >
-            <Container>
-              <Grid container spacing={0.8}>
-                <Grid item lg={5} md={4.5} sm={12} xs={12}>
-                  <Link href={data?.logoLink}>
-                    <Image
-                      quality="85"
-                      priority={true}
-                      src={data?.logo}
-                      width={120}
-                      height={59}
-                      alt={`${data?.alt}`}
-                      style={{ marginBottom: '10px' }}
-                    />
-                  </Link>
-                  <Typography
-                    sx={{
-                      color: '#001C63',
-                      fontSize: {
-                        xs: '10px',
-                        sm: '10px',
-                        md: '13px',
-                        lg: '15px',
-                      },
-                      fontStyle: 'normal',
-                      fontWeight: 400,
-                      lineHeight: '24.32px',
-                      pr: {
-                        lg: '18%',
-                        md: '15%',
-                        sm: '10%',
-                      },
-                    }}
-                  >
-                    {data?.description}
-                  </Typography>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      width: '140px',
-                      my: '10px',
-                      mb: {
-                        xs: '10px',
-                        lg: '0px',
-                      },
-                    }}
-                  >
-                    {data?.socialMedia?.map((item, index) => (
-                      <Link key={index} href={item?.link} target="_blank">
-                        <Image
-                          quality="85"
-                          priority={true}
-                          src={item?.img}
-                          width={17}
-                          height={17}
-                          alt={`${item?.alt}`}
-                        />
-                      </Link>
-                    ))}
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  lg={2}
-                  md={2.5}
-                  sm={12}
-                  xs={12}
-                  sx={{
-                    mb: {
-                      xs: '10px',
-                      lg: '0px',
-                    },
-                  }}
-                >
-                  <Grid container>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <FooterTitle title={data?.companyTitle} />
-                      {data?.company?.map((item, index) => (
-                        <Box key={index}>
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
-                    </Grid>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <FooterTitle title={data?.solutionTitle} />
-                      {data?.solution?.map((item, index) => (
-                        <Box key={index}>
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid
-                  item
-                  lg={2}
-                  md={2}
-                  sm={12}
-                  xs={12}
-                  sx={{
-                    mb: {
-                      xs: '10px',
-                      lg: '0px',
-                    },
-                  }}
-                >
-                  <Grid container>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <FooterTitle title={data?.resourceTitle} />
-                      {data?.resource?.map((item, index) => (
-                        <Box key={index}>
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
-                    </Grid>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <FooterTitle title={data?.partnershipTitle} />
-                      {data?.partnership?.map((item, index) => (
-                        <Box key={index}>
-                          <FooterItem href={item?.link} label={item?.label} />
-                        </Box>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid item lg={3} md={3} sm={12} xs={12}>
-                  <FooterTitle title={data?.contactUsTitle} />
-                  <Grid container>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '5%' },
-                        }}
-                      >
-                        <FooterItem2 section={data?.contactUs.topSection} />
-                      </Box>
-                    </Grid>
-                    <Grid item lg={12} md={12} sm={6} xs={6}>
-                      <Box
-                        sx={{
-                          pr: { sm: '5%' },
-                        }}
-                      >
-                        {pathName === '/join-espark-crew' ||
-                        pathName === '/careers' ? (
-                          <FooterItem2
-                            data={CAREERS_FOOTER_DATA?.contactUs}
-                            section={
-                              CAREERS_FOOTER_DATA?.contactUs.bottomSection
-                            }
-                          />
-                        ) : (
-                          <FooterItem2
-                            data={data?.contactUs}
-                            section={data?.contactUs.bottomSection}
-                          />
-                        )}
-                      </Box>
-                      {pathName == '/' && (
-                        <Box sx={{ pt: 2 }}>
-                          <Link
-                            href={
-                              'https://www.trustpilot.com/review/esparktalent.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector'
-                            }
-                          >
-                            <Image
-                              src={
-                                '/images/footer/social-icons/TrustPilot2.svg'
-                              }
-                              height={70}
-                              width={200}
-                              alt="TrustPilot"
-                            />
-                          </Link>
-                        </Box>
-                      )}
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Container>
+    <Box sx={mainBoxStyle}>
+      <Box sx={innerBoxStyle}>
+        <Box sx={logoSectionBoxStyle}>
+          <Box sx={imageBoxStyle}>
+            <Link href={logoLink || '#'}>
+              <Image alt="" src={logo} style={imageStyle} quality={80} fill />
+            </Link>
           </Box>
-          <Box
-            sx={{
-              px: {
-                lg: '120px',
-              },
-              pt: {
-                xs: '25px',
-                lg: '25px',
-              },
-              background: '#ECECED',
-            }}
-          >
-            <Divider />
-            <Rights copyRights={data?.copyRight} data={data?.socialMedia} />
+          <Typography sx={descriptionStyle}>{description}</Typography>
+          <Box sx={socialMediaIconBoxStyle}>
+            {socialMedia?.map(renderSocialMediaIcons)}
           </Box>
-        </>
-      )}
-    </>
+        </Box>
+        <Box sx={pagesBoxStyle}>{pages?.map(renderFooterPages)}</Box>
+      </Box>
+      <Box sx={horizontalLineStyle} />
+      <Box sx={copyRightBoxStyle}>
+        <Typography sx={copyRightTextStyle}>{copyRight}</Typography>
+        {copyRightLinks?.map(renderCopyRightLinks)}
+      </Box>
+    </Box>
   );
 };
 
