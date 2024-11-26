@@ -1,217 +1,140 @@
 'use client';
-import React from 'react';
-import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Box, Card, Typography, CircularProgress } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Image from 'next/image';
+import {
+  headingContainerStyle,
+  itemsStyle,
+  listHeadingStyle,
+  worksCardBorderRadius,
+  worksCardStyle,
+  worksContainerStyle,
+  workSlideStyle,
+  worksMainHeadingTextStyle,
+  worksSubHeadingtextStyle,
+} from '@/constants/pricing';
+import { usePathname } from 'next/navigation';
 
 const PricingWorks = ({ data }) => {
-  const { title, description, cards } = data || {};
-  const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const isLessThenMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
+  const [loading, setLoading] = useState(true);
+  const pathName = usePathname();
+  const book_a_demo_meeting = 'book-a-demo-meeting';
+
+  useEffect(() => {
+    if (data) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+    }
+  }, [data]);
+
+  const renderSlide = (card, index) => (
+    <SwiperSlide key={card.id || index} style={workSlideStyle}>
+      <Card
+        sx={{
+          ...worksCardStyle(pathName, book_a_demo_meeting),
+          ...worksCardBorderRadius(index),
+        }}
+      >
+        <Box
+          component={'img'}
+          src={card?.image}
+          sx={{
+            width: '100%',
+            height: { md: 'calc(100% - 210px)', lg: 'calc(100% - 233px)' },
+          }}
+        />
+        <Box
+          sx={{ height: { md: '210px', lg: '233px' }, py: { xs: 1 }, px: 3 }}
+        >
+          <Typography sx={listHeadingStyle}>{card?.heading}</Typography>
+          <Typography component={'ul'} sx={{ listStyle: 'none', p: 0 }}>
+            {card?.desktopListItem?.map((item, idx) => (
+              <Box
+                key={item.id || idx}
+                sx={{
+                  display: 'flex',
+                  gap: 0.7,
+                  alignItems: 'center',
+                  mb: 1,
+                }}
+              >
+                <CheckCircleIcon
+                  fontSize="10px"
+                  sx={{
+                    fontSize: { xs: '12px', md: '20px' },
+                    color: '#001C63',
+                    mt: '1px',
+                  }}
+                />
+                <Typography component={'li'} sx={itemsStyle}>
+                  {item?.item}
+                </Typography>
+              </Box>
+            ))}
+          </Typography>
+        </Box>
+      </Card>
+    </SwiperSlide>
+  );
 
   return (
-    <Box
-      sx={{
-        my: { xs: 2, sm: 1, lg: 5 },
-      }}
-    >
-      <Container>
+    <Box sx={worksContainerStyle}>
+      <Box sx={headingContainerStyle}>
         <Typography
           component={'h2'}
           color={'secondary'}
-          sx={{
-            px: { xs: '5%', md: '7%' },
-            fontSize: {
-              xs: '22px',
-              sm: '24px',
-              md: '35px',
-              lg: '39px',
-            },
-            mb: 1,
-            fontWeight: 600,
-            textAlign: 'center',
-            flexWrap: 'wrap',
-          }}
+          sx={worksMainHeadingTextStyle}
         >
-          {title}
+          {data?.title}
         </Typography>
         <Typography
           component={'p'}
           color={'secondary'}
+          sx={worksSubHeadingtextStyle}
+        >
+          {data?.description}
+        </Typography>
+      </Box>
+      {loading ? (
+        <Box
           sx={{
-            fontSize: {
-              xs: '11px',
-              sm: '13px',
-              md: '16px',
-              lg: '21px',
-            },
-            fontWeight: 400,
-            textAlign: 'center',
-            px: { xs: '0%', md: '16%' },
-            pb: '6px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '200px',
           }}
         >
-          {description}
-        </Typography>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3, lg: 5 }}
-          pl={{ xs: 0, md: '8%', lg: '10%' }}
-          pr={{ xs: 0, md: '6%', lg: '10%' }}
-          sx={{ py: '2%' }}
+          <CircularProgress />
+        </Box>
+      ) : (
+        <Box
+          sx={{ width: '100%', maxWidth: '910px', mx: 'auto' }}
+          id="pricing-work"
         >
-          {cards?.map((item, index) => (
-            <Grid item xs={12} md={6} key={index}>
-              <Box
-                boxShadow={4}
-                sx={{
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '455px',
-                  minHeight: { xs: 'auto', md: '499px' },
-                  borderRadius: item.rightBorder
-                    ? { xs: '9px', md: '20px 70px 70px 20px' }
-                    : { xs: '9px', md: '70px 20px 20px 70px' },
-                  overflow: 'hidden',
-                  // height: { xs: 'auto', xxl: '631.07px' },
-                  backgroundColor: '#F7F8FF',
-                  ml: { xs: 'auto', md: index === 0 ? 'auto' : 0 },
-                  mr: { xs: 'auto' },
-                }}
-              >
-                <Box
-                  sx={{
-                    // borderRadius: isLessThenMd && '500px 500px 500px 500px',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <Image
-                    src={!isLessThenMd ? item?.image : item?.image_res}
-                    width={isXsOrSm ? 450 : 750}
-                    height={100}
-                    alt="dataimage"
-                  />
-                </Box>
-                <Grid
-                  container
-                  sx={{
-                    pl: { xs: '11px', sm: '18px', md: '26px', lg: '25px' },
-                    pb: { xs: '20px', md: '2px', lg: '20px' },
-                    backgroundColor: '#F7F8FF',
-                  }}
-                >
-                  <Grid item xs={12}>
-                    <Typography
-                      sx={{
-                        fontWeight: 600,
-                        fontSize: { xs: '11.59px', sm: '14', md: '19px' },
-                        lineHeight: {
-                          xs: '31.39px',
-                          sm: '41.39px',
-                          md: '43px',
-                          lg: '45px',
-                        },
-                        color: '#001C63',
-                      }}
-                    >
-                      {item?.heading}
-                    </Typography>
-                  </Grid>
-                  {isLessThenMd
-                    ? item?.responsiveListItem?.map((list, index) => (
-                        <Grid
-                          key={index}
-                          item
-                          xs={
-                            index === item.responsiveListItem.length - 1
-                              ? 12
-                              : 12
-                          }
-                          md={12}
-                          sx={{
-                            display: 'flex',
-                            py: { xs: '5px', md: '9px', lg: '9px', xxl: '3px' },
-                          }}
-                        >
-                          <CheckCircleIcon
-                            fontSize="10px"
-                            sx={{
-                              fontSize: { xs: '12px', md: '23px' },
-                              color: '#001C63',
-                              mt: '1px',
-                            }}
-                          />
-                          <Typography
-                            sx={{
-                              fontWeight: 600,
-                              fontSize: {
-                                xs: '9.56px',
-                                sm: '12px',
-                                md: '13px',
-                                lg: '15.69px',
-                              },
-                              lineHeight: {
-                                xs: '13.15px',
-                                sm: '16px',
-                                md: '21px',
-                                lg: '27.22px',
-                              },
-                              color: '#029894',
-                              ml: { xs: 0.5, md: 1 },
-                            }}
-                          >
-                            {list?.item}
-                          </Typography>
-                        </Grid>
-                      ))
-                    : item?.desktopListItem?.map((list, index) => (
-                        <Grid
-                          key={index}
-                          item
-                          md={12}
-                          sx={{
-                            display: 'flex',
-                            alignItems: 'start',
-                            py: { xs: '5px', md: '5px', lg: '5px', xxl: '2px' },
-                          }}
-                        >
-                          <CheckCircleIcon
-                            fontSize="10px"
-                            sx={{
-                              fontSize: { xs: '12px', md: '16px', lg: '20px' },
-                              color: '#001C63',
-                              mt: '2px',
-                            }}
-                          />
-                          <Typography
-                            sx={{
-                              fontWeight: 600,
-                              fontSize: {
-                                xs: '9.56px',
-                                sm: '12px',
-                                md: '14px',
-                                lg: '15.69px',
-                              },
-                              lineHeight: {
-                                xs: '13.15px',
-                                sm: '16px',
-                                md: '21px',
-                                lg: '27.22px',
-                              },
-                              color: '#029894',
-                              ml: { xs: 0.5, md: 1 },
-                            }}
-                          >
-                            {list?.item}
-                          </Typography>
-                        </Grid>
-                      ))}
-                </Grid>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+          <Swiper
+            pagination={true}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              900: {
+                slidesPerView: 2,
+              },
+            }}
+            modules={[Navigation, Pagination]}
+          >
+            {data?.cards?.map(renderSlide)}
+          </Swiper>
+        </Box>
+      )}
     </Box>
   );
 };

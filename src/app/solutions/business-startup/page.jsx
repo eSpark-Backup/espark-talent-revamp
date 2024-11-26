@@ -21,7 +21,7 @@ import {
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
-import BusinessVenture from '@/components/for-startup/ BusinessVenture';
+import BusinessVenture from '@/components/for-startup/BusinessVenture';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 

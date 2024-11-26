@@ -1,280 +1,88 @@
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import React from 'react';
+import { Box, Container, Typography } from '@mui/material';
+import WhyChooseOurHrSlider from './WhyChooseOurHrSlider';
 
 const WhyChooseOurHr = ({ data }) => {
-  const isXsOrSm = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const swiperRef = useRef(null);
-
-  const handleControlSwiper = (type) => {
-    switch (type) {
-      case 'next':
-        swiperRef?.current?.swiper?.slidePrev();
-        break;
-      case 'prev':
-        swiperRef?.current?.swiper?.slideNext();
-        break;
-
-      default:
-        break;
-    }
-  };
-
   return (
-    <Box sx={{ my: '4%' }}>
+    <Box
+      sx={{ pt: { xs: 5, sm: 6, md: 7.5, lg: 8 }, pb: { xs: 2, md: 6, lg: 7 } }}
+    >
       <Container>
-        <Grid container>
-          <Grid item xs={12} sm={12} md={7} lg={7}>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            rowGap: { xs: 1.5, sm: 2, md: 2.5 },
+            alignItems: 'center',
+            '@media(min-width:900px)': {
+              flexDirection: 'row',
+            },
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '700px',
+              '@media(min-width:900px)': {
+                maxWidth: 'calc(100% - 500px)',
+                pb: '50px',
+              },
+            }}
+          >
             <Box
               sx={{
-                mt: { md: 2, lg: 3 },
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 2,
+                p: 2,
+                '@media(min-width:900px)': {
+                  alignItems: 'flex-start',
+                },
               }}
             >
               <Typography
                 variant="h2"
                 sx={{
                   color: '#001C63',
-                  fontSize: { md: '32px', xs: '20px' },
-                  fontStyle: 'normal',
+                  fontSize: { xs: '20px', sm: '26px', md: '28px', lg: '32px' },
                   fontWeight: { xs: 700, sm: 600 },
-                  lineHeight: { md: '42.289px', xs: '27px' },
-                  textAlign: { xs: 'center', md: 'left' },
-                  pt: { xs: '10px', lg: '15px' },
-                  py: { xs: '10px' },
-                  px: { xs: '30px', sm: '0' },
-                  pr: { md: '5px' },
+                  lineHeight: { xs: '27px', sm: '32.289px', md: '42.289px' },
+                  textAlign: 'center',
+                  '@media(min-width:900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
-                {data.title}
+                {data?.title}
               </Typography>
               <Typography
                 sx={{
                   color: '#001C63',
-                  fontSize: { lg: '18px', md: '18px', sm: '11px', xs: '10px' },
-                  fontWeight: { xs: 700, md: 400 },
-                  lineHeight: { lg: '31.863px', md: '22px', xs: '20px' },
-                  pr: { md: '10px', lg: '80px' },
-                  px: { xs: '5px', sm: '0' },
-
-                  textAlign: { xs: 'center', md: 'justify' },
+                  fontSize: { xs: '11px', sm: '16px', md: '18px', lg: '18px' },
+                  fontWeight: { xs: 700, sm: 400 },
+                  lineHeight: { xs: 'auto', lg: '31.863px' },
+                  textAlign: 'center',
+                  '@media(min-width:900px)': {
+                    textAlign: 'start',
+                  },
                 }}
               >
-                {data.paragraph}
+                {data?.paragraph}
               </Typography>
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={12} md={5} lg={5}>
-            <Swiper
-              ref={swiperRef}
-              spaceBetween={1}
-              modules={[Pagination]}
-              className="mySwiper"
-              breakpoints={{
-                600: {
-                  slidesPerView: 1,
-                  pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                  },
-                  containerClass: 'swiper-container',
-                  wrapperClass: 'swiper-wrapper',
-                  slideClass: 'swiper-slide',
-                },
-                960: {
-                  slidesPerView: 1,
-                  pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                  },
-                  containerClass: 'swiper-container',
-                  wrapperClass: 'swiper-wrapper',
-                  slideClass: 'swiper-slide',
-                },
-              }}
-            >
-              {data?.card?.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Box
-                    variant="h3"
-                    sx={{
-                      display: 'flex',
-                      alignItems: { lg: 'center' },
-                      justifyContent: { lg: 'center' },
-                      margin: 0.5,
-                    }}
-                  >
-                    <Box
-                      className="whatWeBox"
-                      sx={{
-                        backgroundColor: '#fff',
-                        boxShadow: '0px 2px 8.6px 0px rgba(0, 0, 0, 0.30)',
-                        padding: '15px',
-                        borderRadius: '15px',
-                        width: {
-                          xs: '294.309px',
-                          sm: '314.309px',
-                          md: '390px',
-                          lg: '485px',
-                        },
-                        height: {
-                          xs: 'auto',
-                          lg: '180px',
-                        },
-                        mt: { xs: 1, md: 0 },
-                        margin: '10px auto !important',
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          px: { lg: '25px' },
-                        }}
-                      >
-                        <Box
-                          className="imageBox"
-                          sx={{
-                            mr: 2,
-                            pl: { xs: 1, lg: 0.5 },
-                            pt: { md: '15px', lg: '12px' },
-                          }}
-                        >
-                          <ListItemIcon sx={{ minWidth: '30px' }}>
-                            <Image
-                              quality="85"
-                              priority={true}
-                              src={item.icon}
-                              width={isXsOrSm ? 205 : 260}
-                              height={65}
-                              alt={`${item?.alt}`}
-                            />
-                          </ListItemIcon>
-                        </Box>
-                        <Box>
-                          <Typography
-                            sx={{
-                              color: '#09114A',
-                              fontSize: {
-                                lg: '20px',
-                                xs: '13.08px',
-                                md: '16px',
-                              },
-                              fontStyle: 'normal',
-                              fontWeight: 700,
-                              lineHeight: { lg: '26.4px', xs: '17.266px' },
-                              py: { xs: '5px', sm: 1, md: 0.5 },
-                              px: { lg: '14px' },
-                            }}
-                          >
-                            {item.title}
-                          </Typography>
-
-                          <Typography
-                            className="typo"
-                            sx={{
-                              color: '#000',
-                              fontSize: {
-                                lg: '15px',
-                                md: '15px',
-                                sm: '11px',
-                                xs: '9.81px',
-                              },
-                              fontStyle: 'normal',
-                              fontWeight: { xs: 700, md: 400, lg: 400 },
-                              lineHeight: {
-                                lg: '23.4px',
-                                md: '18px',
-                                sm: '15.304px',
-                                xs: '15.304px',
-                              },
-                              px: { lg: '14px' },
-                            }}
-                          >
-                            {item.description}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </Box>
-                  </Box>
-                </SwiperSlide>
-              ))}
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  my: { xs: 1, sm: 2 },
-                }}
-              >
-                <Box
-                  sx={{
-                    minWidth: { xs: '18px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    onClick={() => {
-                      handleControlSwiper('next');
-                    }}
-                    src={data.arrowIconLeft}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    minWidth: { xs: '12px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    src={data.arrowIconCircle}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    minWidth: { xs: '18px', md: '23px' },
-                    height: { xs: '15px', md: '23px' },
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Image
-                    quality="85"
-                    priority={true}
-                    onClick={() => handleControlSwiper('prev')}
-                    src={data.arrowIconRight}
-                    width={17}
-                    height={17}
-                    alt={`${data?.alt}`}
-                    className="swiper-controller-icon"
-                  />
-                </Box>
-              </Box>
-            </Swiper>
-          </Grid>
-        </Grid>
+          </Box>
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '500px',
+              mx: 'auto',
+            }}
+          >
+            <WhyChooseOurHrSlider data={data} />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

@@ -6,7 +6,6 @@ import { GLOBAL_SEO } from '@/constants/seo-data';
 
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
-
 export async function generateMetadata({ params }) {
   const slug = params.blog;
   const blog = await getSingleBlog(slug);

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Grid,
   Box,
@@ -7,6 +7,7 @@ import {
   Container,
   useMediaQuery,
   Pagination,
+  CircularProgress,
 } from '@mui/material';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,8 +18,19 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
+import {
+  outerBoxStyle,
+  titleBoxStyle,
+  titleTypographyStyle,
+  gridContainerStyle,
+  gridItemStyle,
+  iconBoxStyle,
+  itemTitleTypographyStyle,
+  itemParagraphTypographyStyle,
+} from '@/constants/solutions/for-enterprise/OutSourcingWonderConstant';
 
 const OutSourcingWonder = ({ data }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
   const isSmallScreen = useMediaQuery((theme) =>
     theme.breakpoints.between('xs', 'sm')
@@ -28,11 +40,17 @@ const OutSourcingWonder = ({ data }) => {
   );
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulating a delay for demonstration purposes
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const swiperSettings = {
     slidesPerView: 3,
     spaceBetween: 20,
-    centerMode: true,
-    centerPadding: '0',
     loop: false,
     effect: 'fade',
     className: 'hero_slider',
@@ -67,124 +85,91 @@ const OutSourcingWonder = ({ data }) => {
       },
     },
   };
+
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
+
   return (
     <>
-      <Box sx={{ py: { lg: '32px', md: '28px', sm: '20px', xs: '20px' } }}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={{ textAlign: 'center' }}>
-            <Typography
-              variant="h2"
-              sx={{
-                color: '#001C63',
-                textAlign: 'center',
-                fontSize: { md: '32px', xs: '20px' },
-                lineHeight: { lg: '42.289px', xs: '33.289px' },
-                px: { xs: '3%', sm: '20%', md: '20%' },
-                fontWeight: 700,
-                fontStyle: 'normal',
-                mb: { xs: '25px', sm: '40px' },
-              }}
-            >
-              {data?.title}
+          <Box sx={titleBoxStyle}>
+            <Typography variant="h2" sx={titleTypographyStyle}>
+              {data?.title || 'Title not available'}
             </Typography>
           </Box>
-          <Swiper {...swiperSettings}>
-            <Grid container sx={{ mx: 'auto' }}>
-              {data?.items?.map((item, index) => (
-                <SwiperSlide key={index} className="outsourcing-slide">
-                  <Grid
-                    sx={{
-                      borderRadius: '23.172px',
-                      px: { lg: '30px', md: '25px', sm: '20px', xs: '17px' },
-                      py: { lg: '40px', md: '45px', sm: '35px', xs: '25px' },
-                      height: {
-                        lg: '250px',
-                        md: '250px',
-                        sm: '200px',
-                        xs: '193px',
-                      },
-                      maxWidth: { xs: '420px', lg: '100%' },
-                      background: ' #FFF',
-                      border: '1px rgba(0, 0, 0, 0.25) solid',
-                      display: 'flex',
-                      gap: { xs: 0.5 },
-                      flexDirection: 'column',
-                      mx: 'auto',
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        mb: { xs: '10px', sm: '0px', lg: '10px' },
-                        width: { xs: '30px', md: '40px' },
-                        height: { xs: '30px', md: '40px' },
-                      }}
-                    >
-                      <Image
-                        quality="85"
-                        priority={true}
-                        src={item?.icon}
-                        alt={`${item?.title}`}
-                        height={
-                          isSmallScreen
-                            ? 30
-                            : isMediumScreen
-                              ? 30
-                              : isLargeScreen
-                                ? 40
-                                : 40
-                        }
-                        width={
-                          isSmallScreen
-                            ? 30
-                            : isMediumScreen
-                              ? 30
-                              : isLargeScreen
-                                ? 40
-                                : 40
-                        }
-                        pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
-                      />
-                    </Box>
-                    <Typography
-                      variant={
-                        pathname === '/solutions/business-startup' ? 'h4' : 'h3'
-                      }
-                      sx={{
-                        color: '#001C63',
-                        fontSize: {
-                          lg: '20px',
-                          md: '17px',
-                          sm: '13.524px',
-                          xs: '13.524px',
-                        },
-                        lineHeight: { xs: '19.144px', md: '26.737px' },
-                        pb: { lg: '10px', md: '0px', sm: '0px', xs: '5px' },
-                        fontWeight: 600,
-                        fontStyle: 'normal',
-                      }}
-                    >
-                      {item?.title}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        color: '#000',
-                        fontSize: {
-                          lg: '16px',
-                          md: '14px',
-                          sm: '13px',
-                          xs: '13px',
-                        },
-                        lineHeight: 1.3,
-                        fontWeight: 400,
-                      }}
-                    >
-                      {item?.paragraph}
-                    </Typography>
-                  </Grid>
-                </SwiperSlide>
-              ))}
-            </Grid>
-          </Swiper>
+          {isLoading ? (
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '200px',
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          ) : (
+            <Swiper {...swiperSettings}>
+              <Grid container sx={gridContainerStyle}>
+                {data?.items?.length > 0 ? (
+                  data?.items.map((item, index) => (
+                    <SwiperSlide key={index} className="outsourcing-slide">
+                      <Grid sx={gridItemStyle}>
+                        <Box sx={iconBoxStyle}>
+                          <Image
+                            quality="85"
+                            // priority={true}
+                            src={item?.icon || '/path/to/fallback/image.jpg'}
+                            alt={`${item?.title || 'Item icon'}`}
+                            height={
+                              isSmallScreen
+                                ? 30
+                                : isMediumScreen
+                                  ? 30
+                                  : isLargeScreen
+                                    ? 40
+                                    : 40
+                            }
+                            width={
+                              isSmallScreen
+                                ? 30
+                                : isMediumScreen
+                                  ? 30
+                                  : isLargeScreen
+                                    ? 40
+                                    : 40
+                            }
+                            pb={{ lg: '15px', md: '0px', sm: '0px', xs: '7px' }}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = '/path/to/fallback/image.jpg';
+                            }}
+                          />
+                        </Box>
+                        <Typography
+                          variant={
+                            pathname === '/solutions/business-startup'
+                              ? 'h4'
+                              : 'h3'
+                          }
+                          sx={itemTitleTypographyStyle}
+                        >
+                          {item?.title || 'Title not available'}
+                        </Typography>
+                        <Typography sx={itemParagraphTypographyStyle}>
+                          {item?.paragraph || 'Paragraph not available'}
+                        </Typography>
+                      </Grid>
+                    </SwiperSlide>
+                  ))
+                ) : (
+                  <Typography>No items available</Typography>
+                )}
+              </Grid>
+            </Swiper>
+          )}
         </Container>
       </Box>
     </>
