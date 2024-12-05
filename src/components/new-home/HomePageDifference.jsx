@@ -6,7 +6,15 @@ const HomePageDifference = ({ data }) => {
   const isSM = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <>
-      <Box sx={{ backgroundColor: '#F7F8FB' }}>
+      <Box
+        sx={{
+          '@media(min-width:1024px)': {
+            backgroundSize: '100%',
+            backgroundPosition: 'center',
+            backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
+          },
+        }}
+      >
         <Box
           sx={{
             maxWidth: '1260px',

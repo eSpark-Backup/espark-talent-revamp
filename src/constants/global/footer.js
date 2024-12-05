@@ -104,8 +104,50 @@ export const FOOTER_DATA = {
       },
       {
         icon: '/images/footer/phone.png',
-        text: '+17603380194',
-        link: 'tel:+17603380194',
+        text: '+1 (323) 790-6035',
+        link: 'tel:+1 (323) 790-6035',
+      },
+    ],
+  },
+};
+export const CAREERS_FOOTER_DATA = {
+  contactUs: {
+    label: 'Have questions about <span>our features</span>?',
+    topSection: [
+      {
+        icon: '/images/footer/flag.png',
+        text: '<span style="font-weight:500;color:#001C63 !important;">USA</span>',
+        link: '',
+      },
+      {
+        icon: '/images/footer/location.png',
+        text: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
+        link: '',
+      },
+    ],
+    bottomSection: [
+      {
+        icon: '',
+        text: 'Have questions about <span>our features</span>?',
+        link: '',
+        pr: '20px',
+      },
+      {
+        icon: '/images/footer/email.png',
+        text: 'sales@esparktalent.com',
+        target: '_top',
+        link: 'mailto:sales@esparktalent.com',
+      },
+      {
+        icon: '/images/footer/email.png',
+        text: 'career@esparktalent.com',
+        target: '_top',
+        link: 'mailto:career@esparktalent.com',
+      },
+      {
+        icon: '/images/footer/phone.png',
+        text: '+1 (323) 790-6035',
+        link: 'tel:+1 (323) 790-6035',
       },
     ],
   },

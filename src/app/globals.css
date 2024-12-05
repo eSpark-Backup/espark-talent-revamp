@@ -1842,3 +1842,141 @@ input {
   border-radius: 0.125rem;
   background-color: #1d1d20;
 }
+
+
+/* Styling for the remote navbar */
+.navbar-area {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 80px;
+  position: absolute;
+  background-color: #edf8f7;
+}
+
+.navbar-area.is-sticky {
+  position: fixed;
+  animation: fadeInDown 0.5s ease-in-out;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  /* box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09); */
+}
+
+.navbar-area.is-sticky .navbar {
+  width: 100%;
+  background-color: #fff !important;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+}
+
+/* Keyframes for fadeInDown animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ***************** */
+
+
+/* employee slide animation of home page */
+
+.sliderContainer {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: inline-flex;
+  animation: scroll 120s linear infinite;
+}
+
+/* @keyframes scroll {
+  0% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+} */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+}
+
+.slide {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+@media (min-width: 2560px) {
+  .sliderTrack {
+    display: inline-flex;
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(1.5%);
+    }
+
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+}
+
+
+@media (min-width: 1400px) {
+  #short-slider .slide {
+    width: 220px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  #short-slider .slide {
+    width: 180px;
+    height: 210px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #short-slider .slide {
+    width: 160px;
+    height: 190px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #short-slider .slide {
+    width: 140px;
+    height: 170px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #short-slider .slide {
+    width: 120px;
+    height: 140px;
+  }
+}
+
+/* ***************** */

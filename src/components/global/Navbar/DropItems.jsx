@@ -18,7 +18,7 @@ const DropItems = ({
         onClick={() => setDropdown(null)}
         key={'1'}
         sx={{
-          maxWidth: '340px',
+          maxWidth: { xs: '300px', lg: '340px' },
           display: 'flex',
           alignItems: 'start',
           gap: 2.5,
@@ -44,7 +44,7 @@ const DropItems = ({
           <Typography
             sx={{
               color: '#222222',
-              fontSize: { xs: '15px', md: '17px' },
+              fontSize: { xs: '11px', sm: '12px', md: '13px', lg: '17px' },
               fontWeight: 600,
             }}
           >
@@ -54,7 +54,7 @@ const DropItems = ({
             sx={{
               transition: 'all 300ms linear',
               color: 'rgb(0, 0, 0)',
-              fontSize: { xs: '12px' },
+              fontSize: { xs: '10px', lg: '12px' },
               fontWeight: 400,
             }}
           >

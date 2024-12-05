@@ -301,7 +301,7 @@ const Perks = ({ data, link, target, title, btnTitle }) => {
                             <Image
                               quality="85"
                               priority={true}
-                              src={`/images/homepage/our-perks/list-icon.svg`}
+                              src={`/images/homepage/our-perks/list-icon.png`}
                               alt="List Icon"
                               height={
                                 isSmallScreen

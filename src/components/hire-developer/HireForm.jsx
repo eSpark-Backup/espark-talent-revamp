@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -6,18 +6,15 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import axios from 'axios';
-import { PopupModal } from 'react-calendly';
 import { usePathname } from 'next/navigation';
 import BasicModal from '../book-a-demo/BookADemoModal';
 import ErrorMessage from '../book-a-demo/ErrorMessage';
 
 const HireForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
-  const [open, setOpen] = React.useState(false);
-  const [modalText, setModalText] = React.useState('');
+  const [open, setOpen] = useState(false);
+  const [modalText, setModalText] = useState('');
   const handleClose = () => setOpen(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const partnersRef = useRef(null);
   const pathName = usePathname();
   const book_A_meeting = '/book-a-meeting';
   const book_A_demo_meeting = '/book-a-demo-meeting';
@@ -120,10 +117,6 @@ const HireForm = ({ form }) => {
           }, 2000);
 
           console.error('Error submitting the form:', error);
-        } finally {
-          setTimeout(() => {
-            setIsOpen(true);
-          }, 5000);
         }
       },
     });
@@ -299,14 +292,6 @@ const HireForm = ({ form }) => {
             </Box>
           </Box>
           <BasicModal text={modalText} open={open} handleClose={handleClose} />
-
-          <div id="partners" ref={partnersRef} />
-          <PopupModal
-            url="https://calendly.com/esparktalents/60min"
-            onModalClose={() => setIsOpen(false)}
-            open={isOpen}
-            rootElement={partnersRef.current}
-          />
         </Box>
       </Box>
     </>

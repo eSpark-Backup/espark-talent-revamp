@@ -12,7 +12,7 @@ concurrency: ci-${{ github.repository }}-docker-pipeline
 env:
   path_to_dockerfile: "Dockerfile"
   docker_build_dir: "."
-  image_tag: "latest"
+  image_tag: "live-latest"
   lifecycle_policy_file: "policy.json"
   backend_s3_bucket: "talent-terraform-bucket"
   backend_iam_role: "terraform-role"
@@ -108,6 +108,8 @@ jobs:
           echo "NEXT_PUBLIC_SANITY_USE_CDN=${{ secrets.NEXT_PUBLIC_SANITY_USE_CDN }}" >> .env
           echo "NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID=${{ secrets.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID }}" >> .env
           echo "NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID=${{ secrets.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID }}" >> .env
+          echo "NEXT_PUBLIC_JOIN_CREW_ADMIN_EMAIL_ID=${{ secrets.NEXT_PUBLIC_JOIN_CREW_ADMIN_EMAIL_ID }}" >> .env
+          echo "NEXT_PUBLIC_JOIN_CREW_ADMIN_TEMPLETE_ID=${{ secrets.NEXT_PUBLIC_JOIN_CREW_ADMIN_TEMPLETE_ID }}" >> .env
           echo "NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID=${{ secrets.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID }}" >> .env
           echo "NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID=${{ secrets.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID }}" >> .env
           echo "NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID=${{secrets.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID}}" >> .env
@@ -118,7 +120,9 @@ jobs:
           echo "NEXT_PUBLIC_REGION=${{ secrets.NEXT_PUBLIC_REGION }}" >> .env
           echo "NEXT_PUBLIC_B2_APPLICATION_KEY_ID=${{ secrets.NEXT_PUBLIC_B2_APPLICATION_KEY_ID }}" >> .env
           echo "NEXT_PUBLIC_B2_APPLICATION_KEY=${{ secrets.NEXT_PUBLIC_B2_APPLICATION_KEY }}" >> .env
-          echo "NEXT_PUBLIC_BUCKET_NAME=${{ secrets.NEXT_PUBLIC_BUCKET_NAME }}" >> .env    
+          echo "NEXT_PUBLIC_BUCKET_NAME=${{ secrets.NEXT_PUBLIC_BUCKET_NAME }}" >> .env
+          echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env
+          
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-publish
