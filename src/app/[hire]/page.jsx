@@ -22,9 +22,9 @@ export default async function Page({ params }) {
   const filteredData = hire || GLOBAL_SEO[0];
 
   const slug = params.hire;
-  const data = HIRE_DEVELOPERS?.filter((item) => item?.path === slug)[0];
+  const data = HIRE_DEVELOPERS?.find((item) => item?.path === slug);
 
-  if (!params || !params.hire) {
+  if (!params || !params?.hire) {
     return (
       <div>
         <NotFoundPage data={NOT_FOUND_DATA} />

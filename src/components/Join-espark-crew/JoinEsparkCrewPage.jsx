@@ -27,7 +27,9 @@ const JoinEsparkSuccessModal = dynamic(
 const AboutCrewCard = dynamic(() => import('./AboutCrewCard'));
 const KeyPointCrewCard = dynamic(() => import('./KeyPointCrewCard'));
 const BenefitCrewCard = dynamic(() => import('./BenefitCrewCard'));
-const FooterCTA = dynamic(() => import('./FooterCTA'));
+const JoinCrewCTA = dynamic(
+  () => import('@/components/Join-espark-crew/JoinCrewCTA')
+);
 
 export default function JoinEsparkCrewPage() {
   const {
@@ -152,7 +154,7 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Footer CTA */}
-      <FooterCTA handleClick={handleClick} />
+      <JoinCrewCTA handleClick={handleClick} />
 
       {/* Registration Modal  */}
       <JoinEsparkRegistrationModal

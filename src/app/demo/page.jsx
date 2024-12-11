@@ -19,6 +19,7 @@ import OurExperties from '@/components/homepage/OurExperties';
 import BenefitsWorks from '@/components/homepage/BenefitsWorks';
 import DemoCta from '@/components/demo/DemoCta';
 import Process from '@/components/homepage/Process';
+import { Box } from '@mui/material';
 
 const Page = () => {
   useEffect(() => {
@@ -54,8 +55,11 @@ const Page = () => {
       <DemoCta data={DEMO_DATA} link={'/book-a-demo'} target={'_blank'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
-      <ClientSays data={OUR_CLIENT_SAYS} />
+      <Box sx={{ pt: { xs: 5, sm: 6, md: 7, lg: 10 } }}>
+        <ClientSays data={OUR_CLIENT_SAYS} />
+      </Box>
       <AwardAchievement
+        isSpecialPath={true}
         data={ACHIEVEMENTS_DATA}
         design={1}
         background={'#F7F8FB'}
