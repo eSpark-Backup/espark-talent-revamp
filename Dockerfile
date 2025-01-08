@@ -5,7 +5,10 @@ ENV HUSKY=0
 WORKDIR /usr/src/app
 
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm pkg delete scripts.prepare && npm install --omit=dev --silent
+RUN apk add --no-cache jq && \
+    jq 'del(.scripts.prepare)' package.json > package.json.tmp && \
+    mv package.json.tmp package.json && \
+    npm install --omit=dev --silent
 
 COPY . .
 RUN npm run build
