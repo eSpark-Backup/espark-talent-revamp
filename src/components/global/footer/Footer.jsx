@@ -8,6 +8,7 @@ import { FOOTER_STYLE, HIDDEN_PATHS } from '@/constants/global/footer';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
+  const currentYear = new Date()?.getFullYear();
   const {
     logo,
     logoLink,
@@ -159,7 +160,9 @@ const Footer = ({ data }) => {
       </Box>
       <Box sx={horizontalLineStyle} />
       <Box sx={copyRightBoxStyle}>
-        <Typography sx={copyRightTextStyle}>{copyRight}</Typography>
+        <Typography
+          sx={copyRightTextStyle}
+        >{`© ${currentYear} ${copyRight}`}</Typography>
         {copyRightLinks?.map(renderCopyRightLinks)}
       </Box>
     </Box>

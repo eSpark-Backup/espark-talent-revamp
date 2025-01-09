@@ -6,7 +6,7 @@ export const FOOTER_DATA = {
     'https://www.trustpilot.com/review/esparktalent.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector',
   description:
     'Our guaranteed top-tier service and industry-leading worldwide coverage provides peace of mind for any global team. With eSpark Talent next-level automation and in-house infrastructure, quality always comes first for our customers.',
-  copyRight: '© 2024 eSpark Talent. All Rights Reserved.',
+  copyRight: 'eSpark Talent. All Rights Reserved.',
   copyRightLinks: [
     { text: 'Privacy Policy', link: '/privacy-policy' },
     { text: 'Term & Conditions', link: '/terms-and-conditions' },
