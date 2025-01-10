@@ -9,7 +9,7 @@ export const FOOTER_DATA = {
   resourceTitle: 'Resource',
   partnershipTitle: 'Partnership',
   contactUsTitle: 'Contact Us',
-  copyRight: '© 2024 eSpark Talent. All Rights Reserved.',
+  copyRight: 'eSpark Talent. All Rights Reserved.',
   infoEmail: 'info@esparktalent.com',
   salesEmail: 'sales@esparktalent.com',
 
