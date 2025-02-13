@@ -20,7 +20,7 @@ export const CAREERS_FORM_DATA = {
       },
       {
         label: 'Business email*',
-        placeHolder: 'Business email',
+        placeHolder: 'example@domain.com',
         type: 'email',
         key: 'email',
       },
