@@ -68,7 +68,7 @@ export const Book_A_Demo_Data = {
       },
       {
         label: 'Website URL*',
-        placeHolder: 'Website URL*',
+        placeHolder: 'https://example.com',
         key: 'web_url',
         type: 'text',
       },
