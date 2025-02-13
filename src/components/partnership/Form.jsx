@@ -10,6 +10,7 @@ import BasicModal from '../book-a-demo/BookADemoModal';
 import axios from 'axios';
 import { CountryCode } from '@/constants/global/CountryCodes';
 import { PopupModal } from 'react-calendly';
+import { partnerShipFormValidationSchema } from '@/schema/schema';
 
 const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
 const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
@@ -31,41 +32,11 @@ const Form = ({ formContent }) => {
   };
 
   const options = CountryCode?.map((opt) => opt?.name);
-
-  const profileValidationSchema = Yup.object().shape({
-    first_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'First Name must contain only letters')
-      .min(3, 'First Name must be at least 3 characters')
-      .max(25, 'First Name must be at most 25 characters')
-      .required('First Name is required'),
-    last_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'Last Name must contain only letters')
-      .min(3, 'Last Name must be at least 3 characters')
-      .max(25, 'Last Name must be at most 25 characters')
-      .required('Last Name is required'),
-    email: Yup.string()
-      .email('Invalid email')
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-        'Invalid email address format'
-      )
-      .required('Email is required'),
-    linkedin_profile_link: Yup.string()
-      .required('LinkedIn Profile is required')
-      .matches(
-        /((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^]+\/(([\w|\d-&#?=])+\/?){1,}))$/,
-        'Invalid LinkedIn Profile URL: Must be a valid URL and contain "linkedin.com"'
-      ),
-    phone_number: Yup.string()
-      .test('phone', 'Invalid phone number', (value) =>
-        value ? isValidPhoneNumber(value) : true
-      )
-      .required('Phone number is required'),
-  });
+  
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
       initialValues: PartnerFormData,
-      validationSchema: profileValidationSchema,
+      validationSchema: partnerShipFormValidationSchema,
       onSubmit: async (values, action) => {
         try {
           const response = await axios.post(

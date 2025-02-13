@@ -9,6 +9,7 @@ import axios from 'axios';
 import { usePathname } from 'next/navigation';
 import BasicModal from '../book-a-demo/BookADemoModal';
 import ErrorMessage from '../book-a-demo/ErrorMessage';
+import { BookADemoFormValidationSchema } from '@/schema/schema';
 
 const HireForm = ({ form }) => {
   const { title, subTitle, description, fields } = form;
@@ -31,37 +32,6 @@ const HireForm = ({ form }) => {
   const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
   const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
 
-  const profileValidationSchema = Yup.object().shape({
-    first_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'First Name must contain only letters')
-      .min(3, 'First Name must be at least 3 characters')
-      .max(25, 'First Name must be at most 25 characters')
-      .required('First Name is required'),
-    last_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'Last Name must contain only letters')
-      .min(3, 'Last Name must be at least 3 characters')
-      .max(25, 'Last Name must be at most 25 characters')
-      .required('Last Name is required'),
-    email: Yup.string()
-      .email('Invalid Email')
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
-        'Invalid Email Address Format'
-      )
-      .required('Email is required'),
-    web_url: Yup.string()
-      .matches(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/, 'Invalid Url')
-      .required('Url is required'),
-    no_of_employees: Yup.number()
-      .min(1, 'Minimum 1 employees')
-      .required('No of employee is required'),
-    phone_number: Yup.string()
-      .test('phone', 'Invalid Phone Number', (value) =>
-        value ? isValidPhoneNumber(value) : true
-      )
-      .required('Phone Number is required'),
-  });
-
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
   };
@@ -69,7 +39,7 @@ const HireForm = ({ form }) => {
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
       initialValues: Book_A_Demo_Keys,
-      validationSchema: profileValidationSchema,
+      validationSchema: BookADemoFormValidationSchema,
       onSubmit: async (values, action) => {
         try {
           const response = await axios.post(

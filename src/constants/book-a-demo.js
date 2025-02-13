@@ -47,7 +47,7 @@ export const Book_A_Demo_Data = {
       },
       {
         label: 'Business email*',
-        placeHolder: 'Business email',
+        placeHolder: 'example@domain.com',
         type: 'email',
         key: 'email',
       },
@@ -59,7 +59,7 @@ export const Book_A_Demo_Data = {
       },
       {
         label: 'Website URL*',
-        placeHolder: 'Website URL*',
+        placeHolder: 'https://example.com',
         key: 'web_url',
         type: 'text',
       },
