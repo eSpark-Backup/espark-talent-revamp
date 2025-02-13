@@ -62,7 +62,7 @@ export const Book_A_Demo_Data = {
       },
       {
         label: 'Business email*',
-        placeHolder: 'Business email',
+        placeHolder: 'example@domain.com',
         type: 'email',
         key: 'email',
       },
