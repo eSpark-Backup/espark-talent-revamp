@@ -72,6 +72,7 @@ const WikiCards = ({ data }) => {
                 <Skeleton
                   width={140}
                   height={33}
+                  key={index}
                   variant="rectangular"
                   sx={{ borderRadius: '50px' }}
                 />
@@ -203,31 +204,39 @@ const WikiCards = ({ data }) => {
                         >
                           {!loading && item?.avgSalary ? (
                             <Stack direction={'column'}>
-                              {item.avgSalary.map((avgSalary) => (
+                              {item?.avgSalary?.map((avgSalary) => (
                                 <Stack
-                                  key={avgSalary.name}
+                                  key={avgSalary?.name}
                                   direction={'row'}
                                   columnGap={1}
+                                  rowGap={1}
                                   alignItems={'center'}
+                                  flexWrap={'wrap'}
+                                  justifyContent={'space-between'}
                                 >
                                   <Typography
                                     variant="h6"
                                     style={{
-                                      width: '60px',
+                                      width: '120px',
                                       textTransform: 'capitalize',
                                     }}
                                   >
-                                    {avgSalary.name}
+                                    {avgSalary?.name}
                                   </Typography>
-                                  <Typography variant="subtitle2">
-                                    {`$${avgSalary.salary.from}
-                                    -$${avgSalary.salary.to} per month`}
+                                  <Typography
+                                    variant="subtitle2"
+                                    style={{
+                                      textWrap: 'nowrap',
+                                    }}
+                                  >
+                                    {`$${avgSalary?.salary?.from}
+                                    -$${avgSalary?.salary?.to} per month`}
                                   </Typography>
                                 </Stack>
                               ))}
                             </Stack>
                           ) : (
-                            `USD: $${item?.salary?.toLocaleString()} per month`
+                            ''
                           )}
                         </Typography>
                       </Box>
