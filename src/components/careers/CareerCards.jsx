@@ -10,13 +10,12 @@ import {
   Pagination,
   PaginationItem,
   useMediaQuery,
-  Modal,
   Skeleton,
 } from '@mui/material';
 import ESparkButton from '../global/eSparkButton';
 import CareersForm from './CareersForm';
-import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import { CAREERS_FORM_DATA } from '@/constants/careers-form-data';
+import HireModal from '../Hire-remote/HireModal';
 
 const CareerCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -219,61 +218,20 @@ const CareerCards = ({ data }) => {
               </Grid>
             </Grid>
           ))}
-          <Modal
+          <HireModal
+            content={
+              jobData && (
+                <CareersForm
+                  form={form}
+                  jobData={jobData}
+                  handleCloseModal={handleCloseModal}
+                />
+              )
+            }
             open={openModal}
-            onClose={handleCloseModal}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <>
-              <Box
-                sx={{
-                  position: { lg: 'absolute', sm: 'relative' },
-                  top: { lg: '50%', sm: '50%' },
-                  left: { lg: '50%', sm: '50%' },
-                  transform: {
-                    lg: 'translate(-50%, -50%)',
-                    sm: 'translate(-50%, -50%)',
-                  },
-                  width: 'auto',
-                  bgcolor: 'background.paper',
-                  border: '2px solid #000',
-                  borderRadius: '15px',
-                  boxShadow: 24,
-                }}
-              >
-                <Box textAlign={'right'} px={2} pt={2}>
-                  <Box
-                    onClick={handleCloseModal}
-                    sx={{
-                      fontSize: '20px',
-                      fontWeight: 800,
-                      '&:hover': {
-                        cursor: 'pointer',
-                      },
-                    }}
-                  >
-                    <CloseSharpIcon color="primary" />
-                  </Box>
-                </Box>
-                <Box
-                  sx={{
-                    px: 4,
-                    pb: 4,
-                    pt: 1,
-                  }}
-                >
-                  {jobData && (
-                    <CareersForm
-                      form={form}
-                      jobData={jobData}
-                      handleCloseModal={handleCloseModal}
-                    />
-                  )}
-                </Box>
-              </Box>
-            </>
-          </Modal>
+            handleModalClose={handleCloseModal}
+          />
+
           {filteredData?.length > perPage && (
             <Box
               spacing={2}
