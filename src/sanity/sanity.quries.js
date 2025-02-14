@@ -1,4 +1,4 @@
-import { client } from './sanity.config';
+import client from './sanity.config';
 
 export async function getJob() {
   return client.fetch(
