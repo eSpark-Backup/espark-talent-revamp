@@ -1,4 +1,4 @@
-import client from './sanity.config';
+import { client } from './sanity.config';
 
 export async function getJob() {
   return client.fetch(
@@ -102,6 +102,7 @@ export async function getWiki() {
       "heroImage":heroImage.asset->url,
       "iconImage":iconImage.asset->url,
       salary,
+      avgSalary,
       shortDescription,
       title,
       'metaTitle':seo.metaTitle,
@@ -132,6 +133,7 @@ export async function getSingleWiki(slug) {
       "heroImage": heroImage.asset->url,
       "iconImage": iconImage.asset->url,
       salary,
+      avgSalary,
       shortDescription,
       title,
       'metaTitle':seo.metaTitle,
