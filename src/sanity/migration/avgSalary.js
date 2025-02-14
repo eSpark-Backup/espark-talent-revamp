@@ -1,25 +1,26 @@
+import { nanoid } from 'nanoid';
 import { client } from '../sanity.config.js';
 
-async function migrateAvgSalary() {
-  const query = `*[_type == "wiki"]{_id, avgSalary}`;
-  const documents = await client.fetch(query);
+async function migrateSalaries() {
+  const documents = await client.fetch(
+    `*[_type == "wiki"]{_id, _rev, salary, avgSalary}`
+  );
 
-  for (const doc of documents) {
-    console.log('here');
-    const updatedAvgSalary = doc.avgSalary.map((entry) => {
-      if (entry.name === 'mid') {
-        return { ...entry, name: 'intermediate' };
-      }
-      return entry;
-    });
+  const transactions = documents.map((doc) => {
+    const updatedSalaries = doc.avgSalary?.map((role) => ({
+      _key: role._key || nanoid(), // Add a unique key if missing
+      name: role.name,
+      salary: {
+        from: doc.salary,
+        to: doc.salary + 1000,
+      },
+    }));
 
-    console.log(updatedAvgSalary, 'updatedAvgSalary');
+    return client.patch(doc._id).set({ avgSalary: updatedSalaries }).commit();
+  });
 
-    await client.patch(doc._id).set({ avgSalary: updatedAvgSalary }).commit();
-    console.log(`Updated document: ${doc._id}`);
-  }
-
-  console.log('Migration completed.');
+  await Promise.all(transactions);
+  console.log('Migration completed!');
 }
 
-migrateAvgSalary().catch((err) => console.error('Migration failed:', err));
+migrateSalaries().catch((err) => console.error(err));
