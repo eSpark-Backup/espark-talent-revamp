@@ -1,9 +1,8 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import PartnerCountrySelect from './PartnerCountrySelect';
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
+import PhoneInput from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import 'react-phone-number-input/style.css';
 import BasicModal from '../book-a-demo/BookADemoModal';
@@ -32,7 +31,7 @@ const Form = ({ formContent }) => {
   };
 
   const options = CountryCode?.map((opt) => opt?.name);
-  
+
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
       initialValues: PartnerFormData,

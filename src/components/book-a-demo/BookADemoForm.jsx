@@ -1,37 +1,38 @@
 import React, { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
-import ErrorMessage from './ErrorMessage';
-import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { isValidPhoneNumber } from 'react-phone-number-input';
-import axios from 'axios';
-import BasicModal from './BookADemoModal';
 import { usePathname } from 'next/navigation';
 import { BookADemoFormValidationSchema } from '@/schema/schema';
+import {
+  Book_A_Demo_Keys,
+  bookADemoFormStyles,
+  formBoxStyles,
+} from '@/constants/book-a-demo';
+import BasicModal from './BookADemoModal';
+import ErrorMessage from './ErrorMessage';
+import PhoneInput from 'react-phone-number-input';
+import axios from 'axios';
+import 'react-phone-number-input/style.css';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;
+  const {
+    mainContainer,
+    titleStyle,
+    subTitleStyle,
+    lableStyle,
+    inputStyle,
+    submitButtonStyle,
+    lastDescriptionStyle,
+  } = bookADemoFormStyles;
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
   const handleClose = () => setOpen(false);
+  const adminId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
+  const adminTempleteId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
   const pathName = usePathname();
   const book_A_meeting = '/book-a-meeting';
   const remote = '/hire-remote-developers';
-
-  const Book_A_Demo_Keys = {
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone_number: '',
-    web_url: '',
-    no_of_employees: '',
-  };
-
-  const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
-  const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
-
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
   };
@@ -64,7 +65,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
             }
           );
 
-          if (response?.status === 200) {
+          if (response.status === 200) {
             action?.resetForm();
             values.phone_number = '';
             setTimeout(() => {
@@ -96,101 +97,17 @@ const BookADemoForm = ({ form, handleModalClose }) => {
 
   return (
     <>
-      <Box
-        sx={{
-          width: 'auto',
-          height: '100%',
-          maxWidth: '486px',
-          display: 'flex',
-          alignItems: 'center',
-          mx: { md: 'auto' },
-          '@media(min-width: 280px) and (max-width:1259px)': {
-            mx: 'auto',
-          },
-        }}
-      >
-        <Box
-          sx={{
-            width: '100%',
-            height: { xs: 'auto', sm: '100%' },
-            display: 'flex',
-            flexDirection: 'column',
-            mt: {
-              xs:
-                pathName == book_A_meeting || pathName?.includes(remote)
-                  ? 0
-                  : 5,
-              sm:
-                pathName == book_A_meeting || pathName?.includes(remote)
-                  ? 0
-                  : 5,
-              md:
-                pathName == book_A_meeting || pathName?.includes(remote)
-                  ? 0
-                  : 10,
-              lg: 0,
-            },
-            mb: {
-              xs: pathName == book_A_meeting ? 0 : 5,
-              sm: 0,
-              md: 0,
-              lg: 0,
-            },
-            px: 2,
-            alignItems: { md: 'center' },
-            justifyContent: { xs: 'auto', lg: 'center' },
-            '@media (min-width: 600px) and (max-width: 768px)': {
-              justifyContent: 'center',
-              px: 2,
-              width: '100%',
-            },
-            '@media (max-width: 425px)': {
-              justifyContent: 'center',
-              px: 2,
-              width: '100%',
-            },
-          }}
-        >
+      <Box sx={mainContainer}>
+        <Box sx={formBoxStyles(pathName, book_A_meeting, remote, true)}>
           <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '32px !important',
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '42.289px',
-              }}
-            >
-              {title}
-            </Typography>
-            <Typography
-              sx={{
-                color: '#001C63',
-                fontSize: '15px !important',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: { xs: '25px', sm: '27.863px' },
-              }}
-            >
-              {subTitle}
-            </Typography>
+            <Typography sx={titleStyle}>{title}</Typography>
+            <Typography sx={subTitleStyle}>{subTitle}</Typography>
           </Box>
           <Box component={'form'}>
             {fields &&
               fields?.map((item, index) => (
                 <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
-                  <Typography
-                    sx={{
-                      mb: 0.5,
-                      color: '#029894',
-                      fontSize: '14.448px !important',
-                      fontStyle: 'normal',
-                      fontWeight: 600,
-                      lineHeight: '19.867px',
-                    }}
-                  >
-                    {item?.label}
-                  </Typography>
+                  <Typography sx={lableStyle}>{item?.label}</Typography>
                   {item?.label == 'Phone Number*' ? (
                     <PhoneInput
                       placeholder="Enter phone number"
@@ -208,24 +125,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
                         value={values[item?.key]}
                         type={item?.type}
                         onChange={handleChange}
-                        sx={{
-                          width: '100%',
-                          borderRadius: '5.418px',
-                          height: '41px',
-                          border: ' 0.903px solid #D0D4EA',
-                          background: '#F5F8FA',
-                          fontSize: '14px',
-                          pl: 1.5,
-                          color: 'black',
-                          '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
-                            {
-                              WebkitAppearance: 'none',
-                              margin: 0,
-                            },
-                          '&:focus': {
-                            outline: 'none',
-                          },
-                        }}
+                        sx={inputStyle}
                       />
                     </Box>
                   )}
@@ -234,33 +134,12 @@ const BookADemoForm = ({ form, handleModalClose }) => {
                   )}
                 </Box>
               ))}
-            <Button
-              onClick={handleSubmit}
-              sx={{
-                mt: 1,
-                mb: 3,
-                width: '126.416px',
-                height: '32.913px',
-                borderRadius: '3.92px',
-                background: '#001C63',
-                color: '#fff',
-                '&:hover': {
-                  backgroundColor: '#029894',
-                },
-              }}
-            >
+            <Button onClick={handleSubmit} sx={submitButtonStyle}>
               Submit
             </Button>
             <Box>
               <Typography
-                sx={{
-                  color: '#001C63',
-                  fontSize: '15px !important',
-                  fontStyle: 'normal',
-                  fontWeight: 400,
-                  linehHeight: '27.863px',
-                  maxWidth: '430px',
-                }}
+                sx={lastDescriptionStyle}
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </Box>
