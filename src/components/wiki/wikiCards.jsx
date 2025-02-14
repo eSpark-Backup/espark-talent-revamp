@@ -7,6 +7,7 @@ import {
   Grid,
   Button,
   Skeleton,
+  Stack,
 } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -180,7 +181,7 @@ const WikiCards = ({ data }) => {
                             lg: '15px',
                           }}
                         >
-                          {!loading && item?.salary ? (
+                          {!loading && item?.avgSalary ? (
                             'Average Salary'
                           ) : (
                             <Skeleton
@@ -200,13 +201,33 @@ const WikiCards = ({ data }) => {
                           }}
                           fontWeight={600}
                         >
-                          {!loading && item?.salary ? (
-                            `USD: $${item?.salary?.toLocaleString()} per month`
+                          {!loading && item?.avgSalary ? (
+                            <Stack direction={'column'}>
+                              {item.avgSalary.map((avgSalary) => (
+                                <Stack
+                                  key={avgSalary.name}
+                                  direction={'row'}
+                                  columnGap={1}
+                                  alignItems={'center'}
+                                >
+                                  <Typography
+                                    variant="h6"
+                                    style={{
+                                      width: '60px',
+                                      textTransform: 'capitalize',
+                                    }}
+                                  >
+                                    {avgSalary.name}
+                                  </Typography>
+                                  <Typography variant="subtitle2">
+                                    {`$${avgSalary.salary.from}
+                                    -$${avgSalary.salary.to} per month`}
+                                  </Typography>
+                                </Stack>
+                              ))}
+                            </Stack>
                           ) : (
-                            <Skeleton
-                              variant="text"
-                              sx={{ fontSize: '2rem' }}
-                            />
+                            `USD: $${item?.salary?.toLocaleString()} per month`
                           )}
                         </Typography>
                       </Box>
