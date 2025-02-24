@@ -1559,7 +1559,7 @@ export const HIRE_DEVELOPERS = [
       items: [
         {
           icon: `/images/service/mern/frontend.svg`,
-          title: `Frontend Developmen`,
+          title: `Frontend Development`,
           paragraph: `MERN stack developers are proficient in designing interactive web applications with visually appealing user interfaces using React.js`,
         },
         {
@@ -1923,8 +1923,8 @@ export const HIRE_DEVELOPERS = [
           paragraph: `To ensure the security of applications, DevOps engineers manage access controls, firewall configuration, and vulnerability assessment.`,
         },
         {
-          icon: `/images/service/devOps/pipline.svg`,
-          title: `CI/CD Pipline`,
+          icon: `/images/service/devOps/pipeline.svg`,
+          title: `CI/CD Pipeline`,
           paragraph: `DevOps engineer at eSpark Talent handles Continuous Integration/Continuous Deployment pipelines to ensure seamless development and release processes.`,
         },
         {
@@ -9494,7 +9494,7 @@ goals and requirements.
         },
         {
           icon: `/images/service/software/experts/icon3.svg`,
-          title: `Developments`,
+          title: `Development`,
           paragraph: `Our professional Developers at eSpark Talent use various programming languages like Java, C++, and Python to build software applications.`,
         },
         {
