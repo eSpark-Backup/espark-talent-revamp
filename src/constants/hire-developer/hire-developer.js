@@ -2207,7 +2207,7 @@ export const HIRE_DEVELOPERS = [
         {
           id: 4,
           heading: `Why did I choose eSpark Talent to hire a DevOps Engineer?`,
-          description: `We aim to provide professional and dedicated DevOps engineers at a const-effective rate.`,
+          description: `We aim to provide professional and dedicated DevOps engineers at a cost-effective rate.`,
         },
       ],
     },
