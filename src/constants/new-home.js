@@ -240,7 +240,7 @@ export const EXPERT_TEAM_DATA = {
   btnLink: `/book-a-demo`,
   dapartment: [
     {
-      post: 'Designer',
+      post: 'Designers',
       icon: '/images/homepage/expert-team/designer-icon.svg',
       employees: [
         {
@@ -264,7 +264,7 @@ export const EXPERT_TEAM_DATA = {
       ],
     },
     {
-      post: 'Developer',
+      post: 'Developers',
       icon: '/images/homepage/expert-team/developer-icon.svg',
       employees: [
         {
