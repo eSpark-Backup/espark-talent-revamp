@@ -121,11 +121,6 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
                 </Box>
                 {Array?.isArray(item?.employees) &&
                   item?.employees?.map((emp, index) => (
-                    // <Link
-                    //   key={index}
-                    //   href={`${emp?.link || '#'}`}
-                    //   target="_blank"
-                    // >
                     <Box
                       key={index}
                       sx={{
@@ -161,7 +156,7 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
                         },
                       }}
                     >
-                      <Box>
+                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Box
                           component={'img'}
                           src={emp?.image || ''}
@@ -194,7 +189,6 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
                         </Typography>
                       </Box>
                     </Box>
-                    // </Link>
                   ))}
               </Box>
             ))}

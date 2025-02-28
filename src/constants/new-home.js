@@ -244,7 +244,7 @@ export const EXPERT_TEAM_DATA = {
       icon: '/images/homepage/expert-team/designer-icon.svg',
       employees: [
         {
-          name: `Ahmed Naseem`,
+          name: `Mubbshir Shahid`,
           link: `#`,
           position: `Sr. UI/UX Designer`,
           image: `/images/homepage/expert-team/designer-1.svg`,
