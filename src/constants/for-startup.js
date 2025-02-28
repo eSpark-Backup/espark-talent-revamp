@@ -85,7 +85,7 @@ export const OUR_ADDITIONAL_BENEFITS = {
   ],
 };
 export const BEST_OUTSOURCING_SOLUTIONS = {
-  image: '/images/for-startup/outsourcing-solutions/best-solutions.png',
+  image: '/images/for-startup/outsourcing-solutions/best-outsourcing.png',
   alt: 'hire a top-notch team with eSpark Talent ',
   title: 'You Called For Us & We Are Here With Best Outsourcing Solutions.',
   description: `The global outsourced network of eSpark Talent relieves its partners and all the esteemed clients with the foremost HR outsourcing services. We serve what you demand, and that is the world’s best outsourcing team on fair imposes. <br />
