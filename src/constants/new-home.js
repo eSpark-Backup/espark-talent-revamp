@@ -15,6 +15,7 @@ export const EMPLOYEE_HERO_DATA = {
   bgImage: '/images/homepage/hero/emp-hero.png',
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
+  animatedVideo: '/images/homepage/hero/eSpark-New.webm',
   btnTitle: `Request Candidate`,
   btnLink: `/book-a-demo`,
   styles: {
@@ -182,7 +183,7 @@ export const EMPLOYEE_HERO_DATA = {
       position: 'relative',
       objectFit: 'contain',
       width: { xs: 'auto', md: '580px', lg: '650px', xl: '704px' },
-      height: { xs: 'auto', lg: '650px' },
+      height: { xs: 'auto', lg: 'auto', xl: '650px' },
     },
   },
 };
@@ -588,12 +589,14 @@ export const EMPLOYEE_SLIDER_DATA = {
       paddingBottom: '20px',
     },
     swiperSlideStyle: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      // display: 'flex',
+      // alignItems: 'center',
+      // justifyContent: 'center',
+      maxWidth: '230px',
     },
     videoStyle: {
       width: '100%',
+      maxWidth: '230px',
       height: '100%',
       objectFit: 'cover',
       borderRadius: '16.08px',
