@@ -50,9 +50,11 @@ const BookADemoFormValidationSchema = Yup.object().shape({
       'Invalid Email Address Format'
     )
     .required('Email is required'),
+
   web_url: Yup.string()
-    .matches(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/, 'Invalid Url')
+    .matches(/^(https?:\/\/|ftp:\/\/|www\.)[^\s/$.?#].[^\s]*$/, 'Invalid Url')
     .required('Url is required'),
+
   no_of_employees: Yup.number()
     .min(1, 'Minimum 1 employees')
     .required('No of employee is required'),
