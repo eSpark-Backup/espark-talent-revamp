@@ -1,16 +1,14 @@
 import React from 'react';
-import { getSingleWiki } from '@/sanity/sanity.quries';
 import NotFoundPage from '@/components/global/NotFound';
+
+import { getSingleWiki } from '@/sanity/sanity.quries';
 import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getWikisMetadata } from '@/components/global/seo';
+import { fetchWikiMetadata } from '@/utils/cors';
 
 export async function generateMetadata({ params }) {
-  const slug = params.wiki;
-  const wiki = await getSingleWiki(slug);
-  const filteredData = wiki || GLOBAL_SEO[0];
-  return getWikisMetadata(filteredData);
+  const slug = params?.wiki;
+  return fetchWikiMetadata(slug);
 }
 
 const Page = async ({ params }) => {
@@ -22,7 +20,7 @@ const Page = async ({ params }) => {
     );
   }
 
-  const slug = params.wiki;
+  const slug = params?.wiki;
 
   if (typeof slug !== 'string' || slug.trim() === '') {
     return (

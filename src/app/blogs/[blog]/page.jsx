@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import NotFoundPage from '@/components/global/NotFound';
+
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
-import { GLOBAL_SEO } from '@/constants/seo-data';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
-import NotFoundPage from '@/components/global/NotFound';
-import { getBlogsMetadata } from '@/components/global/seo';
+import { fetchBlogMetadata } from '@/utils/cors';
 
 export async function generateMetadata({ params }) {
-  const slug = params.blog;
-  const blog = await getSingleBlog(slug);
-  const filteredData = blog || GLOBAL_SEO[0];
-  return getBlogsMetadata(filteredData);
+  const slug = params?.blog;
+  return fetchBlogMetadata(slug);
 }
 
 const Page = async ({ params }) => {

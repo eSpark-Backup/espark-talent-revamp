@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
-import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
-import { getSingleHire } from '@/sanity/sanity.quries';
 import Hire from '@/components/hire-developer/Hire';
 import Script from 'next/script';
-import { getHireMetadata } from '@/components/global/seo';
+
+import { GLOBAL_SEO } from '@/constants/seo-data';
+import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
+import { getSingleHire } from '@/sanity/sanity.quries';
+import { fetchHireMetadata } from '@/utils/cors';
 
 export async function generateMetadata({ params }) {
-  const slug = params.hire;
-  const hire = await getSingleHire(slug);
-  const filteredData = hire || GLOBAL_SEO[0];
-  return getHireMetadata(filteredData);
+  const slug = params?.hire;
+  return fetchHireMetadata(slug);
 }
 
 export default async function Page({ params }) {
@@ -21,7 +20,7 @@ export default async function Page({ params }) {
   const hire = await getSingleHire(path);
   const filteredData = hire || GLOBAL_SEO[0];
 
-  const slug = params.hire;
+  const slug = params?.hire;
   const data = HIRE_DEVELOPERS?.find((item) => item?.path === slug);
 
   if (!params || !params?.hire) {

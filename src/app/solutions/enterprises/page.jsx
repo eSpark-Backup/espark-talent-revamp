@@ -1,6 +1,4 @@
-// 'use client';
 import React from 'react';
-
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
@@ -8,8 +6,12 @@ import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
 import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
-import { getMetadata } from '@/components/global/seo';
+import Faq from '@/components/FAQ/Faq';
 
+import { getMetadata } from '@/components/global/seo';
+import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
+import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
+import { getFilteredData } from '@/utils/cors';
 import {
   ACHIEVEMENTS_DATA,
   CLIENTS_SLIDER_DATA,
@@ -21,18 +23,9 @@ import {
   OUTSOURCING_WONDERS_DATA,
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
-import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
-import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getPageSeo } from '@/sanity/sanity.quries';
-
-import Faq from '@/components/FAQ/Faq';
 
 const pathname = '/solutions/enterprises';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
+const filteredData = getFilteredData(pathname);
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

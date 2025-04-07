@@ -11,7 +11,7 @@ const WikiPage = ({ params }) => {
   useEffect(() => {
     const fetchWikiData = async () => {
       try {
-        const slug = params.wiki;
+        const slug = params?.wiki;
         const wikiData = await getSingleWiki(slug);
         setWiki(wikiData);
       } catch (error) {

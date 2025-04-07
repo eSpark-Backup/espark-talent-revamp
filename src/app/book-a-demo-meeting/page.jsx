@@ -1,16 +1,12 @@
 import React from 'react';
 import DemoMeetingPage from '@/components/book-a-demo-meeting/DemoMeetingPage';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
 
+import { getMetadata } from '@/components/global/seo';
+import { getFilteredData } from '@/utils/cors';
 import { DEMO_MEETING_DATA } from '@/constants/book-demo-meeting/book-demo-meeting';
 
 const pathname = '/book-a-demo-meeting';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
+const filteredData = getFilteredData(pathname);
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

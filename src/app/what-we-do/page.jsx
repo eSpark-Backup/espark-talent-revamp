@@ -1,14 +1,11 @@
-import WhatWeDo from '@/components/whatwedopage/WhatWeDo';
 import React from 'react';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getPageSeo } from '@/sanity/sanity.quries';
+import WhatWeDo from '@/components/whatwedopage/WhatWeDo';
+
 import { getMetadata } from '@/components/global/seo';
+import { getFilteredData } from '@/utils/cors';
 
 const pathname = '/what-we-do';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
+const filteredData = getFilteredData(pathname);
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

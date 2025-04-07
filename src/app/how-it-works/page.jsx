@@ -1,15 +1,11 @@
-import HowitsWork from '@/components/how-it-work/HowitsWork';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
-
 import React from 'react';
+import HowitsWork from '@/components/how-it-work/HowitsWork';
+
+import { getMetadata } from '@/components/global/seo';
+import { getFilteredData } from '@/utils/cors';
 
 const pathname = '/how-it-works';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
+const filteredData = getFilteredData(pathname);
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

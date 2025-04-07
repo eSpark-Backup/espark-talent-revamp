@@ -7,12 +7,12 @@ config();
 
 /**
  * Initializes an S3 client instance with the specified configuration.
- * 
+ *
  * @constant
  * @type {S3Client}
  * @description Configures the S3 client with the endpoint, region, and credentials
  * retrieved from environment variables.
- * 
+ *
  * Environment Variables:
  * - `NEXT_PUBLIC_END_POINT`: The endpoint URL for the S3 service.
  * - `NEXT_PUBLIC_REGION`: The region for the S3 service.

@@ -1,5 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
+import { Box } from '@mui/material';
+import Hero from '@/components/homepage/Hero';
+import ClientSlider from '@/components/global/ClientSlider';
+import AwardAchievement from '@/components/homepage/AwardAchiefment';
+import ClientSays from '@/components/homepage/ClientSays';
+import OurExperties from '@/components/homepage/OurExperties';
+import BenefitsWorks from '@/components/homepage/BenefitsWorks';
+import DemoCta from '@/components/demo/DemoCta';
+import Process from '@/components/homepage/Process';
+
 import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,
@@ -11,25 +21,6 @@ import {
   PROCESS_DATA,
 } from '@/constants/homepage';
 import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
-import Hero from '@/components/homepage/Hero';
-import ClientSlider from '@/components/global/ClientSlider';
-import AwardAchievement from '@/components/homepage/AwardAchiefment';
-import ClientSays from '@/components/homepage/ClientSays';
-import OurExperties from '@/components/homepage/OurExperties';
-import BenefitsWorks from '@/components/homepage/BenefitsWorks';
-import DemoCta from '@/components/demo/DemoCta';
-import Process from '@/components/homepage/Process';
-import { Box } from '@mui/material';
-import { getPageSeo } from '@/sanity/sanity.quries';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getMetadata } from '@/components/global/seo';
-
-const pathname = '/demo';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
-export const metadata = getMetadata(filteredData);
 
 const Page = () => {
   useEffect(() => {
@@ -77,4 +68,5 @@ const Page = () => {
     </>
   );
 };
+
 export default Page;
