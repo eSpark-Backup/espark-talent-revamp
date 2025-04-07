@@ -4,6 +4,7 @@ import { Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
+
 import { SOCIAL_LINKS_DATA } from '@/constants/blogs';
 import { PortableText } from '@portabletext/react';
 

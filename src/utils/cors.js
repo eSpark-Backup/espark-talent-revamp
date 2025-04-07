@@ -14,9 +14,36 @@ import {
   getWiki,
 } from '@/sanity/sanity.quries';
 
+/**
+ * Retrieves the SEO (Search Engine Optimization) configuration for a page.
+ *
+ * @constant {Promise<Object>} seo - A promise that resolves to the SEO configuration object for the page.
+ * @throws {Error} If the `getPageSeo` function fails to retrieve the SEO data.
+ */
 export const seo = await getPageSeo();
+
+/**
+ * Fetches and exports the blogs data.
+ *
+ * @constant {Promise<any>} blogs - The blogs data fetched from the `getBlog` function.
+ * @throws {Error} If the `getBlog` function fails to fetch the data.
+ */
 export const blogs = await getBlog();
+
+/**
+ * Retrieves the hire data asynchronously.
+ *
+ * @constant {Promise<any>} hires - A promise that resolves to the hire data.
+ * @throws {Error} Throws an error if the `getHire` function fails.
+ */
 export const hires = await getHire();
+
+/**
+ * Retrieves wiki data by calling the `getWiki` function.
+ *
+ * @constant {Promise<any>} wikis - A promise that resolves to the wiki data.
+ * @throws {Error} If the `getWiki` function fails to fetch the data.
+ */
 export const wikis = await getWiki();
 
 /**
