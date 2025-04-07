@@ -2,6 +2,38 @@ import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+/**
+ * Handles the POST request to send emails using SendGrid.
+ *
+ * @async
+ * @function POST
+ * @param {Request} req - The HTTP request object.
+ * @returns {Promise<Response>} The HTTP response object.
+ *
+ * @throws {Response} Returns a 500 status response if an error occurs during email sending.
+ *
+ * @example
+ * // Example request body:
+ * const requestBody = {
+ *   toAdmin: "admin@example.com",
+ *   toSubmitter: "submitter@example.com",
+ *   adminTemplateId: "d-1234567890abcdef1234567890abcdef",
+ *   data: {
+ *     name: "John Doe",
+ *     message: "This is a test message."
+ *   }
+ * };
+ *
+ * // Example usage:
+ * fetch('/api/email', {
+ *   method: 'POST',
+ *   headers: { 'Content-Type': 'application/json' },
+ *   body: JSON.stringify(requestBody)
+ * })
+ * .then(response => response.json())
+ * .then(data => console.log(data))
+ * .catch(error => console.error('Error:', error));
+ */
 export async function POST(req) {
   const request = await req.json();
 

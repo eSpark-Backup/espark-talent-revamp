@@ -7,6 +7,15 @@ import { toast } from 'react-toastify';
 const adminId = process.env.NEXT_PUBLIC_JOIN_CREW_ADMIN_EMAIL_ID;
 const adminTempleteId = process.env.NEXT_PUBLIC_JOIN_CREW_ADMIN_TEMPLETE_ID;
 
+/**
+ * Updates the state based on the provided field name and value.
+ * Handles specific cases for fields like 'education', 'field', 'subField', and 'position'
+ * to reset dependent fields in the state.
+ *
+ * @param {string} name - The name of the field being updated.
+ * @param {any} value - The new value for the specified field.
+ * @param {Function} setState - The state updater function to modify the state.
+ */
 export const handleChangeJoinCrew = (name, value, setState) => {
   switch (name) {
     case 'education':
@@ -46,6 +55,11 @@ export const handleChangeJoinCrew = (name, value, setState) => {
   }
 };
 
+/**
+ * Resets the form state for the "Join Crew" form by setting all fields to empty strings.
+ *
+ * @param {Function} setForm - A state updater function to update the form state.
+ */
 export const handleEmptyJoinCrew = (setForm) => {
   setForm({
     name: '',
@@ -71,6 +85,31 @@ export const handleEmptyJoinCrew = (setForm) => {
   });
 };
 
+/**
+ * Handles the submission of the "Join Crew" form.
+ *
+ * @async
+ * @function
+ * @param {Event} e - The event object from the form submission.
+ * @param {Object} form - The form data object containing user input.
+ * @param {Function} setLoading - Function to set the loading state.
+ * @param {Function} setForm - Function to update the form state.
+ * @param {Function} setRegistrationModal - Function to toggle the registration modal visibility.
+ * @param {Function} setSuccessModal - Function to toggle the success modal visibility.
+ * @returns {Promise<void>} - A promise that resolves when the form submission is complete.
+ *
+ * @throws {Error} Throws an error if the form submission fails.
+ *
+ * @description
+ * This function validates the form data, uploads the resume if provided, and submits the data to the database and email API.
+ * It performs the following steps:
+ * 1. Prevents the default form submission behavior.
+ * 2. Validates the phone number, name, email, and other required fields.
+ * 3. Uploads the resume file if it is a File object.
+ * 4. Submits the form data to the Supabase database.
+ * 5. Sends an email notification to the admin and the submitter.
+ * 6. Handles errors and updates the UI accordingly.
+ */
 export const handleSubmitJoinCrew = async (
   e,
   form,
@@ -318,12 +357,28 @@ export const handleSubmitJoinCrew = async (
 };
 
 // dublicates slides function for empoloyee slider from homepage
+/**
+ * Creates a duplicate of the given array of slide objects.
+ *
+ * @param {Array<Object>} originalSlides - The array of slide objects to duplicate.
+ * @returns {Array<Object>} A new array containing duplicates of the original slide objects.
+ */
 export const duplicateSlides = (originalSlides) => {
   return originalSlides?.map((slide) => ({ ...slide }));
 };
 
 // home page hero untils
 
+/**
+ * Determines the appropriate animation class name based on the current screen size.
+ *
+ * This function uses media queries to check the current screen size and returns
+ * a corresponding animation class name. The screen sizes are categorized as:
+ * 'xs' (extra small), 'sm' (small), 'md' (medium), 'lg' (large), and 'xl' (extra large).
+ *
+ * @returns {string|null} The animation class name corresponding to the current screen size,
+ *                        or `null` if no matching screen size is found.
+ */
 export const getAnimation = () => {
   const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl']?.reduce((acc, key) => {
     acc[`is_${key}`] = useMediaQuery((theme) => theme?.breakpoints?.only(key));
@@ -338,12 +393,27 @@ export const getAnimation = () => {
   return null;
 };
 
+/**
+ * Opens a new browser window or tab with the specified URL and target.
+ *
+ * @param {string} link - The URL to open. Defaults to an empty string if not provided.
+ * @param {string} target - The target where the URL should be opened (e.g., "_blank", "_self").
+ * @returns {Window|null} A reference to the newly opened window, or null if the operation fails.
+ */
 export const open = (link, target) => {
   return window?.open(link || '', target);
 };
 
 // home page expert team
 
+/**
+ * Opens a form or a new window based on the provided parameters.
+ *
+ * @param {string} link - The URL to open in a new window if the condition is not met.
+ * @param {string} target - The target attribute specifying where to open the link (e.g., "_blank").
+ * @param {string} path - The current path to check against a specific condition.
+ * @param {Function} handle - The callback function to execute if the condition is met.
+ */
 export const openForm = (link, target, path, handle) =>
   path && path?.includes('/hire-remote-developers')
     ? handle()
@@ -351,6 +421,17 @@ export const openForm = (link, target, path, handle) =>
 
 // home page faqs
 
+/**
+ * Handles the expansion state of a panel.
+ *
+ * @param {string} panel - The identifier of the panel to be expanded or collapsed.
+ * @param {Function} setExpanded - A function to update the expanded state.
+ *                                 It should accept a string (panel identifier) or null.
+ * @returns {Function} A callback function to handle the change event.
+ *                      The callback takes two parameters:
+ *                      - {Object} event: The event object.
+ *                      - {boolean} isExpanded: A boolean indicating whether the panel is expanded.
+ */
 export const handleChange = (panel, setExpanded) => (event, isExpanded) => {
   setExpanded && setExpanded(isExpanded ? panel : null);
 };
@@ -359,6 +440,17 @@ export const handleChange = (panel, setExpanded) => (event, isExpanded) => {
 
 // what-we-do page
 
+/**
+ * Determines the status of a given path based on predefined conditions.
+ *
+ * @param {string} pathName - The path name to evaluate.
+ * @returns {Object} An object containing boolean flags indicating the status of the path:
+ * - `isDemo` {boolean}: True if the path is '/demo'.
+ * - `isHome` {boolean}: True if the path is '/'.
+ * - `isEnterprise` {boolean}: True if the path is '/solutions/enterprises'.
+ * - `isCrew` {boolean}: True if the path is '/join-espark-crew'.
+ * - `isBlogOrStartup` {boolean}: True if the path includes '/blogs' or '/business-startup'.
+ */
 export const getPathStatus = (pathName) => {
   return {
     isDemo: pathName === '/demo',
@@ -370,6 +462,15 @@ export const getPathStatus = (pathName) => {
   };
 };
 
+/**
+ * Handles navigation control for a Swiper instance.
+ *
+ * @param {string} type - The type of navigation action.
+ *                        Accepts 'next' to navigate to the previous slide
+ *                        or 'prev' to navigate to the next slide.
+ * @param {Object} swiperRef - A reference object to the Swiper instance.
+ *                             It should have a `current` property containing the Swiper instance.
+ */
 export const handleControlSwiper = (type, swiperRef) => {
   switch (type) {
     case 'next':
@@ -388,6 +489,15 @@ export const handleControlSwiper = (type, swiperRef) => {
 
 // careers page
 
+/**
+ * Paginates and filters data based on the selected category, page number, and items per page.
+ *
+ * @param {Array} data - The array of data to be paginated and filtered.
+ * @param {string} selectedCategory - The category to filter the data by. Use 'all' to skip filtering.
+ * @param {number} page - The current page number (1-based index).
+ * @param {number} perPage - The number of items to display per page.
+ * @returns {Array} - A sliced array containing the paginated and filtered data for the specified page.
+ */
 export const paginateData = (data, selectedCategory, page, perPage) => {
   const filteredData =
     selectedCategory === 'all'
@@ -400,6 +510,14 @@ export const paginateData = (data, selectedCategory, page, perPage) => {
   return filteredData?.slice(startIndex, endIndex);
 };
 
+/**
+ * Calculates the total number of pages based on the provided data, selected category, and items per page.
+ *
+ * @param {Array} data - The array of data items to paginate.
+ * @param {string} selectedCategory - The category to filter the data by. Use 'all' to include all items.
+ * @param {number} perPage - The number of items to display per page.
+ * @returns {number} The total number of pages required.
+ */
 export const totalPageCount = (data, selectedCategory, perPage) => {
   const filteredData =
     selectedCategory === 'all'
@@ -409,6 +527,13 @@ export const totalPageCount = (data, selectedCategory, perPage) => {
   return Math.ceil(filteredData?.length / perPage);
 };
 
+/**
+ * Handles the change event for job category selection.
+ *
+ * @param {Object} event - The event object from the change event.
+ * @param {Function} setSelectedCategory - Function to update the selected category state.
+ * @param {Function} setPage - Function to reset the pagination to the first page.
+ */
 export const handleJobCategoryChange = (
   event,
   setSelectedCategory,
@@ -418,6 +543,13 @@ export const handleJobCategoryChange = (
   setPage(1);
 };
 
+/**
+ * Handles pagination change by updating the current page and scrolling to the top of the page.
+ *
+ * @param {Object} event - The event object triggered by the pagination component.
+ * @param {number} value - The new page number selected.
+ * @param {Function} setPage - A function to update the current page state.
+ */
 export const handlePaginationChange = (event, value, setPage) => {
   setPage(value);
   window.scrollTo({
@@ -426,6 +558,13 @@ export const handlePaginationChange = (event, value, setPage) => {
   });
 };
 
+/**
+ * Handles the click event for the "Apply" button.
+ *
+ * @param {Object} selectedJobData - The data of the selected job.
+ * @param {Function} handleOpen - Function to open a modal or perform an open action.
+ * @param {Function} setJobData - Function to set the job data state.
+ */
 export const handleApplyButtonClick = (
   selectedJobData,
   handleOpen,
@@ -437,17 +576,43 @@ export const handleApplyButtonClick = (
 
 // home page experties section
 
+/**
+ * Handles the state change for an accordion component.
+ *
+ * @param {string} panel - The identifier for the accordion panel.
+ * @param {Function} setExpandedAccordion - A state setter function to update the expanded accordion panel.
+ * @returns {Function} - A function to handle the accordion's expansion state change.
+ */
 export const handleChangeAccordion =
   (panel, setExpandedAccordion) => (event, isExpanded) => {
     setExpandedAccordion(isExpanded ? panel : null);
   };
 
+/**
+ * Checks if the given accordion index matches the expanded accordion.
+ *
+ * @param {number|string} expandedAccordion - The currently expanded accordion identifier.
+ * @param {number|string} index - The index of the accordion to check.
+ * @returns {boolean} Returns `true` if the given index matches the expanded accordion, otherwise `false`.
+ */
 export const checkingExpendedAccordion = (expandedAccordion, index) => {
   return expandedAccordion === index ? true : false;
 };
 
 // Client Says section in hire-a-frontend-developer
 
+/**
+ * Determines the navigation reference based on the given direction.
+ *
+ * @param {string} direction - The current navigation direction.
+ * @param {string} left - The string representing the left direction.
+ * @param {string} right - The string representing the right direction.
+ * @param {any} prevRef - The reference to use when the direction is left.
+ * @param {any} nextRef - The reference to use when the direction is right.
+ * @returns {any|null} - Returns `prevRef` if the direction matches `left`,
+ *                       `nextRef` if the direction matches `right`,
+ *                       or `null` if neither matches.
+ */
 export const navigationImageDirection = (
   direction,
   left,
@@ -460,6 +625,15 @@ export const navigationImageDirection = (
 
 // footer cta
 
+/**
+ * Determines the render data based on the current path and pricing link.
+ *
+ * @param {string} pathName - The current path name of the application.
+ * @param {string} pricingLink - The link or identifier for the pricing page.
+ * @param {Object} pricingPageData - The data to render for the pricing page.
+ * @param {Object} globalData - The default data to render for other pages.
+ * @returns {Object} - Returns `pricingPageData` if the path includes the pricing link, otherwise returns `globalData`.
+ */
 export const getRenderData = (
   pathName,
   pricingLink,
@@ -471,6 +645,13 @@ export const getRenderData = (
 
 // Client Slider functions
 
+/**
+ * Extends the given array of clients to the specified length by repeating its elements.
+ *
+ * @param {Array<Object>} clients - The array of client objects to extend.
+ * @param {number} length - The desired length of the extended array.
+ * @returns {Array<Object>} A new array of client objects extended to the specified length.
+ */
 export const extendClients = (clients, length) => {
   const extendedClients = Array?.from({ length }, (_, index) => ({
     ...clients[index % clients?.length],
@@ -478,6 +659,16 @@ export const extendClients = (clients, length) => {
   return extendedClients;
 };
 
+/**
+ * Modifies the image path based on the provided background color.
+ *
+ * @param {string} originalImagePath - The original path of the image.
+ * @param {string} bgColor - The background color used to determine the image variant.
+ *                           If the background color is `#029894` or not provided,
+ *                           the function replaces `_dark` with `_light` in the image path.
+ *                           Otherwise, it replaces `_light` with `_dark`.
+ * @returns {string} - The modified image path with the appropriate variant.
+ */
 export const getImagePath = (originalImagePath, bgColor) => {
   if (bgColor == '#029894' || !bgColor) {
     return originalImagePath?.replace('_dark', '_light');
@@ -488,6 +679,14 @@ export const getImagePath = (originalImagePath, bgColor) => {
 
 // demo cta function for demo and book-a-meeting page
 
+/**
+ * Determines the size based on screen dimensions.
+ *
+ * @param {boolean} isSmallScreen - Indicates if the screen is small.
+ * @param {boolean} isMediumScreen - Indicates if the screen is medium.
+ * @param {boolean} isLargeScreen - Indicates if the screen is large.
+ * @returns {string} The size as a string: 'small', 'medium', or 'large'.
+ */
 export const getSize = (isSmallScreen, isMediumScreen, isLargeScreen) =>
   isSmallScreen
     ? 'small'

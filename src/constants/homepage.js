@@ -346,6 +346,7 @@ export const PERKS_DATA = [
     },
   },
 ];
+
 export const DEVELOEPRS_PERKS_DATA = {
   perksData: [
     {

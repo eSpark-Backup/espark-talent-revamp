@@ -391,6 +391,7 @@ export const FOOTER_STYLE = {
     },
   },
 };
+
 export const CAREERS_FOOTER_DATA = {
   contactUs: {
     label: 'Have questions about <span>our features</span>?',

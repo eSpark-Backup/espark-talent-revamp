@@ -252,6 +252,7 @@ const routes = [
     ],
   },
 ];
+
 export const Hire_Remote_Routes = [
   {
     name: 'Our Company',
@@ -461,4 +462,5 @@ export const Hire_Remote_Routes = [
     ],
   },
 ];
+
 export default routes;

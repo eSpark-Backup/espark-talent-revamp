@@ -112,6 +112,7 @@ export const HERO_DATA = {
     },
   },
 };
+
 export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
   title: `Hire Top Talent Now`,
@@ -315,6 +316,7 @@ export const DIFFERENCE_DATA = {
     },
   ],
 };
+
 export const DIFFERENCE_DATA_FOR_REMOTE = {
   items: [
     {
@@ -361,6 +363,7 @@ export const WORKS_DATA = {
     },
   ],
 };
+
 export const EXPERT_TEAM_DATA = {
   title: `Build A World-Class Experts Team For Your Business`,
   btnTitle: `Book your demo`,

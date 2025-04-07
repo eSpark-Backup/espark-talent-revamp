@@ -11,6 +11,7 @@ export const EXCLUDED_PATHS = [
   '/hire-remote-developers',
   '/book-a-demo-meeting',
 ];
+
 export const NAVBAR_STYLE = {
   popperStyle: (dropdownName) => ({
     zIndex: 1002,

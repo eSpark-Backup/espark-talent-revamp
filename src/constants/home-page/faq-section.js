@@ -39,6 +39,7 @@ export const FAQ_DATA = {
     },
   ],
 };
+
 export const STARTUP_FAQ_DATA = {
   title: 'Frequently Asked Questions',
   questions: [
