@@ -374,7 +374,7 @@ export const EXPERT_TEAM_DATA = {
           name: `Mubbshir Shahid`,
           link: `#`,
           position: `Sr. UI/UX Designer`,
-          image: `/images/homepage/expert-team/designer-1.svg`,
+          image: `/images/homepage/expert-team/designer-1.png`,
         },
         {
           name: `Sam Jorden`,
@@ -422,7 +422,7 @@ export const EXPERT_TEAM_DATA = {
           name: `Kashif Hussain`,
           link: `#`,
           position: `Digital Marketer`,
-          image: `/images/homepage/expert-team/marketer-1.svg`,
+          image: `/images/homepage/expert-team/marketer-1.png`,
         },
         {
           name: `Moryan`,
