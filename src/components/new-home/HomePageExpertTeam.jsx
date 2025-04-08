@@ -56,6 +56,8 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
             <Box
               component={'img'}
               src={emp?.image || ''}
+              height={52}
+              width={52}
               sx={imageStyle(empIndex)}
             />
             <Box>
