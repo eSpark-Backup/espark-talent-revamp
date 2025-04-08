@@ -367,11 +367,11 @@ export const EXPERT_TEAM_DATA = {
   btnLink: `/book-a-demo`,
   dapartment: [
     {
-      post: 'Designer',
+      post: 'Designers',
       icon: '/images/homepage/expert-team/designer-icon.svg',
       employees: [
         {
-          name: `Ahmed Naseem`,
+          name: `Mubbshir Shahid`,
           link: `#`,
           position: `Sr. UI/UX Designer`,
           image: `/images/homepage/expert-team/designer-1.svg`,
@@ -391,7 +391,7 @@ export const EXPERT_TEAM_DATA = {
       ],
     },
     {
-      post: 'Developer',
+      post: 'Developers',
       icon: '/images/homepage/expert-team/developer-icon.svg',
       employees: [
         {
