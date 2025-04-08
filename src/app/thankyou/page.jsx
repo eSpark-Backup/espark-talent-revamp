@@ -7,16 +7,6 @@ import {
   CLIENT_SLIDER_BREAK_POINTS,
 } from '@/constants/homepage';
 import { THANKYOU_DATA } from '@/constants/thankyou/thankyou';
-import { getPageSeo } from '@/sanity/sanity.quries';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getMetadata } from '@/components/global/seo';
-
-const pathname = '/thankyou';
-const seo = await getPageSeo();
-const filteredData =
-  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-
-export const metadata = getMetadata(filteredData);
 
 const Page = () => {
   return (
