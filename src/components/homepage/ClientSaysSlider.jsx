@@ -92,8 +92,8 @@ const ClientSaysSlider = ({ data, styles }) => {
         }}
         pagination={false}
         navigation={{
-          prevEl: prevRef && prevRef?.current,
-          nextEl: nextRef && nextRef?.current,
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
         loop={true}
         allowTouchMove={touch_Allowed}
@@ -105,10 +105,18 @@ const ClientSaysSlider = ({ data, styles }) => {
         ]}
         onInit={(swiper) => {
           swiper.params.allowTouchMove = touch_Allowed;
-          swiper.params.navigation.prevEl = prevRef && prevRef?.current;
-          swiper.params.navigation.nextEl = nextRef && nextRef?.current;
-          swiper?.navigation?.init();
-          swiper?.navigation?.update();
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
+        onSwiper={(swiper) => {
+          setTimeout(() => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          });
         }}
       >
         {data?.map(renderSlide)}
