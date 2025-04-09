@@ -9,7 +9,7 @@ const EmployeeBanner = ({ data }) => {
     subTitle,
     description,
     bgImage,
-    animatedVideo,
+    animatedGif,
     btnTitle,
     btnLink,
     styles,
@@ -60,7 +60,7 @@ const EmployeeBanner = ({ data }) => {
             </Button>
           </Box>
           <Box sx={imageBoxStyle} id="webm-video">
-            <video sx={imageStyle} src={animatedVideo} autoPlay loop muted />
+            <Box component={'img'} sx={imageStyle} src={animatedGif} />
           </Box>
         </Box>
         <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>

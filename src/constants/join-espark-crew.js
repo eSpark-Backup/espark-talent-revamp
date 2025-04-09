@@ -522,12 +522,14 @@ export const EDUCATION_OPTIONS = [
 ];
 
 export const FIELDS = [
-  { value: 'Software Engineering', label: 'Software Engineering' },
+  { value: 'Admin', label: 'Admin' },
+  { value: 'Finance', label: 'Finance' },
   { value: 'Hardware Design', label: 'Hardware Design' },
-  { value: 'Mechanical', label: 'Mechanical' },
   { value: 'Human Resources', label: 'Human Resources' },
-  { value: 'Marketing', label: 'Marketing' },
+  { value: 'Software Engineering', label: 'Software Engineering' },
   { value: 'Sales', label: 'Sales' },
+  { value: 'Mechanical', label: 'Mechanical' },
+  { value: 'Marketing', label: 'Marketing' },
 ];
 
 export const SUB_FIELDS = {
@@ -818,6 +820,114 @@ export const SUB_FIELDS = {
     { value: 'Sales Coordinator', label: 'Sales Coordinator' },
     { value: 'Sales Account Coordinator', label: 'Sales Account Coordinator' },
     { value: 'Product Marketer', label: 'Product Marketer' },
+  ],
+  ['Finance']: [
+    {
+      value: 'Accounting and Finance Officer',
+      label: 'Accounting and Finance Officer',
+    },
+    { value: 'Audit Manager', label: 'Audit Manager' },
+    { value: 'Auditor', label: 'Auditor' },
+    { value: 'Budget Analyst', label: 'Budget Analyst' },
+    { value: 'Budget Manager', label: 'Budget Manager' },
+    { value: 'Compliance Officer', label: 'Compliance Officer' },
+    { value: 'Corporate Finance Manager', label: 'Corporate Finance Manager' },
+    {
+      value: 'Corporate Finance Specialist',
+      label: 'Corporate Finance Specialist',
+    },
+    { value: 'Credit Analyst', label: 'Credit Analyst' },
+    { value: 'Equity Research Analyst', label: 'Equity Research Analyst' },
+    { value: 'FP&A Manager', label: 'FP&A Manager' },
+    {
+      value: 'Finance & Accounting Manager',
+      label: 'Finance & Accounting Manager',
+    },
+    { value: 'Finance Assistant', label: 'Finance Assistant' },
+    { value: 'Finance Director', label: 'Finance Director' },
+    { value: 'Finance Manager', label: 'Finance Manager' },
+    { value: 'Financial Analyst', label: 'Financial Analyst' },
+    { value: 'Financial Controller', label: 'Financial Controller' },
+    {
+      value: 'Financial Modeling Specialist',
+      label: 'Financial Modeling Specialist',
+    },
+    { value: 'Financial Planner', label: 'Financial Planner' },
+    {
+      value: 'Financial Reporting Manager',
+      label: 'Financial Reporting Manager',
+    },
+    { value: 'Investment Analyst', label: 'Investment Analyst' },
+    { value: 'Portfolio Manager', label: 'Portfolio Manager' },
+    { value: 'Risk Analyst', label: 'Risk Analyst' },
+    { value: 'Senior Financial Analyst', label: 'Senior Financial Analyst' },
+    { value: 'Strategic Finance Manager', label: 'Strategic Finance Manager' },
+    { value: 'Tax Consultant', label: 'Tax Consultant' },
+    { value: 'Tax Manager', label: 'Tax Manager' },
+    { value: 'Treasury Analyst', label: 'Treasury Analyst' },
+    { value: 'Treasury Manager', label: 'Treasury Manager' },
+    { value: 'Wealth Manager', label: 'Wealth Manager' },
+  ],
+  ['Admin']: [
+    { value: 'Admin Manager', label: 'Admin Manager' },
+    { value: 'Admin Officer', label: 'Admin Officer' },
+    {
+      value: 'Administrative Coordinator',
+      label: 'Administrative Coordinator',
+    },
+    { value: 'Administrative Officer', label: 'Administrative Officer' },
+    { value: 'Clerical Supervisor', label: 'Clerical Supervisor' },
+    {
+      value: 'Contracts & Compliance Administrator',
+      label: 'Contracts & Compliance Administrator',
+    },
+    { value: 'Corporate Affairs Manager', label: 'Corporate Affairs Manager' },
+    { value: 'Database Administrator', label: 'Database Administrator' },
+    {
+      value: 'Event & Office Coordinator',
+      label: 'Event & Office Coordinator',
+    },
+    { value: 'Executive Assistant', label: 'Executive Assistant' },
+    { value: 'Facilities Manager', label: 'Facilities Manager' },
+    {
+      value: 'Fleet & Transport Administrator',
+      label: 'Fleet & Transport Administrator',
+    },
+    { value: 'Front Office Manager', label: 'Front Office Manager' },
+    { value: 'IT Administrator', label: 'IT Administrator' },
+    {
+      value: 'IT Support & Admin Officer',
+      label: 'IT Support & Admin Officer',
+    },
+    { value: 'Inventory & Asset Manager', label: 'Inventory & Asset Manager' },
+    {
+      value: 'Legal Administrative Manager',
+      label: 'Legal Administrative Manager',
+    },
+    {
+      value: 'Logistics & Procurement Manager',
+      label: 'Logistics & Procurement Manager',
+    },
+    {
+      value: 'Maintenance & Admin Supervisor',
+      label: 'Maintenance & Admin Supervisor',
+    },
+    { value: 'Municipal Administrator', label: 'Municipal Administrator' },
+    {
+      value: 'Network & System Administrator',
+      label: 'Network & System Administrator',
+    },
+    { value: 'Office Manager', label: 'Office Manager' },
+    { value: 'Operations Manager', label: 'Operations Manager' },
+    { value: 'Public Affairs Manager', label: 'Public Affairs Manager' },
+    {
+      value: 'Regulatory Affairs Manager',
+      label: 'Regulatory Affairs Manager',
+    },
+    {
+      value: 'Travel & Logistics Manager',
+      label: 'Travel & Logistics Manager',
+    },
   ],
 };
 
