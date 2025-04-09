@@ -11,6 +11,14 @@
   --card-heading: 22px;
   --main-heading-description: 20px;
 }
+::selection {
+  background: #029894;
+  color: #ffffff;
+} 
+::-moz-selection {
+  background: #029894;
+  color: #fff;
+}
 
 img,
 video {
