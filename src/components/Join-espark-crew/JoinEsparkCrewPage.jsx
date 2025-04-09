@@ -155,7 +155,6 @@ export default function JoinEsparkCrewPage() {
       </Stack>
       {/* Footer CTA */}
       <JoinCrewCTA handleClick={handleClick} />
-
       {/* Registration Modal  */}
       <JoinEsparkRegistrationModal
         open={registrationModal}

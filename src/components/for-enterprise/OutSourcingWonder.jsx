@@ -120,7 +120,6 @@ const OutSourcingWonder = ({ data }) => {
                         <Box sx={iconBoxStyle}>
                           <Image
                             quality="85"
-                            // priority={true}
                             src={item?.icon || '/path/to/fallback/image.jpg'}
                             alt={`${item?.title || 'Item icon'}`}
                             height={

@@ -19,17 +19,23 @@ import { getFilteredData } from '@/utils/cors';
 
 // Dynamically import components that should not be server-rendered
 const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
-  ssr: false,
+  ssr: false, // Disable server-side rendering for this component
 });
 
 const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
-  ssr: false,
+  ssr: false, // Disable server-side rendering for this component
 });
 
+// Revalidate the page every 1800 seconds (30 minutes)
 export const revalidate = 1800;
 
+// Define the pathname for filtering data
 const pathname = '/';
-const filteredData = getFilteredData(pathname);
+const filteredData = getFilteredData(pathname); // Fetch filtered data based on the pathname
+
+// Generate metadata for the page
+
+
 export const metadata = getMetadata(filteredData);
 
 export default async function RootLayout({ children }) {

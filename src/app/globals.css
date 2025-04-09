@@ -129,11 +129,6 @@ span {
   box-shadow: none !important;
 }
 
-/* .swiper-image {
-  width: 100px;
-  height: 50px;
-} */
-
 /* ---------------------------- */
 /* country Input styling */
 /* ---------------------------- */
@@ -245,12 +240,6 @@ span {
   width: 40px;
 }
 
-/* @media (max-width: 600px) {
-  .swiper-image {
-    width: 250px;
-    height: 30px;
-  }
-} */
 @media (max-width: 768px) {
   .swiper-image {
     width: 46px;
@@ -383,14 +372,6 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
-
-  /* .hrFirmResponsive {
-    display: block;
-  }
-
-  .hrFirmDesktop {
-    display: none !important;
-  } */
   .partnerSpan {
     color: #0c3c3a;
     font-size: 20px;
@@ -647,13 +628,6 @@ span {
   background-color: transparent;
 }
 
-/* .swiper-slide {
-  max-width: 556px !important;
-  width: 100%;
-}
-/* .outsourcing-slide {
-  margin-right: 0px !important;
-} */
 .outsourcing-icon-image {
   max-width: 100% !important;
   max-height: 100% !important;
@@ -662,11 +636,6 @@ span {
 .professional-team-card-Swiper {
   max-width: 1115px !important;
 }
-
-/* .swiper-slide-team-card {
-  width: 555px;
-  width: 100%;
-} */
 
 .mySwiper-its-our-job {
   max-width: 1200px !important;
@@ -987,10 +956,6 @@ span {
   }
 }
 
-@media (max-width: 520px) {
-  /* /// */
-}
-
 @media (min-width: 769px) and (max-width: 995px) {
   .partner-country-dropdown option {
     font-size: 10.4px;
@@ -1033,12 +998,6 @@ span {
   }
 }
 
-/* @media (min-width: 270px) and (max-width: 400px) {
-  .footerCta {
-    margin-top: 50px !important;
-  }
-} */
-
 @media (min-width: 280px) and (max-width: 350px) {
   .PhoneInput {
     display: block !important;
@@ -1055,12 +1014,6 @@ span {
     font-size: 13px !important;
   }
 }
-
-/* @media (min-width: 420px) and (max-width: 500px) {
-  .footerCta {
-    margin-top: -20px !important;
-  }
-} */
 
 .wiki-content h1,
 .wiki-content h2,
@@ -2092,16 +2045,6 @@ input {
   display: inline-flex;
   animation: scroll 120s linear infinite;
 }
-
-/* @keyframes scroll {
-  0% {
-    transform: translateX(1.5%);
-  }
-
-  100% {
-    transform: translateX(-48%);
-  }
-} */
 
 @keyframes scroll {
   0% {

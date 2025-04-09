@@ -52,8 +52,6 @@ const JoinEsparkRegistrationModal = ({
           <Box
             component="form"
             sx={{
-              // boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-              // borderRadius: '10px',
               backgroundColor: 'white',
               display: 'flex',
               flexDirection: 'column',
@@ -305,13 +303,6 @@ const JoinEsparkRegistrationModal = ({
                           mb={1}
                           textAlign="left"
                           color="secondary"
-                          // sx={{
-                          //   fontSize: {
-                          //     xs: '20px',
-                          //     lg: '24px',
-                          //     fontWeight: 600,
-                          //   },
-                          // }}
                           sx={{
                             fontSize: {
                               xs: '18px',
@@ -366,7 +357,6 @@ const JoinEsparkRegistrationModal = ({
                       }}
                       direction="row"
                       justifyContent="space-between"
-                      // alignItems="center"
                       gap="10px"
                     >
                       <ImgUploader
@@ -399,9 +389,6 @@ const JoinEsparkRegistrationModal = ({
                   mb={1}
                   textAlign="left"
                   color="secondary"
-                  // sx={{
-                  //   fontSize: { xs: '20px', lg: '24px', fontWeight: 600 },
-                  // }}
                   sx={{
                     fontSize: {
                       xs: '18px',

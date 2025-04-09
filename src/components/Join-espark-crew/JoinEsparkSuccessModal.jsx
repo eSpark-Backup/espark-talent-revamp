@@ -51,7 +51,6 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
           >
             {description}
           </Typography>
-
           {/* MUI button here */}
           <Box sx={{ mt: 2 }}>
             <Button

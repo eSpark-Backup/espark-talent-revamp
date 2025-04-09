@@ -15,7 +15,6 @@ const BenefitCrewCard = ({ benefit, index }) => {
           padding: { xs: '8px', md: '10px' },
           border: '0.67px solid #0000004D',
           borderRadius: '3.34px',
-          // height:"auto"
         }}
         className="benifits-card"
       >
@@ -25,7 +24,6 @@ const BenefitCrewCard = ({ benefit, index }) => {
             minWidth: '35px',
             maxWidth: '35px',
             borderRadius: '50%',
-            // padding: '7px',
             height: '35px',
             display: 'flex',
             justifyContent: 'center',

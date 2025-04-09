@@ -1229,9 +1229,6 @@ export const EMPLOYEE_SLIDER_DATA = {
       paddingBottom: '20px',
     },
     swiperSlideStyle: {
-      // display: 'flex',
-      // alignItems: 'center',
-      // justifyContent: 'center',
       maxWidth: '230px',
     },
     videoStyle: {

@@ -27,7 +27,6 @@ const AwardAchievement = ({ data, design }) => {
         <Box sx={imageBoxStyle}>
           <Image
             quality="85"
-            // priority="true"
             src={item?.image}
             layout="responsive"
             width={100}
