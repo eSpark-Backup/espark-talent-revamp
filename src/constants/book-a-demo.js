@@ -168,6 +168,7 @@ export const bookADemoFormStyles = {
     height: '100%',
     maxWidth: '486px',
     display: 'flex',
+    alignItems: 'center',
     mx: { md: 'auto' },
     '@media(min-width: 280px) and (max-width:1259px)': {
       mx: 'auto',
@@ -254,48 +255,14 @@ export const formBoxStyles = (pathName, book, remote) => {
     },
     px: 2,
     alignItems: { md: 'center' },
-    justifyContent: !pathName?.includes(remote)
-      ? { xs: 'auto', lg: 'center' }
-      : null,
+    justifyContent: { xs: 'auto', lg: 'center' },
     '@media (min-width: 600px) and (max-width: 768px)': {
-      justifyContent: !pathName?.includes(remote) ? 'center' : null,
+      justifyContent: 'center',
       px: 2,
       width: '100%',
     },
     '@media (max-width: 425px)': {
-      justifyContent: !pathName?.includes(remote) ? 'center' : null,
-      px: 2,
-      width: '100%',
-    },
-  };
-  return formBox;
-};
-
-export const formBoxStylesForModal = (pathName, book, remote) => {
-  const formBox = {
-    width: '100%',
-    height: { xs: 'auto', sm: '100%' },
-    display: 'flex',
-    flexDirection: 'column',
-    mt: {
-      xs: pathName == book || pathName?.includes(remote) ? 0 : 5,
-      sm: pathName == book || pathName?.includes(remote) ? 0 : 5,
-      md: pathName == book || pathName?.includes(remote) ? 0 : 10,
-      lg: 0,
-    },
-    mb: {
-      xs: pathName == book ? 0 : 5,
-      sm: 0,
-      md: 0,
-      lg: 0,
-    },
-    px: 2,
-    alignItems: { md: 'center' },
-    '@media (min-width: 600px) and (max-width: 768px)': {
-      px: 2,
-      width: '100%',
-    },
-    '@media (max-width: 425px)': {
+      justifyContent: 'center',
       px: 2,
       width: '100%',
     },

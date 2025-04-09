@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,185 +14,111 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const OurExperties = ({ data, link }) => {
+  const { title, buttonText, buttonLink, sections, styles } = data || {};
+  const {
+    mainBoxStyle,
+    swiperBoxStyle,
+    renderSectionGridStyle,
+    buttonBoxStyle,
+    gridItemStlye,
+    listHeadingBoxStyle,
+    listHeadingStyle,
+    listItemBoxStyle,
+    imageAndLinkBoxStyle,
+    titleStyle,
+  } = styles || {};
   const pathName = usePathname();
   const swiperSettings = {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    // pagination: { clickable: false },
     module: [Navigation, Pagination, Autoplay],
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      600: {
-        slidesPerView: 2,
-        spaceBetween: 8,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 8,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 5,
-      },
-      1025: {
-        slidesPerView: 4,
-      },
-      1920: {
-        slidesPerView: 4,
-      },
+      0: { slidesPerView: 1 },
+      600: { slidesPerView: 2, spaceBetween: 8 },
+      768: { slidesPerView: 3, spaceBetween: 8 },
+      1024: { slidesPerView: 3, spaceBetween: 5 },
+      1025: { slidesPerView: 4 },
+      1920: { slidesPerView: 4 },
     },
   };
 
+  const renderListItems = (list, index) => (
+    <Box sx={listItemBoxStyle} key={index}>
+      {list?.listItems?.map((item, itemIndex) => (
+        <Box key={itemIndex} sx={imageAndLinkBoxStyle}>
+          <Box sx={{ minWidth: '20px' }}>
+            <Image
+              quality="85"
+              priority
+              src={
+                itemIndex === 0
+                  ? data?.startIcon
+                  : itemIndex === list?.listItems?.length - 1
+                    ? data?.endIcon
+                    : data?.otherIcon
+              }
+              alt="List Icon"
+              width={20}
+              height={60}
+            />
+          </Box>
+          <Link href={item?.link || '#'}>
+            <Typography variant="body1" sx={titleStyle}>
+              {item?.title}
+            </Typography>
+          </Link>
+        </Box>
+      ))}
+    </Box>
+  );
+
+  const renderSections = () =>
+    sections?.map((section, index) => (
+      <SwiperSlide key={index}>
+        {section?.lists?.map((list, listIndex) => (
+          <Grid
+            item
+            xs={6}
+            sm={6}
+            md={6}
+            lg={3}
+            xl={3}
+            key={listIndex}
+            sx={gridItemStlye}
+          >
+            <Box sx={listHeadingBoxStyle}>
+              <Typography
+                variant="h5"
+                color="primary"
+                fontWeight={700}
+                sx={listHeadingStyle}
+              >
+                {list?.heading}
+              </Typography>
+              {renderListItems(list)}
+            </Box>
+          </Grid>
+        ))}
+      </SwiperSlide>
+    ));
+
   return (
-    <Box
-      sx={{
-        py: 1,
-        '@media (min-width: 600px)': { background: '#F7F8FB', py: 6 },
-      }}
-    >
+    <Box sx={mainBoxStyle}>
       <Container>
-        <ParagraphTitle title={data?.title} />
-        <Box
-          sx={{
-            borderRadius: '6px',
-            background: '#F7F8FB',
-            '@media (max-width: 600px)': {
-              boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.40)',
-            },
-            py: 2,
-            mx: 1,
-          }}
-        >
+        <ParagraphTitle title={title} />
+        <Box sx={swiperBoxStyle}>
           <Swiper {...swiperSettings}>
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                mx: 'auto',
-              }}
-            >
-              {data?.sections?.map((section, index) => (
-                <SwiperSlide key={index}>
-                  {section?.lists?.map((list, listIndex) => (
-                    <Grid
-                      key={`${index}-${listIndex}`}
-                      item
-                      xs={6}
-                      sm={6}
-                      md={6}
-                      lg={3}
-                      xl={3}
-                      sx={{
-                        pt: 2.3,
-                        mx: 'auto',
-                        width: { xs: '70%', sm: '80%', md: '80%', lg: '100%' },
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          width: { sm: '100%', md: '100%', lg: '100%' },
-                          mx: 'auto',
-                        }}
-                      >
-                        <Typography
-                          variant="h5"
-                          color="primary"
-                          fontWeight={700}
-                          sx={{
-                            py: '4px',
-                            fontSize: {
-                              sm: '15px !important',
-                              md: '18px !important',
-                              lg: '22px !important',
-                            },
-                            '@media (min-width:600px) and (max-width: 767px)': {
-                              fontSize: '16px !important',
-                            },
-                            '@media (min-width:375px) and (max-width: 599px)': {
-                              fontSize: '18px !important',
-                            },
-                            '@media (min-width:300px) and (max-width: 374px)': {
-                              fontSize: '18px !important',
-                            },
-                            fontWeight: 700,
-                          }}
-                        >
-                          {list?.heading}
-                        </Typography>
-                        <Box sx={{ pb: 2 }}>
-                          {list?.listItems?.map((item, itemIndex) => (
-                            <Box
-                              key={`${index}-${listIndex}-${itemIndex}`}
-                              sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                height: '48px',
-                                gap: '8px',
-                                my: 0.2,
-                              }}
-                            >
-                              <Box
-                                sx={{
-                                  minWidth: '20px',
-                                }}
-                              >
-                                <Image
-                                  quality="85"
-                                  priority={true}
-                                  src={
-                                    itemIndex === 0
-                                      ? data?.startIcon
-                                      : itemIndex === list.listItems.length - 1
-                                        ? data?.endIcon
-                                        : data?.otherIcon
-                                  }
-                                  alt="List Icon"
-                                  width={20}
-                                  height={60}
-                                />
-                              </Box>
-                              <Link href={item?.link}>
-                                <Typography
-                                  variant="body1"
-                                  sx={{
-                                    py: '0px',
-                                    color: '#000',
-                                    fontSize: '14px !important',
-                                    fontWeight: 400,
-                                  }}
-                                >
-                                  {item?.title}
-                                </Typography>
-                              </Link>
-                            </Box>
-                          ))}
-                        </Box>
-                      </Box>
-                    </Grid>
-                  ))}
-                </SwiperSlide>
-              ))}
+            <Grid container spacing={2} sx={renderSectionGridStyle}>
+              {renderSections()}
             </Grid>
-            <Box
-              sx={{
-                width: '100%',
-                textAlign: 'center',
-                mt: { xs: 2, sm: 3.5 },
-              }}
-            >
+            <Box sx={buttonBoxStyle}>
               <ESparkButton
-                title={data?.buttonText}
-                link={
-                  pathName?.includes('/book-a-meeting')
-                    ? link
-                    : data?.buttonLink
-                }
+                title={buttonText}
+                link={pathName?.includes('/book-a-meeting') ? link : buttonLink}
                 target={pathName?.includes('/book-a-meeting') ? null : '_blank'}
-                color={'secondary'}
-                size={'180px'}
+                color="secondary"
+                size="180px"
               />
             </Box>
           </Swiper>

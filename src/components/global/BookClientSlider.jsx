@@ -1,21 +1,14 @@
 'use client';
 import React from 'react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography, useMediaQuery } from '@mui/material';
-
-const extendClients = (clients, length) => {
-  const extendedClients = Array.from({ length }, (_, index) => ({
-    ...clients[index % clients.length],
-  }));
-  return extendedClients;
-};
+import { extendClients, getImagePath } from '@/utils';
+import 'swiper/css';
+import { BOOK_CLIENT_SLIDER_STYLES } from '@/constants/homepage';
 
 const BookClientSlider = ({
-  bgColor,
+  bgColor = '#029894',
   txtColor,
   compeleteTitle,
   shortTitle,
@@ -25,120 +18,59 @@ const BookClientSlider = ({
   breakPoints,
   fontSize,
   lineHeight,
-  pb,
-  variant,
+  pb = '10px',
+  variant = 'h2',
 }) => {
-  const extendedData = {
-    clients: extendClients(data.clients, length),
-  };
-
-  const getImagePath = (originalImagePath) => {
-    if (bgColor == '#029894' || !bgColor) {
-      return originalImagePath.replace('_dark', '_light');
-    } else {
-      return originalImagePath.replace('_light', '_dark');
-    }
-  };
+  const { clients } = data || {};
+  const {
+    mainBoxStyle,
+    containerStyle,
+    bothTitleStyle,
+    swiperSlideStyle,
+    imageBoxStyle,
+    imageStyle,
+  } = BOOK_CLIENT_SLIDER_STYLES || {};
+  const extendedData = extendClients(clients, length);
   const isMediumScreen = useMediaQuery('(max-width:769px)');
 
+  const renderSlide = (item, index) => (
+    <SwiperSlide key={index} style={swiperSlideStyle}>
+      <Box sx={imageBoxStyle(pb)}>
+        {
+          <Box
+            component={'img'}
+            src={getImagePath(item?.image)}
+            alt={item?.image}
+            height={'37px'}
+            sx={imageStyle}
+          />
+        }
+      </Box>
+    </SwiperSlide>
+  );
+
   return (
-    <Box
-      sx={{
-        backgroundColor: bgColor,
-        PY: '2.5%',
-        width: '100%',
-      }}
-    >
-      <Container sx={{ pb: pb || '10px' }}>
-        {isMediumScreen ? (
-          <Typography
-            variant={variant || 'h2'}
-            color={txtColor}
-            sx={{
-              textAlign: 'center',
-              fontWeight: fontWeight,
-              py: { xs: '16px', sm: '18px', md: '30px' },
-              pt: { xs: '17px', sm: '20px', md: '50px' },
-              fontSize: fontSize,
-              lineHeight: lineHeight,
-            }}
-          >
-            {shortTitle}
-          </Typography>
-        ) : (
-          <Typography
-            variant={variant || 'h2'}
-            color={txtColor}
-            sx={{
-              textAlign: 'center',
-              fontWeight: fontWeight,
-              py: { xs: '16px', sm: '18px', md: '30px' },
-              pt: { xs: '17px', sm: '20px', md: '50px' },
-              fontSize: fontSize,
-              lineHeight: lineHeight,
-            }}
-          >
-            {compeleteTitle}
-          </Typography>
-        )}
+    <Box sx={mainBoxStyle(bgColor)}>
+      <Container sx={containerStyle(pb)}>
+        <Typography
+          variant={variant}
+          color={txtColor}
+          sx={bothTitleStyle(fontWeight, fontSize, lineHeight)}
+        >
+          {isMediumScreen ? shortTitle : compeleteTitle}
+        </Typography>
       </Container>
       <Swiper
         spaceBetween={0}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        autoplay={{
-          delay: 500,
-          disableOnInteraction: false,
-        }}
+        centeredSlides
+        autoplay={{ delay: 500, disableOnInteraction: false }}
         navigation={false}
-        loop={true}
+        loop
         speed={2000}
-        effect="slide"
         modules={[Autoplay, Navigation]}
-        className="mySwiper"
         breakpoints={breakPoints}
       >
-        {extendedData.clients.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Box sx={{ pb: pb || 5 }}>
-              {
-                <Box
-                  component={'img'}
-                  src={getImagePath(item.image)}
-                  alt={item.image}
-                  height={'37px'}
-                  sx={{
-                    width: {
-                      sm: '144px',
-                      md: '154px',
-                      lg: '150px',
-                    },
-                    height: 'auto',
-                    '@media (min-width: 550px) and (max-width: 767px)': {
-                      width: '160px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '90px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '88px',
-                      height: '25px',
-                    },
-                  }}
-                />
-              }
-            </Box>
-          </SwiperSlide>
-        ))}
+        {extendedData?.map(renderSlide)}
       </Swiper>
     </Box>
   );

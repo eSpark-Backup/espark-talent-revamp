@@ -12,9 +12,6 @@ const PricingHero = ({ data, handleOpen }) => {
           height: `100%`,
           color: '#fff',
           mb: 10,
-          '@media(max-width: 783px)': {
-            mb: 0,
-          },
         }}
       >
         <PricingCard data={data} handleOpen={handleOpen} />

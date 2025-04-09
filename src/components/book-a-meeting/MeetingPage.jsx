@@ -19,6 +19,7 @@ import DemoCta from '@/components/demo/DemoCta';
 import Process from '@/components/homepage/Process';
 import BookAMeeting from '@/components/book-a-meeting/BookAMeeting';
 import { BOOK_A_MEETING } from '@/constants/book-a-meeting';
+import { Box } from '@mui/material';
 
 const MeetingPage = () => {
   useEffect(() => {
@@ -54,7 +55,9 @@ const MeetingPage = () => {
       <DemoCta data={DEMO_DATA} link={'/book-a-meeting/#top'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} link={'/book-a-meeting/#top'} />
-      <ClientSays data={OUR_CLIENT_SAYS} />
+      <Box sx={{ pt: { xs: 5, sm: 6, md: 7, lg: 10 } }}>
+        <ClientSays data={OUR_CLIENT_SAYS} />
+      </Box>
       <AwardAchievement
         data={ACHIEVEMENTS_DATA}
         design={1}

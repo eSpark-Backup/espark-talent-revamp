@@ -2,80 +2,95 @@
 import React from 'react';
 import { Modal, Box } from '@mui/material';
 
-const HireModal = ({ content, open, handleModalClose }) => {
-  return (
-    <Modal
-      open={open}
-      onClose={handleModalClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-      disableEnforceFocus
-      disableRestoreFocus
-      disableScrollLock
-    >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          bgcolor: 'background.paper',
-          boxShadow: 24,
-          borderRadius: 2,
-          width: '95%',
-          maxWidth: '519px',
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            alignItems: 'center',
-            backgroundColor: 'transparent',
-            px: 0.5,
-            pt: 0.5,
-          }}
-        >
-          <Box
-            onClick={handleModalClose}
-            sx={{
-              color: '#029894',
-              width: { xs: '25px', md: '28px' },
-              height: { xs: '25px', md: '28px' },
-              borderRadius: '100%',
-              cursor: 'pointer',
-              border: '2px solid',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontFamily: 'cursive',
-              fontSize: '15px',
-              fontWeight: 'bold',
-            }}
-          >
-            X
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            p: 2,
-            mb: 4,
-            mt: -2,
-            maxWidth: '519px',
-            height: { xs: '70vh', lg: '75vh', xl: '82vh' },
-            overflow: 'auto',
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'transparent transparent',
-            '&::-webkit-scrollbar': {
-              display: 'none',
-            },
-          }}
-        >
-          {content}
-        </Box>
-      </Box>
-    </Modal>
-  );
+const style = {
+  position: 'absolute',
+  width: '95%',
+  maxWidth: '519px',
+  minHeight: '611px',
+  maxHeight: '98%',
+  bgcolor: 'white',
+  borderRadius: '24px',
+  boxShadow: '0px 4px 10.1px 0px rgba(0, 0, 0, 0.38)',
+  display: 'flex',
+  flexDirection: 'column',
+  overflow: 'hidden',
 };
 
-export default HireModal;
+export default function HireModal({ content, open, handleModalClose }) {
+  return (
+    <div>
+      <Modal
+        disableScrollLock
+        closeAfterTransition
+        open={open}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <Slide direction="left" in={open} mountOnEnter unmountOnExit>
+          <Box sx={style}>
+            <Box
+              sx={{
+                width: '100%',
+                position: 'absolute',
+                display: 'flex',
+                justifyContent: 'flex-end',
+                backgroundColor: '#fff',
+                py: 1.2,
+                px: 1.2,
+              }}
+            >
+              <Box
+                onClick={handleModalClose}
+                sx={{
+                  color: '#029894',
+                  width: { xs: '25px', md: '30px' },
+                  height: { xs: '25px', md: '30px' },
+                  borderRadius: '100%',
+                  cursor: 'pointer',
+                  border: '2px solid',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: 'cursive',
+                  fontSize: '15px',
+                  fontWeight: 'bold',
+                }}
+              >
+                X
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                flex: 1,
+                overflowY: 'auto',
+                '&::-webkit-scrollbar': {
+                  width: '3px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'transparent',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: '#ccc',
+                  borderRadius: '10px',
+                  border: '2px solid transparent',
+                  backgroundClip: 'content-box',
+                },
+                scrollbarWidth: 'thin',
+                scrollbarColor: '#ccc transparent',
+                height: '500px',
+                maxHeight: '850px',
+                px: { xs: 2, sm: 3.5, md: 5 },
+                pt: { xs: 3, sm: 0.2 },
+                my: { xs: 3, sm: 5 },
+              }}
+            >
+              {content}
+            </Box>
+          </Box>
+        </Slide>
+      </Modal>
+    </div>
+  );
+}

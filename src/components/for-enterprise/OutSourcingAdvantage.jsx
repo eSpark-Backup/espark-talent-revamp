@@ -3,105 +3,86 @@ import React from 'react';
 
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
-import { useTheme } from '@mui/material/styles';
+import {
+  outerBoxStyle,
+  titleTypographyStyle,
+  paragraphTypographyStyle,
+  itemsGridContainerStyle,
+  itemBoxStyle,
+  itemTypographyStyle,
+  imageGridStyle,
+} from '@/constants/solutions/for-enterprise/OutSourcingAdvantageConstants';
 
 const OutSourcingAdvantage = ({ data }) => {
-  const theme = useTheme();
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
 
   return (
     <>
-      <Box sx={{ pt: '2%', mb: '2%', background: '#3B59980A' }}>
+      <Box sx={outerBoxStyle}>
         <Container>
           <Grid container spacing={2} justifyContent="space-evenly">
             <Grid item xs={12} sm={6}>
               <Typography
                 variant="h2"
                 color="secondary"
-                sx={{
-                  fontSize: { xs: '20px', sm: '24px', md: '25px', lg: '28px' },
-                  lineHeight: { xs: '27px', sm: '30px', md: '42.289px' },
-                  color: '#001C63',
-                  fontWeight: 600,
-                  pr: { sm: '10%' },
-                  px: { xs: '5%', sm: 0 },
-                  py: '10px',
-                  [theme.breakpoints.down('sm')]: {
-                    textAlign: 'center',
-                  },
-                }}
+                sx={titleTypographyStyle}
               >
-                {data?.title}
+                {data?.title || 'Title not available'}
               </Typography>
               <Typography
                 variant="body1"
                 color="secondary"
-                sx={{
-                  mb: { xs: 1, sm: 0 },
-                  fontSize: { xs: '14px', sm: '16px', md: '18px' },
-                  lineHeight: { xs: '20px', sm: '22px', md: '27.363px' },
-                  pr: { sm: '10%' },
-                  px: { xs: '5%', sm: 0 },
-                  py: '10px',
-                  [theme.breakpoints.down('sm')]: {
-                    textAlign: 'center',
-                  },
-                }}
+                sx={paragraphTypographyStyle}
               >
-                {data?.paragraph}
+                {data?.paragraph || 'Paragraph not available'}
               </Typography>
-              <Grid container sx={{ display: 'flex', mb: 3 }}>
-                {data?.items?.map((list, itemIndex) => (
-                  <Grid item xs={12} md={6} key={itemIndex}>
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'start',
-                        gap: '10px',
-                        pb: '10px',
-                      }}
-                    >
-                      <Image
-                        quality="85"
-                        priority={true}
-                        src={list?.listIcon}
-                        alt="List Icon"
-                        width={15}
-                        height={15}
-                      />
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          color: '#000',
-                          fontSize: {
-                            xs: '12px',
-                            sm: '12px',
-                            md: '13px !important',
-                            lg: '15px !important',
-                          },
-                          fontWeight: '400',
-                        }}
-                      >
-                        {list?.title}
-                      </Typography>
-                    </Box>
-                  </Grid>
-                ))}
+              <Grid container sx={itemsGridContainerStyle}>
+                {data?.items?.length > 0 ? (
+                  data?.items.map((list, itemIndex) => (
+                    <Grid item xs={12} md={6} key={itemIndex}>
+                      <Box sx={itemBoxStyle}>
+                        {list?.listIcon && (
+                          <Image
+                            quality="85"
+                            // priority={true}
+                            src={list.listIcon}
+                            alt={list?.title || 'List Icon'}
+                            width={15}
+                            height={15}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = '/path/to/fallback/image.jpg';
+                            }}
+                          />
+                        )}
+                        <Typography variant="body1" sx={itemTypographyStyle}>
+                          {list?.title || 'Item not available'}
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  ))
+                ) : (
+                  <Typography>No items available</Typography>
+                )}
               </Grid>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              sx={{ display: 'flex', alignItems: 'center' }}
-            >
-              <Image
-                quality="85"
-                priority={true}
-                src={data?.image}
-                height={data?.imageHeight}
-                width={data?.imageWidth}
-                alt={`${data?.alt}`}
-              />
+            <Grid item xs={12} sm={4} sx={imageGridStyle}>
+              {data?.image && (
+                <Image
+                  quality="85"
+                  // priority={true}
+                  src={data?.image}
+                  height={data?.imageHeight || 300}
+                  width={data?.imageWidth || 300}
+                  alt={data?.alt || 'Image'}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/path/to/fallback/image.jpg';
+                  }}
+                />
+              )}
             </Grid>
           </Grid>
         </Container>

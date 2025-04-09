@@ -10,13 +10,10 @@ import {
   AccordionSummary,
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { handleChange } from '@/utils';
 
 const ServiceFaq = ({ data, color }) => {
   const [expanded, setExpanded] = useState(null);
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : null);
-  };
 
   const renderQuestions = (start, end) => {
     return data?.questions
@@ -28,7 +25,7 @@ const ServiceFaq = ({ data, color }) => {
           <Accordion
             key={index}
             expanded={expanded === panel}
-            onChange={handleChange(panel)}
+            onChange={handleChange(panel, setExpanded)}
             sx={{
               mb: { xs: 1, md: 4 },
               position: 'relative',

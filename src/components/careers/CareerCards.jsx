@@ -1,276 +1,184 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
-  Grid,
   Typography,
-  Select,
-  MenuItem,
   Pagination,
   PaginationItem,
   useMediaQuery,
   Skeleton,
+  Button,
 } from '@mui/material';
-import ESparkButton from '../global/eSparkButton';
 import CareersForm from './CareersForm';
-import { CAREERS_FORM_DATA } from '@/constants/careers-form-data';
 import HireModal from '../Hire-remote/HireModal';
+import {
+  applyButtonBoxStyle,
+  applyButtonStyle,
+  applyButtonTextStyle,
+  cardContainerStyle,
+  CAREERS_FORM_DATA,
+  jobDiscriptionBoxStyle,
+  jobDiscriptionHeadingStyle,
+  jobDiscriptionTextStyle,
+  jobLocationTextStyle,
+  jobTitleBoxStyle,
+  jobTitleTextStyle,
+} from '@/constants/careers-form-data';
+import {
+  handleApplyButtonClick,
+  handleJobCategoryChange,
+  handlePaginationChange,
+  paginateData,
+  totalPageCount,
+} from '@/utils';
 
 const CareerCards = ({ data }) => {
+  const [open, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [page, setPage] = useState(1);
-  const [openModal, setOpenModal] = useState(false);
   const [jobData, setJobData] = useState(null);
-  const jobs = data ? data : [1, 2, 3];
-  const filteredData =
-    selectedCategory === 'all'
-      ? jobs
-      : jobs?.filter((item) => item?.title === selectedCategory);
-  const perPage = 5;
-  const startIndex = (page - 1) * perPage;
-  const endIndex = startIndex + perPage;
-  const paginatedData = filteredData?.slice(startIndex, endIndex);
-
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
+  const jobShowPerPage = 5;
+  const paginatedData = paginateData(
+    data,
+    selectedCategory,
+    page,
+    jobShowPerPage
   );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-
-  const handleJobCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-    setPage(1);
-  };
-
-  const handlePaginationChange = (event, value) => {
-    setPage(value);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  const handleApplyButtonClick = (selectedJobData) => {
-    setOpenModal(true);
-    setJobData(selectedJobData);
-  };
-
-  const handleCloseModal = () => {
-    setOpenModal(false);
-  };
-
-  useEffect(() => {}, [selectedCategory]);
-
+  const pageCount = totalPageCount(data, selectedCategory, jobShowPerPage);
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme?.breakpoints?.down('xs')
+  );
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme?.breakpoints?.between('sm', 'md')
+  );
   const { form } = CAREERS_FORM_DATA;
 
-  return (
-    <>
-      <Box sx={{ py: { xs: '5%', sm: '3%', md: '2%' } }}>
-        <Container>
-          <Box>
-            <Select
-              labelId="job-category-label"
-              id="job-category"
-              value={selectedCategory}
-              onChange={handleJobCategoryChange}
-              fullWidth
-              fontSize={{
-                xs: '13px',
-                sm: '13px',
-                md: '15px',
-                lg: '20px',
-              }}
-              MenuProps={{
-                PaperProps: {
-                  sx: {
-                    '& .MuiMenuItem-root': {
-                      color: '#000',
-                    },
-                  },
-                },
-              }}
-            >
-              <MenuItem value="all">All</MenuItem>
-              {jobs?.map((category, index) => (
-                <MenuItem key={`job-category-${index}`} value={category?.title}>
-                  {category?.title}
-                </MenuItem>
-              ))}
-            </Select>
-          </Box>
-          {paginatedData?.map((item, index) => (
-            <Grid
-              key={index}
-              container
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                borderTop: '.5px solid #ced4da',
-                py: { lg: '3%', sm: '3%', xs: '20px' },
-                my: { xs: '20px', sm: '20px' },
-                borderRadius: { xs: '10px', sm: '20px', lg: '0', md: '0' },
-                boxShadow: {
-                  md: 'none',
-                  sm: `5px 5px 15px rgba(0,0,0,.3)`,
-                  xs: `5px 5px 15px rgba(0,0,0,.3)`,
-                },
-              }}
-            >
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={3}
-                lg={3}
-                px={{ xs: '10px', sm: '20px' }}
-              >
-                <Typography variant="h3" color="secondary">
-                  {item?.title || (
-                    <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
-                  )}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  fontSize={{
-                    xs: '12px',
-                    sm: '12px',
-                    md: '15px',
-                    lg: '20px',
-                  }}
-                  color="#000"
-                >
-                  {item?.location || (
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                  )}
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={7}
-                lg={7}
-                px={{ xs: '10px', sm: '20px' }}
-              >
-                {!item?.title ? (
-                  <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
-                ) : (
-                  <Typography
-                    variant="h3"
-                    color="secondary"
-                    borderTop={{
-                      md: 'none',
-                      sm: '.5px solid #ced4da',
-                      xs: '.5px solid #ced4da',
-                    }}
-                    pt="10px"
-                  >
-                    Description
-                  </Typography>
-                )}
-                {!item?.description ? (
-                  <>
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                    <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                  </>
-                ) : (
-                  <Typography
-                    variant="body1"
-                    fontSize={{
-                      xs: '12px',
-                      sm: '12px',
-                      md: '15px',
-                      lg: '20px',
-                    }}
-                    color="#000"
-                  >
-                    {item?.description}
-                  </Typography>
-                )}
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={2}
-                lg={2}
-                display="flex"
-                alignItems={'center'}
-                justifyContent={'center'}
-                px={{ xs: '10px', sm: '20px' }}
-              >
-                {!item?.title ? (
-                  <Skeleton variant="text" height={100} width={200} />
-                ) : (
-                  <Box py={{ xs: '10px', sm: '10px' }}>
-                    <ESparkButton
-                      title={`Apply Now >`}
-                      link={'#'}
-                      onClick={() => handleApplyButtonClick(item)}
-                      color={'primary'}
-                    />
-                  </Box>
-                )}
-              </Grid>
-            </Grid>
-          ))}
-          <HireModal
-            content={
-              jobData && (
-                <CareersForm
-                  form={form}
-                  jobData={jobData}
-                  handleCloseModal={handleCloseModal}
-                />
-              )
-            }
-            open={openModal}
-            handleModalClose={handleCloseModal}
-          />
+  const handleOpen = () => setOpen(true);
+  const handleModalClose = () => setOpen(false);
 
-          {filteredData?.length > perPage && (
-            <Box
-              spacing={2}
-              sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}
-            >
-              <Pagination
-                count={Math.ceil(filteredData?.length / perPage)}
-                page={page}
-                onChange={handlePaginationChange}
-                color="primary"
-                size={
-                  isSmallScreen
-                    ? 'small'
-                    : isMediumScreen
-                      ? 'medium'
-                      : isLargeScreen
-                        ? 'large'
-                        : 'medium'
-                }
-                sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
-                renderItem={(item) => (
-                  <PaginationItem
-                    {...item}
-                    sx={{
-                      borderRadius: '10px',
-                      color: 'primary.main',
-                      '&.Mui-selected': {
-                        backgroundColor: 'primary.main',
-                        color: 'white',
-                      },
-                    }}
-                  />
-                )}
-              />
-            </Box>
+  const jobSelect = (jobs) => (
+    <div className="careers-dropdown-container">
+      <select
+        id="careers-dropdown"
+        className="careers-dropdown-select"
+        value={selectedCategory}
+        onChange={(event) =>
+          handleJobCategoryChange(event, setSelectedCategory, setPage)
+        }
+      >
+        <option value="all">All</option>
+        {jobs?.map((category, index) => (
+          <option key={index} value={category?.title}>
+            {category?.title}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+
+  const jobCard = (item, index) => (
+    <Box key={index} sx={cardContainerStyle}>
+      <Box sx={jobTitleBoxStyle}>
+        <Typography variant="h3" color="secondary" sx={jobTitleTextStyle}>
+          {item?.title || (
+            <Skeleton variant="text" sx={{ fontSize: '3rem', width: '80%' }} />
           )}
-        </Container>
+        </Typography>
+        <Typography variant="body1" sx={jobLocationTextStyle}>
+          {item?.location || (
+            <Skeleton variant="text" sx={{ fontSize: '1rem', width: '70%' }} />
+          )}
+        </Typography>
       </Box>
-    </>
+      <Box sx={jobDiscriptionBoxStyle}>
+        {!item?.title ? (
+          <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+        ) : (
+          <Typography
+            sx={jobDiscriptionHeadingStyle}
+            variant="h3"
+            color="secondary"
+          >
+            Description
+          </Typography>
+        )}
+        {!item?.description ? (
+          Array(5)
+            ?.fill()
+            ?.map((_, i) => (
+              <Skeleton key={i} variant="text" sx={{ fontSize: '1rem' }} />
+            ))
+        ) : (
+          <Typography color="#000" variant="body1" sx={jobDiscriptionTextStyle}>
+            {item?.description}
+          </Typography>
+        )}
+      </Box>
+      <Box sx={applyButtonBoxStyle}>
+        {!item?.title ? (
+          <Skeleton variant="text" height={100} width={200} />
+        ) : (
+          <Button
+            color={'primary'}
+            size="small"
+            onClick={() => handleApplyButtonClick(item, handleOpen, setJobData)}
+            sx={applyButtonStyle}
+          >
+            <Typography variant="body1" sx={applyButtonTextStyle}>
+              {`Apply Now >`}
+            </Typography>
+          </Button>
+        )}
+      </Box>
+    </Box>
+  );
+
+  return (
+    <Box sx={{ py: { xs: '5%', sm: '3%', md: '3%' } }}>
+      <Container>
+        <Box sx={{ mt: 1, mb: 2.8 }}>{jobSelect(data)}</Box>
+        {paginatedData?.map((item, index) => jobCard(item, index))}
+        <HireModal
+          content={
+            jobData && (
+              <CareersForm
+                form={form}
+                jobData={jobData}
+                handleCloseModal={handleModalClose}
+              />
+            )
+          }
+          open={open}
+          handleModalClose={handleModalClose}
+        />
+        {pageCount > 1 && (
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+            <Pagination
+              count={pageCount}
+              page={page}
+              onChange={(e, value) => handlePaginationChange(e, value, setPage)}
+              color="primary"
+              size={
+                isSmallScreen ? 'small' : isMediumScreen ? 'medium' : 'large'
+              }
+              renderItem={(item) => (
+                <PaginationItem
+                  {...item}
+                  sx={{
+                    borderRadius: '10px',
+                    '&.Mui-selected': {
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                    },
+                  }}
+                />
+              )}
+            />
+          </Box>
+        )}
+      </Container>
+    </Box>
   );
 };
 

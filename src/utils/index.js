@@ -1,4 +1,5 @@
 import supabase from '@/supabase/supabaseClient';
+import { useMediaQuery } from '@mui/material';
 import axios from 'axios';
 import { isValidPhoneNumber } from 'libphonenumber-js';
 import { toast } from 'react-toastify';
@@ -320,3 +321,178 @@ export const handleSubmitJoinCrew = async (
 export const duplicateSlides = (originalSlides) => {
   return originalSlides?.map((slide) => ({ ...slide }));
 };
+
+// home page hero untils
+
+export const getAnimation = () => {
+  const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl']?.reduce((acc, key) => {
+    acc[`is_${key}`] = useMediaQuery((theme) => theme?.breakpoints?.only(key));
+    return acc;
+  }, {});
+
+  if (breakpoints.is_xl) return 'textSizeAnimation_Xl';
+  if (breakpoints.is_lg) return 'textSizeAnimation_lg';
+  if (breakpoints.is_md) return 'textSizeAnimation_md';
+  if (breakpoints.is_sm) return 'textSizeAnimation_sm';
+  if (breakpoints.is_xs) return 'textSizeAnimation_xs';
+  return null;
+};
+
+export const open = (link, target) => {
+  return window?.open(link || '', target);
+};
+
+// home page expert team
+
+export const openForm = (link, target, path, handle) =>
+  path && path?.includes('/hire-remote-developers')
+    ? handle()
+    : window?.open(link, target);
+
+// home page faqs
+
+export const handleChange = (panel, setExpanded) => (event, isExpanded) => {
+  setExpanded && setExpanded(isExpanded ? panel : null);
+};
+
+// ************************** //
+
+// what-we-do page
+
+export const getPathStatus = (pathName) => {
+  return {
+    isDemo: pathName === '/demo',
+    isHome: pathName === '/',
+    isEnterprise: pathName === '/solutions/enterprises',
+    isCrew: pathName === '/join-espark-crew',
+    isBlogOrStartup:
+      pathName?.includes('/blogs') || pathName?.includes('/business-startup'),
+  };
+};
+
+export const handleControlSwiper = (type, swiperRef) => {
+  switch (type) {
+    case 'next':
+      swiperRef?.current?.swiper?.slidePrev();
+      break;
+    case 'prev':
+      swiperRef?.current?.swiper?.slideNext();
+      break;
+
+    default:
+      break;
+  }
+};
+
+// ************************ //
+
+// careers page
+
+export const paginateData = (data, selectedCategory, page, perPage) => {
+  const filteredData =
+    selectedCategory === 'all'
+      ? data
+      : data?.filter((item) => item?.title === selectedCategory);
+
+  const startIndex = (page - 1) * perPage;
+  const endIndex = startIndex + perPage;
+
+  return filteredData?.slice(startIndex, endIndex);
+};
+
+export const totalPageCount = (data, selectedCategory, perPage) => {
+  const filteredData =
+    selectedCategory === 'all'
+      ? data
+      : data?.filter((item) => item?.title === selectedCategory);
+
+  return Math.ceil(filteredData?.length / perPage);
+};
+
+export const handleJobCategoryChange = (
+  event,
+  setSelectedCategory,
+  setPage
+) => {
+  setSelectedCategory(event?.target?.value);
+  setPage(1);
+};
+
+export const handlePaginationChange = (event, value, setPage) => {
+  setPage(value);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
+export const handleApplyButtonClick = (
+  selectedJobData,
+  handleOpen,
+  setJobData
+) => {
+  handleOpen();
+  setJobData(selectedJobData);
+};
+
+// home page experties section
+
+export const handleChangeAccordion =
+  (panel, setExpandedAccordion) => (event, isExpanded) => {
+    setExpandedAccordion(isExpanded ? panel : null);
+  };
+
+export const checkingExpendedAccordion = (expandedAccordion, index) => {
+  return expandedAccordion === index ? true : false;
+};
+
+// Client Says section in hire-a-frontend-developer
+
+export const navigationImageDirection = (
+  direction,
+  left,
+  right,
+  prevRef,
+  nextRef
+) => {
+  return direction === left ? prevRef : direction === right ? nextRef : null;
+};
+
+// footer cta
+
+export const getRenderData = (
+  pathName,
+  pricingLink,
+  pricingPageData,
+  globalData
+) => {
+  return pathName?.includes(pricingLink) ? pricingPageData : globalData;
+};
+
+// Client Slider functions
+
+export const extendClients = (clients, length) => {
+  const extendedClients = Array?.from({ length }, (_, index) => ({
+    ...clients[index % clients?.length],
+  }));
+  return extendedClients;
+};
+
+export const getImagePath = (originalImagePath, bgColor) => {
+  if (bgColor == '#029894' || !bgColor) {
+    return originalImagePath?.replace('_dark', '_light');
+  } else {
+    return originalImagePath?.replace('_light', '_dark');
+  }
+};
+
+// demo cta function for demo and book-a-meeting page
+
+export const getSize = (isSmallScreen, isMediumScreen, isLargeScreen) =>
+  isSmallScreen
+    ? 'small'
+    : isMediumScreen
+      ? 'medium'
+      : isLargeScreen
+        ? 'large'
+        : 'medium';
