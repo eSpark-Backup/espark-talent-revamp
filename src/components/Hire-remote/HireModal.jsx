@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Modal, Box } from '@mui/material';
+import { Modal, Box, Slide } from '@mui/material';
 
 const style = {
   position: 'absolute',

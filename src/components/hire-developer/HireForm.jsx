@@ -13,7 +13,6 @@ import axios from 'axios';
 import 'react-phone-number-input/style.css';
 import BasicModal from '../book-a-demo/BookADemoModal';
 import ErrorMessage from '../book-a-demo/ErrorMessage';
-import { BookADemoFormValidationSchema } from '@/schema/schema';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;

@@ -7,7 +7,6 @@ import {
   Grid,
   Button,
   Skeleton,
-  Stack,
 } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
