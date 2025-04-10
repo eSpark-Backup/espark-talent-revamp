@@ -50,7 +50,7 @@ const ThankYou = ({ data }) => {
     <Grid item xs={12} sm={4} md={4} lg={4} key={index} py={'20px'}>
       <Box sx={imageBoxStyle}>
         <Image
-          src={step.icon}
+          src={step?.icon}
           height={70}
           width={70}
           alt="Hiring Steps - eSpark Talent"

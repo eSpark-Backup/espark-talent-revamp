@@ -1,6 +1,6 @@
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail?.setApiKey(process.env.SENDGRID_API_KEY);
 
 /**
  * Handles the POST request to send emails using SendGrid.
@@ -35,7 +35,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
  * .catch(error => console.error('Error:', error));
  */
 export async function POST(req) {
-  const request = await req.json();
+  const request = await req?.json();
 
   try {
     const { toAdmin, toSubmitter, adminTemplateId, data } = request;
@@ -71,7 +71,7 @@ export async function POST(req) {
     await new Promise((resolve) => {
       setTimeout(async () => {
         try {
-          sendGridResponse = await sgMail.send({
+          sendGridResponse = await sgMail?.send({
             to: toAdmin,
             from: toAdmin,
             templateId: adminTemplateId,
@@ -86,7 +86,7 @@ export async function POST(req) {
       }, 2000);
     });
 
-    return new Response(JSON.stringify({ sendGridResponse }), {
+    return new Response(JSON?.stringify({ sendGridResponse }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });

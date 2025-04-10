@@ -28,37 +28,37 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
   const adminId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID;
   const adminTemplateId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID;
 
-  const profileValidationSchema = Yup.object().shape({
-    full_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'Full Name must contain only letters')
-      .min(3, 'Full Name must be at least 3 characters')
-      .max(50, 'Full Name must be at most 25 characters')
-      .required('Full Name is required'),
-    email: Yup.string()
-      .email('Invalid Email')
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
+  const profileValidationSchema = Yup?.object()?.shape({
+    full_name: Yup?.string()
+      ?.matches(/^[a-z A-Z]+$/, 'Full Name must contain only letters')
+      ?.min(3, 'Full Name must be at least 3 characters')
+      ?.max(50, 'Full Name must be at most 25 characters')
+      ?.required('Full Name is required'),
+    email: Yup?.string()
+      ?.email('Invalid Email')
+      ?.matches(
+        /^[A-Z0-9?._%+-]+@[A-Z0-9?.-]+\?.[A-Z]{3,}$/i,
         'Invalid Email Address Format'
       )
-      .required('Email is required'),
-    phone_number: Yup.string()
-      .test('phone', 'Invalid Phone Number', (value) =>
+      ?.required('Email is required'),
+    phone_number: Yup?.string()
+      ?.test('phone', 'Invalid Phone Number', (value) =>
         value ? isValidPhoneNumber(value) : true
       )
-      .required('Phone Number is required'),
-    city: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'City Name must contain only letters')
-      .min(3, 'City Name must be at least 3 characters')
-      .max(25, 'City Name must be at most 25 characters')
-      .required('City Name is required'),
-    resume: Yup.mixed()
-      .required('Resume is required')
-      .test('fileType', 'Only PDF files are allowed', (value) => {
-        return value && value.type === 'application/pdf';
+      ?.required('Phone Number is required'),
+    city: Yup?.string()
+      ?.matches(/^[a-z A-Z]+$/, 'City Name must contain only letters')
+      ?.min(3, 'City Name must be at least 3 characters')
+      ?.max(25, 'City Name must be at most 25 characters')
+      ?.required('City Name is required'),
+    resume: Yup?.mixed()
+      ?.required('Resume is required')
+      ?.test('fileType', 'Only PDF files are allowed', (value) => {
+        return value && value?.type === 'application/pdf';
       }),
-    joining_date: Yup.date()
-      .min(new Date(), 'Joining Date must be in the future')
-      .required('Joining Date is required'),
+    joining_date: Yup?.date()
+      ?.min(new Date(), 'Joining Date must be in the future')
+      ?.required('Joining Date is required'),
   });
 
   const handlePhoneChange = (event) => {
@@ -66,45 +66,48 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
   };
 
   const handleFileChange = (event) => {
-    setFieldValue('resume', event.currentTarget.files[0]);
+    setFieldValue('resume', event?.currentTarget?.files[0]);
   };
 
   const onSubmit = async (values, action) => {
     try {
-      const attachment = await fileToBase64(values.resume);
+      const attachment = await fileToBase64(values?.resume);
 
       const emailData = {
         toAdmin: adminId,
-        toSubmitter: values.email,
+        toSubmitter: values?.email,
         adminTemplateId: adminTemplateId,
         data: {
           applied_for: jobData?.title,
-          full_name: values.full_name,
-          email: values.email,
-          phone_number: values.phone_number,
-          city: values.city,
-          joining_date: values.joining_date,
+          full_name: values?.full_name,
+          email: values?.email,
+          phone_number: values?.phone_number,
+          city: values?.city,
+          joining_date: values?.joining_date,
         },
         attachments: [
           {
             content: attachment,
-            filename: values.resume.name,
-            type: values.resume.type,
+            filename: values?.resume?.name,
+            type: values?.resume?.type,
             disposition: 'attachment',
           },
         ],
       };
-      const response = await axios.post('/api/emailwithattachments', emailData);
+      const response = await axios?.post(
+        '/api/emailwithattachments',
+        emailData
+      );
 
-      if (response.status === 200) {
-        action.resetForm();
+      if (response?.status === 200) {
+        action?.resetForm();
         setTimeout(() => {
           handleCloseModal();
         }, 1000);
         setModalText('Your data has been successfully submitted');
       }
     } catch (error) {
-      action.resetForm();
+      action?.resetForm();
       setTimeout(() => {
         handleCloseModal();
       }, 1000);
@@ -203,7 +206,7 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
               lineHeight: 1.4,
             }}
           >
-            {jobData.title}
+            {jobData?.title}
           </Typography>
           <Typography
             sx={{
@@ -220,7 +223,7 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
               lineHeight: 1.6,
             }}
           >
-            {jobData.description?.substring(0, 150)}...
+            {jobData?.description?.substring(0, 150)}...
           </Typography>
         </Box>
         <Box component={'form'}>

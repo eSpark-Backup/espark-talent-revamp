@@ -9,18 +9,18 @@ const FileUpload = ({ handleFileChange }) => {
   const handleFileSelect = (event) => {
     const file = event?.target?.files[0];
     if (file) {
-      if (file.type === 'application/pdf') {
+      if (file?.type === 'application/pdf') {
         setFileName(file?.name);
         handleFileChange(event);
       } else {
         alert('Only PDF files are allowed!');
-        event.target.value = '';
+        event.targe.value = '';
       }
     }
   };
 
   const handleClickOpen = (e) => {
-    e.preventDefault();
+    e?.preventDefault();
     fileInputRef?.current?.click();
   };
 

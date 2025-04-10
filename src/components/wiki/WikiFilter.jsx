@@ -8,11 +8,13 @@ import {
 } from '@mui/material';
 
 const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('xs'));
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme?.breakpoints?.down('xs')
   );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const isMediumScreen = useMediaQuery((theme) =>
+    theme?.breakpoints?.between('sm', 'md')
+  );
+  const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
   return (
     <Container>
       <Grid

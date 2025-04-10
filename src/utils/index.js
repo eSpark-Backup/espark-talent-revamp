@@ -118,7 +118,7 @@ export const handleSubmitJoinCrew = async (
   setRegistrationModal,
   setSuccessModal
 ) => {
-  e.preventDefault();
+  e?.preventDefault();
   setLoading(true);
 
   if (!isValidPhoneNumber(form?.phone_num)) {
@@ -130,7 +130,7 @@ export const handleSubmitJoinCrew = async (
   const newPhone_num = form?.phone_num?.replace(/[\s\-()]/g, '');
 
   const nameRegex = /^[A-Za-z\s]+$/;
-  if (!nameRegex.test(form?.name)) {
+  if (!nameRegex?.test(form?.name)) {
     toast?.error('Name should contain only alphabets');
     setLoading(false);
     return;
@@ -217,7 +217,7 @@ export const handleSubmitJoinCrew = async (
   // Create a copy of the form object and modify it as needed
   const updatedForm = { ...form };
   if (updatedForm?.country?.value === 'pakistan') {
-    if (updatedForm?.city === '' || updatedForm?.city === null) {
+    if (updatedForm.city === '' || updatedForm.city === null) {
       toast?.error('Please select the city');
       setLoading(false);
       return;
@@ -229,9 +229,9 @@ export const handleSubmitJoinCrew = async (
   let resumeKey;
   if (updatedForm?.cv instanceof File) {
     const formData = new FormData();
-    formData.append('file', updatedForm?.cv);
+    formData?.append('file', updatedForm?.cv);
 
-    const response = await axios.post('/api/resumeupload', formData, {
+    const response = await axios?.post('/api/resumeupload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -303,7 +303,7 @@ export const handleSubmitJoinCrew = async (
   }
   // Send data to API
   try {
-    const response = await axios.post(
+    const response = await axios?.post(
       '/api/email',
       {
         toAdmin: adminId,
@@ -345,7 +345,7 @@ export const handleSubmitJoinCrew = async (
       }
     );
 
-    if (response.status === 200) {
+    if (response?.status === 200) {
       console.log('Your application has been successfully submitted');
     } else {
       console.log('Failed to submit your application');
@@ -385,11 +385,11 @@ export const getAnimation = () => {
     return acc;
   }, {});
 
-  if (breakpoints.is_xl) return 'textSizeAnimation_Xl';
-  if (breakpoints.is_lg) return 'textSizeAnimation_lg';
-  if (breakpoints.is_md) return 'textSizeAnimation_md';
-  if (breakpoints.is_sm) return 'textSizeAnimation_sm';
-  if (breakpoints.is_xs) return 'textSizeAnimation_xs';
+  if (breakpoints?.is_xl) return 'textSizeAnimation_Xl';
+  if (breakpoints?.is_lg) return 'textSizeAnimation_lg';
+  if (breakpoints?.is_md) return 'textSizeAnimation_md';
+  if (breakpoints?.is_sm) return 'textSizeAnimation_sm';
+  if (breakpoints?.is_xs) return 'textSizeAnimation_xs';
   return null;
 };
 
@@ -524,7 +524,7 @@ export const totalPageCount = (data, selectedCategory, perPage) => {
       ? data
       : data?.filter((item) => item?.title === selectedCategory);
 
-  return Math.ceil(filteredData?.length / perPage);
+  return Math?.ceil(filteredData?.length / perPage);
 };
 
 /**
@@ -552,7 +552,7 @@ export const handleJobCategoryChange = (
  */
 export const handlePaginationChange = (event, value, setPage) => {
   setPage(value);
-  window.scrollTo({
+  window?.scrollTo({
     top: 0,
     behavior: 'smooth',
   });

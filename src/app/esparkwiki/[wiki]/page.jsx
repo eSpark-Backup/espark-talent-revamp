@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-  if (!params || !params.wiki) {
+  if (!params || !params?.wiki) {
     return (
       <div>
         <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
@@ -22,7 +22,7 @@ const Page = async ({ params }) => {
 
   const slug = params?.wiki;
 
-  if (typeof slug !== 'string' || slug.trim() === '') {
+  if (typeof slug !== 'string' || slug?.trim() === '') {
     return (
       <div>
         <NotFoundPage data={WIKIS_NOT_FOUND_DATA} />
@@ -41,10 +41,12 @@ const Page = async ({ params }) => {
       );
     }
 
-    const InnerHero = React.lazy(
+    const InnerHero = React?.lazy(
       () => import('@/components/homepage/InnerHero')
     );
-    const WikiSingle = React.lazy(() => import('@/components/wiki/WikiSingle'));
+    const WikiSingle = React?.lazy(
+      () => import('@/components/wiki/WikiSingle')
+    );
 
     return (
       <>

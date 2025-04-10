@@ -49,7 +49,7 @@ const CustomInput = ({
           <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
               sx={{
-                color: (theme) => theme.palette.primary.main,
+                color: (theme) => theme?.palette?.primary?.main,
                 marginLeft: '5px',
                 fontSize: '13px',
                 marginBottom: '12px',
@@ -93,7 +93,7 @@ const CustomInput = ({
           <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
               sx={{
-                color: (theme) => theme.palette.primary.main,
+                color: (theme) => theme?.palette?.primary?.main,
                 marginLeft: '5px',
                 fontSize: '13px',
                 marginBottom: '12px',
@@ -110,7 +110,7 @@ const CustomInput = ({
         name={name}
         allowLeadingZeros
         thousandSeparator=","
-        onChange={(e) => onChange(name, e.target.value)}
+        onChange={(e) => onChange(name, e?.target?.value)}
         style={{
           height: '51px',
           fontSize: '16px',
@@ -152,7 +152,7 @@ const CustomInput = ({
             <Tooltip placement="top-start" title={tooltip}>
               <InfoIcon
                 sx={{
-                  color: (theme) => theme.palette.primary.main,
+                  color: (theme) => theme?.palette?.primary?.main,
                   marginLeft: '5px',
                   fontSize: '13px',
                   marginBottom: '12px',
@@ -177,7 +177,10 @@ const CustomInput = ({
         disabled={disabled}
         name={name}
         onChange={(e) =>
-          onChange(name, type === 'file' ? e.target.files[0] : e.target.value)
+          onChange(
+            name,
+            type === 'file' ? e?.target?.files[0] : e?.target?.value
+          )
         }
         type={type ? type : 'text'}
         placeholder={placeholder}
@@ -190,7 +193,8 @@ const CustomInput = ({
               : ''
         }`}
         {...(maxLength && {
-          onInput: (e) => (e.target.value = e.target.value.slice(0, maxLength)),
+          onInput: (e) =>
+            (e.target.value = e?.target?.value?.slice(0, maxLength)),
         })}
       />
     </Stack>

@@ -14,12 +14,12 @@ import Image from 'next/image';
 
 const TermsConditions = ({ data }) => {
   const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
+    theme?.breakpoints?.between('xs', 'sm')
   );
   const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
+    theme?.breakpoints?.between('sm', 'md')
   );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
 
   return (
     <Container>

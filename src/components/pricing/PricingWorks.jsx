@@ -33,7 +33,7 @@ const PricingWorks = ({ data }) => {
   }, [data]);
 
   const renderSlide = (card, index) => (
-    <SwiperSlide key={card.id || index} style={workSlideStyle}>
+    <SwiperSlide key={card?.id || index} style={workSlideStyle}>
       <Card
         sx={{
           ...worksCardStyle(pathName, book_a_demo_meeting),
@@ -55,7 +55,7 @@ const PricingWorks = ({ data }) => {
           <Typography component={'ul'} sx={{ listStyle: 'none', p: 0 }}>
             {card?.desktopListItem?.map((item, idx) => (
               <Box
-                key={item.id || idx}
+                key={item?.id || idx}
                 sx={{
                   display: 'flex',
                   gap: 0.7,

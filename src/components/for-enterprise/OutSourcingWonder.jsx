@@ -33,12 +33,12 @@ const OutSourcingWonder = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
   const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
+    theme?.breakpoints?.between('xs', 'sm')
   );
   const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
+    theme?.breakpoints?.between('sm', 'md')
   );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -60,7 +60,7 @@ const OutSourcingWonder = ({ data }) => {
       el: '.swiper-pagination',
       renderBullet: function (index, className) {
         return `<span class="${className}" style="background-color: ${
-          index === this.activeIndex ? 'darkgreen' : 'lightgreen'
+          index === this?.activeIndex ? 'darkgreen' : 'lightgreen'
         }; width: 20px; height: 20px;"></span>`;
       },
     },
@@ -114,7 +114,7 @@ const OutSourcingWonder = ({ data }) => {
             <Swiper {...swiperSettings}>
               <Grid container sx={gridContainerStyle}>
                 {data?.items?.length > 0 ? (
-                  data?.items.map((item, index) => (
+                  data?.items?.map((item, index) => (
                     <SwiperSlide key={index} className="outsourcing-slide">
                       <Grid sx={gridItemStyle}>
                         <Box sx={iconBoxStyle}>

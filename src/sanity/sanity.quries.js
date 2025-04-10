@@ -27,7 +27,7 @@ import client from './sanity.config';
  * - `follow` {boolean}: Whether search engines should follow links on the page.
  */
 export async function getJob() {
-  return client.fetch(
+  return client?.fetch(
     `*[_type == "job"] {
       _id,
       description,
@@ -84,7 +84,7 @@ export async function getJob() {
  * The function also includes a revalidation time of 1800 seconds (30 minutes) for caching purposes.
  */
 export async function getBlog() {
-  return client.fetch(
+  return client?.fetch(
     ` *[_type == "blog"]
     {
       _id,
@@ -142,7 +142,7 @@ export async function getBlog() {
  * @throws {Error} If the fetch operation fails.
  */
 export async function getSingleBlog(slug) {
-  return client.fetch(
+  return client?.fetch(
     `*[_type == "blog" && slug.current == $slug][0]
     {
       _id,
@@ -203,7 +203,7 @@ export async function getSingleBlog(slug) {
  * The function also includes a revalidation time of 1800 seconds (30 minutes) for caching purposes.
  */
 export async function getWiki() {
-  return client.fetch(
+  return client?.fetch(
     ` *[_type == "wiki"]
     {
       _id,
@@ -262,7 +262,7 @@ export async function getWiki() {
  * console.log(wiki.title); // Outputs the title of the wiki
  */
 export async function getSingleWiki(slug) {
-  return client.fetch(
+  return client?.fetch(
     `*[_type == "wiki" && slug.current == $slug][0]
     {
       _id,
@@ -313,7 +313,7 @@ export async function getSingleWiki(slug) {
  * @returns {Promise<Object[]>} A promise that resolves to an array of SEO data objects.
  */
 export async function getPageSeo() {
-  return client.fetch(
+  return client?.fetch(
     ` *[_type == "seo"]
   {
     path,
@@ -352,7 +352,7 @@ export async function getPageSeo() {
  * - `role` {string}: The role or title of the author.
  */
 export async function getAuthor() {
-  return client.fetch(
+  return client?.fetch(
     ` *[_type == "author"]
     {
       _id ,
@@ -397,7 +397,7 @@ export async function getAuthor() {
  * - `ratingCount` {number}: The total number of ratings.
  */
 export async function getHire() {
-  return client.fetch(
+  return client?.fetch(
     `*[_type == "hire"]
     {
       _id,
@@ -448,7 +448,7 @@ export async function getHire() {
  * @throws {Error} If the fetch operation fails.
  */
 export async function getSingleHire(slug) {
-  return client.fetch(
+  return client?.fetch(
     `*[_type == "hire" && slug.current == $slug][0]
     {
       _id,

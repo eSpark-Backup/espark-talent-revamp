@@ -10,10 +10,10 @@ import { NextResponse } from 'next/server';
  * containing the URL of the incoming request.
  */
 export function middleware(request) {
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('next-url', request.url);
+  const requestHeaders = new Headers(request?.headers);
+  requestHeaders?.set('next-url', request?.url);
 
-  return NextResponse.next({
+  return NextResponse?.next({
     request: {
       headers: requestHeaders,
     },

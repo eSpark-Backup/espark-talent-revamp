@@ -77,7 +77,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                   <Image
                     quality="85"
                     priority={true}
-                    src={item.image}
+                    src={item?.image}
                     width={600}
                     height={200}
                     alt={`${item?.alt}`}
@@ -97,7 +97,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                       mt: '10px',
                     }}
                   >
-                    {item.title}
+                    {item?.title}
                   </Typography>
                   <Typography
                     sx={{
@@ -114,7 +114,7 @@ const HRFirmSuccessSlider = ({ card }) => {
                       },
                     }}
                   >
-                    {item.description}
+                    {item?.description}
                   </Typography>
                 </Grid>
               </Grid>

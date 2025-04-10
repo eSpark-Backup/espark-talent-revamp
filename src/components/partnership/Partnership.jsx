@@ -43,7 +43,7 @@ const Partnership = ({ partnership }) => {
             }}
           >
             <>
-              {content.map((item, index) => (
+              {content?.map((item, index) => (
                 <Box key={index}>
                   <Typography
                     variant="h2"
@@ -61,7 +61,7 @@ const Partnership = ({ partnership }) => {
                       fontWeight: 700,
                       textAlign: { xs: 'center', md: 'left' },
                     }}
-                    dangerouslySetInnerHTML={{ __html: item.title }}
+                    dangerouslySetInnerHTML={{ __html: item?.title }}
                   />
                   <Typography
                     sx={{

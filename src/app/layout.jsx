@@ -35,7 +35,6 @@ const filteredData = getFilteredData(pathname); // Fetch filtered data based on 
 
 // Generate metadata for the page
 
-
 export const metadata = getMetadata(filteredData);
 
 export default async function RootLayout({ children }) {

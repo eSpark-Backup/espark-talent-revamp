@@ -17,10 +17,10 @@ const ServiceFaq = ({ data, color }) => {
 
   const renderQuestions = (start, end) => {
     return data?.questions
-      ?.filter((item) => item.id % 2 === start)
-      .slice(0, end)
-      .map((item, index) => {
-        const panel = `panel${item.id}`;
+      ?.filter((item) => item?.id % 2 === start)
+      ?.slice(0, end)
+      ?.map((item, index) => {
+        const panel = `panel${item?.id}`;
         return (
           <Accordion
             key={index}
@@ -112,7 +112,7 @@ const ServiceFaq = ({ data, color }) => {
           <Grid item md={6} sm={12}>
             {renderQuestions(1, 3)}
           </Grid>
-          {data?.questions && data.questions.length >= 4 ? (
+          {data?.questions && data?.questions?.length >= 4 ? (
             <Grid item md={6} sm={12}>
               {renderQuestions(0, 3)}
             </Grid>

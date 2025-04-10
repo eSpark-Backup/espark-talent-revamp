@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 
 export const Root = styled('div')(({ theme }) => ({
-  [theme.breakpoints.up('xs')]: {
+  [theme?.breakpoints?.up('xs')]: {
     h1: {
       fontSize: `calc(50px * 0.6)`,
     },
@@ -21,7 +21,7 @@ export const Root = styled('div')(({ theme }) => ({
       fontSize: `calc(16px * 0.6)`,
     },
   },
-  [theme.breakpoints.up('sm')]: {
+  [theme?.breakpoints?.up('sm')]: {
     h1: {
       fontSize: `calc(50px * 0.7)`,
     },
@@ -41,7 +41,7 @@ export const Root = styled('div')(({ theme }) => ({
       fontSize: `calc(16px * 0.7)`,
     },
   },
-  [theme.breakpoints.up('md')]: {
+  [theme?.breakpoints?.up('md')]: {
     h1: {
       fontSize: `calc(50px * 0.8)`,
     },
@@ -61,7 +61,7 @@ export const Root = styled('div')(({ theme }) => ({
       fontSize: `calc(16px * 0.8)`,
     },
   },
-  [theme.breakpoints.up('lg')]: {
+  [theme?.breakpoints?.up('lg')]: {
     h1: {
       fontSize: `calc(50px * 0.9)`,
     },
@@ -81,7 +81,7 @@ export const Root = styled('div')(({ theme }) => ({
       fontSize: `calc(16px * 0.9)`,
     },
   },
-  [theme.breakpoints.up('xl')]: {
+  [theme?.breakpoints?.up('xl')]: {
     h1: {
       fontSize: '50px',
     },
@@ -101,7 +101,7 @@ export const Root = styled('div')(({ theme }) => ({
       fontSize: '16px',
     },
   },
-  [theme.breakpoints.up('xl')]: {
+  [theme?.breakpoints?.up('xl')]: {
     h1: {
       fontSize: '50px',
     },

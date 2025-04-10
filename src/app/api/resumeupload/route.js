@@ -61,25 +61,25 @@ const s3Client = new S3Client({
  * handler(req, res).then(response => console.log(response));
  */
 async function handler(req, res) {
-  if (req.method === 'POST') {
+  if (req?.method === 'POST') {
     const formData = await req?.formData();
 
     try {
-      const file = formData.get('file');
+      const file = formData?.get('file');
 
       console.log(file, 'file');
 
-      const buffer = await file.arrayBuffer();
+      const buffer = await file?.arrayBuffer();
 
       // Generate UUID for the file name
       const uuid = uuidv4();
 
       // Get the file extension
-      const fileExtension = path.extname(file.name);
+      const fileExtension = path?.extname(file?.name);
 
       // Construct the key with UUID and file extension
       const key = `${uuid}${fileExtension}`;
-      await s3Client.send(
+      await s3Client?.send(
         new PutObjectCommand({
           Bucket: process.env.NEXT_PUBLIC_BUCKET_NAME,
           Key: key,
@@ -88,7 +88,7 @@ async function handler(req, res) {
       );
 
       return new Response(
-        JSON.stringify({ Message: 'Success', fileKey: key }),
+        JSON?.stringify({ Message: 'Success', fileKey: key }),
         {
           status: 200,
           headers: {
@@ -99,7 +99,7 @@ async function handler(req, res) {
     } catch (error) {
       console.error('Error uploading file:', error);
       return new Response(
-        JSON.stringify({ Message: 'Failed to upload file', error }),
+        JSON?.stringify({ Message: 'Failed to upload file', error }),
         {
           status: 500,
           headers: {
@@ -110,8 +110,8 @@ async function handler(req, res) {
     }
     // });
   } else {
-    res.setHeader('Allow', ['POST']);
-    Response.status(405).json({ error: `Method ${req.method} not allowed` });
+    res?.setHeader('Allow', ['POST']);
+    Response?.status(405)?.json({ error: `Method ${req?.method} not allowed` });
   }
 }
 

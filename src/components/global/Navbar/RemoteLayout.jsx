@@ -39,21 +39,21 @@ const RemoteLayout = ({
   } = remoteLayoutStyle || {};
 
   useEffect(() => {
-    const elementId = document.getElementById('navbar');
+    const elementId = document?.getElementById('navbar');
 
     const handleScroll = () => {
-      if (window.scrollY > 350) {
-        elementId.classList.add('is-sticky');
+      if (window?.scrollY > 350) {
+        elementId?.classList?.add('is-sticky');
       } else {
-        elementId.classList.remove('is-sticky');
+        elementId?.classList?.remove('is-sticky');
       }
     };
 
     handleScroll();
 
-    window.addEventListener('scroll', handleScroll);
+    window?.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window?.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

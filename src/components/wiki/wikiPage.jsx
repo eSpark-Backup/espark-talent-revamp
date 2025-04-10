@@ -24,7 +24,7 @@ const WikiPage = ({ params }) => {
     const intervalId = setInterval(fetchWikiData, 600000);
 
     return () => clearInterval(intervalId);
-  }, [params.wiki]);
+  }, [params?.wiki]);
 
   return (
     <div>

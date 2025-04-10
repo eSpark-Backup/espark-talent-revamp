@@ -9,7 +9,7 @@ const HomeBlogs = dynamic(() => import('@/components/blogs/HomeBlogs'), {
 });
 const Page = () => {
   useEffect(() => {
-    window.scrollTo({
+    window?.scrollTo({
       top: 0,
       behavior: 'smooth',
     });

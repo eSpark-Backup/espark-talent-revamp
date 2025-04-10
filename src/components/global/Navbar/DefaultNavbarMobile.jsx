@@ -109,7 +109,7 @@ const DefaultNavbarMobile = ({ routes, open, mobileMenu, handleClose }) => {
             timeout={50}
             unmountOnExit
           >
-            <Box width="calc(100% + 1.625rem)" my={0} ml={-2}>
+            <Box width="calc(100% + 1?.625rem)" my={0} ml={-2}>
               {renderNavbarItems}
             </Box>
           </Collapse>

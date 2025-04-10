@@ -24,7 +24,7 @@ import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
 
 const Page = () => {
   useEffect(() => {
-    window.scrollTo({
+    window?.scrollTo({
       top: 0,
       behavior: 'smooth',
     });

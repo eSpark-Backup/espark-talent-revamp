@@ -5,8 +5,8 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
 const InnerHero = ({ data, innerData }) => {
-  const wikiString = JSON.stringify(innerData);
-  const parsedWiki = JSON.parse(wikiString);
+  const wikiString = JSON?.stringify(innerData);
+  const parsedWiki = JSON?.parse(wikiString);
   const isLoading = !parsedWiki;
 
   return (
@@ -63,7 +63,7 @@ const InnerHero = ({ data, innerData }) => {
                   {isLoading ? (
                     <Skeleton width={200} height={24} />
                   ) : (
-                    parsedWiki.title
+                    parsedWiki?.title
                   )}
                 </Typography>
               )}
@@ -89,7 +89,7 @@ const InnerHero = ({ data, innerData }) => {
                   {isLoading ? (
                     <Skeleton count={3} />
                   ) : (
-                    parsedWiki.shortDescription
+                    parsedWiki?.shortDescription
                   )}
                 </Typography>
               )}
@@ -124,7 +124,7 @@ const InnerHero = ({ data, innerData }) => {
                     {isLoading ? (
                       <Skeleton width={100} height={30} />
                     ) : (
-                      data.button.label
+                      data?.button?.label
                     )}
                   </Button>
                 </Box>
@@ -142,13 +142,16 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 {isLoading ? (
-                  <Skeleton width={data.imageWidth} height={data.imageHeight} />
+                  <Skeleton
+                    width={data?.imageWidth}
+                    height={data?.imageHeight}
+                  />
                 ) : (
                   <Image
                     quality="85"
                     priority={true}
-                    src={parsedWiki.heroImage}
-                    alt={`${parsedWiki.title}`}
+                    src={parsedWiki?.heroImage}
+                    alt={`${parsedWiki?.title}`}
                     width={data?.imageWidth}
                     height={data?.imageHeight}
                   />

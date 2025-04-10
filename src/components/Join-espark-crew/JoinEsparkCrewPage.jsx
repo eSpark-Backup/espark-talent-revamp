@@ -123,7 +123,7 @@ export default function JoinEsparkCrewPage() {
             {keysPointSecHeading}
           </Typography>
           {KEYS?.map((key, index) => {
-            const splitedKey = key.split(':');
+            const splitedKey = key?.split(':');
             const title = `${splitedKey[0]}:`;
             const desc = splitedKey[1];
             return (

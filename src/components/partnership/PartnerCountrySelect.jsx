@@ -6,7 +6,7 @@ const PartnerCountrySelect = ({
   setSelectedOption,
 }) => {
   const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
+    setSelectedOption(event?.target?.value);
   };
 
   return (

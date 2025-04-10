@@ -20,7 +20,7 @@ const CustomizeOutsource = ({ data }) => {
 
   const { listItem, title, image, alt } = data;
 
-  if (!listItem || listItem.length === 0) {
+  if (!listItem || listItem?.length === 0) {
     return <Typography>Error: No list items provided</Typography>;
   }
 
@@ -36,7 +36,7 @@ const CustomizeOutsource = ({ data }) => {
                 </Typography>
               </Box>
             </Box>
-            {listItem.map((item, index) => (
+            {listItem?.map((item, index) => (
               <Grid item sm={12} md={10} key={index}>
                 <Box sx={listItemBoxStyle}>
                   <ListItemIcon sx={listItemIconStyle}>

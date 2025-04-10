@@ -20,7 +20,7 @@ const BenefitCrewCard = ({ benefit, index }) => {
       >
         <Box
           sx={{
-            backgroundColor: (theme) => theme.palette.primary.main,
+            backgroundColor: (theme) => theme?.palette?.primary?.main,
             minWidth: '35px',
             maxWidth: '35px',
             borderRadius: '50%',

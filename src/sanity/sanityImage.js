@@ -24,5 +24,5 @@ export const builder = imageUrlBuilder({
  * @returns {string} The generated image URL.
  */
 export function urlFor(source) {
-  return builder.image(source);
+  return builder?.image(source);
 }

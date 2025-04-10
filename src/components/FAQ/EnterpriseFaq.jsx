@@ -22,12 +22,12 @@ const EnterpriseFaq = ({ data }) => {
   };
 
   const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
+    theme?.breakpoints?.between('xs', 'sm')
   );
   const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
+    theme?.breakpoints?.between('sm', 'md')
   );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
 
   return (
     <Box sx={{ py: '1%' }} id="faq">
@@ -35,8 +35,8 @@ const EnterpriseFaq = ({ data }) => {
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 2, md: 2, sm: 0, xs: 0 }}>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(0, 3).map((item, index) => {
-              const panel = `panel${item.id}`;
+            {data?.questions?.slice(0, 3)?.map((item, index) => {
+              const panel = `panel${item?.id}`;
               return (
                 <Accordion
                   key={index}
@@ -106,8 +106,8 @@ const EnterpriseFaq = ({ data }) => {
             })}
           </Grid>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(3, 6).map((item, index) => {
-              const panel = `panel${item.id}`;
+            {data?.questions?.slice(3, 6)?.map((item, index) => {
+              const panel = `panel${item?.id}`;
               return (
                 <Accordion
                   key={index}

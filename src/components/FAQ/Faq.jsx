@@ -25,8 +25,8 @@ const Faq = ({ data }) => {
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }}>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(0, 3).map((item, index) => {
-              const panel = `panel${item.id}`;
+            {data?.questions?.slice(0, 3)?.map((item, index) => {
+              const panel = `panel${item?.id}`;
               return (
                 <Accordion
                   key={index}
@@ -91,8 +91,8 @@ const Faq = ({ data }) => {
             })}
           </Grid>
           <Grid item md={6} sm={12}>
-            {data?.questions?.slice(3, 6).map((item, index) => {
-              const panel = `panel${item.id}`;
+            {data?.questions?.slice(3, 6)?.map((item, index) => {
+              const panel = `panel${item?.id}`;
               return (
                 <Accordion
                   key={index}

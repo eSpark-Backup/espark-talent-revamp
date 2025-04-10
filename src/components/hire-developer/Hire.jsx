@@ -4,7 +4,7 @@ const HireDeveloper = React?.lazy(() => import('./HireDeveloper'));
 const ServiceSinglePage = React?.lazy(
   () => import('../service/ServiceSinglePage')
 );
-const HireRemote = React.lazy(() => import('../Hire-remote/HireRemote'));
+const HireRemote = React?.lazy(() => import('../Hire-remote/HireRemote'));
 
 const Hire = ({ data, slug }) => {
   if (

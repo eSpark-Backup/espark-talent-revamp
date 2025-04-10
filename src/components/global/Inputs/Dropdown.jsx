@@ -25,7 +25,7 @@ const Dropdown = ({
       ':hover': {
         backgroundColor: '#e6e9eb',
       },
-      backgroundColor: state.isSelected ? '#029894' : 'white',
+      backgroundColor: state?.isSelected ? '#029894' : 'white',
       zIndex: 9999,
     }),
     control: (provided) => ({
@@ -77,7 +77,7 @@ const Dropdown = ({
             <Tooltip placement="top-start" title={tooltip}>
               <InfoIcon
                 sx={{
-                  color: (theme) => theme.palette.primary.main,
+                  color: (theme) => theme?.palette?.primary?.main,
                   marginLeft: '5px',
                   fontSize: '13px',
                   marginBottom: '12px',

@@ -43,7 +43,7 @@ const TextArea = ({
           <Tooltip placement="top-start" title={tooltip}>
             <InfoIcon
               sx={{
-                color: (theme) => theme.palette.primary.main,
+                color: (theme) => theme?.palette?.primary?.main,
                 marginLeft: '5px',
                 fontSize: '13px',
                 marginBottom: '12px',
@@ -66,7 +66,7 @@ const TextArea = ({
         className="join-crew-textarea"
         placeholder={placeholder}
         name={name}
-        onChange={(e) => onChange(name, e.target.value)}
+        onChange={(e) => onChange(name, e?.target?.value)}
         required={required}
       />
     </Stack>

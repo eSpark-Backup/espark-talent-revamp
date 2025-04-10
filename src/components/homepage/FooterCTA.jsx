@@ -17,7 +17,7 @@ const FooterCTA = () => {
     return pathName?.includes('/pricing') ? PRICING_DATA?.cta : FOOTER_CTA_DATA;
   }, [pathName]);
 
-  const shouldHideCTA = HIDDEN_PATHS.includes(pathName);
+  const shouldHideCTA = HIDDEN_PATHS?.includes(pathName);
 
   if (shouldHideCTA) {
     return null;

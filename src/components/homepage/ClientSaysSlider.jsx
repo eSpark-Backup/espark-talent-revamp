@@ -92,30 +92,25 @@ const ClientSaysSlider = ({ data, styles }) => {
         }}
         pagination={false}
         navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+          prevEl: prevRef?.current,
+          nextEl: nextRef?.current,
         }}
         loop={true}
         allowTouchMove={touch_Allowed}
-        modules={[
-          EffectCoverflow,
-          Navigation,
-          Pagination,
-          EffectFade,
-        ]}
+        modules={[EffectCoverflow, Navigation, Pagination, EffectFade]}
         onInit={(swiper) => {
           swiper.params.allowTouchMove = touch_Allowed;
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
+          swiper.params.navigation.prevEl = prevRef?.current;
+          swiper.params.navigation.nextEl = nextRef?.current;
+          swiper?.navigation?.init();
+          swiper?.navigation?.update();
         }}
         onSwiper={(swiper) => {
           setTimeout(() => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
+            swiper.params.navigation.prevEl = prevRef?.current;
+            swiper.params.navigation.nextEl = nextRef?.current;
+            swiper?.navigation?.init();
+            swiper?.navigation?.update();
           });
         }}
       >

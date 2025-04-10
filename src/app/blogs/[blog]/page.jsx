@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-  if (!params || !params.blog) {
+  if (!params || !params?.blog) {
     return (
       <div>
         <NotFoundPage data={BLOGS_NOT_FOUND_DATA} />
@@ -25,10 +25,10 @@ const Page = async ({ params }) => {
     const author = await getAuthor();
     const blog = await getSingleBlog(slug);
 
-    const BlogDetailsContent = React.lazy(
+    const BlogDetailsContent = React?.lazy(
       () => import('@/components/blogs/blogDetailsContent')
     );
-    const SingleBlogHeader = React.lazy(
+    const SingleBlogHeader = React?.lazy(
       () => import('@/components/blogs/SingleBlogHeader')
     );
     if (!blog) {
@@ -60,7 +60,7 @@ const Page = async ({ params }) => {
 };
 
 Page.propTypes = {
-  params: PropTypes.object.isRequired,
+  params: PropTypes?.object?.isRequired,
 };
 
 export default Page;

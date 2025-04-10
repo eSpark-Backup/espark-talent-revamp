@@ -25,7 +25,7 @@ const ParagraphTitle = ({
             textAlign: hAlign || 'center',
             flexWrap: 'wrap',
             fontSize: '32px !important',
-            [theme.breakpoints.down('sm')]: {
+            [theme?.breakpoints?.down('sm')]: {
               fontSize: '20px !important',
             },
           }}

@@ -23,7 +23,7 @@ import { Box } from '@mui/material';
 
 const MeetingPage = () => {
   useEffect(() => {
-    window.scrollTo({
+    window?.scrollTo({
       top: 0,
       behavior: 'smooth',
     });

@@ -12,8 +12,8 @@ import { PopupModal } from 'react-calendly';
 import { partnerShipFormValidationSchema } from '@/schema/schema';
 import { PartnerFormData } from '@/constants/partnership';
 
-const adminId = process?.env?.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
-const adminTempleteId = process?.env?.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
+const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
+const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
 
 const Form = ({ formContent, fields }) => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -237,7 +237,7 @@ const Form = ({ formContent, fields }) => {
             }}
           >
             <Button onClick={handleSubmit} type="button">
-              {formContent.buttonName}
+              {formContent?.buttonName}
             </Button>
           </Box>
         </form>
@@ -248,7 +248,7 @@ const Form = ({ formContent, fields }) => {
         url="https://calendly.com/esparktalents/60min"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
-        rootElement={partnersRef.current}
+        rootElement={partnersRef?.current}
       />
     </Box>
   );

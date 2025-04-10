@@ -140,14 +140,14 @@ export function runMiddleware(req, res, fn) {
  * @returns {string} The transformed string with the first letter of each word capitalized.
  */
 export function capitalizeFirstLetter(text) {
-  return text.replace(/\b\w/g, (match) => match.toUpperCase());
+  return text?.replace(/\b\w/g, (match) => match?.toUpperCase());
 }
 
 /**
  * Checks if an object is filled with non-empty values.
  *
  * This function recursively checks if the provided object contains at least one
- * non-empty value. A value is considered non-empty if:
+ * non-empty value?. A value is considered non-empty if:
  * - It is a non-empty string (after trimming whitespace).
  * - It is a non-empty array.
  * - It is an instance of `File`.
@@ -162,12 +162,12 @@ export function isObjectFilled(obj) {
   }
 
   for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (Object?.prototype?.hasOwnProperty?.call(obj, key)) {
       const value = obj[key];
 
-      if (typeof value === 'string' && value.trim() !== '') {
+      if (typeof value === 'string' && value?.trim() !== '') {
         return true;
-      } else if (Array.isArray(value) && value.length > 0) {
+      } else if (Array?.isArray(value) && value?.length > 0) {
         return true;
       } else if (value instanceof File) {
         return true;

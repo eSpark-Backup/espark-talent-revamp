@@ -150,13 +150,13 @@ const HeroSection = ({ data }) => {
                   </Typography>
                 )}
                 {data?.button?.link && data?.button?.label && (
-                  <Link href={data?.button.link} target="_blank">
+                  <Link href={data?.button?.link} target="_blank">
                     <Button
                       color="secondary"
                       variant="secondary"
                       sx={buttonStyle}
                     >
-                      {data?.button.label}
+                      {data?.button?.label}
                     </Button>
                   </Link>
                 )}

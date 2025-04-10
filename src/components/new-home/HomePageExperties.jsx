@@ -35,7 +35,7 @@ const HomePageExperties = ({ data }) => {
   const [expandedAccordion, setExpandedAccordion] = useState(null);
   const renderServiceText = (item, idx) => (
     <Grid item key={idx}>
-      <Link href={item.link}>
+      <Link href={item?.link}>
         <Typography sx={titleStyle(hire_remote_developers)}>
           {item?.title}
         </Typography>

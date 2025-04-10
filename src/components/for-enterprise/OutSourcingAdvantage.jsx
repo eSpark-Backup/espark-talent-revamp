@@ -40,13 +40,13 @@ const OutSourcingAdvantage = ({ data }) => {
               </Typography>
               <Grid container sx={itemsGridContainerStyle}>
                 {data?.items?.length > 0 ? (
-                  data?.items.map((list, itemIndex) => (
+                  data?.items?.map((list, itemIndex) => (
                     <Grid item xs={12} md={6} key={itemIndex}>
                       <Box sx={itemBoxStyle}>
                         {list?.listIcon && (
                           <Image
                             quality="85"
-                            src={list.listIcon}
+                            src={list?.listIcon}
                             alt={list?.title || 'List Icon'}
                             width={15}
                             height={15}

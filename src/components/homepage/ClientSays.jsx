@@ -19,7 +19,7 @@ const ClientSays = ({ data }) => {
 
   useEffect(() => {
     if (slider) setLoading(false);
-  }, [data]);
+  }, [data, slider]);
 
   return (
     data && (

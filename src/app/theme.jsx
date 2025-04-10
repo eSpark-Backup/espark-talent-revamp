@@ -46,7 +46,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [poppins.style.fontFamily, 'sans-serif'].join(','),
+    fontFamily: [poppins?.style?.fontFamily, 'sans-serif']?.join(','),
     h1: {
       fontSize: '50px',
       fontWeight: 700,

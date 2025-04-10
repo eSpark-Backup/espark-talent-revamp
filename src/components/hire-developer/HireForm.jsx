@@ -28,8 +28,8 @@ const BookADemoForm = ({ form, handleModalClose }) => {
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
   const handleClose = () => setOpen(false);
-  const adminId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
-  const adminTempleteId = process?.env?.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
+  const adminId = process.env.NEXT_PUBLIC_DEMO_ADMIN_EMAIL_ID;
+  const adminTempleteId = process.env.NEXT_PUBLIC_DEMO_ADMIN_TEMPLETE_ID;
   const pathName = usePathname();
   const book_A_Demo_meeting = '/book-a-demo-meeting';
   const frontend_And_Backend = '/hire-a';
@@ -65,7 +65,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
             }
           );
 
-          if (response.status === 200) {
+          if (response?.status === 200) {
             action?.resetForm();
             values.phone_number = '';
             setTimeout(() => {

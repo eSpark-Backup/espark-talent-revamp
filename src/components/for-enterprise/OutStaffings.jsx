@@ -36,14 +36,14 @@ const OutStaffings = ({ data }) => {
           </Box>
           <Grid container sx={gridContainerStyle}>
             {data?.items?.length > 0 ? (
-              data?.items.map((list, itemIndex) => (
+              data?.items?.map((list, itemIndex) => (
                 <Grid item xs={12} sm={5.5} key={itemIndex}>
                   <Box sx={itemBoxStyle}>
                     {list?.listIcon && (
                       <Image
                         quality="85"
                         priority={true}
-                        src={list.listIcon}
+                        src={list?.listIcon}
                         alt={list?.title || 'List Icon'}
                         width={24}
                         height={24}

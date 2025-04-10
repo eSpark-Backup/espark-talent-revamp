@@ -25,7 +25,7 @@ const NotFoundPage = ({ data }) => {
           <Image
             quality="85"
             priority={true}
-            src={data?.image || NOT_FOUND_DATA.image}
+            src={data?.image || NOT_FOUND_DATA?.image}
             alt="404 Error"
             width={500}
             height={200}
@@ -33,14 +33,14 @@ const NotFoundPage = ({ data }) => {
         </Box>
 
         <Typography variant="h2" sx={{ mt: 4, mb: 3, textAlign: 'center' }}>
-          {data?.title || NOT_FOUND_DATA.title}
+          {data?.title || NOT_FOUND_DATA?.title}
         </Typography>
 
         <Typography
           variant="body1"
           sx={{ mb: 4, px: '25%', textAlign: 'center' }}
         >
-          {data?.desc || NOT_FOUND_DATA.desc}
+          {data?.desc || NOT_FOUND_DATA?.desc}
         </Typography>
 
         <Box
@@ -50,9 +50,9 @@ const NotFoundPage = ({ data }) => {
             justifyContent: 'center',
           }}
         >
-          <Link href={data?.btnLink || NOT_FOUND_DATA.btnLink}>
+          <Link href={data?.btnLink || NOT_FOUND_DATA?.btnLink}>
             <Button variant="contained" color="primary">
-              {data?.btnText || NOT_FOUND_DATA.btnText}
+              {data?.btnText || NOT_FOUND_DATA?.btnText}
             </Button>
           </Link>
         </Box>

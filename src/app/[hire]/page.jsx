@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const path = params.hire;
+  const path = params?.hire;
   const hire = await getSingleHire(path);
   const filteredData = hire || GLOBAL_SEO[0];
 
@@ -40,7 +40,7 @@ export default async function Page({ params }) {
           id="CreativeWorkSeries"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: JSON?.stringify({
               '@context': 'https://schema.org/',
               '@type': 'CreativeWorkSeries',
               name: filteredData?.ratingName,
@@ -69,5 +69,5 @@ export default async function Page({ params }) {
 }
 
 Page.propTypes = {
-  params: PropTypes.object.isRequired,
+  params: PropTypes?.object?.isRequired,
 };

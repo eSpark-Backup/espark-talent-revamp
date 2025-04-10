@@ -1,6 +1,6 @@
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail?.setApiKey(process.env.SENDGRID_API_KEY);
 
 /**
  * Handles incoming HTTP requests for sending emails with attachments.
@@ -45,9 +45,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
  * }
  */
 async function handler(req, res) {
-  const request = await req.json();
+  const request = await req?.json();
   console.log(res, 'Response');
-  if (req.method === 'POST') {
+  if (req?.method === 'POST') {
     try {
       const { toAdmin, toSubmitter, adminTemplateId, data, attachments } =
         request;
@@ -74,7 +74,7 @@ async function handler(req, res) {
       }
       // Sending emails
       setTimeout(() => {
-        sgMail.send({
+        sgMail?.send({
           to: toAdmin,
           from: toAdmin,
           templateId: adminTemplateId,
@@ -106,8 +106,8 @@ async function handler(req, res) {
     }
   } else {
     // Method not allowed
-    res.setHeader('Allow', ['POST']);
-    Response.status(405).json({ error: `Method ${req.method} not allowed` });
+    res?.setHeader('Allow', ['POST']);
+    Response?.status(405)?.json({ error: `Method ${req?.method} not allowed` });
   }
 }
 

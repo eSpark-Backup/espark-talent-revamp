@@ -16,6 +16,7 @@ import TextArea from '../global/Inputs/TextArea';
 import ImgUploader from '../global/Inputs/ImageUpload';
 import ConfirmCloseModal from './ConfirmCloseModal';
 import { isObjectFilled } from '@/utils/cors';
+import Image from 'next/image';
 
 const JoinEsparkRegistrationModal = ({
   open,
@@ -82,13 +83,13 @@ const JoinEsparkRegistrationModal = ({
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
 
-                [theme.breakpoints.up('xs')]: {
+                [theme?.breakpoints?.up('xs')]: {
                   flexDirection: 'column',
                   padding: '20px 10px',
                   rowGap: '10px',
                 },
 
-                [theme.breakpoints.up('md')]: {
+                [theme?.breakpoints?.up('md')]: {
                   flexDirection: 'row',
                   padding: '30px',
                 },
@@ -110,7 +111,7 @@ const JoinEsparkRegistrationModal = ({
                     pl: { xs: '12px' },
                   }}
                 >
-                  {headings.PERSONAL_INFO}
+                  {headings?.PERSONAL_INFO}
                 </Typography>
                 <Box
                   sx={{
@@ -127,12 +128,12 @@ const JoinEsparkRegistrationModal = ({
                     <Box
                       key={index}
                       sx={{
-                        [theme.breakpoints.up('xs')]: {
+                        [theme?.breakpoints?.up('xs')]: {
                           width: '100%',
                         },
-                        [theme.breakpoints.up('md')]: {
+                        [theme?.breakpoints?.up('md')]: {
                           width:
-                            item.name === 'projects'
+                            item?.name === 'projects'
                               ? '100%'
                               : item?.name === 'city' ||
                                   item?.name === 'country' ||
@@ -212,12 +213,12 @@ const JoinEsparkRegistrationModal = ({
                               }
                               onChange={handleChange}
                               className={
-                                item?.name === 'subField' && !form.field
+                                item?.name === 'subField' && !form?.field
                                   ? 'hide'
-                                  : item?.name === 'position' && !form.subField
+                                  : item?.name === 'position' && !form?.subField
                                     ? 'hide'
                                     : item?.name === 'position' &&
-                                        form.subField &&
+                                        form?.subField &&
                                         form?.field?.value !==
                                           'Software Engineering'
                                       ? 'hide'
@@ -259,7 +260,7 @@ const JoinEsparkRegistrationModal = ({
                                   <InfoIcon
                                     sx={{
                                       color: (theme) =>
-                                        theme.palette.primary.main,
+                                        theme?.palette?.primary?.main,
                                       marginLeft: '5px',
                                       fontSize: '13px',
                                       marginBottom: '12px',
@@ -268,12 +269,12 @@ const JoinEsparkRegistrationModal = ({
                                 </Tooltip>
                               </Box>
                               <TagsInput
-                                value={form.tags}
+                                value={form?.tags}
                                 onChange={(e) => handleChange('tags', e)}
                                 name="skills"
                                 placeHolder="Start with # and press enter to add a tag"
                                 beforeAddValidate={(tag) => {
-                                  if (tag.trim().startsWith('#')) {
+                                  if (tag?.trim()?.startsWith('#')) {
                                     return true;
                                   } else {
                                     return false;
@@ -313,7 +314,7 @@ const JoinEsparkRegistrationModal = ({
                             pl: { xs: '12px' },
                           }}
                         >
-                          {headings.RESUME}{' '}
+                          {headings?.RESUME}{' '}
                           <span style={{ color: '#ff0000' }}>*</span>
                         </Typography>
                         <Tooltip
@@ -324,7 +325,7 @@ const JoinEsparkRegistrationModal = ({
                         >
                           <InfoIcon
                             sx={{
-                              color: (theme) => theme.palette.primary.main,
+                              color: (theme) => theme?.palette?.primary?.main,
                               marginLeft: '5px',
                               fontSize: '13px',
                               marginBottom: '12px',
@@ -332,14 +333,15 @@ const JoinEsparkRegistrationModal = ({
                           />
                         </Tooltip>
                       </Stack>
-                      {form.cv !== '' && (
-                        <img
+                      {form?.cv !== '' && (
+                        <Image
                           width={25}
+                          height={25}
                           src={
                             (
-                              typeof form.cv === 'string'
-                                ? form.cv.match(new RegExp(URL_EXPRESSION))
-                                : form.cv !== ''
+                              typeof form?.cv === 'string'
+                                ? form?.cv?.match(new RegExp(URL_EXPRESSION))
+                                : form?.cv !== ''
                             )
                               ? '/images/join-crew/green-tick.png'
                               : '/images/join-crew/cross.png'
@@ -360,10 +362,12 @@ const JoinEsparkRegistrationModal = ({
                       gap="10px"
                     >
                       <ImgUploader
-                        disabled={typeof form.cv === 'string' && form.cv !== ''}
+                        disabled={
+                          typeof form?.cv === 'string' && form?.cv !== ''
+                        }
                         onChange={handleChange}
                         name={'cv'}
-                        filename={form.cv?.name}
+                        filename={form?.cv?.name}
                         form={true}
                       />
                       <Typography
@@ -399,7 +403,7 @@ const JoinEsparkRegistrationModal = ({
                     pl: { xs: '12px' },
                   }}
                 >
-                  {headings.APPLY_FOR}{' '}
+                  {headings?.APPLY_FOR}{' '}
                   <span style={{ color: '#ff0000' }}>*</span>
                 </Typography>
                 <Box
@@ -416,15 +420,15 @@ const JoinEsparkRegistrationModal = ({
                     <Box
                       key={index}
                       sx={{
-                        [theme.breakpoints.up('xs')]: {
+                        [theme?.breakpoints?.up('xs')]: {
                           width: '100%',
                         },
 
-                        [theme.breakpoints.up('md')]: {
+                        [theme?.breakpoints?.up('md')]: {
                           width:
                             item?.name === 'city' ||
                             item?.name === 'job_type' ||
-                            item.name === 'projects'
+                            item?.name === 'projects'
                               ? '100%'
                               : '30%',
                         },
@@ -445,12 +449,12 @@ const JoinEsparkRegistrationModal = ({
                         }
                         onChange={handleChange}
                         className={
-                          item?.name === 'subField' && !form.field
+                          item?.name === 'subField' && !form?.field
                             ? 'hide'
-                            : item?.name === 'position' && !form.subField
+                            : item?.name === 'position' && !form?.subField
                               ? 'hide'
                               : item?.name === 'position' &&
-                                  form.subField &&
+                                  form?.subField &&
                                   form?.field?.value !== 'Software Engineering'
                                 ? 'hide'
                                 : ''
@@ -477,7 +481,7 @@ const JoinEsparkRegistrationModal = ({
                   width: '100%',
                   height: '50px',
                   backgroundColor: (theme) =>
-                    !loading ? theme.palette.primary.main : '#ccc',
+                    !loading ? theme?.palette?.primary?.main : '#ccc',
                   color: 'white',
                   margin: 'auto auto',
                   border: 'none',

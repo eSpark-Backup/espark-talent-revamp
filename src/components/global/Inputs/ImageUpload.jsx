@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
   const handleFileChange = (e, name) => {
-    if (e.target.files.length > 0) {
-      const file = e.target.files[0];
+    if (e?.target?.files?.length > 0) {
+      const file = e?.target?.files[0];
       onChange(name, file);
     }
   };
@@ -34,7 +34,7 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
             <Typography
               sx={{
                 backgroundColor: (theme) =>
-                  !disabled ? theme.palette.primary.main : '#ccc',
+                  !disabled ? theme?.palette?.primary?.main : '#ccc',
                 color: '#fff',
                 padding: '8px 25px',
                 borderRadius: '5px',
@@ -58,8 +58,8 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
                 }}
               >
                 {filename
-                  ? filename.length > 15
-                    ? filename.substring(0, 15) + '...'
+                  ? filename?.length > 15
+                    ? filename?.substring(0, 15) + '...'
                     : filename
                   : 'Choose Your File'}
               </Typography>

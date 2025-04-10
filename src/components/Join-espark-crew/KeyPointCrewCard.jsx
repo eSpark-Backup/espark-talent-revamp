@@ -10,12 +10,12 @@ const KeyPointCrewCard = ({ KEYS, key, title, desc, index }) => {
       alignItems="flex-start"
       gap="10px"
       sx={{
-        marginBottom: index !== KEYS.length - 1 ? '20px' : '0px',
+        marginBottom: index !== KEYS?.length - 1 ? '20px' : '0px',
       }}
     >
       <Box
         sx={{
-          backgroundColor: (theme) => theme.palette.primary.main,
+          backgroundColor: (theme) => theme?.palette?.primary?.main,
           borderRadius: '50%',
           padding: '7px',
           position: 'relative',
@@ -26,7 +26,7 @@ const KeyPointCrewCard = ({ KEYS, key, title, desc, index }) => {
             left: '22px',
             backgroundColor: '#029894',
             width: { xs: '0px', sm: '2px' },
-            height: index !== KEYS.length - 1 ? '50px' : '0px',
+            height: index !== KEYS?.length - 1 ? '50px' : '0px',
           },
         }}
       >
