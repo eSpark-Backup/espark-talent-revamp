@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import PhoneInput from 'react-phone-number-input';
-import ErrorMessage from './ErrorMessage';
 import { useFormik } from 'formik';
-import axios from 'axios';
-import BasicModal from './BookADemoModal';
 import { usePathname } from 'next/navigation';
 import { BookADemoFormValidationSchema } from '@/schema/schema';
 import {
@@ -12,6 +8,10 @@ import {
   bookADemoFormStyles,
   formBoxStyles,
 } from '@/constants/book-a-demo';
+import BasicModal from './BookADemoModal';
+import ErrorMessage from './ErrorMessage';
+import PhoneInput from 'react-phone-number-input';
+import axios from 'axios';
 import 'react-phone-number-input/style.css';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
@@ -98,7 +98,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
   return (
     <>
       <Box sx={mainContainer}>
-        <Box sx={formBoxStyles(pathName, book_A_meeting, remote, true)}>
+        <Box sx={formBoxStyles(pathName, book_A_meeting, remote)}>
           <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
             <Typography sx={titleStyle}>{title}</Typography>
             <Typography sx={subTitleStyle}>{subTitle}</Typography>

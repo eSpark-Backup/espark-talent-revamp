@@ -84,7 +84,6 @@ export const jobTitleBoxStyle = {
 };
 
 export const jobTitleTextStyle = {
-  pr: 2,
   lineHeight: {
     xs: 1.5,
   },

@@ -1,10 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 import HomePageExperties from '../new-home/HomePageExperties';
 import ClientSays from '../homepage/ClientSays';
 import {
-  DIFFERENCE_DATA,
+  cardStyle,
+  DIFFERENCE_DATA_FOR_REMOTE,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
 } from '@/constants/new-home';
@@ -13,9 +13,7 @@ import AwardAchievement from '../homepage/AwardAchiefment';
 import HireRemoteBanner from './HireRemoteBanner';
 import PricingDefference from '../pricing/PricingDefference';
 import PricingHero from '../pricing/PricingHero';
-import BlueCard from '../pricing/BlueCard';
 import { PRICING_DATA } from '@/constants/pricing';
-import { Box } from '@mui/material';
 import PricingBenifits from '../pricing/PricingBenifits';
 import PricingWorks from '../pricing/PricingWorks';
 import DefaultNavbar from '../global/Navbar/DefaultNavbar';
@@ -26,6 +24,7 @@ import BookADemoForm from '../book-a-demo/BookADemoForm';
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import HireRemoteFooterCta from './HireRemoteFooterCta';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
+import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 
 const HireRemote = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -44,26 +43,13 @@ const HireRemote = ({ data }) => {
           type: 'external',
           route: HIRE_A_TALENT_LINK,
           label: BOOK_A_DEMO,
-          color: '#fff',
-          style: {
-            display: 'none',
-            '@media(min-width: 988px)': {
-              display: 'block',
-            },
-            width: { xs: '150px', md: '180px', lg: '223px' },
-            height: { xs: '44px', md: '46px', lg: '48px' },
-            backgroundColor: '#101828',
-            borderRadius: '100px',
-            color: '#fff',
-            fontSize: '20px',
-            '&:hover': {
-              backgroundColor: '#1c4e72',
-              color: '#fff',
-            },
-          },
         }}
       />
-      <HireRemoteBanner data={data?.heroSection} handleOpen={handleOpen} />
+      <HireRemoteBanner
+        data={data?.heroSection}
+        styles={data?.heroSection?.styles}
+        handleOpen={handleOpen}
+      />
       <HireModal
         content={
           <BookADemoForm form={form} handleModalClose={handleModalClose} />
@@ -71,20 +57,11 @@ const HireRemote = ({ data }) => {
         open={open}
         handleModalClose={handleModalClose}
       />
-      <PricingDefference data={DIFFERENCE_DATA} />
+      <PricingDefference
+        data={DIFFERENCE_DATA_FOR_REMOTE}
+        cardStyle={cardStyle}
+      />
       <PricingHero data={PRICING_DATA} handleOpen={handleOpen} />
-      <Box
-        sx={{
-          mt: 5,
-          mb: 3,
-          display: 'none',
-          '@media(max-width: 783px)': {
-            display: 'flex',
-          },
-        }}
-      >
-        <BlueCard data={PRICING_DATA} handleOpen={handleOpen} />
-      </Box>
       <PricingBenifits data={PRICING_DATA?.benifits} />
       <PricingWorks data={PRICING_DATA?.howItWorks} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />

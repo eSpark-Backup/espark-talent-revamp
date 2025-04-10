@@ -4,38 +4,29 @@ import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 
 import ParagraphTitle from '../homepage/ParagraphTitle';
+import {
+  outerBoxStyle,
+  innerBoxStyle,
+  gridItemStyle,
+  itemBoxStyle,
+  titleTypographyStyle,
+} from '@/constants/solutions/for-business-startup/OutSourcingSolutionConstant';
 
 const OutSourcingSolution = ({ data }) => {
+  if (!data) {
+    return <Typography>Error: No data provided</Typography>;
+  }
   return (
     <>
-      <Box sx={{ py: ['2.5%', '5%'], overflow: 'hidden' }}>
+      <Box sx={outerBoxStyle}>
         <Container>
-          <Box sx={{ py: '2.5%', textAlign: 'center' }}>
+          <Box sx={innerBoxStyle}>
             <ParagraphTitle title={data?.title} paragraph={data?.paragraph} />
           </Box>
           <Grid container spacing={2} justifyContent="center">
             {data?.items?.map((item, index) => (
-              <Grid
-                key={index}
-                item
-                xs={12}
-                sm={4}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'stretch',
-                  justifyContent: 'center',
-                  p: ['10px', '20px'],
-                }}
-              >
-                <Box
-                  sx={{
-                    borderRadius: '30px',
-                    p: '20px',
-                    alignItems: 'center',
-                    background: ' #FFF',
-                    boxShadow: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
-                  }}
-                >
+              <Grid key={index} item xs={12} sm={4} sx={gridItemStyle}>
+                <Box sx={itemBoxStyle}>
                   <Image
                     quality="85"
                     priority={true}
@@ -43,8 +34,16 @@ const OutSourcingSolution = ({ data }) => {
                     alt={`${item?.title}`}
                     height={item?.iconHeight}
                     width={item?.iconWidth}
+                    onError={(e) => {
+                      e.target.src = '/path/to/default/icon.png';
+                      e.target.onerror = null;
+                    }}
                   />
-                  <Typography variant="h5" color="secondary" sx={{ pr: '10%' }}>
+                  <Typography
+                    variant="h5"
+                    color="secondary"
+                    sx={titleTypographyStyle}
+                  >
                     {item?.title}
                   </Typography>
                   <Typography variant="body1">{item?.paragraph}</Typography>

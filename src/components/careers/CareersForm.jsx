@@ -168,10 +168,23 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
       >
         <Box
           sx={{
-            mb: { xs: 3, md: 3 },
-            textAlign: 'center',
-            maxWidth: { xs: '350px', xl: '98%' },
-            mx: 'auto',
+            width: '100%',
+            height: { xs: 'auto', sm: '100%' },
+            display: 'flex',
+            flexDirection: 'column',
+            px: 2,
+            alignItems: { md: 'center' },
+            justifyContent: { xs: 'auto', lg: 'center' },
+            '@media (min-width: 600px) and (max-width: 768px)': {
+              justifyContent: 'center',
+              px: 2,
+              width: '100%',
+            },
+            '@media (max-width: 425px)': {
+              justifyContent: 'center',
+              px: 2,
+              width: '100%',
+            },
           }}
         >
           <Typography
