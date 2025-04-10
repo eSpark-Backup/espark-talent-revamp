@@ -97,12 +97,7 @@ const ClientSaysSlider = ({ data, styles }) => {
         }}
         loop={true}
         allowTouchMove={touch_Allowed}
-        modules={[
-          EffectCoverflow,
-          Navigation,
-          Pagination,
-          EffectFade,
-        ]}
+        modules={[EffectCoverflow, Navigation, Pagination, EffectFade]}
         onInit={(swiper) => {
           swiper.params.allowTouchMove = touch_Allowed;
           swiper.params.navigation.prevEl = prevRef.current;

@@ -13,7 +13,6 @@ import 'swiper/css/navigation';
 import { Pagination } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
 import { openForm } from '@/utils';
-import Image from 'next/image';
 
 const HomePageExpertTeam = ({ data, handleOpen }) => {
   const [loading, setLoading] = useState(true);
