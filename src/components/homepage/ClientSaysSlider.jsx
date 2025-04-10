@@ -3,8 +3,15 @@ import React, { useRef } from 'react';
 import { Box, Card, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, EffectCoverflow } from 'swiper/modules';
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  EffectFade,
+} from 'swiper/modules';
 import StarRating from './StarRating';
 import { navigationImageDirection } from '@/utils';
 
@@ -83,19 +90,33 @@ const ClientSaysSlider = ({ data, styles }) => {
           slideShadows: true,
           slideBorder: false,
         }}
+        pagination={false}
         navigation={{
-          prevEl: prevRef && prevRef?.current,
-          nextEl: nextRef && nextRef?.current,
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
         loop={true}
         allowTouchMove={touch_Allowed}
-        modules={[EffectCoverflow, Navigation]}
+        modules={[
+          EffectCoverflow,
+          Navigation,
+          Pagination,
+          EffectFade,
+        ]}
         onInit={(swiper) => {
           swiper.params.allowTouchMove = touch_Allowed;
-          swiper.params.navigation.prevEl = prevRef && prevRef?.current;
-          swiper.params.navigation.nextEl = nextRef && nextRef?.current;
-          swiper?.navigation?.init();
-          swiper?.navigation?.update();
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
+        onSwiper={(swiper) => {
+          setTimeout(() => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          });
         }}
       >
         {data?.map(renderSlide)}

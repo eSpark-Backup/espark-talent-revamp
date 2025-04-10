@@ -1,7 +1,6 @@
 'use client';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import Slide from '@mui/material/Slide';
+import React from 'react';
+import { Modal, Box, Slide } from '@mui/material';
 
 const style = {
   position: 'absolute',

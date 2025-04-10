@@ -13,6 +13,7 @@ const config = {
   dataset: 'production',
   apiVersion: '2021-10-21',
   useCdn: true,
+  // token: NEED FOR write access i-e MIGRATION
 };
 
 const client = sanityClient?.createClient(config);
