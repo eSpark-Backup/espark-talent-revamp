@@ -1,7 +1,7 @@
 'use client';
+
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 
 const InnerHero = ({ data, innerData }) => {

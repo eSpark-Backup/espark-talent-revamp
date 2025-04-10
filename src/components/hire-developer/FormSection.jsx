@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { Box, Typography } from '@mui/material';
 
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';

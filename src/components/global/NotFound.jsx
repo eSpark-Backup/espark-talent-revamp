@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';

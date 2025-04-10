@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
@@ -7,11 +6,10 @@ import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
 import Faq from '@/components/FAQ/Faq';
-
 import { getMetadata } from '@/components/global/seo';
+
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
-import { getFilteredData } from '@/utils/cors';
 import {
   ACHIEVEMENTS_DATA,
   CLIENTS_SLIDER_DATA,
@@ -24,8 +22,18 @@ import {
   OUTSTAFFING_TRUST_DATA,
 } from '@/constants/for-enterprise';
 
+import { getFilteredData } from '@/utils/cors';
+
 const pathname = '/solutions/enterprises';
 const filteredData = getFilteredData(pathname);
+/**
+ * Metadata for this page.
+ *
+ * This export retrieves metadata using the `getMetadata` function
+ * with the provided `filteredData` as input.
+ *
+ * @constant {Object} metadata - The metadata object for the page.
+ */
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

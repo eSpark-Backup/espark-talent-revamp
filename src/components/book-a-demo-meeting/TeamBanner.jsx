@@ -1,7 +1,7 @@
 'use client';
+
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
 
 export const TeamBanner = ({ data }) => {
   const { images, styles } = data || {};

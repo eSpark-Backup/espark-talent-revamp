@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
+
+import { useEffect } from 'react';
 import {
   ACHIEVEMENTS_DATA,
   BENEFITS_WORKS_DATA,

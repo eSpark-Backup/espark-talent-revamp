@@ -1,6 +1,5 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
 
 const LetsConnect = ({ data }) => {
   const { title, descrcipton, btnLink, btnText, styles } = data || {};

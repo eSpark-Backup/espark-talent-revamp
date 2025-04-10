@@ -1,8 +1,8 @@
 'use client';
+
 import { frontendHeroSectionMainBoxStyle } from '@/constants/hire-developer/hire-developer';
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
 
 const HireHeroSection = ({ data }) => {
   const { bgImage, styles } = data || {};

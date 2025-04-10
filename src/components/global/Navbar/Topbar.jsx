@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
 
 const Topbar = ({ data }) => {
   const { mailText, mailIcon, socialIcons, styles } = data || {};

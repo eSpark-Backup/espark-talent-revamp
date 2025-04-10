@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { hireRemoteimageStyle } from '@/constants/hire-developer/hire-developer';
 import { Box, Button, Typography } from '@mui/material';
 

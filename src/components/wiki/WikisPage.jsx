@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { getWiki } from '@/sanity/sanity.quries';

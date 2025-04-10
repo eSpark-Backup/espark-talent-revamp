@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import { useFormik } from 'formik';
 import { usePathname } from 'next/navigation';
+import axios from 'axios';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+
 import { BookADemoFormValidationSchema } from '@/schema/schema';
 import {
   Book_A_Demo_Keys,
@@ -10,9 +14,6 @@ import {
 } from '@/constants/book-a-demo';
 import BasicModal from './BookADemoModal';
 import ErrorMessage from './ErrorMessage';
-import PhoneInput from 'react-phone-number-input';
-import axios from 'axios';
-import 'react-phone-number-input/style.css';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;

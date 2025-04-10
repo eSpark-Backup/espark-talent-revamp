@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Button, Stack, Typography, Box, Modal } from '@mui/material';
 import { CONFIRMATION_MODAL_DATA } from '@/constants/join-espark-crew';
 

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { Box } from '@mui/material';
 import { PortableText } from '@portabletext/react';
 import Skeleton from 'react-loading-skeleton';

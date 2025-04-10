@@ -1,15 +1,26 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import Script from 'next/script';
+
 import NotFoundPage from '@/components/global/NotFound';
 import Hire from '@/components/hire-developer/Hire';
-import Script from 'next/script';
 
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
+
 import { getSingleHire } from '@/sanity/sanity.quries';
 import { fetchHireMetadata } from '@/utils/cors';
 
+/**
+ * Generates metadata for the given hire page.
+ *
+ * @async
+ * @function generateMetadata
+ * @param {Object} context - The context object containing route parameters.
+ * @param {Object} context.params - The route parameters.
+ * @param {string} context.params.hire - The slug representing the hire page.
+ * @returns {Promise<Object>} A promise that resolves to the metadata for the hire page.
+ */
 export async function generateMetadata({ params }) {
   const slug = params?.hire;
   return fetchHireMetadata(slug);

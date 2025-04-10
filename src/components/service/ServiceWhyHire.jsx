@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { Box, Container, Typography } from '@mui/material'; // Ensuring Box is imported correctly
 import ServiceProcessMobile from './ServiceProcessMobile';
 import ServiceProcess from './ServiceProcess';

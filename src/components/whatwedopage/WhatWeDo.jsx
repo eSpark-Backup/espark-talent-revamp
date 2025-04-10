@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';

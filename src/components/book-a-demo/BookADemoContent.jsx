@@ -1,8 +1,7 @@
-import React from 'react';
 import { Box, Typography } from '@mui/material';
-import BookClientSlider from '../global/BookClientSlider';
 import { CLIENTS_SLIDER_DATA } from '@/constants/homepage';
 import { CLIENT_SLIDER_BREAK_POINTS } from '@/constants/book-a-demo';
+import BookClientSlider from '../global/BookClientSlider';
 
 const BookADemoContent = ({ content, styles }) => {
   const { title, text, description, image, alt } = content;

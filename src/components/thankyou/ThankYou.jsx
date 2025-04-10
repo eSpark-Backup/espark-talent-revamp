@@ -1,8 +1,8 @@
 'use client';
+
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 const ThankYou = ({ data }) => {
   const {

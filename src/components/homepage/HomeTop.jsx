@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,

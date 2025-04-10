@@ -7,7 +7,7 @@ import {
 import { Box, Button, Modal, Stack, Tooltip, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CustomInput from '../global/Inputs/CustomInput';
 import Dropdown from '../global/Inputs/Dropdown';
 import InfoIcon from '@mui/icons-material/Info';

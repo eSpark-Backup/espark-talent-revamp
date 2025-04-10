@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import { JOBS_HERO_DATA } from '@/constants/global/hero-sections';
 import { getJob } from '@/sanity/sanity.quries';

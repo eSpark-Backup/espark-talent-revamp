@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { pricingStripe } from '@/constants/pricing';
 

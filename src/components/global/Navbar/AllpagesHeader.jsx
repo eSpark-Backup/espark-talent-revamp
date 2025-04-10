@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import routes from '@/constants/routes';
 import {
   EXCLUDED_PATHS,

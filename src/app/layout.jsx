@@ -1,20 +1,24 @@
-import React from 'react';
 import './globals.css';
-import CssBaseline from '@mui/material/CssBaseline';
+
 import dynamic from 'next/dynamic';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import { SkeletonTheme } from 'react-loading-skeleton';
+import { GoogleTagManager } from '@next/third-parties/google';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+
 import theme from './theme';
+
 import GoogleTag from '@/components/global/Header/GoogleTag';
 import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import Loading from '@/components/global/loading';
 import ToastProvider from '@/components/global/ToastContainer';
+import { getMetadata } from '@/components/global/seo';
 
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
-import { SkeletonTheme } from 'react-loading-skeleton';
-import { GoogleTagManager } from '@next/third-parties/google';
-import { getMetadata } from '@/components/global/seo';
+
 import { getFilteredData } from '@/utils/cors';
 
 // Dynamically import components that should not be server-rendered
@@ -35,6 +39,14 @@ const filteredData = getFilteredData(pathname); // Fetch filtered data based on 
 
 // Generate metadata for the page
 
+/**
+ * Metadata for this page.
+ *
+ * This export retrieves metadata using the `getMetadata` function
+ * with the provided `filteredData` as input.
+ *
+ * @constant {Object} metadata - The metadata object for the page.
+ */
 export const metadata = getMetadata(filteredData);
 
 export default async function RootLayout({ children }) {

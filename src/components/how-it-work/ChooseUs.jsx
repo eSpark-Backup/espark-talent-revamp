@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';

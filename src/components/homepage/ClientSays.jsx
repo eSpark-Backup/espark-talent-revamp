@@ -1,5 +1,6 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+
+import { useState, useEffect } from 'react';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import ClientSaysSlider from './ClientSaysSlider';

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { Box, Grid, ListItemIcon, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';

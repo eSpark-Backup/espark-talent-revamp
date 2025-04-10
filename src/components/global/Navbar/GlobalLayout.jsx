@@ -1,6 +1,6 @@
 'use client';
+
 import { Box, Button, IconButton } from '@mui/material';
-import React from 'react';
 import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';

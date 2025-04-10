@@ -1,4 +1,5 @@
 'use client';
+
 import { Box } from '@mui/material';
 import { useState, useEffect, Suspense } from 'react';
 import { keyframes } from '@emotion/react';

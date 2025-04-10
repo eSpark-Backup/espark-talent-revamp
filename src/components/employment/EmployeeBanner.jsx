@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from '@mui/material';
-import React from 'react';
 import EmployeeSlider from '../new-home/EmployeeSlider';
 import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home';
 

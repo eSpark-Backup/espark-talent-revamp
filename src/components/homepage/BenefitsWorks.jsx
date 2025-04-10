@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { Box, Typography, Grid, Container } from '@mui/material';
 
 const BenefitsWorks = ({ data }) => {

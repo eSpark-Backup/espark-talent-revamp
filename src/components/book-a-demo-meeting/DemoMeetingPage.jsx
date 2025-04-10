@@ -1,14 +1,13 @@
-import React from 'react';
-import FormSection from '../hire-developer/FormSection';
-import ClientSays from '../homepage/ClientSays';
-import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
-import DemoLeverageTalent from './DemoLeverageTalent';
 import { Box } from '@mui/material';
+import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
+import ClientSays from '../homepage/ClientSays';
 import Perks from '../homepage/Perks';
 import CustomizedSolution from '../hire-developer/CustomizedSolution';
-import { TeamBanner } from './TeamBanner';
+import FormSection from '../hire-developer/FormSection';
 import LetsConnect from '../hire-developer/LetsConnect';
 import PricingWorks from '../pricing/PricingWorks';
+import DemoLeverageTalent from './DemoLeverageTalent';
+import { TeamBanner } from './TeamBanner';
 
 const DemoMeetingPage = ({ data }) => {
   const { styles } = DEVELOEPRS_PERKS_DATA || {};

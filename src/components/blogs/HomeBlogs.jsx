@@ -1,8 +1,8 @@
 'use client';
+
 import { Box, Container } from '@mui/material';
-import React from 'react';
-import ParagraphTitle from '../homepage/ParagraphTitle';
 import ESparkButton from '../global/eSparkButton';
+import ParagraphTitle from '../homepage/ParagraphTitle';
 import SSRBlogs from './SSRBlogs';
 
 const HomeBlogs = () => {

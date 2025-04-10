@@ -1,5 +1,7 @@
 'use client';
+
 import React from 'react';
+
 const HireDeveloper = React?.lazy(() => import('./HireDeveloper'));
 const ServiceSinglePage = React?.lazy(
   () => import('../service/ServiceSinglePage')

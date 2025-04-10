@@ -1,6 +1,6 @@
 'use client';
+
 import { Box, Container, Typography } from '@mui/material';
-import React from 'react';
 import CustomSectionSlider from '../hire-developer/CustomSectionSlider';
 
 const DemoLeverageTalent = ({ data }) => {

@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import HomePageExperties from '../new-home/HomePageExperties';
 import ClientSays from '../homepage/ClientSays';
 import {

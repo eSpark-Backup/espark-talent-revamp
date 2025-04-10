@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';

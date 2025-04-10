@@ -1,7 +1,7 @@
 'use client';
+
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import React from 'react';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 
 const HireRemoteFooterCta = ({ handleOpen }) => {

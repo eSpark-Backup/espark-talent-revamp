@@ -1,5 +1,4 @@
 import { Stack, Typography, Tooltip, Box } from '@mui/material';
-import React from 'react';
 import Select from 'react-select';
 import InfoIcon from '@mui/icons-material/Info';
 import { APPLY_FOR_ENUMS } from '@/constants/join-espark-crew';

@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 import { duplicateSlides } from '@/utils';
 import Image from 'next/image';

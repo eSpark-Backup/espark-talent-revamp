@@ -1,7 +1,8 @@
 'use client';
+
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { open } from '@/utils';
 import { usePathname } from 'next/navigation';
 import {

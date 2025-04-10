@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import { eachCardForCustomizeSolution } from '@/constants/hire-developer/hire-developer';

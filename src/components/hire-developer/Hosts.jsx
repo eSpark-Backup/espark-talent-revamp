@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
 import { frontendContentBoxStyle } from '@/constants/hire-developer/hire-developer';

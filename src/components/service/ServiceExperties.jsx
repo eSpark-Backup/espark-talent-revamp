@@ -1,6 +1,6 @@
 'use client';
+
 import { Box, Card, Typography } from '@mui/material';
-import React from 'react';
 import { usePathname } from 'next/navigation';
 import {
   descriptionTypographyStyleForCustomizeSolution,

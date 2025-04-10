@@ -1,11 +1,23 @@
 import React from 'react';
+
 import NotFoundPage from '@/components/global/NotFound';
 
-import { getSingleWiki } from '@/sanity/sanity.quries';
 import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
+
+import { getSingleWiki } from '@/sanity/sanity.quries';
 import { fetchWikiMetadata } from '@/utils/cors';
 
+/**
+ * Generates metadata for the given wiki page.
+ *
+ * @async
+ * @function generateMetadata
+ * @param {Object} context - The context object containing route parameters.
+ * @param {Object} context.params - The route parameters.
+ * @param {string} context.params.wiki - The slug representing the wiki page.
+ * @returns {Promise<Object>} A promise that resolves to the metadata for the wiki page.
+ */
 export async function generateMetadata({ params }) {
   const slug = params?.wiki;
   return fetchWikiMetadata(slug);

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import HireHeroSection from './HireHeroSection';
 import ClientSays from '../homepage/ClientSays';
 import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';

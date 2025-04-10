@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import { Modal, Box, Slide } from '@mui/material';
 
 const style = {

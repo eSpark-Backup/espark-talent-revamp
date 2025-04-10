@@ -1,7 +1,8 @@
 'use client';
+
 import { Box, Button, CircularProgress, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   buttonStyle,
   cardStyle,

@@ -1,5 +1,6 @@
 'use client';
-import React, { useRef, useState } from 'react';
+
+import { useRef, useState } from 'react';
 import { useFormik } from 'formik';
 import PartnerCountrySelect from './PartnerCountrySelect';
 import PhoneInput from 'react-phone-number-input';

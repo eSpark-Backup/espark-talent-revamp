@@ -1,4 +1,5 @@
 'use client';
+
 import dynamic from 'next/dynamic';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import {

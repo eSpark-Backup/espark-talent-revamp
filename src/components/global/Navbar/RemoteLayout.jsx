@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
+
+import { useEffect } from 'react';
 import { Box, Button, IconButton } from '@mui/material';
 import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';

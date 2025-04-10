@@ -1,5 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
+
 import { getBlog } from '@/sanity/sanity.quries';
 import BlogCards from '../homepage/BlogCards';
 

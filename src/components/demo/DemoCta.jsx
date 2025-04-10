@@ -5,7 +5,6 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
-import React from 'react';
 import Link from 'next/link';
 import { getSize } from '@/utils';
 

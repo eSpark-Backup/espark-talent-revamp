@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceFaq from '../service/ServiceFaq';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import { cardStyle, DIFFERENCE_DATA } from '@/constants/new-home';

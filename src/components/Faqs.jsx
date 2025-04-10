@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Typography,
-  Container,
   Box,
+  Container,
   Grid,
+  Typography,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Faqs = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
 
+  /**
+   * Handles the expansion and collapse of panels in an accordion component.
+   *
+   * @param {string} panel - The identifier for the panel being interacted with.
+   * @returns {function} - A function that takes an event and a boolean indicating
+   * whether the panel is expanded, and updates the state accordingly.
+   */
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };

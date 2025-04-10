@@ -1,4 +1,5 @@
 'use client';
+
 import Collapse from '@mui/material/Collapse';
 import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';

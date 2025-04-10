@@ -1,5 +1,6 @@
 'use client';
-import * as React from 'react';
+
+import { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
 import Menu from '@mui/material/Menu';
 import { Box } from '@mui/material';
@@ -9,7 +10,7 @@ import NavbarItemsMobile from './NavbarItemsMobile';
 import Fade from '@mui/material/Fade';
 
 const DefaultNavbarMobile = ({ routes, open, mobileMenu, handleClose }) => {
-  const [collapse, setCollapse] = React.useState('');
+  const [collapse, setCollapse] = useState('');
   const { navbarItemStyle, mobileNavbarStyle } = NAVBAR_STYLE || {};
   const {
     mainBoxStyle,

@@ -1,5 +1,6 @@
 'use client';
-import React, { useRef } from 'react';
+
+import { useRef } from 'react';
 import { Box, Card, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

@@ -1,4 +1,5 @@
 'use client';
+
 import { createTheme } from '@mui/material/styles';
 import { Poppins } from 'next/font/google';
 

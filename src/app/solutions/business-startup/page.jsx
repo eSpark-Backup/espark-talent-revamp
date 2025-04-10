@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';
 import OurOutsourcing from '@/components/for-startup/OurOutsourcing';
@@ -8,11 +6,10 @@ import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/BusinessVenture';
 import Faq from '@/components/FAQ/Faq';
+import { getMetadata } from '@/components/global/seo';
 
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
-import { getMetadata } from '@/components/global/seo';
-import { getFilteredData } from '@/utils/cors';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
@@ -26,8 +23,18 @@ import {
   OUTSOURCING_SOLUTIONS_DATA,
 } from '@/constants/for-startup';
 
+import { getFilteredData } from '@/utils/cors';
+
 const pathname = '/solutions/business-startup';
 const filteredData = getFilteredData(pathname);
+/**
+ * Metadata for this page.
+ *
+ * This export retrieves metadata using the `getMetadata` function
+ * with the provided `filteredData` as input.
+ *
+ * @constant {Object} metadata - The metadata object for the page.
+ */
 export const metadata = getMetadata(filteredData);
 
 const Page = () => {

@@ -7,6 +7,16 @@ import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { fetchBlogMetadata } from '@/utils/cors';
 
+/**
+ * Generates metadata for the given blog page.
+ *
+ * @async
+ * @function generateMetadata
+ * @param {Object} context - The context object containing route parameters.
+ * @param {Object} context.params - The route parameters.
+ * @param {string} context.params.blog - The slug representing the blog page.
+ * @returns {Promise<Object>} A promise that resolves to the metadata for the blog page.
+ */
 export async function generateMetadata({ params }) {
   const slug = params?.blog;
   return fetchBlogMetadata(slug);
