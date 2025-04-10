@@ -4,6 +4,7 @@ import {
   CLIENTS_SLIDER_DATA,
 } from '@/constants/homepage';
 import {
+  cardStyleForHomePage,
   DIFFERENCE_DATA,
   EMPLOYEE_HERO_DATA,
   EXPERT_TEAM_DATA,
@@ -14,22 +15,32 @@ import {
 import ClientSlider from '../global/ClientSlider';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import HomePageDifference from '../new-home/HomePageDifference';
-import HomePageHiringModal from '../new-home/HomePageHiringModal';
 import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 import EmployeeBanner from '../employment/EmployeeBanner';
 import { Box } from '@mui/material';
+import HomePageHiringModel from '../new-home/HomePageHiringModel';
+import PricingDefference from '../pricing/PricingDefference';
 
 const HomeTop = () => {
   return (
     <>
       <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
-      <HomePageDifference data={DIFFERENCE_DATA} />
+      <PricingDefference
+        data={DIFFERENCE_DATA}
+        cardStyle={cardStyleForHomePage}
+        backgroundColorStyle={{
+          '@media(min-width:1024px)': {
+            backgroundSize: '100%',
+            backgroundPosition: 'center',
+            backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
+          },
+        }}
+      />
       <HomeOffshoreWorks data={OFFSHORE_DATA} />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />
-      <HomePageHiringModal data={HIRING_DATA} />
-      <Box sx={{ pt: { xs: 4, md: 2 }, pb: 2 }}>
+      <HomePageHiringModel data={HIRING_DATA} />
+      <Box sx={{ pt: { xs: 4, md: 4.5 }, pb: 2 }}>
         <ClientSlider
           data={CLIENTS_SLIDER_DATA}
           breakPoints={CLIENT_SLIDER_BREAK_POINTS}

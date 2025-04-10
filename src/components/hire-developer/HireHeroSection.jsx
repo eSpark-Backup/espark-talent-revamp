@@ -1,72 +1,31 @@
 'use client';
-import {
-  Box,
-  Button,
-  Container,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
-import Image from 'next/image';
+import { frontendHeroSectionMainBoxStyle } from '@/constants/hire-developer/hire-developer';
+import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 
 const HireHeroSection = ({ data }) => {
-  const isSmallScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('xs', 'sm')
-  );
-  const isMediumScreen = useMediaQuery((theme) =>
-    theme.breakpoints.between('sm', 'md')
-  );
-  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const { bgImage, styles } = data || {};
+  const {
+    containerBoxStyle,
+    imageBoxStyle,
+    titleTypographyStyle,
+    descriptionTypographyStyle,
+    buttonStyle,
+    btnTextStyle,
+  } = styles || {};
 
   return (
     data && (
-      <Box
-        sx={{
-          pt: { xs: '25px', sm: '25px', md: '30px', lg: '30px' },
-          backgroundImage: `url(${data?.bgImage})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: `100%`,
-          color: '#fff',
-        }}
-      >
+      <Box sx={frontendHeroSectionMainBoxStyle(bgImage)}>
         <Container>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            <Box
-              sx={{
-                mt: { xs: '15px', sm: '20px', md: '25px', lg: '35px' },
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
+          <Box sx={containerBoxStyle}>
+            <Box sx={imageBoxStyle}>
               <Link href={'/'}>
-                <Image
+                <Box
+                  component={'img'}
                   src={data?.logo}
-                  width={
-                    isSmallScreen
-                      ? 100
-                      : isMediumScreen
-                        ? 150
-                        : isLargeScreen
-                          ? 200
-                          : 200
-                  }
-                  height={
-                    isSmallScreen
-                      ? 50
-                      : isMediumScreen
-                        ? 75
-                        : isLargeScreen
-                          ? 100
-                          : 100
-                  }
+                  sx={{ width: 'auto', height: 'auto' }}
                   alt="Thankyou - eSpark Talent"
                 />
               </Link>
@@ -74,74 +33,26 @@ const HireHeroSection = ({ data }) => {
             <Typography
               variant="h1"
               color="#001C63"
-              sx={{
-                fontSize: {
-                  xs: '25px',
-                  sm: '25px',
-                  md: '50px',
-                  lg: '87px',
-                  xl: '87px',
-                },
-                fontWeight: 700,
-                lineHeight: '1.4',
-                textAlign: 'center',
-              }}
+              sx={titleTypographyStyle}
               dangerouslySetInnerHTML={{ __html: data?.title }}
             />
 
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: {
-                  xs: '13px',
-                  sm: '15px',
-                  md: '16px',
-                  lg: '19px',
-                  xl: '19px',
-                },
-                color: '#6A6A6A',
-                fontWeight: '500',
-                textAlign: 'center',
-              }}
-            >
+            <Typography variant="body1" sx={descriptionTypographyStyle}>
               {data?.descrcipton}
             </Typography>
             <Box justifyContent={'center'} textAlign="center" py={3}>
               <Link href={data?.btnLink}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    width: '210px',
-                    height: '60px',
-                    borderRadius: '50px',
-                    backgroundColor: '#029894',
-                    color: '#fff',
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    '&:hover': {
-                      backgroundColor: 'rgba(0, 28, 99, 1)',
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: '20px',
-                      fontWeight: 500,
-                      lineHeight: '30px',
-                      textAlign: 'center',
-                    }}
-                  >
-                    {data?.btnText}
-                  </Typography>
+                <Button variant="contained" sx={buttonStyle}>
+                  <Typography sx={btnTextStyle}>{data?.btnText}</Typography>
                 </Button>
               </Link>
             </Box>
             <Box justifyContent={'center'} textAlign="center" pt={3}>
-              <Image
+              <Box
+                component={'img'}
                 src={data?.image}
                 alt={'Hire A Developer Cover Art'}
-                height={435}
-                width={435}
+                sx={{ width: 'auto', height: 'auto' }}
               />
             </Box>
           </Box>

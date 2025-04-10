@@ -7,13 +7,8 @@ import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
-
-const extendClients = (clients, length) => {
-  const extendedClients = Array.from({ length }, (_, index) => ({
-    ...clients[index % clients.length],
-  }));
-  return extendedClients;
-};
+import { extendClients, getImagePath } from '@/utils';
+import { CLIENTS_SLIDER_STYLES } from '@/constants/homepage';
 
 const ClientSlider = ({
   bgColor,
@@ -29,63 +24,50 @@ const ClientSlider = ({
   pb,
   variant,
 }) => {
+  const { clients } = data || {};
+  const {
+    mainBoxStyle = {},
+    containerStyle = {},
+    shortTitleStyle = {},
+    completeTitleStyle = {},
+    swiperSlideStyle = {},
+    imageBoxStyle = {},
+    imageStyle = {},
+  } = CLIENTS_SLIDER_STYLES || {};
   const extendedData = {
-    clients: extendClients(data.clients, length),
+    clients: extendClients(clients, length),
   };
 
-  const getImagePath = (originalImagePath) => {
-    if (bgColor == '#029894' || !bgColor) {
-      return originalImagePath.replace('_dark', '_light');
-    } else {
-      return originalImagePath.replace('_light', '_dark');
-    }
-  };
+  const renderSlide = (item, index) => (
+    <SwiperSlide key={index} style={swiperSlideStyle}>
+      <Box sx={imageBoxStyle(pb)}>
+        {
+          <Box
+            component={'img'}
+            src={getImagePath(item?.image, bgColor)}
+            alt={item?.image}
+            height={'37px'}
+            sx={imageStyle}
+          />
+        }
+      </Box>
+    </SwiperSlide>
+  );
 
   return (
-    <Box
-      sx={{
-        backgroundColor: bgColor,
-        PY: '2.5%',
-        width: '100%',
-        boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
-      }}
-    >
-      <Container
-        sx={{ pb: pb || '10px', display: 'flex', justifyContent: 'center' }}
-      >
+    <Box sx={mainBoxStyle(bgColor)}>
+      <Container sx={containerStyle(pb)}>
         <Typography
           variant={variant || 'h2'}
           color={txtColor}
-          sx={{
-            fontWeight: fontWeight,
-            py: { xs: '16px', sm: '18px', md: '30px' },
-            pt: { xs: '17px', sm: '20px', md: '50px' },
-            fontSize: fontSize,
-            lineHeight: lineHeight,
-            textAlign: 'center',
-            display: 'none',
-            '@media (max-width:769px)': {
-              display: 'flex',
-            },
-          }}
+          sx={shortTitleStyle(fontWeight, fontSize, lineHeight)}
         >
           {shortTitle}
         </Typography>
         <Typography
           variant={variant || 'h2'}
           color={txtColor}
-          sx={{
-            textAlign: 'center',
-            fontWeight: fontWeight,
-            py: { xs: '16px', sm: '18px', md: '30px' },
-            pt: { xs: '17px', sm: '20px', md: '50px' },
-            fontSize: fontSize,
-            lineHeight: lineHeight,
-            display: 'none',
-            '@media (min-width:770px)': {
-              display: 'flex',
-            },
-          }}
+          sx={completeTitleStyle(fontWeight, fontSize, lineHeight)}
         >
           {compeleteTitle}
         </Typography>
@@ -106,51 +88,7 @@ const ClientSlider = ({
         className="mySwiper"
         breakpoints={breakPoints}
       >
-        {extendedData.clients.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Box sx={{ pb: pb || 5 }}>
-              {
-                <Box
-                  component={'img'}
-                  src={getImagePath(item.image)}
-                  alt={item.image}
-                  height={'37px'}
-                  sx={{
-                    width: {
-                      sm: '130px',
-                      md: '154px',
-                      lg: '175px',
-                    },
-                    height: {
-                      sm: '35px',
-                      md: '35px',
-                      lg: '37px',
-                    },
-                    '@media (min-width: 550px) and (max-width: 767px)': {
-                      width: '160px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 375px) and (max-width: 549px)': {
-                      width: '110px',
-                      height: '25px',
-                    },
-                    '@media (min-width: 280px) and (max-width: 374px)': {
-                      width: '110px',
-                      height: '25px',
-                    },
-                  }}
-                />
-              }
-            </Box>
-          </SwiperSlide>
-        ))}
+        {extendedData?.clients?.map(renderSlide)}
       </Swiper>
     </Box>
   );
