@@ -1,26 +1,31 @@
 import { Box } from '@mui/material';
-import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
-import ClientSays from '../homepage/ClientSays';
-import Perks from '../homepage/Perks';
-import CustomizedSolution from '../hire-developer/CustomizedSolution';
-import FormSection from '../hire-developer/FormSection';
-import LetsConnect from '../hire-developer/LetsConnect';
-import PricingWorks from '../pricing/PricingWorks';
-import DemoLeverageTalent from './DemoLeverageTalent';
-import { TeamBanner } from './TeamBanner';
+import {
+  DEVELOEPRS_PERKS_DATA,
+  OUR_CLIENT_SAYS,
+} from '@/constants/new-home/homepage';
+import ClientSays from '@/components/homepage/ClientSays';
+import Perks from '@/components/homepage/Perks';
+import CustomizedSolution from '@/components/hire-developer/CustomizedSolution';
+import FormSection from '@/components/hire-developer/FormSection';
+import LetsConnect from '@/components/hire-developer/LetsConnect';
+import PricingWorks from '@/components/pricing/PricingWorks';
+import DemoLeverageTalent from '@/components/book-a-demo-meeting/DemoLeverageTalent';
+import {
+  teamBannerBoxStyles,
+  letsConnectBoxStyles,
+  pricingWorksContainerStyle,
+  priicingWorksBoxStyle,
+  clientSaysStyle,
+  formBoxStyle,
+} from '@/components/book-a-demo-meeting/DemoMeetingPageStyles';
+import { TeamBanner } from '@/components/book-a-demo-meeting/TeamBanner';
 
 const DemoMeetingPage = ({ data }) => {
   const { styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
     <>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-        }}
-      >
+      <Box sx={teamBannerBoxStyles}>
         <TeamBanner data={data?.teamBanner} />
         <Perks
           data={data?.seamlessHiringProcess}
@@ -30,39 +35,17 @@ const DemoMeetingPage = ({ data }) => {
           title={`Here is how our seamless <span style="color:#029894;font-weight:600;" >hiring process</span> unfolds`}
         />
         <CustomizedSolution data={data?.customizedSolution} />
-        <Box sx={{ mt: { xs: -2, md: -2.5, lg: -3.5 } }}>
+        <Box sx={letsConnectBoxStyles}>
           <LetsConnect data={data?.letsConnect} />
         </Box>
         <DemoLeverageTalent data={data?.leverageTalent} />
       </Box>
-      <Box sx={{ position: 'relative' }}>
-        <Box
-          component={'img'}
-          src={data?.bgImage}
-          sx={{
-            width: '100%',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            display: 'none',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 1,
-            '@media(min-width: 1300px)': {
-              display: 'flex',
-            },
-          }}
-        />
+      <Box sx={pricingWorksContainerStyle}>
+        <Box component={'img'} src={data?.bgImage} sx={priicingWorksBoxStyle} />
         <PricingWorks data={data?.howItWorks} />
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-            pb: { xs: 5, sm: 6, md: 7, lg: 10 },
-          }}
-        >
+        <Box sx={clientSaysStyle}>
           <ClientSays data={OUR_CLIENT_SAYS} />
-          <Box sx={{ position: 'relative', zIndex: 3 }}>
+          <Box sx={formBoxStyle}>
             <FormSection data={data?.formSection} />
           </Box>
         </Box>

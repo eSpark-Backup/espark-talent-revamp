@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
-import { frontendContentBoxStyle } from '@/constants/hire-developer/hire-developer';
+import { frontendContentBoxStyle } from '@/components/hire-developer/HireDeveloperStyle';
+import {
+  imageStyles,
+  containerStyle,
+} from '@/components/hire-developer/HostsStyles';
 
 const Hosts = ({ data }) => {
   const {
@@ -26,7 +30,7 @@ const Hosts = ({ data }) => {
   return (
     <>
       {data ? (
-        <Box sx={{ py: 0 }}>
+        <Box sx={containerStyle}>
           <Box sx={mainBoxStyle}>
             {leftImage && (
               <Box
@@ -39,10 +43,7 @@ const Hosts = ({ data }) => {
               <Box sx={imageBoxStyle}>
                 <Box
                   component={'img'}
-                  sx={{
-                    width: 'auto',
-                    height: 'auto',
-                  }}
+                  sx={imageStyles}
                   src={`${image || ''}`}
                 />
               </Box>

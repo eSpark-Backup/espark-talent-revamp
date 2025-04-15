@@ -14,6 +14,11 @@ import 'swiper/css/navigation';
 import { Pagination } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
 import { openForm } from '@/utils';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
+import {
+  expertTeamemStyle,
+  buttonBoxStyle,
+} from '@/components/new-home/HomePageExpertTeamtyles';
 
 const HomePageExpertTeam = ({ data, handleOpen }) => {
   const [loading, setLoading] = useState(true);
@@ -77,7 +82,7 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
     <Box sx={mainLayoutStyle}>
       <Box sx={headerBoxStyle}>
         <Typography sx={titleTypographyStyle}>{data?.title || ''}</Typography>
-        <Box sx={{ width: 'auto', mt: { xs: 2.5 } }}>
+        <Box sx={buttonBoxStyle}>
           <Button
             onClick={() =>
               openForm(data?.btnLink || '', '_blank', pathName, handleOpen)
@@ -89,19 +94,9 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
           </Button>
         </Box>
       </Box>
-      <Box
-        sx={{ mt: { xs: 3, sm: 4, md: 6 }, mx: { xs: 3, md: 2 } }}
-        id="expert-team"
-      >
+      <Box sx={expertTeamemStyle} id="expert-team">
         {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
-            }}
-          >
+          <Box sx={circularProgressStyle}>
             <CircularProgress />
           </Box>
         ) : (

@@ -1,7 +1,8 @@
 'use client';
 
-import { hireRemoteimageStyle } from '@/constants/hire-developer/hire-developer';
+import { hireRemoteimageStyle } from '@/components/hire-developer/HireDeveloperStyle';
 import { Box, Button, Typography } from '@mui/material';
+import { imageStyles } from './HireRemoteBannerStyles';
 
 const HireRemoteBanner = ({ data, handleOpen, styles }) => {
   const {
@@ -48,7 +49,7 @@ const HireRemoteBanner = ({ data, handleOpen, styles }) => {
                       key={index}
                       component={'img'}
                       src={img}
-                      sx={{ ...hireRemoteimageStyle(index) }}
+                      sx={hireRemoteimageStyle(index)}
                       alt="img"
                     />
                   ))}
@@ -59,7 +60,7 @@ const HireRemoteBanner = ({ data, handleOpen, styles }) => {
             <Box
               component={'img'}
               src={data?.bannerImage || ''}
-              sx={{ width: '100%', height: 'auto' }}
+              sx={imageStyles}
             />
           </Box>
         </Box>

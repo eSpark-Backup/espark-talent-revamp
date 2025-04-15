@@ -11,12 +11,13 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import ParagraphTitle from '../homepage/ParagraphTitle';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { checkingExpendedAccordion, handleChangeAccordion } from '@/utils';
+import { noDataStyles } from './HomePageExpertiesStyles';
 
 const HomePageExperties = ({ data }) => {
   const pathName = usePathname();
@@ -93,17 +94,7 @@ const HomePageExperties = ({ data }) => {
     <Container sx={containerStyle}>
       <ParagraphTitle title={title} />
       {!data || !services || !Array?.isArray(services) ? (
-        <Box
-          sx={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          No services data available.
-        </Box>
+        <Box sx={noDataStyles}>No services data available.</Box>
       ) : (
         <Grid container spacing={4}>
           {data?.services?.map(renderService)}

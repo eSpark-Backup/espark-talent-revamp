@@ -42,6 +42,15 @@ const RemoteLayout = ({
   useEffect(() => {
     const elementId = document?.getElementById('navbar');
 
+    /**
+     * Handles the scroll event to toggle the 'is-sticky' class on an element
+     * based on the vertical scroll position of the window.
+     *
+     * @function handleScroll
+     * @description Adds the 'is-sticky' class to the specified element if the
+     *              vertical scroll position exceeds 350 pixels, and removes it
+     *              otherwise.
+     */
     const handleScroll = () => {
       if (window?.scrollY > 350) {
         elementId?.classList?.add('is-sticky');

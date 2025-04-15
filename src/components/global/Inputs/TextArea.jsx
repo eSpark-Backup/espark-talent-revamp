@@ -6,6 +6,12 @@ import {
   Typography,
 } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
+import {
+  stackBoxStyle,
+  typographyStyle,
+  infoIconStyle,
+  tooltipBoxStyle,
+} from '@/components/global/inputs/TextAreaStyles';
 
 const TextArea = ({
   name,
@@ -17,37 +23,18 @@ const TextArea = ({
 }) => {
   return (
     <Stack>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <Box sx={stackBoxStyle}>
         <Typography
           mb={1}
           textAlign="left"
           color={'secondary'}
-          sx={{ fontSize: { xs: '14px', md: '18px' } }}
+          sx={typographyStyle}
         >
           {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
         </Typography>
-        <Box
-          sx={{
-            width: '20px',
-            height: '30px',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <Box sx={tooltipBoxStyle}>
           <Tooltip placement="top-start" title={tooltip}>
-            <InfoIcon
-              sx={{
-                color: (theme) => theme?.palette?.primary?.main,
-                marginLeft: '5px',
-                fontSize: '13px',
-                marginBottom: '12px',
-              }}
-            />
+            <InfoIcon sx={infoIconStyle} />
           </Tooltip>
         </Box>
       </Box>

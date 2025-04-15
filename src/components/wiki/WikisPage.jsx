@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { getWiki } from '@/sanity/sanity.quries';
 import Hero from '@/components/homepage/Hero';
-import WikiCards from './wikiCards';
+import WikiCards from '@/components/wiki/wikiCards';
 
 export default function WikisPage() {
   const [wiki, setWiki] = useState(null);

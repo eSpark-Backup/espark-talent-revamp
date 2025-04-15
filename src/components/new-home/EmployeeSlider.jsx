@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 import { duplicateSlides } from '@/utils';
 import Image from 'next/image';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const EmployeeSlider = ({ data }) => {
   const { slides, styles: styleData } = data || {};
@@ -37,14 +38,7 @@ const EmployeeSlider = ({ data }) => {
   return (
     <>
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (

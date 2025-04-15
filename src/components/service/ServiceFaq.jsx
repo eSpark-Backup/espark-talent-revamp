@@ -11,6 +11,16 @@ import {
   AccordionSummary,
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import {
+  accordionIconStyles,
+  accordionSummaryStyles,
+  accordionStyles,
+  headingStyles,
+  detailsStyles,
+  descriptionStyles,
+  titleStyles,
+  containerStyles,
+} from '@/components/service/OurServiceStyles';
 import { handleChange } from '@/utils';
 
 const ServiceFaq = ({ data, color }) => {
@@ -27,61 +37,22 @@ const ServiceFaq = ({ data, color }) => {
             key={index}
             expanded={expanded === panel}
             onChange={handleChange(panel, setExpanded)}
-            sx={{
-              mb: { xs: 1, md: 4 },
-              position: 'relative',
-              backgroundColor: color || '#F7F8FF',
-            }}
+            sx={accordionStyles(color)}
           >
             <AccordionSummary
-              sx={{
-                alignItems: 'flex-start',
-              }}
+              sx={accordionSummaryStyles}
               expandIcon={
-                <ArrowDropDownIcon
-                  sx={{
-                    color: 'black',
-                    fontSize: { xs: '1.5em', md: '2em' },
-                    mt: expanded === panel ? 0 : 0.5,
-                    mb: expanded === panel ? 1.5 : 0,
-                  }}
-                />
+                <ArrowDropDownIcon sx={accordionIconStyles(expanded, panel)} />
               }
               aria-controls={`${panel}-content`}
               id={`${panel}-header`}
             >
-              <Typography
-                variant="h4"
-                sx={{
-                  color: '#09114A  !important',
-                  fontSize: {
-                    lg: '21.94px',
-                    md: '20px',
-                    sm: '15px',
-                    xs: '10.85px',
-                  },
-                  fontWeight: expanded === panel ? 600 : 400,
-                  lineHeight: { xs: '12.86px', md: '26px' },
-                }}
-              >
+              <Typography variant="h4" sx={headingStyles(expanded, panel)}>
                 {item?.heading}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ mt: { xs: '-10px', md: '0px' } }}>
-              <Typography
-                sx={{
-                  color: '#09114A !important ',
-                  fontWeight: 400,
-                  fontSize: {
-                    lg: '18px',
-                    md: '15px',
-                    sm: '10px',
-                    xs: '10px',
-                  },
-                  lineHeight: { xs: '15px', md: '23.69px' },
-                  pr: '50px',
-                }}
-              >
+            <AccordionDetails sx={detailsStyles}>
+              <Typography sx={descriptionStyles}>
                 {item?.description}
               </Typography>
             </AccordionDetails>
@@ -91,20 +62,9 @@ const ServiceFaq = ({ data, color }) => {
   };
 
   return (
-    <Box sx={{ pt: { xs: '0%', md: '1%' }, pb: '5%' }} id="faq">
+    <Box sx={containerStyles} id="faq">
       <Container>
-        <Typography
-          sx={{
-            textAlign: 'center',
-            flexWrap: 'wrap',
-            fontSize: { xs: '20px', md: '32px ' },
-            fontWeight: 700,
-            color: '#001C63',
-            pb: { lg: 4, md: 2, sm: 4, xs: 3 },
-          }}
-        >
-          {data?.title}
-        </Typography>
+        <Typography sx={titleStyles}>{data?.title}</Typography>
         <Grid
           container
           spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }}

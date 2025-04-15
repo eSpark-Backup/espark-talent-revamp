@@ -17,8 +17,9 @@ import {
   workSlideStyle,
   worksMainHeadingTextStyle,
   worksSubHeadingtextStyle,
-} from '@/constants/pricing';
+} from '@/components/pricing/PricingCardStyles';
 import { usePathname } from 'next/navigation';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const PricingWorks = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -32,57 +33,59 @@ const PricingWorks = ({ data }) => {
       }, 500);
     }
   }, [data]);
+  const renderSlide = (card, index) => {
+    const cardImageStyle = {
+      width: '100%',
+      height: { md: 'calc(100% - 210px)', lg: 'calc(100% - 233px)' },
+    };
 
-  const renderSlide = (card, index) => (
-    <SwiperSlide key={card?.id || index} style={workSlideStyle}>
-      <Card
-        sx={{
-          ...worksCardStyle(pathName, book_a_demo_meeting),
-          ...worksCardBorderRadius(index),
-        }}
-      >
-        <Box
-          component={'img'}
-          src={card?.image}
+    const cardContentStyle = {
+      height: { md: '210px', lg: '233px' },
+      py: { xs: 1 },
+      px: 3,
+    };
+
+    const listItemStyle = {
+      display: 'flex',
+      gap: 0.7,
+      alignItems: 'center',
+      mb: 1,
+    };
+
+    const checkCircleIconStyle = {
+      fontSize: { xs: '12px', md: '20px' },
+      color: '#001C63',
+      mt: '1px',
+    };
+    const itemsStyles = { listStyle: 'none', p: 0 };
+    return (
+      <SwiperSlide key={card?.id || index} style={workSlideStyle}>
+        <Card
           sx={{
-            width: '100%',
-            height: { md: 'calc(100% - 210px)', lg: 'calc(100% - 233px)' },
+            ...worksCardStyle(pathName, book_a_demo_meeting),
+            ...worksCardBorderRadius(index),
           }}
-        />
-        <Box
-          sx={{ height: { md: '210px', lg: '233px' }, py: { xs: 1 }, px: 3 }}
         >
-          <Typography sx={listHeadingStyle}>{card?.heading}</Typography>
-          <Typography component={'ul'} sx={{ listStyle: 'none', p: 0 }}>
-            {card?.desktopListItem?.map((item, idx) => (
-              <Box
-                key={item?.id || idx}
-                sx={{
-                  display: 'flex',
-                  gap: 0.7,
-                  alignItems: 'center',
-                  mb: 1,
-                }}
-              >
-                <CheckCircleIcon
-                  fontSize="10px"
-                  sx={{
-                    fontSize: { xs: '12px', md: '20px' },
-                    color: '#001C63',
-                    mt: '1px',
-                  }}
-                />
-                <Typography component={'li'} sx={itemsStyle}>
-                  {item?.item}
-                </Typography>
-              </Box>
-            ))}
-          </Typography>
-        </Box>
-      </Card>
-    </SwiperSlide>
-  );
+          <Box component={'img'} src={card?.image} sx={cardImageStyle} />
+          <Box sx={cardContentStyle}>
+            <Typography sx={listHeadingStyle}>{card?.heading}</Typography>
+            <Typography component={'ul'} sx={itemsStyles}>
+              {card?.desktopListItem?.map((item, idx) => (
+                <Box key={item?.id || idx} sx={listItemStyle}>
+                  <CheckCircleIcon fontSize="10px" sx={checkCircleIconStyle} />
+                  <Typography component={'li'} sx={itemsStyle}>
+                    {item?.item}
+                  </Typography>
+                </Box>
+              ))}
+            </Typography>
+          </Box>
+        </Card>
+      </SwiperSlide>
+    );
+  };
 
+  const swipperStyle = { width: '100%', maxWidth: '910px', mx: 'auto' };
   return (
     <Box sx={worksContainerStyle}>
       <Box sx={headingContainerStyle}>
@@ -102,21 +105,11 @@ const PricingWorks = ({ data }) => {
         </Typography>
       </Box>
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (
-        <Box
-          sx={{ width: '100%', maxWidth: '910px', mx: 'auto' }}
-          id="pricing-work"
-        >
+        <Box sx={swipperStyle} id="pricing-work">
           <Swiper
             pagination={true}
             breakpoints={{

@@ -28,7 +28,8 @@ import {
   iconBoxStyle,
   itemTitleTypographyStyle,
   itemParagraphTypographyStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingWonderConstant';
+} from '@/components/for-enterprise/OutSourcingWonderStyles';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const OutSourcingWonder = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -101,14 +102,7 @@ const OutSourcingWonder = ({ data }) => {
             </Typography>
           </Box>
           {isLoading ? (
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '200px',
-              }}
-            >
+            <Box sx={circularProgressStyle}>
               <CircularProgress />
             </Box>
           ) : (

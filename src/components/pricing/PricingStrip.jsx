@@ -1,5 +1,5 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
-import { pricingStripe } from '@/constants/pricing';
+import { pricingStripe } from '@/components/pricing/PricingCardStyles';
 
 const PricingStrip = ({ key, feature, index }) => {
   const {

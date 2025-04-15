@@ -11,8 +11,14 @@ import {
   AccordionSummary,
   useMediaQuery,
 } from '@mui/material';
-
-import ParagraphTitle from '../homepage/ParagraphTitle';
+import {
+  accordionStyle,
+  accordionSummaryIconStyle,
+  accordionHeadingStyle,
+  accordionDetailsStyle,
+  boxContainerStyle,
+} from '@/components/FAQ/EnterpriseFaqStyles';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import Image from 'next/image';
 
 const EnterpriseFaq = ({ data }) => {
@@ -31,7 +37,7 @@ const EnterpriseFaq = ({ data }) => {
   const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
 
   return (
-    <Box sx={{ py: '1%' }} id="faq">
+    <Box sx={boxContainerStyle} id="faq">
       <Container>
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 2, md: 2, sm: 0, xs: 0 }}>
@@ -43,7 +49,7 @@ const EnterpriseFaq = ({ data }) => {
                   key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
-                  sx={{ mb: 2 }}
+                  sx={accordionStyle}
                 >
                   <AccordionSummary
                     expandIcon={
@@ -78,27 +84,14 @@ const EnterpriseFaq = ({ data }) => {
                     <>
                       <Typography
                         variant="h4"
-                        sx={{
-                          color: '#09114A  !important',
-                          fontSize: '14px',
-                          fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                          fontWeight: expanded === panel ? 600 : 400,
-                        }}
+                        sx={accordionHeadingStyle(expanded, panel)}
                       >
                         {item?.heading}
                       </Typography>
                     </>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography
-                      sx={{
-                        color: '#09114A !important ',
-                        textAlign: 'justify',
-                        fontWeight: 400,
-                        fontSize: '12px',
-                        lineHeight: '23.69px',
-                      }}
-                    >
+                    <Typography sx={accordionDetailsStyle}>
                       {item?.description}
                     </Typography>
                   </AccordionDetails>
@@ -114,7 +107,7 @@ const EnterpriseFaq = ({ data }) => {
                   key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
-                  sx={{ mb: 2 }}
+                  sx={accordionStyle}
                 >
                   <AccordionSummary
                     expandIcon={
@@ -122,24 +115,7 @@ const EnterpriseFaq = ({ data }) => {
                         quality="85"
                         priority={true}
                         src={'/images/homepage/faq-sections/open.svg'}
-                        width={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 20
-                                : 20
-                        }
-                        height={
-                          isSmallScreen
-                            ? 15
-                            : isMediumScreen
-                              ? 20
-                              : isLargeScreen
-                                ? 20
-                                : 20
-                        }
+                        {...accordionSummaryIconStyle}
                         alt="icon"
                       />
                     }
@@ -147,28 +123,13 @@ const EnterpriseFaq = ({ data }) => {
                     id={`${panel}-header`}
                   >
                     <>
-                      <Typography
-                        sx={{
-                          color: '#09114A  !important',
-                          fontSize: '14px',
-                          fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                          fontWeight: expanded === panel ? 600 : 400,
-                        }}
-                      >
+                      <Typography sx={accordionHeadingStyle(expanded, panel)}>
                         {item?.heading}
                       </Typography>
                     </>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography
-                      sx={{
-                        color: '#09114A !important ',
-                        textAlign: 'justify',
-                        fontWeight: 400,
-                        fontSize: '12px',
-                        lineHeight: '23.69px',
-                      }}
-                    >
+                    <Typography sx={accordionDetailsStyle}>
                       {item?.description}
                     </Typography>
                   </AccordionDetails>

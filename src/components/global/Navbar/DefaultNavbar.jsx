@@ -7,11 +7,12 @@ import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
 import DropItems from './DropItems';
 import HireLinks from '@/components/homepage/HireLinks';
-import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
+import { HIRE_A_TALENT_MENU } from '@/constants/new-home/homepage';
 import GlobalLayout from './GlobalLayout';
 import RemoteLayout from './RemoteLayout';
 import { NAVBAR_STYLE } from '@/constants/global/header';
 import NavbarItems from './NavbarItems';
+import { growInnerBoxStyle } from './DefaultNavbarStyles';
 
 function DefaultNavbar({
   routes,
@@ -84,6 +85,13 @@ function DefaultNavbar({
     setMobileMenu(null);
   };
 
+  /**
+   * Toggles the dropdown menu by setting the current target element,
+   * dropdown element, and dropdown name.
+   *
+   * @param {EventTarget} currentTarget - The current target element triggering the dropdown.
+   * @param {string} name - The name of the dropdown to be toggled.
+   */
   const toggleDropdown = (currentTarget, name) => {
     setDropdown(currentTarget);
     setDropdownEl(currentTarget);
@@ -126,7 +134,7 @@ function DefaultNavbar({
       {({ TransitionProps }) =>
         dropdown && (
           <Grow {...TransitionProps} sx={growStyle(dropdownName)}>
-            <Box borderRadius="lg" sx={{ width: 'auto', boxShadow: 3 }}>
+            <Box borderRadius="lg" sx={growInnerBoxStyle}>
               <Box borderRadius="lg" sx={growBoxStyle(dropdownName)}>
                 {dropdownName === 'Hire A Talent' ? (
                   <HireLinks

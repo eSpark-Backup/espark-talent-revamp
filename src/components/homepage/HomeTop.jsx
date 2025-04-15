@@ -1,7 +1,7 @@
 import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import {
   cardStyleForHomePage,
   DIFFERENCE_DATA,
@@ -10,15 +10,16 @@ import {
   EXPERTIES_DATA,
   HIRING_DATA,
   OFFSHORE_DATA,
-} from '@/constants/new-home';
-import ClientSlider from '../global/ClientSlider';
-import HomePageExperties from '../new-home/HomePageExperties';
-import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
-import EmployeeBanner from '../employment/EmployeeBanner';
+} from '@/constants/new-home/new-home';
+import ClientSlider from '@/components/global/ClientSlider';
+import HomePageExperties from '@/components/new-home/HomePageExperties';
+import HomePageExpertTeam from '@/components/new-home/HomePageExpertTeam';
+import HomeOffshoreWorks from '@/components/new-home/HomeOffshoreWorks';
+import EmployeeBanner from '@/components/employment/EmployeeBanner';
 import { Box } from '@mui/material';
-import HomePageHiringModel from '../new-home/HomePageHiringModel';
-import PricingDefference from '../pricing/PricingDefference';
+import HomePageHiringModel from '@/components/new-home/HomePageHiringModel';
+import PricingDefference from '@/components/pricing/PricingDefference';
+import { clientSliderBoxStyle } from './HomeTopStyles';
 
 const HomeTop = () => {
   return (
@@ -39,7 +40,7 @@ const HomeTop = () => {
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <HomePageHiringModel data={HIRING_DATA} />
-      <Box sx={{ pt: { xs: 4, md: 4.5 }, pb: 2 }}>
+      <Box sx={clientSliderBoxStyle}>
         <ClientSlider
           data={CLIENTS_SLIDER_DATA}
           breakPoints={CLIENT_SLIDER_BREAK_POINTS}

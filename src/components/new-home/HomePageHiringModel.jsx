@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { EffectCards, Pagination } from 'swiper/modules';
 import { open } from '@/utils';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const HomePageHiringModel = ({ data }) => {
   const { title, btnTitle, btnLink, items, styles } = data || {};
@@ -36,36 +37,30 @@ const HomePageHiringModel = ({ data }) => {
     }
   }, [data]);
 
+  const titleStyles = {
+    position: 'relative',
+    fontSize: {
+      xs: '21px',
+      sm: '28px',
+      md: '25px',
+      lg: '32px',
+    },
+    fontWeight: 700,
+    color: '#fff',
+    '@media (max-width:359px)': { fontSize: '18px' },
+  };
+  const imageStyle = {
+    width: { xs: '45px', sm: '55px', md: 'auto' },
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+  };
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Box key={index} sx={cardStyle}>
         <Box sx={cardHeaderStyle}>
-          <Typography
-            sx={{
-              position: 'relative',
-              fontSize: {
-                xs: '21px',
-                sm: '28px',
-                md: '25px',
-                lg: '32px',
-              },
-              fontWeight: 700,
-              color: '#fff',
-              '@media (max-width:359px)': { fontSize: '18px' },
-            }}
-          >
-            {eachItem?.title || ''}
-          </Typography>
-          <Box
-            component={'img'}
-            src={eachItem?.image || ''}
-            sx={{
-              width: { xs: '45px', sm: '55px', md: 'auto' },
-              position: 'absolute',
-              right: 0,
-              bottom: 0,
-            }}
-          />
+          <Typography sx={titleStyles}>{eachItem?.title || ''}</Typography>
+          <Box component={'img'} src={eachItem?.image || ''} sx={imageStyle} />
         </Box>
         <Box sx={cardBodyStyle}>
           <Typography component={'ul'} sx={ulStyle}>
@@ -96,14 +91,7 @@ const HomePageHiringModel = ({ data }) => {
           </Box>
         )}
         {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
-            }}
-          >
+          <Box sx={circularProgressStyle}>
             <CircularProgress />
           </Box>
         ) : (

@@ -3,7 +3,7 @@ import Partnership from '@/components/partnership/Partnership';
 import { getMetadata } from '@/components/global/seo';
 
 import { PARTNERSHIP_HERO_DATA } from '@/constants/global/hero-sections';
-import { PARTNERSHIP } from '@/constants/partnership';
+import { PARTNERSHIP } from '@/constants/partnership/partnership';
 
 import { getFilteredData } from '@/utils/cors';
 

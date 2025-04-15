@@ -14,7 +14,7 @@ import {
   itemParagraphTypographyStyle,
   buttonContainerStyle,
   buttonStyle,
-} from '@/constants/solutions/for-enterprise/OutStaffingsConstant';
+} from '@/components/for-enterprise/OutStaffingsStyles';
 
 const OutStaffings = ({ data }) => {
   if (!data) {

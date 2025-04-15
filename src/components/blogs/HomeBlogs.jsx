@@ -1,22 +1,16 @@
 'use client';
 
 import { Box, Container } from '@mui/material';
-import ESparkButton from '../global/eSparkButton';
-import ParagraphTitle from '../homepage/ParagraphTitle';
-import SSRBlogs from './SSRBlogs';
+import ESparkButton from '@/components/global/eSparkButton';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import SSRBlogs from '@/components/blogs/SSRBlogs';
+import { homeBlogsBoxStyle } from '@/components/blogs/HomeBlogsStyles';
 
 const HomeBlogs = () => {
   return (
     <>
       <Container>
-        <Box
-          sx={{
-            py: '3%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
+        <Box sx={homeBlogsBoxStyle}>
           <ParagraphTitle
             title={'eSpark Talent Knowledge Junction'}
             paragraph={`Dive into our blogs and gain insights about every modern trend!`}

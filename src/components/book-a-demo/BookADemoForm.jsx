@@ -11,9 +11,13 @@ import {
   Book_A_Demo_Keys,
   bookADemoFormStyles,
   formBoxStyles,
-} from '@/constants/book-a-demo';
-import BasicModal from './BookADemoModal';
-import ErrorMessage from './ErrorMessage';
+} from '@/constants/book-a-demo/book-a-demo';
+import BasicModal from '@/components/book-a-demo/BookADemoModal';
+import ErrorMessage from '@/components/book-a-demo/ErrorMessage';
+import {
+  feildStyles,
+  titleBoxStyle,
+} from '@/components/book-a-demo/BookADemoFormStyles';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;
@@ -95,19 +99,18 @@ const BookADemoForm = ({ form, handleModalClose }) => {
         }
       },
     });
-
   return (
     <>
       <Box sx={mainContainer}>
         <Box sx={formBoxStyles(pathName, book_A_meeting, remote)}>
-          <Box sx={{ mb: { xs: 3, md: 3 }, textAlign: 'center' }}>
+          <Box sx={titleBoxStyle}>
             <Typography sx={titleStyle}>{title}</Typography>
             <Typography sx={subTitleStyle}>{subTitle}</Typography>
           </Box>
           <Box component={'form'}>
             {fields &&
               fields?.map((item, index) => (
-                <Box sx={{ width: '100%', mb: 1.2 }} key={index}>
+                <Box sx={feildStyles} key={index}>
                   <Typography sx={lableStyle}>{item?.label}</Typography>
                   {item?.label == 'Phone Number*' ? (
                     <PhoneInput

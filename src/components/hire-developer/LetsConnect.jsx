@@ -1,5 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
+import { linkBoxStyle } from './LetsConnectStyle';
 
 const LetsConnect = ({ data }) => {
   const { title, descrcipton, btnLink, btnText, styles } = data || {};
@@ -35,7 +36,7 @@ const LetsConnect = ({ data }) => {
               <Box
                 justifyContent={'center'}
                 textAlign="center"
-                sx={{ py: { lg: 3, xs: 1 } }}
+                sx={linkBoxStyle}
               >
                 <Link href={btnLink}>
                   <Button variant="contained" sx={btnStyle}>

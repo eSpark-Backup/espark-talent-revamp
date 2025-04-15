@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { Box, Container, Typography } from '@mui/material'; // Ensuring Box is imported correctly
-import ServiceProcessMobile from './ServiceProcessMobile';
-import ServiceProcess from './ServiceProcess';
+import ServiceProcessMobile from '@/components/service/ServiceProcessMobile';
+import ServiceProcess from '@/components/service/ServiceProcess';
 
 const ServiceWhyHire = ({ data }) => {
   const { styles } = data || {};
@@ -22,6 +22,17 @@ const ServiceWhyHire = ({ data }) => {
 
   const isDesktop = windowWidth > 1023;
 
+  /**
+   * Renders a title using the Typography component.
+   *
+   * @function renderTitle
+   * @returns {JSX.Element} A Typography component with the title content.
+   *
+   * @description
+   * This function returns a Typography component styled with the `titleStyle` object.
+   * The content of the title is dynamically set using the `data?.title` property,
+   * and it is rendered as HTML using the `dangerouslySetInnerHTML` attribute.
+   */
   const renderTitle = () => (
     <Typography
       variant="h4"
@@ -33,6 +44,12 @@ const ServiceWhyHire = ({ data }) => {
     />
   );
 
+  /**
+   * Renders a subtitle using the Typography component.
+   *
+   * @function renderSubtitle
+   * @returns {JSX.Element} A Typography component displaying the subtitle text.
+   */
   const renderSubtitle = () => (
     <Typography variant="body1" textAlign="center" sx={descriptionStyle}>
       {data?.subTitle}

@@ -27,6 +27,7 @@ import {
   slideStyle,
   titleStyle,
 } from '@/constants/what-we-do-page/professional-team';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const ProfessionalTeamCard = ({ teamData }) => {
   const prevRef = useRef(null);
@@ -77,14 +78,7 @@ const ProfessionalTeamCard = ({ teamData }) => {
       </Box>
 
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (

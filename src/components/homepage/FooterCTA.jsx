@@ -9,7 +9,7 @@ import {
   FOOTER_CTA_DATA,
   HIDDEN_PATHS,
 } from '@/constants/home-page/footer-cta-section';
-import { PRICING_DATA } from '@/constants/pricing';
+import { PRICING_DATA } from '@/constants/pricing/pricing';
 
 const FooterCTA = () => {
   const pathName = usePathname();
@@ -45,6 +45,12 @@ const FooterCTA = () => {
     titleStyle,
   } = styles;
 
+  /**
+   * Handles the button click event by opening the specified link in a new tab.
+   *
+   * @function handleButtonClick
+   * @returns {void}
+   */
   const handleButtonClick = () => open(buttonLink, '_blank');
 
   return (

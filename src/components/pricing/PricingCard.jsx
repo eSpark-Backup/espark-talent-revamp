@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Container, Divider, Typography } from '@mui/material';
-import BlueCard from './BlueCard';
+import BlueCard from '@/components/pricing/BlueCard';
 import {
   blueCardContainerStyle,
   bothHeadingsStyle,
@@ -12,7 +12,7 @@ import {
   pricingCardHeaderContainer,
   subHeadingStyle,
   typographyBox,
-} from '@/constants/pricing';
+} from '@/components/pricing/PricingCardStyles';
 
 const PricingCard = ({ data, handleOpen }) => {
   return (

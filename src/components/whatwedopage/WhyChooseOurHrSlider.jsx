@@ -25,6 +25,7 @@ import {
   slideStyle,
   titleStyle,
 } from '@/constants/what-we-do-page/why-choose-hr';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const WhyChooseOurHrSlider = ({ data }) => {
   const prevRef = useRef(null);
@@ -65,18 +66,10 @@ const WhyChooseOurHrSlider = ({ data }) => {
       </Card>
     </SwiperSlide>
   );
-
   return (
     <Box sx={containerStyle}>
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (

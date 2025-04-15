@@ -1,19 +1,8 @@
 import { Typography } from '@mui/material';
+import { errorMessageStyles } from '@/components/book-a-demo/ErrorMessageStyles';
 
 const ErrorMessage = ({ message }) => {
-  return (
-    <Typography
-      sx={{
-        color: 'red',
-        fontSize: '11px !important',
-        fontStyle: 'normal',
-        fontWeight: 400,
-        mt: 0.5,
-      }}
-    >
-      {message}
-    </Typography>
-  );
+  return <Typography sx={errorMessageStyles}>{message}</Typography>;
 };
 
 export default ErrorMessage;

@@ -2,11 +2,15 @@
 
 import React from 'react';
 
-const HireDeveloper = React?.lazy(() => import('./HireDeveloper'));
-const ServiceSinglePage = React?.lazy(
-  () => import('../service/ServiceSinglePage')
+const HireDeveloper = React?.lazy(
+  () => import('@/components/hire-developer/HireDeveloper')
 );
-const HireRemote = React?.lazy(() => import('../Hire-remote/HireRemote'));
+const ServiceSinglePage = React?.lazy(
+  () => import('@/components/service/ServiceSinglePage')
+);
+const HireRemote = React?.lazy(
+  () => import('@/components/hire-remote/HireRemote')
+);
 
 const Hire = ({ data, slug }) => {
   if (

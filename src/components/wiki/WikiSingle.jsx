@@ -1,18 +1,18 @@
 import dynamic from 'next/dynamic';
 import { Box, Grid, Container } from '@mui/material';
+import { boxContainerStyle } from '@/components/wiki/WikiSingleStyles';
 
 const WikiSingle = ({ data }) => {
-  const WikiSingleRigth = dynamic(() => import('./WikiSingleRigth'));
-  const WikiSingleLeft = dynamic(() => import('./WikiSingleLeft'));
+  const WikiSingleRigth = dynamic(
+    () => import('@/components/wiki/WikiSingleRigth')
+  );
+  const WikiSingleLeft = dynamic(
+    () => import('@/components/wiki/WikiSingleLeft')
+  );
 
   return (
     <>
-      <Box
-        sx={{
-          my: { sm: '1%', lg: 0 },
-          py: { xs: '8%', sm: '8%', md: '5%', lg: '3%' },
-        }}
-      >
+      <Box sx={boxContainerStyle}>
         <Container>
           <Grid container spacing={4}>
             <Grid item lg={8.2} md={8.5} xs={12} sm={12}>

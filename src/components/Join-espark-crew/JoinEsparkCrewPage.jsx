@@ -10,7 +10,14 @@ import {
   KEYS,
   ABOUT,
   JOINT_ESPARK_CREW_HEADING_DATA,
-} from '@/constants/join-espark-crew';
+} from '@/constants/join-espark-crew/join-espark-crew';
+import {
+  textStyles,
+  FlexBox,
+  FlexBox2,
+  aboutstackBoxStyles,
+  kepointsStackBoxStyles,
+} from '@/components/Join-espark-crew/JoinEsparkCrewPageStyles';
 import {
   handleChangeJoinCrew,
   handleEmptyJoinCrew,
@@ -19,14 +26,20 @@ import {
 
 // Dynamic imports
 const JoinEsparkRegistrationModal = dynamic(
-  () => import('./JoinEsparkRegistrationModal')
+  () => import('@/components/Join-espark-crew/JoinEsparkRegistrationModal')
 );
 const JoinEsparkSuccessModal = dynamic(
-  () => import('./JoinEsparkSuccessModal')
+  () => import('@/components/Join-espark-crew/JoinEsparkSuccessModal')
 );
-const AboutCrewCard = dynamic(() => import('./AboutCrewCard'));
-const KeyPointCrewCard = dynamic(() => import('./KeyPointCrewCard'));
-const BenefitCrewCard = dynamic(() => import('./BenefitCrewCard'));
+const AboutCrewCard = dynamic(
+  () => import('@/components/Join-espark-crew/AboutCrewCard')
+);
+const KeyPointCrewCard = dynamic(
+  () => import('@/components/Join-espark-crew/KeyPointCrewCard')
+);
+const BenefitCrewCard = dynamic(
+  () => import('@/components/Join-espark-crew/BenefitCrewCard')
+);
 const JoinCrewCTA = dynamic(
   () => import('@/components/Join-espark-crew/JoinCrewCTA')
 );
@@ -70,23 +83,6 @@ export default function JoinEsparkCrewPage() {
     setRegistrationModal(true);
   };
 
-  const textStyles = {
-    fontSize: { md: '32px', xs: '20px' },
-    lineHeight: { lg: '48px', xs: '26px' },
-    fontWeight: 700,
-    textAlign: 'center',
-    mb: '30px',
-  };
-
-  const FlexBox = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    padding: '30px 50px 50px',
-  };
-
   return (
     <>
       <Hero
@@ -96,8 +92,8 @@ export default function JoinEsparkCrewPage() {
         }}
       />
       {/* About You */}
-      <Stack sx={{ ...FlexBox, backgroundColor: '#FAFBFC' }}>
-        <Box sx={{ width: { sm: '100%', md: '80%' } }}>
+      <Stack sx={FlexBox2}>
+        <Box sx={aboutstackBoxStyles}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {introSecHeading}
           </Typography>
@@ -117,8 +113,8 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Key Points */}
-      <Stack sx={{ ...FlexBox }}>
-        <Box sx={{ width: { sm: '100%', md: '80%', lg: '70%', xl: '50%' } }}>
+      <Stack sx={FlexBox}>
+        <Box sx={kepointsStackBoxStyles}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {keysPointSecHeading}
           </Typography>
@@ -139,8 +135,8 @@ export default function JoinEsparkCrewPage() {
         </Box>
       </Stack>
       {/* Benefits */}
-      <Stack sx={{ ...FlexBox, backgroundColor: '#FAFBFC' }}>
-        <Box sx={{ width: { sm: '100%', md: '80%' } }}>
+      <Stack sx={FlexBox2}>
+        <Box sx={aboutstackBoxStyles}>
           <Typography variant="h3" sx={textStyles} color="secondary">
             {benefitsSecHeading}
           </Typography>

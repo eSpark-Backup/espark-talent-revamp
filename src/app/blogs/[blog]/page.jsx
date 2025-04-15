@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import NotFoundPage from '@/components/global/NotFound';
 
 import { Container, Box } from '@mui/material';
-import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { singleBlogBgStyle } from '@/components/blogs/singleBlogPageStyles';
+import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { fetchBlogMetadata } from '@/utils/cors';
 
 /**
@@ -46,12 +47,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
-        <Box
-          sx={{
-            background:
-              'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(191,249,253,1) 0%, rgba(255,255,255,1) 100%)',
-          }}
-        >
+        <Box sx={singleBlogBgStyle}>
           <Container>
             <SingleBlogHeader data={blog} authors={author} />
             <BlogDetailsContent data={blog} />

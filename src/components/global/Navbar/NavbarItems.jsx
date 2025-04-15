@@ -23,6 +23,14 @@ function NavbarItems({
   const router = useRouter();
   const { itemBoxStyle, typographyStyle, imageStyle } = navbarItemStyle || {};
 
+  /**
+   * Handles the click event for navigation.
+   * If a route is provided, it navigates to the specified route using the router.
+   * If no route is provided, no action is taken.
+   *
+   * @function handleClick
+   * @returns {void}
+   */
   const handleClick = () => {
     if (route) {
       router?.push(route);

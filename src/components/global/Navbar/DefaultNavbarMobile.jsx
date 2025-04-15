@@ -26,6 +26,14 @@ const DefaultNavbarMobile = ({ routes, open, mobileMenu, handleClose }) => {
     menuPaperPropStyle,
     collapseStyle,
   } = mobileNavbarStyle || {};
+
+  /**
+   * Toggles the collapse state for a given menu or section.
+   *
+   * @param {string} name - The name of the menu or section to toggle.
+   * If the current collapse state matches the provided name, it will be set to `false`.
+   * Otherwise, it will set the collapse state to the provided name.
+   */
   const handleSetCollapse = (name) =>
     collapse === name ? setCollapse(false) : setCollapse(name);
 

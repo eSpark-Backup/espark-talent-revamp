@@ -10,7 +10,7 @@ import {
   descriptionStyle,
   rightGridStyle,
   imageBoxStyle,
-} from '@/constants/solutions/for-business-startup/TalentIgniteConstant';
+} from '@/components/for-startup/TalentIgniteStyles';
 
 const TalentIgnite = ({ data, isBestOutsourceComponent }) => {
   const textAlignXs = isBestOutsourceComponent ? 'left' : 'center';

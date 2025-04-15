@@ -13,7 +13,7 @@ import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import {
   BEST_OUTSOURCING_SOLUTIONS,
   BUSINESS_START_UP,
@@ -21,7 +21,7 @@ import {
   OUR_ADDITIONAL_BENEFITS,
   OUR_OUTSOURCE,
   OUTSOURCING_SOLUTIONS_DATA,
-} from '@/constants/for-startup';
+} from '@/constants/for-startup/for-startup';
 
 import { getFilteredData } from '@/utils/cors';
 

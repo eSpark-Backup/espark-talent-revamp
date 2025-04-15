@@ -1,7 +1,7 @@
-import AwardAchievement from './AwardAchiefment';
-import { ACHIEVEMENTS_DATA } from '@/constants/homepage';
+import AwardAchievement from '@/components/homepage/AwardAchiefment';
+import { ACHIEVEMENTS_DATA } from '@/constants/new-home/homepage';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import ServiceFaq from '../service/ServiceFaq';
+import ServiceFaq from '@/components/service/ServiceFaq';
 
 const HomeBottom = () => {
   return (

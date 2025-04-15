@@ -12,14 +12,22 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const CARD_STYLE = {
-  borderRadius: '10px',
-  px: '30px',
-  py: '20px',
-  height: '100%',
-  background: '#fff',
-};
+import {
+  cardStyle,
+  gridBoxStyle,
+  gridStyle,
+  skeltonStyles,
+  skeltonStyle,
+  skeltonBoxStyle,
+  avgSalaryBoxStyle,
+  containerBoxStyle,
+  boxContainerStyle,
+  categoryButtonStyle,
+  filteredGridStyle,
+  cardBoxStyle,
+  avgSalaryNameStyles,
+  avgSalaryToFromStyles,
+} from '@/components/wiki/wikiCardsStyles';
 
 const WikiCards = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -39,6 +47,12 @@ const WikiCards = ({ data }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  /**
+   * Handles the selection of a category and updates the selected category state.
+   *
+   * @param {string|null} category - The selected category. If null or undefined, defaults to 'All'.
+   * @returns {void}
+   */
   const onSelectCategory = (category) => {
     setSelectedCategory(category ? category : 'All');
   };
@@ -48,25 +62,11 @@ const WikiCards = ({ data }) => {
       ? wikis
       : wikis?.filter((item) => item?.wikiCategory === selectedCategory);
   filteredData?.sort((a, b) => a?.id - b?.id);
+
   return (
     <>
-      <Box sx={{ backgroundColor: '#3b59980f' }}>
-        <Grid
-          container
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'end',
-            pt: '4%',
-            px: 1,
-            gap: {
-              xs: 1,
-              sm: 1,
-              md: 1.5,
-              lg: 2,
-            },
-          }}
-        >
+      <Box sx={gridBoxStyle}>
+        <Grid container sx={gridStyle}>
           {new_wikiCategories?.map((category, index) => (
             <>
               {!category || loading ? (
@@ -75,7 +75,7 @@ const WikiCards = ({ data }) => {
                   height={33}
                   key={index}
                   variant="rectangular"
-                  sx={{ borderRadius: '50px' }}
+                  sx={skeltonStyle}
                 />
               ) : (
                 <Button
@@ -86,20 +86,8 @@ const WikiCards = ({ data }) => {
                   }
                   color="primary"
                   sx={{
-                    border: 'none',
-                    borderRadius: '50px',
-                    fontWeight: 600,
-                    fontSize: {
-                      xs: '12px',
-                      sm: '13px',
-                      md: '15px',
-                      lg: '20px',
-                    },
-                    px: 2.2,
+                    ...categoryButtonStyle,
                     color: selectedCategory === category ? 'white' : '#001C63',
-                    '&:hover': {
-                      border: 'none',
-                    },
                   }}
                 >
                   {category}
@@ -108,14 +96,10 @@ const WikiCards = ({ data }) => {
             </>
           ))}
         </Grid>
-        <Box sx={{ px: { md: '3%', lg: '10%' } }}>
-          <Box sx={{ py: '3%' }}>
+        <Box sx={boxContainerStyle}>
+          <Box sx={containerBoxStyle}>
             <Container>
-              <Grid
-                container
-                sx={{ display: 'flex', justifyContent: 'left' }}
-                spacing={2}
-              >
+              <Grid container sx={filteredGridStyle} spacing={2}>
                 {filteredData?.map((item) => (
                   <Grid
                     key={item?.id}
@@ -126,15 +110,8 @@ const WikiCards = ({ data }) => {
                     xs={12}
                     gap="10px"
                   >
-                    <Box sx={CARD_STYLE}>
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          gap: '10px',
-                          alignItems: 'center',
-                          pb: '15px',
-                        }}
-                      >
+                    <Box sx={cardStyle}>
+                      <Box sx={cardBoxStyle}>
                         {!loading && item?.iconImage ? (
                           <Image
                             quality="85"
@@ -166,12 +143,12 @@ const WikiCards = ({ data }) => {
                         ) : (
                           <Skeleton
                             variant="text"
-                            sx={{ fontSize: '2rem' }}
+                            sx={skeltonStyles}
                             width={'100%'}
                           />
                         )}
                       </Box>
-                      <Box sx={{ pb: '15px' }}>
+                      <Box sx={avgSalaryBoxStyle}>
                         <Typography
                           variant="body1"
                           color="#667170"
@@ -186,10 +163,7 @@ const WikiCards = ({ data }) => {
                           {!loading && item?.avgSalary ? (
                             'Average Salary'
                           ) : (
-                            <Skeleton
-                              variant="text"
-                              sx={{ fontSize: '1rem' }}
-                            />
+                            <Skeleton variant="text" sx={skeltonBoxStyle} />
                           )}
                         </Typography>
                         <Typography
@@ -217,18 +191,13 @@ const WikiCards = ({ data }) => {
                                 >
                                   <Typography
                                     variant="h6"
-                                    style={{
-                                      width: '120px',
-                                      textTransform: 'capitalize',
-                                    }}
+                                    sx={avgSalaryNameStyles}
                                   >
                                     {avgSalary?.name}
                                   </Typography>
                                   <Typography
                                     variant="subtitle2"
-                                    style={{
-                                      textWrap: 'nowrap',
-                                    }}
+                                    sx={avgSalaryToFromStyles}
                                   >
                                     {`$${avgSalary?.salary?.from}
                                     -$${avgSalary?.salary?.to} per month`}

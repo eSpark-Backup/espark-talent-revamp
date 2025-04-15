@@ -11,8 +11,8 @@ import {
   containerStyle,
   paragraphStyle,
   slideStyle,
-  titleStyle,
-} from '@/constants/new-home';
+} from '@/constants/new-home/new-home';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
   const [loading, setLoading] = useState(true);
@@ -25,26 +25,24 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
     }
   }, [data]);
 
+  const titleBoxStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { xs: 0.5, sm: 1, lg: 0 },
+  };
+  const cardBoxStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    gap: 2,
+    p: 3,
+  };
   const renderSlide = (card, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Card sx={cardStyle}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: 2,
-            p: 3,
-          }}
-        >
+        <Box sx={cardBoxStyle}>
           <Box src={card?.icon} component={'img'} sx={avatarStyle} />
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: { xs: 0.5, sm: 1, lg: 0 },
-            }}
-          >
+          <Box sx={titleBoxStyle}>
             <Typography variant="h3" sx={titleStyle}>
               {card?.title || ''}
             </Typography>
@@ -55,6 +53,12 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
     </SwiperSlide>
   );
 
+  const titleStyle = {
+    textAlign: 'center',
+    fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+    lineHeight: 1.5,
+  };
+  const titleCoxStyle = { pt: 2, px: 2 };
   return (
     <Box
       sx={{
@@ -64,29 +68,14 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
     >
       <Box sx={containerStyle} id="pricing-difference">
         {data?.title && (
-          <Box sx={{ pt: 2, px: 2 }}>
-            <Typography
-              variant="h2"
-              color="secondary"
-              sx={{
-                textAlign: 'center',
-                fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
-                lineHeight: 1.5,
-              }}
-            >
+          <Box sx={titleCoxStyle}>
+            <Typography variant="h2" color="secondary" sx={titleStyle}>
               {data?.title}
             </Typography>
           </Box>
         )}
         {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
-            }}
-          >
+          <Box sx={circularProgressStyle}>
             <CircularProgress />
           </Box>
         ) : (

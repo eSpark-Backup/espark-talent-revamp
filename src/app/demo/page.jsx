@@ -21,8 +21,9 @@ import {
   EXPERTIES_DATA,
   OUR_CLIENT_SAYS,
   PROCESS_DATA,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
+import { demoClientSaysBoxStyle } from '@/components/demo/DemoPageStyles';
 
 const Page = () => {
   useEffect(() => {
@@ -58,7 +59,7 @@ const Page = () => {
       <DemoCta data={DEMO_DATA} link={'/book-a-demo'} target={'_blank'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} />
-      <Box sx={{ pt: { xs: 5, sm: 6, md: 7, lg: 10 } }}>
+      <Box sx={demoClientSaysBoxStyle}>
         <ClientSays data={OUR_CLIENT_SAYS} />
       </Box>
       <AwardAchievement

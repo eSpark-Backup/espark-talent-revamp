@@ -6,7 +6,7 @@ import ThankYou from '@/components/thankyou/ThankYou';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import { THANKYOU_DATA } from '@/constants/thankyou/thankyou';
 
 const Page = () => {

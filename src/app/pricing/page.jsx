@@ -1,7 +1,7 @@
 import PricingPage from '@/components/pricing/PricingPage';
 import { getMetadata } from '@/components/global/seo';
 
-import { PRICING_DATA } from '@/constants/pricing';
+import { PRICING_DATA } from '@/constants/pricing/pricing';
 
 import { getFilteredData } from '@/utils/cors';
 

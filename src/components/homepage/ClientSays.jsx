@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import ClientSaysSlider from './ClientSaysSlider';
-import { mainContainerStyleForClientSlider } from '@/constants/homepage';
+import ClientSaysSlider from '@/components/homepage/ClientSaysSlider';
+import { mainContainerStyleForClientSlider } from '@/constants/new-home/homepage';
+import { oldCircularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const ClientSays = ({ data }) => {
   const { heading, subHeading, slider, styles } = data || {};
@@ -43,14 +44,7 @@ const ClientSays = ({ data }) => {
             </Typography>
           </Box>
           {loading ? (
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '300px',
-              }}
-            >
+            <Box sx={oldCircularProgressStyle}>
               <CircularProgress />
             </Box>
           ) : (

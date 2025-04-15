@@ -6,13 +6,22 @@ import Image from 'next/image';
 import { Box, Container, Typography } from '@mui/material';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  descriptionStyle,
+  swiperSliderStyle,
+  boxStyle,
+  titleStyle,
+  titleBoxStyle,
+  imageBoxStyle,
+} from '@/components/how-it-work/OurServiceStyles';
 
 import Title from './Title';
 
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;
+
   return (
-    <Box sx={{ mb: '4%' }}>
+    <Box sx={boxStyle}>
       <Container>
         <Title heading={heading} subHeading={subHeading} variant={'h2'} />
         <Swiper
@@ -55,29 +64,9 @@ const OurService = ({ ourService }) => {
         >
           {card?.map((item, index) => (
             <SwiperSlide key={index}>
-              <Box
-                sx={{
-                  maxWidth: {
-                    xs: '316.31px',
-                    md: 'auto ',
-                    lg: '365.643px ',
-                  },
-                  height: { xs: '201.32px', sm: '232.671px', lg: '222.671px' },
-                  borderRadius: '8.875px',
-                  backgroundColor: '#fff',
-                  boxShadow: ' 0px 0px 31.062px 0px rgba(0, 0, 0, 0.07)',
-                  py: '20px',
-                  margin: { xs: '10px auto !important', md: '7px ' },
-                }}
-              >
+              <Box sx={swiperSliderStyle}>
                 <Box>
-                  <Box
-                    sx={{
-                      mt: { xs: 1, sm: 2 },
-                      my: '25px',
-                      px: { xs: '24px', md: '15px' },
-                    }}
-                  >
+                  <Box sx={imageBoxStyle}>
                     <Image
                       quality="85"
                       priority={true}
@@ -88,30 +77,11 @@ const OurService = ({ ourService }) => {
                     />
                   </Box>
 
-                  <Box sx={{ px: { xs: '24px', md: '22px' } }}>
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        color: '#09114A',
-                        fontSize: { xs: '19.197px ', md: '22.187px' },
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        lineHeight: { xs: '20.272px', md: '23.43px' },
-                        mt: { lg: 1 },
-                      }}
-                    >
+                  <Box sx={titleBoxStyle}>
+                    <Typography variant="h3" sx={titleStyle}>
                       {item?.title}
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: '#001C63',
-                        fontSize: { xs: '12.286px', md: '14.2px' },
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        lineHeight: { xs: '23.344px', md: '26.979px' },
-                        mt: { lg: 1 },
-                      }}
-                    >
+                    <Typography sx={descriptionStyle}>
                       {item?.description}
                     </Typography>
                   </Box>

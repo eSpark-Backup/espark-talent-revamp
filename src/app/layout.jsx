@@ -8,10 +8,10 @@ import { SkeletonTheme } from 'react-loading-skeleton';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
-import theme from './theme';
+import theme from '@/app/theme';
 
-import GoogleTag from '@/components/global/Header/GoogleTag';
-import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
+import GoogleTag from '@/components/global/header/GoogleTag';
+import AllpagesHeader from '@/components/global/navbar/AllpagesHeader';
 import Loading from '@/components/global/loading';
 import ToastProvider from '@/components/global/ToastContainer';
 import { getMetadata } from '@/components/global/seo';

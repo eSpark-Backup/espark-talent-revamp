@@ -13,7 +13,7 @@ import {
   titleAndButtonContainerStyle,
   titleStyle,
   workSlideStyle,
-} from '@/constants/pricing';
+} from '@/components/pricing/PricingCardStyles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -36,7 +36,14 @@ const BlueCard = ({ data, handleOpen }) => {
       return window?.open(link, target);
     }
   };
-
+  const buttonBoxStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    py: 2,
+  };
+  const listItemStyles = { p: 0 };
+  const imageBoxStyle = { mt: 0.7 };
+  const itemTitleStyle = { py: 2, px: { xs: 1.3, sm: 1.3 }, pr: 0 };
   const renderedCard = (eachItem, index) => (
     <SwiperSlide key={index} style={workSlideStyle}>
       <Box key={index} sx={cardStyle}>
@@ -45,13 +52,7 @@ const BlueCard = ({ data, handleOpen }) => {
             sx={titleStyle}
             dangerouslySetInnerHTML={{ __html: eachItem?.title }}
           />
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              py: 2,
-            }}
-          >
+          <Box sx={buttonBoxStyle}>
             <Button
               onClick={() => openForm(eachItem?.btnLink || '#', '_blank')}
               disableRipple
@@ -68,17 +69,17 @@ const BlueCard = ({ data, handleOpen }) => {
           />
         </Box>
 
-        <Box sx={{ py: 2, px: { xs: 1.3, sm: 1.3 }, pr: 0 }}>
+        <Box sx={itemTitleStyle}>
           <Typography sx={listItemTitle}>
             {eachItem && Object?.keys(eachItem)[5]}
           </Typography>
-          <Typography component={'ul'} sx={{ p: 0 }}>
+          <Typography component={'ul'} sx={listItemStyles}>
             {eachItem?.featured?.map((item, index) => (
               <Typography key={index} component={'li'} sx={listItemStyle}>
                 <Box
                   component={'img'}
                   src="/images/homepage/hiring-modals/green-tick.svg"
-                  sx={{ mt: 0.7 }}
+                  sx={imageBoxStyle}
                 />
                 <Typography component={'span'} sx={listItemTextStyle}>
                   {item || ''}
@@ -90,33 +91,29 @@ const BlueCard = ({ data, handleOpen }) => {
       </Box>
     </SwiperSlide>
   );
-
+  const circularProgressStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '200px',
+    mb: 10,
+  };
+  const swipperBoxStyle = {
+    width: '100%',
+    maxWidth: { sm: 'auto', md: '800px' },
+    mx: 'auto',
+    '@media(min-width:1024px)': {
+      maxWidth: '1200px',
+    },
+  };
   return (
     <>
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-            mb: 10,
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress disableShrink />
         </Box>
       ) : (
-        <Box
-          sx={{
-            width: '100%',
-            maxWidth: { sm: 'auto', md: '800px' },
-            mx: 'auto',
-            '@media(min-width:1024px)': {
-              maxWidth: '1200px',
-            },
-          }}
-          id="pricing-work"
-        >
+        <Box sx={swipperBoxStyle} id="pricing-work">
           <Swiper
             pagination={true}
             breakpoints={{

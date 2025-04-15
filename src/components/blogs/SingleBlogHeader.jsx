@@ -3,6 +3,17 @@
 import { Avatar, Box, Grid, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import moment from 'moment';
+import {
+  containerStyles,
+  titleStyles,
+  subtitleStyles,
+  postAuthorMetaStyles,
+  avatarStyles,
+  authorNameStyles,
+  imageContainerStyles,
+  imageStyles,
+  avatarBoxStyles,
+} from '@/components/blogs/SingleBlogHeaderStyles';
 
 const SingleBlogHeader = ({ data, authors }) => {
   const blogString = JSON?.stringify(data);
@@ -12,43 +23,24 @@ const SingleBlogHeader = ({ data, authors }) => {
   )[0];
   return (
     <>
-      <Box sx={{ mt: { md: '90px', xs: '35px' } }}>
+      <Box sx={containerStyles}>
         <Grid container>
           <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 1 }}>
-            <Box pb={{ xs: '5%', md: '10%' }} sx={{}}>
-              <Typography
-                variant="h1"
-                color={'#001C63'}
-                fontSize={{ xs: '25px', sm: '25px', md: '30px', lg: '40px' }}
-                fontWeight={600}
-                sx={{ textAlign: { xs: 'center', md: 'left' } }}
-              >
+            <Box pb={{ xs: '5%', md: '10%' }}>
+              <Typography variant="h1" sx={titleStyles}>
                 {parsedblog?.title}
               </Typography>
-              <Typography
-                variant="body1"
-                color={' #6F76A8'}
-                fontSize={{ xs: '12px', sm: '13px', md: '14px', lg: '17px' }}
-                sx={{ textAlign: { xs: 'center', md: 'left' } }}
-              >
+              <Typography variant="body1" sx={subtitleStyles}>
                 {parsedblog?.subtitle}
               </Typography>
             </Box>
-            <Box
-              className="post-author-meta"
-              sx={{ display: { xs: 'none', md: 'block' } }}
-            >
-              <Box
-                style={{ display: 'flex', gap: '10px', alignItems: 'center' }}
-              >
+            <Box className="post-author-meta" sx={postAuthorMetaStyles}>
+              <Box sx={avatarBoxStyles}>
                 <Stack direction="row" spacing={2}>
                   <Avatar
                     alt={parsedblog?.title}
                     src={filteredAuthor?.avatar || `/images/author.jpg`}
-                    sx={{
-                      width: { xs: 45, md: 65 },
-                      height: { xs: 45, md: 65 },
-                    }}
+                    sx={avatarStyles}
                   />
                 </Stack>
                 <Box className="title">
@@ -58,11 +50,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                       <Typography
                         component={'span'}
                         variant="body1"
-                        color="#001C63"
-                        sx={{
-                          ml: 1,
-                        }}
-                        fontWeight={600}
+                        sx={authorNameStyles}
                       >
                         {`${filteredAuthor?.firstName ? filteredAuthor?.firstName : 'eSpark'} ${filteredAuthor?.lastName ? filteredAuthor?.lastName : 'Talent'}`}
                       </Typography>
@@ -76,7 +64,7 @@ const SingleBlogHeader = ({ data, authors }) => {
             </Box>
           </Grid>
           <Grid item lg={6} md={6} sm={12} order={{ xs: 1, sm: 1, md: 2 }}>
-            <Box className="image" pl={{ xs: '0', md: '5%' }}>
+            <Box className="image" sx={imageContainerStyles}>
               <Image
                 quality="85"
                 priority={true}
@@ -84,7 +72,7 @@ const SingleBlogHeader = ({ data, authors }) => {
                 alt={`${parsedblog?.imageAlt}`}
                 width={860}
                 height={570}
-                style={{ borderRadius: '10px' }}
+                style={imageStyles}
               />
             </Box>
           </Grid>

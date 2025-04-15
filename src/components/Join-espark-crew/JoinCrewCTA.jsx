@@ -2,7 +2,7 @@
 
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import { JOIN_CREW_FOOTER_DATA } from '@/constants/join-espark-crew';
+import { JOIN_CREW_FOOTER_DATA } from '@/constants/join-espark-crew/join-espark-crew';
 
 const JoinCrewCTA = ({ handleClick }) => {
   const {

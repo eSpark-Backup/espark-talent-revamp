@@ -10,7 +10,16 @@ import {
   PaginationItem,
 } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import { BlogCard } from './BlogCard';
+import { BlogCard } from '@/components/homepage/BlogCard';
+import {
+  noDataStyles,
+  gridContainerStyles,
+  paginationStyles,
+  paginationItemStyles,
+  paginationWrapperStyles,
+  blogCardBoxStyles,
+} from './BlogCardsStyles';
+import { conatinerBoxStyle } from './BlogCardStyles';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);
@@ -31,45 +40,57 @@ const BlogCards = ({ data }) => {
     window?.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathName]);
 
+  /**
+   * Handles the page change event for pagination.
+   * Updates the current page state and scrolls the window to the top smoothly.
+   *
+   * @param {Object} event - The event object triggered by the pagination component.
+   * @param {number} value - The new page number selected.
+   */
   const handleChangePage = (event, value) => {
     setPage(value);
     window?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  /**
+   * Sorts an array of blog data objects in descending order based on their `publishedAt` property.
+   * If `publishedAt` is not present in one or both objects, they are considered equal in sorting.
+   *
+   * @param {Array<Object>} data - The array of blog objects to be sorted.
+   * @param {string} [data[].publishedAt] - The publication date of the blog in ISO string format.
+   * @returns {Array<Object>} The sorted array of blog objects, with the most recent blogs first.
+   */
   const sortedBlogs = (data || [])?.sort((a, b) =>
     a?.publishedAt && b?.publishedAt
       ? new Date(b?.publishedAt) - new Date(a?.publishedAt)
       : 0
   );
+
+  /**
+   * Extracts a subset of blogs to be displayed on the current page.
+   *
+   * @constant
+   * @type {Array|undefined}
+   * @description Slices the sortedBlogs array to get the blogs for the current page based on pagination.
+   *
+   * @param {number} page - The current page number (1-based index).
+   * @param {number} itemsPerPage - The number of items to display per page.
+   * @returns {Array|undefined} An array of blogs for the current page, or undefined if sortedBlogs is not defined.
+   */
   const displayedBlogs = sortedBlogs?.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
   return (
-    <Box sx={{ my: '3%' }}>
+    <Box sx={conatinerBoxStyle}>
       <Container>
         {loading || data === null || data?.length === 0 ? (
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              my: 0,
-            }}
-          >
+          <Box sx={noDataStyles}>
             <Box component={'img'} src="/images/no_data.png" />
           </Box>
         ) : (
           <>
-            <Grid
-              container
-              spacing={{ xs: 0, md: 2 }}
-              sx={{
-                pt: { xs: '10%', sm: '8%', md: '2%' },
-                pb: { xs: '0%', md: '2%' },
-              }}
-            >
+            <Grid container spacing={{ xs: 0, md: 2 }} sx={gridContainerStyles}>
               {displayedBlogs?.map((item, index) => (
                 <Grid
                   item
@@ -77,34 +98,23 @@ const BlogCards = ({ data }) => {
                   sm={cardsInRow}
                   md={4}
                   key={index}
-                  sx={{ mx: isSmallScreen ? 'auto' : 0 }}
+                  sx={blogCardBoxStyles(isSmallScreen)}
                 >
                   <BlogCard item={item} />
                 </Grid>
               ))}
             </Grid>
             {data?.length > itemsPerPage && (
-              <Box
-                sx={{ display: 'flex', justifyContent: 'center', mt: 1, mb: 5 }}
-              >
+              <Box sx={paginationWrapperStyles}>
                 <Pagination
                   count={Math?.ceil(data?.length / itemsPerPage)}
                   page={page}
                   onChange={handleChangePage}
                   color="primary"
                   size={pagination}
-                  sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
+                  sx={paginationStyles}
                   renderItem={(item) => (
-                    <PaginationItem
-                      {...item}
-                      sx={{
-                        borderRadius: '10px',
-                        '&.Mui-selected': {
-                          backgroundColor: 'primary.main',
-                          color: 'white',
-                        },
-                      }}
-                    />
+                    <PaginationItem {...item} sx={paginationItemStyles} />
                   )}
                 />
               </Box>

@@ -7,7 +7,7 @@ import { Button, FormControl, Typography } from '@mui/material';
 import {
   buttonsStyleForPerksComponent,
   buttonTextStyleForPerksComponent,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 
 const Perks = ({ data, btnText, btnLink, target, styles, title }) => {
   const [checked, setChecked] = useState(true);
@@ -33,6 +33,13 @@ const Perks = ({ data, btnText, btnLink, target, styles, title }) => {
     perksButtonStyle,
   } = styles || {};
 
+  /**
+   * Handles the change of the selected index with a delay.
+   * It temporarily sets the `checked` state to false, waits for a specified timeout,
+   * and then updates the `index` state and sets `checked` back to true.
+   *
+   * @param {number} index - The index to be set as the current selection.
+   */
   const handleChange = (index) => {
     setChecked(false);
     setTimeout(() => {

@@ -1,15 +1,21 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ReadMoreButton } from './ReadMoreButton';
+import { ReadMoreButton } from '@/components/homepage/ReadMoreButton';
+import {
+  blogCardStylescontainer,
+  blogCardStylesimageContainer,
+  blogCardStylesdate,
+  blogCardStylescontentContainer,
+  blogCardStylestextContainer,
+  blogCardStylestitle,
+  blogCardStylessubtitle,
+} from '@/components/homepage/BlogCardStyles';
 
 export const BlogCard = ({ item }) => (
-  <Box
-    className="single-blog-post"
-    sx={{ px: { xs: '5%', sm: '5%', md: '2%', lg: '2%' }, pb: '30px' }}
-  >
+  <Box className="single-blog-post" sx={blogCardStylescontainer}>
     <Link href={`/blogs/${item?.slug}`}>
-      <Box className="image" sx={{ display: 'flex' }}>
+      <Box className="image" sx={blogCardStylesimageContainer}>
         <span style={{ marginRight: '18px' }}>
           {item?.featureImage && (
             <Image
@@ -19,7 +25,7 @@ export const BlogCard = ({ item }) => (
               alt={item?.title}
               width={900}
               height={900}
-              style={{ borderRadius: '15px' }}
+              // style={{ borderRadius: '15px' }}
             />
           )}
         </span>
@@ -27,9 +33,7 @@ export const BlogCard = ({ item }) => (
           <Typography
             component={'span'}
             className="date"
-            sx={{
-              fontSize: { xs: '13px', sm: '14px', md: '15px', lg: '16px' },
-            }}
+            sx={blogCardStylesdate}
           >
             {Intl?.DateTimeFormat('en-US', {
               year: 'numeric',
@@ -40,35 +44,12 @@ export const BlogCard = ({ item }) => (
         )}
       </Box>
     </Link>
-    <Box sx={{ width: '90%', my: 2 }}>
-      <Box
-        sx={{
-          width: '100%',
-          minHeight: { xs: 'auto', lg: '210px' },
-          maxHeight: { xs: 'auto', lg: '210px' },
-        }}
-      >
+    <Box sx={blogCardStylescontentContainer}>
+      <Box sx={blogCardStylestextContainer}>
         <Link href={`/blogs/${item?.slug}`}>
-          <Typography
-            sx={{
-              color: '#09114A',
-              fontSize: { xs: '18px', md: '20px', lg: '23.49px' },
-              fontWeight: 600,
-            }}
-          >
-            {item?.title}
-          </Typography>
+          <Typography sx={blogCardStylestitle}>{item?.title}</Typography>
         </Link>
-        <Typography
-          sx={{
-            color: '#6F76A8',
-            fontSize: { xs: '13px', md: '14.46px' },
-            fontWeight: 400,
-            my: 2,
-          }}
-        >
-          {item?.subtitle}
-        </Typography>
+        <Typography sx={blogCardStylessubtitle}>{item?.subtitle}</Typography>
       </Box>
       <ReadMoreButton slug={item?.slug} />
     </Box>

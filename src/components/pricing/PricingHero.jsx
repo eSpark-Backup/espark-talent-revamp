@@ -1,18 +1,11 @@
 import { Box } from '@mui/material';
-import PricingCard from './PricingCard';
+import PricingCard from '@/components/pricing/PricingCard';
+import { pricingCardBoxStyle } from '@/components/pricing/PricingHeroStyles';
 
 const PricingHero = ({ data, handleOpen }) => {
   return (
     <>
-      <Box
-        sx={{
-          backgroundImage:
-            'linear-gradient(180deg, #029894 21.1%, #023A39 158.47%)',
-          height: `100%`,
-          color: '#fff',
-          mb: 10,
-        }}
-      >
+      <Box sx={pricingCardBoxStyle}>
         <PricingCard data={data} handleOpen={handleOpen} />
       </Box>
     </>

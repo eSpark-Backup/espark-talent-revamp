@@ -2,7 +2,7 @@ import Hero from '@/components/homepage/Hero';
 import TermsConditions from '@/components/terms-conditions/TermsConditions';
 import { getMetadata } from '@/components/global/seo';
 
-import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy';
+import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy/privacy-policy';
 import { PRIVACY_POLICY_HERO_DATA } from '@/constants/global/hero-sections';
 
 import { getFilteredData } from '@/utils/cors';

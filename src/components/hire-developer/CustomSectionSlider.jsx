@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
   const [loading, setLoading] = useState(true);
@@ -51,14 +52,7 @@ const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
   return (
     <Box sx={swiperBoxStyle}>
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (

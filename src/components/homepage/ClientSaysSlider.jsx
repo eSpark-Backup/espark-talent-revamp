@@ -13,7 +13,7 @@ import {
   Navigation,
   EffectFade,
 } from 'swiper/modules';
-import StarRating from './StarRating';
+import StarRating from '@/components/homepage/StarRating';
 import { navigationImageDirection } from '@/utils';
 
 const ClientSaysSlider = ({ data, styles }) => {

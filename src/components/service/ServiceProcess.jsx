@@ -13,7 +13,7 @@ import {
   processCardTopTextStyle,
   ProcessCardTopTitleStyle,
   processCardVectorStyles,
-} from '@/constants/hire-developer/hire-developer';
+} from '@/components/hire-developer/HireDeveloperStyle';
 
 const ServiceProcess = ({ data, windowWidth, styles }) => {
   const {

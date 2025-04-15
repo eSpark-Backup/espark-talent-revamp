@@ -1,0 +1,460 @@
+// pricing card
+export const pricingCardContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  pt: 8,
+};
+
+export const pricingCardHeaderContainer = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textAlign: 'center',
+  gap: '10px',
+  width: '100%',
+  mt: 4,
+};
+
+export const pricingCardDividerStyle = {
+  display: 'block',
+  width: '100%',
+  maxWidth: { md: '410px', lg: '620px' },
+  height: '1px',
+  backgroundColor: '#fff',
+  '@media(max-width: 783px)': {
+    display: 'none',
+  },
+};
+
+export const typographyBox = {
+  maxWidth: { xs: '100%', sm: '580px', md: '700px', lg: '1050px' },
+  px: { xs: 2.5, sm: 5, md: 0 },
+};
+
+export const headingStyle = {
+  fontSize: {
+    xs: '24.33px',
+    sm: '29.33px',
+    md: '41.33px',
+    lg: '52.33px',
+    xl: '61.33px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'none', lg: 'inline-flex' },
+};
+
+export const subHeadingStyle = {
+  fontSize: {
+    xs: '24px',
+    sm: '29px',
+    md: '40px',
+    lg: '45px',
+    xl: '50px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'none', lg: 'inline-flex' },
+};
+
+export const bothHeadingsStyle = {
+  fontSize: {
+    xs: '24px',
+    sm: '29px',
+    md: '40px',
+    lg: '45px',
+    xl: '50px',
+  },
+  fontWeight: 700,
+  lineHeight: 1.2,
+  display: { xs: 'flex', lg: 'none' },
+};
+
+export const paragraphStyle = {
+  fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+  fontWeight: 400,
+  lineHeight: 1.5,
+  mx: { xs: 2, md: 5, lg: 15 },
+  mt: 0.8,
+  mb: 1,
+};
+
+export const blueCardContainerStyle = {
+  mb: { xs: -13, sm: -13, md: -13, lg: -10 },
+};
+
+export const cardStyle = {
+  width: '90%',
+  maxWidth: { xs: '280px', sm: '350px', md: '350px', lg: '348px' },
+  minHeight: { xs: '315px', sm: '500px', md: '550px', lg: '525px' },
+  backgroundColor: '#ffffff',
+  boxShadow: '0px 4.21px 6.32px 0px rgba(0, 0, 0, 0.25)',
+  borderRadius: '9px',
+};
+
+export const titleAndButtonContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'left',
+  position: 'relative',
+  height: { xs: '135px', sm: '171px' },
+  backgroundColor: '#001C63',
+  borderTopRightRadius: '7px',
+  borderTopLeftRadius: '7px',
+  pt: 3,
+  px: 3,
+};
+
+export const titleStyle = {
+  position: 'relative',
+  fontSize: {
+    xs: '17px',
+    sm: '22px',
+    md: '25px',
+    lg: '27px',
+  },
+  fontWeight: 500,
+  color: '#fff',
+  '@media (max-width:319px)': {
+    fontSize: '17px',
+  },
+};
+
+export const buttonStyle = {
+  width: { xs: '100px', sm: '131px' },
+  height: '31px',
+  backgroundColor: '#fff',
+  borderRadius: '7.04px',
+  p: 1,
+  color: '#001C63',
+  fontSize: { xs: '10.5px', sm: '14px' },
+  fontWeight: 600,
+  '&:hover': {
+    color: '#001C63',
+    backgroundColor: '#fff',
+  },
+};
+
+export const sideImageStyle = {
+  width: {
+    xs: '69px',
+    sm: '70px',
+    md: '70px',
+    lg: '98px',
+  },
+  right: '0px',
+  bottom: '0px',
+  position: 'absolute',
+  mr: 0,
+};
+
+export const listItemTitle = {
+  fontSize: {
+    xs: '15px',
+    sm: '17px',
+    md: '19px',
+    lg: '21px',
+  },
+  fontWeight: 500,
+  font: 'Gilroy-SemiBold',
+  color: '#001C63',
+  textTransform: 'capitalize',
+  ml: 0.3,
+  mb: 1,
+};
+
+export const listItemStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  gap: 0.8,
+  mb: 1,
+  alignItems: 'start',
+};
+
+export const listItemTextStyle = {
+  fontSize: {
+    xs: '12px',
+    sm: '13px',
+    md: '14px',
+    lg: '15px',
+  },
+  fontWeight: 500,
+  font: 'Mulish',
+  color: '#38383A',
+};
+
+// Pricing Benifits
+
+export const BenifitsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  py: 7,
+  px: 1,
+};
+
+export const pricingBenifitsHeading = {
+  fontSize: { xs: '25px', sm: '30px', md: '34px', lg: '39px' },
+  fontWeight: 600,
+  textAlign: 'center',
+  mb: '5px',
+};
+
+export const pricingBenifitsSubHeading = {
+  fontSize: {
+    xs: '12px',
+    sm: '15px',
+    md: '17px',
+    lg: '21px',
+  },
+  fontWeight: 300,
+  textAlign: 'center',
+  mb: '20px',
+  mx: { xs: 2, md: 'auto' },
+  maxWidth: { xs: '100%', md: '600px', lg: '100%' },
+};
+
+export const pricingStripe = (index) => {
+  const pricingStripStackStyle = {
+    width: '100%',
+    maxWidth: {
+      xs: index === 0 || index === 1 ? '571px' : '625px',
+    },
+    padding: '10px',
+    boxShadow: '0px 4px 25.2px 0px #0000001F',
+    borderRadius: '5px',
+    position: 'relative',
+    minHeight: { xs: '60px', sm: '90px', md: '110px', lg: '115px' },
+    maxHeight: { xs: '90px', sm: 'auto', md: '110px', lg: '115px' },
+    flexDirection: {
+      xs: index % 2 === 0 ? 'row-reverse' : 'row',
+    },
+    ':after': {
+      content: '" "',
+      width: { xs: '5px', md: '5px' },
+      height: '100%',
+      position: 'absolute',
+      top: '0px',
+      backgroundColor: '#029894',
+      borderRadius: '5px',
+      py: 2,
+    },
+    '@media (max-width: 899px)': {
+      mx: index === 0 || (index === 2 && 'auto'),
+      mr: index !== 3 ? 'auto' : null,
+      ml: index !== 1 ? 'auto' : null,
+      maxWidth: index === 0 || index === 2 ? '82%' : '91%',
+      flexDirection: (index === 1 && 'row-reverse') || (index === 2 && 'row'),
+      ':after': {
+        [index === 2 || index === 3 ? 'left' : 'right']: '0px !important',
+      },
+    },
+    '@media (min-width: 900px)': {
+      ':after': {
+        content: '" "',
+        width: { xs: '5px', md: '5px' },
+        height: '100%',
+        position: 'absolute',
+        top: '0px',
+        [index % 2 !== 0 ? 'left' : 'right']: '0px',
+        backgroundColor: '#029894',
+        borderRadius: '5px',
+        py: 2,
+      },
+    },
+  };
+  const pricingStripGrid = {
+    width: '100%',
+    justifyContent: 'flex-end',
+    display: { sm: 'inline-block', md: index === 0 && 'flex' },
+    '@media (max-width: 899px)': {
+      order: (index === 1 && 3) || (index === 3 && 3),
+      flexBasis: '100%',
+      maxWidth: '100%',
+      justifyContent: 'center',
+      display: 'flex',
+    },
+  };
+
+  const stripImageStyle = {
+    width: { xs: '24px', sm: '33px', md: '44px', lg: '55px' },
+    mx: { xs: 0.5, sm: 1.5 },
+    height: 'auto',
+  };
+
+  const stripeTypographyBoxStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    pl: { xs: 0, lg: index % 2 !== 0 ? 0 : 3 },
+  };
+
+  const stripeTitleStyle = {
+    '@media (min-width: 900px)': {
+      textAlign: index % 2 !== 0 ? 'left' : 'right',
+    },
+    '@media (max-width: 899px)': {
+      textAlign: index === 2 || index === 3 ? 'left' : 'right',
+    },
+  };
+
+  const stripeDiscriptionStyle = {
+    '@media (min-width: 900px)': {
+      textAlign: index % 2 !== 0 ? 'left' : 'right',
+    },
+    '@media (max-width: 899px)': {
+      textAlign: index === 2 || index === 3 ? 'left' : 'right',
+    },
+  };
+
+  return {
+    pricingStripStackStyle,
+    pricingStripGrid,
+    stripImageStyle,
+    stripeTypographyBoxStyle,
+    stripeTitleStyle,
+    stripeDiscriptionStyle,
+  };
+};
+
+// pricing works
+
+export const worksContainerStyle = {
+  width: '100%',
+  maxWidth: 1200,
+  margin: 'auto',
+  padding: '8px 0',
+  position: 'relative',
+  pt: { xs: 3, md: 4, lg: 7 },
+  pb: { xs: 4, sm: 5, md: 6, lg: 8 },
+};
+
+export const headingContainerStyle = {
+  px: 1,
+};
+
+export const worksMainHeadingTextStyle = {
+  px: { xs: '5%', md: '7%' },
+  fontSize: {
+    xs: '23px',
+    sm: '30px',
+    md: '35px',
+    lg: '39px',
+  },
+  mb: 1,
+  fontWeight: 600,
+  textAlign: 'center',
+  flexWrap: 'wrap',
+};
+
+export const worksSubHeadingtextStyle = {
+  fontSize: {
+    xs: '12px',
+    sm: '15px',
+    md: '17px',
+    lg: '21px',
+  },
+  fontWeight: 400,
+  textAlign: 'center',
+  px: { xs: '12%', sm: '15%', md: '11%' },
+  pb: '6px',
+};
+
+export const workSlideStyle = {
+  paddingTop: '30px',
+  paddingBottom: '30px',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100%',
+  mx: 'auto',
+};
+
+export const worksCardBorderRadius = (index) => {
+  return {
+    borderRadius: {
+      xs: '10px',
+      md: `${index == 0 ? `16px 80px 80px 16px` : '80px 16px 16px 80px'}`,
+    },
+  };
+};
+
+export const worksCardStyle = (pathName, currentPath) => ({
+  mx: 2,
+  width: '100%',
+  height: '100%',
+  maxWidth: { xs: '277px', sm: '353px', md: '555px' },
+  minHeight: { xs: '340px', sm: '425px', md: 'auto', lg: '499px' },
+  backgroundColor: pathName?.includes(currentPath) ? '#F7F8FF' : '#fff',
+  boxShadow: '0px 0px 8px 0px rgba(0, 0, 0, 0.35)',
+});
+
+export const headerStyle = {
+  flexDirection: 'column',
+  px: 2.5,
+  pt: { xs: 0, md: 3 },
+  pb: 0,
+  gap: { xs: 0.5, sm: 1 },
+};
+
+export const avatarStyle = {
+  mb: 1,
+  ml: 2.5,
+  width: { xs: '33px', sm: '40px', lg: '50px' },
+  height: { xs: '33px', sm: '40px', lg: '50px' },
+};
+
+export const listHeadingStyle = {
+  fontWeight: 600,
+  fontSize: { xs: '14px', sm: '17px', md: '19px' },
+  lineHeight: {
+    xs: '25px',
+    sm: '41.39px',
+    md: '43px',
+    lg: '45px',
+  },
+  color: '#001C63',
+  mb: { xs: 1, sm: 0 },
+};
+
+export const contentStyle = {
+  textAlign: { xs: 'center', lg: 'left' },
+  maxWidth: '325px',
+  mx: 'auto',
+  pt: 0,
+  pb: { xs: '0 !important', md: '24px !important' },
+};
+
+export const itemsStyle = {
+  fontWeight: 600,
+  fontSize: {
+    xs: '12px',
+    sm: '13px',
+    md: '14px',
+    lg: '15.69px',
+  },
+  lineHeight: {
+    xs: '13.15px',
+    sm: '18px',
+    md: '21px',
+    lg: '27.22px',
+  },
+  color: '#029894',
+};
+
+export const iconContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 1,
+  mt: 1,
+  pb: { xs: 1, sm: 3, md: 5, lg: 7 },
+};
+
+export const containerStyle = {
+  px: { xs: '24px', lg: '0px !important' },
+};
+export const boxStyle = {
+  width: '100%',
+};

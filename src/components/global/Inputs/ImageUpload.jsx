@@ -1,7 +1,19 @@
 import { Typography } from '@mui/material';
 import Image from 'next/image';
+import {
+  filenameStyle,
+  lableStyle,
+  uploadImageStyles,
+} from '@/components/global/inputs/ImageUploadStyles';
 
 const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
+  /**
+   * Handles the file input change event and triggers the onChange callback with the selected file.
+   *
+   * @param {Object} e - The event object from the file input change.
+   * @param {string} name - The name associated with the file input field.
+   * @returns {void}
+   */
   const handleFileChange = (e, name) => {
     if (e?.target?.files?.length > 0) {
       const file = e?.target?.files[0];
@@ -11,7 +23,7 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
   return (
     <div className="input-parent">
       {label && (
-        <Typography mb={1} textAlign="left" sx={{ color: 'black' }}>
+        <Typography mb={1} textAlign="left" sx={lableStyle}>
           {label}
         </Typography>
       )}
@@ -35,10 +47,7 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
               sx={{
                 backgroundColor: (theme) =>
                   !disabled ? theme?.palette?.primary?.main : '#ccc',
-                color: '#fff',
-                padding: '8px 25px',
-                borderRadius: '5px',
-                cursor: 'pointer',
+                uploadImageStyles,
               }}
             >
               <Image
@@ -49,14 +58,7 @@ const ImgUploader = ({ label, name, onChange, disabled, filename, form }) => {
               />
             </Typography>
             {form && (
-              <Typography
-                sx={{
-                  fontSize: { xs: '14px', md: '20px' },
-                  textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                }}
-              >
+              <Typography sx={filenameStyle}>
                 {filename
                   ? filename?.length > 15
                     ? filename?.substring(0, 15) + '...'

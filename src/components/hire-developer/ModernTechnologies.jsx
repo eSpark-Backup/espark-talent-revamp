@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const ModernTechnologies = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -70,14 +71,7 @@ const ModernTechnologies = ({ data }) => {
             </Typography>
           </Box>
           {loading ? (
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '200px',
-              }}
-            >
+            <Box sx={circularProgressStyle}>
               <CircularProgress />
             </Box>
           ) : (

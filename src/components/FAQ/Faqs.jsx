@@ -10,6 +10,7 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
+import { faqDescStyles } from '@/components/FAQ/faqsStyles';
 
 const Faqs = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
@@ -49,13 +50,7 @@ const Faqs = ({ data }) => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography
-                    sx={{
-                      fontSize: '16px',
-                      fontWeight: '400',
-                      color: '#000000',
-                    }}
-                  >
+                  <Typography sx={faqDescStyles}>
                     {item?.description}
                   </Typography>
                 </AccordionDetails>

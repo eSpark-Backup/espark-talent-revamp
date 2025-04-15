@@ -1,7 +1,11 @@
 'use client';
 
 import { Box, Container, Typography } from '@mui/material';
-import CustomSectionSlider from '../hire-developer/CustomSectionSlider';
+import CustomSectionSlider from '@/components/hire-developer/CustomSectionSlider';
+import {
+  containerStyle,
+  centerBoxStyle,
+} from '@/components/book-a-demo-meeting/DemoLeverageTalentStyles';
 
 const DemoLeverageTalent = ({ data }) => {
   const { title, descrcipton, items, styles } = data;
@@ -14,14 +18,8 @@ const DemoLeverageTalent = ({ data }) => {
 
   return (
     <Container>
-      <Box
-        sx={{
-          width: '100%',
-          height: 'auto',
-          backgroundColor: '#fff',
-        }}
-      >
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={containerStyle}>
+        <Box sx={centerBoxStyle}>
           <Box sx={typographyBoxStyle}>
             <Typography
               sx={titleTypographyStyle}

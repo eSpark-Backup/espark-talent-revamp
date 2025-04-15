@@ -4,9 +4,9 @@ import Script from 'next/script';
 import NotFoundPage from '@/components/global/NotFound';
 import Hire from '@/components/hire-developer/Hire';
 
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
-import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
+import { HIRE_DEVELOPERS } from '@/components/hire-developer/HireDeveloperStyle';
 
 import { getSingleHire } from '@/sanity/sanity.quries';
 import { fetchHireMetadata } from '@/utils/cors';

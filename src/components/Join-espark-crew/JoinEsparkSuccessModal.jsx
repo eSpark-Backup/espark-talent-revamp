@@ -2,23 +2,14 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Button } from '@mui/material';
-import { REGISTRATION_FORM_SUCCESS_MODAL_DATA } from '@/constants/join-espark-crew';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: { xs: '90%', md: 450 },
-  bgcolor: 'background.paper',
-  borderRadius: 2,
-  boxShadow: 24,
-  p: 2,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
+import { REGISTRATION_FORM_SUCCESS_MODAL_DATA } from '@/constants/join-espark-crew/join-espark-crew';
+import {
+  style,
+  titleBoxStyle,
+  descriptionBoxStyle,
+  buttonBoxStyle,
+  buttonStyle,
+} from '@/components/Join-espark-crew/JoinEsparkSuccessModalStyles';
 
 export default function JoinEsparkSuccessModal({ open, handleClose }) {
   const { title, description, buttonText } =
@@ -33,29 +24,12 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography
-            sx={{
-              fontSize: '40px',
-              fontWeight: 600,
-            }}
-          >
-            {title}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: '18px',
-              textAlign: 'center',
-              color: 'black',
-            }}
-          >
-            {description}
-          </Typography>
+          <Typography sx={titleBoxStyle}>{title}</Typography>
+          <Typography sx={descriptionBoxStyle}>{description}</Typography>
           {/* MUI button here */}
-          <Box sx={{ mt: 2 }}>
+          <Box sx={buttonBoxStyle}>
             <Button
-              sx={{
-                padding: '5px 40px',
-              }}
+              sx={buttonStyle}
               variant="contained"
               color="primary"
               onClick={handleClose}

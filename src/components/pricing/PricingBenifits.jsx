@@ -6,15 +6,17 @@ import {
   BenifitsContainer,
   pricingBenifitsHeading,
   pricingBenifitsSubHeading,
-} from '@/constants/pricing';
-const PricingStrip = dynamic(() => import('./PricingStrip'));
+  containerStyle,
+  boxStyle,
+} from '@/components/pricing/PricingCardStyles';
+const PricingStrip = dynamic(() => import('@/components/pricing/PricingStrip'));
 
 export default function PricingBenifits({ data }) {
   return (
     <>
-      <Container sx={{ px: { xs: '24px', lg: '0px !important' } }}>
+      <Container sx={containerStyle}>
         <Stack sx={BenifitsContainer}>
-          <Box sx={{ width: '100%' }}>
+          <Box sx={boxStyle}>
             <Typography
               variant="h3"
               sx={pricingBenifitsHeading}

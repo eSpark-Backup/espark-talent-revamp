@@ -5,6 +5,11 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import {
+  gridStyles,
+  buttonStyles,
+  gridButtonStyles,
+} from '@/components/wiki/WikiFilterStyles';
 
 const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
   const isSmallScreen = useMediaQuery((theme) =>
@@ -14,23 +19,10 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
     theme?.breakpoints?.between('sm', 'md')
   );
   const isLargeScreen = useMediaQuery((theme) => theme?.breakpoints?.up('lg'));
+
   return (
     <Container>
-      <Grid
-        container
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'end',
-          pt: '5%',
-          gap: {
-            xs: 1,
-            sm: 1,
-            md: 1.5,
-            lg: 2,
-          },
-        }}
-      >
+      <Grid container sx={gridStyles}>
         <Button
           size={
             isSmallScreen
@@ -44,7 +36,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
           onClick={() => onSelectCategory(null)}
           variant={selectedCategory === null ? 'contained' : ''}
           color="primary"
-          sx={{ borderRadius: '50px' }}
+          sx={gridButtonStyles}
         >
           <Typography
             fontSize={{
@@ -55,6 +47,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             }}
             color={selectedCategory === null ? 'white' : '#001C63'}
             fontWeight="600"
+            variant="body1"
           >
             All
           </Typography>
@@ -65,7 +58,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             onClick={() => onSelectCategory(category)}
             variant={selectedCategory === category ? 'contained' : ''}
             color="primary"
-            sx={{ borderRadius: '50px', fontWeight: 600 }}
+            sx={buttonStyles}
           >
             <Typography
               fontSize={{
@@ -76,6 +69,7 @@ const WikiFilter = ({ categories, selectedCategory, onSelectCategory }) => {
               }}
               color={selectedCategory === category ? 'white' : '#001C63'}
               fontWeight="600"
+              variant="body1"
             >
               {category?.charAt(0)?.toUpperCase() + category?.slice(1)}
             </Typography>

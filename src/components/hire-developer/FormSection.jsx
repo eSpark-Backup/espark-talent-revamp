@@ -2,13 +2,13 @@
 
 import { Box, Typography } from '@mui/material';
 
-import { Book_A_Demo_Data } from '@/constants/book-a-demo';
-import HireForm from './HireForm';
+import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
+import HireForm from '@/components/hire-developer/HireForm';
 import { usePathname } from 'next/navigation';
 import {
   DescriptionBoxStyleForFormSection,
   TitleDescriptionBoxStyleForFormSection,
-} from '@/constants/hire-developer/hire-developer';
+} from '@/components/hire-developer/HireDeveloperStyle';
 
 const FormSection = ({ data }) => {
   const { form } = Book_A_Demo_Data || {};

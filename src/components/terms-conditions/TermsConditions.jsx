@@ -11,6 +11,16 @@ import {
 } from '@mui/material';
 import Skeleton from 'react-loading-skeleton';
 import Image from 'next/image';
+import {
+  containerStyles,
+  boxStyles,
+  titleStyles,
+  paragraphStyles,
+  listItemIconStyles,
+  listItemTextStyles,
+  itemStyles,
+  titleStyle,
+} from '@/components/terms-conditions/TermsConditionsStyles';
 
 const TermsConditions = ({ data }) => {
   const isSmallScreen = useMediaQuery((theme) =>
@@ -23,70 +33,25 @@ const TermsConditions = ({ data }) => {
 
   return (
     <Container>
-      <Grid
-        container
-        sx={{
-          py: '5%',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
+      <Grid container sx={containerStyles}>
         <Grid item xs={12}>
-          <Box
-            className={`terms-content`}
-            sx={{
-              backgroundColor: '#fff',
-              p: { xs: '20px', md: '30px' },
-              borderRadius: '10px',
-              boxShadow: '0px 0px 7.800000190734863px 0px rgba(0, 0, 0, 0.25)',
-              textAlign: 'justify',
-            }}
-          >
+          <Box className={`terms-content`} sx={boxStyles}>
             {data?.content ? (
               <Box>
                 {data?.content?.map((item, index) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      pr: { md: 4 },
-                    }}
-                  >
+                  <Box key={index} sx={titleStyle}>
                     <Typography
                       variant="h2"
-                      sx={{
-                        color: '#3B5998',
-                        px: { sm: 0 },
-                        py: '5px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        textAlign: { xs: 'center', md: 'left' },
-                      }}
+                      sx={titleStyles}
                       dangerouslySetInnerHTML={{ __html: item?.title }}
                     />
                     <Typography
-                      sx={{
-                        color: '#263238',
-                        textAlign: { xs: 'center', md: 'justify' },
-                        fontSize: { xs: '10px', md: '18px' },
-                        fontWeight: 400,
-                        lineHeight: { xs: '17px', md: '45.766px' },
-                      }}
+                      sx={paragraphStyles}
                       dangerouslySetInnerHTML={{ __html: item?.paragraph }}
                     />
                     {item?.items?.map((list, itemIndex) => (
-                      <Box
-                        key={itemIndex}
-                        sx={{
-                          display: 'flex',
-                          textAlign: 'baseline',
-                        }}
-                      >
-                        <ListItemIcon
-                          sx={{
-                            minWidth: { xs: '15px', md: '22px' },
-                            mr: { xs: '10px', sx: '15px', md: '20px' },
-                          }}
-                        >
+                      <Box key={itemIndex} sx={itemStyles}>
+                        <ListItemIcon sx={listItemIconStyles}>
                           <Image
                             src="/images/how-its-works/true.svg"
                             height={
@@ -112,15 +77,7 @@ const TermsConditions = ({ data }) => {
                         </ListItemIcon>
 
                         <ListItemText>
-                          <Typography
-                            sx={{
-                              color: '#263238',
-                              textAlign: 'justify',
-                              fontSize: { xs: '10px', md: '18px ' },
-                              fontWeight: 400,
-                              lineHeight: { xs: '17px', md: '45.766px' },
-                            }}
-                          >
+                          <Typography sx={listItemTextStyles}>
                             {list}
                           </Typography>
                         </ListItemText>

@@ -3,7 +3,7 @@ import {
   getHireMetadata,
   getWikisMetadata,
 } from '@/components/global/seo';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import {
   getBlog,
   getHire,

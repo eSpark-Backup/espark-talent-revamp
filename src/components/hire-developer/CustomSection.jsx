@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
-import { eachCardForCustomizeSolution } from '@/constants/hire-developer/hire-developer';
+import { eachCardForCustomizeSolution } from '@/components/hire-developer/HireDeveloperStyle';
 
 const CustomSection = ({ items, mainLayoutStyle }) => {
   const pathName = usePathname();

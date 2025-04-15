@@ -10,7 +10,7 @@ import {
   EXPERTIES_DATA,
   OUR_CLIENT_SAYS,
   PROCESS_DATA,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import ClientSays from '@/components/homepage/ClientSays';
@@ -19,8 +19,9 @@ import BenefitsWorks from '@/components/homepage/BenefitsWorks';
 import DemoCta from '@/components/demo/DemoCta';
 import Process from '@/components/homepage/Process';
 import BookAMeeting from '@/components/book-a-meeting/BookAMeeting';
-import { BOOK_A_MEETING } from '@/constants/book-a-meeting';
+import { BOOK_A_MEETING } from '@/constants/book-a-meeting/book-a-meeting';
 import { Box } from '@mui/material';
+import { clientSaysStyle } from './MeetingPageStyles';
 
 const MeetingPage = () => {
   useEffect(() => {
@@ -56,7 +57,7 @@ const MeetingPage = () => {
       <DemoCta data={DEMO_DATA} link={'/book-a-meeting/#top'} />
       <BenefitsWorks data={BENEFITS_WORKS_DATA} />
       <OurExperties data={EXPERTIES_DATA} link={'/book-a-meeting/#top'} />
-      <Box sx={{ pt: { xs: 5, sm: 6, md: 7, lg: 10 } }}>
+      <Box sx={clientSaysStyle}>
         <ClientSays data={OUR_CLIENT_SAYS} />
       </Box>
       <AwardAchievement

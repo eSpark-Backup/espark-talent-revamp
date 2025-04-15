@@ -14,13 +14,13 @@ import {
   ACHIEVEMENTS_DATA,
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import {
   OUTSOURCING_ADVANTAGES_DATA,
   OUTSOURCING_LIST_DATA,
   OUTSOURCING_WONDERS_DATA,
   OUTSTAFFING_TRUST_DATA,
-} from '@/constants/for-enterprise';
+} from '@/constants/for-enterprise/for-enterprise';
 
 import { getFilteredData } from '@/utils/cors';
 

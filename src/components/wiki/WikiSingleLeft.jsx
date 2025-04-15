@@ -1,20 +1,13 @@
 'use client';
 
+import { boxStyle } from '@/components/wiki/WikiSingleLeftStyles';
 import { Box } from '@mui/material';
 import { PortableText } from '@portabletext/react';
 import Skeleton from 'react-loading-skeleton';
 
 const WikiSingleLeft = ({ data }) => {
   return (
-    <Box
-      className={'blog-content wiki-content'}
-      sx={{
-        px: '20px',
-        py: '30px',
-        borderRadius: '15px',
-        boxShadow: '0px 0px 7.8px 0px rgba(0, 0, 0, 0.25)',
-      }}
-    >
+    <Box className={'blog-content wiki-content'} sx={boxStyle}>
       {data ? (
         <PortableText value={data?.content} />
       ) : (

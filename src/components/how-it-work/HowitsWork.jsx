@@ -8,7 +8,7 @@ import OurService from '@/components/how-it-work/OurService';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/new-home/homepage';
 import {
   CHOOSE_US,
   HR_FIRM_DATA,
@@ -17,7 +17,7 @@ import {
 } from '@/constants/how-its-works';
 
 import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
-import ClientSlider from '../global/ClientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 
 const HowitsWork = () => {
   return (

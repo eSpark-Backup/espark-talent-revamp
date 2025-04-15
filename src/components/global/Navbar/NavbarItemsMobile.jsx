@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import { linkBoxStyle } from './NavbarItemsMobileStyle';
 
 const NavbarItemsMobile = ({
   item,
@@ -46,7 +47,7 @@ const NavbarItemsMobile = ({
               <Box component={'img'} src={icon} sx={iconStyle} />
             </Box>
           </Link>
-          <Box sx={{ width: 'auto' }}>
+          <Box sx={linkBoxStyle}>
             <Link key={key} href={href || '#'} style={nameLinkStlyle}>
               <Typography textTransform="capitalize" sx={collapseNameStyle}>
                 {name}

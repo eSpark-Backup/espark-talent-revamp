@@ -2,9 +2,9 @@
 
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import ParagraphTitle from './ParagraphTitle';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle.jsx';
 import { usePathname } from 'next/navigation';
-import { ACHIEVEMENTS_STYLES } from '@/constants/homepage';
+import { ACHIEVEMENTS_STYLES } from '@/constants/new-home/homepage';
 
 const AwardAchievement = ({ data, design }) => {
   const {

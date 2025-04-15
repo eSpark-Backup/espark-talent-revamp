@@ -3,7 +3,7 @@ import TermsConditions from '@/components/terms-conditions/TermsConditions';
 import { getMetadata } from '@/components/global/seo';
 
 import { TERMS_CONDITIONS_HERO_DATA } from '@/constants/global/hero-sections';
-import { TERMS_CONDITIONS_DATA } from '@/constants/terms-conditions';
+import { TERMS_CONDITIONS_DATA } from '@/constants/terms-conditions/terms-conditions';
 
 import { getFilteredData } from '@/utils/cors';
 

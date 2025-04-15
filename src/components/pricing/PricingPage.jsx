@@ -1,10 +1,10 @@
-import ServiceFaq from '../service/ServiceFaq';
+import ServiceFaq from '@/components/service/ServiceFaq';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
-import { cardStyle, DIFFERENCE_DATA } from '@/constants/new-home';
-import PricingBenifits from './PricingBenifits';
-import PricingHero from './PricingHero';
-import PricingDefference from './PricingDefference';
-import PricingWorks from './PricingWorks';
+import { cardStyle, DIFFERENCE_DATA } from '@/constants/new-home/new-home';
+import PricingBenifits from '@/components/pricing/PricingBenifits';
+import PricingHero from '@/components/pricing/PricingHero';
+import PricingDefference from '@/components/pricing/PricingDefference';
+import PricingWorks from '@/components/pricing/PricingWorks';
 
 const PricingPage = ({ data }) => {
   return (

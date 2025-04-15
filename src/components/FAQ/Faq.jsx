@@ -11,17 +11,33 @@ import {
   AccordionSummary,
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
-import ParagraphTitle from '../homepage/ParagraphTitle';
+import {
+  boxContainerStyles,
+  accordionDetailsStyles,
+  headingStyles,
+  accordianStyles,
+  accordianDropDownIconStyles2,
+  accordianDropDownIconStyles,
+  accordianSummaryStyles,
+} from './FaqStyles';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {
   const [expanded, setExpanded] = useState(null);
 
+  /**
+   * Handles the expansion state of a panel in an accordion component.
+   *
+   * @param {string} panel - The identifier for the panel being interacted with.
+   * @returns {function} - A function that takes an event and the expansion state,
+   *                       and updates the expanded panel accordingly.
+   */
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
   };
+
   return (
-    <Box sx={{ pt: '1%', pb: '5%' }} id="faq">
+    <Box sx={boxContainerStyles} id="faq">
       <Container>
         <ParagraphTitle title={data?.title} />
         <Grid container spacing={{ lg: 1, md: 3, sm: 0, xs: 0 }}>
@@ -33,20 +49,13 @@ const Faq = ({ data }) => {
                   key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
-                  sx={{ mb: 4, position: 'relative' }}
+                  sx={accordianStyles}
                 >
                   <AccordionSummary
-                    sx={{
-                      alignItems: 'flex-start',
-                    }}
+                    sx={accordianSummaryStyles}
                     expandIcon={
                       <ArrowDropDownIcon
-                        sx={{
-                          color: 'black',
-                          fontSize: { xs: '1.5em', md: '2em' },
-                          mt: expanded === panel ? 0 : 0.5,
-                          mb: expanded === panel ? 1.5 : 0,
-                        }}
+                        sx={accordianDropDownIconStyles(expanded, panel)}
                       />
                     }
                     aria-controls={`${panel}-content`}
@@ -54,36 +63,13 @@ const Faq = ({ data }) => {
                   >
                     <Typography
                       variant="h4"
-                      sx={{
-                        color: '#09114A  !important',
-                        fontSize: {
-                          lg: '24px',
-                          md: '20px',
-                          sm: '15px',
-                          xs: '15px',
-                        },
-                        fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                        fontWeight: expanded === panel ? 600 : 400,
-                      }}
+                      sx={headingStyles(expanded, panel)}
                     >
                       {item?.heading}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography
-                      sx={{
-                        color: '#09114A !important ',
-                        textAlign: 'justify',
-                        fontWeight: 400,
-                        fontSize: {
-                          lg: '18px',
-                          md: '15px',
-                          sm: '10px',
-                          xs: '12px',
-                        },
-                        lineHeight: '23.69px',
-                      }}
-                    >
+                    <Typography sx={accordionDetailsStyles}>
                       {item?.description}
                     </Typography>
                   </AccordionDetails>
@@ -99,57 +85,25 @@ const Faq = ({ data }) => {
                   key={index}
                   expanded={expanded === panel}
                   onChange={handleChange(panel)}
-                  sx={{ mb: 4, position: 'relative' }}
+                  sx={accordianStyles}
                 >
                   <AccordionSummary
-                    sx={{
-                      alignItems: 'flex-start',
-                    }}
+                    sx={accordianSummaryStyles}
                     expandIcon={
-                      <ArrowDropDownIcon
-                        sx={{
-                          color: 'black',
-                          fontSize: { xs: '1.5em', md: '2em' },
-                          mt: expanded === panel ? 0 : 0.6,
-                          mb: expanded === panel ? 1.9 : 0,
-                        }}
-                      />
+                      <ArrowDropDownIcon sx={accordianDropDownIconStyles2} />
                     }
                     aria-controls={`${panel}-content`}
                     id={`${panel}-header`}
                   >
                     <Typography
                       variant="h4"
-                      sx={{
-                        color: '#09114A  !important',
-                        fontSize: {
-                          lg: '24px',
-                          md: '20px',
-                          sm: '15px',
-                          xs: '15px',
-                        },
-                        fontWight: { lg: 400, md: 400, sm: 700, xs: 700 },
-                        fontWeight: expanded === panel ? 600 : 400,
-                      }}
+                      sx={headingStyles(expanded, panel)}
                     >
                       {item?.heading}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography
-                      sx={{
-                        color: '#09114A !important ',
-                        textAlign: 'justify',
-                        fontWeight: 400,
-                        fontSize: {
-                          lg: '18px',
-                          md: '15px',
-                          sm: '10px',
-                          xs: '12px',
-                        },
-                        lineHeight: '23.69px',
-                      }}
-                    >
+                    <Typography sx={accordionDetailsStyles}>
                       {item?.description}
                     </Typography>
                   </AccordionDetails>

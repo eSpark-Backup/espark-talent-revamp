@@ -1,43 +1,32 @@
 'use client';
 
-import HireHeroSection from './HireHeroSection';
-import ClientSays from '../homepage/ClientSays';
-import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
-import Perks from '../homepage/Perks';
-import FormSection from './FormSection';
+import HireHeroSection from '@/components/hire-developer/HireHeroSection';
+import ClientSays from '@/components/homepage/ClientSays';
+import {
+  DEVELOEPRS_PERKS_DATA,
+  OUR_CLIENT_SAYS,
+} from '@/constants/new-home/homepage';
+import Perks from '@/components/homepage/Perks';
+import FormSection from '@/components/hire-developer/FormSection';
 import { Box } from '@mui/material';
-import Hosts from './Hosts';
-import CustomizedSolution from './CustomizedSolution';
-import LetsConnect from './LetsConnect';
-import ModernTechnologies from './ModernTechnologies';
-
+import Hosts from '@/components/hire-developer/Hosts';
+import CustomizedSolution from '@/components/hire-developer/CustomizedSolution';
+import LetsConnect from '@/components/hire-developer/LetsConnect';
+import ModernTechnologies from '@/components/hire-developer/ModernTechnologies';
+import {
+  clientSaysStyle,
+  boxStyle,
+} from '@/components/hire-developer/HireDeveloperStyle';
 const HireDeveloper = ({ data }) => {
   //  hiring front-end & back-backend developer page components
   const { perksData, styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-        pb: { xs: 5, sm: 6, md: 7, lg: 10 },
-      }}
-    >
+    <Box sx={boxStyle}>
       <HireHeroSection data={data?.heroSection} />
       <LetsConnect data={data?.letsConnect} />
       {data?.bgImage && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-            backgroundImage: `url(${data?.bgImage})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: `center`,
-            color: '#fff',
-          }}
-        >
+        <Box sx={clientSaysStyle(data)}>
           <ClientSays data={OUR_CLIENT_SAYS} />
           <Perks
             data={perksData}

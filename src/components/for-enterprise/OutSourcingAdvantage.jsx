@@ -10,7 +10,7 @@ import {
   itemBoxStyle,
   itemTypographyStyle,
   imageGridStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingAdvantageConstants';
+} from '@/components/for-enterprise/OutSourcingAdvantageStyles';
 
 const OutSourcingAdvantage = ({ data }) => {
   if (!data) {

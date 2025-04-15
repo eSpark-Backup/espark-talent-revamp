@@ -1,8 +1,9 @@
 'use client';
 
-import { frontendHeroSectionMainBoxStyle } from '@/constants/hire-developer/hire-developer';
+import { frontendHeroSectionMainBoxStyle } from '@/components/hire-developer/HireDeveloperStyle';
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
+import { homeLinkStyle } from './HireHeroSectionStyles';
 
 const HireHeroSection = ({ data }) => {
   const { bgImage, styles } = data || {};
@@ -25,7 +26,7 @@ const HireHeroSection = ({ data }) => {
                 <Box
                   component={'img'}
                   src={data?.logo}
-                  sx={{ width: 'auto', height: 'auto' }}
+                  sx={homeLinkStyle}
                   alt="Thankyou - eSpark Talent"
                 />
               </Link>
@@ -52,7 +53,7 @@ const HireHeroSection = ({ data }) => {
                 component={'img'}
                 src={data?.image}
                 alt={'Hire A Developer Cover Art'}
-                sx={{ width: 'auto', height: 'auto' }}
+                sx={imageBoxStyle}
               />
             </Box>
           </Box>

@@ -1,32 +1,30 @@
-import ClientSlider from '../global/ClientSlider';
+import ClientSlider from '@/components/global/ClientSlider';
 import {
   CLIENT_SLIDER_BREAK_POINTS,
   CLIENTS_SLIDER_DATA,
   DEVELOEPRS_PERKS_DATA,
   OUR_CLIENT_SAYS,
-} from '@/constants/homepage';
-import Perks from '../homepage/Perks';
-import ClientSays from '../homepage/ClientSays';
-import ServiceHeroSection from './ServiceHeroSection';
-import ServiceWhyHire from './ServiceWhyHire';
-import ServiceExperties from './ServiceExperties';
+} from '@/constants/new-home/homepage';
+import Perks from '@/components/homepage/Perks';
+import ClientSays from '@/components/homepage/ClientSays';
+import ServiceHeroSection from '@/components/service/ServiceHeroSection';
+import ServiceWhyHire from '@/components/service/ServiceWhyHire';
+import ServiceExperties from '@/components/service/ServiceExperties';
 import { Box } from '@mui/material';
-import ServiceFaq from './ServiceFaq';
-import ModernTechnologies from '../hire-developer/ModernTechnologies';
-import Hosts from '../hire-developer/Hosts';
+import ServiceFaq from '@/components/service/ServiceFaq';
+import ModernTechnologies from '@/components/hire-developer/ModernTechnologies';
+import Hosts from '@/components/hire-developer/Hosts';
+import {
+  containerStyle,
+  serviceFaqsStyle,
+} from '@/components/service/ServiceSinglePageStyles.js';
 
 const ServiceSinglePage = ({ data }) => {
   //  hiring services page components
   const { styles } = DEVELOEPRS_PERKS_DATA || {};
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: { xs: 4, sm: 5, md: 7, lg: 10 },
-      }}
-    >
+    <Box sx={containerStyle}>
       <Box>
         <ServiceHeroSection data={data?.servicesHeroSection} />
         <ClientSlider
@@ -64,12 +62,7 @@ const ServiceSinglePage = ({ data }) => {
         <ClientSays data={OUR_CLIENT_SAYS} />
         <Hosts data={data?.hosts} />
       </Box>
-      <Box
-        sx={{
-          backgroundColor: '#F7F8FF',
-          pt: { xs: 3, md: 5 },
-        }}
-      >
+      <Box sx={serviceFaqsStyle}>
         <ServiceFaq data={data?.faqs} />
       </Box>
     </Box>

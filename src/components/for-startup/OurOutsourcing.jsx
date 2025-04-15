@@ -17,7 +17,7 @@ import {
   listItemTypographyStyle,
   imageBoxStyle,
   taskAltIconStyle,
-} from '@/constants/solutions/for-business-startup/OurOutsourcingConstant';
+} from '@/components/for-startup/OurOutsourcingStyles';
 
 const OurOutsourcing = ({ data }) => {
   const { listItem, heading, subHeading } = data || {};

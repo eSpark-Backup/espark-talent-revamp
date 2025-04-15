@@ -3,20 +3,42 @@ import {
   PERSONAL_INFO_FIELDS,
   URL_EXPRESSION,
   REGISTRATION_FORM_DATA,
-} from '@/constants/join-espark-crew';
+} from '@/constants/join-espark-crew/join-espark-crew';
 import { Box, Button, Modal, Stack, Tooltip, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles';
 import { useState } from 'react';
-import CustomInput from '../global/Inputs/CustomInput';
-import Dropdown from '../global/Inputs/Dropdown';
+import CustomInput from '@/components/global/inputs/CustomInput';
+import Dropdown from '@/components/global/inputs/Dropdown';
 import InfoIcon from '@mui/icons-material/Info';
 import { TagsInput } from 'react-tag-input-component';
-import TextArea from '../global/Inputs/TextArea';
-import ImgUploader from '../global/Inputs/ImageUpload';
-import ConfirmCloseModal from './ConfirmCloseModal';
+import TextArea from '@/components/global/inputs/TextArea';
+import ImgUploader from '@/components/global/inputs/ImageUpload';
+import ConfirmCloseModal from '@/components/Join-espark-crew/ConfirmCloseModal';
 import { isObjectFilled } from '@/utils/cors';
 import Image from 'next/image';
+import {
+  conatinerStyles,
+  submitStyles,
+  modalStyle,
+  closeButtonBoxStyles,
+  closeButtonStyles,
+  submitBoxStyles,
+  submitContainerStyles,
+  dropdownBoxStyles,
+  feildsBoxStyles,
+  headingTitleStyles,
+  orTextStyles,
+  infoIconStyles,
+  resumeTitleStyles,
+  skilsStyles,
+  skilsBoxStyles,
+  inputBoxStyles,
+  containerBoxStyles,
+  personalinfoHeadingStyle,
+  imageUploaderStack,
+  feildsBoxStyles2,
+} from './JoinEsparkRegistrationModalStyles';
 
 const JoinEsparkRegistrationModal = ({
   open,
@@ -43,30 +65,16 @@ const JoinEsparkRegistrationModal = ({
         }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+        sx={modalStyle}
       >
         <>
           <Box
             component="form"
-            sx={{
-              backgroundColor: 'white',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'flex-start',
-              alignItems: 'center',
-              width: { xs: '97%', md: '90%', lg: '80%', xl: '70%' },
-              overflowY: 'scroll',
-              height: '80vh',
-              position: 'relative',
-            }}
+            sx={closeButtonBoxStyles}
             onSubmit={handleSubmit}
           >
             <Button
-              sx={{ position: 'absolute', top: '10px', right: '10px' }}
+              sx={closeButtonStyles}
               onClick={() => {
                 if (isObjectFilled(form)) {
                   setConfirmClose(true);
@@ -77,74 +85,20 @@ const JoinEsparkRegistrationModal = ({
             >
               <CloseIcon />
             </Button>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-
-                [theme?.breakpoints?.up('xs')]: {
-                  flexDirection: 'column',
-                  padding: '20px 10px',
-                  rowGap: '10px',
-                },
-
-                [theme?.breakpoints?.up('md')]: {
-                  flexDirection: 'row',
-                  padding: '30px',
-                },
-              }}
-            >
-              <Box sx={{ width: '100%' }}>
+            <Box sx={containerBoxStyles(theme)}>
+              <Box sx={conatinerStyles}>
                 <Typography
                   mb={1}
                   fontSize={25}
                   textAlign="left"
                   color="secondary"
-                  sx={{
-                    fontSize: {
-                      xs: '18px',
-                      sm: '25px',
-                      lg: '30px',
-                      fontWeight: 600,
-                    },
-                    pl: { xs: '12px' },
-                  }}
+                  sx={personalinfoHeadingStyle}
                 >
                   {headings?.PERSONAL_INFO}
                 </Typography>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    border: '1px solid #ccc',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    rowGap: '6px',
-                  }}
-                >
+                <Box sx={feildsBoxStyles2}>
                   {PERSONAL_INFO_FIELDS?.map((item, index) => (
-                    <Box
-                      key={index}
-                      sx={{
-                        [theme?.breakpoints?.up('xs')]: {
-                          width: '100%',
-                        },
-                        [theme?.breakpoints?.up('md')]: {
-                          width:
-                            item?.name === 'projects'
-                              ? '100%'
-                              : item?.name === 'city' ||
-                                  item?.name === 'country' ||
-                                  item?.name === 'education' ||
-                                  item?.name === 'major'
-                                ? '48%'
-                                : '31%',
-                        },
-                        marginBottom: { xs: '10px', md: '15px' },
-                      }}
-                    >
+                    <Box key={index} sx={inputBoxStyles}>
                       {item?.type === 'text' || item?.type === 'url' ? (
                         <CustomInput
                           value={form[item?.name]}
@@ -240,15 +194,10 @@ const JoinEsparkRegistrationModal = ({
                             />
                           ) : (
                             <Stack gap={1}>
-                              <Box
-                                sx={{
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                }}
-                              >
+                              <Box sx={skilsBoxStyles}>
                                 <Typography
                                   color={'secondary'}
-                                  sx={{ fontSize: { xs: '14px', md: '18px' } }}
+                                  sx={skilsStyles}
                                 >
                                   Skills, Technologies and Expertise{' '}
                                   <span style={{ color: '#ff0000' }}>*</span>
@@ -257,15 +206,7 @@ const JoinEsparkRegistrationModal = ({
                                   placement="top-start"
                                   title={item?.tooltip}
                                 >
-                                  <InfoIcon
-                                    sx={{
-                                      color: (theme) =>
-                                        theme?.palette?.primary?.main,
-                                      marginLeft: '5px',
-                                      fontSize: '13px',
-                                      marginBottom: '12px',
-                                    }}
-                                  />
+                                  <InfoIcon sx={infoIconStyles(theme)} />
                                 </Tooltip>
                               </Box>
                               <TagsInput
@@ -289,7 +230,7 @@ const JoinEsparkRegistrationModal = ({
                   ))}
                 </Box>
               </Box>
-              <Box sx={{ width: '100%' }}>
+              <Box sx={conatinerStyles}>
                 {
                   <>
                     <Stack
@@ -304,15 +245,7 @@ const JoinEsparkRegistrationModal = ({
                           mb={1}
                           textAlign="left"
                           color="secondary"
-                          sx={{
-                            fontSize: {
-                              xs: '18px',
-                              sm: '22px',
-                              lg: '24px',
-                              fontWeight: 600,
-                            },
-                            pl: { xs: '12px' },
-                          }}
+                          sx={resumeTitleStyles}
                         >
                           {headings?.RESUME}{' '}
                           <span style={{ color: '#ff0000' }}>*</span>
@@ -323,14 +256,7 @@ const JoinEsparkRegistrationModal = ({
                             'Please choose a file to upload your resume, or you can share a link to your resume with us. Accepted formats are PDF, DOC, and DOCX.'
                           }
                         >
-                          <InfoIcon
-                            sx={{
-                              color: (theme) => theme?.palette?.primary?.main,
-                              marginLeft: '5px',
-                              fontSize: '13px',
-                              marginBottom: '12px',
-                            }}
-                          />
+                          <InfoIcon sx={infoIconStyles} />
                         </Tooltip>
                       </Stack>
                       {form?.cv !== '' && (
@@ -351,12 +277,7 @@ const JoinEsparkRegistrationModal = ({
                       )}
                     </Stack>
                     <Stack
-                      sx={{
-                        border: '1px solid #ccc',
-                        padding: '10px',
-                        borderRadius: '5px',
-                        div: { width: '50%', div: { width: '100%' } },
-                      }}
+                      sx={imageUploaderStack}
                       direction="row"
                       justifyContent="space-between"
                       gap="10px"
@@ -370,11 +291,7 @@ const JoinEsparkRegistrationModal = ({
                         filename={form?.cv?.name}
                         form={true}
                       />
-                      <Typography
-                        style={{ color: 'black' }}
-                        mt={2}
-                        variant="subtitle2"
-                      >
+                      <Typography sx={orTextStyles} mt={2} variant="subtitle2">
                         OR
                       </Typography>
                       <CustomInput
@@ -387,53 +304,20 @@ const JoinEsparkRegistrationModal = ({
                   </>
                 }
               </Box>
-              <Box sx={{ width: '100%' }}>
+              <Box sx={conatinerStyles}>
                 <Typography
                   fontSize={25}
                   mb={1}
                   textAlign="left"
                   color="secondary"
-                  sx={{
-                    fontSize: {
-                      xs: '18px',
-                      sm: '22px',
-                      lg: '24px',
-                      fontWeight: 600,
-                    },
-                    pl: { xs: '12px' },
-                  }}
+                  sx={headingTitleStyles}
                 >
                   {headings?.APPLY_FOR}{' '}
                   <span style={{ color: '#ff0000' }}>*</span>
                 </Typography>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    border: '1px solid #ccc',
-                    padding: '10px',
-                    borderRadius: '5px',
-                  }}
-                >
+                <Box sx={feildsBoxStyles}>
                   {APPLY_FOR_FIELDS?.map((item, index) => (
-                    <Box
-                      key={index}
-                      sx={{
-                        [theme?.breakpoints?.up('xs')]: {
-                          width: '100%',
-                        },
-
-                        [theme?.breakpoints?.up('md')]: {
-                          width:
-                            item?.name === 'city' ||
-                            item?.name === 'job_type' ||
-                            item?.name === 'projects'
-                              ? '100%'
-                              : '30%',
-                        },
-                      }}
-                    >
+                    <Box key={index} sx={dropdownBoxStyles(theme, item)}>
                       <Dropdown
                         name={item?.name}
                         label={item?.label}
@@ -466,39 +350,15 @@ const JoinEsparkRegistrationModal = ({
               </Box>
             </Box>
 
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: '0px 30px',
-                width: '100%',
-              }}
-            >
+            <Box sx={submitContainerStyles}>
               <Box
                 component={'button'}
-                sx={{
-                  width: '100%',
-                  height: '50px',
-                  backgroundColor: (theme) =>
-                    !loading ? theme?.palette?.primary?.main : '#ccc',
-                  color: 'white',
-                  margin: 'auto auto',
-                  border: 'none',
-                  fontSize: '22px',
-                  cursor: 'pointer',
-                  marginBottom: '10px',
-                  borderRadius: '8px',
-                }}
+                sx={submitBoxStyles(theme, loading)}
                 className={loading ? 'disabled' : ''}
                 disabled={loading}
                 type="submit"
               >
-                <Typography
-                  sx={{
-                    fontSize: '21.21px',
-                  }}
-                >
+                <Typography sx={submitStyles}>
                   {loading ? 'Loading' : 'Submit'}
                 </Typography>
               </Box>

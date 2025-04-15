@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation';
 import {
   descriptionTypographyStyleForCustomizeSolution,
   mainContainerStyleForCustomizeSolution,
-} from '@/constants/hire-developer/hire-developer';
-import CustomSectionSlider from '../hire-developer/CustomSectionSlider';
+} from '@/components/hire-developer/HireDeveloperStyle';
+import CustomSectionSlider from '@/components/hire-developer/CustomSectionSlider';
+import { containerStyle } from './ServiceExpertiesStyles';
 
 const ServiceExperties = ({ data }) => {
   const { bgImage, title, paragraph, items, styles } = data || {};
@@ -49,7 +50,7 @@ const ServiceExperties = ({ data }) => {
   return (
     <>
       <Box sx={mainContainerStyleForCustomizeSolution(bgImage, pathname)}>
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={containerStyle}>
           <Box sx={typographyBoxStyle}>
             <Typography
               sx={titleTypographyStyle}

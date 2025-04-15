@@ -2,28 +2,51 @@
 
 import { useRef, useState } from 'react';
 import { useFormik } from 'formik';
-import PartnerCountrySelect from './PartnerCountrySelect';
+import PartnerCountrySelect from '@/components/partnership/PartnerCountrySelect';
 import PhoneInput from 'react-phone-number-input';
 import { Button, Box, Typography } from '@mui/material';
 import 'react-phone-number-input/style.css';
-import BasicModal from '../book-a-demo/BookADemoModal';
+import BasicModal from '@/components/book-a-demo/BookADemoModal';
 import axios from 'axios';
 import { CountryCode } from '@/constants/global/CountryCodes';
 import { PopupModal } from 'react-calendly';
 import { partnerShipFormValidationSchema } from '@/schema/schema';
-import { PartnerFormData } from '@/constants/partnership';
+import { PartnerFormData } from '@/constants/partnership/partnership';
 
 const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
 const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
+
+const containerStyle = {
+  mt: { xs: '12%', md: '12%' },
+  maxWidth: '450px',
+  margin: '47px auto !important',
+};
+
+const titleStyle = {
+  color: '#265579',
+  fontWeight: { xs: 600, md: 700 },
+  fontSize: { xs: '20px !important', lg: '25.292px !important' },
+  lineHeight: { xs: '29px ', md: '32.509px ' },
+  mb: 1,
+};
+
+const buttonContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+  py: '15px',
+};
 
 const Form = ({ formContent, fields }) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
-  const handleClose = () => setOpen(false);
   const partnersRef = useRef(null);
   const options = CountryCode?.map((opt) => opt?.name);
+
+  const handleClose = () => setOpen(false);
 
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
@@ -83,37 +106,19 @@ const Form = ({ formContent, fields }) => {
   const handlePhoneChange = (event) => {
     setFieldValue((values.phone_number = event));
   };
-
+  const titleBoxStyles = {
+    display: 'flex',
+    alignItems: 'center',
+    mt: { xs: '10px', md: '0px' },
+  };
+  const formBoxStyles = { margin: '0px auto !important' };
+  const lableStyle = { mt: 1.8 };
   return (
-    <Box
-      className="partner-form"
-      id="partnership-form"
-      sx={{
-        mt: { xs: '12%', md: '12%' },
-        maxWidth: '450px',
-        margin: '47px auto !important',
-      }}
-    >
-      <Box sx={{ margin: '0px auto !important' }}>
+    <Box className="partner-form" id="partnership-form" sx={containerStyle}>
+      <Box sx={formBoxStyles}>
         <form>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              mt: { xs: '10px', md: '0px' },
-            }}
-          >
-            <Typography
-              sx={{
-                color: '#265579',
-                fontWeight: { xs: 600, md: 700 },
-                fontSize: { xs: '20px !important', lg: '25.292px !important' },
-                lineHeight: { xs: '29px ', md: '32.509px ' },
-                mb: 1,
-              }}
-            >
-              {formContent?.title}
-            </Typography>
+          <Box sx={titleBoxStyles}>
+            <Typography sx={titleStyle}>{formContent?.title}</Typography>
           </Box>
           {fields?.map(
             (
@@ -195,7 +200,7 @@ const Form = ({ formContent, fields }) => {
                     )}
                   </Box>
                 ) : label === 'Which Country are you Located in?' ? (
-                  <Box className={boxStyle} sx={{ mt: 1.8 }}>
+                  <Box className={boxStyle} sx={lableStyle}>
                     <Typography sx={typographyStyle}>{label}</Typography>
                     <PartnerCountrySelect
                       options={options}
@@ -227,16 +232,7 @@ const Form = ({ formContent, fields }) => {
               </Box>
             )
           )}
-          <Box
-            className="partner-form-button"
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textAlign: 'center',
-              py: '15px',
-            }}
-          >
+          <Box className="partner-form-button" sx={buttonContainerStyle}>
             <Button onClick={handleSubmit} type="button">
               {formContent?.buttonName}
             </Button>

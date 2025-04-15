@@ -7,11 +7,12 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import ParagraphTitle from './ParagraphTitle';
-import ESparkButton from '../global/eSparkButton';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
+import ESparkButton from '@/components/global/eSparkButton';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { imageBoxStyles } from './OurExpertiesStyles';
 
 const OurExperties = ({ data, link }) => {
   const { title, buttonText, buttonLink, sections, styles } = data || {};
@@ -47,7 +48,7 @@ const OurExperties = ({ data, link }) => {
     <Box sx={listItemBoxStyle} key={index}>
       {list?.listItems?.map((item, itemIndex) => (
         <Box key={itemIndex} sx={imageAndLinkBoxStyle}>
-          <Box sx={{ minWidth: '20px' }}>
+          <Box sx={imageBoxStyles}>
             <Image
               quality="85"
               priority

@@ -7,7 +7,7 @@ import {
   responsiveProcessCardTitleAndTextBoxStyle,
   responsiveProcessCardTitleStyle,
   responsiveProcessCardTitleTextStyle,
-} from '@/constants/hire-developer/hire-developer';
+} from '@/components/hire-developer/HireDeveloperStyle';
 
 const ServiceProcessMobile = ({ data }) => {
   const { title, subTitle, responsiveProcesses, styles } = data || {};

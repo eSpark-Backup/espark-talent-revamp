@@ -3,6 +3,13 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Skeleton from 'react-loading-skeleton';
+import {
+  boxContainerStyles,
+  gridBoxStyles,
+  gridItemStyles,
+  buttonStyles,
+  imageGridStyle,
+} from '@/components/homepage/InnerHeroStyles';
 
 const InnerHero = ({ data, innerData }) => {
   const wikiString = JSON?.stringify(innerData);
@@ -11,34 +18,16 @@ const InnerHero = ({ data, innerData }) => {
 
   return (
     <>
-      <Box
-        sx={{
-          py: data?.spacing,
-          pt: data?.pt,
-          pb: 0,
-          background: data?.bgColor,
-          backgroundImage: `url(${data?.bgImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <Box sx={boxContainerStyles(data)}>
         <Container>
           <Grid
             pt={data?.pt2 || '50px'}
             pb={'0'}
             container
             spacing={2}
-            sx={{
-              alignItems: 'center',
-              flexDirection: { xs: 'column', sm: 'row' },
-            }}
+            sx={gridBoxStyles}
           >
-            <Grid
-              item
-              xs={12}
-              sm={data?.leftGrid || 7}
-              sx={{ display: 'flex', flexDirection: 'column' }}
-            >
+            <Grid item xs={12} sm={data?.leftGrid || 7} sx={gridItemStyles}>
               {data?.title && (
                 <Typography
                   variant="h1"
@@ -103,24 +92,7 @@ const InnerHero = ({ data, innerData }) => {
                     xl: '20px',
                   }}
                 >
-                  <Button
-                    herf="/book-a-demo"
-                    target="_blank"
-                    sx={{
-                      backgroundColor: '#fff',
-                      display: { xs: 'none', sm: 'flex' },
-                      '&:hover': {
-                        color: '#fff',
-                        backgroundColor: '#fff',
-                      },
-                      py: { xs: '7px', sm: '8px', md: '10px', lg: '10px' },
-                      px: { xs: '10px', sm: '10px', md: '12px', lg: '15px' },
-                      height: '50px',
-                      width: '160px',
-                      color: '#001C63',
-                      fontWeight: '700',
-                    }}
-                  >
+                  <Button herf="/book-a-demo" target="_blank" sx={buttonStyles}>
                     {isLoading ? (
                       <Skeleton width={100} height={30} />
                     ) : (
@@ -131,16 +103,7 @@ const InnerHero = ({ data, innerData }) => {
               )}
             </Grid>
             {data?.image && (
-              <Grid
-                item
-                xs={12}
-                sm={data?.rightGrid || 5}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'right',
-                }}
-              >
+              <Grid item xs={12} sm={data?.rightGrid || 5} sx={imageGridStyle}>
                 {isLoading ? (
                   <Skeleton
                     width={data?.imageWidth}

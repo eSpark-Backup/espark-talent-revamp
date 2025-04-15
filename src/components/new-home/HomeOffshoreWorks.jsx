@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { EffectCube, Navigation, Pagination } from 'swiper/modules';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
+import { titleBoxStyles } from './HomeOffshoreWorksStyles';
 
 const HomeOffshoreWorks = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -71,21 +73,14 @@ const HomeOffshoreWorks = ({ data }) => {
     <Box sx={mainBoxStyle}>
       <Box sx={titleAndSwiperBoxStyle}>
         {title && (
-          <Box sx={{ px: 2 }}>
+          <Box sx={titleBoxStyles}>
             <Typography variant="h2" color="secondary" sx={titleStyle}>
               {title}
             </Typography>
           </Box>
         )}
         {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
-            }}
-          >
+          <Box sx={circularProgressStyle}>
             <CircularProgress />
           </Box>
         ) : (

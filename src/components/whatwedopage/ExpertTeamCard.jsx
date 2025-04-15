@@ -25,6 +25,7 @@ import {
   slideStyle,
   titleStyle,
 } from '@/constants/what-we-do-page/expert-team-card';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const ExpertTeamCard = ({ teamData }) => {
   const prevRef = useRef(null);
@@ -73,14 +74,7 @@ const ExpertTeamCard = ({ teamData }) => {
       </Box>
 
       {loading ? (
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '200px',
-          }}
-        >
+        <Box sx={circularProgressStyle}>
           <CircularProgress />
         </Box>
       ) : (

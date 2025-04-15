@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation';
 import {
   descriptionTypographyStyleForCustomizeSolution,
   mainContainerStyleForCustomizeSolution,
-} from '@/constants/hire-developer/hire-developer';
-import CustomSection from './CustomSection';
-import CustomSectionSlider from './CustomSectionSlider';
+} from '@/components/hire-developer/HireDeveloperStyle';
+import CustomSection from '@/components/hire-developer/CustomSection';
+import CustomSectionSlider from '@/components/hire-developer/CustomSectionSlider';
+import { innerHtmlBox } from './CustomizedSolutionStyles';
 
 const CustomizedSolution = ({ data }) => {
   const { bgImage, title, descrcipton, items, styles } = data || {};
@@ -23,7 +24,7 @@ const CustomizedSolution = ({ data }) => {
   return (
     <>
       <Box sx={mainContainerStyleForCustomizeSolution(bgImage, pathname)}>
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Box sx={innerHtmlBox}>
           <Box sx={typographyBoxStyle}>
             <Typography
               sx={titleTypographyStyle}

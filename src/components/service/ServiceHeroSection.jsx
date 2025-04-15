@@ -3,7 +3,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { servicesHeroSectionStyles } from '@/constants/hire-developer/hire-developer';
+import { servicesHeroSectionStyles } from '@/components/hire-developer/HireDeveloperStyle';
 
 const ServiceHeroSection = ({ data }) => {
   const {

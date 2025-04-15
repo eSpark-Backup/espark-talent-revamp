@@ -11,8 +11,8 @@ import {
   Skeleton,
   Button,
 } from '@mui/material';
-import CareersForm from './CareersForm';
-import HireModal from '../Hire-remote/HireModal';
+import CareersForm from '@/components/careers/CareersForm';
+import HireModal from '@/components/hire-remote/HireModal';
 import {
   applyButtonBoxStyle,
   applyButtonStyle,
@@ -25,7 +25,13 @@ import {
   jobLocationTextStyle,
   jobTitleBoxStyle,
   jobTitleTextStyle,
-} from '@/constants/careers-form-data';
+} from '@/constants/careers/careers-form-data';
+import {
+  titleSkeltonStyle,
+  locationSkeltonStyle,
+  skeltonStyle,
+  itemSkeltonStyle,
+} from '@/components/careers/CareerCardsStyles';
 import {
   handleApplyButtonClick,
   handleJobCategoryChange,
@@ -55,7 +61,17 @@ const CareerCards = ({ data }) => {
   );
   const { form } = CAREERS_FORM_DATA;
 
+  /**
+   * Handles the action of opening a modal or dialog by setting the `open` state to `true`.
+   * Typically used to display additional content or a detailed view.
+   */
   const handleOpen = () => setOpen(true);
+  /**
+   * Closes the modal by setting the `open` state to `false`.
+   *
+   * @function handleModalClose
+   * @returns {void}
+   */
   const handleModalClose = () => setOpen(false);
 
   const jobSelect = (jobs) => (
@@ -77,24 +93,21 @@ const CareerCards = ({ data }) => {
       </select>
     </div>
   );
-
   const jobCard = (item, index) => (
     <Box key={index} sx={cardContainerStyle}>
       <Box sx={jobTitleBoxStyle}>
         <Typography variant="h3" color="secondary" sx={jobTitleTextStyle}>
-          {item?.title || (
-            <Skeleton variant="text" sx={{ fontSize: '3rem', width: '80%' }} />
-          )}
+          {item?.title || <Skeleton variant="text" sx={titleSkeltonStyle} />}
         </Typography>
         <Typography variant="body1" sx={jobLocationTextStyle}>
           {item?.location || (
-            <Skeleton variant="text" sx={{ fontSize: '1rem', width: '70%' }} />
+            <Skeleton variant="text" sx={locationSkeltonStyle} />
           )}
         </Typography>
       </Box>
       <Box sx={jobDiscriptionBoxStyle}>
         {!item?.title ? (
-          <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+          <Skeleton variant="text" sx={skeltonStyle} />
         ) : (
           <Typography
             sx={jobDiscriptionHeadingStyle}
@@ -108,7 +121,7 @@ const CareerCards = ({ data }) => {
           Array(5)
             ?.fill()
             ?.map((_, i) => (
-              <Skeleton key={i} variant="text" sx={{ fontSize: '1rem' }} />
+              <Skeleton key={i} variant="text" sx={itemSkeltonStyle} />
             ))
         ) : (
           <Typography color="#000" variant="body1" sx={jobDiscriptionTextStyle}>
@@ -134,11 +147,24 @@ const CareerCards = ({ data }) => {
       </Box>
     </Box>
   );
-
+  const paginationBoxStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    mt: 3,
+  };
+  const paginationItemStyles = {
+    borderRadius: '10px',
+    '&.Mui-selected': {
+      backgroundColor: 'primary.main',
+      color: 'white',
+    },
+  };
+  const boxContainerStyle = { py: { xs: '5%', sm: '3%', md: '3%' } };
+  const containerBoxStyle = { mt: 1, mb: 2.8 };
   return (
-    <Box sx={{ py: { xs: '5%', sm: '3%', md: '3%' } }}>
+    <Box sx={boxContainerStyle}>
       <Container>
-        <Box sx={{ mt: 1, mb: 2.8 }}>{jobSelect(data)}</Box>
+        <Box sx={containerBoxStyle}>{jobSelect(data)}</Box>
         {paginatedData?.map((item, index) => jobCard(item, index))}
         <HireModal
           content={
@@ -154,7 +180,7 @@ const CareerCards = ({ data }) => {
           handleModalClose={handleModalClose}
         />
         {pageCount > 1 && (
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+          <Box sx={paginationBoxStyle}>
             <Pagination
               count={pageCount}
               page={page}
@@ -164,16 +190,7 @@ const CareerCards = ({ data }) => {
                 isSmallScreen ? 'small' : isMediumScreen ? 'medium' : 'large'
               }
               renderItem={(item) => (
-                <PaginationItem
-                  {...item}
-                  sx={{
-                    borderRadius: '10px',
-                    '&.Mui-selected': {
-                      backgroundColor: 'primary.main',
-                      color: 'white',
-                    },
-                  }}
-                />
+                <PaginationItem {...item} sx={paginationItemStyles} />
               )}
             />
           </Box>

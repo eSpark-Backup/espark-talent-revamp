@@ -2,6 +2,11 @@
 
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import {
+  headingStyles,
+  paragraphStyles,
+  boxStyles,
+} from './ParagraphTitleStyles';
 
 const ParagraphTitle = ({
   title,
@@ -17,25 +22,18 @@ const ParagraphTitle = ({
 
   return (
     <>
-      <Box sx={{ pb: '30px', px: { md: '20%', sm: '10%', xs: '2%' } }}>
+      <Box sx={boxStyles}>
         <Typography
           variant={hVar || 'h2'}
           color={hColor || 'secondary'}
-          sx={{
-            textAlign: hAlign || 'center',
-            flexWrap: 'wrap',
-            fontSize: '32px !important',
-            [theme?.breakpoints?.down('sm')]: {
-              fontSize: '20px !important',
-            },
-          }}
+          sx={headingStyles(hAlign, theme)}
         >
           {title}
         </Typography>
         <Typography
           variant={pVar || 'body1'}
           color={pColor || 'secondary'}
-          sx={{ textAlign: pAlign || 'center' }}
+          sx={paragraphStyles(pAlign)}
         >
           {paragraph}
         </Typography>

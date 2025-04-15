@@ -11,7 +11,7 @@ import {
   taskAltIconStyle,
   listItemTypographyStyle,
   imageBoxStyle,
-} from '@/constants/solutions/for-business-startup/CustomizeOutsourceConstant';
+} from '@/components/for-startup/CustomizeOutsourceStyles';
 
 const CustomizeOutsource = ({ data }) => {
   if (!data) {

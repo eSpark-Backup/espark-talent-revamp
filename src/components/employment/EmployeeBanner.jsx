@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
-import EmployeeSlider from '../new-home/EmployeeSlider';
-import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home';
+import EmployeeSlider from '@/components/new-home/EmployeeSlider';
+import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home/new-home';
+import { employeeSliderBoxStyle } from './EmployeeBannerStyle';
 
 const EmployeeBanner = ({ data }) => {
   const {
@@ -62,7 +63,7 @@ const EmployeeBanner = ({ data }) => {
             <Box component={'img'} sx={imageStyle} src={animatedGif} />
           </Box>
         </Box>
-        <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>
+        <Box sx={employeeSliderBoxStyle}>
           <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
         </Box>
       </Box>

@@ -31,7 +31,8 @@ import {
   listItemIconStyle,
   taskAltIconStyle,
   listItemTypographyStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingItemConstant';
+} from '@/components/for-enterprise/OutSourcingItemStyles';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const OutSourcingItem = ({ data }) => {
   const [isClient, setIsClient] = useState(false);
@@ -133,15 +134,8 @@ const OutSourcingItem = ({ data }) => {
               </Grid>
             </Swiper>
           ) : (
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '200px',
-              }}
-            >
-              <CircularProgress color="success" />
+            <Box sx={circularProgressStyle}>
+              <CircularProgress />
             </Box>
           )}
         </Container>

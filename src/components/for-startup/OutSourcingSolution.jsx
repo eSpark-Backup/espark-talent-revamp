@@ -3,14 +3,14 @@
 import { Box, Typography, Grid, Container } from '@mui/material';
 import Image from 'next/image';
 
-import ParagraphTitle from '../homepage/ParagraphTitle';
+import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import {
   outerBoxStyle,
   innerBoxStyle,
   gridItemStyle,
   itemBoxStyle,
   titleTypographyStyle,
-} from '@/constants/solutions/for-business-startup/OutSourcingSolutionConstant';
+} from '@/components/for-startup/OutSourcingSolutionStyles';
 
 const OutSourcingSolution = ({ data }) => {
   if (!data) {

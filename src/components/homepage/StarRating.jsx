@@ -1,4 +1,8 @@
 import { Box } from '@mui/material';
+import {
+  ratimgImageBoxStyles,
+  ratimgImageStyles,
+} from '@/components/homepage/StarRatingStyles';
 
 const StarRating = ({ stars }) => {
   const ratings = [1, 2, 3, 4, 5];
@@ -13,10 +17,7 @@ const StarRating = ({ stars }) => {
     <Box
       key={index}
       component={'img'}
-      sx={{
-        width: { xs: '15px', md: '20px' },
-        height: { xs: '15px', md: '20px' },
-      }}
+      sx={ratimgImageStyles}
       alt="rating_img"
       src={`/images/homepage/our-clients/${conditionalRating(rating, stars, brigthStar, darkStar)}.svg`}
     />
@@ -24,9 +25,7 @@ const StarRating = ({ stars }) => {
 
   return (
     <>
-      <Box sx={{ display: 'inline-flex', gap: 0.7 }}>
-        {ratings?.map(renderRating)}
-      </Box>
+      <Box sx={ratimgImageBoxStyles}>{ratings?.map(renderRating)}</Box>
     </>
   );
 };
