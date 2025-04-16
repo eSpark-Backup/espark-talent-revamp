@@ -15,7 +15,7 @@ import {
   imageBoxStyle,
 } from '@/components/how-it-work/OurServiceStyles';
 
-import Title from './Title';
+import Title from '@/components/how-it-work/Title';
 
 const OurService = ({ ourService }) => {
   const { card, heading, subHeading } = ourService;

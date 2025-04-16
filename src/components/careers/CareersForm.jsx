@@ -18,7 +18,7 @@ import {
   feildBoxStyles,
   lableTitlestyles,
   fileUploadBoxStyles,
-} from './CareersFormStyles';
+} from '@/components/careers/CareersFormStyles';
 const CareersForm = ({ form, jobData, handleCloseModal }) => {
   const { description, fields } = form;
   const [open, setOpen] = useState(false);

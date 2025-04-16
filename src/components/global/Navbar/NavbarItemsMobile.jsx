@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
-import { linkBoxStyle } from './NavbarItemsMobileStyle';
+import { linkBoxStyle } from '@/components/global/navbar/NavbarItemsMobileStyle';
 
 const NavbarItemsMobile = ({
   item,

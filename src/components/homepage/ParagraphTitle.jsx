@@ -6,7 +6,7 @@ import {
   headingStyles,
   paragraphStyles,
   boxStyles,
-} from './ParagraphTitleStyles';
+} from '@/components/homepage/ParagraphTitleStyles';
 
 const ParagraphTitle = ({
   title,

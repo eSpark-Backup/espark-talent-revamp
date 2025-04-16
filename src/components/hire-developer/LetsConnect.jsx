@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
-import { linkBoxStyle } from './LetsConnectStyle';
+import { linkBoxStyle } from '@/components/hire-developer/LetsConnectStyle';
 
 const LetsConnect = ({ data }) => {
   const { title, descrcipton, btnLink, btnText, styles } = data || {};

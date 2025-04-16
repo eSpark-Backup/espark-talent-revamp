@@ -12,7 +12,7 @@ import ESparkButton from '@/components/global/eSparkButton';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { imageBoxStyles } from './OurExpertiesStyles';
+import { imageBoxStyles } from '@/components/homepage/OurExpertiesStyles';
 
 const OurExperties = ({ data, link }) => {
   const { title, buttonText, buttonLink, sections, styles } = data || {};

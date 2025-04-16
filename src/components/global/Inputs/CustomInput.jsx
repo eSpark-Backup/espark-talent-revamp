@@ -9,7 +9,7 @@ import {
   boxStyle,
   tooltipBoxStyle,
   inputStyle,
-} from './CustomInputStyles';
+} from '@/components/global/inputs/CustomInputStyles';
 
 const CustomInput = ({
   value,

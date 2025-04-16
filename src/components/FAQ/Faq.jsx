@@ -19,7 +19,7 @@ import {
   accordianDropDownIconStyles2,
   accordianDropDownIconStyles,
   accordianSummaryStyles,
-} from './FaqStyles';
+} from '@/components/faq/FaqStyles';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 
 const Faq = ({ data }) => {

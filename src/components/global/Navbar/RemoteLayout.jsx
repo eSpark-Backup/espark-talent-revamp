@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { Box, Button, IconButton } from '@mui/material';
-import DefaultNavbarMobile from './DefaultNavbarMobile';
+import DefaultNavbarMobile from '@/components/global/navbar/DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from 'next/link';

@@ -8,7 +8,7 @@ import {
 } from '@/components/hire-developer/HireDeveloperStyle';
 import CustomSection from '@/components/hire-developer/CustomSection';
 import CustomSectionSlider from '@/components/hire-developer/CustomSectionSlider';
-import { innerHtmlBox } from './CustomizedSolutionStyles';
+import { innerHtmlBox } from '@/components/hire-developer/CustomizedSolutionStyles';
 
 const CustomizedSolution = ({ data }) => {
   const { bgImage, title, descrcipton, items, styles } = data || {};

@@ -19,7 +19,7 @@ import EmployeeBanner from '@/components/employment/EmployeeBanner';
 import { Box } from '@mui/material';
 import HomePageHiringModel from '@/components/new-home/HomePageHiringModel';
 import PricingDefference from '@/components/pricing/PricingDefference';
-import { clientSliderBoxStyle } from './HomeTopStyles';
+import { clientSliderBoxStyle } from '@/components/homepage/HomeTopStyles';
 
 const HomeTop = () => {
   return (

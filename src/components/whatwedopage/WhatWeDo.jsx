@@ -6,7 +6,7 @@ import WhyChooseOurHr from '@/components/whatwedopage/WhyChooseOurHr';
 import QuestionAnswer from '@/components/whatwedopage/QuestionAnswer';
 import ExpertTeamCard from '@/components/whatwedopage/ExpertTeamCard';
 import ProfessionalTeamCard from '@/components/whatwedopage/ProfessionalTeamCard';
-import Faq from '@/components/FAQ/Faq';
+import Faq from '@/components/faq/Faq';
 
 import {
   CLIENTS_SLIDER_DATA,

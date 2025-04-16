@@ -2,7 +2,7 @@
 
 import { hireRemoteimageStyle } from '@/components/hire-developer/HireDeveloperStyle';
 import { Box, Button, Typography } from '@mui/material';
-import { imageStyles } from './HireRemoteBannerStyles';
+import { imageStyles } from '@/components/hire-remote/HireRemoteBannerStyles';
 
 const HireRemoteBanner = ({ data, handleOpen, styles }) => {
   const {

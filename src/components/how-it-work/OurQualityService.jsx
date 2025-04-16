@@ -7,7 +7,7 @@ import {
   subHeadingStyles,
   headingBoxStyles,
   gridStyles,
-} from './OurQualityServiceStyles';
+} from '@/components/how-it-work/OurQualityServiceStyles';
 
 const OurQualityService = ({ ourQualityService }) => {
   const { card, heading, subHeading } = ourQualityService;

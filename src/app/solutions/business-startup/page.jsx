@@ -5,7 +5,7 @@ import TalentIgnite from '@/components/for-startup/TalentIgnite';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/BusinessVenture';
-import Faq from '@/components/FAQ/Faq';
+import Faq from '@/components/faq/Faq';
 import { getMetadata } from '@/components/global/seo';
 
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';

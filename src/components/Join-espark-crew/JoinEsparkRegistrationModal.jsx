@@ -38,7 +38,7 @@ import {
   personalinfoHeadingStyle,
   imageUploaderStack,
   feildsBoxStyles2,
-} from './JoinEsparkRegistrationModalStyles';
+} from '@/components/Join-espark-crew/JoinEsparkRegistrationModalStyles';
 
 const JoinEsparkRegistrationModal = ({
   open,

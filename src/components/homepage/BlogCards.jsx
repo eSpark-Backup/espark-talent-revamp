@@ -18,8 +18,8 @@ import {
   paginationItemStyles,
   paginationWrapperStyles,
   blogCardBoxStyles,
-} from './BlogCardsStyles';
-import { conatinerBoxStyle } from './BlogCardStyles';
+} from '@/components/homepage/BlogCardsStyles';
+import { conatinerBoxStyle } from '@/components/homepage/BlogCardStyles';
 
 const BlogCards = ({ data }) => {
   const [page, setPage] = useState(1);

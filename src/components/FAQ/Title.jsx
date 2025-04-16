@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { titleStyles } from '@/components/FAQ/titleStyles';
+import { titleStyles } from '@/components/faq/titleStyles';
 
 const Title = ({ title }) => {
   return (

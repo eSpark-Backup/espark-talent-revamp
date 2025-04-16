@@ -17,7 +17,7 @@ import {
   accordionHeadingStyle,
   accordionDetailsStyle,
   boxContainerStyle,
-} from '@/components/FAQ/EnterpriseFaqStyles';
+} from '@/components/faq/EnterpriseFaqStyles';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle';
 import Image from 'next/image';
 

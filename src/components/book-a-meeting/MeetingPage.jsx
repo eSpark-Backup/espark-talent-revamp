@@ -21,7 +21,7 @@ import Process from '@/components/homepage/Process';
 import BookAMeeting from '@/components/book-a-meeting/BookAMeeting';
 import { BOOK_A_MEETING } from '@/constants/book-a-meeting/book-a-meeting';
 import { Box } from '@mui/material';
-import { clientSaysStyle } from './MeetingPageStyles';
+import { clientSaysStyle } from '@/components/book-a-meeting/MeetingPageStyles';
 
 const MeetingPage = () => {
   useEffect(() => {

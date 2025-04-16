@@ -1,5 +1,9 @@
 import { Box, Typography } from '@mui/material';
-import { boxStyle, headingStyle, subHeadingStyle } from './HowitsWorkTitle';
+import {
+  boxStyle,
+  headingStyle,
+  subHeadingStyle,
+} from '@/components/how-it-work/HowitsWorkTitle';
 
 const Title = ({ heading, subHeading, variant }) => {
   return (

@@ -6,9 +6,9 @@ import {
   HIRE_A_TALENT_LINK,
   Request_Candidate,
 } from '@/constants/global/header';
-import Topbar from './Topbar';
+import Topbar from '@/components/global/navbar/Topbar';
 import { usePathname } from 'next/navigation';
-import DefaultNavbar from './DefaultNavbar';
+import DefaultNavbar from '@/components/global/navbar/DefaultNavbar';
 import { TOP_BAR_DATA } from '@/constants/new-home/homepage';
 
 const AllpagesHeader = () => {

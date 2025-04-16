@@ -7,7 +7,7 @@ import {
   mainContainerStyleForCustomizeSolution,
 } from '@/components/hire-developer/HireDeveloperStyle';
 import CustomSectionSlider from '@/components/hire-developer/CustomSectionSlider';
-import { containerStyle } from './ServiceExpertiesStyles';
+import { containerStyle } from '@/components/service/ServiceExpertiesStyles';
 
 const ServiceExperties = ({ data }) => {
   const { bgImage, title, paragraph, items, styles } = data || {};

@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { EffectCube, Navigation, Pagination } from 'swiper/modules';
 import { circularProgressStyle } from '@/components/global/circularProgressStyles';
-import { titleBoxStyles } from './HomeOffshoreWorksStyles';
+import { titleBoxStyles } from '@/components/new-home/HomeOffshoreWorksStyles';
 
 const HomeOffshoreWorks = ({ data }) => {
   const [loading, setLoading] = useState(true);

@@ -3,7 +3,7 @@
 import { frontendHeroSectionMainBoxStyle } from '@/components/hire-developer/HireDeveloperStyle';
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
-import { homeLinkStyle } from './HireHeroSectionStyles';
+import { homeLinkStyle } from '@/components/hire-developer/HireHeroSectionStyles';
 
 const HireHeroSection = ({ data }) => {
   const { bgImage, styles } = data || {};

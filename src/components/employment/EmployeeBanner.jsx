@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import EmployeeSlider from '@/components/new-home/EmployeeSlider';
 import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home/new-home';
-import { employeeSliderBoxStyle } from './EmployeeBannerStyle';
+import { employeeSliderBoxStyle } from '@/components/employment/EmployeeBannerStyle';
 
 const EmployeeBanner = ({ data }) => {
   const {

@@ -17,7 +17,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { checkingExpendedAccordion, handleChangeAccordion } from '@/utils';
-import { noDataStyles } from './HomePageExpertiesStyles';
+import { noDataStyles } from '@/components/new-home/HomePageExpertiesStyles';
 
 const HomePageExperties = ({ data }) => {
   const pathName = usePathname();

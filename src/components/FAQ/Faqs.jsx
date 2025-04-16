@@ -10,7 +10,7 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import { faqDescStyles } from '@/components/FAQ/faqsStyles';
+import { faqDescStyles } from '@/components/faq/faqsStyles';
 
 const Faqs = ({ data }) => {
   const [expanded, setExpanded] = useState(null);

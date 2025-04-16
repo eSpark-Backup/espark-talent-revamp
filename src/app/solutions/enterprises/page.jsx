@@ -5,7 +5,7 @@ import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
 import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
-import Faq from '@/components/FAQ/Faq';
+import Faq from '@/components/faq/Faq';
 import { getMetadata } from '@/components/global/seo';
 
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';

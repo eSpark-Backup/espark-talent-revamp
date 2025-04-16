@@ -10,7 +10,7 @@ import {
   descriptionStyles,
   boxContainerStyle,
   gridTextBoxStyles,
-} from './HRFirmSuccessStyles';
+} from '@/components/how-it-work/HRFirmSuccessStyles';
 
 const HRFirmSuccess = ({ hrFirm }) => {
   const { heading, subHeading, card } = hrFirm;

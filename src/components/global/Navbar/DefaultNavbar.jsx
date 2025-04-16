@@ -5,14 +5,14 @@ import Link from 'next/link';
 import Popper from '@mui/material/Popper';
 import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
-import DropItems from './DropItems';
+import DropItems from '@/components/global/navbar/DropItems';
 import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/new-home/homepage';
-import GlobalLayout from './GlobalLayout';
-import RemoteLayout from './RemoteLayout';
+import GlobalLayout from '@/components/global/navbar/GlobalLayout';
+import RemoteLayout from '@/components/global/navbar/RemoteLayout';
 import { NAVBAR_STYLE } from '@/constants/global/header';
-import NavbarItems from './NavbarItems';
-import { growInnerBoxStyle } from './DefaultNavbarStyles';
+import NavbarItems from '@/components/global/navbar/NavbarItems';
+import { growInnerBoxStyle } from '@/components/global/navbar/DefaultNavbarStyles';
 
 function DefaultNavbar({
   routes,
