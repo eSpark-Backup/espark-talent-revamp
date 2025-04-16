@@ -218,7 +218,7 @@ export const CITIES = [
   'Ziarat',
 ];
 
-const COUNTRIES = [
+export const COUNTRIES = [
   'Afghanistan',
   'Albania',
   'Algeria',

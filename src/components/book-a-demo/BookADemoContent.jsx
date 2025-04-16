@@ -2,8 +2,9 @@ import { Box, Typography } from '@mui/material';
 import { CLIENTS_SLIDER_DATA } from '@/constants/new-home/homepage';
 import { CLIENT_SLIDER_BREAK_POINTS } from '@/constants/book-a-demo/book-a-demo';
 import BookClientSlider from '@/components/global/BookClientSlider';
+import { styles } from './BookADemoContentStyles';
 
-const BookADemoContent = ({ content, styles }) => {
+const BookADemoContent = ({ content }) => {
   const { title, text, description, image, alt } = content;
   const {
     mainBox,

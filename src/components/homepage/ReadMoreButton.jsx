@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { buttonStyle, READ_MORE } from '@/constants/blogs/blogs';
+import { READ_MORE } from '@/constants/blogs/blogs';
+import { buttonStyle } from '@/components/homepage/ReadMoreButtonStyles';
 const {
   containerBoxStyle,
   typographyAndArrowBoxStyle,

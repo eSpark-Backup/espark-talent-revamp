@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import Image from 'next/image';
 import ParagraphTitle from '@/components/homepage/ParagraphTitle.jsx';
 import { usePathname } from 'next/navigation';
-import { ACHIEVEMENTS_STYLES } from '@/constants/new-home/homepage';
+import { ACHIEVEMENTS_STYLES } from './AwardAchiefmentStyles';
 
 const AwardAchievement = ({ data, design }) => {
   const {

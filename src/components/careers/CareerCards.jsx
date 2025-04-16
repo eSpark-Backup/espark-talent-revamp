@@ -13,19 +13,19 @@ import {
 } from '@mui/material';
 import CareersForm from '@/components/careers/CareersForm';
 import HireModal from '@/components/hire-remote/HireModal';
+import { CAREERS_FORM_DATA } from '@/constants/careers/careers-form-data';
 import {
   applyButtonBoxStyle,
   applyButtonStyle,
   applyButtonTextStyle,
   cardContainerStyle,
-  CAREERS_FORM_DATA,
   jobDiscriptionBoxStyle,
   jobDiscriptionHeadingStyle,
   jobDiscriptionTextStyle,
   jobLocationTextStyle,
   jobTitleBoxStyle,
   jobTitleTextStyle,
-} from '@/constants/careers/careers-form-data';
+} from '@/components/careers/CareerCardsStyles.js';
 import {
   titleSkeltonStyle,
   locationSkeltonStyle,

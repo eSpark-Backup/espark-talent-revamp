@@ -6,15 +6,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import { circularProgressStyle } from '@/components/global/circularProgressStyles';
+import { cardStyle } from './PricingCardStyles';
+import { cardBoxStyle, titleBoxStyle } from './PricingDefferenceStyles';
 import {
   avatarStyle,
   containerStyle,
   paragraphStyle,
   slideStyle,
 } from '@/constants/new-home/new-home';
-import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
-const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
+const PricingDefference = ({ data, backgroundColorStyle }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,18 +27,6 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
     }
   }, [data]);
 
-  const titleBoxStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: { xs: 0.5, sm: 1, lg: 0 },
-  };
-  const cardBoxStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    gap: 2,
-    p: 3,
-  };
   const renderSlide = (card, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Card sx={cardStyle}>

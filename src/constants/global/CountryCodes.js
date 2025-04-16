@@ -1,4 +1,4 @@
-export const CountryCode = [
+export const COUNTRY_CODES = [
   {
     name: 'Andorra',
     region: 'Europe',

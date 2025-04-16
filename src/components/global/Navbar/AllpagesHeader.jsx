@@ -4,7 +4,7 @@ import routes from '@/constants/global/routes';
 import {
   EXCLUDED_PATHS,
   HIRE_A_TALENT_LINK,
-  Request_Candidate,
+  REQUEST_CANDIDATE,
 } from '@/constants/global/header';
 import Topbar from '@/components/global/navbar/Topbar';
 import { usePathname } from 'next/navigation';
@@ -26,7 +26,7 @@ const AllpagesHeader = () => {
         action={{
           type: 'external',
           route: HIRE_A_TALENT_LINK,
-          label: Request_Candidate,
+          label: REQUEST_CANDIDATE,
         }}
       />
     </>

@@ -24,7 +24,7 @@ import {
   paragraphStyle,
   slideStyle,
   titleStyle,
-} from '@/constants/what-we-do-page/why-choose-hr';
+} from '@/components/whatwedopage/WhyChooseOurHrStyles';
 import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const WhyChooseOurHrSlider = ({ data }) => {

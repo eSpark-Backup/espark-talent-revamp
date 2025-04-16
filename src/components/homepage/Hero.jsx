@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getPathStatus } from '@/utils';
-import { HERO_SECTIO_STYLE } from '@/constants/global/hero-sections';
+import { HERO_SECTION_STYLE } from './HeroStyles';
 
 const Hero = ({ data }) => {
   const pathName = usePathname();
@@ -22,7 +22,7 @@ const Hero = ({ data }) => {
     gridItemStyle,
     imgageGridItemStyle,
     imageStyle,
-  } = HERO_SECTIO_STYLE || {};
+  } = HERO_SECTION_STYLE || {};
   const { isDemo, isHome, isEnterprise, isCrew, isBlogOrStartup } =
     getPathStatus(pathName);
 

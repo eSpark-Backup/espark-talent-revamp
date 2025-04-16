@@ -3,32 +3,25 @@
 import { Box, Container, Grid, ListItemIcon, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  mainBoxStyle,
+  innerBoxStyle,
+  headingStyle,
+  subHeadingStyle,
+  subTitleStyle,
+  descriptionStyle,
+  stepsTitle,
+  imageBoxStyle,
+  gridContainerStyle,
+  stepTitle,
+  itemBoxStyle,
+  itemTyporaphyStyle,
+  listIconStyle,
+} from '@/components/thankyou/ThankYouStyles';
 
 const ThankYou = ({ data }) => {
-  const {
-    heading,
-    subHeading,
-    subTitle,
-    description,
-    stepstitle,
-    steps,
-    styles,
-  } = data || {};
-  const {
-    mainBoxStyle,
-    innerBoxStyle,
-    headingStyle,
-    subHeadingStyle,
-    subTitleStyle,
-    descriptionStyle,
-    stepsTitle,
-    imageBoxStyle,
-    gridContainerStyle,
-    stepTitle,
-    itemBoxStyle,
-    itemTyporaphyStyle,
-    listIconStyle,
-  } = styles || {};
+  const { heading, subHeading, subTitle, description, stepstitle, steps } =
+    data || {};
 
   const render = (item, idx) => (
     <Box key={idx} sx={itemBoxStyle}>

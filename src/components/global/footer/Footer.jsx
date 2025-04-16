@@ -4,7 +4,8 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FOOTER_STYLE, HIDDEN_PATHS } from '@/constants/global/footer';
+import { HIDDEN_PATHS } from '@/constants/global/footer';
+import { FOOTER_STYLE } from './FooterStyles';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();

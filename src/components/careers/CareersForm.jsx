@@ -24,7 +24,7 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
   const handleClose = () => setOpen(false);
-  const Book_A_Demo_Keys = {
+  const BOOK_A_DEMO_KEYS = {
     applied_for: '',
     full_name: '',
     email: '',
@@ -108,7 +108,7 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
 
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
-      initialValues: Book_A_Demo_Keys,
+      initialValues: BOOK_A_DEMO_KEYS,
       validationSchema: profileValidationSchema,
       onSubmit: onSubmit,
     });

@@ -164,7 +164,7 @@ export const fields = [
   { label: 'Your LinkedIn Profile', key: 'linkedin_profile_link' },
 ];
 
-export const PartnerFormData = {
+export const PPARTNER_FORM_DATA = {
   first_name: '',
   last_name: '',
   email: '',

@@ -3,7 +3,6 @@ import {
   CLIENTS_SLIDER_DATA,
 } from '@/constants/new-home/homepage';
 import {
-  cardStyleForHomePage,
   DIFFERENCE_DATA,
   EMPLOYEE_HERO_DATA,
   EXPERT_TEAM_DATA,
@@ -20,6 +19,8 @@ import { Box } from '@mui/material';
 import HomePageHiringModel from '@/components/new-home/HomePageHiringModel';
 import PricingDefference from '@/components/pricing/PricingDefference';
 import { clientSliderBoxStyle } from '@/components/homepage/HomeTopStyles';
+import { cardStyleForHomePage } from './HomeTopStyle';
+import { cardStyle } from '../pricing/PricingCardStyles';
 
 const HomeTop = () => {
   return (
@@ -27,7 +28,7 @@ const HomeTop = () => {
       <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
       <PricingDefference
         data={DIFFERENCE_DATA}
-        cardStyle={cardStyleForHomePage}
+        cardStyle={{ cardStyleForHomePage, ...cardStyle }}
         backgroundColorStyle={{
           '@media(min-width:1024px)': {
             backgroundSize: '100%',

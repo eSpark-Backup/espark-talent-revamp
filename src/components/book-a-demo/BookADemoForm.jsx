@@ -7,17 +7,14 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
 import { BookADemoFormValidationSchema } from '@/schema/schema';
-import {
-  Book_A_Demo_Keys,
-  bookADemoFormStyles,
-  formBoxStyles,
-} from '@/constants/book-a-demo/book-a-demo';
+import { BOOK_A_DEMO_KEYS } from '@/constants/book-a-demo/book-a-demo';
 import BasicModal from '@/components/book-a-demo/BookADemoModal';
 import ErrorMessage from '@/components/book-a-demo/ErrorMessage';
 import {
   feildStyles,
   titleBoxStyle,
 } from '@/components/book-a-demo/BookADemoFormStyles';
+import { formBoxStyles, bookADemoFormStyles } from './BookADemoContentStyles';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;
@@ -44,7 +41,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
 
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
-      initialValues: Book_A_Demo_Keys,
+      initialValues: BOOK_A_DEMO_KEYS,
       validationSchema: BookADemoFormValidationSchema,
       onSubmit: async (values, action) => {
         try {

@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import ClientSaysSlider from '@/components/homepage/ClientSaysSlider';
-import { mainContainerStyleForClientSlider } from '@/constants/new-home/homepage';
 import { oldCircularProgressStyle } from '@/components/global/circularProgressStyles';
+import { mainContainerStyleForClientSlider } from './ClientSaysStyles';
 
 const ClientSays = ({ data }) => {
   const { heading, subHeading, slider, styles } = data || {};

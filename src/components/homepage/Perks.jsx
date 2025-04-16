@@ -7,7 +7,7 @@ import { Button, FormControl, Typography } from '@mui/material';
 import {
   buttonsStyleForPerksComponent,
   buttonTextStyleForPerksComponent,
-} from '@/constants/new-home/homepage';
+} from '@/components/homepage/PerksStyles';
 
 const Perks = ({ data, btnText, btnLink, target, styles, title }) => {
   const [checked, setChecked] = useState(true);

@@ -2,7 +2,7 @@
 
 import { Box, Typography } from '@mui/material';
 
-import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
+import { BOOK_A_DEMO_DATA } from '@/constants/book-a-demo/book-a-demo';
 import HireForm from '@/components/hire-developer/HireForm';
 import { usePathname } from 'next/navigation';
 import {
@@ -11,7 +11,7 @@ import {
 } from '@/components/hire-developer/HireDeveloperStyle';
 
 const FormSection = ({ data }) => {
-  const { form } = Book_A_Demo_Data || {};
+  const { form } = BOOK_A_DEMO_DATA || {};
   const { title, description, styles } = data || {};
   const {
     mainBoxStyle,

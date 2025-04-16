@@ -24,7 +24,7 @@ import {
   paragraphStyle,
   slideStyle,
   titleStyle,
-} from '@/constants/what-we-do-page/expert-team-card';
+} from '@/components/whatwedopage/ExpertTeamCardStyles.jsx';
 import { circularProgressStyle } from '@/components/global/circularProgressStyles';
 
 const ExpertTeamCard = ({ teamData }) => {

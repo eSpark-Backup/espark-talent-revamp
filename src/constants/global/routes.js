@@ -253,7 +253,7 @@ const routes = [
   },
 ];
 
-export const Hire_Remote_Routes = [
+export const HIRE_REMOTE_ROUTES = [
   {
     name: 'Our Company',
     icon: '/images/header/arrow.svg',

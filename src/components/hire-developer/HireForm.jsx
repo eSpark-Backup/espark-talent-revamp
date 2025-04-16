@@ -3,11 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import { useFormik } from 'formik';
 import { usePathname } from 'next/navigation';
 import { BookADemoFormValidationSchema } from '@/schema/schema';
-import {
-  Book_A_Demo_Keys,
-  bookADemoFormStyles,
-  formBoxStyles,
-} from '@/constants/book-a-demo/book-a-demo';
+import { BOOK_A_DEMO_KEYS } from '@/constants/book-a-demo/book-a-demo';
 import PhoneInput from 'react-phone-number-input';
 import axios from 'axios';
 import 'react-phone-number-input/style.css';
@@ -17,6 +13,10 @@ import {
   feildBoxStyles,
   titleboxStyles,
 } from '@/components/hire-developer/HireFormStyles';
+import {
+  bookADemoFormStyles,
+  formBoxStyles,
+} from '../book-a-demo/BookADemoFormStyles';
 
 const BookADemoForm = ({ form, handleModalClose }) => {
   const { title, subTitle, description, fields } = form;
@@ -43,7 +43,7 @@ const BookADemoForm = ({ form, handleModalClose }) => {
 
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
-      initialValues: Book_A_Demo_Keys,
+      initialValues: BOOK_A_DEMO_KEYS,
       validationSchema: BookADemoFormValidationSchema,
       onSubmit: async (values, action) => {
         try {

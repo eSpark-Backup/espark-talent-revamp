@@ -10,9 +10,11 @@ import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/new-home/homepage';
 import GlobalLayout from '@/components/global/navbar/GlobalLayout';
 import RemoteLayout from '@/components/global/navbar/RemoteLayout';
-import { NAVBAR_STYLE } from '@/constants/global/header';
 import NavbarItems from '@/components/global/navbar/NavbarItems';
-import { growInnerBoxStyle } from '@/components/global/navbar/DefaultNavbarStyles';
+import {
+  growInnerBoxStyle,
+  NAVBAR_STYLE,
+} from '@/components/global/navbar/DefaultNavbarStyles';
 
 function DefaultNavbar({
   routes,

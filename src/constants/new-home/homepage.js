@@ -870,117 +870,6 @@ export const CLIENTS_SLIDER_DATA = {
   ],
 };
 
-export const CLIENTS_SLIDER_STYLES = {
-  mainBoxStyle: (bgColor) => ({
-    backgroundColor: bgColor,
-    PY: '2.5%',
-    width: '100%',
-    boxShadow: '0 -6px 19.8px  rgba(0,0,0,0.25) ',
-  }),
-  containerStyle: (pb = '10px') => ({
-    pb: pb || '10px',
-    display: 'flex',
-    justifyContent: 'center',
-  }),
-  shortTitleStyle: (fontWeight, fontSize, lineHeight) => ({
-    fontWeight: fontWeight,
-    py: { xs: '16px', sm: '18px', md: '30px' },
-    pt: { xs: '17px', sm: '20px', md: '50px' },
-    fontSize: fontSize,
-    lineHeight: lineHeight,
-    textAlign: 'center',
-    display: 'none',
-    '@media (max-width:769px)': {
-      display: 'flex',
-    },
-  }),
-  completeTitleStyle: (fontWeight, fontSize, lineHeight) => ({
-    textAlign: 'center',
-    fontWeight: fontWeight,
-    py: { xs: '16px', sm: '18px', md: '30px' },
-    pt: { xs: '17px', sm: '20px', md: '50px' },
-    fontSize: fontSize,
-    lineHeight: lineHeight,
-    display: 'none',
-    '@media (min-width:770px)': {
-      display: 'flex',
-    },
-  }),
-  swiperSlideStyle: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imageBoxStyle: (pb = 5) => ({ pb: pb || 5 }),
-  imageStyle: {
-    width: {
-      sm: '130px',
-      md: '154px',
-      lg: '175px',
-    },
-    height: {
-      sm: '35px',
-      md: '35px',
-      lg: '37px',
-    },
-    '@media (min-width: 550px) and (max-width: 767px)': {
-      width: '160px',
-      height: '25px',
-    },
-    '@media (min-width: 375px) and (max-width: 549px)': {
-      width: '110px',
-      height: '25px',
-    },
-    '@media (min-width: 280px) and (max-width: 374px)': {
-      width: '110px',
-      height: '25px',
-    },
-  },
-};
-
-export const BOOK_CLIENT_SLIDER_STYLES = {
-  mainBoxStyle: (bgColor) => ({
-    backgroundColor: bgColor,
-    PY: '2.5%',
-    width: '100%',
-  }),
-  containerStyle: (pb = '10px') => ({ pb }),
-  bothTitleStyle: (fontWeight, fontSize, lineHeight) => ({
-    textAlign: 'center',
-    fontWeight,
-    py: { xs: '16px', sm: '18px', md: '30px' },
-    pt: { xs: '17px', sm: '20px', md: '50px' },
-    fontSize,
-    lineHeight,
-  }),
-  swiperSlideStyle: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imageBoxStyle: (pb = 5) => ({ pb: pb || 5 }),
-  imageStyle: {
-    width: {
-      sm: '144px',
-      md: '154px',
-      lg: '150px',
-    },
-    height: 'auto',
-    '@media (min-width: 550px) and (max-width: 767px)': {
-      width: '160px',
-      height: '25px',
-    },
-    '@media (min-width: 375px) and (max-width: 549px)': {
-      width: '90px',
-      height: '25px',
-    },
-    '@media (min-width: 280px) and (max-width: 374px)': {
-      width: '88px',
-      height: '25px',
-    },
-  },
-};
-
 export const BENEFITS_WORKS_DATA = {
   title: 'Here Is How Our Offshore Outsourcing Works.',
   paragraph: `We adhere to professional hiring practices and take care of all legal entities and documentation throughout every outsourcing collaboration.`,
@@ -1289,45 +1178,6 @@ export const ACHIEVEMENTS_DATA = {
       link: '/',
     },
   ],
-};
-
-export const ACHIEVEMENTS_STYLES = {
-  mainBoxStyle: (isSpecialPath, isMeetingPath, isDemo) => ({
-    background: {
-      xs: isSpecialPath || isMeetingPath || isDemo ? 0 : '20px',
-      md: isMeetingPath || isSpecialPath || isDemo ? null : '40px',
-    },
-  }),
-  titleAndImagesBoxStyle: {
-    py: '2.5%',
-    px: '1%',
-    border: '1px solid rgba(170, 169, 169, 0.41)',
-  },
-  titleBoxStyle: { px: { xs: '20%', md: '0' }, pt: '20px' },
-  commonBoxStyles: {
-    display: 'flex',
-    flexWrap: { xs: 'wrap', md: 'noWrap' },
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: { xs: 4, sm: 3, md: 5 },
-    px: { xs: 2 },
-  },
-  renderImageBoxStyle: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  imageBoxStyle: {
-    width: { xs: '100px', sm: '120px', lg: '150px' },
-    height: 'auto',
-  },
-  titleAndRenderImageBoxStyle: {
-    background: '#F7F8FB',
-    py: '1.5%',
-    pb: { xs: '40px', sm: '70px', lg: '50px' },
-    '@media (max-width:424px)': { pb: '30px' },
-    '@media (min-width:425px) and (max-width:480px)': { pb: '55px' },
-  },
 };
 
 export const OUR_CLIENT_SAYS = {
@@ -1651,120 +1501,6 @@ export const HIRE_A_TALENT_MENU = {
   ],
 };
 
-export const hideCtaPaths = [
-  '/book-a-demo',
-  '/careers',
-  '/book-a-demo-meeting',
-  '/service/mean-stack-developer',
-  '/partnership-program',
-  '/hire-a-backend-developer',
-  '/hire-a-frontend-developer',
-  '/hire-android-developers',
-  '/hire-angular-developers',
-  '/hire-asp-dot-net-developers',
-  '/hire-devops-engineers',
-  '/hire-embedded-system-engineers',
-  '/hire-fintech-developers',
-  '/hire-firmware-developers',
-  '/hire-flutter-developers',
-  '/hire-full-stack-developers',
-  '/hire-javascript-developers',
-  '/hire-mean-stack-developers',
-  '/hire-mern-stack-developers',
-  '/hire-nextjs-developers',
-  '/hire-nodejs-developers',
-  '/hire-pcb-designers',
-  '/hire-performance-marketers',
-  '/hire-php-developers',
-  '/hire-ppc-specialists',
-  '/hire-python-developers',
-  '/hire-qa-engineers',
-  '/hire-react-native-developers',
-  '/hire-reactjs-developers',
-  '/hire-seo-experts',
-  '/hire-shopify-developers',
-  '/hire-social-media-experts',
-  '/hire-ui-ux-designers',
-  '/hire-wordpress-developers',
-];
-
-export const buttonsStyleForPerksComponent = (index, ind) => {
-  return {
-    width: '100%',
-    height: '100%',
-    maxWidth: '100%',
-    maxHeight: '118px',
-    justifyContent: 'space-between',
-    gap: 1.5,
-    background:
-      index == ind
-        ? 'linear-gradient(93deg, #029894 0.62%, #001C63 101.53%), #FFF'
-        : '#fff',
-    boxShadow:
-      index == ind ? '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)' : 'none',
-    borderRadius: '20.59px',
-    transitionProperty: 'background',
-    transitionDelay: '1m',
-    transitionDuration: '1s',
-    '&:hover': {
-      backgroundColor: '#fff',
-      boxShadow:
-        index == ind ? '0px 4.335px 0px 0px rgba(255, 255, 255, 0.69)' : 'none',
-    },
-    '@media(min-width:1024px)': {
-      justifyContent: 'space-between',
-    },
-  };
-};
-
-export const buttonTextStyleForPerksComponent = (index, ind) => {
-  return {
-    width: '100%',
-    maxWidth: { xs: '135px', sm: '180px', md: '350px' },
-    fontSize: {
-      xs: '15px',
-      sm: '18px',
-      md: '20px',
-      lg: '24px',
-    },
-    fontWeight: 500,
-    lineHeight: {
-      xs: '21.27px',
-      sm: '25px',
-      md: '29px',
-      lg: '33.73px',
-    },
-    color: index == ind ? '#fff' : '#001C63',
-    textAlign: 'left',
-    pr: 0,
-    textWrap: 'wrap',
-    '@media(min-width: 1024px)': {
-      textAlign: 'left',
-      maxWidth: '240px',
-    },
-    '@media(min-width: 280px) and (max-Width:359px)': {
-      maxWidth: '80px',
-      py: 0.5,
-      fontSize: '12px',
-    },
-  };
-};
-
-export const mainContainerStyleForClientSlider = (
-  pathName,
-  book_a_demo_metting
-) => {
-  return {
-    pt: pathName?.includes(book_a_demo_metting)
-      ? { xs: '38px', sm: '45px', md: '55px', lg: '60px' }
-      : 0,
-    pb: { xs: 0, lg: !pathName?.includes(book_a_demo_metting) ? 2 : 0 },
-    backgroundColor: pathName?.includes(book_a_demo_metting)
-      ? '#F7F8FF'
-      : '#fff',
-  };
-};
-
 export const TOP_BAR_DATA = {
   mailText: 'info@esparktalent.com',
   mailIcon: '/images/header/topbar/mail.svg',
@@ -1814,3 +1550,40 @@ export const TOP_BAR_DATA = {
     socialIconBoxStyle: { display: 'flex', alignItems: 'center', gap: 2.5 },
   },
 };
+
+export const hideCtaPaths = [
+  '/book-a-demo',
+  '/careers',
+  '/book-a-demo-meeting',
+  '/service/mean-stack-developer',
+  '/partnership-program',
+  '/hire-a-backend-developer',
+  '/hire-a-frontend-developer',
+  '/hire-android-developers',
+  '/hire-angular-developers',
+  '/hire-asp-dot-net-developers',
+  '/hire-devops-engineers',
+  '/hire-embedded-system-engineers',
+  '/hire-fintech-developers',
+  '/hire-firmware-developers',
+  '/hire-flutter-developers',
+  '/hire-full-stack-developers',
+  '/hire-javascript-developers',
+  '/hire-mean-stack-developers',
+  '/hire-mern-stack-developers',
+  '/hire-nextjs-developers',
+  '/hire-nodejs-developers',
+  '/hire-pcb-designers',
+  '/hire-performance-marketers',
+  '/hire-php-developers',
+  '/hire-ppc-specialists',
+  '/hire-python-developers',
+  '/hire-qa-engineers',
+  '/hire-react-native-developers',
+  '/hire-reactjs-developers',
+  '/hire-seo-experts',
+  '/hire-shopify-developers',
+  '/hire-social-media-experts',
+  '/hire-ui-ux-designers',
+  '/hire-wordpress-developers',
+];

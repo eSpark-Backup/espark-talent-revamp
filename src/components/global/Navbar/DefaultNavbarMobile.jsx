@@ -5,9 +5,9 @@ import Collapse from '@mui/material/Collapse';
 import Menu from '@mui/material/Menu';
 import { Box } from '@mui/material';
 import NavbarItems from '@/components/global/navbar/NavbarItems';
-import { NAVBAR_STYLE } from '@/constants/global/header';
 import NavbarItemsMobile from '@/components/global/navbar/NavbarItemsMobile';
 import Fade from '@mui/material/Fade';
+import { NAVBAR_STYLE } from './DefaultNavbarStyles';
 
 const DefaultNavbarMobile = ({ routes, open, mobileMenu, handleClose }) => {
   const [collapse, setCollapse] = useState('');

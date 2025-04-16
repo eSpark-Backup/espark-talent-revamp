@@ -4,7 +4,6 @@ import { useState } from 'react';
 import HomePageExperties from '@/components/new-home/HomePageExperties';
 import ClientSays from '@/components/homepage/ClientSays';
 import {
-  cardStyle,
   DIFFERENCE_DATA_FOR_REMOTE,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
@@ -21,14 +20,15 @@ import { PRICING_DATA } from '@/constants/pricing/pricing';
 import PricingBenifits from '@/components/pricing/PricingBenifits';
 import PricingWorks from '@/components/pricing/PricingWorks';
 import DefaultNavbar from '@/components/global/navbar/DefaultNavbar';
-import { Hire_Remote_Routes } from '@/constants/global/routes';
+import { HIRE_REMOTE_ROUTES } from '@/constants/global/routes';
 import { BOOK_A_DEMO, HIRE_A_TALENT_LINK } from '@/constants/global/header';
 import HireModal from '@/components/hire-remote/HireModal';
 import BookADemoForm from '@/components/book-a-demo/BookADemoForm';
-import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
+import { BOOK_A_DEMO_DATA } from '@/constants/book-a-demo/book-a-demo';
 import HireRemoteFooterCta from '@/components/hire-remote/HireRemoteFooterCta';
 import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import HomePageExpertTeam from '@/components/new-home/HomePageExpertTeam';
+import { cardStyle } from './HireRemoteStyles';
 
 const HireRemote = ({ data }) => {
   const [open, setOpen] = useState(false);
@@ -46,13 +46,13 @@ const HireRemote = ({ data }) => {
    */
   const handleModalClose = () => setOpen(false);
 
-  const { form } = Book_A_Demo_Data;
+  const { form } = BOOK_A_DEMO_DATA;
   return (
     <>
       <DefaultNavbar
         handleOpen={handleOpen}
         layout={'remote'}
-        routes={Hire_Remote_Routes}
+        routes={HIRE_REMOTE_ROUTES}
         sticky
         action={{
           type: 'external',

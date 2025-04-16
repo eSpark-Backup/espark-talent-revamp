@@ -3,11 +3,11 @@
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 
-import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
+import { BOOK_A_DEMO_DATA } from '@/constants/book-a-demo/book-a-demo';
 import BookADemoForm from '@/components/book-a-demo/BookADemoForm';
 
 const BookAMeeting = ({ data }) => {
-  const { form } = Book_A_Demo_Data;
+  const { form } = BOOK_A_DEMO_DATA;
   const { title, subTitle, description, services, styles } = data;
   const {
     mainBoxStyle,

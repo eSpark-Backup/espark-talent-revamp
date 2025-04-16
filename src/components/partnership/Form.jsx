@@ -8,10 +8,10 @@ import { Button, Box, Typography } from '@mui/material';
 import 'react-phone-number-input/style.css';
 import BasicModal from '@/components/book-a-demo/BookADemoModal';
 import axios from 'axios';
-import { CountryCode } from '@/constants/global/CountryCodes';
 import { PopupModal } from 'react-calendly';
 import { partnerShipFormValidationSchema } from '@/schema/schema';
-import { PartnerFormData } from '@/constants/partnership/partnership';
+import { PPARTNER_FORM_DATA } from '@/constants/partnership/partnership';
+import { COUNTRY_CODES } from '@/constants/global/CountryCodes';
 
 const adminId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
 const adminTempleteId = process.env.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;
@@ -44,13 +44,13 @@ const Form = ({ formContent, fields }) => {
   const [open, setOpen] = useState(false);
   const [modalText, setModalText] = useState('');
   const partnersRef = useRef(null);
-  const options = CountryCode?.map((opt) => opt?.name);
+  const options = COUNTRY_CODES?.map((opt) => opt?.name);
 
   const handleClose = () => setOpen(false);
 
   const { values, errors, touched, handleChange, handleSubmit, setFieldValue } =
     useFormik({
-      initialValues: PartnerFormData,
+      initialValues: PPARTNER_FORM_DATA,
       validationSchema: partnerShipFormValidationSchema,
       onSubmit: async (values, action) => {
         try {
