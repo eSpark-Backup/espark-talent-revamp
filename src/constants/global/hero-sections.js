@@ -350,7 +350,7 @@ export const JOIN_CREW_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
   button: {
-    label: 'Register Now',
+    label: 'Join us now',
     link: null,
     btnVarient: 'primary',
     btnColor: 'secondary',
