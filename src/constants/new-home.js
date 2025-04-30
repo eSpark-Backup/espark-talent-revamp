@@ -297,43 +297,45 @@ export const DIFFERENCE_DATA = {
   items: [
     {
       id: 1,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/icon1.svg`,
+      title: `Scale faster`,
+      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      icon: `images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
-      title: `Increase quality`,
+      title: `Increase Quality & Efficiency`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/icon2.svg`,
+      icon: `images/new-home/differnce/increase_quality.svg`,
     },
     {
       id: 3,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/icon3.svg`,
+      title: `Reduce costs`,
+      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      icon: `images/new-home/differnce/reduce_costs.svg`,
     },
   ],
 };
 export const DIFFERENCE_DATA_FOR_REMOTE = {
+  title: `Why eSpark Talent Outsourcing Model is Different`,
   items: [
     {
       id: 1,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/icon1.svg`,
+      title: `Scale faster`,
+      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      icon: `images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
       title: `Increase quality`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/icon2.svg`,
+      icon: `images/new-home/differnce/increase_quality.svg`,
     },
+
     {
       id: 3,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/icon3.svg`,
+      title: `Reduce costs`,
+      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      icon: `images/new-home/differnce/reduce_costs.svg`,
     },
   ],
 };
@@ -1160,11 +1162,10 @@ export const titleStyle = {
   fontSize: {
     xs: '19.27px',
     sm: '24px',
-    md: '28px',
     lg: '28.83px',
   },
   fontWeight: 600,
-  lineHeight: { md: 'auto', lg: 1.8 },
+  lineHeight: { md: 'auto', lg: 1.5 },
 };
 
 export const contentStyle = {
@@ -1177,12 +1178,54 @@ export const paragraphStyle = {
   color: '#001C63',
   fontSize: {
     xs: '12px',
-    sm: '12px',
-    md: '17px',
-    lg: '18px',
+    sm: '14px',
+    lg: '16px',
   },
   fontWeight: 400,
-  lineHeight: 1.4,
+  lineHeight: '27px',
+};
+
+export const PricingDefferenceStyles = {
+  containerStyle: {
+    width: '100%',
+    maxWidth: 1460,
+    margin: 'auto',
+    padding: '8px 0',
+    position: 'relative',
+    py: { xs: 2, md: 4, lg: 7 },
+  },
+  mainTitleStyle: {
+    textAlign: 'center',
+    fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+    lineHeight: 1.5,
+  },
+  cardStyle: {
+    width: '100%',
+    height: '100%',
+    maxWidth: '467px',
+    minHeight: { xs: '215px', md: '250px', lg: '280px' },
+    backgroundColor: '#FFFFFF',
+    border: '0.9px solid #DEDCDC',
+    boxShadow: '0px 4px 25.4px rgba(0, 0, 0, 0.08)',
+    borderRadius: '14px',
+    mx: 1.8,
+    px: 2.2,
+    py: { xs: 1.5, sm: 1 },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  imageStyle: {
+    width: { xs: '45px', sm: '55px', lg: '80px' },
+    height: 'auto',
+    mb: 1,
+  },
+  typoBoxStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { xs: 1, lg: 0 },
+    minHeight: { md: '170px', lg: '150px' },
+  },
 };
 
 export const EMPLOYEE_SLIDER_DATA = {

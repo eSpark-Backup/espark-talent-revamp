@@ -6,15 +6,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
 import {
-  avatarStyle,
-  containerStyle,
   paragraphStyle,
+  PricingDefferenceStyles,
   slideStyle,
   titleStyle,
 } from '@/constants/new-home';
 
-const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
+const PricingDefference = ({ data, backgroundColorStyle }) => {
   const [loading, setLoading] = useState(true);
+  const {
+    cardStyle,
+    imageStyle,
+    typoBoxStyle,
+    containerStyle,
+    mainTitleStyle,
+  } = PricingDefferenceStyles || {};
 
   useEffect(() => {
     if (data) {
@@ -27,28 +33,12 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
   const renderSlide = (card, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Card sx={cardStyle}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: 2,
-            p: 3,
-          }}
-        >
-          <Box src={card?.icon} component={'img'} sx={avatarStyle} />
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: { xs: 0.5, sm: 1, lg: 0 },
-            }}
-          >
-            <Typography variant="h3" sx={titleStyle}>
-              {card?.title || ''}
-            </Typography>
-            <Typography sx={paragraphStyle}>{card?.description}</Typography>
-          </Box>
+        <Box src={card?.icon} component={'img'} sx={imageStyle} />
+        <Box sx={typoBoxStyle}>
+          <Typography variant="h3" sx={titleStyle}>
+            {card?.title}
+          </Typography>
+          <Typography sx={paragraphStyle}>{card?.description}</Typography>
         </Box>
       </Card>
     </SwiperSlide>
@@ -64,15 +54,7 @@ const PricingDefference = ({ data, backgroundColorStyle, cardStyle }) => {
       <Box sx={containerStyle} id="pricing-difference">
         {data?.title && (
           <Box sx={{ pt: 2, px: 2 }}>
-            <Typography
-              variant="h2"
-              color="secondary"
-              sx={{
-                textAlign: 'center',
-                fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
-                lineHeight: 1.5,
-              }}
-            >
+            <Typography variant="h2" color="secondary" sx={mainTitleStyle}>
               {data?.title}
             </Typography>
           </Box>
