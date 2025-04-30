@@ -1,3 +1,5 @@
+import { borderRadius, maxWidth } from '@mui/system';
+
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -492,8 +494,8 @@ export const EXPERT_TEAM_DATA = {
       color: `rgba(255, 255, 255, ${index === 0 ? 1 : index === 1 ? 0.6 : 0.4})`,
       background: `rgba(217, 217, 217, ${index === 0 ? 0.2 : index === 1 ? 0.1 : 0.05})`,
       maxWidth: {
-        xs: '240px',
-        sm: '330px',
+        xs: '230px',
+        sm: '300px',
         md: '85%',
         lg: '335px',
       },
@@ -521,10 +523,13 @@ export const EXPERT_TEAM_DATA = {
       fontWeight: 500,
     },
     mainLayoutStyle: {
-      width: '100%',
+      width: { xs: '95%', md: '96.2%' },
+      mx: 'auto',
+      maxWidth: '1646px',
+      borderRadius: '33px',
       color: '#fff',
-      py: 6,
-      background: 'linear-gradient(180deg, #029894 21.1%, #023A39 158.47%)',
+      py: { xs: 5, sm: 6 },
+      background: 'linear-gradient(180deg, #0B1B61 20%, #020B21 100%)',
       '@media (min-width: 1024px)': { gap: 10, pb: 0 },
     },
     headerBoxStyle: {
