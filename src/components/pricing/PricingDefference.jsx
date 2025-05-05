@@ -12,7 +12,7 @@ import {
   titleStyle,
 } from '@/constants/new-home';
 
-const PricingDefference = ({ data, backgroundColorStyle }) => {
+const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
   const [loading, setLoading] = useState(true);
   const {
     cardStyle,
@@ -54,7 +54,10 @@ const PricingDefference = ({ data, backgroundColorStyle }) => {
       <Box sx={containerStyle} id="pricing-difference">
         {data?.title && (
           <Box sx={{ pt: 2, px: 2 }}>
-            <Typography variant="h2" color="secondary" sx={mainTitleStyle}>
+            <Typography
+              variant="h2"
+              sx={{ ...mainTitleStyle, color: titleColor || '#001C63' }}
+            >
               {data?.title}
             </Typography>
           </Box>

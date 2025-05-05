@@ -671,7 +671,7 @@ export const HIRING_DATA = {
 };
 
 export const EXPERTIES_DATA = {
-  title: 'Which Experts Will Drive Your Business?',
+  title: 'Our Core Competencies',
   services: [
     {
       id: 2,
@@ -1163,6 +1163,7 @@ export const PricingDefferenceStyles = {
     py: { xs: 2, md: 4, lg: 7 },
   },
   mainTitleStyle: {
+    color: '#001C63',
     textAlign: 'center',
     fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
     lineHeight: 1.5,

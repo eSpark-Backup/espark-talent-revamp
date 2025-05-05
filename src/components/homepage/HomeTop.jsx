@@ -20,6 +20,7 @@ const HomeTop = () => {
       <PricingDefference
         data={DIFFERENCE_DATA}
         cardStyle={cardStyleForHomePage}
+        titleColor={'#222324'}
         backgroundColorStyle={{
           mt: { xs: 2, lg: 5 },
           '@media(min-width:1024px)': {
@@ -31,7 +32,7 @@ const HomeTop = () => {
       />
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageHiringModel data={HIRING_DATA} />
-      <HomePageExperties data={EXPERTIES_DATA} />
+      <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
     </>
   );
 };
