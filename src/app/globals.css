@@ -1941,14 +1941,13 @@ input {
 #flexible-hiring-models .swiper {
   width: 100%;
   height: auto;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 #flexible-hiring-models .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
   border-radius: 9px;
   padding-bottom: 40px;
 }

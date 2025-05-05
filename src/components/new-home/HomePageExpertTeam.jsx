@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Button,
   CircularProgress,
   Typography,
   useMediaQuery,
@@ -11,8 +10,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination } from 'swiper/modules';
-import { usePathname } from 'next/navigation';
-import { openForm } from '@/utils';
 
 const HomePageExpertTeam = ({ data }) => {
   const [loading, setLoading] = useState(true);
