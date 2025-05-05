@@ -1031,6 +1031,215 @@ export const OFFSHORE_DATA = {
   },
 };
 
+export const POWER_PROJECT_DATA = {
+  first_text: {
+    text: 'Power Your',
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+    ],
+  },
+  second_text: {
+    text: 'Projects with a',
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+    ],
+  },
+  third_text: {
+    text: `<span style={{ color: '#029894' }}>Multi-Talent</span> Squad`,
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+
+      // copy
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+    ],
+  },
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#EDF3FF',
+      px: 3,
+      pt: 5.5,
+      pb: { xs: 7.5, sm: 8.5 },
+    },
+    containerStyle: (maxWidth) => ({
+      mx: 'auto',
+      width: '100%',
+      overflow: 'hidden',
+      maxWidth: maxWidth || 'auto',
+    }),
+    titleSyle: {
+      fontWeight: 600,
+      mb: { xs: 5, sm: 5, md: 2, lg: 0.5 },
+      fontSize: {
+        xs: 'calc(20px + 6.36vw)',
+        lg: 'calc(20px + 7.56vw)',
+      },
+      color: '#111845',
+    },
+    logosBoxStyle: (scrollDirection, scrollRight, scrollLeft, top) => ({
+      gap: 12,
+      px: 2,
+      pt: { xs: 1.5, md: 0 },
+      top: top || '75%',
+      transform: 'translate(-50%)',
+      position: { xs: 'absolute' },
+      display: 'inline-flex',
+      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 10s linear infinite`,
+    }),
+    chipBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'nowrap',
+      pr: 3,
+      gap: 1,
+    },
+    chipStyle: {
+      width: 'auto',
+      height: { xs: '33px', lg: '36px' },
+      backgroundColor: '#fff',
+      borderRadius: '24px',
+    },
+  },
+};
+
 // pricing Defference
 
 export const containerStyle = {

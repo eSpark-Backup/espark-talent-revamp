@@ -6,12 +6,14 @@ import {
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
   HIRING_DATA,
+  POWER_PROJECT_DATA,
 } from '@/constants/new-home';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 import EmployeeBanner from '../employment/EmployeeBanner';
 import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
+import PowerProjects from '../new-home/PowerProjects';
 
 const HomeTop = () => {
   return (
@@ -33,6 +35,7 @@ const HomeTop = () => {
       <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageHiringModel data={HIRING_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
+      <PowerProjects data={POWER_PROJECT_DATA} />
     </>
   );
 };
