@@ -1049,37 +1049,117 @@ export const POWER_PROJECT_DATA = {
         src: 'images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
       },
     ],
   },
@@ -1100,37 +1180,117 @@ export const POWER_PROJECT_DATA = {
         src: 'images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
       },
     ],
   },
@@ -1151,37 +1311,117 @@ export const POWER_PROJECT_DATA = {
         src: 'images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-
-      // copy
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
       },
     ],
   },
@@ -1223,13 +1463,13 @@ export const POWER_PROJECT_DATA = {
       transform: 'translate(-50%)',
       position: { xs: 'absolute' },
       display: 'inline-flex',
-      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 10s linear infinite`,
+      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 15s linear infinite`,
     }),
     chipBoxStyle: {
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'nowrap',
-      pr: 3,
+      pr: 4.5,
       gap: 1,
     },
     chipStyle: {

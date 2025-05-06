@@ -53,7 +53,7 @@ const PowerProjects = ({ data }) => {
                     <Box
                       component={'img'}
                       src={logo?.src}
-                      sx={{ width: 'auto', height: 'auto' }}
+                      sx={{ width: '30px', height: 'auto' }}
                     />
                     <Typography sx={{ fontWeight: 400, color: '#000000' }}>
                       {logo?.text}
