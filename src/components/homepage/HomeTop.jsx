@@ -3,6 +3,7 @@ import {
   cardStyleForHomePage,
   DIFFERENCE_DATA,
   EMPLOYEE_HERO_DATA,
+  ENTIRE_TEAM,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
   HIRING_DATA,
@@ -14,6 +15,7 @@ import EmployeeBanner from '../employment/EmployeeBanner';
 import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
+import EnterierTeam from '../new-home/EnterierTeam';
 
 const HomeTop = () => {
   return (
@@ -36,6 +38,7 @@ const HomeTop = () => {
       <HomePageHiringModel data={HIRING_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
       <PowerProjects data={POWER_PROJECT_DATA} />
+      <EnterierTeam data={ENTIRE_TEAM} />
     </>
   );
 };

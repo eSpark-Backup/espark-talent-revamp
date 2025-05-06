@@ -1135,7 +1135,7 @@ export const POWER_PROJECT_DATA = {
     ],
   },
   third_text: {
-    text: `<span style={{ color: '#029894' }}>Multi-Talent</span> Squad`,
+    text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
     logos: [
       { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
       { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
@@ -1236,6 +1236,126 @@ export const POWER_PROJECT_DATA = {
       height: { xs: '33px', lg: '36px' },
       backgroundColor: '#fff',
       borderRadius: '24px',
+    },
+  },
+};
+
+export const ENTIRE_TEAM = {
+  title: 'Keep track of your entire team in one place!',
+  text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
+  image: '/images/new-home/entire-team/laptop.svg',
+  points: [
+    {
+      title: 'Real-Time Hiring & Interview Updates',
+      text: 'Track every hiring request and interview status all in one place.',
+    },
+    {
+      title: 'Complete Onboarding at a Glance',
+      text: 'From offer letters to orientation, manage every onboarding step effortlessly.',
+    },
+    {
+      title: 'Smart Attendance & Time Tracking',
+      text: 'Monitor work hours, leaves, and attendance with daily and hourly insights.',
+    },
+    {
+      title: 'Clear Payment & Inventory Records',
+      text: 'View salary disbursements, invoices, and allocated inventory in one dashboard.',
+    },
+    {
+      title: 'Easy Contract & NDA Access',
+      text: 'Keep all employee contracts and signed NDAs organized and just a click away.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      flexGrow: 1,
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      px: { xs: 1.5, sm: 3, md: 5 },
+      py: { xs: 4, md: 6 },
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      maxWidth: '1570px',
+      mx: 'auto',
+    },
+    titleStyle: {
+      mx: 'auto',
+      width: '80%',
+      fontWeight: 600,
+      color: '#222324',
+      maxWidth: '1200px',
+      textAlign: 'center',
+      mb: { xs: 1, md: 0.5 },
+      fontSize: { xs: '25px', sm: '32px', md: '42px', lg: '52px' },
+    },
+    textStyle: {
+      mx: 'auto',
+      width: '90%',
+      fontWeight: 400,
+      maxWidth: '950px',
+      textAlign: 'center',
+      color: '#000000CC',
+      fontSize: { xs: '14px', md: '17px' },
+    },
+    imageBoxStyle: {
+      mx: 'auto',
+      display: 'flex',
+      borderRadius: '25px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#DDE8FF',
+      maxWidth: { xs: '400px', md: '799px' },
+      maxHeight: { xs: 'auto', lg: '656px' },
+    },
+    listBoxStyle: {
+      display: 'flex',
+      justifyContent: { xs: 'flex-start', md: 'center' },
+      pt: { xs: 1.5, lg: 4 },
+      pl: { xs: 2, lg: 6 },
+    },
+    avatarStyle: {
+      width: { xs: '35px', md: '50px', lg: '70px' },
+      height: { xs: '35px', md: '50px', lg: '70px' },
+      bgcolor: '#029894',
+    },
+    avatarTextStyle: {
+      fontSize: {
+        xs: '15px',
+        sm: '18px',
+        md: '25px',
+        lg: '31px',
+      },
+      fontWeight: 600,
+      color: '#fff',
+    },
+    listTextBoxStyle: {
+      p: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: 0,
+    },
+    listHeadingStyle: {
+      fontSize: {
+        xs: '16px',
+        sm: '19px',
+        md: '22px',
+        lg: '28px',
+      },
+      fontWeight: 600,
+      color: '#232E73',
+      maxWidth: '450px',
+      lineHeight: 1.2,
+    },
+    listParagraphStyle: {
+      fontSize: { xs: '13px', md: '15px', lg: '17px' },
+      fontWeight: 400,
+      color: '#000000CC',
+      maxWidth: '450px',
     },
   },
 };
