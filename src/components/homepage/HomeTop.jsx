@@ -16,6 +16,7 @@ import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
 import EntierTeam from '../new-home/EntierTeam';
+import GlobalTeams from '../new-home/GlobalTeams';
 
 const HomeTop = () => {
   return (
@@ -39,6 +40,7 @@ const HomeTop = () => {
       <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
       <PowerProjects data={POWER_PROJECT_DATA} />
       <EntierTeam data={ENTIRE_TEAM} />
+      <GlobalTeams />
     </>
   );
 };
