@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-const EnterierTeam = ({ data }) => {
+const EntierTeam = ({ data }) => {
   const { title, text, image, points, styles } = data || {};
 
   const {
@@ -78,4 +78,4 @@ const EnterierTeam = ({ data }) => {
   );
 };
 
-export default EnterierTeam;
+export default EntierTeam;
