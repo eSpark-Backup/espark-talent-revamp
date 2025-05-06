@@ -1211,6 +1211,7 @@ export const POWER_PROJECT_DATA = {
       fontSize: {
         xs: 'calc(20px + 6.36vw)',
         lg: 'calc(20px + 7.56vw)',
+        xl: '165px',
       },
       color: '#111845',
     },
