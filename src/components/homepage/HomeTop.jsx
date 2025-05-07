@@ -6,6 +6,7 @@ import {
   ENTIRE_TEAM,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
+  GLOBAL_TEAMS,
   HIRING_DATA,
   POWER_PROJECT_DATA,
 } from '@/constants/new-home';
@@ -40,7 +41,7 @@ const HomeTop = () => {
       <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
       <PowerProjects data={POWER_PROJECT_DATA} />
       <EntierTeam data={ENTIRE_TEAM} />
-      <GlobalTeams />
+      <GlobalTeams data={GLOBAL_TEAMS} />
     </>
   );
 };

@@ -1601,6 +1601,115 @@ export const ENTIRE_TEAM = {
   },
 };
 
+export const GLOBAL_TEAMS = {
+  title: 'Break Borders, Build Global Teams',
+  text: 'Connect with world-class talent, no matter where you are.',
+  slides: [
+    {
+      country: 'USA',
+      image: 'images/new-home/global-teams/usa.svg',
+      flag: 'images/new-home/global-teams/usa-flag.png',
+    },
+    {
+      country: 'Canada',
+      image: 'images/new-home/global-teams/canada.svg',
+      flag: 'images/new-home/global-teams/canada-flag.png',
+    },
+    {
+      country: 'United Kingdom',
+      image: 'images/new-home/global-teams/united-kingdom.svg',
+      flag: 'images/new-home/global-teams/united-kingdom-flag.png',
+    },
+    {
+      country: 'Saudi Arabia',
+      image: 'images/new-home/global-teams/saudi-arabia.svg',
+      flag: 'images/new-home/global-teams/saudi-arabia-flag.png',
+    },
+    {
+      country: 'Qatar',
+      image: 'images/new-home/global-teams/qatar.svg',
+      flag: 'images/new-home/global-teams/qatar-flag.png',
+    },
+    {
+      country: 'UAE',
+      image: 'images/new-home/global-teams/uae.svg',
+      flag: 'images/new-home/global-teams/uae-flag.png',
+    },
+    {
+      country: 'Oman',
+      image: 'images/new-home/global-teams/oman.svg',
+      flag: 'images/new-home/global-teams/oman-flag.png',
+    },
+    {
+      country: 'Malaysia',
+      image: 'images/new-home/global-teams/malaysia.svg',
+      flag: 'images/new-home/global-teams/malaysia-flag.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: 2,
+      px: 2,
+    },
+    titleStyle: {
+      fontSize: { xs: '25px', md: '28px', lg: '32px' },
+      fontWeight: 600,
+      color: '#001C63',
+      textAlign: 'center',
+      mb: { xs: 1, md: 0 },
+    },
+    textStyle: {
+      fontSize: { xs: '14px', md: '18px' },
+      fontWeight: 400,
+      color: '#001C63',
+      textAlign: 'center',
+    },
+    swiperSlideStyle: {
+      width: '75%',
+      maxWidth: 319,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    slideImageStyle: {
+      width: { xs: '100%', md: 319 },
+      height: { xs: 'auto', md: 407 },
+      objectFit: 'cover',
+      borderRadius: '30px',
+      position: 'relative',
+      mx: 'auto',
+    },
+    flagBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      position: 'absolute',
+      bottom: { xs: 15, md: 20 },
+      left: { xs: 15, md: 20 },
+      gap: 1.2,
+    },
+    flagImageStyle: {
+      width: { xs: 30, md: 45 },
+      height: { xs: 30, md: 45 },
+    },
+    countryTextStyle: {
+      fontSize: {
+        xs: '15px',
+        sm: '17px',
+        md: '19px',
+        lg: '22px',
+      },
+      fontWeight: 400,
+      color: '#fff',
+    },
+  },
+};
+
 // pricing Defference
 
 export const containerStyle = {
