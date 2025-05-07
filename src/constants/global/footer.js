@@ -53,21 +53,21 @@ export const FOOTER_DATA = {
         {
           label: 'Contact Us',
           info: [
-            { icon: '/images/footer/flag.png', value: 'USA' },
+            // { icon: '/images/footer/flag.png', value: 'USA' },
+            // {
+            //   icon: '/images/footer/location.png',
+            //   value: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
+            // },
+            { value: 'Have questions about our features ?' },
             {
-              icon: '/images/footer/location.png',
-              value: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
+              // icon: '/images/footer/phone.png',
+              value: 'Already using our service and need some help?',
+              // link: 'tel:+1 (323) 790-6035',
             },
-            { value: 'Have questions about <span>our features</span>?' },
             {
               icon: '/images/footer/email.png',
               value: 'sales@esparktalent.com',
               link: 'mailto:sales@esparktalent.com',
-            },
-            {
-              icon: '/images/footer/phone.png',
-              value: '+1 (323) 790-6035',
-              link: 'tel:+1 (323) 790-6035',
             },
           ],
         },
@@ -99,7 +99,11 @@ export const FOOTER_DATA = {
 };
 
 export const FOOTER_STYLE = {
-  mainBoxStyle: { width: '100%', height: '100%', backgroundColor: '#ECECED' },
+  mainBoxStyle: {
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(to bottom, #001C63, #04102C)',
+  },
   innerBoxStyle: {
     width: '100%',
     height: '100%',
@@ -165,7 +169,7 @@ export const FOOTER_STYLE = {
     fontSize: { xs: '8px', sm: '10px', md: '13px', lg: '15px' },
     fontWeight: 400,
     lineHeight: { xs: '24px' },
-    color: '#001C63',
+    color: '#FFFFFF',
     pl: { md: 1.6, lg: 0 },
     pr: { md: 3, lg: 3 },
     '@media(min-width:768px) and (max-width: 1023px)': {
@@ -243,7 +247,7 @@ export const FOOTER_STYLE = {
   lebelStyle: {
     fontSize: { md: '18px', lg: '24px' },
     fontWeight: 600,
-    color: '#001C63',
+    color: '#FFFFFF',
     '@media(min-width:768px) and (max-width: 1023px)': {
       fontSize: '18px',
     },
@@ -287,7 +291,7 @@ export const FOOTER_STYLE = {
     width: _textIndex === 5 ? 'auto' : 'calc(100% - 25px)',
     fontSize: { md: '13px', lg: '15px' },
     fontWeight: 400,
-    color: '#000000',
+    color: '#fff',
     mt: _textIndex === 0 ? 0 : 1,
     wordBreak: 'break-word',
     whiteSpace: 'normal',
@@ -326,7 +330,7 @@ export const FOOTER_STYLE = {
   pageNameStyle: (_pIndex) => ({
     fontSize: { md: '13px', lg: '15px' },
     fontWeight: 400,
-    color: '#001C63',
+    color: '#FFFFFF',
     mt: _pIndex === 0 ? 0 : 1,
     '@media(min-width:768px) and (max-width: 1023px)': {
       fontSize: '13px',
@@ -342,7 +346,7 @@ export const FOOTER_STYLE = {
     mx: 'auto',
     width: '90%',
     height: '2px',
-    backgroundColor: '#001C63',
+    backgroundColor: '#FFFFFF',
     opacity: 0.17,
   },
   copyRightBoxStyle: {
@@ -356,7 +360,7 @@ export const FOOTER_STYLE = {
       lg: '15px',
     },
     fontWeight: 400,
-    color: '#0E0F1D',
+    color: '#FFFFFF',
     py: 2.3,
     textAlign: 'center',
     '@media(min-width:768px) and (max-width: 1399px)': {
@@ -375,9 +379,9 @@ export const FOOTER_STYLE = {
       sm: linkIndex === 0 ? 4 : 3,
     },
   }),
-  termsAndConditionLinkStyle: { color: '#001C63' },
+  termsAndConditionLinkStyle: { color: '#FFFFFF' },
   termsAndConditionTextStyle: {
-    color: '#001C63',
+    color: '#FFFFFF',
     fontSize: { lg: '15px' },
     fontWeight: 400,
     '@media(min-width:768px) and (max-width: 1399px)': {
@@ -397,7 +401,7 @@ export const CAREERS_FOOTER_DATA = {
     topSection: [
       {
         icon: '/images/footer/flag.png',
-        text: '<span style="font-weight:500;color:#001C63 !important;">USA</span>',
+        text: '<span style="font-weight:500;color:#FFFFFF !important;">USA</span>',
         link: '',
       },
       {

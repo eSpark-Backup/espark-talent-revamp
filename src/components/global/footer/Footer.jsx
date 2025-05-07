@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FOOTER_STYLE, HIDDEN_PATHS } from '@/constants/global/footer';
+import OrganizeTeam from '../OrganizeTeam';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -75,7 +76,7 @@ const Footer = ({ data }) => {
               <>
                 {mp?.info?.map((_text, _textIndex) => (
                   <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
-                    {_text?.icon && (
+                    {/* {_text?.icon && (
                       <Box sx={iconBoxStyle(_textIndex)}>
                         <Image
                           alt=""
@@ -85,7 +86,7 @@ const Footer = ({ data }) => {
                           fill
                         />
                       </Box>
-                    )}
+                    )} */}
                     <Typography
                       sx={valueStyle(_textIndex)}
                       component="li"
@@ -144,6 +145,7 @@ const Footer = ({ data }) => {
 
   return (
     <Box sx={mainBoxStyle}>
+      <OrganizeTeam />
       <Box sx={innerBoxStyle}>
         <Box sx={logoSectionBoxStyle}>
           <Box sx={imageBoxStyle}>
