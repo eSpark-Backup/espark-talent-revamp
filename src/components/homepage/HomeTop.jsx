@@ -9,6 +9,7 @@ import {
   GLOBAL_TEAMS,
   HIRING_DATA,
   POWER_PROJECT_DATA,
+  TRUSTED_PLATFORM,
 } from '@/constants/new-home';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
@@ -18,6 +19,7 @@ import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
 import EntierTeam from '../new-home/EntierTeam';
 import GlobalTeams from '../new-home/GlobalTeams';
+import TrustedPlatform from '../new-home/TrustedPlatform';
 
 const HomeTop = () => {
   return (
@@ -42,6 +44,7 @@ const HomeTop = () => {
       <PowerProjects data={POWER_PROJECT_DATA} />
       <EntierTeam data={ENTIRE_TEAM} />
       <GlobalTeams data={GLOBAL_TEAMS} />
+      <TrustedPlatform data={TRUSTED_PLATFORM} />
     </>
   );
 };

@@ -1671,14 +1671,14 @@ export const GLOBAL_TEAMS = {
     },
     swiperSlideStyle: {
       width: '75%',
-      maxWidth: 319,
+      maxWidth: 297,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
     },
     slideImageStyle: {
-      width: { xs: '100%', md: 319 },
+      width: { xs: '100%', md: 297 },
       height: { xs: 'auto', md: 407 },
       objectFit: 'cover',
       borderRadius: '30px',
@@ -1706,6 +1706,89 @@ export const GLOBAL_TEAMS = {
       },
       fontWeight: 400,
       color: '#fff',
+    },
+  },
+};
+
+export const TRUSTED_PLATFORM = {
+  title:
+    'eSpark Talent is the Global Outsourcing Platform trusted by industry leaders',
+  images: [
+    'images/new-home/trusted-platform/01.png',
+    'images/new-home/trusted-platform/02.png',
+    'images/new-home/trusted-platform/03.png',
+    'images/new-home/trusted-platform/04.png',
+    'images/new-home/trusted-platform/05.png',
+    'images/new-home/trusted-platform/06.png',
+  ],
+  review: [
+    {
+      title: '500+',
+      text: 'Professional Talent Pool',
+    },
+    {
+      title: '4.8',
+      text: '100+ 5 Star Reviews',
+    },
+    {
+      title: '$80M',
+      text: 'In Cost Saving',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#EDF3FF',
+      py: { xs: 6, lg: 8 },
+      px: 2,
+    },
+    titleStyle: {
+      fontSize: { xs: '25px', sm: '32px', md: '38px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+      width: '90%',
+      mx: 'auto',
+      maxWidth: { xs: '800px', lg: '1260px' },
+    },
+    reviewBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    reviewTitleStyle: {
+      color: '#001C63',
+      fontSize: { xs: '40px', sm: '60px', md: '70px', lg: '112px' },
+      fontWeight: 400,
+      lineHeight: 1,
+    },
+    reviewTextStyle: {
+      color: '#000000CC',
+      fontSize: { xs: '18px', sm: '20px', md: '21px', lg: '28px' },
+      fontWeight: 500,
+      textAlign: 'center',
+    },
+
+    swiperSlideStyle: {
+      width: '55%',
+      maxWidth: 183,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    slideImageStyle: {
+      width: { xs: '85%', md: 183 },
+      height: { xs: 'auto', md: 'auto' },
+      objectFit: 'cover',
+      position: 'relative',
+      mx: 'auto',
     },
   },
 };
