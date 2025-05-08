@@ -1,5 +1,5 @@
 export const FOOTER_DATA = {
-  logo: '/images/footer/logo.png',
+  logo: '/images/thankyou/ThankyouPageLogo.WEBP',
   logoLink: '/',
   trustPilotImage: '/images/footer/social-icons/TrustPilot2.svg',
   trustPilotLink:
@@ -53,21 +53,17 @@ export const FOOTER_DATA = {
         {
           label: 'Contact Us',
           info: [
-            // { icon: '/images/footer/flag.png', value: 'USA' },
-            // {
-            //   icon: '/images/footer/location.png',
-            //   value: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
-            // },
             { value: 'Have questions about our features ?' },
             {
-              // icon: '/images/footer/phone.png',
-              value: 'Already using our service and need some help?',
-              // link: 'tel:+1 (323) 790-6035',
-            },
-            {
-              icon: '/images/footer/email.png',
               value: 'sales@esparktalent.com',
               link: 'mailto:sales@esparktalent.com',
+            },
+            {
+              value: 'Already using our service and need some help?',
+            },
+            {
+              value: 'info@esparktalent.com',
+              link: 'mailto:info@esparktalent.com',
             },
           ],
         },
@@ -76,22 +72,22 @@ export const FOOTER_DATA = {
   ],
   socialMedia: [
     {
-      img: '/images/footer/social-icons/facebook.svg',
+      img: '/images/footer/social-icons/facebook.png',
       link: 'https://www.facebook.com/people/eSpark-Talent/61550048738610/',
       alt: 'facebook',
     },
     {
-      img: '/images/footer/social-icons/twitter.svg',
+      img: '/images/footer/social-icons/twitter.png',
       link: 'https://www.twitter.com/eSparkTalent',
       alt: 'twitter',
     },
     {
-      img: '/images/footer/social-icons/linkedin.svg',
+      img: '/images/footer/social-icons/linkedin.png',
       link: 'https://www.linkedin.com/company/espark-talent/',
       alt: 'linkedIn',
     },
     {
-      img: '/images/footer/social-icons/instagram.svg',
+      img: '/images/footer/social-icons/instagram.png',
       link: 'https://www.instagram.com/esparktalent/',
       alt: 'instagram',
     },
