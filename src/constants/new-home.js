@@ -297,43 +297,45 @@ export const DIFFERENCE_DATA = {
   items: [
     {
       id: 1,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/icon1.svg`,
+      title: `Scale faster`,
+      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      icon: `images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
-      title: `Increase quality`,
+      title: `Increase Quality & Efficiency`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/icon2.svg`,
+      icon: `images/new-home/differnce/increase_quality.svg`,
     },
     {
       id: 3,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/icon3.svg`,
+      title: `Reduce costs`,
+      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      icon: `images/new-home/differnce/reduce_costs.svg`,
     },
   ],
 };
 export const DIFFERENCE_DATA_FOR_REMOTE = {
+  title: `Why eSpark Talent Outsourcing Model is Different`,
   items: [
     {
       id: 1,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/icon1.svg`,
+      title: `Scale faster`,
+      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      icon: `images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
       title: `Increase quality`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/icon2.svg`,
+      icon: `images/new-home/differnce/increase_quality.svg`,
     },
+
     {
       id: 3,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/icon3.svg`,
+      title: `Reduce costs`,
+      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      icon: `images/new-home/differnce/reduce_costs.svg`,
     },
   ],
 };
@@ -490,8 +492,8 @@ export const EXPERT_TEAM_DATA = {
       color: `rgba(255, 255, 255, ${index === 0 ? 1 : index === 1 ? 0.6 : 0.4})`,
       background: `rgba(217, 217, 217, ${index === 0 ? 0.2 : index === 1 ? 0.1 : 0.05})`,
       maxWidth: {
-        xs: '240px',
-        sm: '330px',
+        xs: '230px',
+        sm: '300px',
         md: '85%',
         lg: '335px',
       },
@@ -519,10 +521,14 @@ export const EXPERT_TEAM_DATA = {
       fontWeight: 500,
     },
     mainLayoutStyle: {
-      width: '100%',
+      width: { xs: '95%', md: '96.2%' },
+      mx: 'auto',
+      maxWidth: '1646px',
+      borderRadius: '33px',
       color: '#fff',
-      py: 6,
-      background: 'linear-gradient(180deg, #029894 21.1%, #023A39 158.47%)',
+      py: { xs: 5, sm: 6 },
+      mb: { xs: 3, md: 5 },
+      background: 'linear-gradient(180deg, #0B1B61 20%, #020B21 100%)',
       '@media (min-width: 1024px)': { gap: 10, pb: 0 },
     },
     headerBoxStyle: {
@@ -552,156 +558,121 @@ export const EXPERT_TEAM_DATA = {
 };
 
 export const HIRING_DATA = {
-  title: 'Choose from Our Flexible Hiring Models',
-  btnTitle: 'Book a Demo',
-  btnLink: '/book-a-demo',
+  title: 'Choose from Our Flexible Models',
+  icon: '/images/new-home/flexible-models/right-arrow.png',
+  image: '/images/new-home/flexible-models/underline.png',
   items: [
     {
-      title: `Hire Hourly Based`,
-      image: '/images/homepage/hiring-modals/hourly_based.svg',
+      title: `Hire Dedicated Developers`,
+      buttonText: 'Find Your Developer',
+      link: '/offshore-development-center',
       points: [
-        { icon: '/images/homepage/hiring-modals/tick.svg', text: 'Pay hourly' },
+        { text: 'Plug Into Proven Talent' },
+        { text: 'Quick Onboarding' },
+        { text: 'Flexible Engagement Models' },
+      ],
+    },
+    {
+      title: `Offshore Development Center`,
+      buttonText: 'Explore ODC Options',
+      link: '/fixed-price-projects',
+      points: [
         {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Top 2% of talent, fully vetted',
+          text: 'Expand Without Overhead',
         },
         {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Flexibility in time scheduling',
+          text: 'Access Global Talent',
+        },
+        {
+          text: 'Complete Operational Support',
         },
       ],
     },
     {
-      title: `Hire Salary Based`,
-      image: '/images/homepage/hiring-modals/salary_based.svg',
+      title: `Fixed Price Projects`,
+      buttonText: 'Start Your Project',
+      link: '/hire-dedicated-developers',
       points: [
         {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Pay per hire',
+          text: 'Transparent, Upfront Costs',
         },
         {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Vetted and ready interview',
+          text: 'Built for Results',
         },
         {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Zero employment liability on you',
-        },
-      ],
-    },
-    {
-      title: `Hire Dedicated Team`,
-      image: '/images/homepage/hiring-modals/dedicated_team.svg',
-      points: [
-        {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Milestone or fixed invoicing',
-        },
-        {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Dedicated experts',
-        },
-        {
-          icon: '/images/homepage/hiring-modals/tick.svg',
-          text: 'Dedicated PM for support',
+          text: 'Clear Timelines & Deliverables',
         },
       ],
     },
   ],
   styles: {
     mainBoxStyle: {
-      '@media(min-width:768px)': { px: 3 },
+      width: 'auto',
+      backgroundColor: '#EDF3FF',
+      py: { xs: 3, md: 5 },
     },
     innerBoxStyle: {
-      width: '100%',
-      maxWidth: 1210,
-      margin: 'auto',
-      position: 'relative',
+      pt: 3.5,
+      px: 2,
     },
     titleBoxStyle: { pb: 4, px: 3 },
     titleStyle: {
-      fontSize: { xs: '26px', sm: '28px', md: '30px', lg: '32px' },
+      fontSize: { xs: '26px', sm: '28px', md: '30px', lg: '38px' },
       fontWeight: 600,
-      color: '#001C63',
+      color: '#222324',
       textAlign: 'center',
     },
     buttonBoxStyle: {
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center',
+      ml: 1.5,
+      width: { xs: '15px', sm: '21px', md: '25px', lg: '27px' },
     },
     buttonStyle: {
-      mt: 1.5,
-      mx: 'auto',
-      width: '152px',
-      height: '48px',
-      color: '#001C63',
-      backgroundColor: '#fff',
-      border: '1px solid #001C63',
+      width: '100%',
+      height: { xs: '49px', sm: '65px', lg: '89px' },
+      color: '#fff',
+      backgroundColor: '#09114A',
+      px: 1,
+      borderRadius: '14px',
+      fontSize: { xs: '14px', sm: '18px', lg: '26px' },
       textWrap: 'nowrap',
-      borderRadius: '5px',
-      fontSize: '19px',
-      fontWeight: 600,
-      '&:hover': {
-        backgroundColor: '#fff',
-        color: '#001C63',
-      },
-    },
-    slideStyle: {
-      backgroundColor: '#fff',
-      borderRadius: '9px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100%',
     },
     cardStyle: {
-      width: '100%',
-      maxWidth: { sm: '376px', lg: '376.38px' },
-      minHeight: { xs: '160px', sm: '200px', md: '245.1px' },
-      border: '1px solid #029894',
-      borderRadius: '9px',
-      mx: 'auto',
-      '@media(min-width:0px) and (max-width:480px)': {
-        maxWidth: '80%',
-      },
+      display: 'flex',
+      width: { xs: '75%', sm: '82%', lg: '95%' },
+      height: '100%',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
+      maxWidth: { xs: '380px', md: '482px' },
+      minHeight: { xs: '300px', sm: '400px', md: '460px' },
+      border: '1px solid #2870C380',
+      backgroundColor: '#fff',
+      borderRadius: '17.7px',
+      p: 2,
+      px: { xs: 2, sm: 4 },
     },
     cardHeaderStyle: {
-      display: 'flex',
-      alignItems: 'center',
-      position: 'relative',
-      width: 'auto',
-      height: { xs: 'auto', sm: '82', md: '82px', lg: '92px' },
-      backgroundColor: '#029894',
-      borderTopRightRadius: '7px',
-      borderTopLeftRadius: '7px',
-      px: 2,
-      py: { xs: 2, sm: 2.5, md: 0 },
+      color: '#111845',
+      fontSize: { xs: '24px', sm: '28px', md: '32px', lg: '35px' },
+      fontWeight: 600,
+      width: '92%',
+      minHeight: { xs: 'auto', md: '108px' },
     },
-    cardBodyStyle: { p: 3 },
-    ulStyle: { pl: 0 },
-    liStyle: {
-      display: 'flex',
-      gap: 1,
-      mb: 1,
-      alignItems: 'start',
-    },
-    cardImageStyle: { mt: 0.7 },
-    itemTextStyle: {
-      fontSize: {
-        xs: '15px',
-        sm: '16px',
-        md: '16px',
-        lg: '18px',
-      },
+    ulStyle: { pl: '20px', minHeight: { xs: 'auto', md: '187px' } },
+    listStyle: {
+      color: '#111845',
+      maxWidth: '300px',
+      fontSize: { xs: '16px', sm: '19px', md: '21px', lg: '25px' },
       fontWeight: 500,
-      color: '#354899',
+    },
+    cardImageStyle: {
+      width: { xs: '55px', sm: '75px', lg: '85px' },
+      height: 'auto',
     },
   },
 };
 
 export const EXPERTIES_DATA = {
-  title: 'Which Experts Will Drive Your Business?',
+  title: 'Our Core Competencies',
   services: [
     {
       id: 2,
@@ -846,7 +817,7 @@ export const EXPERTIES_DATA = {
     },
   ],
   styles: {
-    containerStyle: { py: { xs: 5.5, sm: 6, md: 7, lg: 10 } },
+    containerStyle: { py: 2 },
     accordionStyle: { border: '1px solid #6A6565', boxShadow: 'none' },
     accrodionSummaryStyle: {
       display: 'flex',
@@ -1061,6 +1032,756 @@ export const OFFSHORE_DATA = {
   },
 };
 
+export const POWER_PROJECT_DATA = {
+  first_text: {
+    text: 'Power Your',
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+      {
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
+      },
+      {
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
+      },
+      {
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
+      },
+      {
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
+      },
+      {
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
+      },
+    ],
+  },
+  second_text: {
+    text: 'Projects with a',
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+      {
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
+      },
+      {
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
+      },
+      {
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
+      },
+      {
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
+      },
+      {
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
+      },
+    ],
+  },
+  third_text: {
+    text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
+    logos: [
+      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      {
+        src: 'images/new-home/power-projects/acf.png',
+        text: 'Advance Custom Field',
+      },
+      {
+        src: 'images/new-home/power-projects/electron.png',
+        text: 'Electron JS',
+      },
+      {
+        src: 'images/new-home/power-projects/shopify.png',
+        text: 'Shopify',
+      },
+      {
+        src: 'images/new-home/power-projects/cpt.png',
+        text: 'Custom Post Type',
+      },
+      {
+        src: 'images/new-home/power-projects/git.png',
+        text: 'GIT',
+      },
+      {
+        src: 'images/new-home/power-projects/react.png',
+        text: 'React',
+      },
+      {
+        src: 'images/new-home/power-projects/next-js.png',
+        text: 'Next.JS',
+      },
+      {
+        src: 'images/new-home/power-projects/es6.png',
+        text: 'JavaScript ES6',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/oop.png',
+        text: 'Object Oriented Programming',
+      },
+      {
+        src: 'images/new-home/power-projects/apachea.png',
+        text: 'Apache',
+      },
+      {
+        src: 'images/new-home/power-projects/python.png',
+        text: 'Python',
+      },
+      {
+        src: 'images/new-home/power-projects/react-native.png',
+        text: 'React Native ',
+      },
+      {
+        src: 'images/new-home/power-projects/jquery.png',
+        text: 'JQuery',
+      },
+      {
+        src: 'images/new-home/power-projects/state.png',
+        text: 'State Management libraries',
+      },
+      {
+        src: 'images/new-home/power-projects/javascript.png',
+        text: 'Javascript',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/sql.png',
+        text: 'SQL',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/html.png',
+        text: 'HTML',
+      },
+      {
+        src: 'images/new-home/power-projects/wp-cli.png',
+        text: 'Wordpress CLI',
+      },
+      {
+        src: 'images/new-home/power-projects/restful.png',
+        text: 'RESTful APIs',
+      },
+      {
+        src: 'images/new-home/power-projects/bootstrap.png',
+        text: 'Bootstrap',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/css.png',
+        text: 'CSS',
+      },
+      {
+        src: 'images/new-home/power-projects/typescript.png',
+        text: 'TypeScript',
+      },
+      {
+        src: 'images/new-home/power-projects/github.png',
+        text: 'GITHUB CLA',
+      },
+      {
+        src: 'images/new-home/power-projects/php.png',
+        text: 'PHP',
+      },
+      {
+        src: 'images/new-home/power-projects/woocommerce.png',
+        text: 'COMMERCE',
+      },
+    ],
+  },
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#EDF3FF',
+      px: 3,
+      pt: 5.5,
+      pb: { xs: 7.5, sm: 8.5 },
+    },
+    containerStyle: (maxWidth) => ({
+      mx: 'auto',
+      width: '100%',
+      overflow: 'hidden',
+      maxWidth: maxWidth || 'auto',
+    }),
+    titleSyle: {
+      fontWeight: 600,
+      mb: { xs: 5, sm: 5, md: 2, lg: 0.5 },
+      fontSize: {
+        xs: 'calc(20px + 6.36vw)',
+        lg: 'calc(20px + 7.56vw)',
+        xl: '165px',
+      },
+      color: '#111845',
+    },
+    logosBoxStyle: (scrollDirection, scrollRight, scrollLeft, top) => ({
+      gap: 12,
+      px: 2,
+      pt: { xs: 1.5, md: 0 },
+      top: top || '75%',
+      transform: 'translate(-50%)',
+      position: { xs: 'absolute' },
+      display: 'inline-flex',
+      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 15s linear infinite`,
+    }),
+    chipBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'nowrap',
+      pr: 4.5,
+      gap: 1,
+    },
+    chipStyle: {
+      width: 'auto',
+      height: { xs: '33px', lg: '36px' },
+      backgroundColor: '#fff',
+      borderRadius: '24px',
+    },
+  },
+};
+
+export const ENTIRE_TEAM = {
+  title: 'Keep track of your entire team in one place!',
+  text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
+  image: '/images/new-home/entire-team/laptop.svg',
+  points: [
+    {
+      title: 'Real-Time Hiring & Interview Updates',
+      text: 'Track every hiring request and interview status all in one place.',
+    },
+    {
+      title: 'Complete Onboarding at a Glance',
+      text: 'From offer letters to orientation, manage every onboarding step effortlessly.',
+    },
+    {
+      title: 'Smart Attendance & Time Tracking',
+      text: 'Monitor work hours, leaves, and attendance with daily and hourly insights.',
+    },
+    {
+      title: 'Clear Payment & Inventory Records',
+      text: 'View salary disbursements, invoices, and allocated inventory in one dashboard.',
+    },
+    {
+      title: 'Easy Contract & NDA Access',
+      text: 'Keep all employee contracts and signed NDAs organized and just a click away.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      flexGrow: 1,
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      px: { xs: 1.5, sm: 3, md: 5 },
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      maxWidth: '1570px',
+      mx: 'auto',
+    },
+    titleStyle: {
+      mx: 'auto',
+      width: '80%',
+      fontWeight: 600,
+      color: '#222324',
+      maxWidth: '1200px',
+      textAlign: 'center',
+      mb: { xs: 1, md: 0.5 },
+      fontSize: { xs: '25px', sm: '32px', md: '42px', lg: '52px' },
+    },
+    textStyle: {
+      mx: 'auto',
+      width: '90%',
+      fontWeight: 400,
+      maxWidth: '950px',
+      textAlign: 'center',
+      color: '#000000CC',
+      fontSize: { xs: '14px', md: '17px' },
+    },
+    imageBoxStyle: {
+      mx: 'auto',
+      display: 'flex',
+      borderRadius: '25px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#DDE8FF',
+      maxWidth: { xs: '400px', md: '799px' },
+      maxHeight: { xs: 'auto', lg: '656px' },
+    },
+    listBoxStyle: {
+      display: 'flex',
+      justifyContent: { xs: 'flex-start', md: 'center' },
+      pt: { xs: 1.5, lg: 4 },
+      pl: { sm: 2, lg: 6 },
+    },
+    avatarStyle: {
+      width: { xs: '35px', md: '50px', lg: '70px' },
+      height: { xs: '35px', md: '50px', lg: '70px' },
+      bgcolor: '#029894',
+    },
+    avatarTextStyle: {
+      fontSize: {
+        xs: '15px',
+        sm: '18px',
+        md: '25px',
+        lg: '31px',
+      },
+      fontWeight: 600,
+      color: '#fff',
+    },
+    listTextBoxStyle: {
+      p: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: 0,
+    },
+    listHeadingStyle: {
+      fontSize: {
+        xs: '16px',
+        sm: '19px',
+        md: '22px',
+        lg: '28px',
+      },
+      fontWeight: 600,
+      color: '#232E73',
+      maxWidth: '450px',
+      lineHeight: 1.2,
+    },
+    listParagraphStyle: {
+      fontSize: { xs: '13px', md: '15px', lg: '17px' },
+      fontWeight: 400,
+      color: '#000000CC',
+      maxWidth: '450px',
+    },
+  },
+};
+
+export const GLOBAL_TEAMS = {
+  title: 'Break Borders, Build Global Teams',
+  text: 'Connect with world-class talent, no matter where you are.',
+  slides: [
+    {
+      country: 'USA',
+      image: 'images/new-home/global-teams/usa.svg',
+      flag: 'images/new-home/global-teams/usa-flag.png',
+    },
+    {
+      country: 'Canada',
+      image: 'images/new-home/global-teams/canada.svg',
+      flag: 'images/new-home/global-teams/canada-flag.png',
+    },
+    {
+      country: 'United Kingdom',
+      image: 'images/new-home/global-teams/united-kingdom.svg',
+      flag: 'images/new-home/global-teams/united-kingdom-flag.png',
+    },
+    {
+      country: 'Saudi Arabia',
+      image: 'images/new-home/global-teams/saudi-arabia.svg',
+      flag: 'images/new-home/global-teams/saudi-arabia-flag.png',
+    },
+    {
+      country: 'Qatar',
+      image: 'images/new-home/global-teams/qatar.svg',
+      flag: 'images/new-home/global-teams/qatar-flag.png',
+    },
+    {
+      country: 'UAE',
+      image: 'images/new-home/global-teams/uae.svg',
+      flag: 'images/new-home/global-teams/uae-flag.png',
+    },
+    {
+      country: 'Oman',
+      image: 'images/new-home/global-teams/oman.svg',
+      flag: 'images/new-home/global-teams/oman-flag.png',
+    },
+    {
+      country: 'Malaysia',
+      image: 'images/new-home/global-teams/malaysia.svg',
+      flag: 'images/new-home/global-teams/malaysia-flag.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: 2,
+      px: 2,
+      py: 1,
+    },
+    titleStyle: {
+      fontSize: { xs: '25px', md: '28px', lg: '32px' },
+      fontWeight: 600,
+      color: '#001C63',
+      textAlign: 'center',
+      mb: { xs: 1, md: 0 },
+    },
+    textStyle: {
+      fontSize: { xs: '14px', md: '18px' },
+      fontWeight: 400,
+      color: '#001C63',
+      textAlign: 'center',
+    },
+    swiperSlideStyle: {
+      width: '75%',
+      maxWidth: 297,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    slideImageStyle: {
+      width: { xs: '100%', md: 297 },
+      height: { xs: 'auto', md: 407 },
+      objectFit: 'cover',
+      borderRadius: '30px',
+      position: 'relative',
+      mx: 'auto',
+    },
+    flagBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      position: 'absolute',
+      bottom: { xs: 15, md: 20 },
+      left: { xs: 15, md: 20 },
+      gap: 1.2,
+    },
+    flagImageStyle: {
+      width: { xs: 30, md: 45 },
+      height: { xs: 30, md: 45 },
+    },
+    countryTextStyle: {
+      fontSize: {
+        xs: '15px',
+        sm: '17px',
+        md: '19px',
+        lg: '22px',
+      },
+      fontWeight: 400,
+      color: '#fff',
+    },
+  },
+};
+
+export const TRUSTED_PLATFORM = {
+  title:
+    'eSpark Talent is the Global Outsourcing Platform trusted by industry leaders',
+  images: [
+    'images/new-home/trusted-platform/01.png',
+    'images/new-home/trusted-platform/02.png',
+    'images/new-home/trusted-platform/03.png',
+    'images/new-home/trusted-platform/04.png',
+    'images/new-home/trusted-platform/05.png',
+    'images/new-home/trusted-platform/06.png',
+  ],
+  review: [
+    {
+      title: '500+',
+      text: 'Professional Talent Pool',
+    },
+    {
+      title: '4.8',
+      text: '100+ 5 Star Reviews',
+    },
+    {
+      title: '$80M',
+      text: 'In Cost Saving',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#EDF3FF',
+      py: { xs: 6, lg: 8 },
+      px: 2,
+    },
+    titleStyle: {
+      fontSize: { xs: '25px', sm: '32px', md: '38px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+      width: '90%',
+      mx: 'auto',
+      maxWidth: { xs: '800px', lg: '1260px' },
+    },
+    reviewBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    reviewTitleStyle: {
+      color: '#001C63',
+      fontSize: { xs: '40px', sm: '60px', md: '70px', lg: '112px' },
+      fontWeight: 400,
+      lineHeight: 1,
+    },
+    reviewTextStyle: {
+      color: '#000000CC',
+      fontSize: { xs: '18px', sm: '20px', md: '21px', lg: '28px' },
+      fontWeight: 500,
+      textAlign: 'center',
+    },
+
+    swiperSlideStyle: {
+      width: '55%',
+      maxWidth: 183,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    slideImageStyle: {
+      width: { xs: '85%', md: 183 },
+      height: { xs: 'auto', md: 'auto' },
+      objectFit: 'cover',
+      position: 'relative',
+      mx: 'auto',
+    },
+  },
+};
+
 // pricing Defference
 
 export const containerStyle = {
@@ -1160,11 +1881,10 @@ export const titleStyle = {
   fontSize: {
     xs: '19.27px',
     sm: '24px',
-    md: '28px',
     lg: '28.83px',
   },
   fontWeight: 600,
-  lineHeight: { md: 'auto', lg: 1.8 },
+  lineHeight: { md: 'auto', lg: 1.5 },
 };
 
 export const contentStyle = {
@@ -1177,12 +1897,55 @@ export const paragraphStyle = {
   color: '#001C63',
   fontSize: {
     xs: '12px',
-    sm: '12px',
-    md: '17px',
-    lg: '18px',
+    sm: '14px',
+    lg: '16px',
   },
   fontWeight: 400,
-  lineHeight: 1.4,
+  lineHeight: '27px',
+};
+
+export const PricingDefferenceStyles = {
+  containerStyle: {
+    width: '100%',
+    maxWidth: 1460,
+    margin: 'auto',
+    padding: '8px 0',
+    position: 'relative',
+    pt: { xs: 2, md: 4, lg: 7 },
+  },
+  mainTitleStyle: {
+    color: '#001C63',
+    textAlign: 'center',
+    fontSize: { xs: '22px', sm: '25px', md: '28px', lg: '32px' },
+    lineHeight: 1.5,
+  },
+  cardStyle: {
+    width: '100%',
+    height: '100%',
+    maxWidth: '467px',
+    minHeight: { xs: '215px', md: '250px', lg: '280px' },
+    backgroundColor: '#FFFFFF',
+    border: '0.9px solid #DEDCDC',
+    boxShadow: '0px 4px 25.4px rgba(0, 0, 0, 0.08)',
+    borderRadius: '14px',
+    mx: 1.8,
+    px: 2.2,
+    py: { xs: 1.5, sm: 1 },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  imageStyle: {
+    width: { xs: '45px', sm: '55px', lg: '80px' },
+    height: 'auto',
+    mb: 1,
+  },
+  typoBoxStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { xs: 1, lg: 0 },
+    minHeight: { md: '170px', lg: '150px' },
+  },
 };
 
 export const EMPLOYEE_SLIDER_DATA = {

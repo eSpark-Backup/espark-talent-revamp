@@ -1,5 +1,5 @@
 export const FOOTER_DATA = {
-  logo: '/images/footer/logo.png',
+  logo: '/images/thankyou/ThankyouPageLogo.WEBP',
   logoLink: '/',
   trustPilotImage: '/images/footer/social-icons/TrustPilot2.svg',
   trustPilotLink:
@@ -53,21 +53,17 @@ export const FOOTER_DATA = {
         {
           label: 'Contact Us',
           info: [
-            { icon: '/images/footer/flag.png', value: 'USA' },
+            { value: 'Have questions about our features ?' },
             {
-              icon: '/images/footer/location.png',
-              value: '6001 W Parmer Lane Ste 370 #977 Austin, TX 78727',
-            },
-            { value: 'Have questions about <span>our features</span>?' },
-            {
-              icon: '/images/footer/email.png',
               value: 'sales@esparktalent.com',
               link: 'mailto:sales@esparktalent.com',
             },
             {
-              icon: '/images/footer/phone.png',
-              value: '+1 (323) 790-6035',
-              link: 'tel:+1 (323) 790-6035',
+              value: 'Already using our service and need some help?',
+            },
+            {
+              value: 'info@esparktalent.com',
+              link: 'mailto:info@esparktalent.com',
             },
           ],
         },
@@ -76,35 +72,157 @@ export const FOOTER_DATA = {
   ],
   socialMedia: [
     {
-      img: '/images/footer/social-icons/facebook.svg',
+      img: '/images/footer/social-icons/facebook.png',
       link: 'https://www.facebook.com/people/eSpark-Talent/61550048738610/',
       alt: 'facebook',
     },
     {
-      img: '/images/footer/social-icons/twitter.svg',
+      img: '/images/footer/social-icons/twitter.png',
       link: 'https://www.twitter.com/eSparkTalent',
       alt: 'twitter',
     },
     {
-      img: '/images/footer/social-icons/linkedin.svg',
+      img: '/images/footer/social-icons/linkedin.png',
       link: 'https://www.linkedin.com/company/espark-talent/',
       alt: 'linkedIn',
     },
     {
-      img: '/images/footer/social-icons/instagram.svg',
+      img: '/images/footer/social-icons/instagram.png',
       link: 'https://www.instagram.com/esparktalent/',
       alt: 'instagram',
     },
   ],
 };
 
+export const ORGANIZE_TEAM_DATA = {
+  title_1: 'Organise your Team',
+  title_2: 'with eSpark Talent',
+  text: 'Build your dream tech team with experts, ready when you are.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+  images: [
+    {
+      img: 'images/new-home/organize-team/01.png',
+      alt: '01.png',
+    },
+    {
+      img: 'images/new-home/organize-team/02.jpg',
+      alt: '02.jpg',
+    },
+    {
+      img: 'images/new-home/organize-team/03.png',
+      alt: '03.png',
+    },
+    {
+      img: 'images/new-home/organize-team/04.png',
+      alt: '04.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      px: 2,
+      gap: 2,
+      width: '95%',
+      height: '100%',
+      py: { xs: 3, md: 0, lg: 0 },
+      minHeight: { xs: 'auto', md: '350px', lg: '453px' },
+      maxWidth: '1438px',
+      backgroundImage: 'url(/images/new-home/organize-team/ok.png)',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: { xs: '31px', sm: '41px', md: '71px' },
+      backdropFilter: 'blur(63.2px)',
+      WebkitBackdropFilter: 'blur(63.2px)',
+      boxShadow: '0px 0px 72px rgba(27, 232, 208, 0.1)',
+    },
+    titleStyle: {
+      fontSize: {
+        xs: '5.73vw',
+        md: '4.73vw',
+        xl: '86px',
+      },
+      fontWeight: 500,
+      color: '#ffff',
+      textAlign: 'center',
+      textWrap: { md: 'nowrap' },
+    },
+    titleAndImagesBoxStyle: {
+      display: 'flex',
+      flexDirection: { xs: 'column', md: 'row' },
+      alignItems: 'center',
+      gap: { xs: 1.5, lg: 2.5 },
+      flexWrap: 'nowrap',
+      mt: { xs: 0.5, lg: 0 },
+    },
+    imagesBoxStyle: {
+      width: 'auto',
+      maxWidth: { xs: '170px', sm: '210px', md: '230px', lg: '305px' },
+      maxHeight: '94px',
+      border: '1px solid #fff',
+      borderRadius: '50px',
+      backgroundColor: '#D9D9D95E',
+      p: 0.8,
+      px: 1.5,
+      display: 'flex',
+      justifyContent: 'center',
+      order: { xs: 1, md: 0 },
+    },
+    imageStyle: (index) => ({
+      width: { xs: '31%', sm: '28%' },
+      maxWidth: '78px',
+      height: 'auto',
+      ml: index === 0 ? 0 : -1.5,
+    }),
+    textStyle: {
+      fontSize: {
+        xs: '13px',
+        sm: '14px',
+        md: '18px',
+        lg: '28px',
+      },
+      fontWeight: 400,
+      color: '#ffff',
+      textAlign: 'center',
+      maxWidth: { xs: '300px', md: '65%', lg: '100%' },
+      px: 1.5,
+    },
+    buttonStyle: {
+      mb: 1,
+      width: '100%',
+      maxWidth: { xs: '184px', sm: '204px' },
+      height: { xs: '41px', md: '45px', lg: '51px' },
+      fontSize: { xs: '14px', sm: '16px', lg: '21px' },
+      fontWeight: 400,
+      textWrap: 'nowrap',
+      backgroundColor: '#001C63',
+      color: '#fff',
+      borderRadius: '14px',
+      '&:hover': {
+        backgroundColor: '#001C63',
+      },
+    },
+  },
+};
+
 export const FOOTER_STYLE = {
-  mainBoxStyle: { width: '100%', height: '100%', backgroundColor: '#ECECED' },
+  mainBoxStyle: {
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(to bottom, #001C63, #04102C)',
+  },
   innerBoxStyle: {
     width: '100%',
     height: '100%',
     mx: 'auto',
-    maxWidth: { lg: '1300px', xl: '1400px' },
+    maxWidth: { lg: '1450px', xl: '1480px' },
     maxHeight: { xs: '100%', lg: '380px' },
     display: 'flex',
     flexDirection: 'row',
@@ -165,7 +283,7 @@ export const FOOTER_STYLE = {
     fontSize: { xs: '8px', sm: '10px', md: '13px', lg: '15px' },
     fontWeight: 400,
     lineHeight: { xs: '24px' },
-    color: '#001C63',
+    color: '#FFFFFF',
     pl: { md: 1.6, lg: 0 },
     pr: { md: 3, lg: 3 },
     '@media(min-width:768px) and (max-width: 1023px)': {
@@ -243,7 +361,7 @@ export const FOOTER_STYLE = {
   lebelStyle: {
     fontSize: { md: '18px', lg: '24px' },
     fontWeight: 600,
-    color: '#001C63',
+    color: '#FFFFFF',
     '@media(min-width:768px) and (max-width: 1023px)': {
       fontSize: '18px',
     },
@@ -287,7 +405,7 @@ export const FOOTER_STYLE = {
     width: _textIndex === 5 ? 'auto' : 'calc(100% - 25px)',
     fontSize: { md: '13px', lg: '15px' },
     fontWeight: 400,
-    color: '#000000',
+    color: '#fff',
     mt: _textIndex === 0 ? 0 : 1,
     wordBreak: 'break-word',
     whiteSpace: 'normal',
@@ -326,7 +444,7 @@ export const FOOTER_STYLE = {
   pageNameStyle: (_pIndex) => ({
     fontSize: { md: '13px', lg: '15px' },
     fontWeight: 400,
-    color: '#001C63',
+    color: '#FFFFFF',
     mt: _pIndex === 0 ? 0 : 1,
     '@media(min-width:768px) and (max-width: 1023px)': {
       fontSize: '13px',
@@ -342,7 +460,7 @@ export const FOOTER_STYLE = {
     mx: 'auto',
     width: '90%',
     height: '2px',
-    backgroundColor: '#001C63',
+    backgroundColor: '#FFFFFF',
     opacity: 0.17,
   },
   copyRightBoxStyle: {
@@ -356,7 +474,7 @@ export const FOOTER_STYLE = {
       lg: '15px',
     },
     fontWeight: 400,
-    color: '#0E0F1D',
+    color: '#FFFFFF',
     py: 2.3,
     textAlign: 'center',
     '@media(min-width:768px) and (max-width: 1399px)': {
@@ -375,9 +493,9 @@ export const FOOTER_STYLE = {
       sm: linkIndex === 0 ? 4 : 3,
     },
   }),
-  termsAndConditionLinkStyle: { color: '#001C63' },
+  termsAndConditionLinkStyle: { color: '#FFFFFF' },
   termsAndConditionTextStyle: {
-    color: '#001C63',
+    color: '#FFFFFF',
     fontSize: { lg: '15px' },
     fontWeight: 400,
     '@media(min-width:768px) and (max-width: 1399px)': {
@@ -397,7 +515,7 @@ export const CAREERS_FOOTER_DATA = {
     topSection: [
       {
         icon: '/images/footer/flag.png',
-        text: '<span style="font-weight:500;color:#001C63 !important;">USA</span>',
+        text: '<span style="font-weight:500;color:#FFFFFF !important;">USA</span>',
         link: '',
       },
       {

@@ -1,4 +1,4 @@
-export const HIRE_A_TALENT = 'Hire a Talent';
+export const HIRE_A_TALENT = 'Services';
 export const BOOK_A_DEMO = 'Book a Demo';
 export const Request_Candidate = 'Request Candidate';
 export const HIRE_A_TALENT_LINK = '/book-a-demo';
@@ -15,23 +15,23 @@ export const NAVBAR_STYLE = {
   popperStyle: (dropdownName) => ({
     zIndex: 1002,
     mx: 'auto',
-    width: dropdownName === 'Hire A Talent' ? '100%' : 'auto',
+    width: dropdownName === 'Services' ? '100%' : 'auto',
   }),
   growStyle: (dropdownName) => ({
     background: !dropdownName
       ? 'transparent'
-      : dropdownName === 'Hire A Talent'
+      : dropdownName === 'Services'
         ? '#F7F8FB'
         : '#fff',
     borderRadius: '11px',
     boxShadow: '0px 0px 4px 0px #00000040',
-    maxWidth: dropdownName === 'Hire A Talent' ? '99%' : 'auto',
+    maxWidth: dropdownName === 'Services' ? '99%' : 'auto',
     minHeight: 'auto',
     mx: 'auto',
   }),
   growBoxStyle: (dropdownName) => ({
     width: 'auto',
-    p: dropdownName === 'Hire A Talent' ? 1 : 0,
+    p: dropdownName === 'Services' ? 1 : 0,
     mt: 1.5,
   }),
   navbarItemStyle: {
