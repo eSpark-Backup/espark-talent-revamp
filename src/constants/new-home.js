@@ -1075,10 +1075,6 @@ export const POWER_PROJECT_DATA = {
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
         src: 'images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
@@ -1206,10 +1202,6 @@ export const POWER_PROJECT_DATA = {
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
         src: 'images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
@@ -1331,10 +1323,6 @@ export const POWER_PROJECT_DATA = {
       {
         src: 'images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
       },
       {
         src: 'images/new-home/power-projects/javascript.png',
