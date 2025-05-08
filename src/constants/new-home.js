@@ -565,7 +565,7 @@ export const HIRING_DATA = {
     {
       title: `Hire Dedicated Developers`,
       buttonText: 'Find Your Developer',
-      link: '/offshore-development-center',
+      link: '/hire-dedicated-developers',
       points: [
         { text: 'Plug Into Proven Talent' },
         { text: 'Quick Onboarding' },
@@ -575,7 +575,7 @@ export const HIRING_DATA = {
     {
       title: `Offshore Development Center`,
       buttonText: 'Explore ODC Options',
-      link: '/fixed-price-projects',
+      link: '/Offshore-development-center',
       points: [
         {
           text: 'Expand Without Overhead',
@@ -591,7 +591,7 @@ export const HIRING_DATA = {
     {
       title: `Fixed Price Projects`,
       buttonText: 'Start Your Project',
-      link: '/hire-dedicated-developers',
+      link: '/fixed-price-projects',
       points: [
         {
           text: 'Transparent, Upfront Costs',
@@ -2002,4 +2002,78 @@ export const EMPLOYEE_SLIDER_DATA = {
       borderRadius: '16.08px',
     },
   },
+};
+
+export const HIRE_DEDICATED_DEVELOPERS_DATA = {
+  title: `Hire Dedicated <span style="color: #19B5AD; font-weight: 600">Developers</span>`,
+  text: 'Skip the long hiring process. We connect you with skilled developers who are ready to jump in, work alongside your team, and start contributing from day one.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: { xs: 'auto', md: 'calc(100vh - 127px)' },
+      maxHeight: { md: '700px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      px: 2,
+      py: { xs: 6, md: 0 },
+      backgroundImage:
+        "url('images/new-home/hire-dedicated-developers/bg.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      width: '90%',
+      maxWidth: { sm: '420px', md: '620px' },
+      fontWeight: 600,
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    textStyle: {
+      width: '80%',
+      maxWidth: { xs: '100%', sm: '90%', md: '1080px' },
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+      color: '#111845',
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+export const OUR_AREA_OF_EXPERTISE_DATA = {
+  title: 'Our Area Of Expertise',
+  text: '',
+  cards: [
+    {
+      id: 1,
+      image: '🌐',
+      title: 'Fixed Salary',
+      description:
+        'Robust, scalable web solutions using the latest technologies.',
+    },
+    {
+      id: 2,
+      image: '🌐',
+      title: 'Hourly Rate',
+      description:
+        'Cross-platform mobile apps with seamless UX and high performance.',
+    },
+  ],
 };
