@@ -8,7 +8,7 @@ import { EffectCards, Pagination } from 'swiper/modules';
 import { open } from '@/utils';
 
 const HomePageHiringModel = ({ data }) => {
-  const { title, icon, items, styles } = data || {};
+  const { title, icon, items, image, styles } = data || {};
   const {
     mainBoxStyle,
     innerBoxStyle,
@@ -35,7 +35,7 @@ const HomePageHiringModel = ({ data }) => {
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
-        <Box sx={cardImageStyle} src={eachItem?.image} component={'img'} />
+        <Box sx={cardImageStyle} src={image} component={'img'} />
         <Typography sx={cardHeaderStyle}>{eachItem?.title}</Typography>
         <Typography component={'ul'} sx={ulStyle}>
           {eachItem?.points?.map((item, pointIndex) => (

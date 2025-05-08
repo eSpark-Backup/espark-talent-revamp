@@ -527,6 +527,7 @@ export const EXPERT_TEAM_DATA = {
       borderRadius: '33px',
       color: '#fff',
       py: { xs: 5, sm: 6 },
+      mb: { xs: 3, md: 5 },
       background: 'linear-gradient(180deg, #0B1B61 20%, #020B21 100%)',
       '@media (min-width: 1024px)': { gap: 10, pb: 0 },
     },
@@ -627,7 +628,7 @@ export const HIRING_DATA = {
     },
     buttonStyle: {
       width: '100%',
-      height: { xs: '49px', sm: '69px', md: '79px', lg: '89px' },
+      height: { xs: '49px', sm: '65px', lg: '89px' },
       color: '#fff',
       backgroundColor: '#09114A',
       px: 1,
@@ -653,7 +654,7 @@ export const HIRING_DATA = {
       color: '#111845',
       fontSize: { xs: '24px', sm: '28px', md: '32px', lg: '35px' },
       fontWeight: 600,
-      width: '90%',
+      width: '92%',
       minHeight: { xs: 'auto', md: '108px' },
     },
     ulStyle: { pl: '20px', minHeight: { xs: 'auto', md: '187px' } },
@@ -816,7 +817,7 @@ export const EXPERTIES_DATA = {
     },
   ],
   styles: {
-    containerStyle: { py: { xs: 5.5, sm: 6, md: 7, lg: 10 } },
+    containerStyle: { py: 2 },
     accordionStyle: { border: '1px solid #6A6565', boxShadow: 'none' },
     accrodionSummaryStyle: {
       display: 'flex',
@@ -1516,7 +1517,6 @@ export const ENTIRE_TEAM = {
       height: '100%',
       display: 'flex',
       px: { xs: 1.5, sm: 3, md: 5 },
-      py: { xs: 4, md: 6 },
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
@@ -1556,7 +1556,7 @@ export const ENTIRE_TEAM = {
       display: 'flex',
       justifyContent: { xs: 'flex-start', md: 'center' },
       pt: { xs: 1.5, lg: 4 },
-      pl: { xs: 2, lg: 6 },
+      pl: { sm: 2, lg: 6 },
     },
     avatarStyle: {
       width: { xs: '35px', md: '50px', lg: '70px' },
@@ -1655,6 +1655,7 @@ export const GLOBAL_TEAMS = {
       justifyContent: 'center',
       gap: 2,
       px: 2,
+      py: 1,
     },
     titleStyle: {
       fontSize: { xs: '25px', md: '28px', lg: '32px' },
@@ -1922,7 +1923,7 @@ export const PricingDefferenceStyles = {
     margin: 'auto',
     padding: '8px 0',
     position: 'relative',
-    py: { xs: 2, md: 4, lg: 7 },
+    pt: { xs: 2, md: 4, lg: 7 },
   },
   mainTitleStyle: {
     color: '#001C63',
