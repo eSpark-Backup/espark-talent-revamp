@@ -98,6 +98,124 @@ export const FOOTER_DATA = {
   ],
 };
 
+export const ORGANIZE_TEAM_DATA = {
+  title_1: 'Organise your Team',
+  title_2: 'with eSpark Talent',
+  text: 'Build your dream tech team with experts, ready when you are.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+  images: [
+    {
+      img: 'images/new-home/organize-team/01.png',
+      alt: '01.png',
+    },
+    {
+      img: 'images/new-home/organize-team/02.jpg',
+      alt: '02.jpg',
+    },
+    {
+      img: 'images/new-home/organize-team/03.png',
+      alt: '03.png',
+    },
+    {
+      img: 'images/new-home/organize-team/04.png',
+      alt: '04.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      px: 2,
+      gap: 2,
+      width: '95%',
+      height: '100%',
+      py: { xs: 3, md: 0, lg: 0 },
+      minHeight: { xs: 'auto', md: '350px', lg: '453px' },
+      maxWidth: '1438px',
+      backgroundImage: 'url(/images/new-home/organize-team/ok.png)',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: { xs: '31px', sm: '41px', md: '71px' },
+      backdropFilter: 'blur(63.2px)',
+      WebkitBackdropFilter: 'blur(63.2px)',
+      boxShadow: '0px 0px 72px rgba(27, 232, 208, 0.1)',
+    },
+    titleStyle: {
+      fontSize: {
+        xs: '5.73vw',
+        md: '4.73vw',
+        xl: '86px',
+      },
+      fontWeight: 500,
+      color: '#ffff',
+      textAlign: 'center',
+      textWrap: { md: 'nowrap' },
+    },
+    titleAndImagesBoxStyle: {
+      display: 'flex',
+      flexDirection: { xs: 'column', md: 'row' },
+      alignItems: 'center',
+      gap: { xs: 1.5, lg: 2.5 },
+      flexWrap: 'nowrap',
+      mt: { xs: 0.5, lg: 0 },
+    },
+    imagesBoxStyle: {
+      width: 'auto',
+      maxWidth: { xs: '170px', sm: '210px', md: '230px', lg: '305px' },
+      maxHeight: '94px',
+      border: '1px solid #fff',
+      borderRadius: '50px',
+      backgroundColor: '#D9D9D95E',
+      p: 0.8,
+      px: 1.5,
+      display: 'flex',
+      justifyContent: 'center',
+      order: { xs: 1, md: 0 },
+    },
+    imageStyle: (index) => ({
+      width: { xs: '31%', sm: '28%' },
+      maxWidth: '78px',
+      height: 'auto',
+      ml: index === 0 ? 0 : -1.5,
+    }),
+    textStyle: {
+      fontSize: {
+        xs: '13px',
+        sm: '14px',
+        md: '18px',
+        lg: '28px',
+      },
+      fontWeight: 400,
+      color: '#ffff',
+      textAlign: 'center',
+      maxWidth: { xs: '300px', md: '65%', lg: '100%' },
+      px: 1.5,
+    },
+    buttonStyle: {
+      mb: 1,
+      width: '100%',
+      maxWidth: { xs: '184px', sm: '204px' },
+      height: { xs: '41px', md: '45px', lg: '51px' },
+      fontSize: { xs: '14px', sm: '16px', lg: '21px' },
+      fontWeight: 400,
+      textWrap: 'nowrap',
+      backgroundColor: '#001C63',
+      color: '#fff',
+      borderRadius: '14px',
+      '&:hover': {
+        backgroundColor: '#001C63',
+      },
+    },
+  },
+};
+
 export const FOOTER_STYLE = {
   mainBoxStyle: {
     width: '100%',
@@ -108,7 +226,7 @@ export const FOOTER_STYLE = {
     width: '100%',
     height: '100%',
     mx: 'auto',
-    maxWidth: { lg: '1300px', xl: '1400px' },
+    maxWidth: { lg: '1450px', xl: '1480px' },
     maxHeight: { xs: '100%', lg: '380px' },
     display: 'flex',
     flexDirection: 'row',
