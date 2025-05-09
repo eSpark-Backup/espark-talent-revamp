@@ -2212,7 +2212,133 @@ export const EASY_STEPS_DATA = {
       color: '#000000',
       lineHeight: '159%',
       textAlign: { xs: 'center', md: 'left' },
-      fontSize: { xs: '12px', md: '15px', lg: '19px' },
+      fontSize: { xs: '12px', sm: '15px', lg: '19px' },
+    },
+  },
+};
+
+export const EXPERT_DEVELOPERS_DATA = {
+  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
+  title: 'Why Choose Expert Developers from eSpark Talent?',
+  text: 'We connect you with reliable developers through a solid hiring process, so your projects stay on track and move forward efficiently.',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card4.png',
+      title: 'Careful Hiring Process',
+      description:
+        'Every developer goes through a step-by-step check of their skills, background, and communication. We make sure you work with professionals who can start quickly and add real value to your team.',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card3.png',
+      title: 'Flexible Work Options',
+      description:
+        'Need part-time help or a full-time developer? We offer options that align with your workload, giving you control to grow or adjust your team based on project goals',
+    },
+    {
+      id: 3,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card2.png',
+      title: 'Works in Your Time Zone',
+      description:
+        'Our developers match your working hours so you can communicate easily during your day. This helps you stay connected and keep the work moving without delays.',
+    },
+    {
+      id: 4,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card1.png',
+      title: 'Support with Hiring & Paperwork',
+      description:
+        'We take care of contracts, payments, and legal steps so you don’t have to manage extra tasks. By handling the backend setup, you can stay focused on your work.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 4, sm: 6 },
+      textAlign: 'left',
+    },
+    iconStyle: {
+      position: 'relative',
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
+    titleAndTextBoxStyle: {
+      pt: { xs: 0, md: 0.4, lg: 0 },
+      width: {
+        xs: 'calc(100% - 27px)',
+        sm: 'calc(100% - 37px)',
+        md: 'calc(100% - 47px)',
+        lg: 'calc(100% - 57px)',
+      },
+    },
+    titleStyle: {
+      width: '85%',
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    textStyle: {
+      color: '#111845',
+      fontSize: { xs: '13px', sm: '15px', md: '17px', lg: '19px' },
+      fontWeight: 400,
+      width: { xs: '85%', lg: 'auto' },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '100%' },
+      mx: 'auto',
+      px: 3.5,
+      maxWidth: { xs: '350px', md: '480px' },
+      minHeight: { xs: '280px', lg: '315px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '43px',
+      boxShadow: `
+      27.55px 8.48px 34.12px 0px rgba(24, 84, 153, 0.21),
+      inset 0px 6.36px 8.48px 0px #ffffff
+    `,
+      gap: 0.8,
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '65px', md: '75px', lg: '127px' },
+      height: 'auto',
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '16px',
+        md: '18px',
+        lg: '21px',
+      },
+      fontWeight: 500,
+      textAlign: 'center',
+      color: '#111845',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '10px',
+        sm: '10px',
+        md: '11px',
+        lg: '13px',
+      },
+      textAlign: 'center',
+      lineHeight: 1.6,
+      color: '#111845',
     },
   },
 };
