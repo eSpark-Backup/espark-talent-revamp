@@ -2016,14 +2016,15 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
   styles: {
     mainBoxStyle: {
       width: '100%',
-      height: { xs: 'auto', md: 'calc(100vh - 127px)' },
-      maxHeight: { md: '700px' },
+      height: 'calc(100vh - 127px)',
+      minHeight: '450px',
+      maxHeight: '573px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       px: 2,
-      py: { xs: 6, md: 0 },
+      py: { xs: 6, md: 8 },
       backgroundImage:
         "url('images/new-home/hire-dedicated-developers/bg.png')",
       backgroundRepeat: 'no-repeat',
