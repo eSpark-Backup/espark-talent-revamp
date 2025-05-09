@@ -2004,11 +2004,15 @@ export const EMPLOYEE_SLIDER_DATA = {
   },
 };
 
+// hire-dedicated-developers page data
+
 export const HIRE_DEDICATED_DEVELOPERS_DATA = {
   title: `Hire Dedicated <span style="color: #19B5AD; font-weight: 600">Developers</span>`,
   text: 'Skip the long hiring process. We connect you with skilled developers who are ready to jump in, work alongside your team, and start contributing from day one.',
   buttonText: 'Schedule a Call',
   link: '/book-a-demo',
+
+  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2038,7 +2042,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
     },
     textStyle: {
       width: '80%',
-      maxWidth: { xs: '100%', sm: '90%', md: '1080px' },
+      maxWidth: { xs: '100%', sm: '90%', md: '850px', lg: '1080px' },
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
       color: '#111845',
     },
@@ -2058,6 +2062,28 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
   },
 };
 export const OUR_AREA_OF_EXPERTISE_DATA = {
+  title: 'OUR AREA OF EXPERTISE',
+  text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/hire-dedicated-developers/our-area-expertise/01.png',
+      title: 'Fixed Salary',
+      description:
+        'Need long-term support without the hassle of payroll complexities? Hire skilled IT professionals on a fixed monthly salary. ensures stability, predictable costs, and dedicated talent focused on your project throughout its lifecycle. ',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/hire-dedicated-developers/our-area-expertise/02.png',
+      title: 'Hourly Rate',
+      description:
+        'For flexible, task-based work or short-term needs, hire IT experts on an hourly basis. This model gives you complete control over the time and budget, ideal for agile development, quick fixes, or project-based consulting. ',
+    },
+  ],
+
+  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2073,7 +2099,7 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     },
     titleStyle: {
       width: '90%',
-      fontSize: { xs: '26px', sm: '28px', md: '32px', lg: '40px' },
+      fontSize: { xs: '23px', sm: '28px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
     },
@@ -2127,22 +2153,65 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
       color: '#57585C',
     },
   },
-  title: 'OUR AREA OF EXPERTISE',
-  text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
-  cards: [
-    {
-      id: 1,
-      image: 'images/new-home/hire-dedicated-developers/card-img.png',
-      title: 'Fixed Salary',
-      description:
-        'Need long-term support without the hassle of payroll complexities? Hire skilled IT professionals on a fixed monthly salary. ensures stability, predictable costs, and dedicated talent focused on your project throughout its lifecycle. ',
+};
+
+export const EASY_STEPS_DATA = {
+  title: `Hire Dedicated Developers with eSpark in <span style="color: #13A694; font-weight: 600">4</span> Easy Steps`,
+  description:
+    'Hire an individual to scale your team or build a dedicated development team from scratch in no time. Just tell us your requirements and get the best-fit experts under your complete control, just like core in-house team.',
+  image: '/images/new-home/hire-dedicated-developers/easy-steps/easy-steps.png',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1200px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      gap: { xs: 3, md: 0 },
     },
-    {
-      id: 2,
-      image: 'images/new-home/hire-dedicated-developers/card-img.png',
-      title: 'Hourly Rate',
-      description:
-        'For flexible, task-based work or short-term needs, hire IT experts on an hourly basis. This model gives you complete control over the time and budget, ideal for agile development, quick fixes, or project-based consulting. ',
+    imageBoxStyle: {
+      mx: { xs: 'auto', lg: 0 },
+      height: 'auto',
+      order: { xs: 2, md: 0 },
+      width: { xs: '78%', sm: '310px', md: '335px', lg: '400px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '300px',
+      },
     },
-  ],
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(95% - 400px)',
+        lg: 'calc(100% - 470px)',
+      },
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 1.2,
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: 'calc(100% - 380px)',
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '22px', sm: '29px', md: '38px', lg: '52px' },
+      fontWeight: 600,
+      color: '#201E1E',
+      lineHeight: 1.3,
+      textAlign: { xs: 'center', md: 'left' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        fontSize: '32px',
+      },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#000000',
+      lineHeight: '159%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '12px', md: '15px', lg: '19px' },
+    },
+  },
 };

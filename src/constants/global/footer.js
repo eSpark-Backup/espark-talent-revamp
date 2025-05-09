@@ -102,19 +102,19 @@ export const ORGANIZE_TEAM_DATA = {
   link: '/book-a-demo',
   images: [
     {
-      img: 'images/new-home/organize-team/01.png',
+      img: '/images/new-home/organize-team/01.png',
       alt: '01.png',
     },
     {
-      img: 'images/new-home/organize-team/02.jpg',
+      img: '/images/new-home/organize-team/02.jpg',
       alt: '02.jpg',
     },
     {
-      img: 'images/new-home/organize-team/03.png',
+      img: '/images/new-home/organize-team/03.png',
       alt: '03.png',
     },
     {
-      img: 'images/new-home/organize-team/04.png',
+      img: '/images/new-home/organize-team/04.png',
       alt: '04.png',
     },
   ],
