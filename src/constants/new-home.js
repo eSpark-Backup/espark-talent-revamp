@@ -2058,22 +2058,91 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
   },
 };
 export const OUR_AREA_OF_EXPERTISE_DATA = {
-  title: 'Our Area Of Expertise',
-  text: '',
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      maxHeight: { md: '700px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      width: '90%',
+      fontSize: { xs: '26px', sm: '28px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    textStyle: {
+      color: '#111845',
+      fontSize: { xs: '14px', sm: '17px', md: '21px', lg: '28px' },
+      fontWeight: 400,
+      maxWidth: { sm: '480px', md: '800px', lg: '1080px' },
+      width: '85%',
+    },
+    cardStyle: {
+      width: '100%',
+      mx: 'auto',
+      px: 2.5,
+      py: 2,
+      maxWidth: { xs: '446px', md: '546px' },
+      minHeight: '283px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '1px solid #D7D0D0',
+      backgroundColor: '#EDEEF5',
+      borderRadius: '20px',
+      boxShadow: '0px 0px 19.3px rgba(31, 49, 172, 0.21)',
+      gap: 0.8,
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '55px', md: '65px', lg: '75px' },
+      height: 'auto',
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '20px',
+        sm: '20px',
+        md: '23px',
+        lg: '27px',
+      },
+      fontWeight: 600,
+      color: '#111845',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+      lineHeight: 1.6,
+      color: '#57585C',
+    },
+  },
+  title: 'OUR AREA OF EXPERTISE',
+  text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
   cards: [
     {
       id: 1,
-      image: '🌐',
+      image: 'images/new-home/hire-dedicated-developers/card-img.png',
       title: 'Fixed Salary',
       description:
-        'Robust, scalable web solutions using the latest technologies.',
+        'Need long-term support without the hassle of payroll complexities? Hire skilled IT professionals on a fixed monthly salary. ensures stability, predictable costs, and dedicated talent focused on your project throughout its lifecycle. ',
     },
     {
       id: 2,
-      image: '🌐',
+      image: 'images/new-home/hire-dedicated-developers/card-img.png',
       title: 'Hourly Rate',
       description:
-        'Cross-platform mobile apps with seamless UX and high performance.',
+        'For flexible, task-based work or short-term needs, hire IT experts on an hourly basis. This model gives you complete control over the time and budget, ideal for agile development, quick fixes, or project-based consulting. ',
     },
   ],
 };
