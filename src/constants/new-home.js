@@ -1,3 +1,5 @@
+import { width } from '@mui/system';
+
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -2155,7 +2157,6 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     },
   },
 };
-
 export const EASY_STEPS_DATA = {
   title: `Hire Dedicated Developers with eSpark in <span style="color: #13A694; font-weight: 600">4</span> Easy Steps`,
   description:
@@ -2216,7 +2217,6 @@ export const EASY_STEPS_DATA = {
     },
   },
 };
-
 export const EXPERT_DEVELOPERS_DATA = {
   icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
   title: 'Why Choose Expert Developers from eSpark Talent?',
@@ -2269,11 +2269,6 @@ export const EXPERT_DEVELOPERS_DATA = {
       gap: { xs: 4, sm: 6 },
       textAlign: 'left',
     },
-    iconStyle: {
-      position: 'relative',
-      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
-      height: 'auto',
-    },
     titleAndTextBoxStyle: {
       pt: { xs: 0, md: 0.4, lg: 0 },
       width: {
@@ -2290,11 +2285,21 @@ export const EXPERT_DEVELOPERS_DATA = {
       fontWeight: 600,
       color: '#222324',
     },
+    iconStyle: {
+      position: 'relative',
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
     textStyle: {
       color: '#111845',
       fontSize: { xs: '13px', sm: '15px', md: '17px', lg: '19px' },
       fontWeight: 400,
       width: { xs: '85%', lg: 'auto' },
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '65px', md: '75px', lg: '127px' },
+      height: 'auto',
     },
     cardStyle: {
       width: { xs: '90%', sm: '100%' },
@@ -2314,11 +2319,6 @@ export const EXPERT_DEVELOPERS_DATA = {
     `,
       gap: 0.8,
     },
-    imageStyle: {
-      width: '100%',
-      maxWidth: { xs: '65px', md: '75px', lg: '127px' },
-      height: 'auto',
-    },
     cardTitleStyle: {
       fontSize: {
         xs: '16px',
@@ -2331,14 +2331,204 @@ export const EXPERT_DEVELOPERS_DATA = {
     },
     cardDescriptionStyle: {
       fontSize: {
-        xs: '10px',
-        sm: '10px',
-        md: '11px',
+        xs: '12px',
         lg: '13px',
       },
       textAlign: 'center',
       lineHeight: 1.6,
       color: '#111845',
+    },
+  },
+};
+export const HIGH_STAKES_PROJECT_DATA = {
+  title: 'A Vast Pool of Skilled Tech Talent for Your High-Stakes Projects',
+  description:
+    "At eSpark Talent, we open doors to a wide network of expert developers, engineers, designers, and technology specialists ready to power your most critical projects. Whether you're launching a new platform, scaling your infrastructure, or rebuilding your digital presence, we provide access to professionals who not only bring technical expertise but also real-world experience in delivering results under pressure.",
+  description2:
+    'Every candidate goes through a rigorous screening process where we assess technical skills, communication abilities, project experience, and cultural fit — ensuring you get people who can contribute from day one. From front-end and back-end developers, mobile app creators, DevOps engineers, AI and cloud specialists to UI/UX designers and digital marketers, we have specialists across the entire tech spectrum.',
+  description3:
+    'Need to ramp up quickly? Need niche skills for a mission-critical launch? Need a partner who understands both the tech and business side of scaling? eSpark Talent helps you move faster, minimize risk, and achieve bigger outcomes — without wasting time or resources.',
+  image:
+    '/images/new-home/hire-dedicated-developers/high-stakes-projects/ok.png',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1400px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      gap: { xs: 4, md: 7 },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        flexDirection: 'column',
+      },
+    },
+    imageBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      mx: { xs: 'auto', lg: 0 },
+      height: 'auto',
+      order: { xs: 2, md: 0 },
+      width: { xs: '90%', sm: '417px', md: '60%', lg: '557px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '55%',
+      },
+    },
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(100% - 400px)',
+        lg: 'calc(98% - 557px)',
+      },
+      mx: 'auto',
+      flexDirection: 'column',
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '95%',
+      },
+      display: 'flex',
+      gap: { xs: 2, md: 1, lg: 1 },
+    },
+    titleStyle: {
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '47px' },
+      fontWeight: 600,
+      color: '#252525',
+      lineHeight: { lg: 1.3 },
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#000000',
+      lineHeight: '157%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '10px', sm: '14px', md: '15px', lg: '18px' },
+    },
+  },
+};
+export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
+  title: 'Frequently Asked Questions',
+  cards: [
+    {
+      id: 1,
+      title: 'What does it mean to hire a dedicated developer?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 2,
+      title:
+        'How do I maintain the quality of work from a dedicated developer?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 3,
+      title: 'Can a dedicated developer work with my existing team?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 4,
+      title: 'Why should I hire a dedicated developer instead of a team?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 5,
+      title:
+        'How do I know if a dedicated developer is a good fit for my project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 6,
+      title: 'How much do dedicated developers cost?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 3, sm: 4 },
+    },
+    titleStyle: {
+      width: '90%',
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+    },
+    buttonStyle: {
+      width: { xs: '28px', md: '31px', lg: '41px' },
+      height: { xs: '30px', md: '31px', lg: '41px' },
+      minWidth: { xs: '5%', md: 'auto' },
+      padding: 0,
+      backgroundColor: '#F7F7FF',
+      borderRadius: '8px',
+      fontSize: { xs: '20px', md: '23px', lg: '35px' },
+      color: '#6F6C90',
+      textTransform: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 400,
+      '&:hover': {
+        backgroundColor: '#2870C3',
+        color: '#fff',
+      },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '85%', md: '100%' },
+      mx: 'auto',
+      px: 3,
+      py: 3.5,
+      maxWidth: { md: '596px' },
+      height: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '16px',
+      boxShadow: `
+    0px 5px 16px rgba(8, 15, 52, 0.06),
+    inset 0px 6.36px 8.48px 0px #ffffff
+  `,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '15px',
+        md: '17px',
+        lg: '22px',
+      },
+      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      fontWeight: 500,
+      color: '#170F49',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+
+      lineHeight: { xs: '23px', md: '30px' },
+      color: '#6F6C90',
+      width: '99%',
     },
   },
 };
