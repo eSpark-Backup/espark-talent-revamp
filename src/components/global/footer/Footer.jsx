@@ -22,8 +22,6 @@ const Footer = ({ data }) => {
     copyRightLinks,
     pages,
     socialMedia,
-    trustPilotLink,
-    trustPilotImage,
   } = data || {};
 
   const {
@@ -42,11 +40,7 @@ const Footer = ({ data }) => {
     lebelStyle,
     ulStyle,
     textIconAndValueBoxStyle,
-    iconBoxStyle,
-    pageLinkIconStyle,
     valueStyle,
-    trustPilotImageBoxStyle,
-    trustPilotImageStyle,
     pageNameStyle,
     horizontalLineStyle,
     copyRightBoxStyle,

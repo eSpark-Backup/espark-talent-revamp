@@ -565,7 +565,7 @@ export const HIRING_DATA = {
     {
       title: `Hire Dedicated Developers`,
       buttonText: 'Find Your Developer',
-      link: '/offshore-development-center',
+      link: '/hire-dedicated-developers',
       points: [
         { text: 'Plug Into Proven Talent' },
         { text: 'Quick Onboarding' },
@@ -575,7 +575,7 @@ export const HIRING_DATA = {
     {
       title: `Offshore Development Center`,
       buttonText: 'Explore ODC Options',
-      link: '/fixed-price-projects',
+      link: '/Offshore-development-center',
       points: [
         {
           text: 'Expand Without Overhead',
@@ -591,7 +591,7 @@ export const HIRING_DATA = {
     {
       title: `Fixed Price Projects`,
       buttonText: 'Start Your Project',
-      link: '/hire-dedicated-developers',
+      link: '/fixed-price-projects',
       points: [
         {
           text: 'Transparent, Upfront Costs',
@@ -2000,6 +2000,749 @@ export const EMPLOYEE_SLIDER_DATA = {
       height: '100%',
       objectFit: 'cover',
       borderRadius: '16.08px',
+    },
+  },
+};
+
+// hire-dedicated-developers page data
+
+export const HIRE_DEDICATED_DEVELOPERS_DATA = {
+  title: `Hire Dedicated <span style="color: #19B5AD; font-weight: 600">Developers</span>`,
+  text: 'Skip the long hiring process. We connect you with skilled developers who are ready to jump in, work alongside your team, and start contributing from day one.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: 'calc(80vh - 127px)',
+      minHeight: '450px',
+      maxHeight: { xs: '450px', md: '600px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      px: 2,
+      py: { xs: 6, md: 8 },
+      backgroundImage:
+        "url('images/new-home/hire-dedicated-developers/bg.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+      '@media(min-width:1921px)': {
+        maxHeight: '650px',
+        py: 8,
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      width: '90%',
+      maxWidth: { sm: '420px', md: '620px' },
+      fontWeight: 600,
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    textStyle: {
+      width: '80%',
+      maxWidth: { xs: '100%', sm: '90%', md: '850px', lg: '1080px' },
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+      color: '#111845',
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+export const OUR_AREA_OF_EXPERTISE_DATA = {
+  title: 'OUR AREA OF EXPERTISE',
+  text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/hire-dedicated-developers/our-area-expertise/01.png',
+      title: 'Fixed Salary',
+      description:
+        'Need long-term support without the hassle of payroll complexities? Hire skilled IT professionals on a fixed monthly salary. ensures stability, predictable costs, and dedicated talent focused on your project throughout its lifecycle. ',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/hire-dedicated-developers/our-area-expertise/02.png',
+      title: 'Hourly Rate',
+      description:
+        'For flexible, task-based work or short-term needs, hire IT experts on an hourly basis. This model gives you complete control over the time and budget, ideal for agile development, quick fixes, or project-based consulting. ',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      maxHeight: { md: '700px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      width: '90%',
+      fontSize: { xs: '23px', sm: '28px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    textStyle: {
+      color: '#111845',
+      fontSize: { xs: '14px', sm: '17px', md: '21px', lg: '28px' },
+      fontWeight: 400,
+      maxWidth: { sm: '480px', md: '800px', lg: '1080px' },
+      width: '85%',
+    },
+    cardStyle: {
+      width: '100%',
+      mx: 'auto',
+      px: 2.5,
+      py: 2,
+      maxWidth: { xs: '446px', md: '546px' },
+      minHeight: '283px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '1px solid #D7D0D0',
+      backgroundColor: '#EDEEF5',
+      borderRadius: '20px',
+      boxShadow: '0px 0px 19.3px rgba(31, 49, 172, 0.21)',
+      gap: 0.8,
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '55px', md: '65px', lg: '75px' },
+      height: 'auto',
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '20px',
+        sm: '20px',
+        md: '23px',
+        lg: '27px',
+      },
+      fontWeight: 600,
+      color: '#111845',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+      lineHeight: 1.6,
+      color: '#57585C',
+    },
+  },
+};
+export const EASY_STEPS_DATA = {
+  title: `Hire Dedicated Developers with eSpark in <span style="color: #13A694; font-weight: 600">4</span> Easy Steps`,
+  description:
+    'Hire an individual to scale your team or build a dedicated development team from scratch in no time. Just tell us your requirements and get the best-fit experts under your complete control, just like core in-house team.',
+  image: '/images/new-home/hire-dedicated-developers/easy-steps/easy-steps.png',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1200px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      gap: { xs: 3, md: 0 },
+    },
+    imageBoxStyle: {
+      mx: { xs: 'auto', lg: 0 },
+      height: 'auto',
+      order: { xs: 2, md: 0 },
+      width: { xs: '78%', sm: '310px', md: '335px', lg: '400px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '300px',
+      },
+    },
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(95% - 400px)',
+        lg: 'calc(100% - 470px)',
+      },
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 1.2,
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: 'calc(100% - 380px)',
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '22px', sm: '29px', md: '38px', lg: '52px' },
+      fontWeight: 600,
+      color: '#201E1E',
+      lineHeight: 1.3,
+      textAlign: { xs: 'center', md: 'left' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        fontSize: '32px',
+      },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#000000',
+      lineHeight: '159%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '12px', sm: '15px', lg: '19px' },
+    },
+  },
+};
+export const EXPERT_DEVELOPERS_DATA = {
+  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
+  title: 'Why Choose Expert Developers from eSpark Talent?',
+  text: 'We connect you with reliable developers through a solid hiring process, so your projects stay on track and move forward efficiently.',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card4.png',
+      title: 'Careful Hiring Process',
+      description:
+        'Every developer goes through a step-by-step check of their skills, background, and communication. We make sure you work with professionals who can start quickly and add real value to your team.',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card3.png',
+      title: 'Flexible Work Options',
+      description:
+        'Need part-time help or a full-time developer? We offer options that align with your workload, giving you control to grow or adjust your team based on project goals',
+    },
+    {
+      id: 3,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card2.png',
+      title: 'Works in Your Time Zone',
+      description:
+        'Our developers match your working hours so you can communicate easily during your day. This helps you stay connected and keep the work moving without delays.',
+    },
+    {
+      id: 4,
+      image:
+        '/images/new-home/hire-dedicated-developers/expert-developers/card1.png',
+      title: 'Support with Hiring & Paperwork',
+      description:
+        'We take care of contracts, payments, and legal steps so you don’t have to manage extra tasks. By handling the backend setup, you can stay focused on your work.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 4, sm: 6 },
+      textAlign: 'left',
+    },
+    titleAndTextBoxStyle: {
+      pt: { xs: 0, md: 0.4, lg: 0 },
+      width: {
+        xs: 'calc(100% - 27px)',
+        sm: 'calc(100% - 37px)',
+        md: 'calc(100% - 47px)',
+        lg: 'calc(100% - 57px)',
+      },
+    },
+    titleStyle: {
+      width: '85%',
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    iconStyle: {
+      position: 'relative',
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
+    textStyle: {
+      color: '#111845',
+      fontSize: { xs: '13px', sm: '15px', md: '17px', lg: '19px' },
+      fontWeight: 400,
+      width: { xs: '85%', lg: 'auto' },
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '65px', md: '75px', lg: '127px' },
+      height: 'auto',
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '100%' },
+      mx: 'auto',
+      px: 3.5,
+      maxWidth: { xs: '350px', md: '480px' },
+      minHeight: { xs: '280px', lg: '315px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '43px',
+      boxShadow: `
+      27.55px 8.48px 34.12px 0px rgba(24, 84, 153, 0.21),
+      inset 0px 6.36px 8.48px 0px #ffffff
+    `,
+      gap: 0.8,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '16px',
+        md: '18px',
+        lg: '21px',
+      },
+      fontWeight: 500,
+      textAlign: 'center',
+      color: '#111845',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        lg: '13px',
+      },
+      textAlign: 'center',
+      lineHeight: 1.6,
+      color: '#111845',
+    },
+  },
+};
+export const HIGH_STAKES_PROJECT_DATA = {
+  title: 'A Vast Pool of Skilled Tech Talent for Your High-Stakes Projects',
+  description:
+    "At eSpark Talent, we open doors to a wide network of expert developers, engineers, designers, and technology specialists ready to power your most critical projects. Whether you're launching a new platform, scaling your infrastructure, or rebuilding your digital presence, we provide access to professionals who not only bring technical expertise but also real-world experience in delivering results under pressure.",
+  description2:
+    'Every candidate goes through a rigorous screening process where we assess technical skills, communication abilities, project experience, and cultural fit — ensuring you get people who can contribute from day one. From front-end and back-end developers, mobile app creators, DevOps engineers, AI and cloud specialists to UI/UX designers and digital marketers, we have specialists across the entire tech spectrum.',
+  description3:
+    'Need to ramp up quickly? Need niche skills for a mission-critical launch? Need a partner who understands both the tech and business side of scaling? eSpark Talent helps you move faster, minimize risk, and achieve bigger outcomes — without wasting time or resources.',
+  image:
+    '/images/new-home/hire-dedicated-developers/high-stakes-projects/ok.png',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1390px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      gap: { xs: 4, md: 7 },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        flexDirection: 'column',
+      },
+    },
+    imageBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      mx: { xs: 'auto', lg: 0 },
+      height: 'auto',
+      order: { xs: 2, md: 0 },
+      width: { xs: '90%', sm: '417px', md: '60%', lg: '557px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '55%',
+      },
+    },
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(100% - 400px)',
+        lg: 'calc(98% - 557px)',
+      },
+      mx: 'auto',
+      flexDirection: 'column',
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '95%',
+      },
+      display: 'flex',
+      gap: { xs: 2, md: 1, lg: 1 },
+    },
+    titleStyle: {
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '47px' },
+      fontWeight: 600,
+      color: '#252525',
+      lineHeight: { lg: 1.3 },
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#000000',
+      lineHeight: '157%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '10px', sm: '14px', md: '15px', lg: '18px' },
+    },
+  },
+};
+export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
+  title: 'Frequently Asked Questions',
+  cards: [
+    {
+      id: 1,
+      title: 'What does it mean to hire a dedicated developer?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 2,
+      title:
+        'How do I maintain the quality of work from a dedicated developer?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 3,
+      title: 'Can a dedicated developer work with my existing team?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 4,
+      title: 'Why should I hire a dedicated developer instead of a team?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 5,
+      title:
+        'How do I know if a dedicated developer is a good fit for my project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 6,
+      title: 'How much do dedicated developers cost?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 3, sm: 4 },
+    },
+    titleStyle: {
+      width: { xs: '90%', lg: '100%' },
+      maxWidth: { md: '700px', lg: 'auto' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+    },
+    buttonStyle: {
+      width: { xs: '28px', md: '31px', lg: '41px' },
+      height: { xs: '30px', md: '31px', lg: '41px' },
+      minWidth: { xs: '5%', md: 'auto' },
+      padding: 0,
+      backgroundColor: '#F7F7FF',
+      borderRadius: '8px',
+      fontSize: { xs: '20px', md: '23px', lg: '35px' },
+      color: '#6F6C90',
+      textTransform: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 400,
+      '&:hover': {
+        backgroundColor: '#2870C3',
+        color: '#fff',
+      },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '85%', md: '100%' },
+      mx: 'auto',
+      px: 3,
+      py: 3.5,
+      maxWidth: { md: '596px' },
+      height: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '16px',
+      boxShadow: `
+    0px 5px 16px rgba(8, 15, 52, 0.06),
+    inset 0px 6.36px 8.48px 0px #ffffff
+  `,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '15px',
+        md: '17px',
+        lg: '22px',
+      },
+      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      fontWeight: 500,
+      color: '#170F49',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+
+      lineHeight: { xs: '23px', md: '30px' },
+      color: '#6F6C90',
+      width: '99%',
+    },
+  },
+};
+export const TALENT_ROSTER_DATA = {
+  title: 'Our Curated Diverse Talent Roster',
+  buttonText: 'Hire talent based on role',
+  link: '/book-a-demo',
+  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
+  designations: [
+    {
+      title: 'Front-End Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/front-end.png',
+    },
+    {
+      title: 'Back-end Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/back-end.png',
+    },
+    {
+      title: 'Full Stack Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/full-stack.png',
+    },
+    {
+      title: 'Mobile App Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mobile-app-developers.png',
+    },
+
+    {
+      title: 'Web  Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/web-developers.png',
+    },
+    {
+      title: 'CMS Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cms-developers.png',
+    },
+    {
+      title: 'UI & UX Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ui-ux-designers.png',
+    },
+    {
+      title: 'DevOps Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/devops-engineers.png',
+    },
+    {
+      title: 'Social Media Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/social-media-managers.png',
+    },
+    {
+      title: 'Salesforce Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/salesforce-developers.png',
+    },
+    {
+      title: 'Product Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/product-managers.png',
+    },
+    {
+      title: 'Project Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/project-managers.png',
+    },
+    {
+      title: 'AR/VR Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ar-vr-developers.png',
+    },
+    {
+      title: 'Game Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/game-developers.png',
+    },
+    {
+      title: 'Graphics Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/graphics-designers.png',
+    },
+    {
+      title: 'Motion Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/motion-designers.png',
+    },
+    {
+      title: 'Cloud Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cloud-engineers.png',
+    },
+    {
+      title: 'Embedded Systems Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/embedded-systems-engineers.png',
+    },
+    {
+      title: 'Firmware Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/firmware-developers.png',
+    },
+    {
+      title: 'IOT Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/iot-developers.png',
+    },
+    {
+      title: 'Robotics Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/robotics-engineers.png',
+    },
+    {
+      title: 'Mechanical Design Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mechanical-design-engineers.png',
+    },
+    {
+      title: 'Data Scientists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/data-scientists.png',
+    },
+    {
+      title: 'AI/ML Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/aiml-engineers.png',
+    },
+    {
+      title: 'Business Analysts',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/business-analysts.png',
+    },
+    {
+      title: 'Digital Marketing Specialists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/digital-marketing-specialists.png',
+    },
+    {
+      title: 'QA Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/qa-engineers.png',
+    },
+    {
+      title: 'SEO Experts',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/seo-experts.png',
+    },
+    {
+      title: 'Video Editors',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/video-editors.png',
+    },
+    {
+      title: 'Content Strategists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/content-strategists.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 4, sm: 6 },
+      textAlign: 'left',
+    },
+    textBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      gap: 0.5,
+    },
+    iconStyle: {
+      position: 'relative',
+      pt: { xs: 0.3, md: 0.5, lg: 1 },
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
+    titleAndTextBoxStyle: {
+      pt: { xs: 0, md: 0.4, lg: 0 },
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    titleStyle: {
+      width: '85%',
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+      display: 'flex',
+      gap: 0.5,
+      textAlign: { xs: 'center', sm: 'flex-start' },
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '297px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      color: '#FFFFFF',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+    cardStyle: {
+      width: '100%',
+      maxWidth: { xs: '90%', sm: '85%', md: '292px' },
+      minHeight: '71px',
+      borderRadius: '6.9px',
+      background: '#FFFFFF',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 1,
+      py: 0.8,
+      px: 1.5,
+    },
+    imageStyle: { width: '65px', height: 'auto' },
+    cardTitleStyle: { fontSize: '17px', fontWeight: 500, color: '#000000' },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '10px',
+        sm: '10px',
+        md: '11px',
+        lg: '13px',
+      },
+      textAlign: 'center',
+      lineHeight: 1.6,
+      color: '#111845',
     },
   },
 };
