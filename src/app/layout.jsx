@@ -6,9 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import dynamic from 'next/dynamic';
 import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
-import { FOOTER_CTA_DATA } from '@/constants/home-page/footer-cta-section';
 import { SkeletonTheme } from 'react-loading-skeleton';
-// import Header from '@/components/global/Header/Header';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
@@ -17,11 +15,6 @@ import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
 import { getMetadata } from '@/components/global/seo';
 import Loading from '@/components/global/loading';
-
-// Dynamically import components that should not be server-rendered
-const FooterCTA = dynamic(() => import('@/components/homepage/FooterCTA'), {
-  ssr: false,
-});
 
 const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,

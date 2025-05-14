@@ -1,5 +1,3 @@
-import { width } from '@mui/system';
-
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -2018,9 +2016,9 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
   styles: {
     mainBoxStyle: {
       width: '100%',
-      height: 'calc(100vh - 127px)',
+      height: 'calc(80vh - 127px)',
       minHeight: '450px',
-      maxHeight: '573px',
+      maxHeight: { xs: '450px', md: '600px' },
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -2034,6 +2032,10 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
       backgroundSize: '100%',
       gap: 2,
       textAlign: 'center',
+      '@media(min-width:1921px)': {
+        maxHeight: '650px',
+        py: 8,
+      },
     },
     titleStyle: {
       fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
@@ -2357,7 +2359,7 @@ export const HIGH_STAKES_PROJECT_DATA = {
       mx: 'auto',
       width: '90%',
       display: 'flex',
-      maxWidth: '1400px',
+      maxWidth: '1390px',
       alignItems: 'center',
       flexDirection: { xs: 'column', md: 'row' },
       justifyContent: 'space-between',
@@ -2465,8 +2467,8 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
       gap: { xs: 3, sm: 4 },
     },
     titleStyle: {
-      width: '90%',
-      maxWidth: { md: '700px', lg: '1000px' },
+      width: { xs: '90%', lg: '100%' },
+      maxWidth: { md: '700px', lg: 'auto' },
       fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
@@ -2529,6 +2531,218 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
       lineHeight: { xs: '23px', md: '30px' },
       color: '#6F6C90',
       width: '99%',
+    },
+  },
+};
+export const TALENT_ROSTER_DATA = {
+  title: 'Our Curated Diverse Talent Roster',
+  buttonText: 'Hire talent based on role',
+  link: '/book-a-demo',
+  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
+  designations: [
+    {
+      title: 'Front-End Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/front-end.png',
+    },
+    {
+      title: 'Back-end Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/back-end.png',
+    },
+    {
+      title: 'Full Stack Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/full-stack.png',
+    },
+    {
+      title: 'Mobile App Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mobile-app-developers.png',
+    },
+
+    {
+      title: 'Web  Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/web-developers.png',
+    },
+    {
+      title: 'CMS Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cms-developers.png',
+    },
+    {
+      title: 'UI & UX Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ui-ux-designers.png',
+    },
+    {
+      title: 'DevOps Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/devops-engineers.png',
+    },
+    {
+      title: 'Social Media Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/social-media-managers.png',
+    },
+    {
+      title: 'Salesforce Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/salesforce-developers.png',
+    },
+    {
+      title: 'Product Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/product-managers.png',
+    },
+    {
+      title: 'Project Managers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/project-managers.png',
+    },
+    {
+      title: 'AR/VR Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ar-vr-developers.png',
+    },
+    {
+      title: 'Game Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/game-developers.png',
+    },
+    {
+      title: 'Graphics Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/graphics-designers.png',
+    },
+    {
+      title: 'Motion Designers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/motion-designers.png',
+    },
+    {
+      title: 'Cloud Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cloud-engineers.png',
+    },
+    {
+      title: 'Embedded Systems Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/embedded-systems-engineers.png',
+    },
+    {
+      title: 'Firmware Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/firmware-developers.png',
+    },
+    {
+      title: 'IOT Developers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/iot-developers.png',
+    },
+    {
+      title: 'Robotics Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/robotics-engineers.png',
+    },
+    {
+      title: 'Mechanical Design Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mechanical-design-engineers.png',
+    },
+    {
+      title: 'Data Scientists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/data-scientists.png',
+    },
+    {
+      title: 'AI/ML Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/aiml-engineers.png',
+    },
+    {
+      title: 'Business Analysts',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/business-analysts.png',
+    },
+    {
+      title: 'Digital Marketing Specialists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/digital-marketing-specialists.png',
+    },
+    {
+      title: 'QA Engineers',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/qa-engineers.png',
+    },
+    {
+      title: 'SEO Experts',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/seo-experts.png',
+    },
+    {
+      title: 'Video Editors',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/video-editors.png',
+    },
+    {
+      title: 'Content Strategists',
+      icon: '/images/new-home/hire-dedicated-developers/talent-roster/content-strategists.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 4, sm: 6 },
+      textAlign: 'left',
+    },
+    textBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      gap: 0.5,
+    },
+    iconStyle: {
+      position: 'relative',
+      pt: { xs: 0.3, md: 0.5, lg: 1 },
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
+    titleAndTextBoxStyle: {
+      pt: { xs: 0, md: 0.4, lg: 0 },
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    titleStyle: {
+      width: '85%',
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontWeight: 600,
+      color: '#222324',
+      display: 'flex',
+      gap: 0.5,
+      textAlign: { xs: 'center', sm: 'flex-start' },
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '297px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      color: '#FFFFFF',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+    cardStyle: {
+      width: '100%',
+      maxWidth: { xs: '90%', sm: '85%', md: '292px' },
+      minHeight: '71px',
+      borderRadius: '6.9px',
+      background: '#FFFFFF',
+      display: 'flex',
+      alignItems: 'center',
+      gap: 1,
+      py: 0.8,
+      px: 1.5,
+    },
+    imageStyle: { width: '65px', height: 'auto' },
+    cardTitleStyle: { fontSize: '17px', fontWeight: 500, color: '#000000' },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '10px',
+        sm: '10px',
+        md: '11px',
+        lg: '13px',
+      },
+      textAlign: 'center',
+      lineHeight: 1.6,
+      color: '#111845',
     },
   },
 };

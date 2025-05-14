@@ -7,6 +7,7 @@ import {
   HIGH_STAKES_PROJECT_DATA,
   HIRE_DEDICATED_DEVELOPERS_DATA,
   OUR_AREA_OF_EXPERTISE_DATA,
+  TALENT_ROSTER_DATA,
 } from '@/constants/new-home';
 import DedicatedBanner from '../global/DedicatedBanner';
 import OurAreaOfExpertise from './OurAreaOfExpertise';
@@ -14,6 +15,7 @@ import EasySteps from './EasySteps';
 import ExpertDeveloper from './ExpertDevelopers';
 import HighStakesProjects from './HighStakesProjects';
 import FrequetlyAskedQuestions from './FrequentlyAskedQuestions';
+import TalentRoster from './TalentRoster';
 
 const HireDedicatedDevelopers = () => {
   return (
@@ -30,6 +32,7 @@ const HireDedicatedDevelopers = () => {
       <DedicatedBanner data={HIRE_DEDICATED_DEVELOPERS_DATA} />
       <OurAreaOfExpertise data={OUR_AREA_OF_EXPERTISE_DATA} />
       <EasySteps data={EASY_STEPS_DATA} />
+      <TalentRoster data={TALENT_ROSTER_DATA} />
       <HighStakesProjects data={HIGH_STAKES_PROJECT_DATA} />
       <ExpertDeveloper data={EXPERT_DEVELOPERS_DATA} />
       <FrequetlyAskedQuestions data={FREQUENTLY_ASKED_QUESTIOND_DATA} />

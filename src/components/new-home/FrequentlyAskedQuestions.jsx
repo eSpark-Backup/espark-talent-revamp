@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Grid, Typography, Button } from '@mui/material';
-import FREQUENTLY_ASKED_QUESTIOND_CARD_STYLE from '@/constants/new-home';
 
 const FrequetlyAskedQuestions = ({ data }) => {
   const { title, cards, styles } = data || {};
