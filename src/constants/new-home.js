@@ -1,3 +1,5 @@
+import { width } from '@mui/system';
+
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -2025,6 +2027,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
       justifyContent: 'center',
       px: 2,
       py: { xs: 6, md: 8 },
+      backgroundColor: '#F5F5F5',
       backgroundImage:
         "url('images/new-home/hire-dedicated-developers/bg.png')",
       backgroundRepeat: 'no-repeat',
@@ -2379,6 +2382,15 @@ export const HIGH_STAKES_PROJECT_DATA = {
       '@media(min-width: 769px) and (max-width: 1023px)': {
         width: '55%',
       },
+
+      boxShadow: '0px 0px 150px 0px rgba(27, 235, 208, 0.3)',
+      background:
+        'radial-gradient(circle, rgba(27, 235, 208, 0.2) 0%, transparent 200%)',
+      borderRadius: '100%',
+      // backgroundImage:
+      //   'url(/images/new-home/hire-dedicated-developers/high-stakes-projects/bg.png)',
+      // backgroundPosition: 'center',
+      // backgroundSize: '500%',
     },
     titleAndDescriptionBoxStyle: {
       width: {
@@ -2534,132 +2546,192 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
     },
   },
 };
-export const TALENT_ROSTER_DATA = {
-  title: 'Our Curated Diverse Talent Roster',
-  buttonText: 'Hire talent based on role',
-  link: '/book-a-demo',
-  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
-  designations: [
-    {
-      title: 'Front-End Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/front-end.png',
-    },
-    {
-      title: 'Back-end Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/back-end.png',
-    },
-    {
-      title: 'Full Stack Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/full-stack.png',
-    },
-    {
-      title: 'Mobile App Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mobile-app-developers.png',
-    },
 
+//Fixed-Prices-projects page data
+export const FIXED_PRICES_PROJECTS_DATA = {
+  title: `Fixed Prices <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
+  text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: 'calc(80vh - 127px)',
+      minHeight: '450px',
+      maxHeight: { xs: '450px', md: '600px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      px: 2,
+      py: { xs: 6, md: 8 },
+      backgroundColor: '#F5F5F5',
+      backgroundImage:
+        "url('images/new-home/hire-dedicated-developers/bg.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+      '@media(min-width:1921px)': {
+        maxHeight: '650px',
+        py: 8,
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      width: '90%',
+      maxWidth: { sm: '420px', md: '620px' },
+      fontWeight: 600,
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    textStyle: {
+      width: '80%',
+      maxWidth: { xs: '100%', sm: '90%', md: '750px', lg: '940px' },
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+      color: '#111845',
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+
+export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
+  title: 'Explaining Fixed-price Projects',
+  description:
+    "A fixed-price project model is a type of agreement where a client and a service provider concur on a set scope of work, deadlines, and payments. With this paradigm, you can define the project scope without having any prior experience with software development. The project's requirements, timeline, work scope, and expenses are all explicitly stated at the outset.",
+  description2:
+    "An agreement between a client and a vendor on a predetermined scope of work, deadlines, and payments is implied by a fixed-price project. It's a fantastic choice for tasks with a predefined set of features and set due dates.",
+  image:
+    '/images/new-home/fixed-price-projects/explaining-fixed-price-projects/img.png',
+
+  // styles
+  styles: {
+    containerStyle: {
+      backgroundColor: '#F5F5F5',
+      borderRadius: '50px',
+    },
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1300px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      pt: { xs: 4, md: 0 },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        flexDirection: 'column',
+        pt: 5,
+      },
+    },
+    imageBoxStyle: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      mx: { xs: 'auto', lg: 0 },
+      height: 'auto',
+      order: { xs: 2, md: 0 },
+      width: { xs: '90%', sm: '417px', md: '55%', lg: '557px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '55%',
+      },
+    },
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(100% - 300px)',
+        lg: 'calc(98% - 557px)',
+      },
+      mx: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: { xs: 2, md: 1, lg: 1 },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '92%',
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '22px', sm: '29px', md: '36px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      lineHeight: { lg: 1.3 },
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#111845',
+      lineHeight: '157%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '12px', sm: '15px', md: '18px', lg: '20px' },
+    },
+  },
+};
+export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
+  title: 'Why Choose an Offshore Development Center?',
+  cards: [
     {
-      title: 'Web  Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/web-developers.png',
+      id: 1,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card1.png',
+      title: 'Strict Budgetary Constraints',
+      description:
+        'Fixed Price Projects are ideal when your budget is non-negotiable. At eSpark Talent, we offer clear, upfront pricing, ensuring your project stays within budget without any unexpected costs, providing financial predictability and peace of mind.',
     },
     {
-      title: 'CMS Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cms-developers.png',
+      id: 2,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card2.png',
+      title: 'Short-Term or Specific Initiatives',
+      description:
+        'For projects that are short-term or have a very specific focus, Fixed Price Projects offer a straightforward solution. We ensure these projects are delivered efficiently and effectively, meeting your exact requirements without the need for long-term commitments.',
     },
     {
-      title: 'UI & UX Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ui-ux-designers.png',
+      id: 3,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card3.png',
+      title: 'Resource-Constraint Scenarios',
+      description:
+        "In situations where your internal resources are limited, our Fixed Price Project model steps in to fill the gap. We provide the necessary expertise and manpower, ensuring your project doesn't suffer due to in-house resource constraints.",
     },
     {
-      title: 'DevOps Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/devops-engineers.png',
+      id: 4,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card4.png',
+      title: 'Time-Bound Deliverables',
+      description:
+        'When your project has strict deadlines, our team ensures timely delivery under the Fixed Price model. This approach keeps us focused on meeting your timeline, delivering quality results within the stipulated time frame.',
     },
     {
-      title: 'Social Media Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/social-media-managers.png',
+      id: 5,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card5.png',
+      title: 'Defined Outcome Expectations',
+      description:
+        'For projects with clearly defined outcomes, our Fixed Price Projects model aligns perfectly. We understand the importance of delivering as per your expectations, ensuring the final output precisely meets your predefined objectives.',
     },
     {
-      title: 'Salesforce Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/salesforce-developers.png',
-    },
-    {
-      title: 'Product Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/product-managers.png',
-    },
-    {
-      title: 'Project Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/project-managers.png',
-    },
-    {
-      title: 'AR/VR Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ar-vr-developers.png',
-    },
-    {
-      title: 'Game Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/game-developers.png',
-    },
-    {
-      title: 'Graphics Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/graphics-designers.png',
-    },
-    {
-      title: 'Motion Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/motion-designers.png',
-    },
-    {
-      title: 'Cloud Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cloud-engineers.png',
-    },
-    {
-      title: 'Embedded Systems Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/embedded-systems-engineers.png',
-    },
-    {
-      title: 'Firmware Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/firmware-developers.png',
-    },
-    {
-      title: 'IOT Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/iot-developers.png',
-    },
-    {
-      title: 'Robotics Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/robotics-engineers.png',
-    },
-    {
-      title: 'Mechanical Design Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mechanical-design-engineers.png',
-    },
-    {
-      title: 'Data Scientists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/data-scientists.png',
-    },
-    {
-      title: 'AI/ML Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/aiml-engineers.png',
-    },
-    {
-      title: 'Business Analysts',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/business-analysts.png',
-    },
-    {
-      title: 'Digital Marketing Specialists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/digital-marketing-specialists.png',
-    },
-    {
-      title: 'QA Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/qa-engineers.png',
-    },
-    {
-      title: 'SEO Experts',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/seo-experts.png',
-    },
-    {
-      title: 'Video Editors',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/video-editors.png',
-    },
-    {
-      title: 'Content Strategists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/content-strategists.png',
+      id: 6,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card6.png',
+      title: 'Minimal Project Complexity',
+      description:
+        'When dealing with less complex projects, the Fixed Price model offered by us is an ideal choice. It simplifies project management and focuses on delivering straightforward solutions efficiently. saving you time and effort.',
     },
   ],
 
@@ -2668,81 +2740,66 @@ export const TALENT_ROSTER_DATA = {
     mainBoxStyle: {
       width: '100%',
       height: '100%',
+      backgroundColor: '#F5F5F5',
+      borderRadius: '50px',
+      maxHeight: { md: 'auto' },
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       backgroundSize: '100%',
-      gap: { xs: 4, sm: 6 },
-      textAlign: 'left',
-    },
-    textBoxStyle: {
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      gap: 0.5,
-    },
-    iconStyle: {
-      position: 'relative',
-      pt: { xs: 0.3, md: 0.5, lg: 1 },
-      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
-      height: 'auto',
-    },
-    titleAndTextBoxStyle: {
-      pt: { xs: 0, md: 0.4, lg: 0 },
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
+      gap: 2,
+      py: 7,
     },
     titleStyle: {
-      width: '85%',
-      maxWidth: { md: '700px', lg: '1000px' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      width: '90%',
+      fontSize: { xs: '23px', sm: '28px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
-      display: 'flex',
-      gap: 0.5,
-      textAlign: { xs: 'center', sm: 'flex-start' },
-    },
-    buttonStyle: {
-      mt: 2,
-      width: '65%',
-      maxWidth: '297px',
-      height: { xs: '38px', md: '43px' },
-      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
-      color: '#FFFFFF',
-      borderRadius: '10px',
-      fontSize: { xs: '14px', md: '16px' },
-      px: 4,
-      py: 1.5,
-      textTransform: 'none',
-      textWrap: 'nowrap',
+      pb: 5,
+      textAlign: 'center',
     },
     cardStyle: {
       width: '100%',
-      maxWidth: { xs: '90%', sm: '85%', md: '292px' },
-      minHeight: '71px',
-      borderRadius: '6.9px',
-      background: '#FFFFFF',
+      mx: 'auto',
+      px: 3,
+      py: 2,
+      maxWidth: { xs: '300px', md: '375px' },
+      minHeight: '335px',
       display: 'flex',
-      alignItems: 'center',
-      gap: 1,
-      py: 0.8,
-      px: 1.5,
+      flexDirection: 'column',
+      alignItems: 'left',
+      justifyContent: 'center',
+      border: '0.5px solid #D6D6D7',
+      backgroundColor: '#FFF',
+      borderRadius: '20px',
+      gap: 0.8,
     },
-    imageStyle: { width: '65px', height: 'auto' },
-    cardTitleStyle: { fontSize: '17px', fontWeight: 500, color: '#000000' },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '55px', md: '65px', lg: '75px' },
+      height: 'auto',
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '20px',
+        sm: '20px',
+        md: '23px',
+        lg: '27px',
+      },
+      fontWeight: 600,
+      color: '#111845',
+    },
     cardDescriptionStyle: {
       fontSize: {
         xs: '10px',
-        sm: '10px',
-        md: '11px',
-        lg: '13px',
+        sm: '11px',
+        md: '13px',
+        lg: '15px',
       },
-      textAlign: 'center',
+      maxWidth: { xs: '300px', md: '328px' },
       lineHeight: 1.6,
-      color: '#111845',
+      color: '#57585C',
     },
   },
 };
