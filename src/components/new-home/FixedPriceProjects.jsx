@@ -8,6 +8,7 @@ import {
 } from '@/constants/new-home';
 import HighStakesProjects from './HighStakesProjects';
 import OffshoreDevelopmentCenter from './OffshoreDevelopmentCenter';
+import FlaxibleSlider from './FlaxibleSlider';
 
 const FixedPriceProjects = () => {
   return (
