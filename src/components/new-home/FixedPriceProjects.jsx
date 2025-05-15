@@ -8,7 +8,6 @@ import {
 } from '@/constants/new-home';
 import HighStakesProjects from './HighStakesProjects';
 import OffshoreDevelopmentCenter from './OffshoreDevelopmentCenter';
-import FlaxibleSlider from './FlaxibleSlider';
 
 const FixedPriceProjects = () => {
   return (
@@ -17,8 +16,9 @@ const FixedPriceProjects = () => {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        gap: { xs: 5, sm: 8, lg: 10 },
+        gap: { xs: 5, sm: 8, lg: 8 },
         pb: { xs: 5, sm: 8, lg: 10 },
+        backgroundColor: '#F5F5F5',
       }}
     >
       <DedicatedBanner data={FIXED_PRICES_PROJECTS_DATA} />

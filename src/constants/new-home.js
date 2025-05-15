@@ -1,6 +1,3 @@
-import { maxWidth, width } from '@mui/system';
-import { Rock_3D } from 'next/font/google';
-
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -2823,42 +2820,47 @@ export const FIXED_PRICES_PROJECTS_DATA = {
   },
 };
 export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
-  title: 'Explaining Fixed-price Projects',
+  title: 'Explaining Fixed-price projects',
   description:
-    "A fixed-price project model is a type of agreement where a client and a service provider concur on a set scope of work, deadlines, and payments. With this paradigm, you can define the project scope without having any prior experience with software development. The project's requirements, timeline, work scope, and expenses are all explicitly stated at the outset.",
+    "A fixed-price projects model is a sort of agreement where a client and a service provider concur on a set scope of work, deadlines, and payments. With this paradigm, you can define the project scope without having any prior experience with software development. The project's requirements, timeline, work scope, and expenses are all explicitly state at the outset.",
   description2:
-    "An agreement between a client and a vendor on a predetermined scope of work, deadlines, and payments is implied by a fixed-price project. It's a fantastic choice for tasks with a predefined set of features and set due dates.",
+    "An agreement between a client and a vendor on a predetermine scope of work, deadlines, and payments is implied by a fixed-price project. It's a fantastic choice for tasks with a predefine set of features and set due dates.",
   image:
     '/images/new-home/fixed-price-projects/explaining-fixed-price-projects/img.png',
 
   // styles
   styles: {
     containerStyle: {
-      backgroundColor: '#F5F5F5',
-      borderRadius: '50px',
+      borderRadius: { xs: '30px', lg: '50px' },
+      backgroundColor: '#edeef5',
+      width: '100%',
+      maxWidth: '1440px',
+      mx: 'auto',
     },
     mainBoxStyle: {
       mx: 'auto',
       width: '90%',
       display: 'flex',
-      maxWidth: '1300px',
+      maxWidth: '1200px',
       alignItems: 'center',
       flexDirection: { xs: 'column', md: 'row' },
       justifyContent: 'space-between',
-      pt: { xs: 4, md: 0 },
+      pt: { xs: 4.5, lg: 3 },
+      pb: { xs: 3.5, lg: 1 },
+      gap: 1.5,
       '@media(min-width: 769px) and (max-width: 1023px)': {
         flexDirection: 'column',
         pt: 5,
       },
     },
     imageBoxStyle: {
+      height: 'auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      mx: { xs: 'auto', lg: 0 },
-      height: 'auto',
       order: { xs: 2, md: 0 },
-      width: { xs: '90%', sm: '417px', md: '55%', lg: '557px' },
+      mx: { xs: 'auto', lg: 0 },
+      width: { xs: '90%', sm: '417px', md: '550px', lg: '557px' },
       '@media(min-width: 769px) and (max-width: 1023px)': {
         width: '55%',
       },
@@ -2868,29 +2870,34 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
         xs: '88%',
         sm: '80%',
         md: 'calc(100% - 300px)',
-        lg: 'calc(98% - 557px)',
+        lg: 'calc(100% - 557px)',
       },
       mx: 'auto',
       display: 'flex',
       flexDirection: 'column',
-      gap: { xs: 2, md: 1, lg: 1 },
+      gap: { xs: 2, md: 1.5 },
       '@media(min-width: 769px) and (max-width: 1023px)': {
         width: '92%',
       },
     },
     titleStyle: {
-      fontSize: { xs: '22px', sm: '29px', md: '36px', lg: '40px' },
+      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
-      lineHeight: { lg: 1.3 },
       textAlign: { xs: 'center', md: 'left' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        textAlign: 'center',
+      },
     },
     descriptionStyle: {
       fontWeight: 400,
       color: '#111845',
       lineHeight: '157%',
       textAlign: { xs: 'center', md: 'left' },
-      fontSize: { xs: '12px', sm: '15px', md: '18px', lg: '20px' },
+      fontSize: { xs: '12px', sm: '15px', md: '17px', lg: '20px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        textAlign: 'center',
+      },
     },
   },
 };
@@ -2946,13 +2953,7 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
         'When dealing with less complex projects, the Fixed Price model offered by us is an ideal choice. It simplifies project management and focuses on delivering straightforward solutions efficiently. saving you time and effort.',
     },
   ],
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    600: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 2 },
-    1400: { slidesPerView: 3 },
-  },
+
   // styles
   styles: {
     swipperStyle: {
@@ -2963,10 +2964,12 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       justifyContent: 'center',
     },
     mainBoxStyle: {
+      mx: 'auto',
       width: '100%',
+      maxWidth: '1440px',
       height: '100%',
-      backgroundColor: '#F5F5F5',
-      borderRadius: '50px',
+      backgroundColor: '#edeef5',
+      borderRadius: { xs: '30px', md: '50px' },
       backgroundSize: '100%',
       display: 'flex',
       maxHeight: { md: 'auto' },
@@ -2976,28 +2979,35 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       py: { xs: 6, md: 10 },
     },
     titleStyle: {
-      width: '90%',
-      fontSize: { xs: '23px', sm: '28px', md: '32px', lg: '40px' },
+      width: '80%',
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
-      pb: { xs: 0, md: 5 },
+      pb: { xs: 0, md: 7 },
       textAlign: 'center',
     },
     cardStyle: {
       width: '95%',
-      mx: 'auto',
       px: 3,
-      py: { xs: 0, md: 2 },
-      maxWidth: { xs: '300px', sm: '90%', md: '350px', lg: '375px' },
-      minHeight: { xs: '280px', md: '335px', lg: '400px' },
-      display: 'flex',
+      py: { xs: 1.5, md: 2 },
+      maxWidth: { xs: '100%', md: '350px', lg: '375px' },
+      minHeight: { xs: '300px', sm: '260px', md: '320px', lg: '340px' },
+      display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'left',
       justifyContent: 'center',
-      border: '0.5px solid #D6D6D7',
+      boxShadow: '-5px 4px 59.8px 0 rgba(24, 84, 153, 0.2)',
       backgroundColor: '#FFF',
       borderRadius: '20px',
       gap: 0.8,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '245px',
+      },
+    },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
     },
     imageStyle: {
       width: '100%',
@@ -3013,11 +3023,12 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       },
       fontWeight: 600,
       color: '#111845',
+      lineHeight: 1.3,
     },
     cardDescriptionStyle: {
       fontSize: {
-        xs: '10px',
-        sm: '11px',
+        xs: '11px',
+        sm: '12px',
         md: '13px',
         lg: '15px',
       },

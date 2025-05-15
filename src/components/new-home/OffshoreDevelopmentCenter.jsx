@@ -1,52 +1,10 @@
-// import React from 'react';
-// import { Box, Typography, Grid } from '@mui/material';
-
-// const OffshoreDevelopmentCenter = ({ data }) => {
-//   const { title, text, cards, styles } = data || {};
-
-//   const {
-//     mainBoxStyle,
-//     titleStyle,
-//     cardStyle,
-//     imageStyle,
-//     cardTitleStyle,
-//     cardDescriptionStyle,
-//   } = styles || {};
-
-//   return (
-//     <Box sx={mainBoxStyle}>
-//       <Typography variant="h4" fontWeight="bold" sx={titleStyle}>
-//         {title}
-//       </Typography>
-//       <Grid
-//         container
-//         justifyContent={'center'}
-//         maxWidth={'1600px'}
-//         gap={2}
-//       >
-//         {cards?.map(({ title, image, description }, index) => (
-//           <Grid xs={10.5} sm={10} md={4}  lg={3} key={index}>
-//             <Box sx={cardStyle}>
-//               <Box component={'img'} src={image} sx={imageStyle} />
-//               <Typography sx={cardTitleStyle}>{title}</Typography>
-//               <Typography sx={cardDescriptionStyle}>{description}</Typography>
-//             </Box>
-//           </Grid>
-//         ))}
-//       </Grid>
-//     </Box>
-//   );
-// };
-
-// export default OffshoreDevelopmentCenter;
-
 'use client';
 import React from 'react';
-import { Box, Typography, Grid, useMediaQuery, useTheme } from '@mui/material';
-import FlaxibleSlider from './FlaxibleSlider';
+import { Box, Typography, Grid } from '@mui/material';
+import FlaxibleSlider from './FlexibleSlider';
 
 const OffshoreDevelopmentCenter = ({ data }) => {
-  const { title, cards, styles, breakpoints } = data || {};
+  const { title, cards, styles } = data || {};
   const {
     mainBoxStyle,
     titleStyle,
@@ -54,17 +12,24 @@ const OffshoreDevelopmentCenter = ({ data }) => {
     imageStyle,
     cardTitleStyle,
     cardDescriptionStyle,
-    backgroundColorStyle,
+    slideStyle,
   } = styles || {};
 
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme?.breakpoints?.up('md'));
+  const ODCCard = ({ title, image, description, extraSx = {} }) => (
+    <Box
+      sx={{
+        ...cardStyle,
+        ...extraSx,
+      }}
+    >
+      <Box component="img" src={image} sx={imageStyle} />
+      <Typography sx={cardTitleStyle}>{title}</Typography>
+      <Typography sx={cardDescriptionStyle}>{description}</Typography>
+    </Box>
+  );
 
   return (
-    <Box
-      sx={{ ...mainBoxStyle, ...backgroundColorStyle }}
-      id="pricing-difference"
-    >
+    <Box sx={{ ...mainBoxStyle }} id="pricing-difference">
       {title && (
         <Typography variant="h4" fontWeight="bold" sx={titleStyle}>
           {title}
@@ -73,19 +38,32 @@ const OffshoreDevelopmentCenter = ({ data }) => {
       <Grid
         gap={3.5}
         container
-        width={'95%'}
+        width="95%"
         maxWidth="1400px"
         justifyContent="center"
       >
         {cards?.map(({ title, image, description }, index) => (
-          <Box key={index}>
-            <Box sx={cardStyle}>
-              <Box component="img" src={image} sx={imageStyle} />
-              <Typography sx={cardTitleStyle}>{title}</Typography>
-              <Typography sx={cardDescriptionStyle}>{description}</Typography>
-            </Box>
-          </Box>
+          <ODCCard
+            key={index}
+            title={title}
+            image={image}
+            description={description}
+          />
         ))}
+
+        <FlaxibleSlider
+          data={cards}
+          isDisplay={true}
+          slideStyle={slideStyle}
+          card={(title, image, description) => (
+            <ODCCard
+              title={title}
+              image={image}
+              description={description}
+              extraSx={{ display: { xs: 'flex', md: 'none' } }}
+            />
+          )}
+        />
       </Grid>
     </Box>
   );

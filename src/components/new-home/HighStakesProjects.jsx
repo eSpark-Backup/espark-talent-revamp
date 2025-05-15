@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 const HighStakesProjects = ({ data }) => {
-  const { title, description, description2, description3, image, styles } =
-    data || {};
+  const { title, description, description2, image, styles } = data || {};
+
   const {
     mainBoxStyle,
     imageBoxStyle,
@@ -20,17 +20,16 @@ const HighStakesProjects = ({ data }) => {
             sx={titleStyle}
             dangerouslySetInnerHTML={{ __html: title }}
           />
-          <Box>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             <Typography sx={descriptionStyle}>{description}</Typography>
             <Typography sx={descriptionStyle}>{description2}</Typography>
-            <Typography sx={descriptionStyle}>{description3}</Typography>
           </Box>
         </Box>
         <Box sx={imageBoxStyle}>
           <Box
-            src={image}
-            component={'img'}
             sx={{ width: 'auto', height: '100%', objectFit: 'contain' }}
+            component={'img'}
+            src={image}
           />
         </Box>
       </Box>
