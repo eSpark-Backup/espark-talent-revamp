@@ -15,6 +15,7 @@ import DottedLineWithDiamond from './DottedLineWithDiamond';
 const ProjectContract = ({ data }) => {
   const { title, description, image, link, buttonText, listItems, styles } =
     data || {};
+
   const {
     mainBoxStyle,
     firstGridBoxStyle,

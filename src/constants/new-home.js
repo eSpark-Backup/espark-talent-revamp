@@ -2758,6 +2758,7 @@ export const TALENT_ROSTER_DATA = {
 };
 
 //Fixed-Prices-projects page data
+
 export const FIXED_PRICES_PROJECTS_DATA = {
   title: `Fixed Prices <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
   text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
@@ -3183,6 +3184,128 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
       py: 1.5,
       textTransform: 'none',
       textWrap: 'nowrap',
+    },
+  },
+};
+export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
+  title: 'Frequently Asked Questions',
+  cards: [
+    {
+      id: 1,
+      title: 'How do I prevent my project from going over budget?',
+      description:
+        'Define the project scope in detail from the start, provide detailed requirements, and maintain regular communication with the team to keep everything on track.',
+    },
+    {
+      id: 2,
+      title: 'Can the price change during the project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 3,
+      title:
+        'How do I make sure the project stays on track with a fixed price?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 4,
+      title: 'What is a Fixed Price Project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 5,
+      title: 'What are the benefits of a fixed price model?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 6,
+      title: 'When is the fixed price model ideal for a project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 3, sm: 4 },
+    },
+    titleStyle: {
+      width: { xs: '90%', lg: '100%' },
+      maxWidth: { md: '700px', lg: 'auto' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+    },
+    buttonStyle: {
+      width: { xs: '28px', md: '31px', lg: '41px' },
+      height: { xs: '30px', md: '31px', lg: '41px' },
+      minWidth: { xs: '5%', md: 'auto' },
+      padding: 0,
+      backgroundColor: '#F7F7FF',
+      borderRadius: '8px',
+      fontSize: { xs: '20px', md: '23px', lg: '35px' },
+      color: '#6F6C90',
+      textTransform: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 400,
+      '&:hover': {
+        backgroundColor: '#2870C3',
+        color: '#fff',
+      },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '85%', md: '100%' },
+      mx: 'auto',
+      px: 3,
+      py: 3.5,
+      maxWidth: { md: '596px' },
+      height: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '16px',
+      boxShadow: `
+    0px 5px 16px rgba(8, 15, 52, 0.06),
+    inset 0px 6.36px 8.48px 0px #ffffff
+  `,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '15px',
+        md: '17px',
+        lg: '22px',
+      },
+      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      fontWeight: 500,
+      color: '#170F49',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+
+      lineHeight: { xs: '23px', md: '30px' },
+      color: '#6F6C90',
+      width: '99%',
     },
   },
 };
