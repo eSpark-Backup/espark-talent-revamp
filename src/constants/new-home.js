@@ -2976,7 +2976,7 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      py: { xs: 6, md: 10 },
+      py: { xs: 6, md: 8 },
     },
     titleStyle: {
       width: '80%',
@@ -3035,6 +3035,154 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       maxWidth: { xs: '300px', md: '328px' },
       lineHeight: 1.6,
       color: '#57585C',
+    },
+  },
+};
+
+export const FIXED_PRICE_PROJECT_CONTRACT = {
+  title: 'Fixed Price Project Contract Process',
+  description:
+    'By defining a clear scope, budget, and timeline, we guarantee reliable project delivery.',
+  image: '/images/new-home/fixed-price-projects/project-contract/emp.png',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+  listItems: [
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/project-a-scoping.png',
+      text: 'Project a Scoping and Analysis ',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/project-planning.png',
+      text: 'Project Planning & Resource Allocation',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
+      text: 'Development & Implementation',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/quality-assurance.png',
+      text: 'Quality Assurance and Testing',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
+      text: 'Delivery and Review',
+      vector:
+        '/images/new-home/fixed-price-projects/project-contract/vector-vertical.png',
+      vector_right: true,
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      maxWidth: '1300px',
+      mx: 'auto',
+      flexGrow: 1,
+    },
+    firstGridBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    titleAndDescriptionBoxStyle: {
+      mx: 'auto',
+      width: '80%',
+      py: 2,
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    textStyle: {
+      fontSize: { xs: '23px', sm: '24px', md: '27px', lg: '34px' },
+      fontWeight: 600,
+      color: '#222324',
+      width: { xs: '80%', md: '100%' },
+      mx: 'auto',
+      lineHeight: 1.3,
+    },
+    descriptionStyle: {
+      fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px' },
+      fontWeight: 400,
+      color: '#111845',
+      width: { xs: '80%', md: '100%' },
+      mx: 'auto',
+      lineHeight: 1.5,
+    },
+    imageBoxStyle: {
+      width: '93%',
+      px: 2,
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    imageStyle: {
+      width: { xs: '80%', md: '85%', lg: 'auto' },
+      maxWidth: { xs: '252px', md: '85%', lg: 'auto' },
+      height: 'auto',
+    },
+    secondGridBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      // justifyContent: 'center',
+      alignItems: { xs: 'center', md: 'flex-start' },
+      // backgroundColor: 'yellow',
+      px: { lg: 2.5 },
+    },
+    listStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      gap: { xs: 8.5, sm: 8.5, md: 8.5 },
+      pb: { xs: 10, md: 9 },
+    },
+    listItemStyle: { display: 'flex', gap: 1.5, py: 0, position: 'relative' },
+    listItemIconStyle: {
+      width: { xs: '32px', sm: '48px', md: '45px', lg: '68px' },
+      height: 'auto',
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    vectorStyle: {
+      width: 'auto',
+      position: 'absolute',
+      top: { xs: 59, md: 59, lg: 70 },
+    },
+    listItemTextStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '17px', lg: '20px' },
+      fontWeight: 600,
+      color: '#111845',
+    },
+    rightVectorBoxStyle: {
+      width: { xs: '80%', sm: '90%' },
+      display: 'flex',
+      alignItems: 'center',
+      position: 'absolute',
+      top: { xs: 82, lg: 95 },
+      left: { xs: 45, lg: 50 },
+    },
+    rightVectorStyle: {
+      width: { xs: 'calc(65% - 120px)', md: 'calc(95% - 120px)' },
+      pr: 2,
+      pt: 2,
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
     },
   },
 };
