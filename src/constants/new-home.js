@@ -575,7 +575,7 @@ export const HIRING_DATA = {
     {
       title: `Offshore Development Center`,
       buttonText: 'Explore ODC Options',
-      link: '/Offshore-development-center',
+      link: '/offshore-development-center',
       points: [
         {
           text: 'Expand Without Overhead',
@@ -2025,6 +2025,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
       justifyContent: 'center',
       px: 2,
       py: { xs: 6, md: 8 },
+      backgroundColor: '#F5F5F5',
       backgroundImage:
         "url('images/new-home/hire-dedicated-developers/bg.png')",
       backgroundRepeat: 'no-repeat',
@@ -2379,6 +2380,15 @@ export const HIGH_STAKES_PROJECT_DATA = {
       '@media(min-width: 769px) and (max-width: 1023px)': {
         width: '55%',
       },
+
+      boxShadow: '0px 0px 150px 0px rgba(27, 235, 208, 0.3)',
+      background:
+        'radial-gradient(circle, rgba(27, 235, 208, 0.2) 0%, transparent 200%)',
+      borderRadius: '100%',
+      // backgroundImage:
+      //   'url(/images/new-home/hire-dedicated-developers/high-stakes-projects/bg.png)',
+      // backgroundPosition: 'center',
+      // backgroundSize: '500%',
     },
     titleAndDescriptionBoxStyle: {
       width: {
@@ -2743,6 +2753,690 @@ export const TALENT_ROSTER_DATA = {
       textAlign: 'center',
       lineHeight: 1.6,
       color: '#111845',
+    },
+  },
+};
+
+//Fixed-Prices-projects page data
+
+export const FIXED_PRICES_PROJECTS_DATA = {
+  title: `Fixed Prices <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
+  text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: 'calc(80vh - 127px)',
+      minHeight: '450px',
+      maxHeight: { xs: '450px', md: '600px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      px: 2,
+      py: { xs: 6, md: 8 },
+      backgroundColor: '#F5F5F5',
+      backgroundImage:
+        "url('images/new-home/hire-dedicated-developers/bg.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+      '@media(min-width:1921px)': {
+        maxHeight: '650px',
+        py: 8,
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      width: '90%',
+      maxWidth: { sm: '420px', md: '620px' },
+      fontWeight: 600,
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    textStyle: {
+      width: '80%',
+      maxWidth: { xs: '100%', sm: '90%', md: '750px', lg: '940px' },
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+      color: '#111845',
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
+  title: 'Explaining Fixed-price projects',
+  description:
+    "A fixed-price projects model is a sort of agreement where a client and a service provider concur on a set scope of work, deadlines, and payments. With this paradigm, you can define the project scope without having any prior experience with software development. The project's requirements, timeline, work scope, and expenses are all explicitly state at the outset.",
+  description2:
+    "An agreement between a client and a vendor on a predetermine scope of work, deadlines, and payments is implied by a fixed-price project. It's a fantastic choice for tasks with a predefine set of features and set due dates.",
+  image:
+    '/images/new-home/fixed-price-projects/explaining-fixed-price-projects/img.png',
+
+  // styles
+  styles: {
+    containerStyle: {
+      borderRadius: { xs: '30px', lg: '50px' },
+      backgroundColor: '#edeef5',
+      width: '100%',
+      maxWidth: '1440px',
+      mx: 'auto',
+    },
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '90%',
+      display: 'flex',
+      maxWidth: '1200px',
+      alignItems: 'center',
+      flexDirection: { xs: 'column', md: 'row' },
+      justifyContent: 'space-between',
+      pt: { xs: 4.5, lg: 3 },
+      pb: { xs: 3.5, lg: 1 },
+      gap: 1.5,
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        flexDirection: 'column',
+        pt: 5,
+      },
+    },
+    imageBoxStyle: {
+      height: 'auto',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      order: { xs: 2, md: 0 },
+      mx: { xs: 'auto', lg: 0 },
+      width: { xs: '90%', sm: '417px', md: '550px', lg: '557px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '55%',
+      },
+    },
+    titleAndDescriptionBoxStyle: {
+      width: {
+        xs: '88%',
+        sm: '80%',
+        md: 'calc(100% - 300px)',
+        lg: 'calc(100% - 557px)',
+      },
+      mx: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: { xs: 2, md: 1.5 },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        width: '92%',
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: { xs: 'center', md: 'left' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        textAlign: 'center',
+      },
+    },
+    descriptionStyle: {
+      fontWeight: 400,
+      color: '#111845',
+      lineHeight: '157%',
+      textAlign: { xs: 'center', md: 'left' },
+      fontSize: { xs: '12px', sm: '15px', md: '17px', lg: '20px' },
+      '@media(min-width: 769px) and (max-width: 1023px)': {
+        textAlign: 'center',
+      },
+    },
+  },
+};
+export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
+  title: 'Why Choose an Offshore Development Center?',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card1.png',
+      title: 'Strict Budgetary Constraints',
+      description:
+        'Fixed Price Projects are ideal when your budget is non-negotiable. At eSpark Talent, we offer clear, upfront pricing, ensuring your project stays within budget without any unexpected costs, providing financial predictability and peace of mind.',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card2.png',
+      title: 'Short-Term or Specific Initiatives',
+      description:
+        'For projects that are short-term or have a very specific focus, Fixed Price Projects offer a straightforward solution. We ensure these projects are delivered efficiently and effectively, meeting your exact requirements without the need for long-term commitments.',
+    },
+    {
+      id: 3,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card3.png',
+      title: 'Resource-Constraint Scenarios',
+      description:
+        "In situations where your internal resources are limited, our Fixed Price Project model steps in to fill the gap. We provide the necessary expertise and manpower, ensuring your project doesn't suffer due to in-house resource constraints.",
+    },
+    {
+      id: 4,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card4.png',
+      title: 'Time-Bound Deliverables',
+      description:
+        'When your project has strict deadlines, our team ensures timely delivery under the Fixed Price model. This approach keeps us focused on meeting your timeline, delivering quality results within the stipulated time frame.',
+    },
+    {
+      id: 5,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card5.png',
+      title: 'Defined Outcome Expectations',
+      description:
+        'For projects with clearly defined outcomes, our Fixed Price Projects model aligns perfectly. We understand the importance of delivering as per your expectations, ensuring the final output precisely meets your predefined objectives.',
+    },
+    {
+      id: 6,
+      image:
+        '/images/new-home/fixed-price-projects/offshore-development-center/card6.png',
+      title: 'Minimal Project Complexity',
+      description:
+        'When dealing with less complex projects, the Fixed Price model offered by us is an ideal choice. It simplifies project management and focuses on delivering straightforward solutions efficiently. saving you time and effort.',
+    },
+  ],
+
+  // styles
+  styles: {
+    swipperStyle: {
+      mx: 'auto',
+      width: '80%',
+      height: 'auto',
+      maxWidth: '1400px',
+      justifyContent: 'center',
+    },
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1440px',
+      height: '100%',
+      backgroundColor: '#edeef5',
+      borderRadius: { xs: '30px', md: '50px' },
+      backgroundSize: '100%',
+      display: 'flex',
+      maxHeight: { md: 'auto' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      py: { xs: 6, md: 8 },
+    },
+    titleStyle: {
+      width: '80%',
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      pb: { xs: 0, md: 7 },
+      textAlign: 'center',
+    },
+    cardStyle: {
+      width: '95%',
+      px: 3,
+      py: { xs: 1.5, md: 2 },
+      maxWidth: { xs: '100%', md: '350px', lg: '375px' },
+      minHeight: { xs: '300px', sm: '260px', md: '320px', lg: '340px' },
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'left',
+      justifyContent: 'center',
+      boxShadow: '-5px 4px 59.8px 0 rgba(24, 84, 153, 0.2)',
+      backgroundColor: '#FFF',
+      borderRadius: '20px',
+      gap: 0.8,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '245px',
+      },
+    },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '55px', md: '65px', lg: '75px' },
+      height: 'auto',
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '20px',
+        sm: '20px',
+        md: '23px',
+        lg: '27px',
+      },
+      fontWeight: 600,
+      color: '#111845',
+      lineHeight: 1.3,
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '11px',
+        sm: '12px',
+        md: '13px',
+        lg: '15px',
+      },
+      maxWidth: { xs: '300px', md: '328px' },
+      lineHeight: 1.6,
+      color: '#57585C',
+    },
+  },
+};
+export const FIXED_PRICE_PROJECT_CONTRACT = {
+  title: 'Fixed Price Project Contract Process',
+  description:
+    'By defining a clear scope, budget, and timeline, we guarantee reliable project delivery.',
+  image: '/images/new-home/fixed-price-projects/project-contract/emp.png',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+  listItems: [
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/project-a-scoping.png',
+      text: 'Project a Scoping and Analysis ',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/project-planning.png',
+      text: 'Project Planning & Resource Allocation',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
+      text: 'Development & Implementation',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/quality-assurance.png',
+      text: 'Quality Assurance and Testing',
+      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
+    },
+    {
+      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
+      text: 'Delivery and Review',
+      vector:
+        '/images/new-home/fixed-price-projects/project-contract/vector-vertical.png',
+      vector_right: true,
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      maxWidth: '1300px',
+      mx: 'auto',
+      flexGrow: 1,
+    },
+    firstGridBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    titleAndDescriptionBoxStyle: {
+      mx: 'auto',
+      width: '80%',
+      py: 2,
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    textStyle: {
+      fontSize: { xs: '23px', sm: '24px', md: '27px', lg: '34px' },
+      fontWeight: 600,
+      color: '#222324',
+      width: { xs: '80%', md: '100%' },
+      mx: 'auto',
+      lineHeight: 1.3,
+    },
+    descriptionStyle: {
+      fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px' },
+      fontWeight: 400,
+      color: '#111845',
+      width: { xs: '80%', md: '100%' },
+      mx: 'auto',
+      lineHeight: 1.5,
+    },
+    imageBoxStyle: {
+      width: '93%',
+      px: 2,
+      textAlign: { xs: 'center', md: 'left' },
+    },
+    imageStyle: {
+      width: { xs: '80%', md: '85%', lg: 'auto' },
+      maxWidth: { xs: '252px', md: '85%', lg: 'auto' },
+      height: 'auto',
+    },
+    secondGridBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      // justifyContent: 'center',
+      alignItems: { xs: 'center', md: 'flex-start' },
+      // backgroundColor: 'yellow',
+      px: { lg: 2.5 },
+    },
+    listStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      gap: { xs: 8.5, sm: 8.5, md: 8.5 },
+      pb: { xs: 10, md: 9 },
+    },
+    listItemStyle: { display: 'flex', gap: 1.5, py: 0, position: 'relative' },
+    listItemIconStyle: {
+      width: { xs: '32px', sm: '48px', md: '45px', lg: '68px' },
+      height: 'auto',
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    vectorStyle: {
+      width: 'auto',
+      position: 'absolute',
+      top: { xs: 59, md: 59, lg: 70 },
+    },
+    listItemTextStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '17px', lg: '20px' },
+      fontWeight: 600,
+      color: '#111845',
+    },
+    rightVectorBoxStyle: {
+      width: { xs: '80%', sm: '90%' },
+      display: 'flex',
+      alignItems: 'center',
+      position: 'absolute',
+      top: { xs: 82, lg: 95 },
+      left: { xs: 45, lg: 50 },
+    },
+    rightVectorStyle: {
+      width: { xs: 'calc(65% - 120px)', md: 'calc(95% - 120px)' },
+      pr: 2,
+      pt: 2,
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
+  title: 'Frequently Asked Questions',
+  cards: [
+    {
+      id: 1,
+      title: 'How do I prevent my project from going over budget?',
+      description:
+        'Define the project scope in detail from the start, provide detailed requirements, and maintain regular communication with the team to keep everything on track.',
+    },
+    {
+      id: 2,
+      title: 'Can the price change during the project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 3,
+      title:
+        'How do I make sure the project stays on track with a fixed price?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 4,
+      title: 'What is a Fixed Price Project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 5,
+      title: 'What are the benefits of a fixed price model?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 6,
+      title: 'When is the fixed price model ideal for a project?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 3, sm: 4 },
+    },
+    titleStyle: {
+      width: { xs: '90%', lg: '100%' },
+      maxWidth: { md: '700px', lg: 'auto' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+    },
+    buttonStyle: {
+      width: { xs: '28px', md: '31px', lg: '41px' },
+      height: { xs: '30px', md: '31px', lg: '41px' },
+      minWidth: { xs: '5%', md: 'auto' },
+      padding: 0,
+      backgroundColor: '#F7F7FF',
+      borderRadius: '8px',
+      fontSize: { xs: '20px', md: '23px', lg: '35px' },
+      color: '#6F6C90',
+      textTransform: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 400,
+      '&:hover': {
+        backgroundColor: '#2870C3',
+        color: '#fff',
+      },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '85%', md: '100%' },
+      mx: 'auto',
+      px: 3,
+      py: 3.5,
+      maxWidth: { md: '596px' },
+      height: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '16px',
+      boxShadow: `
+    0px 5px 16px rgba(8, 15, 52, 0.06),
+    inset 0px 6.36px 8.48px 0px #ffffff
+  `,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '15px',
+        md: '17px',
+        lg: '22px',
+      },
+      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      fontWeight: 500,
+      color: '#170F49',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+
+      lineHeight: { xs: '23px', md: '30px' },
+      color: '#6F6C90',
+      width: '99%',
+    },
+  },
+};
+export const PRODUCT_JOURNEY_DATA = {
+  title: 'Power Up Every Stage of Your Product Journey',
+  description:
+    'Increase your level of performance with our full-stack software development services at a fixed cost without sacrificing quality',
+  cards: [
+    {
+      title: 'UI/UX Design Services',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
+      description:
+        'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
+    },
+    {
+      title: 'Custom Software Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
+      description:
+        'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
+    },
+    {
+      title: 'Mobile App Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
+      description:
+        'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
+    },
+    {
+      title: 'Embedded Systems Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
+      description:
+        'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
+    },
+    {
+      title: 'Mechanical Design and Engineering',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
+      description:
+        'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
+    },
+    {
+      title: 'Digital Marketing & Growth Support',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
+      description:
+        'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
+    },
+    {
+      title: 'Quality Assurance and Testing',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/quality-assurance.png',
+      description:
+        'We catch problems before your users do. Our QA experts perform detailed testing across platforms and devices to ensure your software is reliable, secure, and ready for real-world use.',
+    },
+    {
+      title: 'Dedicated Development Teams',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/dedicated-development-teams.png',
+      description:
+        'Build your own team of skilled developers fully aligned with your project needs. We carefully assemble teams that act as a true extension of your in-house staff, ensuring smooth collaboration and faster delivery.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '90%',
+      mx: 'auto',
+      maxWidth: '1440px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: { xs: 0, md: 4 },
+    },
+    contentBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 1,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    descriptionStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
+      fontWeight: 400,
+      width: { xs: '80%', md: '75%' },
+      mx: 'auto',
+      color: '#111845',
+    },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
+    },
+    cardStyle: {
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: { xs: 'center', md: 'flex-start' },
+      width: '100%',
+      maxWidth: '309px',
+      minHeight: { xs: '235px', md: '240px', lg: '230px' },
+      backgroundColor: '#E8F4FD',
+      boxShadow: '0px 3.7px 6.96px rgba(135, 128, 128, 0.29)',
+      border: '1px #11184530',
+      borderRadius: '6px',
+      textAlign: 'center',
+      py: 1.5,
+      px: 2,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '215px',
+      },
+    },
+    titleAndDescripitonBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 0.8,
+      mt: 0.8,
+    },
+    imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
+    cardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#111845' },
+    cardDescriptionStyle: {
+      fontSize: { xs: '11px', md: '13px' },
+      fontWeight: 400,
+      color: '#57585C',
     },
   },
 };
