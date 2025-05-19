@@ -1,70 +1,20 @@
-'use client';
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
-import FlaxibleSlider from './FlexibleSlider';
+import { Box } from '@mui/material';
+import ODCProcess from './Doorstep';
 
-const OffshoreDevelopmentCenter = ({ data }) => {
-  const { title, cards, styles } = data || {};
-  const {
-    mainBoxStyle,
-    titleStyle,
-    cardStyle,
-    imageStyle,
-    cardTitleStyle,
-    cardDescriptionStyle,
-    slideStyle,
-  } = styles || {};
-
-  const ODCCard = ({ title, image, description, extraSx = {} }) => (
+const OffshoreDevelopmentCenter = () => {
+  return (
     <Box
       sx={{
-        ...cardStyle,
-        ...extraSx,
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: { xs: 5, sm: 8, lg: 10 },
+        pb: { xs: 5, sm: 8, lg: 10 },
+        backgroundColor: '#F5F5F5',
       }}
     >
-      <Box component="img" src={image} sx={imageStyle} />
-      <Typography sx={cardTitleStyle}>{title}</Typography>
-      <Typography sx={cardDescriptionStyle}>{description}</Typography>
-    </Box>
-  );
-
-  return (
-    <Box sx={{ ...mainBoxStyle }} id="pricing-difference">
-      {title && (
-        <Typography variant="h4" fontWeight="bold" sx={titleStyle}>
-          {title}
-        </Typography>
-      )}
-      <Grid
-        gap={3.5}
-        container
-        width="95%"
-        maxWidth="1400px"
-        justifyContent="center"
-      >
-        {cards?.map(({ title, image, description }, index) => (
-          <ODCCard
-            key={index}
-            title={title}
-            image={image}
-            description={description}
-          />
-        ))}
-
-        <FlaxibleSlider
-          data={cards}
-          isDisplay={true}
-          slideStyle={slideStyle}
-          card={(title, image, description) => (
-            <ODCCard
-              title={title}
-              image={image}
-              description={description}
-              extraSx={{ display: { xs: 'flex', md: 'none' } }}
-            />
-          )}
-        />
-      </Grid>
+      <ODCProcess />
     </Box>
   );
 };

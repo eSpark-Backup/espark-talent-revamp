@@ -575,7 +575,7 @@ export const HIRING_DATA = {
     {
       title: `Offshore Development Center`,
       buttonText: 'Explore ODC Options',
-      link: '/Offshore-development-center',
+      link: '/offshore-development-center',
       points: [
         {
           text: 'Expand Without Overhead',
@@ -2902,7 +2902,7 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
     },
   },
 };
-export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
+export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
   title: 'Why Choose an Offshore Development Center?',
   cards: [
     {
@@ -3039,7 +3039,6 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
   },
 };
-
 export const FIXED_PRICE_PROJECT_CONTRACT = {
   title: 'Fixed Price Project Contract Process',
   description:
@@ -3306,6 +3305,138 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
       lineHeight: { xs: '23px', md: '30px' },
       color: '#6F6C90',
       width: '99%',
+    },
+  },
+};
+export const PRODUCT_JOURNEY_DATA = {
+  title: 'Power Up Every Stage of Your Product Journey',
+  description:
+    'Increase your level of performance with our full-stack software development services at a fixed cost without sacrificing quality',
+  cards: [
+    {
+      title: 'UI/UX Design Services',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
+      description:
+        'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
+    },
+    {
+      title: 'Custom Software Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
+      description:
+        'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
+    },
+    {
+      title: 'Mobile App Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
+      description:
+        'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
+    },
+    {
+      title: 'Embedded Systems Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
+      description:
+        'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
+    },
+    {
+      title: 'Mechanical Design and Engineering',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
+      description:
+        'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
+    },
+    {
+      title: 'Digital Marketing & Growth Support',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
+      description:
+        'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
+    },
+    {
+      title: 'Quality Assurance and Testing',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/quality-assurance.png',
+      description:
+        'We catch problems before your users do. Our QA experts perform detailed testing across platforms and devices to ensure your software is reliable, secure, and ready for real-world use.',
+    },
+    {
+      title: 'Dedicated Development Teams',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/dedicated-development-teams.png',
+      description:
+        'Build your own team of skilled developers fully aligned with your project needs. We carefully assemble teams that act as a true extension of your in-house staff, ensuring smooth collaboration and faster delivery.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '90%',
+      mx: 'auto',
+      maxWidth: '1440px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: { xs: 0, md: 4 },
+    },
+    contentBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 1,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    descriptionStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
+      fontWeight: 400,
+      width: { xs: '80%', md: '75%' },
+      mx: 'auto',
+      color: '#111845',
+    },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
+    },
+    cardStyle: {
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: { xs: 'center', md: 'flex-start' },
+      width: '100%',
+      maxWidth: '309px',
+      minHeight: { xs: '235px', md: '240px', lg: '230px' },
+      backgroundColor: '#E8F4FD',
+      boxShadow: '0px 3.7px 6.96px rgba(135, 128, 128, 0.29)',
+      border: '1px #11184530',
+      borderRadius: '6px',
+      textAlign: 'center',
+      py: 1.5,
+      px: 2,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '215px',
+      },
+    },
+    titleAndDescripitonBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 0.8,
+      mt: 0.8,
+    },
+    imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
+    cardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#111845' },
+    cardDescriptionStyle: {
+      fontSize: { xs: '11px', md: '13px' },
+      fontWeight: 400,
+      color: '#57585C',
     },
   },
 };
