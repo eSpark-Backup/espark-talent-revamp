@@ -3440,3 +3440,295 @@ export const PRODUCT_JOURNEY_DATA = {
     },
   },
 };
+
+// offshore-development-center page data
+
+export const DOORSTEP_DATA = {
+  subTitle: 'Our Benefits',
+  title: 'Bringing Global Expertise to Your Doorstep',
+  image: '/images/new-home/offshore-development-center/doorstep/line.png',
+  leftDesignImage:
+    '/images/new-home/offshore-development-center/doorstep/left-design.png',
+  rightDesignImage:
+    '/images/new-home/offshore-development-center/doorstep/right-design.png',
+  expertise: [
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Cost-Effective Development',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Scalable and Flexible',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Global Talent Access Solutions',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Focus on Core Business Activities',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Scalable and Flexible',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Enhanced Quality & Productivity',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1440px',
+      backgroundColor: '#edeef5',
+      borderRadius: { xs: '30px', lg: '50px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      py: { xs: 6, lg: 7 },
+      gap: 5,
+    },
+    subTitleAndTitleBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    subTitleStyle: {
+      fontSize: { xs: '22px', sm: '24px', md: '26px', lg: '28px' },
+      fontWeight: 400,
+      color: '#111845',
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '31px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+      width: { xs: '75%', md: '100%' },
+    },
+    parentBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: { md: 1 },
+    },
+    leftDesignStyle: {
+      width: { md: '17.1%', lg: '200px' },
+      height: { xs: '302px', lg: 'auto' },
+      '@media(max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+    rightDesignStyle: {
+      width: { md: '17.1%', lg: '200px' },
+      height: { xs: '302px', lg: 'auto' },
+      '@media(max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+    expertiseAndLogoBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      position: 'relative',
+      '@media(max-width:768px)': {
+        flexDirection: 'column',
+        gap: 3.5,
+      },
+    },
+    expertiseBoxStyle: {
+      width: { xs: '75%', md: 'calc(61% - 217px)', lg: 'calc(62% - 237px)' },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: { xs: 3, md: 7.5, lg: 9.5 },
+      '@media(min-width: 769px) and (max-width:1023px)': {
+        gap: 6,
+      },
+    },
+    expertiseCardStyle: {
+      width: '100%',
+      minHeight: { xs: '72px', md: '78px', lg: '84px' },
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '23px',
+      boxShadow: '-13px 4px 16.1px rgba(24, 84, 153, 0.21)',
+      backgroundColor: '#EFEFEF',
+      position: 'relative',
+      zIndex: 1,
+      p: 1,
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '23px',
+        boxShadow: 'inset 0px -3px 1.7px rgba(0, 0, 0, 0.05)',
+        pointerEvents: 'none',
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '23px',
+        boxShadow: 'inset 0px 3px 4px rgba(255, 255, 255, 1)',
+        pointerEvents: 'none',
+      },
+    },
+    expertiseTextBoxStyle: {
+      width: '99%',
+      display: 'flex',
+      justifyContent: { xs: 'space-evenly', md: 'space-between' },
+      alignItems: 'center',
+    },
+    leftExpertiseFirstIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      '@media(min-width: 769px) and (max-width:1023px)': {
+        display: 'none',
+      },
+    },
+    expertiseTextStyle: {
+      width: { xs: 'calc(80% - 28px)', lg: 'calc(100% - 64px)' },
+      fontWeight: 500,
+      color: '#111845',
+      textAlign: 'center',
+      fontSize: { xs: 'clamp(14px, 1.3vw, 21px)' },
+      '@media(max-width:1023px)': {
+        width: 'calc(90% - 28px)',
+      },
+    },
+    leftExpertiseLastIcon: {
+      width: { md: '28px', lg: '31px' },
+      display: { xs: 'none', md: 'flex' },
+    },
+    firstVectorStyle: {
+      width: { xs: '100%', md: '60%', lg: '40%' },
+      height: { xs: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      zIndex: 0,
+    },
+    secondVectorStyle: {
+      width: { xs: '', md: '40%', lg: '46%' },
+      height: { md: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: {
+        md: 'translate(-50%, -50%) rotate(48deg)',
+        lg: 'translate(-50%, -50%) rotate(53deg)',
+      }, // <-- added rotation
+      transformOrigin: 'center',
+      zIndex: 0,
+      '@media(min-width: 1200px) and (max-width:1299px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(47deg)',
+      },
+      '@media(min-width: 1130px) and (max-width:1199px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(45deg)',
+      },
+      '@media(min-width: 1024px) and (max-width:1129px)': {
+        width: '60%',
+        transform: 'translate(-50%, -50%) rotate(44deg)',
+      },
+    },
+    thirdVectorStyle: {
+      width: { xs: '', md: '40%', lg: '46%' },
+      height: { md: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: {
+        md: 'translate(-50%, -50%) rotate(132deg)',
+        lg: 'translate(-50%, -50%) rotate(127deg)',
+      },
+      transformOrigin: 'center',
+      zIndex: 0,
+      '@media(min-width: 1200px) and (max-width:1299px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(133deg)',
+      },
+      '@media(min-width: 1130px) and (max-width:1199px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(134deg)',
+      },
+      '@media(min-width: 1024px) and (max-width:1129px)': {
+        width: '60%',
+        transform: 'translate(-50%, -50%) rotate(136deg)',
+      },
+    },
+    logoOuterBoxStyle: {
+      width: { xs: '180px', md: '227px', lg: '237px' },
+      height: { xs: '180px', md: '227px', lg: '237px' },
+      borderRadius: '100%',
+      backgroundColor: '#edeef5',
+      border: '1px solid rgba(70, 70, 72, 0.08)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'relative',
+      zIndex: 1,
+      '@media(min-width:769px) and (max-width:1023px)': {
+        width: '190px',
+        height: '190px',
+      },
+    },
+    logoInnerBoxStyle: {
+      width: '83%',
+      height: '83%',
+      borderRadius: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#EFEFEF',
+      position: 'relative',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '100%',
+        boxShadow: 'inset 0px -3px 1.7px rgba(0, 0, 0, 0.05)',
+        pointerEvents: 'none',
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '100%',
+        boxShadow: 'inset 0px 3px 4px rgba(255, 255, 255, 1)',
+        pointerEvents: 'none',
+      },
+    },
+    rightExpertiseFirstIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      display: { xs: 'none', md: 'flex' },
+    },
+    rightExpertiseLastIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      '@media(min-width:769px) and (max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+  },
+};

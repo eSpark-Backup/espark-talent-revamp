@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import ODCProcess from './Doorstep';
+import { DOORSTEP_DATA } from '@/constants/new-home';
 
 const OffshoreDevelopmentCenter = () => {
   return (
@@ -14,7 +15,7 @@ const OffshoreDevelopmentCenter = () => {
         backgroundColor: '#F5F5F5',
       }}
     >
-      <ODCProcess />
+      <ODCProcess data={DOORSTEP_DATA} />
     </Box>
   );
 };

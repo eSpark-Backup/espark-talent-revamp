@@ -1,189 +1,129 @@
-import { Box, Typography } from '@mui/material';
+'use client';
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 
-const Doorstep = () => {
+const Doorstep = ({ data }) => {
+  const {
+    subTitle,
+    title,
+    image,
+    leftDesignImage,
+    rightDesignImage,
+    expertise,
+    styles,
+  } = data || {};
+  const {
+    mainBoxStyle,
+    subTitleAndTitleBoxStyle,
+    subTitleStyle,
+    titleStyle,
+    parentBoxStyle,
+    leftDesignStyle,
+    rightDesignStyle,
+    expertiseAndLogoBoxStyle,
+    expertiseBoxStyle,
+    expertiseCardStyle,
+    expertiseTextBoxStyle,
+    leftExpertiseFirstIconStyle,
+    expertiseTextStyle,
+    leftExpertiseLastIcon,
+    firstVectorStyle,
+    secondVectorStyle,
+    thirdVectorStyle,
+    logoOuterBoxStyle,
+    logoInnerBoxStyle,
+    rightExpertiseFirstIconStyle,
+    rightExpertiseLastIconStyle,
+  } = styles || {};
+
   return (
-    <Box
-      sx={{
-        mx: 'auto',
-        width: '100%',
-        maxWidth: '1440px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 0.8,
-      }}
-    >
-      <Typography
-        sx={{
-          fontSize: '28px',
-          fontWeight: 400,
-          color: '#111845',
-        }}
-      >
-        Our Benefits
-      </Typography>
-      <Typography
-        sx={{
-          fontSize: '40px',
-          fontWeight: 600,
-          color: '#222324',
-        }}
-      >
-        Bringing Global Expertise to Your Doorstep
-      </Typography>
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Box
-          component={'img'}
-          src="/images/new-home/offshore-development-center/doorstep/left-design.png"
-          sx={{ width: { md: '18%', lg: 'auto' } }}
-        />
-        <Box
-          sx={{
-            width: 'calc(100%)',
-            display: 'flex',
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-          }}
-        >
-          <Box
-            sx={{
-              width: 'calc(58% - 237px)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: 10,
-            }}
-          >
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '-13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
-            </Box>
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '-13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
-            </Box>
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '-13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
+    <Box sx={mainBoxStyle}>
+      <Box sx={subTitleAndTitleBoxStyle}>
+        <Typography sx={subTitleStyle}>{subTitle}</Typography>
+        <Typography sx={titleStyle}>{title}</Typography>
+      </Box>
+      <Box sx={parentBoxStyle}>
+        <Box component={'img'} src={leftDesignImage} sx={leftDesignStyle} />
+        <Box sx={expertiseAndLogoBoxStyle}>
+          <Box sx={expertiseBoxStyle}>
+            {expertise?.slice(0, 3)?.map(({ text, icon }, index) => (
+              <Box
+                key={index}
+                sx={{
+                  ...expertiseCardStyle,
+                  ml: { md: index === 1 ? -13 : 0 },
+                  '@media(min-width: 769px) and (max-width:1023px)': {
+                    ml: index === 1 ? -3 : 13,
+                    width: index === 1 ? '75%' : '75%',
+                  },
+                }}
+              >
+                <Box sx={expertiseTextBoxStyle}>
+                  <Box
+                    component={'img'}
+                    src={icon}
+                    sx={leftExpertiseFirstIconStyle}
+                  />
+                  <Typography sx={expertiseTextStyle}>{text}</Typography>
+                  <Box
+                    component={'img'}
+                    src={icon}
+                    sx={leftExpertiseLastIcon}
+                  />
+                </Box>
+              </Box>
+            ))}
+          </Box>
+          {[firstVectorStyle, secondVectorStyle, thirdVectorStyle]?.map(
+            (vector, vectorIndex) => (
+              <Box
+                src={image}
+                component={'img'}
+                key={vectorIndex}
+                sx={vector}
+              />
+            )
+          )}
+          <Box sx={logoOuterBoxStyle}>
+            <Box sx={logoInnerBoxStyle}>
+              <Box
+                component={'img'}
+                src="/images/loading-slider-img.png"
+                sx={{ width: { md: '55px', lg: '65px' }, height: 'auto' }}
+              />
             </Box>
           </Box>
-          <Box
-            sx={{
-              width: '237px',
-              height: '237px',
-              borderRadius: '100%',
-              border: '1px solid rgba(70, 70, 72, 0.08)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Box
-              sx={{
-                width: '83%',
-                height: '83%',
-                backgroundColor: '#EFEFEF',
-                borderRadius: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              LOGO
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              width: 'calc(58% - 237px)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: 10,
-            }}
-          >
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
-            </Box>
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
-            </Box>
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '84px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxShadow: '13px 4px 16.1px rgba(24, 84, 153, 0.21)',
-                borderRadius: '12px',
-              }}
-            >
-              Cost-Effective Development
-            </Box>
+          <Box sx={expertiseBoxStyle}>
+            {expertise?.slice(3, 6)?.map(({ text, icon }, index) => (
+              <Box
+                key={index}
+                sx={{
+                  ...expertiseCardStyle,
+                  mr: { md: index === 1 ? -13 : 0 },
+                  '@media(min-width:769px) and (max-width:1023px)': {
+                    mr: index === 1 ? -3 : 13,
+                    width: index === 1 ? '75%' : '75%',
+                  },
+                }}
+              >
+                <Box sx={expertiseTextBoxStyle}>
+                  <Box
+                    component={'img'}
+                    src={icon}
+                    sx={rightExpertiseFirstIconStyle}
+                  />
+                  <Typography sx={expertiseTextStyle}>{text}</Typography>
+                  <Box
+                    component={'img'}
+                    src={icon}
+                    sx={rightExpertiseLastIconStyle}
+                  />
+                </Box>
+              </Box>
+            ))}
           </Box>
         </Box>
-        <Box
-          component={'img'}
-          src="/images/new-home/offshore-development-center/doorstep/right-design.png"
-          sx={{ width: { md: '18%', lg: 'auto' } }}
-        />
+        <Box component={'img'} src={rightDesignImage} sx={rightDesignStyle} />
       </Box>
     </Box>
   );
