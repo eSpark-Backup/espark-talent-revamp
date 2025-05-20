@@ -1,5 +1,5 @@
 export const FOOTER_DATA = {
-  logo: '/images/thankyou/ThankyouPageLogo.WEBP',
+  logo: '/images/thankyou/ThankyouPageLogo.webp',
   logoLink: '/',
   trustPilotImage: '/images/footer/social-icons/TrustPilot2.svg',
   trustPilotLink:
