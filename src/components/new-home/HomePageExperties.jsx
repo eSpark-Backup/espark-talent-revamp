@@ -17,7 +17,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { checkingExpendedAccordion, handleChangeAccordion } from '@/utils';
 
-const HomePageExperties = ({ data }) => {
+const HomePageExperties = ({ data, titleColor }) => {
   const pathName = usePathname();
   const hire_remote_developers = checkingExpendedAccordion(
     pathName,
@@ -90,7 +90,7 @@ const HomePageExperties = ({ data }) => {
 
   return (
     <Container sx={containerStyle}>
-      <ParagraphTitle title={title} />
+      <ParagraphTitle title={title} hColor={titleColor} />
       {!data || !services || !Array?.isArray(services) ? (
         <Box
           sx={{

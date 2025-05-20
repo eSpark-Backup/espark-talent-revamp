@@ -4,7 +4,12 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FOOTER_STYLE, HIDDEN_PATHS } from '@/constants/global/footer';
+import {
+  FOOTER_STYLE,
+  HIDDEN_PATHS,
+  ORGANIZE_TEAM_DATA,
+} from '@/constants/global/footer';
+import OrganizeTeam from '../OrganizeTeam';
 
 const Footer = ({ data }) => {
   const pathName = usePathname();
@@ -17,8 +22,6 @@ const Footer = ({ data }) => {
     copyRightLinks,
     pages,
     socialMedia,
-    trustPilotLink,
-    trustPilotImage,
   } = data || {};
 
   const {
@@ -37,11 +40,7 @@ const Footer = ({ data }) => {
     lebelStyle,
     ulStyle,
     textIconAndValueBoxStyle,
-    iconBoxStyle,
-    pageLinkIconStyle,
     valueStyle,
-    trustPilotImageBoxStyle,
-    trustPilotImageStyle,
     pageNameStyle,
     horizontalLineStyle,
     copyRightBoxStyle,
@@ -75,7 +74,7 @@ const Footer = ({ data }) => {
               <>
                 {mp?.info?.map((_text, _textIndex) => (
                   <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
-                    {_text?.icon && (
+                    {/* {_text?.icon && (
                       <Box sx={iconBoxStyle(_textIndex)}>
                         <Image
                           alt=""
@@ -85,7 +84,7 @@ const Footer = ({ data }) => {
                           fill
                         />
                       </Box>
-                    )}
+                    )} */}
                     <Typography
                       sx={valueStyle(_textIndex)}
                       component="li"
@@ -97,7 +96,7 @@ const Footer = ({ data }) => {
                     />
                   </Box>
                 ))}
-                {pathName === '/' && (
+                {/* {pathName === '/' && (
                   <Box sx={trustPilotImageBoxStyle}>
                     <Link href={trustPilotLink || '#'}>
                       <Image
@@ -109,7 +108,7 @@ const Footer = ({ data }) => {
                       />
                     </Link>
                   </Box>
-                )}
+                )} */}
               </>
             ) : (
               mp?.pages?.map((_page, _pIndex) => (
@@ -144,6 +143,9 @@ const Footer = ({ data }) => {
 
   return (
     <Box sx={mainBoxStyle}>
+      <Box sx={{ pt: { xs: 5, sm: 6, md: 8, lg: 10 }, pb: { xs: 2, md: 4 } }}>
+        <OrganizeTeam data={ORGANIZE_TEAM_DATA} />
+      </Box>
       <Box sx={innerBoxStyle}>
         <Box sx={logoSectionBoxStyle}>
           <Box sx={imageBoxStyle}>
