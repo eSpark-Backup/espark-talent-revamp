@@ -4328,3 +4328,141 @@ export const ODC_FOUNDATION_DATA = {
     },
   },
 };
+
+export const ODC_SERVICES_DATA = {
+  title: 'ODC Services Based on Tech Stack',
+  techStack: [
+    {
+      title: 'Android',
+      icon: '/images/new-home/offshore-development-center/services-based/icon1.png',
+    },
+    {
+      title: 'Angular',
+      icon: '/images/new-home/offshore-development-center/services-based/icon2.png',
+    },
+    {
+      title: 'Arduino',
+      icon: '/images/new-home/offshore-development-center/services-based/icon3.png',
+    },
+    {
+      title: 'Arc Linux',
+      icon: '/images/new-home/offshore-development-center/services-based/icon4.png',
+    },
+    {
+      title: 'Atom',
+      icon: '/images/new-home/offshore-development-center/services-based/icon5.png',
+    },
+    {
+      title: 'Apache Kafka',
+      icon: '/images/new-home/offshore-development-center/services-based/icon6.png',
+    },
+    {
+      title: 'MySQL',
+      icon: '/images/new-home/offshore-development-center/services-based/icon7.png',
+    },
+    {
+      title: 'Dot Net Core',
+      icon: '/images/new-home/offshore-development-center/services-based/icon8.png',
+    },
+    {
+      title: 'Figma',
+      icon: '/images/new-home/offshore-development-center/services-based/icon9.png',
+    },
+    {
+      title: 'Golang',
+      icon: '/images/new-home/offshore-development-center/services-based/icon10.png',
+    },
+    {
+      title: 'Java',
+      icon: '/images/new-home/offshore-development-center/services-based/icon11.png',
+    },
+    {
+      title: 'JavaScript',
+      icon: '/images/new-home/offshore-development-center/services-based/icon12.png',
+    },
+    {
+      title: 'C++',
+      icon: '/images/new-home/offshore-development-center/services-based/icon13.png',
+    },
+    {
+      title: 'C#',
+      icon: '/images/new-home/offshore-development-center/services-based/icon14.png',
+    },
+    {
+      title: 'Django',
+      icon: '/images/new-home/offshore-development-center/services-based/icon15.png',
+    },
+    {
+      title: 'Python',
+      icon: '/images/new-home/offshore-development-center/services-based/icon16.png',
+    },
+    {
+      title: 'React',
+      icon: '/images/new-home/offshore-development-center/services-based/icon17.png',
+    },
+    {
+      title: 'Raspberry Pi',
+      icon: '/images/new-home/offshore-development-center/services-based/icon18.png',
+    },
+    {
+      title: 'Salesforce',
+      icon: '/images/new-home/offshore-development-center/services-based/icon19.png',
+    },
+    {
+      title: 'Vue.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon20.png',
+    },
+    {
+      title: 'WordPress',
+      icon: '/images/new-home/offshore-development-center/services-based/icon21.png',
+    },
+    {
+      title: 'Next.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon22.png',
+    },
+    {
+      title: 'Blender',
+      icon: '/images/new-home/offshore-development-center/services-based/icon23.png',
+    },
+    {
+      title: 'Node.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon24.png',
+    },
+    {
+      title: 'Laravel',
+      icon: '/images/new-home/offshore-development-center/services-based/icon25.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1100px',
+      justifyContent: 'center',
+      gap: { xs: 3, md: 5 },
+      px: { xs: 1, sm: 3 },
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '35px', lg: '40px' },
+      fontWeight: 600,
+      pb: 5,
+      mx: 'auto',
+      width: { xs: '80%', lg: '100%' },
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    imageTitleStyle: {
+      fontSize: { xs: '14.5px', md: '16px' },
+      fontWeight: 500,
+      color: 'rgba(17, 24, 69, 1)',
+      mt: 0.5,
+    },
+    imageStyle: {
+      height: 'auto',
+      width: { xs: '45%', lg: 'auto' },
+      objectFit: 'contain',
+    },
+  },
+};
