@@ -1,7 +1,19 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import ODCProcess from './Doorstep';
-import { DOORSTEP_DATA } from '@/constants/new-home';
+import {
+  DOORSTEP_DATA,
+  ODC_FOUNDATION_DATA,
+  ODC_SOLUTIONS,
+  OFFSHORE_DEVELOPMENT_CENTER_DATA,
+  OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA,
+  WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER,
+} from '@/constants/new-home';
+import DedicatedBanner from '../global/DedicatedBanner';
+import ProductJourney from './ProductJourney';
+import ExpertDeveloper from './ExpertDevelopers';
+import FrequetlyAskedQuestions from './FrequentlyAskedQuestions';
+import ODCFoundation from './ODCFoundation';
+import Doorstep from './Doorstep';
 
 const OffshoreDevelopmentCenter = () => {
   return (
@@ -15,7 +27,14 @@ const OffshoreDevelopmentCenter = () => {
         backgroundColor: '#F5F5F5',
       }}
     >
-      <ODCProcess data={DOORSTEP_DATA} />
+      <DedicatedBanner data={OFFSHORE_DEVELOPMENT_CENTER_DATA} />
+      <ProductJourney data={ODC_SOLUTIONS} />
+      <ODCFoundation data={ODC_FOUNDATION_DATA} />
+      <ExpertDeveloper data={WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER} />
+      <Doorstep data={DOORSTEP_DATA} />
+      <FrequetlyAskedQuestions
+        data={OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA}
+      />
     </Box>
   );
 };
