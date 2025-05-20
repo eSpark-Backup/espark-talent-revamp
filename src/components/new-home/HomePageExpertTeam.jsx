@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Button,
   CircularProgress,
   Typography,
   useMediaQuery,
@@ -11,12 +10,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination } from 'swiper/modules';
-import { usePathname } from 'next/navigation';
-import { openForm } from '@/utils';
 
-const HomePageExpertTeam = ({ data, handleOpen }) => {
+const HomePageExpertTeam = ({ data }) => {
   const [loading, setLoading] = useState(true);
-  const pathName = usePathname();
   const isMax = useMediaQuery('(max-width:1023px)');
   const isMin = useMediaQuery('(min-width:769px)');
   const { dapartment, styles } = data || {};
@@ -33,7 +29,6 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
     mainLayoutStyle,
     headerBoxStyle,
     titleTypographyStyle,
-    btnStyle,
   } = styles || {};
 
   useEffect(() => {
@@ -76,17 +71,6 @@ const HomePageExpertTeam = ({ data, handleOpen }) => {
     <Box sx={mainLayoutStyle}>
       <Box sx={headerBoxStyle}>
         <Typography sx={titleTypographyStyle}>{data?.title || ''}</Typography>
-        <Box sx={{ width: 'auto', mt: { xs: 2.5 } }}>
-          <Button
-            onClick={() =>
-              openForm(data?.btnLink || '', '_blank', pathName, handleOpen)
-            }
-            sx={btnStyle}
-            disableRipple
-          >
-            {data?.btnTitle || ''}
-          </Button>
-        </Box>
       </Box>
       <Box
         sx={{ mt: { xs: 3, sm: 4, md: 6 }, mx: { xs: 3, md: 2 } }}

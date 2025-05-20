@@ -1,65 +1,61 @@
 import React from 'react';
 import {
-  CLIENT_SLIDER_BREAK_POINTS,
-  CLIENTS_SLIDER_DATA,
-} from '@/constants/homepage';
-import {
   cardStyleForHomePage,
   DIFFERENCE_DATA,
   EMPLOYEE_HERO_DATA,
+  ENTIRE_TEAM,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
+  GLOBAL_TEAMS,
   HIRING_DATA,
-  OFFSHORE_DATA,
+  POWER_PROJECT_DATA,
+  TRUSTED_PLATFORM,
 } from '@/constants/new-home';
-import ClientSlider from '../global/ClientSlider';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import HomeOffshoreWorks from '../new-home/HomeOffshoreWorks';
 import EmployeeBanner from '../employment/EmployeeBanner';
-import { Box } from '@mui/material';
-import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PricingDefference from '../pricing/PricingDefference';
+import HomePageHiringModel from '../new-home/HomePageHiringModel';
+import PowerProjects from '../new-home/PowerProjects';
+import EntierTeam from '../new-home/EntierTeam';
+import GlobalTeams from '../new-home/GlobalTeams';
+import TrustedPlatform from '../new-home/TrustedPlatform';
+import { Box } from '@mui/material';
+import HomeBlogs from '../blogs/HomeBlogs';
 
 const HomeTop = () => {
   return (
     <>
       <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
-      <PricingDefference
-        data={DIFFERENCE_DATA}
-        cardStyle={cardStyleForHomePage}
-        backgroundColorStyle={{
-          '@media(min-width:1024px)': {
-            backgroundSize: '100%',
-            backgroundPosition: 'center',
-            backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
-          },
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: { xs: 4, sm: 6, md: 8, lg: 10 },
+          py: { xs: 3, sm: 4, md: 7 },
         }}
-      />
-      <HomeOffshoreWorks data={OFFSHORE_DATA} />
-      <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
-      <HomePageExperties data={EXPERTIES_DATA} />
-      <HomePageHiringModel data={HIRING_DATA} />
-      <Box sx={{ pt: { xs: 4, md: 4.5 }, pb: 2 }}>
-        <ClientSlider
-          data={CLIENTS_SLIDER_DATA}
-          breakPoints={CLIENT_SLIDER_BREAK_POINTS}
-          compeleteTitle={
-            'Meet our partners who trust our certified tech experts'
-          }
-          shortTitle={'Meet our partners who trust our certified tech experts'}
-          length={100}
-          fontSize={{
-            xs: '19px !important',
-            sm: '20px !important',
-            md: '22px !important',
-            lg: '28px !important',
+      >
+        <PricingDefference
+          data={DIFFERENCE_DATA}
+          cardStyle={cardStyleForHomePage}
+          titleColor={'#222324'}
+          backgroundColorStyle={{
+            '@media(min-width:1024px)': {
+              backgroundSize: '100%',
+              backgroundPosition: 'bottom',
+              backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
+            },
           }}
-          lineHeight={{ xs: '30px !important', sm: '25px !important' }}
-          fontWeight={500}
-          bgColor={'#029894'}
-          txtColor={'#ffffff'}
         />
+        <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
+        <HomePageHiringModel data={HIRING_DATA} />
+        <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
+        <PowerProjects data={POWER_PROJECT_DATA} />
+        <EntierTeam data={ENTIRE_TEAM} />
+        <GlobalTeams data={GLOBAL_TEAMS} />
+        <TrustedPlatform data={TRUSTED_PLATFORM} />
+        <HomeBlogs />
       </Box>
     </>
   );
