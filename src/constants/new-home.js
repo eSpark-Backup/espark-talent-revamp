@@ -1452,7 +1452,7 @@ export const POWER_PROJECT_DATA = {
       transform: 'translate(-50%)',
       position: { xs: 'absolute' },
       display: 'inline-flex',
-      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 15s linear infinite`,
+      animation: `${scrollDirection === 'right' ? scrollRight : scrollLeft} 40s linear infinite`,
     }),
     chipBoxStyle: {
       display: 'flex',
