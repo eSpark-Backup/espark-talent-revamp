@@ -652,7 +652,7 @@ export const HIRING_DATA = {
     },
     cardHeaderStyle: {
       color: '#111845',
-      fontSize: { xs: '24px', sm: '28px', md: '32px', lg: '35px' },
+      fontSize: { xs: '24px', sm: '26px', md: '29px', lg: '35px' },
       fontWeight: 600,
       width: '92%',
       minHeight: { xs: 'auto', md: '108px' },
@@ -2445,32 +2445,32 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
       title:
         'How do I maintain the quality of work from a dedicated developer?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Set specific objectives, provide detailed project briefs, and stay in regular communication. You can also review work periodically to confirm it meets your standards.',
     },
     {
       id: 3,
       title: 'Can a dedicated developer work with my existing team?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Yes, eSpark Talent’s dedicated developers can easily collaborate with your team, following your processes and working together to help achieve your goals more efficiently.',
     },
     {
       id: 4,
       title: 'Why should I hire a dedicated developer instead of a team?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'A dedicated developer is ideal for projects that need deep focus and consistent effort. It’s great for long-term work where you need specialized skills but without the overhead of managing a larger team.',
     },
     {
       id: 5,
       title:
         'How do I know if a dedicated developer is a good fit for my project?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Look for developers with relevant experience and skills for your project. You can also ask for previous work samples or references to assess their suitability.',
     },
     {
       id: 6,
       title: 'How much do dedicated developers cost?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        `The cost depends on the developer's experience and the complexity of the project. eSpark Talent offers competitive rates to help you get the right skills at a fair price.`,
     },
   ],
 
@@ -3209,32 +3209,32 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
       id: 2,
       title: 'Can the price change during the project?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Typically, the price stays the same unless there are significant changes to the project scope. If new requirements are added, it could lead to additional costs.',
     },
     {
       id: 3,
       title:
         'How do I make sure the project stays on track with a fixed price?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Having clear milestones and checking in regularly helps keep everything moving forward. eSpark Talent keeps you updated so your project stays on schedule and within the agreed budget.',
     },
     {
       id: 4,
       title: 'What is a Fixed Price Project?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'This model works best for projects with clear goals and well-defined tasks, like building a website or creating an app. eSpark Talent delivers exactly what you need, staying within your budget and time frame.',
     },
     {
       id: 5,
       title: 'What are the benefits of a fixed price model?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'With a fixed price model, you know the total cost in advance, making it easier to budget and plan. It’s perfect for projects with clear requirements and defined outcomes.',
     },
     {
       id: 6,
       title: 'When is the fixed price model ideal for a project?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'This model works best for projects with clear goals and well-defined tasks, like building a website or creating an app. eSpark Talent delivers exactly what you need, staying within your budget and time frame.',
     },
   ],
 
@@ -4099,33 +4099,26 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
       id: 2,
       title: 'Is my data safe with an Offshore Development Center (ODC)?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Yes, eSpark Talent follows strict security measures, like encryption and secure access, to protect your data while the team works on your project.',
     },
     {
       id: 3,
-      title: 'How long does it take to set up an offshore team?',
-      description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
-    },
-    {
-      id: 4,
       title:
-        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
+        'How long does it take to set up an offshore team?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'It usually takes a few weeks to a couple of months to set up an ODC, depending on the project. With proper planning, the process can be sped up.',
     },
     {
       id: 5,
-      title: 'What services does an Offshore Development Center (ODC) provide?',
+      title: 'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'Set clear goals, stay in touch, and track the progress. eSpark Talent backs you to maintain quality by keeping everything on track and making sure the team delivers results that meet your needs.',
     },
     {
       id: 6,
-      title:
-        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
+      title: 'What services does an Offshore Development Center (ODC) provide?',
       description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+        'ODCs can assist with software development, testing, design, IT support, and more, customized to your specific needs.',
     },
   ],
 
@@ -4171,8 +4164,8 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
     cardStyle: {
       width: { xs: '90%', sm: '85%', md: '100%' },
       mx: 'auto',
-      px: 3,
-      py: 3.5,
+      px: { xs: 1.8, md: 2, lg: 3 },
+      py: { xs: 1.8, md: 2, lg: 3 },
       maxWidth: { md: '596px' },
       height: 'auto',
       display: 'flex',
@@ -4328,7 +4321,6 @@ export const ODC_FOUNDATION_DATA = {
     },
   },
 };
-
 export const ODC_SERVICES_DATA = {
   title: 'ODC Services Based on Tech Stack',
   techStack: [
