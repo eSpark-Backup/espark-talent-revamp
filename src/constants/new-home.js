@@ -120,7 +120,7 @@ export const EMPLOYEE_HERO_DATA = {
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
   animatedVideo: '/images/homepage/hero/eSpark-New.webm',
-  btnTitle: `Request Candidate`,
+  btnTitle: `Schedule a Call`,
   btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: (bgImage) => ({

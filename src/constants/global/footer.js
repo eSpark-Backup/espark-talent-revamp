@@ -128,8 +128,8 @@ export const ORGANIZE_TEAM_DATA = {
       width: '95%',
       height: '100%',
       py: { xs: 3, md: 0, lg: 0 },
-      minHeight: { xs: 'auto', md: '350px', lg: '453px' },
-      maxWidth: '1438px',
+      minHeight: { xs: 'auto', md: '350px', lg: '360px' },
+      maxWidth: '1100px',
       backgroundImage: 'url(/images/new-home/organize-team/ok.png)',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -146,13 +146,15 @@ export const ORGANIZE_TEAM_DATA = {
     titleStyle: {
       fontSize: {
         xs: '5.73vw',
-        md: '4.73vw',
-        xl: '86px',
+        md: '4.49vw',
       },
       fontWeight: 500,
       color: '#ffff',
       textAlign: 'center',
       textWrap: { md: 'nowrap' },
+      '@media(min-width:1440px)': {
+        fontSize: '64px',
+      },
     },
     titleAndImagesBoxStyle: {
       display: 'flex',
@@ -164,13 +166,13 @@ export const ORGANIZE_TEAM_DATA = {
     },
     imagesBoxStyle: {
       width: 'auto',
-      maxWidth: { xs: '170px', sm: '210px', md: '230px', lg: '305px' },
+      maxWidth: { xs: '165px', sm: '185px', md: '200px', lg: '229px' },
       maxHeight: '94px',
       border: '1px solid #fff',
       borderRadius: '50px',
       backgroundColor: '#D9D9D95E',
       p: 0.8,
-      px: 1.5,
+      px: 1,
       display: 'flex',
       justifyContent: 'center',
       order: { xs: 1, md: 0 },
@@ -183,10 +185,10 @@ export const ORGANIZE_TEAM_DATA = {
     }),
     textStyle: {
       fontSize: {
-        xs: '13px',
-        sm: '14px',
-        md: '18px',
-        lg: '28px',
+        xs: '12.5px',
+        sm: '14.5px',
+        md: '16px',
+        lg: '21px',
       },
       fontWeight: 400,
       color: '#ffff',
@@ -222,17 +224,17 @@ export const FOOTER_STYLE = {
     width: '100%',
     height: '100%',
     mx: 'auto',
-    maxWidth: { lg: '1450px', xl: '1480px' },
+    maxWidth: { xs: '1080px' },
     maxHeight: { xs: '100%', lg: '380px' },
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: { xs: 'space-between', md: 'center' },
-    px: { xs: 1, md: 2.5 },
+    justifyContent: { xs: 'space-between', md: 'space-between' },
+    px: { xs: 1, md: 0.5 },
     py: { xs: 2.5, lg: 3.5 },
     flexWrap: 'nowrap',
     '@media(min-width:768px) and (max-width: 1399px)': {
-      maxWidth: '1350px',
+      maxWidth: '1080px',
       justifyContent: 'start',
     },
     '@media(min-width:425px) and (max-width: 767px)': {
@@ -247,7 +249,7 @@ export const FOOTER_STYLE = {
   logoSectionBoxStyle: {
     width: {
       xs: '100%',
-      lg: `calc(100% - 800px)`,
+      lg: `calc(100% - 700px)`,
       '@media(min-width:1024px) and (max-width: 1399px)': {
         width: 'calc(100% - 700px)',
       },
@@ -263,7 +265,7 @@ export const FOOTER_STYLE = {
   },
   imageBoxStyle: {
     position: 'relative',
-    width: { lg: '174px' },
+    width: { lg: '135px' },
     height: { lg: '85px' },
     '@media(min-width:768px) and (max-width: 1399px)': {
       width: '154px',
@@ -280,7 +282,7 @@ export const FOOTER_STYLE = {
   },
   imageStyle: { objectFit: 'contain' },
   descriptionStyle: {
-    fontSize: { xs: '8px', sm: '10px', md: '13px', lg: '15px' },
+    fontSize: { xs: '12px', md: '13px' },
     fontWeight: 400,
     lineHeight: { xs: '24px' },
     color: '#FFFFFF',
@@ -289,17 +291,15 @@ export const FOOTER_STYLE = {
     '@media(min-width:768px) and (max-width: 1023px)': {
       pl: 1.6,
       pr: 3,
-      fontSize: '13px',
     },
     '@media(min-width:425px) and (max-width: 767px)': {
       pl: 2,
       pr: 2,
-      fontSize: '13px',
     },
     '@media(min-width:0px) and (max-width: 424px)': {
       pl: 1,
       pr: 1,
-      fontSize: '11px',
+      fontSize: '10px',
     },
   },
   socialMediaIconBoxStyle: {
@@ -332,9 +332,9 @@ export const FOOTER_STYLE = {
     flexWrap: 'wrap',
   },
   pageBoxStyle: (index) => ({
-    width: { lg: index === 2 ? '300px' : '250px' },
+    width: { lg: index === 2 ? '280px' : '200px' },
     '@media(min-width:1024px) and (max-width: 1399px)': {
-      width: index === 2 ? '340px' : '180px',
+      width: index === 2 ? '280px' : '180px',
     },
     '@media(min-width:768px) and (max-width: 1023px)': {
       width: '170px',
@@ -359,18 +359,18 @@ export const FOOTER_STYLE = {
     },
   }),
   lebelStyle: {
-    fontSize: { md: '18px', lg: '24px' },
-    fontWeight: 600,
+    fontSize: { xs: '14px', lg: '18px' },
+    fontWeight: 700,
     color: '#FFFFFF',
-    '@media(min-width:768px) and (max-width: 1023px)': {
-      fontSize: '18px',
-    },
-    '@media(min-width:425px) and (max-width: 767px)': {
-      fontSize: '16px',
-    },
-    '@media(min-width:0px) and (max-width: 424px)': {
-      fontSize: '14px',
-    },
+    // '@media(min-width:768px) and (max-width: 1023px)': {
+    //   fontSize: '18px',
+    // },
+    // '@media(min-width:425px) and (max-width: 767px)': {
+    //   fontSize: '16px',
+    // },
+    // '@media(min-width:0px) and (max-width: 424px)': {
+    //   fontSize: '14px',
+    // },
   },
   ulStyle: { pl: 0, listStyle: 'none', pt: 1 },
   textIconAndValueBoxStyle: {
@@ -403,18 +403,18 @@ export const FOOTER_STYLE = {
   pageLinkIconStyle: { objectFit: 'contain' },
   valueStyle: (_textIndex) => ({
     width: _textIndex === 5 ? 'auto' : 'calc(100% - 25px)',
-    fontSize: { md: '13px', lg: '15px' },
+    fontSize: { xs: '12px', md: '13px' },
     fontWeight: 400,
     color: '#fff',
     mt: _textIndex === 0 ? 0 : 1,
     wordBreak: 'break-word',
     whiteSpace: 'normal',
-    '@media(min-width:768px) and (max-width: 1023px)': {
-      fontSize: '13px',
-    },
-    '@media(min-width:425px) and (max-width: 767px)': {
-      fontSize: '12px',
-    },
+    // '@media(min-width:768px) and (max-width: 1023px)': {
+    //   fontSize: '13px',
+    // },
+    // '@media(min-width:425px) and (max-width: 767px)': {
+    //   fontSize: '12px',
+    // },
     '@media(min-width:0px) and (max-width: 424px)': {
       fontSize: '10px',
     },
@@ -442,16 +442,16 @@ export const FOOTER_STYLE = {
   },
   trustPilotImageStyle: { objectFit: 'contain' },
   pageNameStyle: (_pIndex) => ({
-    fontSize: { md: '13px', lg: '15px' },
+    fontSize: { xs: '12px', lg: '13px' },
     fontWeight: 400,
     color: '#FFFFFF',
     mt: _pIndex === 0 ? 0 : 1,
-    '@media(min-width:768px) and (max-width: 1023px)': {
-      fontSize: '13px',
-    },
-    '@media(min-width:425px) and (max-width: 767px)': {
-      fontSize: '12px',
-    },
+    // '@media(min-width:768px) and (max-width: 1023px)': {
+    //   fontSize: '13px',
+    // },
+    // '@media(min-width:425px) and (max-width: 767px)': {
+    //   fontSize: '12px',
+    // },
     '@media(min-width:0px) and (max-width: 424px)': {
       fontSize: '10px',
     },
