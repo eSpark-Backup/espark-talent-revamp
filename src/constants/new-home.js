@@ -120,7 +120,7 @@ export const EMPLOYEE_HERO_DATA = {
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
   animatedVideo: '/images/homepage/hero/eSpark-New.webm',
-  btnTitle: `Request Candidate`,
+  btnTitle: `Schedule a Call`,
   btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: (bgImage) => ({
@@ -2269,8 +2269,15 @@ export const EXPERT_DEVELOPERS_DATA = {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundSize: '100%',
-      gap: { xs: 4, sm: 6 },
+      gap: { xs: 0.5, md: 6 },
       textAlign: 'left',
+    },
+    top: false,
+    gridStyle: { md: 4.5 },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
     },
     titleAndTextBoxStyle: {
       pt: { xs: 0, md: 0.4, lg: 0 },
@@ -2305,12 +2312,12 @@ export const EXPERT_DEVELOPERS_DATA = {
       height: 'auto',
     },
     cardStyle: {
-      width: { xs: '90%', sm: '100%' },
+      width: { xs: '95%', sm: '100%' },
       mx: 'auto',
       px: 3.5,
       maxWidth: { xs: '350px', md: '480px' },
-      minHeight: { xs: '280px', lg: '315px' },
-      display: 'flex',
+      minHeight: { xs: '335px', lg: '315px' },
+      display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
@@ -2321,6 +2328,9 @@ export const EXPERT_DEVELOPERS_DATA = {
       inset 0px 6.36px 8.48px 0px #ffffff
     `,
       gap: 0.8,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '280px',
+      },
     },
     cardTitleStyle: {
       fontSize: {
@@ -3437,6 +3447,1022 @@ export const PRODUCT_JOURNEY_DATA = {
       fontSize: { xs: '11px', md: '13px' },
       fontWeight: 400,
       color: '#57585C',
+    },
+  },
+};
+
+// offshore-development-center page data
+
+export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
+  title: `Offshore <span style="color: #19B5AD; font-weight: 600">Development</span> Center`,
+  text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
+  buttonText: 'Schedule a Call',
+  link: '/book-a-demo',
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: 'calc(80vh - 127px)',
+      minHeight: '450px',
+      maxHeight: { xs: '450px', md: '600px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      px: 2,
+      py: { xs: 6, md: 8 },
+      backgroundColor: '#F5F5F5',
+      backgroundImage:
+        "url('images/new-home/hire-dedicated-developers/bg.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom',
+      backgroundSize: '100%',
+      gap: 2,
+      textAlign: 'center',
+      '@media(min-width:1921px)': {
+        maxHeight: '650px',
+        py: 8,
+      },
+    },
+    titleStyle: {
+      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      width: '90%',
+      maxWidth: { sm: '420px', md: '620px', lg: '900px' },
+      fontWeight: 600,
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    textStyle: {
+      width: '80%',
+      maxWidth: { xs: '100%', sm: '90%', md: '740px', lg: '840px' },
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+      color: '#111845',
+    },
+    buttonStyle: {
+      mt: 2,
+      width: '65%',
+      maxWidth: '202px',
+      height: { xs: '38px', md: '43px' },
+      background: 'linear-gradient(168deg, #2A3BAB, #111845)',
+      borderRadius: '10px',
+      fontSize: { xs: '14px', md: '16px' },
+      px: 4,
+      py: 1.5,
+      textTransform: 'none',
+      textWrap: 'nowrap',
+    },
+  },
+};
+export const ODC_SOLUTIONS = {
+  title: 'Turn Your Vision into Reality with Our Expert ODC Solutions',
+  description:
+    'We combine innovation, precision, & effective strategies to deliver results that make a lasting impact.',
+  cards: [
+    {
+      title: ' UI/UX Design Services',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
+      description:
+        'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
+    },
+    {
+      title: 'Custom Software Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
+      description:
+        'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
+    },
+    {
+      title: 'Mobile App Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
+      description:
+        'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
+    },
+    {
+      title: 'Embedded Systems Development',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
+      description:
+        'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
+    },
+    {
+      title: 'Mechanical Design and Engineering',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
+      description:
+        'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
+    },
+    {
+      title: 'Digital Marketing & Growth Support',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
+      description:
+        'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
+    },
+    {
+      title: 'Quality Assurance and Testing',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/quality-assurance.png',
+      description:
+        'We catch problems before your users do. Our QA experts perform detailed testing across platforms and devices to ensure your software is reliable, secure, and ready for real-world use.',
+    },
+    {
+      title: 'Dedicated Development Teams',
+      image:
+        '/images/new-home/fixed-price-projects/product-journey/dedicated-development-teams.png',
+      description:
+        'Build your own team of skilled developers fully aligned with your project needs. We carefully assemble teams that act as a true extension of your in-house staff, ensuring smooth collaboration and faster delivery.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '90%',
+      mx: 'auto',
+      maxWidth: '1440px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: { xs: 0, md: 4 },
+    },
+    contentBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 1,
+      textAlign: 'center',
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    descriptionStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
+      fontWeight: 400,
+      width: { xs: '80%', md: '75%' },
+      mx: 'auto',
+      color: '#111845',
+    },
+    slideStyle: {
+      width: '90%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
+    },
+    cardStyle: {
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: { xs: 'center', md: 'flex-start' },
+      width: '100%',
+      maxWidth: '309px',
+      minHeight: { xs: '235px', md: '240px', lg: '230px' },
+      backgroundColor: '#E8F4FD',
+      boxShadow: '0px 3.7px 6.96px rgba(135, 128, 128, 0.29)',
+      border: '1px #11184530',
+      borderRadius: '6px',
+      textAlign: 'center',
+      py: 1.5,
+      px: 2,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '215px',
+      },
+    },
+    titleAndDescripitonBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 0.8,
+      mt: 0.8,
+    },
+    imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
+    cardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#111845' },
+    cardDescriptionStyle: {
+      fontSize: { xs: '11px', md: '13px' },
+      fontWeight: 400,
+      color: '#57585C',
+    },
+  },
+};
+export const DOORSTEP_DATA = {
+  subTitle: 'Our Benefits',
+  title: 'Bringing Global Expertise to Your Doorstep',
+  image: '/images/new-home/offshore-development-center/doorstep/line.png',
+  leftDesignImage:
+    '/images/new-home/offshore-development-center/doorstep/left-design.png',
+  rightDesignImage:
+    '/images/new-home/offshore-development-center/doorstep/right-design.png',
+  expertise: [
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Cost-Effective Development',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Scalable and Flexible',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      text: 'Global Talent Access Solutions',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Focus on Core Business Activities',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Scalable and Flexible',
+    },
+    {
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
+      text: 'Enhanced Quality & Productivity',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1440px',
+      backgroundColor: '#edeef5',
+      borderRadius: { xs: '30px', lg: '50px' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      py: { xs: 6, lg: 7 },
+      gap: 5,
+    },
+    subTitleAndTitleBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    subTitleStyle: {
+      fontSize: { xs: '22px', sm: '24px', md: '26px', lg: '28px' },
+      fontWeight: 400,
+      color: '#111845',
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '31px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+      width: { xs: '75%', md: '100%' },
+    },
+    parentBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: { md: 1 },
+    },
+    leftDesignStyle: {
+      width: { md: '17.1%', lg: '200px' },
+      height: { xs: '302px', lg: 'auto' },
+      '@media(max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+    rightDesignStyle: {
+      width: { md: '17.1%', lg: '200px' },
+      height: { xs: '302px', lg: 'auto' },
+      '@media(max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+    expertiseAndLogoBoxStyle: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      position: 'relative',
+      '@media(max-width:768px)': {
+        flexDirection: 'column',
+        gap: 3.5,
+      },
+    },
+    expertiseBoxStyle: {
+      width: { xs: '75%', md: 'calc(61% - 217px)', lg: 'calc(62% - 237px)' },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: { xs: 3, md: 7.5, lg: 9.5 },
+      '@media(min-width: 769px) and (max-width:1023px)': {
+        gap: 6,
+      },
+    },
+    expertiseCardStyle: {
+      width: '100%',
+      minHeight: { xs: '72px', md: '78px', lg: '84px' },
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '23px',
+      boxShadow: '-13px 4px 16.1px rgba(24, 84, 153, 0.21)',
+      backgroundColor: '#EFEFEF',
+      position: 'relative',
+      zIndex: 1,
+      p: 1,
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '23px',
+        boxShadow: 'inset 0px -3px 1.7px rgba(0, 0, 0, 0.05)',
+        pointerEvents: 'none',
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '23px',
+        boxShadow: 'inset 0px 3px 4px rgba(255, 255, 255, 1)',
+        pointerEvents: 'none',
+      },
+    },
+    expertiseTextBoxStyle: {
+      width: '99%',
+      display: 'flex',
+      justifyContent: { xs: 'space-evenly', md: 'space-between' },
+      alignItems: 'center',
+    },
+    leftExpertiseFirstIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      '@media(min-width: 769px) and (max-width:1023px)': {
+        display: 'none',
+      },
+    },
+    expertiseTextStyle: {
+      width: { xs: 'calc(80% - 28px)', lg: 'calc(100% - 64px)' },
+      fontWeight: 500,
+      color: '#111845',
+      textAlign: 'center',
+      fontSize: { xs: 'clamp(14px, 1.3vw, 21px)' },
+      '@media(max-width:1023px)': {
+        width: 'calc(90% - 28px)',
+      },
+    },
+    leftExpertiseLastIcon: {
+      width: { md: '28px', lg: '31px' },
+      display: { xs: 'none', md: 'flex' },
+    },
+    firstVectorStyle: {
+      width: { xs: '100%', md: '60%', lg: '40%' },
+      height: { xs: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      zIndex: 0,
+    },
+    secondVectorStyle: {
+      width: { xs: '', md: '40%', lg: '46%' },
+      height: { md: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: {
+        md: 'translate(-50%, -50%) rotate(48deg)',
+        lg: 'translate(-50%, -50%) rotate(53deg)',
+      }, // <-- added rotation
+      transformOrigin: 'center',
+      zIndex: 0,
+      '@media(min-width: 1200px) and (max-width:1299px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(47deg)',
+      },
+      '@media(min-width: 1130px) and (max-width:1199px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(45deg)',
+      },
+      '@media(min-width: 1024px) and (max-width:1129px)': {
+        width: '60%',
+        transform: 'translate(-50%, -50%) rotate(44deg)',
+      },
+    },
+    thirdVectorStyle: {
+      width: { xs: '', md: '40%', lg: '46%' },
+      height: { md: '8.2px', lg: '10px' },
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: {
+        md: 'translate(-50%, -50%) rotate(132deg)',
+        lg: 'translate(-50%, -50%) rotate(127deg)',
+      },
+      transformOrigin: 'center',
+      zIndex: 0,
+      '@media(min-width: 1200px) and (max-width:1299px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(133deg)',
+      },
+      '@media(min-width: 1130px) and (max-width:1199px)': {
+        width: '50%',
+        transform: 'translate(-50%, -50%) rotate(134deg)',
+      },
+      '@media(min-width: 1024px) and (max-width:1129px)': {
+        width: '60%',
+        transform: 'translate(-50%, -50%) rotate(136deg)',
+      },
+    },
+    logoOuterBoxStyle: {
+      width: { xs: '180px', md: '227px', lg: '237px' },
+      height: { xs: '180px', md: '227px', lg: '237px' },
+      borderRadius: '100%',
+      backgroundColor: '#edeef5',
+      border: '1px solid rgba(70, 70, 72, 0.08)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'relative',
+      zIndex: 1,
+      '@media(min-width:769px) and (max-width:1023px)': {
+        width: '190px',
+        height: '190px',
+      },
+    },
+    logoInnerBoxStyle: {
+      width: '83%',
+      height: '83%',
+      borderRadius: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#EFEFEF',
+      position: 'relative',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '100%',
+        boxShadow: 'inset 0px -3px 1.7px rgba(0, 0, 0, 0.05)',
+        pointerEvents: 'none',
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        borderRadius: '100%',
+        boxShadow: 'inset 0px 3px 4px rgba(255, 255, 255, 1)',
+        pointerEvents: 'none',
+      },
+    },
+    rightExpertiseFirstIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      display: { xs: 'none', md: 'flex' },
+    },
+    rightExpertiseLastIconStyle: {
+      width: { md: '28px', lg: '31px' },
+      '@media(min-width:769px) and (max-width: 1023px)': {
+        display: 'none',
+      },
+    },
+  },
+};
+export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
+  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
+  title: 'Why Choose an Offshore Development Center?',
+  cards: [
+    {
+      id: 1,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/accelerate.png',
+      title: 'Accelerate Your Business Growth',
+      description:
+        'An Offshore Development Center (ODC) is an effective way to scale your operations rapidly. With access to our resources, you can easily expand your team and capabilities to keep up with the growing demands of your business.',
+    },
+    {
+      id: 2,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/unlock.png',
+      title: 'Unlock a Global Talent Pool',
+      description:
+        'Our ODC services connect you to a diverse pool of global talent. This helps you bring in specialized skills and fresh perspectives essential for innovative and high-quality solutions.',
+    },
+    {
+      id: 3,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/maximize.png',
+      title: 'Maximize Cost Efficiency',
+      description:
+        'Implementing an ODC reduces operational costs significantly. Our model ensures you receive top-tier development services at a fraction of the cost of expanding your in-house team.',
+    },
+    {
+      id: 4,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/manage.png',
+      title: 'Manage Large-Scale Projects',
+      description:
+        'When it comes to handling complex, large-scale projects, an ODC provides the necessary bandwidth and expertise. We ensure these projects are executed with precision and the attention to detail they deserve.',
+    },
+    {
+      id: 5,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/speed-up.png',
+      title: 'Speed Up Your Time-to-Market',
+      description:
+        'Our ODC helps accelerate your development cycle. With streamlined project management and quick turnarounds, we reduce your product’s time-to-market and help you stay ahead of the competition.',
+    },
+    {
+      id: 6,
+      image:
+        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/effortless.png',
+      title: 'Effortless Integration with Existing Systems',
+      description:
+        'We specialize in seamlessly integrating new developments with your existing systems, ensuring smooth transitions and uninterrupted operations.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 1, md: 6 },
+      textAlign: 'left',
+      px: { xs: 2.5, lg: 0 },
+    },
+    top: true,
+    gridStyle: { md: 'auto' },
+    slideStyle: {
+      width: '95%',
+      maxWidth: '350px',
+      paddingBottom: '20px',
+    },
+    titleAndTextBoxStyle: {
+      pt: { xs: 0, md: 0.4, lg: 0 },
+      width: {
+        xs: 'calc(100% - 27px)',
+        sm: 'calc(100% - 37px)',
+        md: 'calc(100% - 47px)',
+        lg: 'calc(100% - 57px)',
+      },
+    },
+    titleStyle: {
+      width: { xs: '85%', lg: '100%' },
+      maxWidth: { md: '700px', lg: '1000px' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+    },
+    iconStyle: {
+      position: 'relative',
+      width: { xs: '27px', sm: '37px', md: '47px', lg: '57px' },
+      height: 'auto',
+    },
+    textStyle: {
+      color: '#111845',
+      fontSize: { xs: '13px', sm: '15px', md: '17px', lg: '19px' },
+      fontWeight: 400,
+      width: { xs: '85%', lg: 'auto' },
+    },
+    imageStyle: {
+      width: '100%',
+      maxWidth: { xs: '65px', md: '75px', lg: '127px' },
+      height: 'auto',
+    },
+    cardStyle: {
+      width: { xs: '100%', sm: '100%' },
+      mx: 'auto',
+      py: 3.5,
+      px: 3,
+      maxWidth: { xs: '342px', md: '349px' },
+      minHeight: { xs: '375px', sm: '300px', md: '350px', lg: '472px' },
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      border: '1px solid rgba(214, 214, 215, 1)',
+      justifyContent: { xs: 'center', md: 'space-between' },
+      backgroundColor: '#fff',
+      borderRadius: '20px',
+      boxShadow: `
+      27.55px 8.48px 34.12px 0px rgba(24, 84, 153, 0.21),
+      inset 0px 6.36px 8.48px 0px #ffffff
+    `,
+      gap: 2,
+      '@media(min-width: 400px) and (max-width: 481px)': {
+        minHeight: '300px',
+      },
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '18px',
+        md: '25px',
+        lg: '29px',
+      },
+      fontWeight: 500,
+      // textAlign: 'center',
+      color: '#111845',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        lg: '15px',
+      },
+      // textAlign: 'center',
+      lineHeight: 1.6,
+      color: '#111845',
+    },
+  },
+};
+export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
+  title: 'Frequently Asked Questions',
+  cards: [
+    {
+      id: 1,
+      title: 'What is an Offshore Development Center (ODC)?',
+      description:
+        'An ODC is a remote team working from another country to handle tasks like coding, testing, and support. eSpark Talent helps you build a team that works just like your in-house staff, offering skilled professionals at affordable rates.',
+    },
+    {
+      id: 2,
+      title: 'Is my data safe with an Offshore Development Center (ODC)?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 3,
+      title: 'How long does it take to set up an offshore team?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 4,
+      title:
+        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 5,
+      title: 'What services does an Offshore Development Center (ODC) provide?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+    {
+      id: 6,
+      title:
+        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
+      description:
+        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundSize: '100%',
+      gap: { xs: 3, sm: 4 },
+    },
+    titleStyle: {
+      width: { xs: '90%', lg: '100%' },
+      maxWidth: { md: '700px', lg: 'auto' },
+      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+    },
+    buttonStyle: {
+      width: { xs: '28px', md: '31px', lg: '41px' },
+      height: { xs: '30px', md: '31px', lg: '41px' },
+      minWidth: { xs: '5%', md: 'auto' },
+      padding: 0,
+      backgroundColor: '#F7F7FF',
+      borderRadius: '8px',
+      fontSize: { xs: '20px', md: '23px', lg: '35px' },
+      color: '#6F6C90',
+      textTransform: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 400,
+      '&:hover': {
+        backgroundColor: '#2870C3',
+        color: '#fff',
+      },
+    },
+    cardStyle: {
+      width: { xs: '90%', sm: '85%', md: '100%' },
+      mx: 'auto',
+      px: 3,
+      py: 3.5,
+      maxWidth: { md: '596px' },
+      height: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      borderRadius: '16px',
+      boxShadow: `
+    0px 5px 16px rgba(8, 15, 52, 0.06),
+    inset 0px 6.36px 8.48px 0px #ffffff
+  `,
+    },
+    cardTitleStyle: {
+      fontSize: {
+        xs: '15px',
+        md: '17px',
+        lg: '22px',
+      },
+      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      fontWeight: 500,
+      color: '#170F49',
+    },
+    cardDescriptionStyle: {
+      fontSize: {
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '18px',
+      },
+
+      lineHeight: { xs: '23px', md: '30px' },
+      color: '#6F6C90',
+      width: '99%',
+    },
+  },
+};
+export const ODC_FOUNDATION_DATA = {
+  title: 'Building the ODC Foundation for Your Growth',
+  text: `Our approach to creating Offshore Development Centers is built around precision and efficiency. Here's our five-step process to ensure we deliver a high-impact ODC solution tailored to your business:`,
+  steps: [
+    {
+      title: 'Step 1',
+      image:
+        '/images/new-home/offshore-development-center/odc-foundation/step-1.png',
+      description: 'Initial Consultation & Needs Assessment',
+      vector:
+        '/images/new-home/offshore-development-center/odc-foundation/down.png',
+    },
+    {
+      title: 'Step 2',
+      image:
+        '/images/new-home/offshore-development-center/odc-foundation/step-2.png',
+      description: 'Custom Team Assembly & Onboarding',
+      vector:
+        '/images/new-home/offshore-development-center/odc-foundation/up.png',
+    },
+    {
+      title: 'Step 3',
+      image:
+        '/images/new-home/offshore-development-center/odc-foundation/step-3.png',
+      description: 'Infrastructure & Workflow Setup',
+      vector:
+        '/images/new-home/offshore-development-center/odc-foundation/down.png',
+    },
+    {
+      title: 'Step 4',
+      image:
+        '/images/new-home/offshore-development-center/odc-foundation/step-4.png',
+      description: 'Agile Development & Continuous Monitoring',
+      vector:
+        '/images/new-home/offshore-development-center/odc-foundation/up.png',
+    },
+    {
+      title: 'Step 5',
+      image:
+        '/images/new-home/offshore-development-center/odc-foundation/step-5.png',
+      description: 'Ongoing Support, Scaling & Optimization',
+      vector: '',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1440px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#edeef5',
+      borderRadius: { xs: '30px', lg: '50px' },
+      gap: { xs: 0, md: 5 },
+      py: 6,
+      px: 2,
+    },
+    containerStyle: {
+      gap: { xs: 1, md: 5 },
+      px: 2.5,
+      maxWidth: { md: '960px', lg: '100%' },
+    },
+    subTitleAndTitleBoxStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 0.8,
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '31px', lg: '40px' },
+      fontWeight: 600,
+      color: '#222324',
+      textAlign: 'center',
+      width: { xs: '75%', md: '90%', lg: '100%' },
+    },
+    textStyle: {
+      fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
+      fontWeight: 400,
+      color: '#111845',
+      width: { xs: '85%', lg: '100%' },
+      maxWidth: { md: '900px', lg: '1070px' },
+      textAlign: 'center',
+    },
+    vectorStyle: {
+      width: { xs: '80px', sm: '90px', md: 'auto', lg: 'auto' },
+      position: 'absolute',
+    },
+    slideStyle: {
+      width: '95%',
+      maxWidth: '210px',
+      paddingBottom: '20px',
+    },
+    stepStyle: {
+      maxWidth: '205px',
+      display: { xs: 'none', md: 'flex' },
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: { xs: 3, md: 4 },
+    },
+    stepTextStyle: {
+      fontSize: { xs: '16px', sm: '19px', md: '22px', lg: '25px' },
+      fontWeight: 500,
+      color: '#111845',
+    },
+    stepIconStyle: {
+      width: { xs: '90px', sm: '100px', md: '125px', lg: '125px' },
+    },
+    stepDescriptionStyle: {
+      fontSize: { xs: '14px', md: '15px', lg: '17px' },
+      fontWeight: 400,
+      color: '#111845',
+      textAlign: 'center',
+    },
+  },
+};
+
+export const ODC_SERVICES_DATA = {
+  title: 'ODC Services Based on Tech Stack',
+  techStack: [
+    {
+      title: 'Android',
+      icon: '/images/new-home/offshore-development-center/services-based/icon1.png',
+    },
+    {
+      title: 'Angular',
+      icon: '/images/new-home/offshore-development-center/services-based/icon2.png',
+    },
+    {
+      title: 'Arduino',
+      icon: '/images/new-home/offshore-development-center/services-based/icon3.png',
+    },
+    {
+      title: 'Arc Linux',
+      icon: '/images/new-home/offshore-development-center/services-based/icon4.png',
+    },
+    {
+      title: 'Atom',
+      icon: '/images/new-home/offshore-development-center/services-based/icon5.png',
+    },
+    {
+      title: 'Apache Kafka',
+      icon: '/images/new-home/offshore-development-center/services-based/icon6.png',
+    },
+    {
+      title: 'MySQL',
+      icon: '/images/new-home/offshore-development-center/services-based/icon7.png',
+    },
+    {
+      title: 'Dot Net Core',
+      icon: '/images/new-home/offshore-development-center/services-based/icon8.png',
+    },
+    {
+      title: 'Figma',
+      icon: '/images/new-home/offshore-development-center/services-based/icon9.png',
+    },
+    {
+      title: 'Golang',
+      icon: '/images/new-home/offshore-development-center/services-based/icon10.png',
+    },
+    {
+      title: 'Java',
+      icon: '/images/new-home/offshore-development-center/services-based/icon11.png',
+    },
+    {
+      title: 'JavaScript',
+      icon: '/images/new-home/offshore-development-center/services-based/icon12.png',
+    },
+    {
+      title: 'C++',
+      icon: '/images/new-home/offshore-development-center/services-based/icon13.png',
+    },
+    {
+      title: 'C#',
+      icon: '/images/new-home/offshore-development-center/services-based/icon14.png',
+    },
+    {
+      title: 'Django',
+      icon: '/images/new-home/offshore-development-center/services-based/icon15.png',
+    },
+    {
+      title: 'Python',
+      icon: '/images/new-home/offshore-development-center/services-based/icon16.png',
+    },
+    {
+      title: 'React',
+      icon: '/images/new-home/offshore-development-center/services-based/icon17.png',
+    },
+    {
+      title: 'Raspberry Pi',
+      icon: '/images/new-home/offshore-development-center/services-based/icon18.png',
+    },
+    {
+      title: 'Salesforce',
+      icon: '/images/new-home/offshore-development-center/services-based/icon19.png',
+    },
+    {
+      title: 'Vue.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon20.png',
+    },
+    {
+      title: 'WordPress',
+      icon: '/images/new-home/offshore-development-center/services-based/icon21.png',
+    },
+    {
+      title: 'Next.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon22.png',
+    },
+    {
+      title: 'Blender',
+      icon: '/images/new-home/offshore-development-center/services-based/icon23.png',
+    },
+    {
+      title: 'Node.js',
+      icon: '/images/new-home/offshore-development-center/services-based/icon24.png',
+    },
+    {
+      title: 'Laravel',
+      icon: '/images/new-home/offshore-development-center/services-based/icon25.png',
+    },
+  ],
+
+  // styles
+  styles: {
+    mainBoxStyle: {
+      mx: 'auto',
+      width: '100%',
+      maxWidth: '1100px',
+      justifyContent: 'center',
+      gap: { xs: 3, md: 5 },
+      px: { xs: 1, sm: 3 },
+    },
+    titleStyle: {
+      fontSize: { xs: '23px', sm: '29px', md: '35px', lg: '40px' },
+      fontWeight: 600,
+      pb: 5,
+      mx: 'auto',
+      width: { xs: '80%', lg: '100%' },
+      lineHeight: 1.2,
+      color: '#111845',
+    },
+    imageTitleStyle: {
+      fontSize: { xs: '14.5px', md: '16px' },
+      fontWeight: 500,
+      color: 'rgba(17, 24, 69, 1)',
+      mt: 0.5,
+    },
+    imageStyle: {
+      height: 'auto',
+      width: { xs: '45%', lg: 'auto' },
+      objectFit: 'contain',
     },
   },
 };

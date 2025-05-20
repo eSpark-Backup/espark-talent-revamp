@@ -1,11 +1,15 @@
+'use client';
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-
+import FlaxibleSlider from './FlexibleSlider';
 const ExpertDeveloper = ({ data }) => {
   const { title, text, cards, styles, icon } = data || {};
 
   const {
+    top,
     mainBoxStyle,
+    gridStyle,
+    slideStyle,
     cardDescriptionStyle,
     cardStyle,
     cardTitleStyle,
@@ -16,8 +20,19 @@ const ExpertDeveloper = ({ data }) => {
     titleAndTextBoxStyle,
   } = styles || {};
 
+  const ODCCard = ({ title, image, description, extraSx = {} }) => (
+    <Grid xs={12} sm={12} md={gridStyle?.md}>
+      <Box sx={{ ...cardStyle, ...extraSx }}>
+        {top ? <Typography sx={cardTitleStyle}>{title}</Typography> : null}
+        <Box component={'img'} src={image} sx={imageStyle} />
+        {top ? null : <Typography sx={cardTitleStyle}>{title}</Typography>}
+        <Typography sx={cardDescriptionStyle}>{description}</Typography>
+      </Box>
+    </Grid>
+  );
+
   return (
-    <Box sx={mainBoxStyle}>
+    <Box sx={mainBoxStyle} id="pricing-difference">
       <Box
         sx={{
           width: '90%',
@@ -34,17 +49,33 @@ const ExpertDeveloper = ({ data }) => {
           <Typography sx={textStyle}>{text}</Typography>
         </Box>
       </Box>
-
-      <Grid container justifyContent={'center'} maxWidth={'1300px'} gap={2.8}>
+      <Grid
+        container
+        justifyContent={'center'}
+        maxWidth={'1300px'}
+        sx={{ gap: { md: 2.8 } }}
+      >
         {cards?.map(({ title, image, description }, index) => (
-          <Grid xs={12} sm={12} md={4.5} key={index}>
-            <Box sx={cardStyle}>
-              <Box component={'img'} src={image} sx={imageStyle} />
-              <Typography sx={cardTitleStyle}>{title}</Typography>
-              <Typography sx={cardDescriptionStyle}>{description}</Typography>
-            </Box>
-          </Grid>
+          <ODCCard
+            key={index}
+            title={title}
+            image={image}
+            description={description}
+          />
         ))}
+        <FlaxibleSlider
+          data={cards}
+          isDisplay={true}
+          slideStyle={slideStyle}
+          card={(title, image, description) => (
+            <ODCCard
+              image={image}
+              title={title}
+              description={description}
+              extraSx={{ display: { xs: 'flex', md: 'none' } }}
+            />
+          )}
+        />
       </Grid>
     </Box>
   );

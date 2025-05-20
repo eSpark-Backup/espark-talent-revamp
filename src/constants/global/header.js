@@ -1,6 +1,6 @@
 export const HIRE_A_TALENT = 'Services';
 export const BOOK_A_DEMO = 'Book a Demo';
-export const Request_Candidate = 'Request Candidate';
+export const Request_Candidate = 'Schedule a Call';
 export const HIRE_A_TALENT_LINK = '/book-a-demo';
 export const EXCLUDED_PATHS = [
   '/book-a-demo',
@@ -58,7 +58,7 @@ export const NAVBAR_STYLE = {
       ml: 0,
       mr: 0.25,
       '@media(min-width: 1024px) and (max-width:1249px)': {
-        fontSize: '12px',
+        fontSize: '13px',
       },
       '@media(min-width: 1250px) and (max-width:1399px)': {
         fontSize: '16px',
@@ -206,9 +206,14 @@ export const NAVBAR_STYLE = {
       width: '100%',
     },
     navbarItemBoxStyle: {
+      width: '100%',
       display: 'flex',
       alignItems: 'center',
-      gap: 3,
+      justifyContent: 'space-between',
+      mr: 11,
+      '@media(min-width: 1024px) and (max-width: 1399px)': {
+        mr: 7,
+      },
     },
     linkBoxStyle: {
       display: 'flex',
@@ -237,7 +242,7 @@ export const NAVBAR_STYLE = {
       },
     },
     buttonStyle: {
-      width: '246px',
+      width: '238px',
       height: '44px',
       background: '#029894',
       justifyContent: 'space-between',
