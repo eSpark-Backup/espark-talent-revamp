@@ -2469,8 +2469,7 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
     {
       id: 6,
       title: 'How much do dedicated developers cost?',
-      description:
-        `The cost depends on the developer's experience and the complexity of the project. eSpark Talent offers competitive rates to help you get the right skills at a fair price.`,
+      description: `The cost depends on the developer's experience and the complexity of the project. eSpark Talent offers competitive rates to help you get the right skills at a fair price.`,
     },
   ],
 
@@ -4103,22 +4102,29 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
     },
     {
       id: 3,
-      title:
-        'How long does it take to set up an offshore team?',
+      title: 'How long does it take to set up an offshore team?',
       description:
         'It usually takes a few weeks to a couple of months to set up an ODC, depending on the project. With proper planning, the process can be sped up.',
     },
     {
-      id: 5,
-      title: 'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
+      id: 4,
+      title:
+        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
       description:
         'Set clear goals, stay in touch, and track the progress. eSpark Talent backs you to maintain quality by keeping everything on track and making sure the team delivers results that meet your needs.',
     },
     {
-      id: 6,
+      id: 5,
       title: 'What services does an Offshore Development Center (ODC) provide?',
       description:
         'ODCs can assist with software development, testing, design, IT support, and more, customized to your specific needs.',
+    },
+    {
+      id: 6,
+      title:
+        'What are the benefits of choosing an Offshore Development Center (ODC)?',
+      description:
+        'An ODC lets you cut costs, work with skilled professionals from around the world, and get your projects done faster, all while keeping control over the work.',
     },
   ],
 
