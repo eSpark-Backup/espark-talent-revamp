@@ -207,8 +207,13 @@ export const ORGANIZE_TEAM_DATA = {
       backgroundColor: '#001C63',
       color: '#fff',
       borderRadius: '14px',
+      transition: 'all 0.3s ease-in-out',
       '&:hover': {
         backgroundColor: '#001C63',
+        boxShadow: `
+            0 4px 12px rgba(0, 0, 0, 0.3),         /* outer shadow */
+            inset -2px 2.5px 5px 2px rgba(27, 232, 208, 1)  /* inner shadow */
+          `,
       },
     },
   },
@@ -337,7 +342,7 @@ export const FOOTER_STYLE = {
       width: index === 2 ? '280px' : '180px',
     },
     '@media(min-width:768px) and (max-width: 1023px)': {
-      width: '170px',
+      width: index === 2 ? '190px' : '150px',
     },
     '@media(min-width:530px) and (max-width: 767px)': {
       width: index === 2 ? '40%' : '30%',
@@ -354,6 +359,7 @@ export const FOOTER_STYLE = {
   }),
   labelAndUlBoxStyle: (mpIndex) => ({
     mt: mpIndex === 0 ? 0 : 2,
+    minHeight: '110px',
     '@media(max-width: 767px)': {
       my: 1,
     },
@@ -406,15 +412,18 @@ export const FOOTER_STYLE = {
     fontSize: { xs: '12px', md: '13px' },
     fontWeight: 400,
     color: '#fff',
-    mt: _textIndex === 0 ? 0 : 1,
+    mt: {
+      xs: _textIndex === 0 ? 0 : _textIndex === 2 ? 3 : 1,
+      md: _textIndex === 0 ? 0 : _textIndex === 2 ? 5.5 : 1,
+    },
     wordBreak: 'break-word',
     whiteSpace: 'normal',
-    // '@media(min-width:768px) and (max-width: 1023px)': {
-    //   fontSize: '13px',
-    // },
-    // '@media(min-width:425px) and (max-width: 767px)': {
-    //   fontSize: '12px',
-    // },
+    '@media(min-width:768px) and (max-width: 1023px)': {
+      mt: _textIndex === 0 ? 0 : _textIndex === 2 ? 1.5 : 1,
+    },
+    '@media(min-width:530px) and (max-width: 767px)': {
+      mt: _textIndex === 0 ? 0 : _textIndex === 2 ? 3 : 1,
+    },
     '@media(min-width:0px) and (max-width: 424px)': {
       fontSize: '10px',
     },

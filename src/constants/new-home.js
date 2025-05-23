@@ -563,7 +563,7 @@ export const HIRING_DATA = {
   image: '/images/new-home/flexible-models/underline.png',
   items: [
     {
-      title: `Hire Dedicated Developers`,
+      title: `Hire Dedicated<br />Developers`,
       buttonText: 'Find Your Developer',
       link: '/hire-dedicated-developers',
       points: [
@@ -573,7 +573,7 @@ export const HIRING_DATA = {
       ],
     },
     {
-      title: `Offshore Development Center`,
+      title: `Offshore<br />Development Center`,
       buttonText: 'Explore ODC Options',
       link: '/offshore-development-center',
       points: [
@@ -589,7 +589,7 @@ export const HIRING_DATA = {
       ],
     },
     {
-      title: `Fixed Price Projects`,
+      title: `Fixed Price<br />Projects`,
       buttonText: 'Start Your Project',
       link: '/fixed-price-projects',
       points: [
@@ -624,49 +624,60 @@ export const HIRING_DATA = {
     },
     buttonBoxStyle: {
       ml: 1.5,
-      width: { xs: '15px', sm: '21px', md: '25px', lg: '27px' },
+      width: { xs: '15px', sm: '19px', md: '23px', xl: '27px' },
     },
     buttonStyle: {
       width: '100%',
-      height: { xs: '49px', sm: '65px', lg: '89px' },
+      height: { xs: '45px', sm: '55px', lg: '70px', xl: '89px' },
       color: '#fff',
       backgroundColor: '#09114A',
       px: 1,
       borderRadius: '14px',
-      fontSize: { xs: '14px', sm: '18px', lg: '26px' },
+      fontSize: { xs: '14px', sm: '18px', lg: '22px', xl: '26px' },
       textWrap: 'nowrap',
+      position: 'relative',
+      bottom: 0,
     },
     cardStyle: {
-      display: 'flex',
-      width: { xs: '75%', sm: '82%', lg: '95%' },
+      width: '100%',
       height: '100%',
-      flexDirection: 'column',
-      justifyContent: 'space-evenly',
-      maxWidth: { xs: '380px', md: '482px' },
-      minHeight: { xs: '300px', sm: '400px', md: '460px' },
-      border: '1px solid #2870C380',
       backgroundColor: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      maxWidth: { xs: '380px', md: '482px' },
+      minHeight: { xs: '260px', sm: '270px', lg: '440px', xl: '490px' },
       borderRadius: '17.7px',
-      p: 2,
-      px: { xs: 2, sm: 4 },
+      border: '1px solid #2870C380',
+      px: { xs: 2, sm: 3 },
+      py: { xs: 2, sm: 3 },
+      '@media(min-width:1024px) and (max-width:1399px)': {
+        minHeight: 'clamp(340px, 31vw, 410px)',
+      },
     },
     cardHeaderStyle: {
       color: '#111845',
-      fontSize: { xs: '24px', sm: '26px', md: '29px', lg: '35px' },
+      fontSize: 'clamp(22px, 2.4vw, 36px)',
       fontWeight: 600,
-      width: '92%',
-      minHeight: { xs: 'auto', md: '108px' },
+      width: '100%',
+      minHeight: { xs: 'auto', lg: '108px' },
+      '@media(min-width:1022px) and (max-width: 1399px)': {
+        minHeight: 'clamp(80px, 1.9vw, 108px)',
+      },
     },
-    ulStyle: { pl: '20px', minHeight: { xs: 'auto', md: '187px' } },
+    ulStyle: {
+      pl: '20px',
+    },
     listStyle: {
       color: '#111845',
       maxWidth: '300px',
-      fontSize: { xs: '16px', sm: '19px', md: '21px', lg: '25px' },
+      fontSize: 'clamp(17px, 1.8vw, 25px)',
       fontWeight: 500,
     },
     cardImageStyle: {
       width: { xs: '55px', sm: '75px', lg: '85px' },
       height: 'auto',
+      mb: 0.5,
     },
   },
 };
@@ -1079,10 +1090,6 @@ export const POWER_PROJECT_DATA = {
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
         src: 'images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
@@ -1111,14 +1118,6 @@ export const POWER_PROJECT_DATA = {
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
         src: 'images/new-home/power-projects/html.png',
         text: 'HTML',
       },
@@ -1133,10 +1132,6 @@ export const POWER_PROJECT_DATA = {
       {
         src: 'images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
       },
       {
         src: 'images/new-home/power-projects/css.png',
@@ -1206,10 +1201,6 @@ export const POWER_PROJECT_DATA = {
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
         src: 'images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
@@ -1238,14 +1229,6 @@ export const POWER_PROJECT_DATA = {
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
         src: 'images/new-home/power-projects/html.png',
         text: 'HTML',
       },
@@ -1260,10 +1243,6 @@ export const POWER_PROJECT_DATA = {
       {
         src: 'images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
       },
       {
         src: 'images/new-home/power-projects/css.png',
@@ -1333,10 +1312,6 @@ export const POWER_PROJECT_DATA = {
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
         src: 'images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
@@ -1365,14 +1340,6 @@ export const POWER_PROJECT_DATA = {
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
         src: 'images/new-home/power-projects/html.png',
         text: 'HTML',
       },
@@ -1387,10 +1354,6 @@ export const POWER_PROJECT_DATA = {
       {
         src: 'images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
       },
       {
         src: 'images/new-home/power-projects/css.png',
@@ -2039,7 +2002,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
       },
     },
     titleStyle: {
-      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
+      fontSize: { xs: '23px', sm: '32px', md: '54px', lg: '74px' },
       width: '90%',
       maxWidth: { sm: '420px', md: '620px' },
       fontWeight: 600,
@@ -2047,7 +2010,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
       color: '#111845',
     },
     textStyle: {
-      width: '80%',
+      width: { xs: '90%', sm: '100%' },
       maxWidth: { xs: '100%', sm: '90%', md: '850px', lg: '1080px' },
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
       color: '#111845',
@@ -2105,13 +2068,13 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     },
     titleStyle: {
       width: '90%',
-      fontSize: { xs: '23px', sm: '28px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
     },
     textStyle: {
       color: '#111845',
-      fontSize: { xs: '14px', sm: '17px', md: '21px', lg: '28px' },
+      fontSize: { xs: '13px', sm: '15px', md: '19px', lg: '28px' },
       fontWeight: 400,
       maxWidth: { sm: '480px', md: '800px', lg: '1080px' },
       width: '85%',
@@ -2140,7 +2103,7 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     },
     cardTitleStyle: {
       fontSize: {
-        xs: '20px',
+        xs: '18px',
         sm: '20px',
         md: '23px',
         lg: '27px',
@@ -2151,12 +2114,18 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     cardDescriptionStyle: {
       fontSize: {
         xs: '12px',
-        sm: '14px',
-        md: '16px',
+        sm: '13px',
+        md: '14px',
         lg: '18px',
       },
       lineHeight: 1.6,
       color: '#57585C',
+      '@media(min-width:1024px) and (max-width:1062px)': {
+        minHeight: '130px',
+      },
+      '@media(min-width:769px) and (max-width:875px)': {
+        minHeight: '140px',
+      },
     },
   },
 };
@@ -2189,8 +2158,8 @@ export const EASY_STEPS_DATA = {
     },
     titleAndDescriptionBoxStyle: {
       width: {
-        xs: '88%',
-        sm: '80%',
+        xs: '90%',
+        sm: '95%',
         md: 'calc(95% - 400px)',
         lg: 'calc(100% - 470px)',
       },
@@ -2202,14 +2171,11 @@ export const EASY_STEPS_DATA = {
       },
     },
     titleStyle: {
-      fontSize: { xs: '22px', sm: '29px', md: '38px', lg: '52px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#201E1E',
       lineHeight: 1.3,
       textAlign: { xs: 'center', md: 'left' },
-      '@media(min-width: 769px) and (max-width: 1023px)': {
-        fontSize: '32px',
-      },
     },
     descriptionStyle: {
       fontWeight: 400,
@@ -2289,9 +2255,9 @@ export const EXPERT_DEVELOPERS_DATA = {
       },
     },
     titleStyle: {
-      width: '85%',
+      width: { xs: '95%', sm: '100%' },
       maxWidth: { md: '700px', lg: '1000px' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '52px' },
       fontWeight: 600,
       color: '#222324',
     },
@@ -2316,7 +2282,7 @@ export const EXPERT_DEVELOPERS_DATA = {
       mx: 'auto',
       px: 3.5,
       maxWidth: { xs: '350px', md: '480px' },
-      minHeight: { xs: '335px', lg: '315px' },
+      minHeight: { xs: '325px', sm: '290px', md: '315px' },
       display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'center',
@@ -2341,6 +2307,12 @@ export const EXPERT_DEVELOPERS_DATA = {
       fontWeight: 500,
       textAlign: 'center',
       color: '#111845',
+      '@media(min-width: 769px) and (max-width:927px)': {
+        minHeight: '54px',
+      },
+      '@media(min-width: 0px) and (max-width:408px)': {
+        minHeight: '54px',
+      },
     },
     cardDescriptionStyle: {
       fontSize: {
@@ -2350,6 +2322,10 @@ export const EXPERT_DEVELOPERS_DATA = {
       textAlign: 'center',
       lineHeight: 1.6,
       color: '#111845',
+      minHeight: { xs: '100px', md: '120px', lg: '84px' },
+      '@media(min-width: 0px) and (max-width:408px)': {
+        minHeight: '154px',
+      },
     },
   },
 };
@@ -2402,8 +2378,8 @@ export const HIGH_STAKES_PROJECT_DATA = {
     },
     titleAndDescriptionBoxStyle: {
       width: {
-        xs: '88%',
-        sm: '80%',
+        xs: '90%',
+        sm: '95%',
         md: 'calc(100% - 400px)',
         lg: 'calc(98% - 557px)',
       },
@@ -2416,7 +2392,7 @@ export const HIGH_STAKES_PROJECT_DATA = {
       gap: { xs: 2, md: 1, lg: 1 },
     },
     titleStyle: {
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '47px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '47px' },
       fontWeight: 600,
       color: '#252525',
       lineHeight: { lg: 1.3 },
@@ -2486,9 +2462,9 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
       gap: { xs: 3, sm: 4 },
     },
     titleStyle: {
-      width: { xs: '90%', lg: '100%' },
-      maxWidth: { md: '700px', lg: 'auto' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      width: { xs: '100%', lg: '100%' },
+      maxWidth: { md: '800px', lg: 'auto' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: 'center',
@@ -2515,8 +2491,8 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
     cardStyle: {
       width: { xs: '90%', sm: '85%', md: '100%' },
       mx: 'auto',
-      px: 3,
-      py: 3.5,
+      px: { xs: 1.8, md: 2, lg: 3 },
+      py: { xs: 1.8, md: 2, lg: 3 },
       maxWidth: { md: '596px' },
       height: 'auto',
       display: 'flex',
@@ -2535,7 +2511,7 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
         md: '17px',
         lg: '22px',
       },
-      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      width: { xs: 'calc(93% - 45px)', lg: 'calc(93% - 55px)' },
       fontWeight: 500,
       color: '#170F49',
     },
@@ -2717,7 +2693,7 @@ export const TALENT_ROSTER_DATA = {
     titleStyle: {
       width: '85%',
       maxWidth: { md: '700px', lg: '1000px' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '52px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '52px' },
       fontWeight: 600,
       color: '#222324',
       display: 'flex',
@@ -2750,8 +2726,12 @@ export const TALENT_ROSTER_DATA = {
       py: 0.8,
       px: 1.5,
     },
-    imageStyle: { width: '65px', height: 'auto' },
-    cardTitleStyle: { fontSize: '17px', fontWeight: 500, color: '#000000' },
+    imageStyle: { width: { xs: '55px', md: '65px' }, height: 'auto' },
+    cardTitleStyle: {
+      fontSize: { xs: '15px', md: '17px' },
+      fontWeight: 500,
+      color: '#000000',
+    },
     cardDescriptionStyle: {
       fontSize: {
         xs: '10px',
@@ -2769,7 +2749,7 @@ export const TALENT_ROSTER_DATA = {
 //Fixed-Prices-projects page data
 
 export const FIXED_PRICES_PROJECTS_DATA = {
-  title: `Fixed Prices <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
+  title: `Fixed Price <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
   text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
   buttonText: 'Schedule a Call',
   link: '/book-a-demo',
@@ -2801,15 +2781,15 @@ export const FIXED_PRICES_PROJECTS_DATA = {
       },
     },
     titleStyle: {
-      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
-      width: '90%',
-      maxWidth: { sm: '420px', md: '620px' },
+      fontSize: { xs: '23px', sm: '32px', md: '54px', lg: '74px' },
+      width: '70%',
+      maxWidth: { xs: '300px', lg: '620px' },
       fontWeight: 600,
       lineHeight: 1.2,
       color: '#111845',
     },
     textStyle: {
-      width: '80%',
+      width: { xs: '90%', sm: '80%' },
       maxWidth: { xs: '100%', sm: '90%', md: '750px', lg: '940px' },
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
       color: '#111845',
@@ -2877,7 +2857,7 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
     },
     titleAndDescriptionBoxStyle: {
       width: {
-        xs: '88%',
+        xs: '95%',
         sm: '80%',
         md: 'calc(100% - 300px)',
         lg: 'calc(100% - 557px)',
@@ -2891,7 +2871,7 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
       },
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: { xs: 'center', md: 'left' },
@@ -2990,7 +2970,7 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
     titleStyle: {
       width: '80%',
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       pb: { xs: 0, md: 7 },
@@ -2998,10 +2978,10 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
     cardStyle: {
       width: '95%',
-      px: 3,
+      px: { xs: 2, md: 3 },
       py: { xs: 1.5, md: 2 },
       maxWidth: { xs: '100%', md: '350px', lg: '375px' },
-      minHeight: { xs: '300px', sm: '260px', md: '320px', lg: '340px' },
+      minHeight: { xs: '265px', sm: '260px', md: '320px', lg: '340px' },
       display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'left',
@@ -3026,7 +3006,7 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
     cardTitleStyle: {
       fontSize: {
-        xs: '20px',
+        xs: '18px',
         sm: '20px',
         md: '23px',
         lg: '27px',
@@ -3034,6 +3014,10 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       fontWeight: 600,
       color: '#111845',
       lineHeight: 1.3,
+      minHeight: { xs: 'auto', sm: '53px', md: '60px', lg: '70px' },
+      '@media(min-width: 0px) and (max-width: 430px)': {
+        minHeight: '50px',
+      },
     },
     cardDescriptionStyle: {
       fontSize: {
@@ -3043,6 +3027,7 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
         lg: '15px',
       },
       maxWidth: { xs: '300px', md: '328px' },
+      minHeight: { xs: '140px', sm: '125px', md: '155px', lg: '170px' },
       lineHeight: 1.6,
       color: '#57585C',
     },
@@ -3107,12 +3092,13 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
       textAlign: { xs: 'center', md: 'left' },
     },
     textStyle: {
-      fontSize: { xs: '23px', sm: '24px', md: '27px', lg: '34px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
-      width: { xs: '80%', md: '100%' },
+      width: { xs: '90%', md: '100%' },
       mx: 'auto',
       lineHeight: 1.3,
+      mb: { xs: 0.5 },
     },
     descriptionStyle: {
       fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px' },
@@ -3146,19 +3132,19 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
-      gap: { xs: 8.5, sm: 8.5, md: 8.5 },
+      gap: { xs: 6, md: 8.5 },
       pb: { xs: 10, md: 9 },
     },
     listItemStyle: { display: 'flex', gap: 1.5, py: 0, position: 'relative' },
     listItemIconStyle: {
-      width: { xs: '32px', sm: '48px', md: '45px', lg: '68px' },
+      width: { xs: '32px', sm: '40px', md: '45px', lg: '68px' },
       height: 'auto',
       position: 'relative',
       display: 'flex',
       justifyContent: 'center',
     },
     vectorStyle: {
-      width: 'auto',
+      width: { xs: '6.4px', md: 'auto' },
       position: 'absolute',
       top: { xs: 59, md: 59, lg: 70 },
     },
@@ -3168,15 +3154,19 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
       color: '#111845',
     },
     rightVectorBoxStyle: {
-      width: { xs: '80%', sm: '90%' },
+      width: { xs: '80%', md: '90%' },
       display: 'flex',
       alignItems: 'center',
       position: 'absolute',
-      top: { xs: 82, lg: 95 },
+      top: { xs: 65, md: 81.5, lg: 95 },
       left: { xs: 45, lg: 50 },
     },
     rightVectorStyle: {
-      width: { xs: 'calc(65% - 120px)', md: 'calc(95% - 120px)' },
+      width: {
+        xs: 'calc(65% - 130px)',
+        sm: 'calc(65% - 148px)',
+        md: 'calc(95% - 120px)',
+      },
       pr: 2,
       pt: 2,
     },
@@ -3250,9 +3240,9 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
       gap: { xs: 3, sm: 4 },
     },
     titleStyle: {
-      width: { xs: '90%', lg: '100%' },
-      maxWidth: { md: '700px', lg: 'auto' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      width: { xs: '100%', lg: '100%' },
+      maxWidth: { md: '800px', lg: 'auto' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: 'center',
@@ -3279,8 +3269,8 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
     cardStyle: {
       width: { xs: '90%', sm: '85%', md: '100%' },
       mx: 'auto',
-      px: 3,
-      py: 3.5,
+      px: { xs: 1.8, md: 2, lg: 3 },
+      py: { xs: 1.8, md: 2, lg: 3 },
       maxWidth: { md: '596px' },
       height: 'auto',
       display: 'flex',
@@ -3299,7 +3289,7 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
         md: '17px',
         lg: '22px',
       },
-      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      width: { xs: 'calc(93% - 45px)', lg: 'calc(93% - 55px)' },
       fontWeight: 500,
       color: '#170F49',
     },
@@ -3320,7 +3310,7 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
 export const PRODUCT_JOURNEY_DATA = {
   title: 'Power Up Every Stage of Your Product Journey',
   description:
-    'Increase your level of performance with our full-stack software development services at a fixed cost without sacrificing quality',
+    'Increase your level of performance with our full-stack software development services at a fixed cost without sacrificing quality.',
   cards: [
     {
       title: 'UI/UX Design Services',
@@ -3399,16 +3389,19 @@ export const PRODUCT_JOURNEY_DATA = {
       textAlign: 'center',
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
     },
     descriptionStyle: {
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
       fontWeight: 400,
-      width: { xs: '80%', md: '75%' },
+      width: { xs: '80%', md: 'auto' },
       mx: 'auto',
       color: '#111845',
+      '@media(min-width: 769px) and (max-width: 1426px)': {
+        width: '85%',
+      },
     },
     slideStyle: {
       width: '90%',
@@ -3441,11 +3434,20 @@ export const PRODUCT_JOURNEY_DATA = {
       mt: 0.8,
     },
     imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
-    cardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#111845' },
+    cardTitleStyle: {
+      fontSize: '18px',
+      fontWeight: 500,
+      color: '#111845',
+      minHeight: '55px',
+    },
     cardDescriptionStyle: {
       fontSize: { xs: '11px', md: '13px' },
       fontWeight: 400,
       color: '#57585C',
+      minHeight: '85px',
+      '@media(min-width: 0px) and (max-width: 424px)': {
+        minHeight: '120px',
+      },
     },
   },
 };
@@ -3485,15 +3487,15 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
       },
     },
     titleStyle: {
-      fontSize: { xs: '30px', sm: '34px', md: '54px', lg: '74px' },
-      width: '90%',
+      fontSize: { xs: '23px', sm: '32px', md: '54px', lg: '74px' },
+      width: '95%',
       maxWidth: { sm: '420px', md: '620px', lg: '900px' },
       fontWeight: 600,
       lineHeight: 1.2,
       color: '#111845',
     },
     textStyle: {
-      width: '80%',
+      width: { xs: '90%', sm: '100%' },
       maxWidth: { xs: '100%', sm: '90%', md: '740px', lg: '840px' },
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
       color: '#111845',
@@ -3595,16 +3597,19 @@ export const ODC_SOLUTIONS = {
       textAlign: 'center',
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
     },
     descriptionStyle: {
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
       fontWeight: 400,
-      width: { xs: '80%', md: '75%' },
+      width: { xs: '80%', md: 'auto' },
       mx: 'auto',
       color: '#111845',
+      '@media(min-width: 769px) and (max-width: 1426px)': {
+        width: '85%',
+      },
     },
     slideStyle: {
       width: '90%',
@@ -3637,11 +3642,20 @@ export const ODC_SOLUTIONS = {
       mt: 0.8,
     },
     imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
-    cardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#111845' },
+    cardTitleStyle: {
+      fontSize: '18px',
+      fontWeight: 500,
+      color: '#111845',
+      minHeight: '55px',
+    },
     cardDescriptionStyle: {
       fontSize: { xs: '11px', md: '13px' },
       fontWeight: 400,
       color: '#57585C',
+      minHeight: '85px',
+      '@media(min-width: 0px) and (max-width: 424px)': {
+        minHeight: '120px',
+      },
     },
   },
 };
@@ -3700,16 +3714,16 @@ export const DOORSTEP_DATA = {
       alignItems: 'center',
     },
     subTitleStyle: {
-      fontSize: { xs: '22px', sm: '24px', md: '26px', lg: '28px' },
+      fontSize: { xs: '17px', sm: '19px', md: '22px', lg: '28px' },
       fontWeight: 400,
       color: '#111845',
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '31px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: 'center',
-      width: { xs: '75%', md: '100%' },
+      px: 3,
     },
     parentBoxStyle: {
       width: '100%',
@@ -4019,9 +4033,9 @@ export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
       },
     },
     titleStyle: {
-      width: { xs: '85%', lg: '100%' },
-      maxWidth: { md: '700px', lg: '1000px' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      width: { xs: '100%', sm: '90%', lg: '100%' },
+      maxWidth: { md: '800px', lg: '1000px' },
+      fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
     },
@@ -4045,14 +4059,14 @@ export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
       width: { xs: '100%', sm: '100%' },
       mx: 'auto',
       py: 3.5,
-      px: 3,
+      px: { xs: 2.5, lg: 2.3 },
       maxWidth: { xs: '342px', md: '349px' },
-      minHeight: { xs: '375px', sm: '300px', md: '350px', lg: '472px' },
+      minHeight: { xs: '382px', sm: '300px', md: '350px', lg: '472px' },
       display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'center',
       border: '1px solid rgba(214, 214, 215, 1)',
-      justifyContent: { xs: 'center', md: 'space-between' },
+      justifyContent: { xs: 'space-between' },
       backgroundColor: '#fff',
       borderRadius: '20px',
       boxShadow: `
@@ -4066,22 +4080,29 @@ export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
     },
     cardTitleStyle: {
       fontSize: {
-        xs: '18px',
+        xs: '16px',
+        sm: '18px',
         md: '25px',
-        lg: '29px',
+        lg: '28.8px',
       },
       fontWeight: 500,
-      // textAlign: 'center',
       color: '#111845',
+      minHeight: { xs: '50px', md: '87px' },
     },
     cardDescriptionStyle: {
       fontSize: {
         xs: '12px',
         lg: '15px',
       },
-      // textAlign: 'center',
       lineHeight: 1.6,
       color: '#111845',
+      minHeight: { xs: '100px', md: '144px' },
+      '@media(min-width: 375px) and (max-width: 424px)': {
+        minHeight: '155px',
+      },
+      '@media(min-width: 0px) and (max-width: 374px)': {
+        minHeight: '173px',
+      },
     },
   },
 };
@@ -4141,9 +4162,9 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
       gap: { xs: 3, sm: 4 },
     },
     titleStyle: {
-      width: { xs: '90%', lg: '100%' },
+      width: { xs: '100%', lg: '100%' },
       maxWidth: { md: '700px', lg: 'auto' },
-      fontSize: { xs: '22px', sm: '29px', md: '32px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: 'center',
@@ -4190,7 +4211,7 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
         md: '17px',
         lg: '22px',
       },
-      width: { xs: 'calc(90% - 45px)', lg: 'calc(90% - 55px)' },
+      width: { xs: 'calc(93% - 45px)', lg: 'calc(93% - 55px)' },
       fontWeight: 500,
       color: '#170F49',
     },
@@ -4281,11 +4302,11 @@ export const ODC_FOUNDATION_DATA = {
       gap: 0.8,
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '31px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       color: '#222324',
       textAlign: 'center',
-      width: { xs: '75%', md: '90%', lg: '100%' },
+      width: { xs: '90%', md: '90%', lg: '100%' },
     },
     textStyle: {
       fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
@@ -4300,19 +4321,19 @@ export const ODC_FOUNDATION_DATA = {
       position: 'absolute',
     },
     slideStyle: {
-      width: '95%',
+      width: '100%',
       maxWidth: '210px',
       paddingBottom: '20px',
     },
     stepStyle: {
-      maxWidth: '205px',
+      maxWidth: { xs: '201px', lg: '201px' },
       display: { xs: 'none', md: 'flex' },
       flexDirection: 'column',
       alignItems: 'center',
-      gap: { xs: 3, md: 4 },
+      gap: { xs: 2, md: 4 },
     },
     stepTextStyle: {
-      fontSize: { xs: '16px', sm: '19px', md: '22px', lg: '25px' },
+      fontSize: { xs: '18px', sm: '19px', md: '22px', lg: '25px' },
       fontWeight: 500,
       color: '#111845',
     },
@@ -4320,7 +4341,7 @@ export const ODC_FOUNDATION_DATA = {
       width: { xs: '90px', sm: '100px', md: '125px', lg: '125px' },
     },
     stepDescriptionStyle: {
-      fontSize: { xs: '14px', md: '15px', lg: '17px' },
+      fontSize: { xs: '14px', md: '15px', lg: '16px' },
       fontWeight: 400,
       color: '#111845',
       textAlign: 'center',
@@ -4443,7 +4464,7 @@ export const ODC_SERVICES_DATA = {
       px: { xs: 1, sm: 3 },
     },
     titleStyle: {
-      fontSize: { xs: '23px', sm: '29px', md: '35px', lg: '40px' },
+      fontSize: { xs: '18px', sm: '23px', md: '32px', lg: '40px' },
       fontWeight: 600,
       pb: 5,
       mx: 'auto',
