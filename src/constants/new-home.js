@@ -339,28 +339,6 @@ export const DIFFERENCE_DATA_FOR_REMOTE = {
     },
   ],
 };
-export const DIFFERENCE_DATA_FOR_REMOTE = {
-  items: [
-    {
-      id: 1,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/icon1.svg`,
-    },
-    {
-      id: 2,
-      title: `Increase quality`,
-      description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/icon2.svg`,
-    },
-    {
-      id: 3,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/icon3.svg`,
-    },
-  ],
-};
 
 export const WORKS_DATA = {
   title: `How offshoring works`,

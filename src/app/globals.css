@@ -2024,8 +2024,6 @@ input {
 
 /* ***************** */
 
-
-
 /********* careers dropdown styling ****************/
 .careers-dropdown-container {
   display: flex;
@@ -2043,9 +2041,7 @@ input {
   padding: 12px;
   padding-right: 40px;
   font-size: 20px;
-  font-family: __Poppins_017dd3,
-    __Poppins_Fallback_017dd3,
-    sans-serif;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
   color: #333;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2077,9 +2073,7 @@ input {
 .careers-dropdown-select option {
   padding: 20px;
   font-size: 20px;
-  font-family: __Poppins_017dd3,
-    __Poppins_Fallback_017dd3,
-    sans-serif;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
 }
 
 @media (max-width: 899px) {
@@ -2123,7 +2117,6 @@ input {
 }
 
 /* ********************************* */
-
 
 /********* pricing page *********/
 #pricing-difference .swiper-pagination-bullet {
@@ -2206,7 +2199,6 @@ input {
 
 /* ********************************* */
 
-
 /*********** client says slider *****************/
 
 #client-says-slider .swiper-slide {
@@ -2241,7 +2233,6 @@ input {
 }
 
 /* **************************************** */
-
 
 /* homeOffShoreWork of home page  */
 
@@ -2278,44 +2269,7 @@ input {
   }
 }
 
-
 /* ***************************************** */
-
-
-/* Flexible hiring models for home page */
-
-#flexible-hiring-models .swiper-pagination-bullet {
-  background-color: lightgray !important;
-  opacity: 1;
-}
-
-#flexible-hiring-models .swiper-pagination-bullet-active {
-  background-color: #029894 !important;
-}
-
-#flexible-hiring-models .swiper {
-  width: 100%;
-  height: auto;
-  max-width: 1200px;
-}
-
-#flexible-hiring-models .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 9px;
-  padding-bottom: 40px;
-}
-
-#flexible-hiring-models .swiper-pagination-bullet {
-  margin-bottom: -10px !important;
-}
-
-/* *************************************** */
-
-
-/* employee slide animation of home page */
 
 .sliderContainer {
   overflow: hidden;
@@ -2380,7 +2334,6 @@ input {
 }
 
 /* ***************** */
-
 
 /* Styling for the remote navbar */
 .navbar-area {
