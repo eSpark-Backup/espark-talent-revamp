@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 const HighStakesProjects = ({ data }) => {
-  const { title, description, description2, image, styles } = data || {};
+  const { title, description, description2, description3, image, styles } =
+    data || {};
 
   const {
     mainBoxStyle,
@@ -23,6 +24,7 @@ const HighStakesProjects = ({ data }) => {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             <Typography sx={descriptionStyle}>{description}</Typography>
             <Typography sx={descriptionStyle}>{description2}</Typography>
+            <Typography sx={descriptionStyle}>{description3}</Typography>
           </Box>
         </Box>
         <Box sx={imageBoxStyle}>

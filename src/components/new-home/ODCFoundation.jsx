@@ -54,7 +54,7 @@ const ODCFoundation = ({ data }) => {
                   ? '60%'
                   : index === 3
                     ? '35.5%'
-                    : '33.5%',
+                    : '35.5%',
           },
           left: index === 0 ? '95%' : '94%',
           transform: 'translate(-50%, -50%)',
@@ -69,7 +69,7 @@ const ODCFoundation = ({ data }) => {
             ...stepIconStyle,
             mt: { md: index === 3 ? 0 : 0 },
             ml: { md: index === 0 ? -3 : 0 },
-            mr: { xs: index === 0 ? 0 : -0.2, md: index === 4 ? -2.2 : 0 },
+            mr: { xs: index === 0 ? 0.9 : -0.5, md: index === 4 ? -2.2 : 0 },
           }}
         />
         <Typography sx={stepDescriptionStyle}>{description}</Typography>

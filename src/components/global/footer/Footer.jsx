@@ -90,7 +90,7 @@ const Footer = ({ data }) => {
                       component="li"
                       dangerouslySetInnerHTML={{
                         __html: _text?.link
-                          ? `<a href="${_text?.link}" style="text-decoration: none; color: inherit;">${_text?.value}</a>`
+                          ? `<a href="${_text?.link}" style="text-decoration: underline; color: inherit;">${_text?.value}</a>`
                           : _text?.value || '',
                       }}
                     />

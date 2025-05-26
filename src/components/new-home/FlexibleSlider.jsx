@@ -29,7 +29,7 @@ const FlexibleSlider = ({ data, slideStyle, card, isDisplay }) => {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          padding: '40px 20px 40px 20px',
+          padding: '30px 20px 30px 20px',
         }}
       >
         {data?.map(({ title, image, description }, index) => (
