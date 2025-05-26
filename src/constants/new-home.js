@@ -2892,7 +2892,7 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
   },
 };
 export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
-  title: 'Why Choose an Offshore Development Center?',
+  title: 'When Fixed Price Works Best - Clear, Efficient, Reliable',
   cards: [
     {
       id: 1,
