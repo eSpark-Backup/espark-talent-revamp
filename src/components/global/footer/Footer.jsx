@@ -74,17 +74,6 @@ const Footer = ({ data }) => {
               <>
                 {mp?.info?.map((_text, _textIndex) => (
                   <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
-                    {/* {_text?.icon && (
-                      <Box sx={iconBoxStyle(_textIndex)}>
-                        <Image
-                          alt=""
-                          src={_text?.icon}
-                          style={pageLinkIconStyle}
-                          quality={80}
-                          fill
-                        />
-                      </Box>
-                    )} */}
                     <Typography
                       sx={valueStyle(_textIndex)}
                       component="li"
@@ -96,19 +85,6 @@ const Footer = ({ data }) => {
                     />
                   </Box>
                 ))}
-                {/* {pathName === '/' && (
-                  <Box sx={trustPilotImageBoxStyle}>
-                    <Link href={trustPilotLink || '#'}>
-                      <Image
-                        alt=""
-                        src={trustPilotImage}
-                        style={trustPilotImageStyle}
-                        quality={80}
-                        fill
-                      />
-                    </Link>
-                  </Box>
-                )} */}
               </>
             ) : (
               mp?.pages?.map((_page, _pIndex) => (

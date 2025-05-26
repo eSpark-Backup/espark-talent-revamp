@@ -368,15 +368,6 @@ export const FOOTER_STYLE = {
     fontSize: { xs: '14px', lg: '18px' },
     fontWeight: 700,
     color: '#FFFFFF',
-    // '@media(min-width:768px) and (max-width: 1023px)': {
-    //   fontSize: '18px',
-    // },
-    // '@media(min-width:425px) and (max-width: 767px)': {
-    //   fontSize: '16px',
-    // },
-    // '@media(min-width:0px) and (max-width: 424px)': {
-    //   fontSize: '14px',
-    // },
   },
   ulStyle: { pl: 0, listStyle: 'none', pt: 1 },
   textIconAndValueBoxStyle: {
@@ -455,12 +446,6 @@ export const FOOTER_STYLE = {
     fontWeight: 400,
     color: '#FFFFFF',
     mt: _pIndex === 0 ? 0 : 1,
-    // '@media(min-width:768px) and (max-width: 1023px)': {
-    //   fontSize: '13px',
-    // },
-    // '@media(min-width:425px) and (max-width: 767px)': {
-    //   fontSize: '12px',
-    // },
     '@media(min-width:0px) and (max-width: 424px)': {
       fontSize: '10px',
     },
