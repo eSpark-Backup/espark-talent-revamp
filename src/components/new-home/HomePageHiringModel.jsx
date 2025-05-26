@@ -8,7 +8,7 @@ import { EffectCards, Pagination } from 'swiper/modules';
 import { open } from '@/utils';
 
 const HomePageHiringModel = ({ data }) => {
-  const { title, btnTitle, btnLink, items, styles } = data || {};
+  const { title, icon, items, image, styles } = data || {};
   const {
     mainBoxStyle,
     innerBoxStyle,
@@ -16,14 +16,11 @@ const HomePageHiringModel = ({ data }) => {
     titleStyle,
     buttonBoxStyle,
     buttonStyle,
-    slideStyle,
     cardStyle,
     cardHeaderStyle,
-    cardBodyStyle,
     ulStyle,
-    liStyle,
+    listStyle,
     cardImageStyle,
-    itemTextStyle,
   } = styles || {};
   const [loading, setLoading] = useState(true);
 
@@ -36,51 +33,33 @@ const HomePageHiringModel = ({ data }) => {
   }, [data]);
 
   const renderSlide = (eachItem, index) => (
-    <SwiperSlide key={index} style={slideStyle}>
+    <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
-        <Box sx={cardHeaderStyle}>
+        <Box>
+          <Box component="img" src={image} sx={cardImageStyle} />
           <Typography
-            sx={{
-              position: 'relative',
-              fontSize: {
-                xs: '21px',
-                sm: '28px',
-                md: '25px',
-                lg: '32px',
-              },
-              fontWeight: 700,
-              color: '#fff',
-              '@media (max-width:359px)': { fontSize: '18px' },
-            }}
-          >
-            {eachItem?.title || ''}
-          </Typography>
-          <Box
-            component={'img'}
-            src={eachItem?.image || ''}
-            sx={{
-              width: { xs: '45px', sm: '55px', md: 'auto' },
-              position: 'absolute',
-              right: 0,
-              bottom: 0,
-            }}
+            sx={cardHeaderStyle}
+            dangerouslySetInnerHTML={{ __html: eachItem?.title }}
           />
         </Box>
-        <Box sx={cardBodyStyle}>
+        <Box sx={{ flexGrow: 1, my: 2 }}>
           <Typography component={'ul'} sx={ulStyle}>
-            {eachItem?.points?.map((item, i) => (
-              <Typography key={i} component={'li'} sx={liStyle}>
-                <Box
-                  component={'img'}
-                  src={item?.icon || ''}
-                  sx={cardImageStyle}
-                />
-                <Typography component={'span'} sx={itemTextStyle}>
-                  {item?.text || ''}
-                </Typography>
+            {eachItem?.points?.map((item, pointIndex) => (
+              <Typography key={pointIndex} component={'li'} sx={listStyle}>
+                {item?.text}
               </Typography>
             ))}
           </Typography>
+        </Box>
+        <Box>
+          <Button
+            variant="contained"
+            onClick={() => open(eachItem?.link, '_blank')}
+            sx={buttonStyle}
+          >
+            {eachItem?.buttonText}
+            <Box component="img" src={icon} sx={buttonBoxStyle} />
+          </Button>
         </Box>
       </Box>
     </SwiperSlide>
@@ -130,21 +109,16 @@ const HomePageHiringModel = ({ data }) => {
                   slidesPerView: 3,
                   spaceBetween: 25,
                 },
+                1440: {
+                  slidesPerView: 3,
+                  spaceBetween: 35,
+                },
               }}
             >
               {items?.map(renderSlide)}
             </Swiper>
           </>
         )}
-        <Box sx={buttonBoxStyle}>
-          <Button
-            sx={buttonStyle}
-            onClick={() => open(btnLink, '_blank')}
-            disableRipple
-          >
-            {btnTitle}
-          </Button>
-        </Box>
       </Box>
     </Box>
   );
