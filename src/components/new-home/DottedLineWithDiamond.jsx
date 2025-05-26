@@ -6,7 +6,10 @@ const DottedLineWithDiamond = () => {
     <Box width={'100%'} display="flex" alignItems="center">
       <Box
         sx={{
-          borderBottom: '2px dotted #acacae',
+          borderBottom: {
+            xs: '1.99px dotted #acacae',
+            md: '2px dotted #acacae ',
+          },
           flexGrow: 1,
           height: 0,
           position: 'relative',
@@ -14,12 +17,12 @@ const DottedLineWithDiamond = () => {
       >
         <Box
           sx={{
-            width: 6,
-            height: 6,
+            width: { xs: 4, md: 6 },
+            height: { xs: 4, md: 6 },
             backgroundColor: '#57585CBD',
             transform: 'rotate(45deg)',
             position: 'absolute',
-            right: -4.5,
+            right: { xs: -5.5, md: -4.5 },
             top: '50%',
             translate: '0 -50%',
           }}

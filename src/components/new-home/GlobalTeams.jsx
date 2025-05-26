@@ -26,8 +26,7 @@ const GlobalTeams = ({ data }) => {
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView={'auto'}
-          //   loop={true}
-          autoplay={{ delay: 0, disableOnInteraction: true }}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
           speed={3000}
           grabCursor={true}
           breakpoints={{

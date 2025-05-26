@@ -35,23 +35,32 @@ const HomePageHiringModel = ({ data }) => {
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
-        <Box sx={cardImageStyle} src={image} component={'img'} />
-        <Typography sx={cardHeaderStyle}>{eachItem?.title}</Typography>
-        <Typography component={'ul'} sx={ulStyle}>
-          {eachItem?.points?.map((item, pointIndex) => (
-            <Typography key={pointIndex} component={'li'} sx={listStyle}>
-              {item?.text}
-            </Typography>
-          ))}
-        </Typography>
-        <Button
-          variant="contained"
-          onClick={() => open(eachItem?.link, '_blank')}
-          sx={buttonStyle}
-        >
-          {eachItem?.buttonText}
-          <Box component={'img'} src={icon} sx={buttonBoxStyle} />
-        </Button>
+        <Box>
+          <Box component="img" src={image} sx={cardImageStyle} />
+          <Typography
+            sx={cardHeaderStyle}
+            dangerouslySetInnerHTML={{ __html: eachItem?.title }}
+          />
+        </Box>
+        <Box sx={{ flexGrow: 1, my: 2 }}>
+          <Typography component={'ul'} sx={ulStyle}>
+            {eachItem?.points?.map((item, pointIndex) => (
+              <Typography key={pointIndex} component={'li'} sx={listStyle}>
+                {item?.text}
+              </Typography>
+            ))}
+          </Typography>
+        </Box>
+        <Box>
+          <Button
+            variant="contained"
+            onClick={() => open(eachItem?.link, '_blank')}
+            sx={buttonStyle}
+          >
+            {eachItem?.buttonText}
+            <Box component="img" src={icon} sx={buttonBoxStyle} />
+          </Button>
+        </Box>
       </Box>
     </SwiperSlide>
   );
