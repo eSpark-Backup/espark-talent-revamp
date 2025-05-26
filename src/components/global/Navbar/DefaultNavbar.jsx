@@ -116,7 +116,7 @@ function DefaultNavbar({
     <Popper
       anchorEl={dropdown}
       open={Boolean(dropdown)}
-      placement={dropdownName === 'Hire A Talent' ? 'bottom' : 'top-start'}
+      placement={dropdownName === 'Services' ? 'bottom' : 'top-start'}
       transition
       sx={popperStyle(dropdownName)}
       onMouseEnter={() => setDropdown(dropdownEl)}
@@ -127,7 +127,7 @@ function DefaultNavbar({
           <Grow {...TransitionProps} sx={growStyle(dropdownName)}>
             <Box borderRadius="lg" sx={{ width: 'auto', boxShadow: 3 }}>
               <Box borderRadius="lg" sx={growBoxStyle(dropdownName)}>
-                {dropdownName === 'Hire A Talent' ? (
+                {dropdownName === 'Services' ? (
                   <HireLinks
                     data={HIRE_A_TALENT_MENU}
                     setDropdown={setDropdown}

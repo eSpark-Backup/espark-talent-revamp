@@ -1,6 +1,6 @@
-export const HIRE_A_TALENT = 'Hire a Talent';
+export const HIRE_A_TALENT = 'Services';
 export const BOOK_A_DEMO = 'Book a Demo';
-export const Request_Candidate = 'Request Candidate';
+export const Request_Candidate = 'Schedule a Call';
 export const HIRE_A_TALENT_LINK = '/book-a-demo';
 export const EXCLUDED_PATHS = [
   '/book-a-demo',
@@ -15,23 +15,23 @@ export const NAVBAR_STYLE = {
   popperStyle: (dropdownName) => ({
     zIndex: 1002,
     mx: 'auto',
-    width: dropdownName === 'Hire A Talent' ? '100%' : 'auto',
+    width: dropdownName === 'Services' ? '100%' : 'auto',
   }),
   growStyle: (dropdownName) => ({
     background: !dropdownName
       ? 'transparent'
-      : dropdownName === 'Hire A Talent'
+      : dropdownName === 'Services'
         ? '#F7F8FB'
         : '#fff',
     borderRadius: '11px',
     boxShadow: '0px 0px 4px 0px #00000040',
-    maxWidth: dropdownName === 'Hire A Talent' ? '99%' : 'auto',
+    maxWidth: dropdownName === 'Services' ? '99%' : 'auto',
     minHeight: 'auto',
     mx: 'auto',
   }),
   growBoxStyle: (dropdownName) => ({
     width: 'auto',
-    p: dropdownName === 'Hire A Talent' ? 1 : 0,
+    p: dropdownName === 'Services' ? 1 : 0,
     mt: 1.5,
   }),
   navbarItemStyle: {
@@ -58,7 +58,7 @@ export const NAVBAR_STYLE = {
       ml: 0,
       mr: 0.25,
       '@media(min-width: 1024px) and (max-width:1249px)': {
-        fontSize: '12px',
+        fontSize: '13px',
       },
       '@media(min-width: 1250px) and (max-width:1399px)': {
         fontSize: '16px',
@@ -206,9 +206,14 @@ export const NAVBAR_STYLE = {
       width: '100%',
     },
     navbarItemBoxStyle: {
+      width: '100%',
       display: 'flex',
       alignItems: 'center',
-      gap: 3,
+      justifyContent: 'space-between',
+      mr: 11,
+      '@media(min-width: 1024px) and (max-width: 1399px)': {
+        mr: 7,
+      },
     },
     linkBoxStyle: {
       display: 'flex',
@@ -237,7 +242,7 @@ export const NAVBAR_STYLE = {
       },
     },
     buttonStyle: {
-      width: '246px',
+      width: '238px',
       height: '44px',
       background: '#029894',
       justifyContent: 'space-between',

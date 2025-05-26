@@ -14,7 +14,7 @@
 ::selection {
   background: #029894;
   color: #ffffff;
-} 
+}
 ::-moz-selection {
   background: #029894;
   color: #fff;
@@ -103,7 +103,7 @@ span {
   color: var(--whiteColor);
 }
 
-.hoverItem:hover>.hoverIcon {
+.hoverItem:hover > .hoverIcon {
   color: #fff;
 }
 
@@ -391,7 +391,6 @@ span {
 }
 
 @media only screen and (max-width: 1023px) {
-
   /* .hrFirmResponsive {
     display: block;
   }
@@ -429,8 +428,8 @@ span {
   padding-left: 30px;
 }
 
-.blog-content h3+p,
-.blog-content h3+p+p {
+.blog-content h3 + p,
+.blog-content h3 + p + p {
   padding-left: 30px;
 }
 
@@ -514,8 +513,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 25px;
   }
 
@@ -542,8 +541,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -570,8 +569,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -596,8 +595,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -619,8 +618,8 @@ span {
   }
 
   .blog-content h3,
-  .blog-content h3+p,
-  .blog-content h3+p+p {
+  .blog-content h3 + p,
+  .blog-content h3 + p + p {
     padding-left: 20px;
   }
 
@@ -1118,7 +1117,6 @@ span {
 }
 
 @media only screen and (max-width: 1024px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1138,7 +1136,6 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1159,7 +1156,6 @@ span {
 }
 
 @media only screen and (max-width: 425px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1189,7 +1185,6 @@ span {
 }
 
 @media only screen and (max-width: 360px) {
-
   .wiki-content p,
   .wiki-content ul,
   .wiki-content li,
@@ -1669,7 +1664,6 @@ input {
 
 /*  CUSTOM LOADER  */
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -1685,9 +1679,6 @@ input {
   border-radius: 0.125rem;
   background-color: #1d1d20;
 }
-
-
-
 
 /********* careers dropdown styling ****************/
 .careers-dropdown-container {
@@ -1706,9 +1697,7 @@ input {
   padding: 12px;
   padding-right: 40px;
   font-size: 20px;
-  font-family: __Poppins_017dd3,
-    __Poppins_Fallback_017dd3,
-    sans-serif;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
   color: #333;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -1740,9 +1729,7 @@ input {
 .careers-dropdown-select option {
   padding: 20px;
   font-size: 20px;
-  font-family: __Poppins_017dd3,
-    __Poppins_Fallback_017dd3,
-    sans-serif;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
 }
 
 @media (max-width: 899px) {
@@ -1786,7 +1773,6 @@ input {
 }
 
 /* ********************************* */
-
 
 /********* pricing page *********/
 #pricing-difference .swiper-pagination-bullet {
@@ -1869,7 +1855,6 @@ input {
 
 /* ********************************* */
 
-
 /*********** client says slider *****************/
 
 #client-says-slider .swiper-slide {
@@ -1904,7 +1889,6 @@ input {
 }
 
 /* **************************************** */
-
 
 /* homeOffShoreWork of home page  */
 
@@ -1941,9 +1925,7 @@ input {
   }
 }
 
-
 /* ***************************************** */
-
 
 /* Flexible hiring models for home page */
 
@@ -1959,14 +1941,13 @@ input {
 #flexible-hiring-models .swiper {
   width: 100%;
   height: auto;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 #flexible-hiring-models .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
   border-radius: 9px;
   padding-bottom: 40px;
 }
@@ -1976,7 +1957,6 @@ input {
 }
 
 /* *************************************** */
-
 
 /* employee slide animation of home page */
 
@@ -2044,6 +2024,316 @@ input {
 
 /* ***************** */
 
+/********* careers dropdown styling ****************/
+.careers-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.careers-dropdown-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.careers-dropdown-select {
+  padding: 12px;
+  padding-right: 40px;
+  font-size: 20px;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/images/partners/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 17px;
+}
+
+.careers-dropdown-select:focus {
+  border-color: #029894 !important;
+}
+
+.careers-dropdown-select:hover {
+  border-color: #029894 !important;
+}
+
+.careers-dropdown-select .MuiMenuItem-root:hover {
+  background-color: rgba(2, 152, 148, 0.1) !important;
+  color: #333 !important;
+}
+
+.careers-dropdown-select option {
+  padding: 20px;
+  font-size: 20px;
+  font-family: __Poppins_017dd3, __Poppins_Fallback_017dd3, sans-serif;
+}
+
+@media (max-width: 899px) {
+  .careers-dropdown-container {
+    margin: 0px auto;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .careers-dropdown-select {
+    font-size: 17px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+  .careers-dropdown-select {
+    font-size: 15px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 319px) {
+  .careers-dropdown-select {
+    font-size: 13px;
+    background-size: 15px;
+  }
+
+  .careers-dropdown-select option {
+    font-size: 13px;
+  }
+}
+
+/* ********************************* */
+
+/********* pricing page *********/
+#pricing-difference .swiper-pagination-bullet {
+  margin-bottom: -15px !important;
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#pricing-difference .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+/* how it works  */
+#pricing-work .swiper-pagination-bullet {
+  margin-bottom: -15px !important;
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#pricing-work .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+/* ********************************* */
+
+/********* hire remote page *********/
+#expert-team .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#expert-team .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (min-width: 769px) {
+  #expert-team .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+@media (max-width: 424px) {
+  #expert-team .swiper-pagination-bullet {
+    margin-right: -15px !important;
+  }
+}
+
+/* ********************************* */
+
+/********* hire frontend & backend developer page *********/
+#customizes-solution-slider .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#customizes-solution-slider .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  #customizes-solution-slider .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+#modern-technologies-slider .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+#modern-technologies-slider .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  #modern-technologies-slider .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+/* ********************************* */
+
+/*********** client says slider *****************/
+
+#client-says-slider .swiper-slide {
+  width: 495px;
+  height: 325px;
+  margin-bottom: 80px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  filter: blur(2.9px);
+  box-shadow: 0px 27px 58px 0px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(218, 218, 218, 0.479);
+}
+
+#client-says-slider .swiper-slide-active {
+  filter: blur(0px);
+}
+
+@media (max-width: 768px) {
+  #client-says-slider .swiper-slide {
+    width: 410px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  #client-says-slider .swiper-slide {
+    width: 90%;
+    margin-bottom: 50px;
+    box-shadow: 0px 27.587px 28.696px 0px rgba(0, 0, 0, 0.24);
+  }
+}
+
+/* **************************************** */
+
+/* homeOffShoreWork of home page  */
+
+.home-off-shore-works .swiper-pagination-bullet {
+  background-color: lightgray !important;
+  opacity: 1;
+}
+
+.home-off-shore-works .swiper-pagination-bullet-active {
+  background-color: #029894 !important;
+}
+
+@media (max-width: 1023px) {
+  .home-off-shore-works .swiper-pagination-bullet {
+    margin-bottom: -15px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .home-off-shore-works .swiper {
+    width: 350px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .home-off-shore-works .swiper {
+    width: 85%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 359px) {
+  .home-off-shore-works .swiper {
+    width: 90%;
+  }
+}
+
+/* ***************************************** */
+
+.sliderContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: inline-flex;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(1.5%);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+}
+
+.slide {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+@media (min-width: 1400px) {
+  #short-slider .slide {
+    width: 220px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  #short-slider .slide {
+    width: 180px;
+    height: 210px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #short-slider .slide {
+    width: 160px;
+    height: 190px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #short-slider .slide {
+    width: 140px;
+    height: 170px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #short-slider .slide {
+    width: 120px;
+    height: 140px;
+  }
+}
+
+/* ***************** */
 
 /* Styling for the remote navbar */
 .navbar-area {
@@ -2082,7 +2372,6 @@ input {
 }
 
 /* ***************** */
-
 
 /* employee slide animation of home page */
 
@@ -2142,7 +2431,6 @@ input {
     }
   }
 }
-
 
 @media (min-width: 1400px) {
   #short-slider .slide {

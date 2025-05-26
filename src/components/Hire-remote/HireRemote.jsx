@@ -64,7 +64,7 @@ const HireRemote = ({ data }) => {
       <PricingHero data={PRICING_DATA} handleOpen={handleOpen} />
       <PricingBenifits data={PRICING_DATA?.benifits} />
       <PricingWorks data={PRICING_DATA?.howItWorks} />
-      <HomePageExpertTeam data={EXPERT_TEAM_DATA} handleOpen={handleOpen} />
+      <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
       <HomePageExperties data={EXPERTIES_DATA} />
       <ClientSays data={OUR_CLIENT_SAYS} />
       <AwardAchievement

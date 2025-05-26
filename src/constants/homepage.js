@@ -1793,7 +1793,8 @@ export const TOP_BAR_DATA = {
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 999,
-      backgroundColor: '#029894',
+      background:
+        'linear-gradient(180deg, rgba(0,28,99,1) 0%, rgba(4,16,44,1) 100%)',
       px: { md: 6.5, lg: 0 },
     },
     topBarBoxStyle: {
