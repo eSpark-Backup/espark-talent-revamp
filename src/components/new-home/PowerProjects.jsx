@@ -55,7 +55,13 @@ const PowerProjects = ({ data }) => {
                       src={logo?.src}
                       sx={{ width: '30px', height: 'auto' }}
                     />
-                    <Typography sx={{ fontWeight: 400, color: '#000000' }}>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: '16px', md: '20px' },
+                        fontWeight: 400,
+                        color: '#000000',
+                      }}
+                    >
                       {logo?.text}
                     </Typography>
                   </Box>
@@ -73,21 +79,21 @@ const PowerProjects = ({ data }) => {
       <RenderText
         title={first_text?.text}
         logos={first_text?.logos}
-        maxWidth={'1100px'}
+        maxWidth={{ xs: '400px', md: '680px', lg: '850px' }}
         scrollDirection={'right'}
         top={'73%'}
       />
       <RenderText
         title={second_text?.text}
         logos={second_text?.logos}
-        maxWidth={'1350px'}
+        maxWidth={{ xs: '550px', md: '800px', lg: '1150px' }}
         scrollDirection={'left'}
         top={'82%'}
       />
       <RenderText
         title={third_text?.text}
         logos={third_text?.logos}
-        maxWidth={'1750px'}
+        maxWidth={'1400px'}
         scrollDirection={'right'}
         top={{ xs: '95%', md: '82%' }}
       />
