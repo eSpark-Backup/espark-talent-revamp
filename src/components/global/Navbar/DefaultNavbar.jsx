@@ -5,12 +5,13 @@ import Popper from '@mui/material/Popper';
 import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
 import DropItems from './DropItems';
-import HireLinks from '@/components/homepage/HireLinks';
 import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import GlobalLayout from './GlobalLayout';
 import RemoteLayout from './RemoteLayout';
 import { NAVBAR_STYLE } from '@/constants/global/header';
 import NavbarItems from './NavbarItems';
+import NewHireLinks from '@/components/homepage/NewHireLinks';
+// import HireLinks from '@/components/homepage/HireLinks';
 
 function DefaultNavbar({
   routes,
@@ -34,7 +35,8 @@ function DefaultNavbar({
     growBoxStyle,
     navbarItemStyle,
     dropdownItemsStyle,
-    hireLinkStyle,
+    // old hire links styles
+    // hireLinkStyle,
     remoteLayoutStyle,
     globalLayoutStyle,
   } = NAVBAR_STYLE || {};
@@ -116,7 +118,9 @@ function DefaultNavbar({
     <Popper
       anchorEl={dropdown}
       open={Boolean(dropdown)}
-      placement={dropdownName === 'Services' ? 'bottom' : 'top-start'}
+      placement={'top-start'}
+      // old hiring pages style
+      // placement={dropdownName === 'Services' ? 'bottom' : 'top-start'}
       transition
       sx={popperStyle(dropdownName)}
       onMouseEnter={() => setDropdown(dropdownEl)}
@@ -128,11 +132,18 @@ function DefaultNavbar({
             <Box borderRadius="lg" sx={{ width: 'auto', boxShadow: 3 }}>
               <Box borderRadius="lg" sx={growBoxStyle(dropdownName)}>
                 {dropdownName === 'Services' ? (
-                  <HireLinks
-                    data={HIRE_A_TALENT_MENU}
-                    setDropdown={setDropdown}
-                    styles={hireLinkStyle}
-                  />
+                  <>
+                    <NewHireLinks
+                      data={HIRE_A_TALENT_MENU}
+                      setDropdown={setDropdown}
+                    />
+                    {/* // old hiring pages style */}
+                    {/* <HireLinks
+                      data={HIRE_A_TALENT_MENU}
+                      setDropdown={setDropdown}
+                      styles={hireLinkStyle}
+                    /> */}
+                  </>
                 ) : (
                   routes
                     ?.find(({ name }) => name === dropdownName)
