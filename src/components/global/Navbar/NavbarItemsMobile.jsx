@@ -35,9 +35,16 @@ const NavbarItemsMobile = ({
     <Box px={2} py={1}>
       {collapse ? (
         <>
-          <Typography py={1} px={0.4} textTransform="capitalize" sx={nameStyle}>
-            {name}
-          </Typography>
+          {name && (
+            <Typography
+              py={1}
+              px={0.4}
+              textTransform="capitalize"
+              sx={nameStyle}
+            >
+              {name}
+            </Typography>
+          )}
           {collapse?.map(renderItem)}
         </>
       ) : (
