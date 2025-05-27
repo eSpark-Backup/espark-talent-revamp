@@ -2,162 +2,184 @@ const routes = [
   {
     name: 'Services',
     icon: '/images/header/arrow.svg',
+    // new links
     collapse: [
       {
-        name: 'Trending',
         dropdown: true,
         collapse: [
           {
-            name: 'UI UX Designer',
-            route: '/hire-ui-ux-designers',
+            name: 'Hire Dedicated Developers',
+            route: '/hire-dedicated-developers',
           },
           {
-            name: 'Full Stack Developer',
-            route: '/hire-full-stack-developers',
+            name: 'Offshore Development Center',
+            route: '/offshore-development-center',
           },
           {
-            name: 'MEAN Stack Developer',
-            route: '/hire-mean-stack-developers',
-          },
-          {
-            name: 'MERN Stack Developer',
-            route: '/hire-mern-stack-developers',
-          },
-          {
-            name: 'DevOps Engineer',
-            route: '/hire-devops-engineers',
-          },
-          {
-            name: 'Fintech Developer',
-            route: '/hire-fintech-developers',
-          },
-          {
-            name: 'Software Developer',
-            route: '/hire-software-developers',
-          },
-          {
-            name: 'QA Engineer',
-            route: '/hire-qa-engineers',
-          },
-        ],
-      },
-      {
-        name: 'Front-End Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'AngularJS Developer',
-            route: '/hire-angular-developers',
-          },
-          {
-            name: 'ReactJS Developer',
-            route: '/hire-reactjs-developers',
-          },
-          {
-            name: 'JavaScript Developer',
-            route: '/hire-javascript-developers',
-          },
-          {
-            name: 'NextJS Developer',
-            route: '/hire-nextjs-developers',
-          },
-        ],
-      },
-      {
-        name: 'Mobile App Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Android Developer',
-            route: '/hire-android-developers',
-          },
-          {
-            name: 'Flutter Developer',
-            route: '/hire-flutter-developers',
-          },
-          {
-            name: 'React Native Developer',
-            route: '/hire-react-native-developers',
-          },
-        ],
-      },
-      {
-        name: 'Back-End Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'ASP .NET Developer',
-            route: '/hire-asp-dot-net-developers',
-          },
-          {
-            name: 'PHP Developer',
-            route: '/hire-php-developers',
-          },
-          {
-            name: 'Python Developer',
-            route: '/hire-python-developers',
-          },
-          {
-            name: 'NodeJS Developer',
-            route: '/hire-nodejs-developers',
-          },
-        ],
-      },
-      {
-        name: 'Embedded Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Firmware Developer',
-            route: '/hire-firmware-developers',
-          },
-          {
-            name: 'PCB Designer',
-            route: '/hire-pcb-designers',
-          },
-          {
-            name: 'Embedded System Engineer',
-            route: '/hire-embedded-system-engineers',
-          },
-        ],
-      },
-      {
-        name: 'Digital Marketer',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Social Media Expert',
-            route: '/hire-social-media-experts',
-          },
-          {
-            name: 'PPC Specialist',
-            route: '/hire-ppc-specialists',
-          },
-          {
-            name: 'SEO Expert',
-            route: '/hire-seo-experts',
-          },
-          {
-            name: 'Performance Marketer',
-            route: '/hire-performance-marketers',
-          },
-        ],
-      },
-      {
-        name: 'Ecommerce Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'WordPress Developer',
-            route: '/hire-wordpress-developers',
-          },
-          {
-            name: 'Shopify Developer',
-            route: '/hire-shopify-developers',
+            name: 'Fixed Price Projects',
+            route: '/Fixed Price Projects',
           },
         ],
       },
     ],
+
+    // old links
+    // collapse: [
+    //   {
+    //     name: 'Trending',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'UI UX Designer',
+    //         route: '/hire-ui-ux-designers',
+    //       },
+    //       {
+    //         name: 'Full Stack Developer',
+    //         route: '/hire-full-stack-developers',
+    //       },
+    //       {
+    //         name: 'MEAN Stack Developer',
+    //         route: '/hire-mean-stack-developers',
+    //       },
+    //       {
+    //         name: 'MERN Stack Developer',
+    //         route: '/hire-mern-stack-developers',
+    //       },
+    //       {
+    //         name: 'DevOps Engineer',
+    //         route: '/hire-devops-engineers',
+    //       },
+    //       {
+    //         name: 'Fintech Developer',
+    //         route: '/hire-fintech-developers',
+    //       },
+    //       {
+    //         name: 'Software Developer',
+    //         route: '/hire-software-developers',
+    //       },
+    //       {
+    //         name: 'QA Engineer',
+    //         route: '/hire-qa-engineers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Front-End Developers',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'AngularJS Developer',
+    //         route: '/hire-angular-developers',
+    //       },
+    //       {
+    //         name: 'ReactJS Developer',
+    //         route: '/hire-reactjs-developers',
+    //       },
+    //       {
+    //         name: 'JavaScript Developer',
+    //         route: '/hire-javascript-developers',
+    //       },
+    //       {
+    //         name: 'NextJS Developer',
+    //         route: '/hire-nextjs-developers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Mobile App Developers',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'Android Developer',
+    //         route: '/hire-android-developers',
+    //       },
+    //       {
+    //         name: 'Flutter Developer',
+    //         route: '/hire-flutter-developers',
+    //       },
+    //       {
+    //         name: 'React Native Developer',
+    //         route: '/hire-react-native-developers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Back-End Developers',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'ASP .NET Developer',
+    //         route: '/hire-asp-dot-net-developers',
+    //       },
+    //       {
+    //         name: 'PHP Developer',
+    //         route: '/hire-php-developers',
+    //       },
+    //       {
+    //         name: 'Python Developer',
+    //         route: '/hire-python-developers',
+    //       },
+    //       {
+    //         name: 'NodeJS Developer',
+    //         route: '/hire-nodejs-developers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Embedded Developers',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'Firmware Developer',
+    //         route: '/hire-firmware-developers',
+    //       },
+    //       {
+    //         name: 'PCB Designer',
+    //         route: '/hire-pcb-designers',
+    //       },
+    //       {
+    //         name: 'Embedded System Engineer',
+    //         route: '/hire-embedded-system-engineers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Digital Marketer',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'Social Media Expert',
+    //         route: '/hire-social-media-experts',
+    //       },
+    //       {
+    //         name: 'PPC Specialist',
+    //         route: '/hire-ppc-specialists',
+    //       },
+    //       {
+    //         name: 'SEO Expert',
+    //         route: '/hire-seo-experts',
+    //       },
+    //       {
+    //         name: 'Performance Marketer',
+    //         route: '/hire-performance-marketers',
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Ecommerce Developers',
+    //     dropdown: true,
+    //     collapse: [
+    //       {
+    //         name: 'WordPress Developer',
+    //         route: '/hire-wordpress-developers',
+    //       },
+    //       {
+    //         name: 'Shopify Developer',
+    //         route: '/hire-shopify-developers',
+    //       },
+    //     ],
+    //   },
+    // ],
   },
   {
     name: 'Solutions',
