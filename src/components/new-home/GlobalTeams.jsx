@@ -21,7 +21,7 @@ const GlobalTeams = ({ data }) => {
 
   const BreakBorderSlider = () => {
     return (
-      <Box maxWidth={1472} mx="auto" my={3}>
+      <Box maxWidth={1400} mx="auto" my={3}>
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
