@@ -15,13 +15,17 @@ export const NAVBAR_STYLE = {
   popperStyle: (dropdownName) => ({
     zIndex: 1002,
     mx: 'auto',
-    width: dropdownName === 'Services' ? '100%' : 'auto',
+    width: dropdownName === 'Services' ? 'auto' : 'auto',
+    // old hiring pages style
+    // width: dropdownName === 'Services' ? '100%' : 'auto',
   }),
   growStyle: (dropdownName) => ({
     background: !dropdownName
       ? 'transparent'
       : dropdownName === 'Services'
-        ? '#F7F8FB'
+        ? // old hiring pages style
+          // ? '#F7F8FB'
+          '#F5F8FFFA'
         : '#fff',
     borderRadius: '11px',
     boxShadow: '0px 0px 4px 0px #00000040',
