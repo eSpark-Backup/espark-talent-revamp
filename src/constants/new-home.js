@@ -501,7 +501,7 @@ export const EXPERT_TEAM_DATA = {
         maxWidth: '80%',
       },
       '@media (max-width: 374px)': {
-        maxWidth: '65%',
+        maxWidth: '68%',
       },
     }),
     imageStyle: (empIndex) => ({
@@ -521,9 +521,9 @@ export const EXPERT_TEAM_DATA = {
       fontWeight: 500,
     },
     mainLayoutStyle: {
-      width: { xs: '95%', md: '96.2%' },
+      width: { xs: '94%', lg: '92%' },
       mx: 'auto',
-      maxWidth: '1646px',
+      maxWidth: '1400px',
       borderRadius: '33px',
       color: '#fff',
       py: { xs: 5, sm: 6 },
@@ -538,7 +538,7 @@ export const EXPERT_TEAM_DATA = {
       px: 3,
     },
     titleTypographyStyle: {
-      fontSize: { xs: '18px', sm: '30px', md: '45px', lg: '65px' },
+      fontSize: { xs: '22px', sm: '30px', md: '45px', lg: '65px' },
       fontWeight: 600,
       lineHeight: { xs: 'auto', lg: '78.66px' },
     },
@@ -563,7 +563,7 @@ export const HIRING_DATA = {
   image: '/images/new-home/flexible-models/underline.png',
   items: [
     {
-      title: `Hire Dedicated<br />Developers`,
+      title: `Hire Dedicated Developers`,
       buttonText: 'Find Your Developer',
       link: '/hire-dedicated-developers',
       points: [
@@ -573,7 +573,7 @@ export const HIRING_DATA = {
       ],
     },
     {
-      title: `Offshore<br />Development Center`,
+      title: `Offshore Development Center`,
       buttonText: 'Explore ODC Options',
       link: '/offshore-development-center',
       points: [
@@ -589,7 +589,7 @@ export const HIRING_DATA = {
       ],
     },
     {
-      title: `Fixed Price<br />Projects`,
+      title: `Fixed Price Projects`,
       buttonText: 'Start Your Project',
       link: '/fixed-price-projects',
       points: [
@@ -612,6 +612,9 @@ export const HIRING_DATA = {
       py: { xs: 3, md: 5 },
     },
     innerBoxStyle: {
+      mx: 'auto',
+      width: { xs: '100%', md: '95%', lg: '93%' },
+      maxWidth: '1400px',
       pt: 3.5,
       px: 2,
     },
@@ -624,16 +627,16 @@ export const HIRING_DATA = {
     },
     buttonBoxStyle: {
       ml: 1.5,
-      width: { xs: '15px', sm: '19px', md: '23px', xl: '27px' },
+      width: { xs: '15px', sm: '16px' },
     },
     buttonStyle: {
       width: '100%',
-      height: { xs: '45px', sm: '55px', lg: '70px', xl: '89px' },
+      height: { xs: '43px', md: '45px', lg: '55px' },
       color: '#fff',
       backgroundColor: '#09114A',
       px: 1,
       borderRadius: '14px',
-      fontSize: { xs: '14px', sm: '18px', lg: '22px', xl: '26px' },
+      fontSize: { xs: '14px', sm: '15px', md: '16px' },
       textWrap: 'nowrap',
       position: 'relative',
       bottom: 0,
@@ -646,23 +649,28 @@ export const HIRING_DATA = {
       flexDirection: 'column',
       justifyContent: 'space-between',
       maxWidth: { xs: '380px', md: '482px' },
-      minHeight: { xs: '260px', sm: '270px', lg: '440px', xl: '490px' },
       borderRadius: '17.7px',
       border: '1px solid #2870C380',
       px: { xs: 2, sm: 3 },
       py: { xs: 2, sm: 3 },
-      '@media(min-width:1024px) and (max-width:1399px)': {
-        minHeight: 'clamp(340px, 31vw, 410px)',
-      },
     },
     cardHeaderStyle: {
       color: '#111845',
-      fontSize: 'clamp(22px, 2.4vw, 36px)',
+      fontSize: {
+        xs: 'calc(14px + 0.4vw)',
+        md: 'calc(14px + 0.3vw)',
+        lg: 'calc(14px + 0.5vw)',
+      },
+      // fontSize: 'clamp(18px, 2.4vw, 26px)',
       fontWeight: 600,
       width: '100%',
-      minHeight: { xs: 'auto', lg: '108px' },
-      '@media(min-width:1022px) and (max-width: 1399px)': {
-        minHeight: 'clamp(80px, 1.9vw, 108px)',
+      // textWrap: 'nowrap',
+      // minHeight: { xs: 'auto', lg: '108px' },
+      '@media(min-width:1024px) and (max-width: 1100px)': {
+        fontSize: 'calc(14px + 0.2vw)',
+      },
+      '@media(min-width: 1440px)': {
+        fontSize: '22px',
       },
     },
     ulStyle: {
@@ -671,11 +679,19 @@ export const HIRING_DATA = {
     listStyle: {
       color: '#111845',
       maxWidth: '300px',
-      fontSize: 'clamp(17px, 1.8vw, 25px)',
+      mb: 0.8,
+      fontSize: {
+        xs: 'calc(12px + 0.4vw)',
+        md: 'calc(12px + 0.2vw)',
+        lg: 'calc(11px + 0.5vw)',
+      },
       fontWeight: 500,
+      '@media(min-width: 1440px)': {
+        fontSize: '18px',
+      },
     },
     cardImageStyle: {
-      width: { xs: '55px', sm: '75px', lg: '85px' },
+      width: { xs: '45px', sm: '55px' },
       height: 'auto',
       mb: 0.5,
     },
@@ -856,7 +872,13 @@ export const EXPERTIES_DATA = {
       fontWeight: 400,
       lineHeight: 2.5,
       color: '#000000',
+      cursor: 'pointer',
+      display: 'inline-block',
+      textDecoration: 'underline',
       my: hire_remote_developers ? 0.5 : 0,
+      '&:hover': {
+        color: '#029894',
+      },
     }),
   },
 };
@@ -1401,9 +1423,9 @@ export const POWER_PROJECT_DATA = {
       fontWeight: 600,
       mb: { xs: 5, sm: 5, md: 2, lg: 0.5 },
       fontSize: {
-        xs: 'calc(20px + 6.36vw)',
-        lg: 'calc(20px + 7.56vw)',
-        xl: '165px',
+        xs: 'calc(17px + 3.36vw)',
+        md: 'calc(20px + 6.36vw)',
+        xl: '135px',
       },
       color: '#111845',
     },
@@ -1471,7 +1493,7 @@ export const ENTIRE_TEAM = {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      maxWidth: '1570px',
+      maxWidth: '1400px',
       mx: 'auto',
     },
     titleStyle: {
@@ -1500,8 +1522,8 @@ export const ENTIRE_TEAM = {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: '#DDE8FF',
-      maxWidth: { xs: '400px', md: '799px' },
-      maxHeight: { xs: 'auto', lg: '656px' },
+      maxWidth: { xs: '400px', md: '659px', lg: '799px' },
+      maxHeight: { xs: 'auto', md: 'auto', lg: '656px' },
     },
     listBoxStyle: {
       display: 'flex',
@@ -1533,10 +1555,10 @@ export const ENTIRE_TEAM = {
     },
     listHeadingStyle: {
       fontSize: {
-        xs: '16px',
-        sm: '19px',
-        md: '22px',
-        lg: '28px',
+        xs: '15px',
+        sm: '18px',
+        md: '19px',
+        lg: '25px',
       },
       fontWeight: 600,
       color: '#232E73',
@@ -1630,7 +1652,7 @@ export const GLOBAL_TEAMS = {
       alignItems: 'center',
     },
     slideImageStyle: {
-      width: { xs: '100%', md: 297 },
+      width: { xs: '96%', md: 297 },
       height: { xs: 'auto', md: 407 },
       objectFit: 'cover',
       borderRadius: '30px',
@@ -1716,13 +1738,13 @@ export const TRUSTED_PLATFORM = {
     },
     reviewTitleStyle: {
       color: '#001C63',
-      fontSize: { xs: '40px', sm: '60px', md: '70px', lg: '112px' },
+      fontSize: { xs: '40px', sm: '60px', md: '70px', lg: '100px' },
       fontWeight: 400,
       lineHeight: 1,
     },
     reviewTextStyle: {
       color: '#000000CC',
-      fontSize: { xs: '18px', sm: '20px', md: '21px', lg: '28px' },
+      fontSize: { xs: '18px', sm: '20px', md: '21px', lg: '25px' },
       fontWeight: 500,
       textAlign: 'center',
     },
@@ -1842,12 +1864,15 @@ export const avatarStyle = {
 export const titleStyle = {
   color: '#001C63',
   fontSize: {
-    xs: '19.27px',
-    sm: '24px',
-    lg: '28.83px',
+    xs: 'calc(14px + 0.4vw)',
+    md: 'calc(15px + 0.3vw)',
+    lg: 'calc(16px + 0.5vw)',
   },
   fontWeight: 600,
   lineHeight: { md: 'auto', lg: 1.5 },
+  '@media(min-width: 1441px)': {
+    fontSize: '23px',
+  },
 };
 
 export const contentStyle = {
@@ -1860,17 +1885,18 @@ export const paragraphStyle = {
   color: '#001C63',
   fontSize: {
     xs: '12px',
-    sm: '14px',
+    sm: '13px',
+    md: '15px',
     lg: '16px',
   },
   fontWeight: 400,
-  lineHeight: '27px',
+  lineHeight: { xs: '22px', md: '27px' },
 };
 
 export const PricingDefferenceStyles = {
   containerStyle: {
-    width: '100%',
-    maxWidth: 1460,
+    width: { xs: '97%', lg: '95%', xl: '100%' },
+    maxWidth: 1400,
     margin: 'auto',
     padding: '8px 0',
     position: 'relative',
@@ -1886,17 +1912,19 @@ export const PricingDefferenceStyles = {
     width: '100%',
     height: '100%',
     maxWidth: '467px',
-    minHeight: { xs: '215px', md: '250px', lg: '280px' },
+    minHeight: { xs: '215px', md: '220px', lg: '240px' },
     backgroundColor: '#FFFFFF',
     border: '0.9px solid #DEDCDC',
     boxShadow: '0px 4px 25.4px rgba(0, 0, 0, 0.08)',
     borderRadius: '14px',
-    mx: 1.8,
+    mx: { xs: 1, lg: 1.8 },
     px: 2.2,
-    py: { xs: 1.5, sm: 1 },
+    py: { xs: 1.5, sm: 2.2 },
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    '@media(min-width: 1441px) and (max-width: 1919px) ': {
+      minHeight: '270px',
+    },
   },
   imageStyle: {
     width: { xs: '45px', sm: '55px', lg: '80px' },

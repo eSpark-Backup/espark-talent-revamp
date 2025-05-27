@@ -20,12 +20,12 @@ const TrustedPlatform = ({ data }) => {
 
   const BreakBorderSlider = () => {
     return (
-      <Box maxWidth={1472} mx="auto" py={{ xs: 6, md: 8 }}>
+      <Box maxWidth={1400} mx="auto" py={{ xs: 6, md: 8 }}>
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView={'auto'}
-          autoplay={{ delay: 0, disableOnInteraction: true }}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
           speed={3000}
           grabCursor={true}
           breakpoints={{
