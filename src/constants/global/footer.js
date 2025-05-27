@@ -129,7 +129,7 @@ export const ORGANIZE_TEAM_DATA = {
       height: '100%',
       py: { xs: 3, md: 0, lg: 0 },
       minHeight: { xs: 'auto', md: '350px', lg: '360px' },
-      maxWidth: '1100px',
+      maxWidth: { xs: '1100px', lg: '1100px' },
       backgroundImage: 'url(/images/new-home/organize-team/ok.png)',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -142,18 +142,28 @@ export const ORGANIZE_TEAM_DATA = {
       backdropFilter: 'blur(63.2px)',
       WebkitBackdropFilter: 'blur(63.2px)',
       boxShadow: '0px 0px 72px rgba(27, 232, 208, 0.1)',
+      border: '1px solid #1BE8D0',
+      '@media(min-width: 1920px)': {
+        maxWidth: '1438px',
+        minHeight: '453px',
+      },
+      '@media(min-width: 1441px) and (max-width: 1919px)': {
+        maxWidth: '75%',
+        minHeight: 'clamp(360px, 10vw + 250px, 453px)',
+      },
     },
     titleStyle: {
       fontSize: {
         xs: '5.73vw',
         md: '4.49vw',
+        lg: '4.49vw',
       },
       fontWeight: 500,
       color: '#ffff',
       textAlign: 'center',
       textWrap: { md: 'nowrap' },
-      '@media(min-width:1440px)': {
-        fontSize: '64px',
+      '@media(min-width:1920px)': {
+        fontSize: '85px',
       },
     },
     titleAndImagesBoxStyle: {
@@ -188,13 +198,16 @@ export const ORGANIZE_TEAM_DATA = {
         xs: '12.5px',
         sm: '14.5px',
         md: '16px',
-        lg: '21px',
+        lg: 'clamp(20px, 2.5vw, 21px)',
       },
       fontWeight: 400,
       color: '#ffff',
       textAlign: 'center',
       maxWidth: { xs: '300px', md: '65%', lg: '100%' },
       px: 1.5,
+      '@media(min-width:1441px)': {
+        fontSize: 'clamp(21px, calc(3vw - 25px), 29px)',
+      },
     },
     buttonStyle: {
       mb: 1,
@@ -229,7 +242,7 @@ export const FOOTER_STYLE = {
     width: '100%',
     height: '100%',
     mx: 'auto',
-    maxWidth: { xs: '1080px' },
+    maxWidth: { xs: '1080px', xl: '1438px' },
     maxHeight: { xs: '100%', lg: '380px' },
     display: 'flex',
     flexDirection: 'row',
@@ -238,6 +251,9 @@ export const FOOTER_STYLE = {
     px: { xs: 1, md: 0.5 },
     py: { xs: 2.5, lg: 3.5 },
     flexWrap: 'nowrap',
+    '@media(min-width:1441px) and (max-width: 1920px)': {
+      maxWidth: '75%',
+    },
     '@media(min-width:768px) and (max-width: 1399px)': {
       maxWidth: '1080px',
       justifyContent: 'start',
@@ -254,7 +270,7 @@ export const FOOTER_STYLE = {
   logoSectionBoxStyle: {
     width: {
       xs: '100%',
-      lg: `calc(100% - 700px)`,
+      lg: `calc(100% - 750px)`,
       '@media(min-width:1024px) and (max-width: 1399px)': {
         width: 'calc(100% - 700px)',
       },
