@@ -8,8 +8,9 @@ import {
 } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { Pagination } from 'swiper/modules';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const HomePageExpertTeam = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -89,9 +90,11 @@ const HomePageExpertTeam = ({ data }) => {
           </Box>
         ) : (
           <Swiper
-            pagination={{
-              clickable: true,
-            }}
+            grabCursor={true}
+            speed={3000}
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
             direction={isMin ? 'horizontal' : 'vertical'}
             breakpoints={{
               0: {
@@ -104,7 +107,6 @@ const HomePageExpertTeam = ({ data }) => {
                 slidesPerView: 3,
               },
             }}
-            modules={[Pagination]}
             style={containerStyle}
           >
             {dapartment?.map(renderSlide)}
