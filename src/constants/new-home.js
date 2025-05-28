@@ -613,10 +613,10 @@ export const HIRING_DATA = {
     },
     innerBoxStyle: {
       mx: 'auto',
-      width: { xs: '100%', md: '95%', lg: '93%' },
+      width: { xs: '100%', md: '96%', lg: '93%' },
       maxWidth: '1400px',
       pt: 3.5,
-      px: 2,
+      px: { xs: 2, md: 1, lg: 0 },
     },
     titleBoxStyle: { pb: 4, px: 3 },
     titleStyle: {
@@ -661,11 +661,9 @@ export const HIRING_DATA = {
         md: 'calc(14px + 0.3vw)',
         lg: 'calc(14px + 0.5vw)',
       },
-      // fontSize: 'clamp(18px, 2.4vw, 26px)',
       fontWeight: 600,
       width: '100%',
-      // textWrap: 'nowrap',
-      // minHeight: { xs: 'auto', lg: '108px' },
+
       '@media(min-width:1024px) and (max-width: 1100px)': {
         fontSize: 'calc(14px + 0.2vw)',
       },
@@ -1486,10 +1484,9 @@ export const ENTIRE_TEAM = {
   styles: {
     mainBoxStyle: {
       flexGrow: 1,
-      width: '100%',
+      width: { xs: '90%', md: '95%' },
       height: '100%',
       display: 'flex',
-      px: { xs: 1.5, sm: 3, md: 5 },
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
@@ -1896,7 +1893,7 @@ export const paragraphStyle = {
 export const PricingDefferenceStyles = {
   containerStyle: {
     width: { xs: '97%', lg: '95%', xl: '100%' },
-    maxWidth: 1400,
+    maxWidth: 1428,
     margin: 'auto',
     padding: '8px 0',
     position: 'relative',
