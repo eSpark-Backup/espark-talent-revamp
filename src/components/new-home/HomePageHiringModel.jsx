@@ -99,7 +99,7 @@ const HomePageHiringModel = ({ data }) => {
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 25,
+                  spaceBetween: 20,
                 },
                 800: {
                   slidesPerView: 2.2,

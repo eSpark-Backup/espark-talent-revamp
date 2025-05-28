@@ -144,7 +144,7 @@ export const ORGANIZE_TEAM_DATA = {
       boxShadow: '0px 0px 72px rgba(27, 232, 208, 0.1)',
       border: '1px solid #1BE8D0',
       '@media(min-width: 1920px)': {
-        maxWidth: '1438px',
+        maxWidth: '1400px',
         minHeight: '453px',
       },
       '@media(min-width: 1441px) and (max-width: 1919px)': {
@@ -242,7 +242,7 @@ export const FOOTER_STYLE = {
     width: '100%',
     height: '100%',
     mx: 'auto',
-    maxWidth: { xs: '1080px', xl: '1438px' },
+    maxWidth: { xs: '1080px', xl: '1400px' },
     maxHeight: { xs: '100%', lg: '380px' },
     display: 'flex',
     flexDirection: 'row',
@@ -252,7 +252,7 @@ export const FOOTER_STYLE = {
     py: { xs: 2.5, lg: 3.5 },
     flexWrap: 'nowrap',
     '@media(min-width:1441px) and (max-width: 1920px)': {
-      maxWidth: '75%',
+      maxWidth: '73%',
     },
     '@media(min-width:768px) and (max-width: 1399px)': {
       maxWidth: '1080px',
