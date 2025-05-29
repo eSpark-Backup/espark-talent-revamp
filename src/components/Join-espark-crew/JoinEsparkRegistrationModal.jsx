@@ -3,7 +3,9 @@ import {
   PERSONAL_INFO_FIELDS,
   URL_EXPRESSION,
   REGISTRATION_FORM_DATA,
+  APPLY_FOR_FIELDS2,
 } from '@/constants/join-espark-crew';
+
 import { Box, Button, Modal, Stack, Tooltip, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles';
@@ -16,6 +18,7 @@ import TextArea from '../global/Inputs/TextArea';
 import ImgUploader from '../global/Inputs/ImageUpload';
 import ConfirmCloseModal from './ConfirmCloseModal';
 import { isObjectFilled } from '@/utils/cors';
+import Image from 'next/image';
 
 const JoinEsparkRegistrationModal = ({
   open,
@@ -205,29 +208,8 @@ const JoinEsparkRegistrationModal = ({
                               label={item?.label}
                               placeholder={item?.placeholder}
                               tooltip={item?.tooltip}
-                              options={
-                                item?.name === 'subField'
-                                  ? item?.options[form?.field?.value]
-                                  : item?.name === 'position'
-                                    ? item?.options[form?.subField?.value]
-                                    : item?.options
-                              }
+                              options={item?.options}
                               onChange={handleChange}
-                              className={
-                                item?.name === 'subField' && !form.field
-                                  ? 'hide'
-                                  : item?.name === 'position' && !form.subField
-                                    ? 'hide'
-                                    : item?.name === 'position' &&
-                                        form.subField &&
-                                        form?.field?.value !==
-                                          'Software Engineering'
-                                      ? 'hide'
-                                      : item?.name === 'city' &&
-                                          form?.country?.value !== 'pakistan'
-                                        ? 'hide'
-                                        : ''
-                              }
                             />
                           ) : item?.type === 'textarea' ? (
                             <TextArea
@@ -342,8 +324,9 @@ const JoinEsparkRegistrationModal = ({
                         </Tooltip>
                       </Stack>
                       {form.cv !== '' && (
-                        <img
+                        <Image
                           width={25}
+                          height={25}
                           src={
                             (
                               typeof form.cv === 'string'
@@ -418,7 +401,8 @@ const JoinEsparkRegistrationModal = ({
                 <Box
                   sx={{
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'start',
+                    gap: '20px',
                     flexWrap: 'wrap',
                     border: '1px solid #ccc',
                     padding: '10px',
@@ -449,28 +433,39 @@ const JoinEsparkRegistrationModal = ({
                         value={form[item?.name]}
                         placeholder={item?.placeholder}
                         tooltip={item?.tooltip}
-                        options={
-                          item?.name === 'subField'
-                            ? item?.options[form?.field?.value]
-                            : item?.name === 'position'
-                              ? item?.options[form?.subField?.value]
-                              : item?.options
-                        }
+                        options={item?.options}
                         onChange={handleChange}
-                        className={
-                          item?.name === 'subField' && !form.field
-                            ? 'hide'
-                            : item?.name === 'position' && !form.subField
-                              ? 'hide'
-                              : item?.name === 'position' &&
-                                  form.subField &&
-                                  form?.field?.value !== 'Software Engineering'
-                                ? 'hide'
-                                : ''
-                        }
                       />
                     </Box>
                   ))}
+                  {form?.field?.value &&
+                    APPLY_FOR_FIELDS2.map((item, index) => (
+                      <Box
+                        key={index}
+                        sx={{
+                          [theme.breakpoints.up('xs')]: {
+                            width: '100%',
+                          },
+
+                          [theme.breakpoints.up('md')]: {
+                            width:
+                              item?.name === 'city' ||
+                              item?.name === 'job_type' ||
+                              item.name === 'projects'
+                                ? '100%'
+                                : '30%',
+                          },
+                        }}
+                      >
+                        <CustomInput
+                          name={item.name}
+                          value={form[item.name]}
+                          placeholder={item.placeholder}
+                          onChange={handleChange}
+                          required
+                        />
+                      </Box>
+                    ))}
                 </Box>
               </Box>
             </Box>
