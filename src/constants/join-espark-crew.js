@@ -1261,22 +1261,15 @@ export const APPLY_FOR_FIELDS = [
     tooltip: 'Please select the field you are interested in.',
     options: FIELDS,
   },
+];
+export const APPLY_FOR_FIELDS2 = [
   {
-    type: 'select',
-    name: 'subField',
-    placeholder: 'Select type',
-    tooltip: 'Please select the sub-field you are interested in.',
-    options: SUB_FIELDS,
-  },
-  {
-    type: 'select',
+    type: 'text',
     name: 'position',
-    placeholder: 'Select type',
+    placeholder: 'Add Position (You are interested in)',
     tooltip: 'Please select the position you are interested in.',
-    options: POSITIONS_BY_SUB_FIELD,
   },
 ];
-
 export const ABOUT = [
   'Doing Great work energizes you',
   'You bring Out of the box Ideas',
@@ -1300,7 +1293,6 @@ export const REGISTRATION_FORM_SUCCESS_MODAL_DATA = {
 
 export const APPLY_FOR_ENUMS = {
   FIELDS: 'field',
-  SUB_FIELDS: 'subField',
   POSITION: 'position',
 };
 

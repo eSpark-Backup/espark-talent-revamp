@@ -58,7 +58,6 @@ export default function JoinEsparkCrewPage() {
     projects: '',
     city: '',
     field: '',
-    subField: '',
     position: '',
     tags: '',
     cv: '',

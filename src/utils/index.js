@@ -19,15 +19,6 @@ export const handleChangeJoinCrew = (name, value, setState) => {
     case 'field':
       setState((prev) => ({
         ...prev,
-        subField: '',
-        position: '',
-        [name]: value,
-      }));
-      break;
-    case 'subField':
-      setState((prev) => ({
-        ...prev,
-        position: '',
         [name]: value,
       }));
       break;
@@ -62,7 +53,6 @@ export const handleEmptyJoinCrew = (setForm) => {
     projects: '',
     city: '',
     field: '',
-    subField: '',
     position: '',
     tags: '',
     cv: '',
@@ -162,13 +152,14 @@ export const handleSubmitJoinCrew = async (
     form?.cv === '' ||
     form?.field === '' ||
     form?.field === null ||
-    form?.subField === '' ||
-    form?.subField === null ||
     form?.job_type === '' ||
     form?.job_type === null ||
     form?.gender === null ||
     form?.gender === '' ||
-    form?.projects === ''
+    form?.projects === null ||
+    form?.projects === '' ||
+    form?.position === null ||
+    form?.position === ''
   ) {
     toast?.error('All Fields Are Required');
     setLoading(false);
@@ -177,6 +168,7 @@ export const handleSubmitJoinCrew = async (
 
   // Create a copy of the form object and modify it as needed
   const updatedForm = { ...form };
+  console.log(updatedForm);
   if (updatedForm?.country?.value === 'pakistan') {
     if (updatedForm?.city === '' || updatedForm?.city === null) {
       toast?.error('Please select the city');
@@ -232,12 +224,7 @@ export const handleSubmitJoinCrew = async (
         prefrences: updatedForm?.prefrences?.value,
         salary_expection: updatedForm?.salary_expection,
         tags: updatedForm?.tags,
-        subField: updatedForm?.position?.value
-          ? updatedForm?.subField?.value
-          : null,
-        position: !updatedForm?.position?.value
-          ? updatedForm?.subField?.value
-          : updatedForm?.position?.value,
+        position: updatedForm?.position,
         job_type: updatedForm?.job_type?.value,
         projects: updatedForm?.projects,
         cv: resumeKey ? resumeKey : updatedForm?.cv,
@@ -288,12 +275,7 @@ export const handleSubmitJoinCrew = async (
           prefrences: updatedForm?.prefrences?.value,
           salary_expection: updatedForm?.salary_expection,
           tags: updatedForm?.tags,
-          subField: updatedForm?.position?.value
-            ? updatedForm?.subField?.value
-            : null,
-          position: !updatedForm?.position?.value
-            ? updatedForm?.subField?.value
-            : updatedForm?.position?.value,
+          position: updatedForm?.position,
           job_type: updatedForm?.job_type?.value,
           projects: updatedForm?.projects,
           cv: resumeKey ? resumeKey : updatedForm?.cv,
