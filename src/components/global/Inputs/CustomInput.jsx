@@ -131,35 +131,40 @@ const CustomInput = ({
           sx={{
             display: 'flex',
             alignItems: 'center',
+            pt: !label && 1,
           }}
         >
-          <Typography
-            mb={1}
-            textAlign="left"
-            color={'secondary'}
-            sx={{ fontSize: { xs: '14px', md: '18px' } }}
-          >
-            {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
-          </Typography>
-          <Box
-            sx={{
-              width: '20px',
-              height: '30px',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <Tooltip placement="top-start" title={tooltip}>
-              <InfoIcon
-                sx={{
-                  color: (theme) => theme.palette.primary.main,
-                  marginLeft: '5px',
-                  fontSize: '13px',
-                  marginBottom: '12px',
-                }}
-              />
-            </Tooltip>
-          </Box>
+          {label && (
+            <Typography
+              mb={1}
+              textAlign="left"
+              color={'secondary'}
+              sx={{ fontSize: { xs: '14px', md: '18px' } }}
+            >
+              {label} {required && <span style={{ color: '#ff0000' }}>*</span>}
+            </Typography>
+          )}
+          {tooltip && (
+            <Box
+              sx={{
+                width: '20px',
+                height: '30px',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Tooltip placement="top-start" title={tooltip}>
+                <InfoIcon
+                  sx={{
+                    color: (theme) => theme.palette.primary.main,
+                    marginLeft: '5px',
+                    fontSize: '13px',
+                    marginBottom: '12px',
+                  }}
+                />
+              </Tooltip>
+            </Box>
+          )}
         </Box>
       )}
 
