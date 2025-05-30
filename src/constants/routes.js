@@ -17,7 +17,7 @@ const routes = [
           },
           {
             name: 'Fixed Price Projects',
-            route: '/Fixed Price Projects',
+            route: '/fixed-price-projects',
           },
         ],
       },
