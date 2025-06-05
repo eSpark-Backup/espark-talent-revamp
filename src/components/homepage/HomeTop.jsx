@@ -10,7 +10,7 @@ import {
   HIRING_DATA,
   POWER_PROJECT_DATA,
   TRUSTED_PLATFORM,
-} from '@/constants/new-home';
+} from '@/constants/home-page/new-home';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 import EmployeeBanner from '../employment/EmployeeBanner';

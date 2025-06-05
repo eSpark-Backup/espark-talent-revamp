@@ -12,7 +12,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { buttonStyle, READ_MORE } from '@/constants/blogs';
+import { buttonStyle, READ_MORE } from '@/constants/blogs/blogs';
 import { usePathname } from 'next/navigation';
 const {
   containerBoxStyle,

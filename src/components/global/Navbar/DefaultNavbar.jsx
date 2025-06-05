@@ -5,7 +5,7 @@ import Popper from '@mui/material/Popper';
 import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
 import DropItems from './DropItems';
-import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
+import { HIRE_A_TALENT_MENU } from '@/constants/home-page/homepage';
 import GlobalLayout from './GlobalLayout';
 import RemoteLayout from './RemoteLayout';
 import { NAVBAR_STYLE } from '@/constants/global/header';

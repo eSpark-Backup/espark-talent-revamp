@@ -8,7 +8,7 @@ import {
   OFFSHORE_DEVELOPMENT_CENTER_DATA,
   OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA,
   WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER,
-} from '@/constants/new-home';
+} from '@/constants/home-page/new-home';
 import DedicatedBanner from '../global/DedicatedBanner';
 import ProductJourney from './ProductJourney';
 import ExpertDeveloper from './ExpertDevelopers';

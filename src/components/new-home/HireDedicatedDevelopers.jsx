@@ -8,7 +8,7 @@ import {
   HIRE_DEDICATED_DEVELOPERS_DATA,
   OUR_AREA_OF_EXPERTISE_DATA,
   TALENT_ROSTER_DATA,
-} from '@/constants/new-home';
+} from '@/constants/home-page/new-home';
 import DedicatedBanner from '../global/DedicatedBanner';
 import OurAreaOfExpertise from './OurAreaOfExpertise';
 import EasySteps from './EasySteps';

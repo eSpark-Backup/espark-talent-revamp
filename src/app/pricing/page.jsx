@@ -1,8 +1,8 @@
 import React from 'react';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import PricingPage from '@/components/pricing/PricingPage';
-import { PRICING_DATA } from '@/constants/pricing';
+import { PRICING_DATA } from '@/constants/pricing/pricing';
 import { getMetadata } from '@/components/global/seo';
 
 const pathname = '/pricing';

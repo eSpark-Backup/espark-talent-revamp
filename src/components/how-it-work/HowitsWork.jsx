@@ -11,7 +11,7 @@ import OurService from '@/components/how-it-work/OurService';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import {
   CHOOSE_US,
   HR_FIRM_DATA,

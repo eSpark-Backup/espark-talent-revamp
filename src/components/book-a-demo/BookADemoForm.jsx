@@ -7,7 +7,7 @@ import {
   Book_A_Demo_Keys,
   bookADemoFormStyles,
   formBoxStyles,
-} from '@/constants/book-a-demo';
+} from '@/constants/book-a-demo/book-a-demo';
 import BasicModal from './BookADemoModal';
 import ErrorMessage from './ErrorMessage';
 import PhoneInput from 'react-phone-number-input';

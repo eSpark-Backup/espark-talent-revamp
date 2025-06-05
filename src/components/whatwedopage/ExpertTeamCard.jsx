@@ -23,7 +23,7 @@ import {
   paragraphStyle,
   slideStyle,
   titleStyle,
-} from '@/constants/what-we-do-page/expert-team-card';
+} from '@/styles/what-we-do-page/expert-team-card';
 
 const ExpertTeamCard = ({ teamData }) => {
   const prevRef = useRef(null);

@@ -10,7 +10,7 @@ import {
   KEYS,
   ABOUT,
   JOINT_ESPARK_CREW_HEADING_DATA,
-} from '@/constants/join-espark-crew';
+} from '@/constants/join-espark-crew/join-espark-crew';
 import {
   handleChangeJoinCrew,
   handleEmptyJoinCrew,

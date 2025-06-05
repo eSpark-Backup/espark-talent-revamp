@@ -8,7 +8,7 @@ import {
   FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA,
   PRODUCT_JOURNEY_DATA,
   CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA,
-} from '@/constants/new-home';
+} from '@/constants/home-page/new-home';
 import HighStakesProjects from './HighStakesProjects';
 import ProjectContract from './ProjectContract';
 import FrequetlyAskedQuestions from './FrequentlyAskedQuestions';

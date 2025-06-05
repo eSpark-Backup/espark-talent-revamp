@@ -25,7 +25,7 @@ import {
   paragraphStyle,
   slideStyle,
   titleStyle,
-} from '@/constants/what-we-do-page/professional-team';
+} from '@/styles/what-we-do-page/professional-team';
 
 const ProfessionalTeamCard = ({ teamData }) => {
   const prevRef = useRef(null);

@@ -10,7 +10,7 @@ import axios from 'axios';
 import { CountryCode } from '@/constants/global/CountryCodes';
 import { PopupModal } from 'react-calendly';
 import { partnerShipFormValidationSchema } from '@/schema/schema';
-import { PartnerFormData } from '@/constants/partnership';
+import { PartnerFormData } from '@/constants/partnership/partnership';
 
 const adminId = process?.env?.NEXT_PUBLIC_PARTNERS_ADMIN_EMAIL_ID;
 const adminTempleteId = process?.env?.NEXT_PUBLIC_PARTNERS_ADMIN_TEMPLETE_ID;

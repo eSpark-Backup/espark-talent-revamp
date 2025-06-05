@@ -1,6 +1,6 @@
 import React from 'react';
 import OffshoreDevelopmentCenter from '@/components/new-home/OffshoreDevelopmentCenter';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
 

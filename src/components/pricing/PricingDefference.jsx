@@ -11,7 +11,7 @@ import {
   PricingDefferenceStyles,
   slideStyle,
   titleStyle,
-} from '@/constants/new-home';
+} from '@/constants/home-page/new-home';
 
 const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
   const [loading, setLoading] = useState(true);

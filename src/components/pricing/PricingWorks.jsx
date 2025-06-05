@@ -16,7 +16,7 @@ import {
   workSlideStyle,
   worksMainHeadingTextStyle,
   worksSubHeadingtextStyle,
-} from '@/constants/pricing';
+} from '@/constants/pricing/pricing';
 import { usePathname } from 'next/navigation';
 
 const PricingWorks = ({ data }) => {

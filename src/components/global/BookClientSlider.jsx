@@ -5,7 +5,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography, useMediaQuery } from '@mui/material';
 import { extendClients, getImagePath } from '@/utils';
 import 'swiper/css';
-import { BOOK_CLIENT_SLIDER_STYLES } from '@/constants/homepage';
+import { BOOK_CLIENT_SLIDER_STYLES } from '@/constants/home-page/homepage';
 
 const BookClientSlider = ({
   bgColor = '#029894',

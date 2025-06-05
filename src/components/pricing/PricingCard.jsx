@@ -12,7 +12,7 @@ import {
   pricingCardHeaderContainer,
   subHeadingStyle,
   typographyBox,
-} from '@/constants/pricing';
+} from '@/constants/pricing/pricing';
 
 const PricingCard = ({ data, handleOpen }) => {
   return (

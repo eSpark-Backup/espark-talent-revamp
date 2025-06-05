@@ -5,7 +5,7 @@ import {
   BenifitsContainer,
   pricingBenifitsHeading,
   pricingBenifitsSubHeading,
-} from '@/constants/pricing';
+} from '@/constants/pricing/pricing';
 const PricingStrip = dynamic(() => import('./PricingStrip'));
 
 export default function PricingBenifits({ data }) {

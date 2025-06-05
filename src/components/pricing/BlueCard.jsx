@@ -12,7 +12,7 @@ import {
   titleAndButtonContainerStyle,
   titleStyle,
   workSlideStyle,
-} from '@/constants/pricing';
+} from '@/constants/pricing/pricing';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 

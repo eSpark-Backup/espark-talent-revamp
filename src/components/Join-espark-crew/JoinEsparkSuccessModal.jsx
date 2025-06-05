@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Button } from '@mui/material';
-import { REGISTRATION_FORM_SUCCESS_MODAL_DATA } from '@/constants/join-espark-crew';
+import { REGISTRATION_FORM_SUCCESS_MODAL_DATA } from '@/constants/join-espark-crew/join-espark-crew';
 
 const style = {
   position: 'absolute',

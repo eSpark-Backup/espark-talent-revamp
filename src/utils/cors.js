@@ -1,5 +1,3 @@
-// utils/cors.js
-
 import { getBlog, getHire, getPageSeo, getWiki } from '@/sanity/sanity.quries';
 const blogs = await getBlog();
 const hires = await getHire();

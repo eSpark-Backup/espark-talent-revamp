@@ -2,7 +2,10 @@
 import React from 'react';
 import HireHeroSection from './HireHeroSection';
 import ClientSays from '../homepage/ClientSays';
-import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
+import {
+  DEVELOEPRS_PERKS_DATA,
+  OUR_CLIENT_SAYS,
+} from '@/constants/home-page/homepage';
 import Perks from '../homepage/Perks';
 import FormSection from './FormSection';
 import { Box } from '@mui/material';

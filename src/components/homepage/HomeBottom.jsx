@@ -1,6 +1,6 @@
 import React from 'react';
 import AwardAchievement from './AwardAchiefment';
-import { ACHIEVEMENTS_DATA } from '@/constants/homepage';
+import { ACHIEVEMENTS_DATA } from '@/constants/home-page/homepage';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';
 import ServiceFaq from '../service/ServiceFaq';
 

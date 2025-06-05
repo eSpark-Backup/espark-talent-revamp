@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 import { getBlogsMetadata } from '@/components/global/seo';

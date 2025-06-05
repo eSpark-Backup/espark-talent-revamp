@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import ClientSaysSlider from './ClientSaysSlider';
-import { mainContainerStyleForClientSlider } from '@/constants/homepage';
+import { mainContainerStyleForClientSlider } from '@/constants/home-page/homepage';
 
 const ClientSays = ({ data }) => {
   const { heading, subHeading, slider, styles } = data || {};

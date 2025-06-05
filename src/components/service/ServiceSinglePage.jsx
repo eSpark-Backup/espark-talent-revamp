@@ -4,7 +4,7 @@ import {
   CLIENTS_SLIDER_DATA,
   DEVELOEPRS_PERKS_DATA,
   OUR_CLIENT_SAYS,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import Perks from '../homepage/Perks';
 import ClientSays from '../homepage/ClientSays';
 import ServiceHeroSection from './ServiceHeroSection';

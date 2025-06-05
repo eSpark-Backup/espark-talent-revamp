@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import routes from '@/constants/routes';
+import routes from '@/constants/routes/routes';
 import {
   EXCLUDED_PATHS,
   HIRE_A_TALENT_LINK,
@@ -9,7 +9,7 @@ import {
 import Topbar from './Topbar';
 import { usePathname } from 'next/navigation';
 import DefaultNavbar from './DefaultNavbar';
-import { TOP_BAR_DATA } from '@/constants/homepage';
+import { TOP_BAR_DATA } from '@/constants/home-page/homepage';
 
 const AllpagesHeader = () => {
   const pathName = usePathname();

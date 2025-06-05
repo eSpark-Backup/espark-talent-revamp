@@ -8,7 +8,7 @@ import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import { GoogleTagManager } from '@next/third-parties/google';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
 import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';

@@ -9,7 +9,7 @@ import {
   EXPERTIES_DATA,
   OUR_CLIENT_SAYS,
   PROCESS_DATA,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import { DEMO_HERO_DATA } from '@/constants/global/hero-sections';
 import Hero from '@/components/homepage/Hero';
 import ClientSlider from '@/components/global/ClientSlider';

@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 
 import BookADemoContent from './BookADemoContent';
 import BookADemoForm from './BookADemoForm';
-import { Book_A_Demo_Data, styles } from '@/constants/book-a-demo';
+import { Book_A_Demo_Data, styles } from '@/constants/book-a-demo/book-a-demo';
 
 export default function BookADemo() {
   const { content, form } = Book_A_Demo_Data;

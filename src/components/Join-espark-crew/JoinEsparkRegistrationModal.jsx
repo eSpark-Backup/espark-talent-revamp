@@ -4,7 +4,7 @@ import {
   URL_EXPRESSION,
   REGISTRATION_FORM_DATA,
   APPLY_FOR_FIELDS2,
-} from '@/constants/join-espark-crew';
+} from '@/constants/join-espark-crew/join-espark-crew';
 
 import { Box, Button, Modal, Stack, Tooltip, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';

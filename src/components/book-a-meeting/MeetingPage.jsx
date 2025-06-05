@@ -9,7 +9,7 @@ import {
   EXPERTIES_DATA,
   OUR_CLIENT_SAYS,
   PROCESS_DATA,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import ClientSlider from '@/components/global/ClientSlider';
 import AwardAchievement from '@/components/homepage/AwardAchiefment';
 import ClientSays from '@/components/homepage/ClientSays';
@@ -18,7 +18,7 @@ import BenefitsWorks from '@/components/homepage/BenefitsWorks';
 import DemoCta from '@/components/demo/DemoCta';
 import Process from '@/components/homepage/Process';
 import BookAMeeting from '@/components/book-a-meeting/BookAMeeting';
-import { BOOK_A_MEETING } from '@/constants/book-a-meeting';
+import { BOOK_A_MEETING } from '@/constants/book-a-meeting/book-a-meeting';
 import { Box } from '@mui/material';
 
 const MeetingPage = () => {

@@ -14,16 +14,16 @@ import {
   ACHIEVEMENTS_DATA,
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import {
   OUTSOURCING_ADVANTAGES_DATA,
   OUTSOURCING_LIST_DATA,
   OUTSOURCING_WONDERS_DATA,
   OUTSTAFFING_TRUST_DATA,
-} from '@/constants/for-enterprise';
+} from '@/constants/solutions/for-enterprise/for-enterprise';
 import { ENTERPRISE_HERO_DATA } from '@/constants/global/hero-sections';
 import { FAQ_DATA_ENTERPRISE } from '@/constants/home-page/faq-section';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 
 import Faq from '@/components/FAQ/Faq';

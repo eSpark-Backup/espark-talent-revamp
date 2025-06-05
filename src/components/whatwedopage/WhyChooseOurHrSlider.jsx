@@ -23,7 +23,7 @@ import {
   paragraphStyle,
   slideStyle,
   titleStyle,
-} from '@/constants/what-we-do-page/why-choose-hr';
+} from '@/styles/what-we-do-page/why-choose-hr';
 
 const WhyChooseOurHrSlider = ({ data }) => {
   const prevRef = useRef(null);

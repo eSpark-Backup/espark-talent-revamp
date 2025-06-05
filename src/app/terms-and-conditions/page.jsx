@@ -2,8 +2,8 @@ import React from 'react';
 import Hero from '@/components/homepage/Hero';
 import TermsConditions from '@/components/terms-conditions/TermsConditions';
 import { TERMS_CONDITIONS_HERO_DATA } from '@/constants/global/hero-sections';
-import { TERMS_CONDITIONS_DATA } from '@/constants/terms-conditions';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { TERMS_CONDITIONS_DATA } from '@/constants/terms-conditions/terms-conditions';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
 

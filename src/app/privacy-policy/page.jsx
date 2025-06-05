@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from '@/components/homepage/Hero';
 import TermsConditions from '@/components/terms-conditions/TermsConditions';
-import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy';
+import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy/privacy-policy';
 import { PRIVACY_POLICY_HERO_DATA } from '@/constants/global/hero-sections';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
 

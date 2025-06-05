@@ -1,6 +1,6 @@
 import React from 'react';
 import DemoMeetingPage from '@/components/book-a-demo-meeting/DemoMeetingPage';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
 

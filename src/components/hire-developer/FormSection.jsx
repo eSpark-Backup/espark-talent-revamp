@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-import { Book_A_Demo_Data } from '@/constants/book-a-demo';
+import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
 import HireForm from './HireForm';
 import { usePathname } from 'next/navigation';
 import {

@@ -11,7 +11,7 @@ import Faq from '@/components/FAQ/Faq';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import { WHAT_WE_DO_HERO_DATA } from '@/constants/global/hero-sections';
 import { TEAM_CARD_DATA } from '@/constants/what-we-do-page/professional-team';
 import { EXPERT_TEAM_CARD } from '@/constants/what-we-do-page/expert-team-card';

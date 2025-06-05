@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GLOBAL_SEO } from '@/constants/seo-data';
-import { NOT_FOUND_DATA } from '@/constants/global/notfound';
-import NotFoundPage from '@/components/global/NotFound';
-import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
-import { getSingleHire } from '@/sanity/sanity.quries';
-import Hire from '@/components/hire-developer/Hire';
 import Script from 'next/script';
+
+import NotFoundPage from '@/components/global/NotFound';
+import Hire from '@/components/hire-developer/Hire';
 import { getHireMetadata } from '@/components/global/seo';
+
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
+import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
+
+import { getSingleHire } from '@/sanity/sanity.quries';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;

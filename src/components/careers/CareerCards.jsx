@@ -24,7 +24,7 @@ import {
   jobLocationTextStyle,
   jobTitleBoxStyle,
   jobTitleTextStyle,
-} from '@/constants/careers-form-data';
+} from '@/constants/careers/careers-form-data';
 import {
   handleApplyButtonClick,
   handleJobCategoryChange,

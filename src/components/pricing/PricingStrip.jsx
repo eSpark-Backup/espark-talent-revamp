@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
-import { pricingStripe } from '@/constants/pricing';
+import { pricingStripe } from '@/constants/pricing/pricing';
 
 const PricingStrip = ({ key, feature, index }) => {
   const {

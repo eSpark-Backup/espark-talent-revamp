@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
 import { extendClients, getImagePath } from '@/utils';
-import { CLIENTS_SLIDER_STYLES } from '@/constants/homepage';
+import { CLIENTS_SLIDER_STYLES } from '@/constants/home-page/homepage';
 
 const ClientSlider = ({
   bgColor,

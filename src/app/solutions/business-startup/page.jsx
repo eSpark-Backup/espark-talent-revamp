@@ -9,7 +9,7 @@ import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import {
   CLIENTS_SLIDER_DATA,
   CLIENT_SLIDER_BREAK_POINTS,
-} from '@/constants/homepage';
+} from '@/constants/home-page/homepage';
 import {
   BEST_OUTSOURCING_SOLUTIONS,
   BUSINESS_START_UP,
@@ -17,12 +17,12 @@ import {
   OUR_ADDITIONAL_BENEFITS,
   OUR_OUTSOURCE,
   OUTSOURCING_SOLUTIONS_DATA,
-} from '@/constants/for-startup';
+} from '@/constants/solutions/for-business-startup/for-startup';
 import { STARTUP_HERO_DATA } from '@/constants/global/hero-sections';
 import { STARTUP_FAQ_DATA } from '@/constants/home-page/faq-section';
 import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/BusinessVenture';
-import { GLOBAL_SEO } from '@/constants/seo-data';
+import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
 

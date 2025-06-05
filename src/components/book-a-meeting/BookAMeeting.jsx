@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 
-import { Book_A_Demo_Data } from '@/constants/book-a-demo';
+import { Book_A_Demo_Data } from '@/constants/book-a-demo/book-a-demo';
 import BookADemoForm from '../book-a-demo/BookADemoForm';
 
 const BookAMeeting = ({ data }) => {

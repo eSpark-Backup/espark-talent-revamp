@@ -1,7 +1,10 @@
 import React from 'react';
 import FormSection from '../hire-developer/FormSection';
 import ClientSays from '../homepage/ClientSays';
-import { DEVELOEPRS_PERKS_DATA, OUR_CLIENT_SAYS } from '@/constants/homepage';
+import {
+  DEVELOEPRS_PERKS_DATA,
+  OUR_CLIENT_SAYS,
+} from '@/constants/home-page/homepage';
 import DemoLeverageTalent from './DemoLeverageTalent';
 import { Box } from '@mui/material';
 import Perks from '../homepage/Perks';
