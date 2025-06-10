@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Box,
-  Container,
   Typography,
   useMediaQuery,
   Pagination,
@@ -12,7 +11,11 @@ import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { buttonStyle, READ_MORE } from '@/constants/blogs';
 import { usePathname } from 'next/navigation';
-import FlaxibleSlider from '../new-home/FlexibleSlider';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination as SwiperPagination } from 'swiper/modules';
 
 const {
   containerBoxStyle,
@@ -22,18 +25,22 @@ const {
   linkStyle,
 } = buttonStyle;
 
-const BlogCard = ({ item }) => (
+const BlogCard = ({ item, display = 'none' }) => (
   <Box
     sx={{
-      width: '100%',
+      width: '95%',
       height: '100%',
-      mminWidth: '300px',
-      maxWidth: '397px',
-      display: { xs: 'none', md: 'flex' },
+      maxWidth: '285px',
+      display: 'none',
       flexDirection: 'column',
       overflow: 'hidden',
       '@media(min-width: 1024px)': {
+        width: '100%',
         display: 'flex',
+        maxWidth: '400px',
+      },
+      '@media(max-width: 1023px)': {
+        display: display || 'none',
       },
     }}
   >
@@ -110,6 +117,51 @@ const BlogCard = ({ item }) => (
   </Box>
 );
 
+const BlogCardSlider = ({ data, slideStyle, isDisplay }) => (
+  <Box
+    sx={{
+      mx: 'auto',
+      width: '100%',
+      display: 'none',
+      justifyContent: 'center',
+      '@media(max-width: 1023px)': {
+        display: isDisplay || 'none',
+      },
+    }}
+  >
+    <Swiper
+      pagination={{ clickable: true }}
+      modules={[Autoplay, SwiperPagination]}
+      grabCursor={true}
+      spaceBetween={10}
+      slidesPerView="auto"
+      speed={3000}
+      autoplay={{ delay: 1000, disableOnInteraction: false }}
+      style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '0px 20px 30px 20px',
+      }}
+    >
+      {data?.map((item, index) => (
+        <SwiperSlide
+          key={index}
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ...slideStyle,
+          }}
+        >
+          <BlogCard item={item} display={'flex'} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </Box>
+);
+
 const ReadMoreButton = ({ slug }) => (
   <Link href={`/blogs/${slug}`} style={linkStyle}>
     <Box className="hoverItem" sx={containerBoxStyle}>
@@ -156,76 +208,74 @@ const BlogCards = ({ data }) => {
     page * itemsPerPage
   );
   return (
-    <Box sx={{ my: '3%' }} id="pricing-difference">
-      <Container>
-        {loading || data === null || data?.length === 0 ? (
+    <Box sx={{ width: '90%' }} id="pricing-difference">
+      {loading || data === null || data?.length === 0 ? (
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            my: 0,
+          }}
+        >
+          <Box component={'img'} src="/images/no_data.png" />
+        </Box>
+      ) : (
+        <>
           <Box
             sx={{
+              mx: 'auto',
               width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              my: 0,
+              maxWidth: '1200px',
+              '@media(min-width: 1024px)': {
+                display: 'grid',
+                gap: 3,
+                gridTemplateColumns: 'repeat(3, 1fr)',
+              },
             }}
           >
-            <Box component={'img'} src="/images/no_data.png" />
-          </Box>
-        ) : (
-          <>
-            <Box
-              sx={{
-                mx: 'auto',
+            {displayedBlogs?.map((item, index) => (
+              <BlogCard item={item} key={index} />
+            ))}
+            <BlogCardSlider
+              data={displayedBlogs}
+              isDisplay={'flex'}
+              slideStyle={{
                 width: '100%',
-                maxWidth: '1200px',
-                display: { xs: 'flex', md: 'grid' },
-                gridTemplateColumns: { md: 'repeat(3, 1fr)' },
-                gap: 6,
+                maxWidth: '300px',
               }}
+            />
+          </Box>
+
+          {data?.length > itemsPerPage && (
+            <Box
+              sx={{ display: 'flex', justifyContent: 'center', mt: 1, mb: 5 }}
             >
-              {displayedBlogs?.map((item, index) => (
-                <BlogCard item={item} key={index} />
-              ))}
-              <FlaxibleSlider
-                data={displayedBlogs}
-                isDisplay={true}
-                slideStyle={{
-                  width: '100%',
-                  maxWidth: '350px',
-                  paddingBottom: '20px',
-                }}
-                card={() => <Box sx={{ width: '300px' }}>Ali</Box>}
+              <Pagination
+                count={Math?.ceil(data?.length / itemsPerPage)}
+                page={page}
+                onChange={handleChangePage}
+                color="primary"
+                size={pagination}
+                sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    {...item}
+                    sx={{
+                      borderRadius: '10px',
+                      '&.Mui-selected': {
+                        backgroundColor: 'primary.main',
+                        color: 'white',
+                      },
+                    }}
+                  />
+                )}
               />
             </Box>
-
-            {data?.length > itemsPerPage && (
-              <Box
-                sx={{ display: 'flex', justifyContent: 'center', mt: 1, mb: 5 }}
-              >
-                <Pagination
-                  count={Math?.ceil(data?.length / itemsPerPage)}
-                  page={page}
-                  onChange={handleChangePage}
-                  color="primary"
-                  size={pagination}
-                  sx={{ '& .MuiPaginationItem-root': { borderRadius: '10px' } }}
-                  renderItem={(item) => (
-                    <PaginationItem
-                      {...item}
-                      sx={{
-                        borderRadius: '10px',
-                        '&.Mui-selected': {
-                          backgroundColor: 'primary.main',
-                          color: 'white',
-                        },
-                      }}
-                    />
-                  )}
-                />
-              </Box>
-            )}
-          </>
-        )}
-      </Container>
+          )}
+        </>
+      )}
     </Box>
   );
 };
