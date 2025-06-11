@@ -4,6 +4,7 @@ import { BLOGS_HERO_DATA } from '@/constants/global/hero-sections';
 import { getBlog } from '@/sanity/sanity.quries';
 import Hero from '@/components/homepage/Hero';
 import BlogCards from '../homepage/BlogCards';
+import { Box, Container } from '@mui/material';
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState(null);
@@ -36,7 +37,11 @@ export default function BlogsPage() {
   return (
     <>
       <Hero data={BLOGS_HERO_DATA} />
-      <BlogCards data={blogs} />
+      <Container>
+        <Box sx={{ py: 6.5 }}>
+          <BlogCards data={blogs} />
+        </Box>
+      </Container>
     </>
   );
 }

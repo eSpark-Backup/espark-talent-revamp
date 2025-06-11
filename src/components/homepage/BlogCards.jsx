@@ -28,7 +28,7 @@ const {
 const BlogCard = ({ item, display = 'none' }) => (
   <Box
     sx={{
-      width: '95%',
+      width: { xs: '93%', lg: '100%' },
       height: '100%',
       maxWidth: '285px',
       display: 'none',
@@ -208,7 +208,7 @@ const BlogCards = ({ data }) => {
     page * itemsPerPage
   );
   return (
-    <Box sx={{ width: '90%' }} id="pricing-difference">
+    <Box sx={{ mx: 'auto', width: '90%' }} id="pricing-difference">
       {loading || data === null || data?.length === 0 ? (
         <Box
           sx={{
@@ -216,7 +216,6 @@ const BlogCards = ({ data }) => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            my: 0,
           }}
         >
           <Box component={'img'} src="/images/no_data.png" />
@@ -250,7 +249,11 @@ const BlogCards = ({ data }) => {
 
           {data?.length > itemsPerPage && (
             <Box
-              sx={{ display: 'flex', justifyContent: 'center', mt: 1, mb: 5 }}
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                mt: { xs: 3, md: 5 },
+              }}
             >
               <Pagination
                 count={Math?.ceil(data?.length / itemsPerPage)}
