@@ -1943,30 +1943,6 @@ input {
 
 /* *************************************** */
 
-/* employee slide animation of home page */
-
-.sliderContainer {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-}
-
-.sliderTrack {
-  display: inline-flex;
-  animation: scroll 25s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(1.5%);
-  }
-
-  100% {
-    transform: translateX(-48%);
-  }
-}
-
 .slide {
   flex-shrink: 0;
   margin-right: 20px;

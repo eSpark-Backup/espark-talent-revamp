@@ -299,11 +299,6 @@ export const handleSubmitJoinCrew = async (
   }
 };
 
-// dublicates slides function for empoloyee slider from homepage
-export const duplicateSlides = (originalSlides) => {
-  return originalSlides?.map((slide) => ({ ...slide }));
-};
-
 // home page hero untils
 
 export const getAnimation = () => {

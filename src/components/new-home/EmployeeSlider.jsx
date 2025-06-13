@@ -1,37 +1,25 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Box, CircularProgress } from '@mui/material';
-import { duplicateSlides } from '@/utils';
+import { Box, CircularProgress, keyframes } from '@mui/material';
 import Image from 'next/image';
 
 const EmployeeSlider = ({ data }) => {
   const { slides, styles: styleData } = data || {};
-  const { swiperSlideStyle, videoStyle } = styleData || {};
-  const duplicatedSlides = [
-    ...slides,
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-  ];
+  const { swiperSlideStyle, videoStyle, animationBoxStyle } = styleData || {};
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (data) {
       setTimeout(() => {
         setLoading(false);
-      }, 800);
+      }, 1000);
     }
   }, [data]);
+
+  const scrollRight = keyframes`
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    `;
 
   return (
     <>
@@ -47,9 +35,9 @@ const EmployeeSlider = ({ data }) => {
           <CircularProgress />
         </Box>
       ) : (
-        <Box id="short-slider" className={'sliderContainer'}>
-          <Box className={'sliderTrack'}>
-            {duplicatedSlides?.map((slide, index) => (
+        <Box>
+          <Box sx={animationBoxStyle(scrollRight)}>
+            {slides?.map((slide, index) => (
               <Box key={index} className={'slide'} style={swiperSlideStyle}>
                 <Image
                   alt=""

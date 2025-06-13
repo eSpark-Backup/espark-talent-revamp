@@ -63,7 +63,7 @@ const EmployeeBanner = ({ data }) => {
             <Box component={'img'} sx={imageStyle} src={animatedGif} />
           </Box>
         </Box>
-        <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>
+        <Box sx={{ mt: { xs: 2.5, lg: 0 }, overflow: 'hidden' }}>
           <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
         </Box>
       </Box>
