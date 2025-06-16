@@ -33,7 +33,7 @@ const TrustedPlatform = ({ data }) => {
               spaceBetween: 20,
             },
             769: {
-              spaceBetween: 50,
+              spaceBetween: 20,
             },
           }}
         >
