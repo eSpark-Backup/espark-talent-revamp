@@ -1756,9 +1756,10 @@ export const TRUSTED_PLATFORM = {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
+      margin: '30px 30px 0px',
     },
     slideImageStyle: {
-      width: { xs: '85%', md: 183 },
+      width: { xs: '85%', md: 165, lg: 183 },
       height: { xs: 'auto', md: 'auto' },
       objectFit: 'cover',
       position: 'relative',
