@@ -278,6 +278,9 @@ export const EMPLOYEE_HERO_DATA = {
         lg: 'auto',
         xl: 'auto',
       },
+      '@media (min-width: 1024px)': {
+        minHeight: '550px',
+      },
       '@media (min-width: 600px) and (max-width: 1023px)': {
         maxWidth: '400px',
         mx: 'auto',
@@ -1963,7 +1966,247 @@ export const EMPLOYEE_SLIDER_DATA = {
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
     },
     {
-      id: 5,
+      id: 6,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 7,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 8,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 9,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 10,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 11,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 12,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 13,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 14,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 15,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 16,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 17,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 18,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 19,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 20,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 21,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 22,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 23,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 24,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 25,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 26,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 27,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 28,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 29,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 30,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 31,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 32,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 33,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 34,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 35,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 36,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 37,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 38,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 39,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 40,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 41,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+    },
+    {
+      id: 42,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+    },
+    {
+      id: 43,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+    },
+    {
+      id: 44,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+    },
+    {
+      id: 45,
+      videoUrl:
+        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+    },
+    {
+      id: 46,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
@@ -1976,10 +2219,12 @@ export const EMPLOYEE_SLIDER_DATA = {
       paddingTop: '20px',
       paddingBottom: '20px',
     },
+    animationBoxStyle: (scrollRight) => ({
+      transform: 'translate(-50%)',
+      display: 'inline-flex',
+      animation: `${scrollRight} 15s linear infinite`,
+    }),
     swiperSlideStyle: {
-      // display: 'flex',
-      // alignItems: 'center',
-      // justifyContent: 'center',
       maxWidth: '230px',
     },
     videoStyle: {

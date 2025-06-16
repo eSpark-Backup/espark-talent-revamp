@@ -12,9 +12,11 @@ const HomeBlogs = () => {
         <Box
           sx={{
             py: '3%',
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            gap: 3,
           }}
         >
           <ParagraphTitle

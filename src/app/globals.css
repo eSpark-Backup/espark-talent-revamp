@@ -116,22 +116,7 @@ span {
   width: 100%;
 }
 
-.single-blog-post .image .date {
-  display: flex;
-  position: relative;
-  align-items: center;
-  writing-mode: vertical-lr;
-  color: var(--optionalColor);
-  text-orientation: mixed;
-  column-gap: 5px;
-}
 
-.single-blog-post .image .date::before {
-  height: 50px;
-  width: 1px;
-  content: '';
-  background-color: var(--optionalColor);
-}
 
 #faq .MuiAccordion-gutters {
   box-shadow: none !important;
@@ -1957,30 +1942,6 @@ input {
 }
 
 /* *************************************** */
-
-/* employee slide animation of home page */
-
-.sliderContainer {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-}
-
-.sliderTrack {
-  display: inline-flex;
-  animation: scroll 25s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(1.5%);
-  }
-
-  100% {
-    transform: translateX(-48%);
-  }
-}
 
 .slide {
   flex-shrink: 0;
