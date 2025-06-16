@@ -42,6 +42,7 @@ export const buttonStyle = {
     fontWeight: 500,
     margin: '5px 5px',
     overflow: 'hidden',
+    cursor: 'pointer',
     '&::before': {
       content: '""',
       position: 'absolute',

@@ -10,7 +10,7 @@ import {
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { buttonStyle, READ_MORE } from '@/constants/blogs';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -22,10 +22,9 @@ const {
   typographyAndArrowBoxStyle,
   arrowStyle,
   typographyStyle,
-  linkStyle,
 } = buttonStyle;
 
-const BlogCard = ({ item, display = 'none' }) => (
+const BlogCard = ({ item, display = 'none', router }) => (
   <Box
     sx={{
       width: { xs: '93%', lg: '100%' },
@@ -112,7 +111,7 @@ const BlogCard = ({ item, display = 'none' }) => (
     </Box>
 
     <Box sx={{ mt: 'auto' }}>
-      <ReadMoreButton slug={item?.slug} />
+      <ReadMoreButton slug={item?.slug} router={router} />
     </Box>
   </Box>
 );
@@ -162,17 +161,21 @@ const BlogCardSlider = ({ data, slideStyle, isDisplay }) => (
   </Box>
 );
 
-const ReadMoreButton = ({ slug }) => (
-  <Link href={`/blogs/${slug}`} style={linkStyle}>
-    <Box className="hoverItem" sx={containerBoxStyle}>
-      <Box sx={typographyAndArrowBoxStyle}>
-        <ArrowForwardIosIcon sx={arrowStyle} />
-      </Box>
-      <Typography className="hoverIcon" sx={typographyStyle}>
-        {READ_MORE}
-      </Typography>
+const ReadMoreButton = ({ slug, router }) => (
+  // <Link href={`/blogs/${slug}`} style={linkStyle}>
+  <Box
+    className="hoverItem"
+    sx={containerBoxStyle}
+    onClick={() => router?.push(`/blogs/${slug}`)}
+  >
+    <Box sx={typographyAndArrowBoxStyle}>
+      <ArrowForwardIosIcon sx={arrowStyle} />
     </Box>
-  </Link>
+    <Typography className="hoverIcon" sx={typographyStyle}>
+      {READ_MORE}
+    </Typography>
+  </Box>
+  // </Link>
 );
 
 const BlogCards = ({ data }) => {
@@ -181,6 +184,7 @@ const BlogCards = ({ data }) => {
   const itemsPerPage = 6;
   const isSmallScreen = useMediaQuery('(max-width:600px)');
   const isMediumScreen = useMediaQuery('(max-width:768px)');
+  const router = useRouter();
   const pagination = isSmallScreen
     ? 'small'
     : isMediumScreen
@@ -207,6 +211,7 @@ const BlogCards = ({ data }) => {
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
+
   return (
     <Box sx={{ mx: 'auto', width: '90%' }} id="pricing-difference">
       {loading || data === null || data?.length === 0 ? (
@@ -235,7 +240,7 @@ const BlogCards = ({ data }) => {
             }}
           >
             {displayedBlogs?.map((item, index) => (
-              <BlogCard item={item} key={index} />
+              <BlogCard item={item} key={index} router={router} />
             ))}
             <BlogCardSlider
               data={displayedBlogs}
