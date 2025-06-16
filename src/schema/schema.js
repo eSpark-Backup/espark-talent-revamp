@@ -52,7 +52,10 @@ const BookADemoFormValidationSchema = Yup.object().shape({
     .required('Email is required'),
 
   web_url: Yup.string()
-    .matches(/^(https?:\/\/|ftp:\/\/|www\.)[^\s/$.?#].[^\s]*$/, 'Invalid Url')
+    .matches(
+      /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z\u0600-\u06FF]{2,}(\/[^\s]*)?$/,
+      'Invalid Url'
+    )
     .required('Url is required'),
 
   no_of_employees: Yup.number()
