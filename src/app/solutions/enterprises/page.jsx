@@ -9,6 +9,7 @@ import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 import {
   ACHIEVEMENTS_DATA,
@@ -38,6 +39,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <Hero data={ENTERPRISE_HERO_DATA} color="default" />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}

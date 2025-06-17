@@ -5,6 +5,7 @@ import Script from 'next/script';
 import NotFoundPage from '@/components/global/NotFound';
 import Hire from '@/components/hire-developer/Hire';
 import { getHireMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
@@ -40,6 +41,7 @@ export default async function Page({ params }) {
     }
     return (
       <>
+        <StructuredData data={data.jsonLd} />
         <Script
           id="CreativeWorkSeries"
           type="application/ld+json"

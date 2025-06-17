@@ -2,8 +2,7 @@ import CareersPage from '@/components/careers/CareersPage';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
-
-import React from 'react';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/careers';
 const seo = await getPageSeo();
@@ -15,6 +14,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <CareersPage />
     </>
   );

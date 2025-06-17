@@ -6,6 +6,7 @@ import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import NotFoundPage from '@/components/global/NotFound';
 import { getBlogsMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 export async function generateMetadata({ params }) {
   const slug = params.blog;
@@ -38,6 +39,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
+        <StructuredData data={blog.jsonLd} />
         <Box
           sx={{
             background:

@@ -5,6 +5,7 @@ import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getWikisMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 export async function generateMetadata({ params }) {
   const slug = params.wiki;
@@ -50,6 +51,7 @@ const Page = async ({ params }) => {
 
     return (
       <>
+        <StructuredData data={wiki.jsonLd} />
         <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
         <WikiSingle data={wiki} />
       </>

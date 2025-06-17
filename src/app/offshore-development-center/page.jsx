@@ -3,6 +3,7 @@ import OffshoreDevelopmentCenter from '@/components/new-home/OffshoreDevelopment
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/offshore-development-center';
 const seo = await getPageSeo();
@@ -11,7 +12,12 @@ const filteredData =
 
 export const metadata = getMetadata(filteredData);
 const page = () => {
-  return <OffshoreDevelopmentCenter />;
+  return (
+    <>
+      <StructuredData data={filteredData.jsonLd} />
+      <OffshoreDevelopmentCenter />
+    </>
+  );
 };
 
 export default page;

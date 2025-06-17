@@ -3,6 +3,7 @@ import BookADemo from '@/components/book-a-demo/BookADemo';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/book-a-demo';
 const seo = await getPageSeo();
@@ -14,6 +15,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <BookADemo />
     </>
   );

@@ -25,6 +25,7 @@ import BusinessVenture from '@/components/for-startup/BusinessVenture';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 import Faq from '@/components/FAQ/Faq';
 
@@ -38,6 +39,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <Hero data={STARTUP_HERO_DATA} />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}
