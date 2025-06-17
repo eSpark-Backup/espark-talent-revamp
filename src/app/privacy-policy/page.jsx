@@ -6,6 +6,7 @@ import { PRIVACY_POLICY_HERO_DATA } from '@/constants/global/hero-sections';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/privacy-policy';
 const seo = await getPageSeo();
@@ -17,6 +18,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <Hero data={PRIVACY_POLICY_HERO_DATA} color="default" />
       <TermsConditions data={PRIVACY_POLICY_DATA} />
     </>

@@ -4,6 +4,7 @@ import { getPageSeo } from '@/sanity/sanity.quries';
 import PricingPage from '@/components/pricing/PricingPage';
 import { PRICING_DATA } from '@/constants/pricing';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/pricing';
 const seo = await getPageSeo();
@@ -15,6 +16,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      <StructuredData data={filteredData.jsonLd} />
       <PricingPage data={PRICING_DATA} />
     </>
   );
