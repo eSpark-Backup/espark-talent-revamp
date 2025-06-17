@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Box, Button, Typography, Input } from '@mui/material';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
-import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { isValidPhoneNumber } from 'react-phone-number-input';
 import axios from 'axios';
 import BasicModal from '../book-a-demo/BookADemoModal';
 import ErrorMessage from '../book-a-demo/ErrorMessage';
 import FileUpload from './FileUpload ';
+import { profileValidationSchema } from '@/schema/schema';
 
 const CareersForm = ({ form, jobData, handleCloseModal }) => {
   const { description, fields } = form;
@@ -27,39 +26,6 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
 
   const adminId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_EMAIL_ID;
   const adminTemplateId = process.env.NEXT_PUBLIC_CAREERS_ADMIN_TEMPLETE_ID;
-
-  const profileValidationSchema = Yup.object().shape({
-    full_name: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'Full Name must contain only letters')
-      .min(3, 'Full Name must be at least 3 characters')
-      .max(50, 'Full Name must be at most 25 characters')
-      .required('Full Name is required'),
-    email: Yup.string()
-      .email('Invalid Email')
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
-        'Invalid Email Address Format'
-      )
-      .required('Email is required'),
-    phone_number: Yup.string()
-      .test('phone', 'Invalid Phone Number', (value) =>
-        value ? isValidPhoneNumber(value) : true
-      )
-      .required('Phone Number is required'),
-    city: Yup.string()
-      .matches(/^[a-z A-Z]+$/, 'City Name must contain only letters')
-      .min(3, 'City Name must be at least 3 characters')
-      .max(25, 'City Name must be at most 25 characters')
-      .required('City Name is required'),
-    resume: Yup.mixed()
-      .required('Resume is required')
-      .test('fileType', 'Only PDF files are allowed', (value) => {
-        return value && value.type === 'application/pdf';
-      }),
-    joining_date: Yup.date()
-      .min(new Date(), 'Joining Date must be in the future')
-      .required('Joining Date is required'),
-  });
 
   const handlePhoneChange = (event) => {
     setFieldValue('phone_number', event);

@@ -67,5 +67,41 @@ const BookADemoFormValidationSchema = Yup.object().shape({
     )
     .required('Phone Number is required'),
 });
+const profileValidationSchema = Yup.object().shape({
+  full_name: Yup.string()
+    .matches(/^[a-z A-Z]+$/, 'Full Name must contain only letters')
+    .min(3, 'Full Name must be at least 3 characters')
+    .max(50, 'Full Name must be at most 25 characters')
+    .required('Full Name is required'),
+  email: Yup.string()
+    .email('Invalid Email')
+    .matches(
+      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
+      'Invalid Email Address Format'
+    )
+    .required('Email is required'),
+  phone_number: Yup.string()
+    .test('phone', 'Invalid Phone Number', (value) =>
+      value ? isValidPhoneNumber(value) : true
+    )
+    .required('Phone Number is required'),
+  city: Yup.string()
+    .matches(/^[a-z A-Z]+$/, 'City Name must contain only letters')
+    .min(3, 'City Name must be at least 3 characters')
+    .max(25, 'City Name must be at most 25 characters')
+    .required('City Name is required'),
+  resume: Yup.mixed()
+    .required('Resume is required')
+    .test('fileType', 'Only PDF files are allowed', (value) => {
+      return value && value.type === 'application/pdf';
+    }),
+  joining_date: Yup.date()
+    .min(new Date(), 'Joining Date must be in the future')
+    .required('Joining Date is required'),
+});
 
-export { partnerShipFormValidationSchema, BookADemoFormValidationSchema };
+export {
+  partnerShipFormValidationSchema,
+  BookADemoFormValidationSchema,
+  profileValidationSchema,
+};
