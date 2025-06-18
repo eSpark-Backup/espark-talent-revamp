@@ -16,7 +16,7 @@ const WikiSingleLeft = ({ data }) => {
       }}
     >
       {data ? (
-        <PortableText value={data.content} />
+        <PortableText value={data?.content} />
       ) : (
         <>
           <Skeleton height={150} count={1} />

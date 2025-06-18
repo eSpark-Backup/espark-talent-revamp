@@ -124,7 +124,7 @@ const InnerHero = ({ data, innerData }) => {
                     {isLoading ? (
                       <Skeleton width={100} height={30} />
                     ) : (
-                      data.button.label
+                      data?.button.label
                     )}
                   </Button>
                 </Box>
@@ -142,7 +142,7 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 {isLoading ? (
-                  <Skeleton width={data.imageWidth} height={data.imageHeight} />
+                  <Skeleton width={data?.imageWidth} height={data?.imageHeight} />
                 ) : (
                   <Image
                     quality="85"

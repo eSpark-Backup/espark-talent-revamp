@@ -51,7 +51,7 @@ const Page = async ({ params }) => {
 
     return (
       <>
-        <StructuredData data={wiki.jsonLd} />
+        <StructuredData data={wiki?.jsonLd} />
         <InnerHero data={WIKI_HERO_DATA} innerData={wiki} />
         <WikiSingle data={wiki} />
       </>

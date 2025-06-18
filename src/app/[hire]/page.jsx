@@ -12,6 +12,7 @@ import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 
 import { getSingleHire } from '@/sanity/sanity.quries';
+import { CreativeWorkSeriesScript } from '@/components/global/structuredDataScripts';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
@@ -24,6 +25,7 @@ export default async function Page({ params }) {
   const path = params.hire;
   const hire = await getSingleHire(path);
   const filteredData = hire || GLOBAL_SEO[0];
+  console.log(filteredData);
 
   const slug = params.hire;
   const data = HIRE_DEVELOPERS?.find((item) => item?.path === slug);
@@ -41,26 +43,16 @@ export default async function Page({ params }) {
     }
     return (
       <>
-        <StructuredData data={data.jsonLd} />
-        <Script
-          id="CreativeWorkSeries"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org/',
-              '@type': 'CreativeWorkSeries',
-              name: filteredData?.ratingName,
-              image: filteredData?.ratingImage,
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: filteredData?.ratingValue,
-                bestRating: filteredData?.bestRating,
-                worstRating: filteredData?.worstRating,
-                ratingCount: filteredData?.ratingCount,
-              },
-            }),
-          }}
+        <StructuredData data={data?.jsonLd} />
+        <CreativeWorkSeriesScript
+          name={filteredData?.ratingName}
+          image={filteredData?.ratingImage}
+          ratingValue={filteredData?.ratingValue}
+          bestRating={filteredData?.bestRating}
+          worstRating={filteredData?.worstRating}
+          ratingCount={filteredData?.ratingCount}
         />
+
         <Hire data={data} slug={slug} />
       </>
     );

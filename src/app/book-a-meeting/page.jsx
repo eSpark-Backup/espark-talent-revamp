@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <>
       {' '}
-      <StructuredData data={filteredData.jsonLd} />
+      <StructuredData data={filteredData?.jsonLd} />
       <MeetingPage />
     </>
   );

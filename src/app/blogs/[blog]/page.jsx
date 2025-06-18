@@ -39,7 +39,7 @@ const Page = async ({ params }) => {
     }
     return (
       <>
-        <StructuredData data={blog.jsonLd} />
+        <StructuredData data={blog?.jsonLd} />
         <Box
           sx={{
             background:

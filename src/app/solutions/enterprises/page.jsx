@@ -39,7 +39,7 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
-      <StructuredData data={filteredData.jsonLd} />
+      <StructuredData data={filteredData?.jsonLd} />
       <Hero data={ENTERPRISE_HERO_DATA} color="default" />
       <ClientSlider
         data={CLIENTS_SLIDER_DATA}

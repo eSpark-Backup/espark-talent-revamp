@@ -112,7 +112,7 @@ const ServiceFaq = ({ data, color }) => {
           <Grid item md={6} sm={12}>
             {renderQuestions(1, 3)}
           </Grid>
-          {data?.questions && data.questions.length >= 4 ? (
+          {data?.questions && data?.questions.length >= 4 ? (
             <Grid item md={6} sm={12}>
               {renderQuestions(0, 3)}
             </Grid>
