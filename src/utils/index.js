@@ -1,4 +1,3 @@
-import { JOIN_CREW_FORM_DEFAULT } from '@/constants/global/defaultData';
 import supabase from '@/supabase/supabaseClient';
 import { useMediaQuery } from '@mui/material';
 import axios from 'axios';
@@ -39,7 +38,27 @@ export const handleChangeJoinCrew = (name, value, setState) => {
 };
 
 export const handleEmptyJoinCrew = (setForm) => {
-  setForm(JOIN_CREW_FORM_DEFAULT);
+  setForm({
+    name: '',
+    email: '',
+    phone_num: '',
+    linkedin_profile: '',
+    salary_expection: '',
+    experience: '',
+    availability: '',
+    prefrences: '',
+    education: '',
+    github_profile: '',
+    job_type: '',
+    projects: '',
+    city: '',
+    field: '',
+    position: '',
+    tags: '',
+    cv: '',
+    country: '',
+    gender: '',
+  });
 };
 
 export const handleSubmitJoinCrew = async (
