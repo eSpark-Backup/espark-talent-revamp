@@ -1806,7 +1806,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -2469,7 +2468,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -3132,7 +3130,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -3795,7 +3792,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -4458,7 +4454,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -5116,7 +5111,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -5775,7 +5769,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -6438,7 +6431,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -7101,7 +7093,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -7764,7 +7755,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -8427,7 +8417,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -9090,7 +9079,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -9753,7 +9741,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -10412,7 +10399,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -11070,7 +11056,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -11718,7 +11703,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -12381,7 +12365,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -13034,7 +13017,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -13697,7 +13679,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -14360,7 +14341,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -15018,7 +14998,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -15681,7 +15660,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -16344,7 +16322,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -17008,7 +16985,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -18261,10 +18237,8 @@ export const HIRE_DEVELOPERS = [
         },
       },
     },
-   
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -18892,7 +18866,6 @@ export const HIRE_DEVELOPERS = [
     },
   },
   {
-    
     experties: {
       styles: {
         typographyBoxStyle: {
@@ -19539,7 +19512,8 @@ export const HIRE_DEVELOPERS = [
       ],
     },
   },
-  {experties: {
+  {
+    experties: {
       styles: {
         typographyBoxStyle: {
           display: 'flex',
@@ -20672,7 +20646,6 @@ export const DescriptionBoxStyleForFormSection = (
   };
 };
 
-
 export const processCardTopBoxStyle = () => {
   return {
     maxWidth: 'auto',
@@ -20846,7 +20819,6 @@ export const processCardVectorStyles = (path, full_stack, mern_stack) => {
     },
   ];
 };
-
 
 export const responsiveProcessCardBoxStyle = (process) => {
   return {
