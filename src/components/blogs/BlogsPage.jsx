@@ -6,7 +6,7 @@ import Hero from '@/components/homepage/Hero';
 import BlogCards from '../homepage/BlogCards';
 import { Box, Container } from '@mui/material';
 
-export default function BlogsPage() {
+const BlogsPage = () => {
   const [blogs, setBlogs] = useState(null);
   const [error, setError] = useState('');
 
@@ -44,4 +44,6 @@ export default function BlogsPage() {
       </Container>
     </>
   );
-}
+};
+
+export default BlogsPage;

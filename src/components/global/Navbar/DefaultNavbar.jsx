@@ -13,7 +13,7 @@ import NavbarItems from './NavbarItems';
 import NewHireLinks from '@/components/homepage/NewHireLinks';
 // import HireLinks from '@/components/homepage/HireLinks';
 
-function DefaultNavbar({
+const DefaultNavbar = ({
   routes,
   handleOpen,
   light = false,
@@ -21,7 +21,7 @@ function DefaultNavbar({
   sticky = false,
   relative = false,
   layout,
-}) {
+}) => {
   const [dropdown, setDropdown] = useState('');
   const [dropdownEl, setDropdownEl] = useState('');
   const [dropdownName, setDropdownName] = useState('');
@@ -214,6 +214,6 @@ function DefaultNavbar({
   };
 
   return <>{renderedLayout(layout)}</>;
-}
+};
 
 export default DefaultNavbar;

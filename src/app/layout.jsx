@@ -13,8 +13,8 @@ import { getPageSeo } from '@/sanity/sanity.quries';
 import GoogleTag from '@/components/global/Header/GoogleTag';
 import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
-import { getMetadata } from '@/components/global/seo';
-import Loading from '@/components/global/loading';
+import { getMetadata } from '@/components/global/Seo';
+import Loading from '@/components/global/Loading';
 
 const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,
@@ -28,7 +28,7 @@ const filteredData =
 
 export const metadata = getMetadata(filteredData);
 
-export default async function RootLayout({ children }) {
+const RootLayout = async ({ children }) => {
   return (
     <html lang="en">
       <body>
@@ -52,4 +52,6 @@ export default async function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

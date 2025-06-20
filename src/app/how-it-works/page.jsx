@@ -1,7 +1,7 @@
 import HowitsWork from '@/components/how-it-work/HowitsWork';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/how-it-works';

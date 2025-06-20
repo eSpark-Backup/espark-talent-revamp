@@ -7,7 +7,7 @@ import { PARTNERSHIP_HERO_DATA } from '@/constants/global/hero-sections';
 import { PARTNERSHIP } from '@/constants/partnership/partnership';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/partnership-program';

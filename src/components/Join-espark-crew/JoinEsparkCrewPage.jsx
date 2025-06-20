@@ -31,7 +31,7 @@ const JoinCrewCTA = dynamic(
   () => import('@/components/Join-espark-crew/JoinCrewCTA')
 );
 
-export default function JoinEsparkCrewPage() {
+const JoinEsparkCrewPage = () => {
   const {
     introSecHeading,
     AboutSecHeading,
@@ -188,4 +188,6 @@ export default function JoinEsparkCrewPage() {
       />
     </>
   );
-}
+};
+
+export default JoinEsparkCrewPage;

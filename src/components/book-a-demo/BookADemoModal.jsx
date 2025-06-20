@@ -15,7 +15,7 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal({ text, open, handleClose }) {
+const BasicModal = ({ text, open, handleClose }) => {
   return (
     <div>
       <Modal
@@ -32,4 +32,6 @@ export default function BasicModal({ text, open, handleClose }) {
       </Modal>
     </div>
   );
-}
+};
+
+export default BasicModal;

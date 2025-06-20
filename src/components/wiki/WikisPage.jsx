@@ -5,7 +5,7 @@ import { getWiki } from '@/sanity/sanity.quries';
 import Hero from '@/components/homepage/Hero';
 import WikiCards from './wikiCards';
 
-export default function WikisPage() {
+const WikisPage = () => {
   const [wiki, setWiki] = useState(null);
   const [error, setError] = useState('');
 
@@ -39,4 +39,6 @@ export default function WikisPage() {
       <WikiCards data={wiki} />
     </>
   );
-}
+};
+
+export default WikisPage;

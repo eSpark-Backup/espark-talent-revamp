@@ -16,7 +16,7 @@ const style = {
   overflow: 'hidden',
 };
 
-export default function HireModal({ content, open, handleModalClose }) {
+const HireModal = ({ content, open, handleModalClose }) => {
   return (
     <div>
       <Modal
@@ -93,4 +93,6 @@ export default function HireModal({ content, open, handleModalClose }) {
       </Modal>
     </div>
   );
-}
+};
+
+export default HireModal;

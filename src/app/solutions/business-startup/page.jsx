@@ -24,7 +24,7 @@ import CustomizeOutsource from '@/components/for-startup/CustomizeOutsource';
 import BusinessVenture from '@/components/for-startup/BusinessVenture';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 import Faq from '@/components/FAQ/Faq';

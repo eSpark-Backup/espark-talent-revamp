@@ -2,7 +2,7 @@
 import { Box } from '@mui/material';
 import { useState, useEffect, Suspense } from 'react';
 import { keyframes } from '@emotion/react';
-import { LOADING_DATA } from '@/constants/global/notfound';
+import { LOADING_DATA } from '@/constants/global/not-found';
 
 const dotAnimation = keyframes`
   0% { transform: translateX(0); }
@@ -23,7 +23,7 @@ const smokeAnimation = keyframes`
   50% { transform: translateY(-2px) scale(0.8); opacity: 0.5; }
   100% { transform: translateY(20px) scale(2); opacity: 0; }`;
 
-function useDelayedRender(delay) {
+const useDelayedRender = (delay) => {
   const [isDelayed, setIsDelayed] = useState(true);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function useDelayedRender(delay) {
   }, [delay]);
 
   return isDelayed;
-}
+};
 
 const Loading = ({ children }) => {
   const isDelayed = useDelayedRender(1000);

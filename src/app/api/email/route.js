@@ -2,7 +2,7 @@ import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export async function POST(req) {
+const POST = async (req) => {
   const request = await req.json();
 
   try {
@@ -64,4 +64,6 @@ export async function POST(req) {
       status: 500,
     });
   }
-}
+};
+
+export { POST };

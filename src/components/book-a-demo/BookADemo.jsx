@@ -6,7 +6,7 @@ import BookADemoContent from './BookADemoContent';
 import BookADemoForm from './BookADemoForm';
 import { Book_A_Demo_Data, styles } from '@/constants/book-a-demo/book-a-demo';
 
-export default function BookADemo() {
+const BookADemo = () => {
   const { content, form } = Book_A_Demo_Data;
 
   return (
@@ -19,4 +19,6 @@ export default function BookADemo() {
       </Grid>
     </Grid>
   );
-}
+};
+
+export default BookADemo;

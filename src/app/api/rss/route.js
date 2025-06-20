@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getBlog } from '@/sanity/sanity.quries';
 
-export async function GET(req) {
+const GET = async (req) => {
   const { searchParams } = new URL(req.url);
   const tag = searchParams.get('tag');
 
@@ -70,4 +70,6 @@ export async function GET(req) {
       'Cache-Control': 's-maxage=600, stale-while-revalidate',
     },
   });
-}
+};
+
+export { GET };

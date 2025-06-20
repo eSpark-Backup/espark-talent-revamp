@@ -21,7 +21,7 @@ const style = {
   alignItems: 'center',
 };
 
-export default function JoinEsparkSuccessModal({ open, handleClose }) {
+const JoinEsparkSuccessModal = ({ open, handleClose }) => {
   const { title, description, buttonText } =
     REGISTRATION_FORM_SUCCESS_MODAL_DATA;
 
@@ -69,4 +69,6 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
       </Modal>
     </div>
   );
-}
+};
+
+export default JoinEsparkSuccessModal;

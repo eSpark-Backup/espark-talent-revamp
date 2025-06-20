@@ -13,7 +13,7 @@ import {
   taskAltIconStyle,
   listItemTypographyStyle,
   imageBoxStyle,
-} from '@/constants/solutions/for-business-startup/BusinessVentureConstant';
+} from '@/constants/solutions/for-business-startup/business-venture-constant';
 
 const BusinessVenture = ({ data }) => {
   if (!data) {

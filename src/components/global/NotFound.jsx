@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { NOT_FOUND_DATA } from '@/constants/global/not-found';
 
 const NotFoundPage = ({ data }) => {
   return (

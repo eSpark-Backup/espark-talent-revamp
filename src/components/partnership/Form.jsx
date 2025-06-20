@@ -7,7 +7,7 @@ import { Button, Box, Typography } from '@mui/material';
 import 'react-phone-number-input/style.css';
 import BasicModal from '../book-a-demo/BookADemoModal';
 import axios from 'axios';
-import { CountryCode } from '@/constants/global/CountryCodes';
+import { CountryCode } from '@/constants/global/country-codes';
 import { PopupModal } from 'react-calendly';
 import { partnerShipFormValidationSchema } from '@/schema/schema';
 import { PartnerFormData } from '@/constants/partnership/partnership';

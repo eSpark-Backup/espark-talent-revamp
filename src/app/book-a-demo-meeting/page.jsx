@@ -2,7 +2,7 @@ import React from 'react';
 import DemoMeetingPage from '@/components/book-a-demo-meeting/DemoMeetingPage';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 import { DEMO_MEETING_DATA } from '@/constants/book-demo-meeting/book-demo-meeting';

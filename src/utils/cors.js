@@ -5,7 +5,7 @@ const pages = await getPageSeo();
 const wikis = await getWiki();
 export const urls = [...pages, ...wikis, ...hires, ...blogs];
 
-export function runMiddleware(req, res, fn) {
+export const runMiddleware = (req, res, fn) => {
   return new Promise((resolve, reject) => {
     fn(req, res, (result) => {
       if (result instanceof Error) {
@@ -14,13 +14,13 @@ export function runMiddleware(req, res, fn) {
       return resolve(result);
     });
   });
-}
+};
 
-export function capitalizeFirstLetter(text) {
+export const capitalizeFirstLetter = (text) => {
   return text.replace(/\b\w/g, (match) => match.toUpperCase());
-}
+};
 
-export function isObjectFilled(obj) {
+export const isObjectFilled = (obj) => {
   if (obj === null || typeof obj !== 'object' || obj === undefined) {
     return false;
   }
@@ -47,4 +47,4 @@ export function isObjectFilled(obj) {
     }
   }
   return false;
-}
+};

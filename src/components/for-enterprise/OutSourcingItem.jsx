@@ -30,7 +30,7 @@ import {
   listItemIconStyle,
   taskAltIconStyle,
   listItemTypographyStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingItemConstant';
+} from '@/constants/solutions/for-enterprise/out-sourcing-item-constant';
 
 const OutSourcingItem = ({ data }) => {
   const [isClient, setIsClient] = useState(false);

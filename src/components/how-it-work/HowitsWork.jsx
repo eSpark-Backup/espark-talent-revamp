@@ -17,7 +17,7 @@ import {
   HR_FIRM_DATA,
   OUR_OFFERED_SERVICES,
   OUR_SERVICE,
-} from '@/constants/how-its-works';
+} from '@/constants/how-its-works/how-its-works';
 
 import { HOW_WORKS_HERO_DATA } from '@/constants/global/hero-sections';
 import ClientSlider from '../global/ClientSlider';

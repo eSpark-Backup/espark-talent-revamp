@@ -1,4 +1,4 @@
-export default function robots() {
+const robots = () => {
   return {
     rules: {
       userAgent: '*',
@@ -7,4 +7,6 @@ export default function robots() {
     },
     sitemap: 'https://www.esparktalent.com/sitemap.xml',
   };
-}
+};
+
+export default robots;

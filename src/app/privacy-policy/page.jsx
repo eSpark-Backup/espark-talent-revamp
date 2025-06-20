@@ -5,7 +5,7 @@ import { PRIVACY_POLICY_DATA } from '@/constants/privacy-policy/privacy-policy';
 import { PRIVACY_POLICY_HERO_DATA } from '@/constants/global/hero-sections';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/privacy-policy';

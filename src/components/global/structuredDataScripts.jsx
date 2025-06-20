@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 
-export function CreativeWorkSeriesScript(data) {
+const CreativeWorkSeriesScript = (data) => {
   const jsonLd = {
     '@context': 'https://schema.org/',
     '@type': 'CreativeWorkSeries',
@@ -24,4 +24,6 @@ export function CreativeWorkSeriesScript(data) {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
   );
-}
+};
+
+export default CreativeWorkSeriesScript;

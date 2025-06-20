@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getBlog } from '@/sanity/sanity.quries';
 import BlogCards from '../homepage/BlogCards';
 
-export default function SSRBlogs() {
+const SSRBlogs = () => {
   const [blog, setBlog] = useState(null);
   const [error, setError] = useState(null);
 
@@ -30,4 +30,6 @@ export default function SSRBlogs() {
       )}
     </>
   );
-}
+};
+
+export default SSRBlogs;

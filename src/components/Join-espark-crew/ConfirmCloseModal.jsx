@@ -18,11 +18,7 @@ const style = {
   alignItems: 'center',
 };
 
-export default function ConfirmCloseModal({
-  open,
-  handleClose,
-  handleSuccess,
-}) {
+const ConfirmCloseModal = ({ open, handleClose, handleSuccess }) => {
   const { heading, description, cancelButton, confirmationButton } =
     CONFIRMATION_MODAL_DATA;
 
@@ -86,4 +82,6 @@ export default function ConfirmCloseModal({
       </Modal>
     </div>
   );
-}
+};
+
+export default ConfirmCloseModal;

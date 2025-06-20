@@ -1,6 +1,6 @@
 import client from './sanity.config';
 
-export async function getJob() {
+const getJob = async () => {
   return client.fetch(
     `*[_type == "job"] {
       _id,
@@ -25,9 +25,9 @@ export async function getJob() {
       },
     }
   );
-}
+};
 
-export async function getBlog() {
+const getBlog = async () => {
   return client.fetch(
     ` *[_type == "blog"]
     {
@@ -55,9 +55,9 @@ export async function getBlog() {
       },
     }
   );
-}
+};
 
-export async function getSingleBlog(slug) {
+const getSingleBlog = async (slug) => {
   return client.fetch(
     `*[_type == "blog" && slug.current == $slug][0]
     {
@@ -88,9 +88,9 @@ export async function getSingleBlog(slug) {
       },
     }
   );
-}
+};
 
-export async function getWiki() {
+const getWiki = async () => {
   return client.fetch(
     ` *[_type == "wiki"]
     {
@@ -119,9 +119,9 @@ export async function getWiki() {
       },
     }
   );
-}
+};
 
-export async function getSingleWiki(slug) {
+const getSingleWiki = async (slug) => {
   return client.fetch(
     `*[_type == "wiki" && slug.current == $slug][0]
     {
@@ -152,9 +152,9 @@ export async function getSingleWiki(slug) {
       },
     }
   );
-}
+};
 
-export async function getPageSeo() {
+const getPageSeo = async () => {
   return client.fetch(
     ` *[_type == "seo"]
   {
@@ -173,8 +173,8 @@ export async function getPageSeo() {
       },
     }
   );
-}
-export async function getAuthor() {
+};
+const getAuthor = async () => {
   return client.fetch(
     ` *[_type == "author"]
     {
@@ -192,9 +192,9 @@ export async function getAuthor() {
       },
     }
   );
-}
+};
 
-export async function getHire() {
+const getHire = async () => {
   return client.fetch(
     `*[_type == "hire"]
     {
@@ -219,9 +219,9 @@ export async function getHire() {
       },
     }
   );
-}
+};
 
-export async function getSingleHire(slug) {
+const getSingleHire = async (slug) => {
   return client.fetch(
     `*[_type == "hire" && slug.current == $slug][0]
     {
@@ -248,4 +248,16 @@ export async function getSingleHire(slug) {
       },
     }
   );
-}
+};
+
+export {
+  getHire,
+  getSingleHire,
+  getJob,
+  getBlog,
+  getAuthor,
+  getPageSeo,
+  getSingleWiki,
+  getSingleBlog,
+  getWiki,
+};

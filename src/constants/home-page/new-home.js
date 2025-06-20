@@ -112,6 +112,7 @@ export const HERO_DATA = {
     },
   },
 };
+
 export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
   title: `Hire Top Talent Now`,
@@ -318,6 +319,7 @@ export const DIFFERENCE_DATA = {
     },
   ],
 };
+
 export const DIFFERENCE_DATA_FOR_REMOTE = {
   title: `Why eSpark Talent Outsourcing Model is Different`,
   items: [
@@ -366,6 +368,7 @@ export const WORKS_DATA = {
     },
   ],
 };
+
 export const EXPERT_TEAM_DATA = {
   title: `Build A World-Class Experts Team For Your Business`,
   btnTitle: `Book your demo`,
@@ -2301,6 +2304,7 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
     },
   },
 };
+
 export const OUR_AREA_OF_EXPERTISE_DATA = {
   title: 'OUR AREA OF EXPERTISE',
   text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
@@ -2400,6 +2404,7 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
     },
   },
 };
+
 export const EASY_STEPS_DATA = {
   title: `Hire Dedicated Developers with eSpark in <span style="color: #13A694; font-weight: 600">4</span> Easy Steps`,
   description:
@@ -2457,6 +2462,7 @@ export const EASY_STEPS_DATA = {
     },
   },
 };
+
 export const EXPERT_DEVELOPERS_DATA = {
   icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
   title: 'Why Choose Expert Developers from eSpark Talent?',
@@ -2600,6 +2606,7 @@ export const EXPERT_DEVELOPERS_DATA = {
     },
   },
 };
+
 export const HIGH_STAKES_PROJECT_DATA = {
   title: 'A Vast Pool of Skilled Tech Talent for Your High-Stakes Projects',
   description:
@@ -2678,6 +2685,7 @@ export const HIGH_STAKES_PROJECT_DATA = {
     },
   },
 };
+
 export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
   title: 'Frequently Asked Questions',
   cards: [
@@ -2800,6 +2808,7 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
     },
   },
 };
+
 export const TALENT_ROSTER_DATA = {
   title: 'Our Curated Diverse Talent Roster',
   buttonText: 'Hire talent based on role',
@@ -3080,6 +3089,7 @@ export const FIXED_PRICES_PROJECTS_DATA = {
     },
   },
 };
+
 export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
   title: 'Explaining Fixed-price projects',
   description:
@@ -3162,6 +3172,7 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
     },
   },
 };
+
 export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
   title: 'When Fixed Price Works Best - Clear, Efficient, Reliable',
   cards: [
@@ -3304,6 +3315,7 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
   },
 };
+
 export const FIXED_PRICE_PROJECT_CONTRACT = {
   title: 'Fixed Price Project Contract Process',
   description:
@@ -3456,6 +3468,7 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
     },
   },
 };
+
 export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
   title: 'Frequently Asked Questions',
   cards: [
@@ -3578,6 +3591,7 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
     },
   },
 };
+
 export const PRODUCT_JOURNEY_DATA = {
   title: 'Power Up Every Stage of Your Product Journey',
   description:
@@ -3786,6 +3800,7 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
     },
   },
 };
+
 export const ODC_SOLUTIONS = {
   title: 'Turn Your Vision into Reality with Our Expert ODC Solutions',
   description:
@@ -3930,6 +3945,7 @@ export const ODC_SOLUTIONS = {
     },
   },
 };
+
 export const DOORSTEP_DATA = {
   subTitle: 'Our Benefits',
   title: 'Bringing Global Expertise to Your Doorstep',
@@ -4219,6 +4235,7 @@ export const DOORSTEP_DATA = {
     },
   },
 };
+
 export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
   icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
   title: 'Why Choose an Offshore Development Center?',
@@ -4377,6 +4394,7 @@ export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
     },
   },
 };
+
 export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
   title: 'Frequently Asked Questions',
   cards: [
@@ -4500,6 +4518,7 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
     },
   },
 };
+
 export const ODC_FOUNDATION_DATA = {
   title: 'Building the ODC Foundation for Your Growth',
   text: `Our approach to creating Offshore Development Centers is built around precision and efficiency. Here's our five-step process to ensure we deliver a high-impact ODC solution tailored to your business:`,
@@ -4619,6 +4638,7 @@ export const ODC_FOUNDATION_DATA = {
     },
   },
 };
+
 export const ODC_SERVICES_DATA = {
   title: 'ODC Services Based on Tech Stack',
   techStack: [

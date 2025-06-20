@@ -1,6 +1,6 @@
 import { urls } from '@/utils/cors';
 
-export default function sitemap() {
+const sitemap = () => {
   const today = new Date();
   const formattedDate = today.toISOString().replace(/\.\d{3}Z$/, '+00:00');
 
@@ -10,4 +10,6 @@ export default function sitemap() {
     changeFrequency: 'weekly',
     priority: item.url === 'https://www.esparktalent.com/' ? 1 : 0.8,
   }));
-}
+};
+
+export default sitemap;

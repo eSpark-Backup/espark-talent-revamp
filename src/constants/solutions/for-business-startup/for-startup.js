@@ -58,6 +58,7 @@ export const BUSINESS_START_UP = {
   title: 'eSpark Talent Ignites Fresh Business Start-Ups.',
   description: `Time is in your favor, as eSpark Talent, the ultimate outsourcing platform, has touched the global standards. It doesn’t matter if you are new in the market or have been there for years. We are just one call away from offering our outsourced talent. So, be ready to recruit our team of IT professionals effortlessly with a streamlined talent onboarding process.`,
 };
+
 export const OUR_ADDITIONAL_BENEFITS = {
   image: '/images/for-startup/additional-banefits/banefit.svg',
   alt: 'Advantages of Outsourcing with eSpark Talent ',
@@ -84,6 +85,7 @@ export const OUR_ADDITIONAL_BENEFITS = {
     },
   ],
 };
+
 export const BEST_OUTSOURCING_SOLUTIONS = {
   image: '/images/for-startup/outsourcing-solutions/best-outsourcing.png',
   alt: 'hire a top-notch team with eSpark Talent ',

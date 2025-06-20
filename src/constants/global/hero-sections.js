@@ -20,6 +20,7 @@ export const HP_HERO_DATA = {
   descVarient: 'body1',
   descColor: 'secondary',
 };
+
 export const SERVICE = {
   title:
     '<span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Hire </span> MEAN Stack <span style="color: rgba(0, 28, 99, 1); font-weight: 700"> Developers </span>',
@@ -49,6 +50,7 @@ export const SERVICE = {
     { image: '/images/homepage/hero-section/award4.svg', alt: 'awd3' },
   ],
 };
+
 export const DEMO_HERO_DATA = {
   title: 'Build A World-Class Experts Team For Your Business',
   description:
@@ -305,6 +307,7 @@ export const WHAT_WE_DO_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+
 export const PRIVACY_POLICY_HERO_DATA = {
   title: 'Privacy Policy eSpark Talent',
   image: '/images/privacy-policy/espark-privacy-policy-hero-image.svg',
@@ -320,6 +323,7 @@ export const PRIVACY_POLICY_HERO_DATA = {
   descVarient: 'body1',
   descColor: '#fff',
 };
+
 export const TERMS_CONDITIONS_HERO_DATA = {
   title: 'Terms & Conditions eSpark Talent',
   image: '/images/terms-conditions/espark-terms-conditions-hero-image.svg',

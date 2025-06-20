@@ -8,7 +8,7 @@ import {
 } from '@/constants/pricing/pricing';
 const PricingStrip = dynamic(() => import('./PricingStrip'));
 
-export default function PricingBenifits({ data }) {
+const PricingBenifits = ({ data }) => {
   return (
     <>
       <Container sx={{ px: { xs: '24px', lg: '0px !important' } }}>
@@ -38,4 +38,6 @@ export default function PricingBenifits({ data }) {
       </Container>
     </>
   );
-}
+};
+
+export default PricingBenifits;

@@ -3,7 +3,7 @@ import Collapse from '@mui/material/Collapse';
 import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
-function NavbarItems({
+const NavbarItems = ({
   name,
   icon,
   children,
@@ -17,7 +17,7 @@ function NavbarItems({
   handleClose,
   navbarItemStyle,
   ...rest
-}) {
+}) => {
   const lastIndex = routes?.length - 1;
   const router = useRouter();
   const { itemBoxStyle, typographyStyle, imageStyle } = navbarItemStyle || {};
@@ -70,6 +70,6 @@ function NavbarItems({
       )}
     </>
   );
-}
+};
 
 export default NavbarItems;

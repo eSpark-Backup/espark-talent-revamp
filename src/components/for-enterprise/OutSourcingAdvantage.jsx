@@ -11,7 +11,7 @@ import {
   itemBoxStyle,
   itemTypographyStyle,
   imageGridStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingAdvantageConstants';
+} from '@/constants/solutions/for-enterprise/out-sourcing-advantage-constants';
 
 const OutSourcingAdvantage = ({ data }) => {
   if (!data) {

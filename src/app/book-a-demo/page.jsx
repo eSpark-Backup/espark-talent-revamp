@@ -2,7 +2,7 @@ import React from 'react';
 import BookADemo from '@/components/book-a-demo/BookADemo';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/book-a-demo';

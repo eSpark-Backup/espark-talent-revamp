@@ -3,7 +3,7 @@
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 
-export default function ToastProvider({ children }) {
+const ToastProvider = ({ children }) => {
   return (
     <>
       {children}
@@ -21,4 +21,6 @@ export default function ToastProvider({ children }) {
       />
     </>
   );
-}
+};
+
+export default ToastProvider;

@@ -1,8 +1,9 @@
-export default function StructuredData({ data }) {
+const StructuredData = ({ data }) => {
   return <script type="application/ld+json">{data}</script>;
-}
+};
 
-// export default function StructuredData({ data }) {
+export default StructuredData;
+// export default const StructuredData({ data }) {
 //   return (
 //     <script
 //       type="application/ld+json"

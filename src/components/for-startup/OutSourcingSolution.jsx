@@ -10,7 +10,7 @@ import {
   gridItemStyle,
   itemBoxStyle,
   titleTypographyStyle,
-} from '@/constants/solutions/for-business-startup/OutSourcingSolutionConstant';
+} from '@/constants/solutions/for-business-startup/out-sourcing-solution-constant';
 
 const OutSourcingSolution = ({ data }) => {
   if (!data) {

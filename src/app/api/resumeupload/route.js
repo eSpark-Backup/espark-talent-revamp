@@ -14,7 +14,7 @@ const s3Client = new S3Client({
   },
 });
 
-async function handler(req, res) {
+const handler = async (req, res) => {
   if (req.method === 'POST') {
     const formData = await req?.formData();
 
@@ -67,6 +67,6 @@ async function handler(req, res) {
     res.setHeader('Allow', ['POST']);
     Response.status(405).json({ error: `Method ${req.method} not allowed` });
   }
-}
+};
 
 export { handler as POST };

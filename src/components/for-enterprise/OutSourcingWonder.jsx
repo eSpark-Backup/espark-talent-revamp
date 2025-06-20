@@ -27,7 +27,7 @@ import {
   iconBoxStyle,
   itemTitleTypographyStyle,
   itemParagraphTypographyStyle,
-} from '@/constants/solutions/for-enterprise/OutSourcingWonderConstant';
+} from '@/constants/solutions/for-enterprise/out-sourcing-wonder-constant';
 
 const OutSourcingWonder = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);

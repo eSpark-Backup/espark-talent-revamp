@@ -27062,6 +27062,7 @@ export const mainContainerStyleForCustomizeSolution = (bgImage, pathname) => {
     },
   };
 };
+
 export const descriptionTypographyStyleForCustomizeSolution = (
   pathname,
   book_a_demo_meeting

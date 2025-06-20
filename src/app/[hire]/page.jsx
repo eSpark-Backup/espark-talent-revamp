@@ -1,27 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Script from 'next/script';
 
 import NotFoundPage from '@/components/global/NotFound';
 import Hire from '@/components/hire-developer/Hire';
-import { getHireMetadata } from '@/components/global/seo';
+import { getHireMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
-import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { NOT_FOUND_DATA } from '@/constants/global/not-found';
 import { HIRE_DEVELOPERS } from '@/constants/hire-developer/hire-developer';
 
 import { getSingleHire } from '@/sanity/sanity.quries';
-import { CreativeWorkSeriesScript } from '@/components/global/structuredDataScripts';
+import CreativeWorkSeriesScript from '@/components/global/StructuredDataScripts';
 
-export async function generateMetadata({ params }) {
+export const generateMetadata = async ({ params }) => {
   const slug = params.hire;
   const hire = await getSingleHire(slug);
   const filteredData = hire || GLOBAL_SEO[0];
   return getHireMetadata(filteredData);
-}
+};
 
-export default async function Page({ params }) {
+const Page = async ({ params }) => {
   const path = params.hire;
   const hire = await getSingleHire(path);
   const filteredData = hire || GLOBAL_SEO[0];
@@ -64,8 +62,6 @@ export default async function Page({ params }) {
       </div>
     );
   }
-}
-
-Page.propTypes = {
-  params: PropTypes.object.isRequired,
 };
+
+export default Page;

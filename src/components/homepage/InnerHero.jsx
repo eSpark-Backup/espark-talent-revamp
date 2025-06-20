@@ -142,7 +142,10 @@ const InnerHero = ({ data, innerData }) => {
                 }}
               >
                 {isLoading ? (
-                  <Skeleton width={data?.imageWidth} height={data?.imageHeight} />
+                  <Skeleton
+                    width={data?.imageWidth}
+                    height={data?.imageHeight}
+                  />
                 ) : (
                   <Image
                     quality="85"

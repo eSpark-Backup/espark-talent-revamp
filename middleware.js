@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export function middleware(request) {
+export const middleware = (request) => {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('next-url', request.url);
 
@@ -9,4 +9,4 @@ export function middleware(request) {
       headers: requestHeaders,
     },
   });
-}
+};

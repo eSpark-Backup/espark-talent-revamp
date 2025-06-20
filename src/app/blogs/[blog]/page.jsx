@@ -1,19 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Container, Box } from '@mui/material';
 import { getAuthor, getSingleBlog } from '@/sanity/sanity.quries';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
-import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { BLOGS_NOT_FOUND_DATA } from '@/constants/global/not-found';
 import NotFoundPage from '@/components/global/NotFound';
-import { getBlogsMetadata } from '@/components/global/seo';
+import { getBlogsMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
-export async function generateMetadata({ params }) {
+export const generateMetadata = async ({ params }) => {
   const slug = params.blog;
   const blog = await getSingleBlog(slug);
   const filteredData = blog || GLOBAL_SEO[0];
   return getBlogsMetadata(filteredData);
-}
+};
 
 const Page = async ({ params }) => {
   if (!params || !params.blog) {
@@ -29,7 +28,7 @@ const Page = async ({ params }) => {
     const blog = await getSingleBlog(slug);
 
     const BlogDetailsContent = React.lazy(
-      () => import('@/components/blogs/blogDetailsContent')
+      () => import('@/components/blogs/BlogDetailsContent')
     );
     const SingleBlogHeader = React.lazy(
       () => import('@/components/blogs/SingleBlogHeader')
@@ -61,10 +60,6 @@ const Page = async ({ params }) => {
       </div>
     );
   }
-};
-
-Page.propTypes = {
-  params: PropTypes.object.isRequired,
 };
 
 export default Page;

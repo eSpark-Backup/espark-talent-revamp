@@ -1,18 +1,18 @@
 import React from 'react';
 import { getSingleWiki } from '@/sanity/sanity.quries';
 import NotFoundPage from '@/components/global/NotFound';
-import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { WIKIS_NOT_FOUND_DATA } from '@/constants/global/not-found';
 import { WIKI_HERO_DATA } from '@/constants/global/hero-sections';
 import { GLOBAL_SEO } from '@/constants/seo/seo-data';
-import { getWikisMetadata } from '@/components/global/seo';
+import { getWikisMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
-export async function generateMetadata({ params }) {
+export const generateMetadata = async ({ params }) => {
   const slug = params.wiki;
   const wiki = await getSingleWiki(slug);
   const filteredData = wiki || GLOBAL_SEO[0];
   return getWikisMetadata(filteredData);
-}
+};
 
 const Page = async ({ params }) => {
   if (!params || !params.wiki) {

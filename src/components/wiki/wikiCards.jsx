@@ -272,4 +272,5 @@ const WikiCards = ({ data }) => {
     </>
   );
 };
+
 export default WikiCards;

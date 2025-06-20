@@ -6,11 +6,11 @@ import CareerCards from '@/components/careers/CareerCards';
 import Hero from '@/components/homepage/Hero';
 
 // Assuming this is a Next.js page component
-export default function CareersPage() {
+const CareersPage = () => {
   const [job, setJob] = useState(null);
   const [error, setError] = useState('');
 
-  // Function to fetch jobs and job categories
+  // const to fetch jobs and job categories
   const fetchData = async () => {
     try {
       const fetchedJob = await getJob();
@@ -41,4 +41,6 @@ export default function CareersPage() {
       <CareerCards data={job} />
     </>
   );
-}
+};
+
+export default CareersPage;

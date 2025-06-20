@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-async function handler(req, res) {
+const handler = async (req, res) => {
   const request = await req.json();
   console.log(res, 'Response');
   if (req.method === 'POST') {
@@ -66,5 +66,6 @@ async function handler(req, res) {
     res.setHeader('Allow', ['POST']);
     Response.status(405).json({ error: `Method ${req.method} not allowed` });
   }
-}
+};
+
 export { handler as POST };

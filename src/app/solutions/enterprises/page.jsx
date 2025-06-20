@@ -8,7 +8,7 @@ import OutSourcingItem from '@/components/for-enterprise/OutSourcingItem';
 import OutStaffings from '@/components/for-enterprise/OutStaffings';
 import OutSourcingWonder from '@/components/for-enterprise/OutSourcingWonder';
 import OutSourcingAdvantage from '@/components/for-enterprise/OutSourcingAdvantage';
-import { getMetadata } from '@/components/global/seo';
+import { getMetadata } from '@/components/global/Seo';
 import StructuredData from '@/components/global/StructuredData';
 
 import {
