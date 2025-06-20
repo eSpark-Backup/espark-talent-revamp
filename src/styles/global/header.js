@@ -1,16 +1,3 @@
-export const HIRE_A_TALENT = 'Services';
-export const BOOK_A_DEMO = 'Book a Demo';
-export const Request_Candidate = 'Schedule a Call';
-export const HIRE_A_TALENT_LINK = '/book-a-demo';
-export const EXCLUDED_PATHS = [
-  '/book-a-demo',
-  '/demo',
-  '/thankyou',
-  '/book-a-meeting',
-  '/hire-a-frontend-developer',
-  '/hire-remote-developers',
-  '/book-a-demo-meeting',
-];
 export const NAVBAR_STYLE = {
   popperStyle: (dropdownName) => ({
     zIndex: 1002,

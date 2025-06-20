@@ -1,12 +1,4 @@
 export const HERO_DATA = {
-  subTitle: 'Need to Grow Your Team?',
-  title: `Hire Top Talent On-Demand In`,
-  animateText: 'Just 48 Hours.',
-  description: `Scale your business worldwide with eSpark Talent’s advanced global recruitment and onboarding solutions.`,
-  bgImage: '/images/homepage/hero/hero.png',
-  responsiveImage: '/images/homepage/hero/hero-img-res.png',
-  btnTitle: `Book A Demo`,
-  btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -114,15 +106,6 @@ export const HERO_DATA = {
 };
 
 export const EMPLOYEE_HERO_DATA = {
-  subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
-  title: `Hire Top Talent Now`,
-  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
-  bgImage: '/images/homepage/hero/emp-hero.png',
-  textureImage: '/images/homepage/hero/texture-img.png',
-  animatedGif: '/images/homepage/hero/65.gif',
-  animatedVideo: '/images/homepage/hero/eSpark-New.webm',
-  btnTitle: `Schedule a Call`,
-  btnLink: `/book-a-demo`,
   styles: {
     mainBoxStyle: (bgImage) => ({
       width: '100%',
@@ -296,55 +279,6 @@ export const EMPLOYEE_HERO_DATA = {
   },
 };
 
-export const DIFFERENCE_DATA = {
-  title: `Why eSpark Talent Outsourcing Model is Different`,
-  items: [
-    {
-      id: 1,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/scale_faster.svg`,
-    },
-    {
-      id: 2,
-      title: `Increase Quality & Efficiency`,
-      description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/increase_quality.svg`,
-    },
-    {
-      id: 3,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/reduce_costs.svg`,
-    },
-  ],
-};
-
-export const DIFFERENCE_DATA_FOR_REMOTE = {
-  title: `Why eSpark Talent Outsourcing Model is Different`,
-  items: [
-    {
-      id: 1,
-      title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/scale_faster.svg`,
-    },
-    {
-      id: 2,
-      title: `Increase quality`,
-      description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/increase_quality.svg`,
-    },
-
-    {
-      id: 3,
-      title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/reduce_costs.svg`,
-    },
-  ],
-};
-
 export const WORKS_DATA = {
   title: `How offshoring works`,
   items: [
@@ -370,83 +304,6 @@ export const WORKS_DATA = {
 };
 
 export const EXPERT_TEAM_DATA = {
-  title: `Build A World-Class Experts Team For Your Business`,
-  btnTitle: `Book your demo`,
-  btnLink: `/book-a-demo`,
-  dapartment: [
-    {
-      post: 'Designers',
-      icon: '/images/homepage/expert-team/designer-icon.svg',
-      employees: [
-        {
-          name: `Mubbshir Shahid`,
-          link: `#`,
-          position: `Sr. UI/UX Designer`,
-          image: `/images/homepage/expert-team/designer-1.png`,
-        },
-        {
-          name: `Sam Jorden`,
-          link: `#`,
-          position: `UI/UX Designer`,
-          image: `/images/homepage/expert-team/designer-2.png`,
-        },
-        {
-          name: `Miriam Sik`,
-          link: `#`,
-          position: `Graphic Designer`,
-          image: `/images/homepage/expert-team/designer-3.png`,
-        },
-      ],
-    },
-    {
-      post: 'Developers',
-      icon: '/images/homepage/expert-team/developer-icon.svg',
-      employees: [
-        {
-          name: `Rohail Zafar`,
-          link: `#`,
-          position: `Full Stack Developer`,
-          image: `/images/homepage/expert-team/developer-1.png`,
-        },
-        {
-          name: `Thomas`,
-          link: `#`,
-          position: `Front End Developer`,
-          image: `/images/homepage/expert-team/developer-2.png`,
-        },
-        {
-          name: `Miller`,
-          link: `/`,
-          position: `Back End Developer`,
-          image: `/images/homepage/expert-team/developer-3.png`,
-        },
-      ],
-    },
-    {
-      post: 'Marketers',
-      icon: '/images/homepage/expert-team/marketer-icon.svg',
-      employees: [
-        {
-          name: `Kashif Hussain`,
-          link: `#`,
-          position: `Digital Marketer`,
-          image: `/images/homepage/expert-team/marketer-1.png`,
-        },
-        {
-          name: `Moryan`,
-          link: `#`,
-          position: `Digital Marketer`,
-          image: `/images/homepage/expert-team/marketer-2.png`,
-        },
-        {
-          name: `Zoe`,
-          link: `#`,
-          position: `Social Media Executive`,
-          image: `/images/homepage/expert-team/marketer-3.png`,
-        },
-      ],
-    },
-  ],
   styles: {
     containerStyle: {
       width: '100%',
@@ -564,53 +421,6 @@ export const EXPERT_TEAM_DATA = {
 };
 
 export const HIRING_DATA = {
-  title: 'Choose from Our Flexible Models',
-  icon: '/images/new-home/flexible-models/right-arrow.png',
-  image: '/images/new-home/flexible-models/underline.png',
-  items: [
-    {
-      title: `Hire Dedicated Developers`,
-      buttonText: 'Find Your Developer',
-      link: '/hire-dedicated-developers',
-      points: [
-        { text: 'Plug Into Proven Talent' },
-        { text: 'Quick Onboarding' },
-        { text: 'Flexible Engagement Models' },
-      ],
-    },
-    {
-      title: `Offshore Development Center`,
-      buttonText: 'Explore ODC Options',
-      link: '/offshore-development-center',
-      points: [
-        {
-          text: 'Expand Without Overhead',
-        },
-        {
-          text: 'Access Global Talent',
-        },
-        {
-          text: 'Complete Operational Support',
-        },
-      ],
-    },
-    {
-      title: `Fixed Price Projects`,
-      buttonText: 'Start Your Project',
-      link: '/fixed-price-projects',
-      points: [
-        {
-          text: 'Transparent, Upfront Costs',
-        },
-        {
-          text: 'Built for Results',
-        },
-        {
-          text: 'Clear Timelines & Deliverables',
-        },
-      ],
-    },
-  ],
   styles: {
     mainBoxStyle: {
       width: 'auto',
@@ -703,150 +513,6 @@ export const HIRING_DATA = {
 };
 
 export const EXPERTIES_DATA = {
-  title: 'Our Core Competencies',
-  services: [
-    {
-      id: 2,
-      icon: 'images/new-home/experties/icon2.svg',
-      activeIcon: 'images/new-home/experties/activeIcon2.svg',
-      heading: 'Front-End Developers',
-      listItems: [
-        {
-          title: 'AngularJS Developer',
-          link: '/hire-angular-developers',
-        },
-        {
-          title: 'ReactJS Developer',
-          link: '/hire-reactjs-developers',
-        },
-        {
-          title: 'JavaScript Developer',
-          link: '/hire-javascript-developers',
-        },
-        {
-          title: 'NextJS Developer',
-          link: '/hire-nextjs-developers',
-        },
-      ],
-    },
-    {
-      id: 3,
-      icon: 'images/new-home/experties/icon3.svg',
-      activeIcon: 'images/new-home/experties/activeIcon3.svg',
-      heading: 'Back-End Developers',
-      listItems: [
-        {
-          title: 'ASP .NET Developer',
-          link: '/hire-asp-dot-net-developers',
-        },
-        { title: 'PHP Developer', link: '/hire-php-developers' },
-        { title: 'Python Developer', link: '/hire-python-developers' },
-        { title: 'NodeJS Developer', link: '/hire-nodejs-developers' },
-      ],
-    },
-    {
-      id: 4,
-      icon: 'images/new-home/experties/icon4.svg',
-      activeIcon: 'images/new-home/experties/activeIcon4.svg',
-      heading: 'Digital Marketer',
-      listItems: [
-        {
-          title: 'Social Media Expert',
-          link: '/hire-social-media-experts',
-        },
-        { title: 'PPC Specialist', link: '/hire-ppc-specialists' },
-        { title: 'SEO Expert', link: '/hire-seo-experts' },
-        {
-          title: 'Performance Marketer',
-          link: '/hire-performance-marketers',
-        },
-      ],
-    },
-    {
-      id: 5,
-      icon: 'images/new-home/experties/icon5.svg',
-      activeIcon: 'images/new-home/experties/activeIcon5.svg',
-      heading: 'Embedded Developers',
-      listItems: [
-        {
-          title: 'Firmware Developer',
-          link: '/hire-firmware-developers',
-        },
-        { title: 'PCB Designer', link: '/hire-pcb-designers' },
-        {
-          title: 'Embedded System Engineer',
-          link: '/hire-embedded-system-engineers',
-        },
-      ],
-    },
-    {
-      id: 6,
-      icon: 'images/new-home/experties/icon6.svg',
-      activeIcon: 'images/new-home/experties/activeIcon6.svg',
-      heading: 'Ecommerce Developers',
-      listItems: [
-        {
-          title: 'WordPress Developer',
-          link: '/hire-wordpress-developers',
-        },
-        {
-          title: 'Shopify Developer',
-          link: '/hire-shopify-developers',
-        },
-      ],
-    },
-    {
-      id: 7,
-      icon: 'images/new-home/experties/icon7.svg',
-      activeIcon: 'images/new-home/experties/activeIcon7.svg',
-      heading: 'Mobile App Developers',
-      listItems: [
-        {
-          title: 'Android Developer',
-          link: '/hire-android-developers',
-        },
-        {
-          title: 'Flutter Developer',
-          link: '/hire-flutter-developers',
-        },
-        {
-          title: 'React Native Developer',
-          link: '/hire-react-native-developers',
-        },
-      ],
-    },
-    {
-      id: 1,
-      icon: 'images/new-home/experties/icon1.svg',
-      activeIcon: 'images/new-home/experties/activeIcon1.svg',
-      heading: 'Trending',
-      listItems: [
-        { title: 'UI UX Designer', link: '/hire-ui-ux-designers' },
-        {
-          title: 'Full Stack Developer',
-          link: '/hire-full-stack-developers',
-        },
-        {
-          title: 'MEAN Stack Developer',
-          link: '/hire-mean-stack-developers',
-        },
-        {
-          title: 'MERN Stack Developer',
-          link: '/hire-mern-stack-developers',
-        },
-        { title: 'DevOps Engineer', link: '/hire-devops-engineers' },
-        {
-          title: 'Fintech Developer',
-          link: '/hire-fintech-developers',
-        },
-        {
-          title: 'Software Developer',
-          link: '/hire-software-developers',
-        },
-        { title: 'QA Engineer', link: '/hire-qa-engineers' },
-      ],
-    },
-  ],
   styles: {
     containerStyle: { py: 2 },
     accordionStyle: { border: '1px solid #6A6565', boxShadow: 'none' },
@@ -888,30 +554,6 @@ export const EXPERTIES_DATA = {
 };
 
 export const OFFSHORE_DATA = {
-  title: `How offshoring works`,
-  bgImage: `/images/new-home/offshore-works/bg.png`,
-  bgImageInvert: `/images/new-home/offshore-works/bg-invert.png`,
-  items: [
-    {
-      invert: false,
-      icon: '/images/new-home/offshore-works/no1.png',
-      title: 'Tell us your needs',
-      description: 'We discuss your requirments, budget and job details.',
-    },
-    {
-      invert: true,
-      icon: '/images/new-home/offshore-works/no2.png',
-      title: 'Meet top candidates',
-      description:
-        'Connect directly with your best matches, fully vetted and highly responsive.',
-    },
-    {
-      invert: false,
-      icon: '/images/new-home/offshore-works/no3.png',
-      title: 'Hire and Onboarding',
-      description: "Decide who to hire, and we'll take care of the rest.",
-    },
-  ],
   styles: {
     mainBoxStyle: { backgroundColor: '#F7F8FB' },
     titleAndSwiperBoxStyle: {
@@ -1070,341 +712,6 @@ export const OFFSHORE_DATA = {
 };
 
 export const POWER_PROJECT_DATA = {
-  first_text: {
-    text: 'Power Your',
-    logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
-      },
-      {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
-      },
-      {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-      {
-        src: 'images/new-home/power-projects/cpt.png',
-        text: 'Custom Post Type',
-      },
-      {
-        src: 'images/new-home/power-projects/git.png',
-        text: 'GIT',
-      },
-      {
-        src: 'images/new-home/power-projects/react.png',
-        text: 'React',
-      },
-      {
-        src: 'images/new-home/power-projects/next-js.png',
-        text: 'Next.JS',
-      },
-      {
-        src: 'images/new-home/power-projects/es6.png',
-        text: 'JavaScript ES6',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
-        src: 'images/new-home/power-projects/apachea.png',
-        text: 'Apache',
-      },
-      {
-        src: 'images/new-home/power-projects/python.png',
-        text: 'Python',
-      },
-      {
-        src: 'images/new-home/power-projects/react-native.png',
-        text: 'React Native ',
-      },
-      {
-        src: 'images/new-home/power-projects/jquery.png',
-        text: 'JQuery',
-      },
-      {
-        src: 'images/new-home/power-projects/state.png',
-        text: 'State Management libraries',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
-        src: 'images/new-home/power-projects/wp-cli.png',
-        text: 'Wordpress CLI',
-      },
-      {
-        src: 'images/new-home/power-projects/restful.png',
-        text: 'RESTful APIs',
-      },
-      {
-        src: 'images/new-home/power-projects/bootstrap.png',
-        text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
-      },
-      {
-        src: 'images/new-home/power-projects/typescript.png',
-        text: 'TypeScript',
-      },
-      {
-        src: 'images/new-home/power-projects/github.png',
-        text: 'GITHUB CLA',
-      },
-      {
-        src: 'images/new-home/power-projects/php.png',
-        text: 'PHP',
-      },
-      {
-        src: 'images/new-home/power-projects/woocommerce.png',
-        text: 'COMMERCE',
-      },
-    ],
-  },
-  second_text: {
-    text: 'Projects with a',
-    logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
-      },
-      {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
-      },
-      {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-      {
-        src: 'images/new-home/power-projects/cpt.png',
-        text: 'Custom Post Type',
-      },
-      {
-        src: 'images/new-home/power-projects/git.png',
-        text: 'GIT',
-      },
-      {
-        src: 'images/new-home/power-projects/react.png',
-        text: 'React',
-      },
-      {
-        src: 'images/new-home/power-projects/next-js.png',
-        text: 'Next.JS',
-      },
-      {
-        src: 'images/new-home/power-projects/es6.png',
-        text: 'JavaScript ES6',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
-        src: 'images/new-home/power-projects/apachea.png',
-        text: 'Apache',
-      },
-      {
-        src: 'images/new-home/power-projects/python.png',
-        text: 'Python',
-      },
-      {
-        src: 'images/new-home/power-projects/react-native.png',
-        text: 'React Native ',
-      },
-      {
-        src: 'images/new-home/power-projects/jquery.png',
-        text: 'JQuery',
-      },
-      {
-        src: 'images/new-home/power-projects/state.png',
-        text: 'State Management libraries',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
-        src: 'images/new-home/power-projects/wp-cli.png',
-        text: 'Wordpress CLI',
-      },
-      {
-        src: 'images/new-home/power-projects/restful.png',
-        text: 'RESTful APIs',
-      },
-      {
-        src: 'images/new-home/power-projects/bootstrap.png',
-        text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
-      },
-      {
-        src: 'images/new-home/power-projects/typescript.png',
-        text: 'TypeScript',
-      },
-      {
-        src: 'images/new-home/power-projects/github.png',
-        text: 'GITHUB CLA',
-      },
-      {
-        src: 'images/new-home/power-projects/php.png',
-        text: 'PHP',
-      },
-      {
-        src: 'images/new-home/power-projects/woocommerce.png',
-        text: 'COMMERCE',
-      },
-    ],
-  },
-  third_text: {
-    text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
-    logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
-      {
-        src: 'images/new-home/power-projects/acf.png',
-        text: 'Advance Custom Field',
-      },
-      {
-        src: 'images/new-home/power-projects/electron.png',
-        text: 'Electron JS',
-      },
-      {
-        src: 'images/new-home/power-projects/shopify.png',
-        text: 'Shopify',
-      },
-      {
-        src: 'images/new-home/power-projects/cpt.png',
-        text: 'Custom Post Type',
-      },
-      {
-        src: 'images/new-home/power-projects/git.png',
-        text: 'GIT',
-      },
-      {
-        src: 'images/new-home/power-projects/react.png',
-        text: 'React',
-      },
-      {
-        src: 'images/new-home/power-projects/next-js.png',
-        text: 'Next.JS',
-      },
-      {
-        src: 'images/new-home/power-projects/es6.png',
-        text: 'JavaScript ES6',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/oop.png',
-        text: 'Object Oriented Programming',
-      },
-      {
-        src: 'images/new-home/power-projects/apachea.png',
-        text: 'Apache',
-      },
-      {
-        src: 'images/new-home/power-projects/python.png',
-        text: 'Python',
-      },
-      {
-        src: 'images/new-home/power-projects/react-native.png',
-        text: 'React Native ',
-      },
-      {
-        src: 'images/new-home/power-projects/jquery.png',
-        text: 'JQuery',
-      },
-      {
-        src: 'images/new-home/power-projects/state.png',
-        text: 'State Management libraries',
-      },
-      {
-        src: 'images/new-home/power-projects/javascript.png',
-        text: 'Javascript',
-      },
-      {
-        src: 'images/new-home/power-projects/sql.png',
-        text: 'SQL',
-      },
-      {
-        src: 'images/new-home/power-projects/html.png',
-        text: 'HTML',
-      },
-      {
-        src: 'images/new-home/power-projects/wp-cli.png',
-        text: 'Wordpress CLI',
-      },
-      {
-        src: 'images/new-home/power-projects/restful.png',
-        text: 'RESTful APIs',
-      },
-      {
-        src: 'images/new-home/power-projects/bootstrap.png',
-        text: 'Bootstrap',
-      },
-      {
-        src: 'images/new-home/power-projects/css.png',
-        text: 'CSS',
-      },
-      {
-        src: 'images/new-home/power-projects/typescript.png',
-        text: 'TypeScript',
-      },
-      {
-        src: 'images/new-home/power-projects/github.png',
-        text: 'GITHUB CLA',
-      },
-      {
-        src: 'images/new-home/power-projects/php.png',
-        text: 'PHP',
-      },
-      {
-        src: 'images/new-home/power-projects/woocommerce.png',
-        text: 'COMMERCE',
-      },
-    ],
-  },
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -1460,33 +767,6 @@ export const POWER_PROJECT_DATA = {
 };
 
 export const ENTIRE_TEAM = {
-  title: 'Keep track of your entire team in one place!',
-  text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
-  image: '/images/new-home/entire-team/laptop.svg',
-  points: [
-    {
-      title: 'Real-Time Hiring & Interview Updates',
-      text: 'Track every hiring request and interview status all in one place.',
-    },
-    {
-      title: 'Complete Onboarding at a Glance',
-      text: 'From offer letters to orientation, manage every onboarding step effortlessly.',
-    },
-    {
-      title: 'Smart Attendance & Time Tracking',
-      text: 'Monitor work hours, leaves, and attendance with daily and hourly insights.',
-    },
-    {
-      title: 'Clear Payment & Inventory Records',
-      text: 'View salary disbursements, invoices, and allocated inventory in one dashboard.',
-    },
-    {
-      title: 'Easy Contract & NDA Access',
-      text: 'Keep all employee contracts and signed NDAs organized and just a click away.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       flexGrow: 1,
@@ -1578,52 +858,6 @@ export const ENTIRE_TEAM = {
 };
 
 export const GLOBAL_TEAMS = {
-  title: 'Break Borders, Build Global Teams',
-  text: 'Connect with world-class talent, no matter where you are.',
-  slides: [
-    {
-      country: 'USA',
-      image: 'images/new-home/global-teams/usa.svg',
-      flag: 'images/new-home/global-teams/usa-flag.png',
-    },
-    {
-      country: 'Canada',
-      image: 'images/new-home/global-teams/canada.svg',
-      flag: 'images/new-home/global-teams/canada-flag.png',
-    },
-    {
-      country: 'United Kingdom',
-      image: 'images/new-home/global-teams/united-kingdom.svg',
-      flag: 'images/new-home/global-teams/united-kingdom-flag.png',
-    },
-    {
-      country: 'Saudi Arabia',
-      image: 'images/new-home/global-teams/saudi-arabia.svg',
-      flag: 'images/new-home/global-teams/saudi-arabia-flag.png',
-    },
-    {
-      country: 'Qatar',
-      image: 'images/new-home/global-teams/qatar.svg',
-      flag: 'images/new-home/global-teams/qatar-flag.png',
-    },
-    {
-      country: 'UAE',
-      image: 'images/new-home/global-teams/uae.svg',
-      flag: 'images/new-home/global-teams/uae-flag.png',
-    },
-    {
-      country: 'Oman',
-      image: 'images/new-home/global-teams/oman.svg',
-      flag: 'images/new-home/global-teams/oman-flag.png',
-    },
-    {
-      country: 'Malaysia',
-      image: 'images/new-home/global-teams/malaysia.svg',
-      flag: 'images/new-home/global-teams/malaysia-flag.png',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       display: 'flex',
@@ -1688,32 +922,6 @@ export const GLOBAL_TEAMS = {
 };
 
 export const TRUSTED_PLATFORM = {
-  title:
-    'eSpark Talent is the Global Outsourcing Platform trusted by industry leaders',
-  images: [
-    'images/new-home/trusted-platform/01.png',
-    'images/new-home/trusted-platform/02.png',
-    'images/new-home/trusted-platform/03.png',
-    'images/new-home/trusted-platform/04.png',
-    'images/new-home/trusted-platform/05.png',
-    'images/new-home/trusted-platform/06.png',
-  ],
-  review: [
-    {
-      title: '500+',
-      text: 'Professional Talent Pool',
-    },
-    {
-      title: '4.8',
-      text: '100+ 5 Star Reviews',
-    },
-    {
-      title: '$80M',
-      text: 'In Cost Saving',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       display: 'flex',
@@ -1944,278 +1152,6 @@ export const PricingDefferenceStyles = {
 };
 
 export const EMPLOYEE_SLIDER_DATA = {
-  slides: [
-    {
-      id: 1,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 2,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 3,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 4,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 6,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 7,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 8,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 9,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 10,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 11,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 12,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 13,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 14,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 15,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 16,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 17,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 18,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 19,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 20,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 21,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 22,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 23,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 24,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 25,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 26,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 27,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 28,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 29,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 30,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 31,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 32,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 33,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 34,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 35,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 36,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 37,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 38,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 39,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 40,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 41,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-    {
-      id: 42,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
-    },
-    {
-      id: 43,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
-    },
-    {
-      id: 44,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
-    },
-    {
-      id: 45,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
-    },
-    {
-      id: 46,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
-    },
-  ],
   styles: {
     swiperStyle: {
       width: '100%',
@@ -2244,12 +1180,6 @@ export const EMPLOYEE_SLIDER_DATA = {
 // hire-dedicated-developers page data
 
 export const HIRE_DEDICATED_DEVELOPERS_DATA = {
-  title: `Hire Dedicated <span style="color: #19B5AD; font-weight: 600">Developers</span>`,
-  text: 'Skip the long hiring process. We connect you with skilled developers who are ready to jump in, work alongside your team, and start contributing from day one.',
-  buttonText: 'Schedule a Call',
-  link: '/book-a-demo',
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2306,28 +1236,6 @@ export const HIRE_DEDICATED_DEVELOPERS_DATA = {
 };
 
 export const OUR_AREA_OF_EXPERTISE_DATA = {
-  title: 'OUR AREA OF EXPERTISE',
-  text: 'Our strength lies in customizing augmentation service for any situation or setting - be it on-site, remote or hybrid',
-  cards: [
-    {
-      id: 1,
-      image:
-        '/images/new-home/hire-dedicated-developers/our-area-expertise/01.png',
-      title: 'Fixed Salary',
-      description:
-        'Need long-term support without the hassle of payroll complexities? Hire skilled IT professionals on a fixed monthly salary. ensures stability, predictable costs, and dedicated talent focused on your project throughout its lifecycle. ',
-    },
-    {
-      id: 2,
-      image:
-        '/images/new-home/hire-dedicated-developers/our-area-expertise/02.png',
-      title: 'Hourly Rate',
-      description:
-        'For flexible, task-based work or short-term needs, hire IT experts on an hourly basis. This model gives you complete control over the time and budget, ideal for agile development, quick fixes, or project-based consulting. ',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2406,12 +1314,6 @@ export const OUR_AREA_OF_EXPERTISE_DATA = {
 };
 
 export const EASY_STEPS_DATA = {
-  title: `Hire Dedicated Developers with eSpark in <span style="color: #13A694; font-weight: 600">4</span> Easy Steps`,
-  description:
-    'Hire an individual to scale your team or build a dedicated development team from scratch in no time. Just tell us your requirements and get the best-fit experts under your complete control, just like core in-house team.',
-  image: '/images/new-home/hire-dedicated-developers/easy-steps/easy-steps.png',
-
-  // styles
   styles: {
     mainBoxStyle: {
       mx: 'auto',
@@ -2464,45 +1366,6 @@ export const EASY_STEPS_DATA = {
 };
 
 export const EXPERT_DEVELOPERS_DATA = {
-  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
-  title: 'Why Choose Expert Developers from eSpark Talent?',
-  text: 'We connect you with reliable developers through a solid hiring process, so your projects stay on track and move forward efficiently.',
-  cards: [
-    {
-      id: 1,
-      image:
-        '/images/new-home/hire-dedicated-developers/expert-developers/card4.png',
-      title: 'Careful Hiring Process',
-      description:
-        'Every developer goes through a step-by-step check of their skills, background, and communication. We make sure you work with professionals who can start quickly and add real value to your team.',
-    },
-    {
-      id: 2,
-      image:
-        '/images/new-home/hire-dedicated-developers/expert-developers/card3.png',
-      title: 'Flexible Work Options',
-      description:
-        'Need part-time help or a full-time developer? We offer options that align with your workload, giving you control to grow or adjust your team based on project goals',
-    },
-    {
-      id: 3,
-      image:
-        '/images/new-home/hire-dedicated-developers/expert-developers/card2.png',
-      title: 'Works in Your Time Zone',
-      description:
-        'Our developers match your working hours so you can communicate easily during your day. This helps you stay connected and keep the work moving without delays.',
-    },
-    {
-      id: 4,
-      image:
-        '/images/new-home/hire-dedicated-developers/expert-developers/card1.png',
-      title: 'Support with Hiring & Paperwork',
-      description:
-        'We take care of contracts, payments, and legal steps so you don’t have to manage extra tasks. By handling the backend setup, you can stay focused on your work.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2608,17 +1471,6 @@ export const EXPERT_DEVELOPERS_DATA = {
 };
 
 export const HIGH_STAKES_PROJECT_DATA = {
-  title: 'A Vast Pool of Skilled Tech Talent for Your High-Stakes Projects',
-  description:
-    "At eSpark Talent, we open doors to a wide network of expert developers, engineers, designers, and technology specialists ready to power your most critical projects. Whether you're launching a new platform, scaling your infrastructure, or rebuilding your digital presence, we provide access to professionals who not only bring technical expertise but also real-world experience in delivering results under pressure.",
-  description2:
-    'Every candidate goes through a rigorous screening process where we assess technical skills, communication abilities, project experience, and cultural fit — ensuring you get people who can contribute from day one. From front-end and back-end developers, mobile app creators, DevOps engineers, AI and cloud specialists to UI/UX designers and digital marketers, we have specialists across the entire tech spectrum.',
-  description3:
-    'Need to ramp up quickly? Need niche skills for a mission-critical launch? Need a partner who understands both the tech and business side of scaling? eSpark Talent helps you move faster, minimize risk, and achieve bigger outcomes — without wasting time or resources.',
-  image:
-    '/images/new-home/hire-dedicated-developers/high-stakes-projects/ok.png',
-
-  // styles
   styles: {
     mainBoxStyle: {
       mx: 'auto',
@@ -2687,48 +1539,6 @@ export const HIGH_STAKES_PROJECT_DATA = {
 };
 
 export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
-  title: 'Frequently Asked Questions',
-  cards: [
-    {
-      id: 1,
-      title: 'What does it mean to hire a dedicated developer?',
-      description:
-        'When you hire a dedicated developer, you get someone full-time working only on your project. eSpark Talent provides developers who focus solely on the tasks you need, making sure you get the expertise you need for the job.',
-    },
-    {
-      id: 2,
-      title:
-        'How do I maintain the quality of work from a dedicated developer?',
-      description:
-        'Set specific objectives, provide detailed project briefs, and stay in regular communication. You can also review work periodically to confirm it meets your standards.',
-    },
-    {
-      id: 3,
-      title: 'Can a dedicated developer work with my existing team?',
-      description:
-        'Yes, eSpark Talent’s dedicated developers can easily collaborate with your team, following your processes and working together to help achieve your goals more efficiently.',
-    },
-    {
-      id: 4,
-      title: 'Why should I hire a dedicated developer instead of a team?',
-      description:
-        'A dedicated developer is ideal for projects that need deep focus and consistent effort. It’s great for long-term work where you need specialized skills but without the overhead of managing a larger team.',
-    },
-    {
-      id: 5,
-      title:
-        'How do I know if a dedicated developer is a good fit for my project?',
-      description:
-        'Look for developers with relevant experience and skills for your project. You can also ask for previous work samples or references to assess their suitability.',
-    },
-    {
-      id: 6,
-      title: 'How much do dedicated developers cost?',
-      description: `The cost depends on the developer's experience and the complexity of the project. eSpark Talent offers competitive rates to help you get the right skills at a fair price.`,
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -2810,135 +1620,6 @@ export const FREQUENTLY_ASKED_QUESTIOND_DATA = {
 };
 
 export const TALENT_ROSTER_DATA = {
-  title: 'Our Curated Diverse Talent Roster',
-  buttonText: 'Hire talent based on role',
-  link: '/book-a-demo',
-  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
-  designations: [
-    {
-      title: 'Front-End Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/front-end.png',
-    },
-    {
-      title: 'Back-end Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/back-end.png',
-    },
-    {
-      title: 'Full Stack Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/full-stack.png',
-    },
-    {
-      title: 'Mobile App Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mobile-app-developers.png',
-    },
-
-    {
-      title: 'Web  Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/web-developers.png',
-    },
-    {
-      title: 'CMS Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cms-developers.png',
-    },
-    {
-      title: 'UI & UX Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ui-ux-designers.png',
-    },
-    {
-      title: 'DevOps Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/devops-engineers.png',
-    },
-    {
-      title: 'Social Media Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/social-media-managers.png',
-    },
-    {
-      title: 'Salesforce Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/salesforce-developers.png',
-    },
-    {
-      title: 'Product Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/product-managers.png',
-    },
-    {
-      title: 'Project Managers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/project-managers.png',
-    },
-    {
-      title: 'AR/VR Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/ar-vr-developers.png',
-    },
-    {
-      title: 'Game Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/game-developers.png',
-    },
-    {
-      title: 'Graphics Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/graphics-designers.png',
-    },
-    {
-      title: 'Motion Designers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/motion-designers.png',
-    },
-    {
-      title: 'Cloud Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/cloud-engineers.png',
-    },
-    {
-      title: 'Embedded Systems Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/embedded-systems-engineers.png',
-    },
-    {
-      title: 'Firmware Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/firmware-developers.png',
-    },
-    {
-      title: 'IOT Developers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/iot-developers.png',
-    },
-    {
-      title: 'Robotics Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/robotics-engineers.png',
-    },
-    {
-      title: 'Mechanical Design Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/mechanical-design-engineers.png',
-    },
-    {
-      title: 'Data Scientists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/data-scientists.png',
-    },
-    {
-      title: 'AI/ML Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/aiml-engineers.png',
-    },
-    {
-      title: 'Business Analysts',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/business-analysts.png',
-    },
-    {
-      title: 'Digital Marketing Specialists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/digital-marketing-specialists.png',
-    },
-    {
-      title: 'QA Engineers',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/qa-engineers.png',
-    },
-    {
-      title: 'SEO Experts',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/seo-experts.png',
-    },
-    {
-      title: 'Video Editors',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/video-editors.png',
-    },
-    {
-      title: 'Content Strategists',
-      icon: '/images/new-home/hire-dedicated-developers/talent-roster/content-strategists.png',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -3029,12 +1710,6 @@ export const TALENT_ROSTER_DATA = {
 //Fixed-Prices-projects page data
 
 export const FIXED_PRICES_PROJECTS_DATA = {
-  title: `Fixed Price <span style="color: #19B5AD; font-weight: 600">Projects</span>`,
-  text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
-  buttonText: 'Schedule a Call',
-  link: '/book-a-demo',
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -3091,15 +1766,6 @@ export const FIXED_PRICES_PROJECTS_DATA = {
 };
 
 export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
-  title: 'Explaining Fixed-price projects',
-  description:
-    "A fixed-price projects model is a sort of agreement where a client and a service provider concur on a set scope of work, deadlines, and payments. With this paradigm, you can define the project scope without having any prior experience with software development. The project's requirements, timeline, work scope, and expenses are all explicitly state at the outset.",
-  description2:
-    "An agreement between a client and a vendor on a predetermine scope of work, deadlines, and payments is implied by a fixed-price project. It's a fantastic choice for tasks with a predefine set of features and set due dates.",
-  image:
-    '/images/new-home/fixed-price-projects/explaining-fixed-price-projects/img.png',
-
-  // styles
   styles: {
     containerStyle: {
       borderRadius: { xs: '30px', lg: '50px' },
@@ -3174,59 +1840,6 @@ export const EXPLAINING_FIXED_PRICES_PROJECTS_DATA = {
 };
 
 export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
-  title: 'When Fixed Price Works Best - Clear, Efficient, Reliable',
-  cards: [
-    {
-      id: 1,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card1.png',
-      title: 'Strict Budgetary Constraints',
-      description:
-        'Fixed Price Projects are ideal when your budget is non-negotiable. At eSpark Talent, we offer clear, upfront pricing, ensuring your project stays within budget without any unexpected costs, providing financial predictability and peace of mind.',
-    },
-    {
-      id: 2,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card2.png',
-      title: 'Short-Term or Specific Initiatives',
-      description:
-        'For projects that are short-term or have a very specific focus, Fixed Price Projects offer a straightforward solution. We ensure these projects are delivered efficiently and effectively, meeting your exact requirements without the need for long-term commitments.',
-    },
-    {
-      id: 3,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card3.png',
-      title: 'Resource-Constraint Scenarios',
-      description:
-        "In situations where your internal resources are limited, our Fixed Price Project model steps in to fill the gap. We provide the necessary expertise and manpower, ensuring your project doesn't suffer due to in-house resource constraints.",
-    },
-    {
-      id: 4,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card4.png',
-      title: 'Time-Bound Deliverables',
-      description:
-        'When your project has strict deadlines, our team ensures timely delivery under the Fixed Price model. This approach keeps us focused on meeting your timeline, delivering quality results within the stipulated time frame.',
-    },
-    {
-      id: 5,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card5.png',
-      title: 'Defined Outcome Expectations',
-      description:
-        'For projects with clearly defined outcomes, our Fixed Price Projects model aligns perfectly. We understand the importance of delivering as per your expectations, ensuring the final output precisely meets your predefined objectives.',
-    },
-    {
-      id: 6,
-      image:
-        '/images/new-home/fixed-price-projects/offshore-development-center/card6.png',
-      title: 'Minimal Project Complexity',
-      description:
-        'When dealing with less complex projects, the Fixed Price model offered by us is an ideal choice. It simplifies project management and focuses on delivering straightforward solutions efficiently. saving you time and effort.',
-    },
-  ],
-
-  // styles
   styles: {
     swipperStyle: {
       mx: 'auto',
@@ -3317,43 +1930,6 @@ export const CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER_DATA = {
 };
 
 export const FIXED_PRICE_PROJECT_CONTRACT = {
-  title: 'Fixed Price Project Contract Process',
-  description:
-    'By defining a clear scope, budget, and timeline, we guarantee reliable project delivery.',
-  image: '/images/new-home/fixed-price-projects/project-contract/emp.png',
-  buttonText: 'Schedule a Call',
-  link: '/book-a-demo',
-  listItems: [
-    {
-      icon: '/images/new-home/fixed-price-projects/project-contract/project-a-scoping.png',
-      text: 'Project a Scoping and Analysis ',
-      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
-    },
-    {
-      icon: '/images/new-home/fixed-price-projects/project-contract/project-planning.png',
-      text: 'Project Planning & Resource Allocation',
-      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
-    },
-    {
-      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
-      text: 'Development & Implementation',
-      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
-    },
-    {
-      icon: '/images/new-home/fixed-price-projects/project-contract/quality-assurance.png',
-      text: 'Quality Assurance and Testing',
-      vector: '/images/new-home/fixed-price-projects/project-contract/line.png',
-    },
-    {
-      icon: '/images/new-home/fixed-price-projects/project-contract/delivery-review.png',
-      text: 'Delivery and Review',
-      vector:
-        '/images/new-home/fixed-price-projects/project-contract/vector-vertical.png',
-      vector_right: true,
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -3470,48 +2046,6 @@ export const FIXED_PRICE_PROJECT_CONTRACT = {
 };
 
 export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
-  title: 'Frequently Asked Questions',
-  cards: [
-    {
-      id: 1,
-      title: 'How do I prevent my project from going over budget?',
-      description:
-        'Define the project scope in detail from the start, provide detailed requirements, and maintain regular communication with the team to keep everything on track.',
-    },
-    {
-      id: 2,
-      title: 'Can the price change during the project?',
-      description:
-        'Typically, the price stays the same unless there are significant changes to the project scope. If new requirements are added, it could lead to additional costs.',
-    },
-    {
-      id: 3,
-      title:
-        'How do I make sure the project stays on track with a fixed price?',
-      description:
-        'Having clear milestones and checking in regularly helps keep everything moving forward. eSpark Talent keeps you updated so your project stays on schedule and within the agreed budget.',
-    },
-    {
-      id: 4,
-      title: 'What is a Fixed Price Project?',
-      description:
-        'This model works best for projects with clear goals and well-defined tasks, like building a website or creating an app. eSpark Talent delivers exactly what you need, staying within your budget and time frame.',
-    },
-    {
-      id: 5,
-      title: 'What are the benefits of a fixed price model?',
-      description:
-        'With a fixed price model, you know the total cost in advance, making it easier to budget and plan. It’s perfect for projects with clear requirements and defined outcomes.',
-    },
-    {
-      id: 6,
-      title: 'When is the fixed price model ideal for a project?',
-      description:
-        'This model works best for projects with clear goals and well-defined tasks, like building a website or creating an app. eSpark Talent delivers exactly what you need, staying within your budget and time frame.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -3593,69 +2127,6 @@ export const FIXED_PRICE_FREQUENTLY_ASKED_QUESTIOND_DATA = {
 };
 
 export const PRODUCT_JOURNEY_DATA = {
-  title: 'Power Up Every Stage of Your Product Journey',
-  description:
-    'Increase your level of performance with our full-stack software development services at a fixed cost without sacrificing quality.',
-  cards: [
-    {
-      title: 'UI/UX Design Services',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
-      description:
-        'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
-    },
-    {
-      title: 'Custom Software Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
-      description:
-        'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
-    },
-    {
-      title: 'Mobile App Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
-      description:
-        'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
-    },
-    {
-      title: 'Embedded Systems Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
-      description:
-        'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
-    },
-    {
-      title: 'Mechanical Design and Engineering',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
-      description:
-        'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
-    },
-    {
-      title: 'Digital Marketing & Growth Support',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
-      description:
-        'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
-    },
-    {
-      title: 'Quality Assurance and Testing',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/quality-assurance.png',
-      description:
-        'We catch problems before your users do. Our QA experts perform detailed testing across platforms and devices to ensure your software is reliable, secure, and ready for real-world use.',
-    },
-    {
-      title: 'Dedicated Development Teams',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/dedicated-development-teams.png',
-      description:
-        'Build your own team of skilled developers fully aligned with your project needs. We carefully assemble teams that act as a true extension of your in-house staff, ensuring smooth collaboration and faster delivery.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '90%',
@@ -3740,12 +2211,6 @@ export const PRODUCT_JOURNEY_DATA = {
 // offshore-development-center page data
 
 export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
-  title: `Offshore <span style="color: #19B5AD; font-weight: 600">Development</span> Center`,
-  text: 'Grow your team, speed up delivery, and explore new markets with dedicated ODC services without the cost and hassle of expanding in-house.',
-  buttonText: 'Schedule a Call',
-  link: '/book-a-demo',
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -3802,69 +2267,6 @@ export const OFFSHORE_DEVELOPMENT_CENTER_DATA = {
 };
 
 export const ODC_SOLUTIONS = {
-  title: 'Turn Your Vision into Reality with Our Expert ODC Solutions',
-  description:
-    'We combine innovation, precision, & effective strategies to deliver results that make a lasting impact.',
-  cards: [
-    {
-      title: ' UI/UX Design Services',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
-      description:
-        'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
-    },
-    {
-      title: 'Custom Software Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
-      description:
-        'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
-    },
-    {
-      title: 'Mobile App Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
-      description:
-        'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
-    },
-    {
-      title: 'Embedded Systems Development',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
-      description:
-        'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
-    },
-    {
-      title: 'Mechanical Design and Engineering',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
-      description:
-        'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
-    },
-    {
-      title: 'Digital Marketing & Growth Support',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
-      description:
-        'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
-    },
-    {
-      title: 'Quality Assurance and Testing',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/quality-assurance.png',
-      description:
-        'We catch problems before your users do. Our QA experts perform detailed testing across platforms and devices to ensure your software is reliable, secure, and ready for real-world use.',
-    },
-    {
-      title: 'Dedicated Development Teams',
-      image:
-        '/images/new-home/fixed-price-projects/product-journey/dedicated-development-teams.png',
-      description:
-        'Build your own team of skilled developers fully aligned with your project needs. We carefully assemble teams that act as a true extension of your in-house staff, ensuring smooth collaboration and faster delivery.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '90%',
@@ -3947,41 +2349,6 @@ export const ODC_SOLUTIONS = {
 };
 
 export const DOORSTEP_DATA = {
-  subTitle: 'Our Benefits',
-  title: 'Bringing Global Expertise to Your Doorstep',
-  image: '/images/new-home/offshore-development-center/doorstep/line.png',
-  leftDesignImage:
-    '/images/new-home/offshore-development-center/doorstep/left-design.png',
-  rightDesignImage:
-    '/images/new-home/offshore-development-center/doorstep/right-design.png',
-  expertise: [
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
-      text: 'Cost-Effective Development',
-    },
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
-      text: 'Scalable and Flexible',
-    },
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
-      text: 'Global Talent Access Solutions',
-    },
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
-      text: 'Focus on Core Business Activities',
-    },
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
-      text: 'Scalable and Flexible',
-    },
-    {
-      icon: '/images/new-home/offshore-development-center/doorstep/ellipse-blue.png',
-      text: 'Enhanced Quality & Productivity',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       mx: 'auto',
@@ -4237,60 +2604,6 @@ export const DOORSTEP_DATA = {
 };
 
 export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
-  icon: '/images/new-home/hire-dedicated-developers/expert-developers/icon.png',
-  title: 'Why Choose an Offshore Development Center?',
-  cards: [
-    {
-      id: 1,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/accelerate.png',
-      title: 'Accelerate Your Business Growth',
-      description:
-        'An Offshore Development Center (ODC) is an effective way to scale your operations rapidly. With access to our resources, you can easily expand your team and capabilities to keep up with the growing demands of your business.',
-    },
-    {
-      id: 2,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/unlock.png',
-      title: 'Unlock a Global Talent Pool',
-      description:
-        'Our ODC services connect you to a diverse pool of global talent. This helps you bring in specialized skills and fresh perspectives essential for innovative and high-quality solutions.',
-    },
-    {
-      id: 3,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/maximize.png',
-      title: 'Maximize Cost Efficiency',
-      description:
-        'Implementing an ODC reduces operational costs significantly. Our model ensures you receive top-tier development services at a fraction of the cost of expanding your in-house team.',
-    },
-    {
-      id: 4,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/manage.png',
-      title: 'Manage Large-Scale Projects',
-      description:
-        'When it comes to handling complex, large-scale projects, an ODC provides the necessary bandwidth and expertise. We ensure these projects are executed with precision and the attention to detail they deserve.',
-    },
-    {
-      id: 5,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/speed-up.png',
-      title: 'Speed Up Your Time-to-Market',
-      description:
-        'Our ODC helps accelerate your development cycle. With streamlined project management and quick turnarounds, we reduce your product’s time-to-market and help you stay ahead of the competition.',
-    },
-    {
-      id: 6,
-      image:
-        '/images/new-home/offshore-development-center/why-choose-an-offshore-development-center/effortless.png',
-      title: 'Effortless Integration with Existing Systems',
-      description:
-        'We specialize in seamlessly integrating new developments with your existing systems, ensuring smooth transitions and uninterrupted operations.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -4396,49 +2709,6 @@ export const WHY_CHOOSE_AN_OFFSHORE_DEVELOPMENT_CENTER = {
 };
 
 export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
-  title: 'Frequently Asked Questions',
-  cards: [
-    {
-      id: 1,
-      title: 'What is an Offshore Development Center (ODC)?',
-      description:
-        'An ODC is a remote team working from another country to handle tasks like coding, testing, and support. eSpark Talent helps you build a team that works just like your in-house staff, offering skilled professionals at affordable rates.',
-    },
-    {
-      id: 2,
-      title: 'Is my data safe with an Offshore Development Center (ODC)?',
-      description:
-        'Yes, eSpark Talent follows strict security measures, like encryption and secure access, to protect your data while the team works on your project.',
-    },
-    {
-      id: 3,
-      title: 'How long does it take to set up an offshore team?',
-      description:
-        'It usually takes a few weeks to a couple of months to set up an ODC, depending on the project. With proper planning, the process can be sped up.',
-    },
-    {
-      id: 4,
-      title:
-        'How can I make sure the Offshore Development Center (ODC) delivers good quality?',
-      description:
-        'Set clear goals, stay in touch, and track the progress. eSpark Talent backs you to maintain quality by keeping everything on track and making sure the team delivers results that meet your needs.',
-    },
-    {
-      id: 5,
-      title: 'What services does an Offshore Development Center (ODC) provide?',
-      description:
-        'ODCs can assist with software development, testing, design, IT support, and more, customized to your specific needs.',
-    },
-    {
-      id: 6,
-      title:
-        'What are the benefits of choosing an Offshore Development Center (ODC)?',
-      description:
-        'An ODC lets you cut costs, work with skilled professionals from around the world, and get your projects done faster, all while keeping control over the work.',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       width: '100%',
@@ -4520,51 +2790,6 @@ export const OFFSHORE_DEVELOPMENT_FREQUENTLY_ASKED_QUESTIOND_DATA = {
 };
 
 export const ODC_FOUNDATION_DATA = {
-  title: 'Building the ODC Foundation for Your Growth',
-  text: `Our approach to creating Offshore Development Centers is built around precision and efficiency. Here's our five-step process to ensure we deliver a high-impact ODC solution tailored to your business:`,
-  steps: [
-    {
-      title: 'Step 1',
-      image:
-        '/images/new-home/offshore-development-center/odc-foundation/step-1.png',
-      description: 'Initial Consultation & Needs Assessment',
-      vector:
-        '/images/new-home/offshore-development-center/odc-foundation/down.png',
-    },
-    {
-      title: 'Step 2',
-      image:
-        '/images/new-home/offshore-development-center/odc-foundation/step-2.png',
-      description: 'Custom Team Assembly & Onboarding',
-      vector:
-        '/images/new-home/offshore-development-center/odc-foundation/up.png',
-    },
-    {
-      title: 'Step 3',
-      image:
-        '/images/new-home/offshore-development-center/odc-foundation/step-3.png',
-      description: 'Infrastructure & Workflow Setup',
-      vector:
-        '/images/new-home/offshore-development-center/odc-foundation/down.png',
-    },
-    {
-      title: 'Step 4',
-      image:
-        '/images/new-home/offshore-development-center/odc-foundation/step-4.png',
-      description: 'Agile Development & Continuous Monitoring',
-      vector:
-        '/images/new-home/offshore-development-center/odc-foundation/up.png',
-    },
-    {
-      title: 'Step 5',
-      image:
-        '/images/new-home/offshore-development-center/odc-foundation/step-5.png',
-      description: 'Ongoing Support, Scaling & Optimization',
-      vector: '',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       mx: 'auto',
@@ -4640,111 +2865,6 @@ export const ODC_FOUNDATION_DATA = {
 };
 
 export const ODC_SERVICES_DATA = {
-  title: 'ODC Services Based on Tech Stack',
-  techStack: [
-    {
-      title: 'Android',
-      icon: '/images/new-home/offshore-development-center/services-based/icon1.png',
-    },
-    {
-      title: 'Angular',
-      icon: '/images/new-home/offshore-development-center/services-based/icon2.png',
-    },
-    {
-      title: 'Arduino',
-      icon: '/images/new-home/offshore-development-center/services-based/icon3.png',
-    },
-    {
-      title: 'Arc Linux',
-      icon: '/images/new-home/offshore-development-center/services-based/icon4.png',
-    },
-    {
-      title: 'Atom',
-      icon: '/images/new-home/offshore-development-center/services-based/icon5.png',
-    },
-    {
-      title: 'Apache Kafka',
-      icon: '/images/new-home/offshore-development-center/services-based/icon6.png',
-    },
-    {
-      title: 'MySQL',
-      icon: '/images/new-home/offshore-development-center/services-based/icon7.png',
-    },
-    {
-      title: 'Dot Net Core',
-      icon: '/images/new-home/offshore-development-center/services-based/icon8.png',
-    },
-    {
-      title: 'Figma',
-      icon: '/images/new-home/offshore-development-center/services-based/icon9.png',
-    },
-    {
-      title: 'Golang',
-      icon: '/images/new-home/offshore-development-center/services-based/icon10.png',
-    },
-    {
-      title: 'Java',
-      icon: '/images/new-home/offshore-development-center/services-based/icon11.png',
-    },
-    {
-      title: 'JavaScript',
-      icon: '/images/new-home/offshore-development-center/services-based/icon12.png',
-    },
-    {
-      title: 'C++',
-      icon: '/images/new-home/offshore-development-center/services-based/icon13.png',
-    },
-    {
-      title: 'C#',
-      icon: '/images/new-home/offshore-development-center/services-based/icon14.png',
-    },
-    {
-      title: 'Django',
-      icon: '/images/new-home/offshore-development-center/services-based/icon15.png',
-    },
-    {
-      title: 'Python',
-      icon: '/images/new-home/offshore-development-center/services-based/icon16.png',
-    },
-    {
-      title: 'React',
-      icon: '/images/new-home/offshore-development-center/services-based/icon17.png',
-    },
-    {
-      title: 'Raspberry Pi',
-      icon: '/images/new-home/offshore-development-center/services-based/icon18.png',
-    },
-    {
-      title: 'Salesforce',
-      icon: '/images/new-home/offshore-development-center/services-based/icon19.png',
-    },
-    {
-      title: 'Vue.js',
-      icon: '/images/new-home/offshore-development-center/services-based/icon20.png',
-    },
-    {
-      title: 'WordPress',
-      icon: '/images/new-home/offshore-development-center/services-based/icon21.png',
-    },
-    {
-      title: 'Next.js',
-      icon: '/images/new-home/offshore-development-center/services-based/icon22.png',
-    },
-    {
-      title: 'Blender',
-      icon: '/images/new-home/offshore-development-center/services-based/icon23.png',
-    },
-    {
-      title: 'Node.js',
-      icon: '/images/new-home/offshore-development-center/services-based/icon24.png',
-    },
-    {
-      title: 'Laravel',
-      icon: '/images/new-home/offshore-development-center/services-based/icon25.png',
-    },
-  ],
-
-  // styles
   styles: {
     mainBoxStyle: {
       mx: 'auto',
