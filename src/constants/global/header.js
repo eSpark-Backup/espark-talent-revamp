@@ -20,24 +20,18 @@ export const NAVBAR_STYLE = {
     // width: dropdownName === 'Services' ? '100%' : 'auto',
   }),
   growStyle: (dropdownName) => ({
-    background: !dropdownName
-      ? 'transparent'
-      : dropdownName === 'Services'
-        ? // old hiring pages style
-          // ? '#F7F8FB'
-          '#F5F8FFFA'
-        : '#fff',
+    background: !dropdownName ? 'transparent' : '#fff',
     borderRadius: '11px',
     boxShadow: '0px 0px 4px 0px #00000040',
-    maxWidth: dropdownName === 'Services' ? '99%' : 'auto',
+    maxWidth: 'auto',
     minHeight: 'auto',
     mx: 'auto',
   }),
-  growBoxStyle: (dropdownName) => ({
+  growBoxStyle: {
     width: 'auto',
-    p: dropdownName === 'Services' ? 1 : 0,
+    p: 0,
     mt: 1.5,
-  }),
+  },
   navbarItemStyle: {
     itemBoxStyle: (index, lastIndex, collapseStatus) => ({
       mx: { xs: 2, md: 1.5, lg: 2 },
