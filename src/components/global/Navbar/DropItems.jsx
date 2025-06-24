@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -16,7 +17,6 @@ const DropItems = ({
   const {
     mainBoxStyle,
     iconBoxStyle,
-    iconStyle,
     contentBoxStyle,
     nameStyle,
     descriptionStyle,
@@ -25,7 +25,9 @@ const DropItems = ({
     <Link href={href || '#'}>
       <Box onClick={() => setDropdown(null)} key={'1'} sx={mainBoxStyle}>
         <Box sx={iconBoxStyle}>
-          <Box component={'img'} src={icon || ''} sx={iconStyle} />
+          {icon && (
+            <Image src={icon} alt="icon" width={100} height={100} priority />
+          )}
         </Box>
         <Box sx={contentBoxStyle(lastIndex, index)}>
           <Typography sx={nameStyle}>{name || ''}</Typography>

@@ -1506,16 +1506,6 @@ export const DEMO_DATA = {
 };
 
 export const HIRE_A_TALENT_MENU = {
-  // new links
-  routes: [
-    { name: 'Hire Dedicated Developers', link: '/hire-dedicated-developers' },
-    {
-      name: 'Offshore Development Center',
-      link: '/offshore-development-center',
-    },
-    { name: 'Fixed Price Projects', link: '/fixed-price-projects' },
-  ],
-
   // old links
   // sections: [
   //   {
