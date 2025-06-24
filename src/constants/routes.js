@@ -8,21 +8,21 @@ const routes = [
         description:
           'Empower your projects with dedicated developers focused solely on your goals.',
         href: '/hire-dedicated-developers',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Offshore Development Center',
         description:
           'Scale your operations globally with our cost-effective offshore development solutions.',
         href: '/offshore-development-center',
-        icon: '/images/header/esparkWiki.png',
+        icon: '/images/header/esparkWiki.svg',
       },
       {
         name: 'Fixed Price Projects',
         description:
           'Get clear budgets and timelines with our transparent fixed-price project model.',
         href: '/fixed-price-projects',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -35,14 +35,14 @@ const routes = [
         description:
           'Propel your startup with specialized support with our agile outsourcing assistance.',
         href: '/solutions/business-startup',
-        icon: '/images/header/startup.png',
+        icon: '/images/header/startup.svg',
       },
       {
         name: 'Enterprise',
         description:
           'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
         href: '/solutions/enterprises',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -55,14 +55,14 @@ const routes = [
         description:
           'Go through insightful perspectives and industry trends in our blog hub.All about overview, quick start, license and contents.',
         href: '/blogs',
-        icon: '/images/header/blogs.png',
+        icon: '/images/header/blogs.svg',
       },
       {
         name: 'eSparkWiki',
         description:
           'Explore the section of job description templates and learn about market demands.',
         href: '/esparkwiki',
-        icon: '/images/header/esparkWiki.png',
+        icon: '/images/header/esparkWiki.svg',
       },
     ],
   },
@@ -75,21 +75,21 @@ const routes = [
         description:
           'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
         href: '/what-we-do',
-        icon: '/images/header/whyeSpark.png',
+        icon: '/images/header/whyeSpark.svg',
       },
       {
         name: 'How it Works',
         description:
           'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
         href: '/how-it-works',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Partnership Program',
         description:
           'Collaborate and excel in our referral program for shared achievements and success.',
         href: '/partnership-program',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
@@ -102,14 +102,14 @@ const routes = [
         description:
           'Join a dynamic team and build your career in an innovative environment.',
         href: '/careers',
-        icon: '/images/header/careers.png',
+        icon: '/images/header/careers.svg',
       },
       {
         name: 'Join eSpark Crew',
         description:
           'Get register With eSpark Talent for Future suitable roles.',
         href: '/join-espark-crew',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
@@ -124,21 +124,21 @@ export const Hire_Remote_Routes = [
         description:
           'Empower your projects with dedicated developers focused solely on your goals.',
         href: '/hire-dedicated-developers',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Offshore Development Center',
         description:
           'Scale your operations globally with our cost-effective offshore development solutions.',
         href: '/offshore-development-center',
-        icon: '/images/header/esparkWiki.png',
+        icon: '/images/header/esparkWiki.svg',
       },
       {
         name: 'Fixed Price Projects',
         description:
           'Get clear budgets and timelines with our transparent fixed-price project model.',
         href: '/fixed-price-projects',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -151,14 +151,14 @@ export const Hire_Remote_Routes = [
         description:
           'Propel your startup with specialized support with our agile outsourcing assistance.',
         href: '/solutions/business-startup',
-        icon: '/images/header/startup.png',
+        icon: '/images/header/startup.svg',
       },
       {
         name: 'Enterprise',
         description:
           'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
         href: '/solutions/enterprises',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -171,21 +171,21 @@ export const Hire_Remote_Routes = [
         description:
           'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
         href: '/what-we-do',
-        icon: '/images/header/whyeSpark.png',
+        icon: '/images/header/whyeSpark.svg',
       },
       {
         name: 'How it Works',
         description:
           'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
         href: '/how-it-works',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Partnership Program',
         description:
           'Collaborate and excel in our referral program for shared achievements and success.',
         href: '/partnership-program',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
