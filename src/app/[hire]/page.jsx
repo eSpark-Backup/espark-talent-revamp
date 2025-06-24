@@ -8,6 +8,7 @@ import { getSingleHire } from '@/sanity/sanity.quries';
 import Hire from '@/components/hire-developer/Hire';
 import Script from 'next/script';
 import { getHireMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 export async function generateMetadata({ params }) {
   const slug = params.hire;
@@ -37,6 +38,7 @@ export default async function Page({ params }) {
     }
     return (
       <>
+        <StructuredData data={data.jsonLd} />
         <Script
           id="CreativeWorkSeries"
           type="application/ld+json"

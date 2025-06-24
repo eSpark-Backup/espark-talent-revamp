@@ -3,6 +3,7 @@ import MeetingPage from '@/components/book-a-meeting/MeetingPage';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
 import { getMetadata } from '@/components/global/seo';
+import StructuredData from '@/components/global/StructuredData';
 
 const pathname = '/book-a-meeting';
 const seo = await getPageSeo();
@@ -14,6 +15,8 @@ export const metadata = getMetadata(filteredData);
 const Page = () => {
   return (
     <>
+      {' '}
+      <StructuredData data={filteredData.jsonLd} />
       <MeetingPage />
     </>
   );
