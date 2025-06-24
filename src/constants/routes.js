@@ -2,184 +2,29 @@ const routes = [
   {
     name: 'Services',
     icon: '/images/header/arrow.svg',
-    // new links
     collapse: [
       {
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Hire Dedicated Developers',
-            route: '/hire-dedicated-developers',
-          },
-          {
-            name: 'Offshore Development Center',
-            route: '/offshore-development-center',
-          },
-          {
-            name: 'Fixed Price Projects',
-            route: '/fixed-price-projects',
-          },
-        ],
+        name: 'Hire Dedicated Developers',
+        description:
+          'Empower your projects with dedicated developers focused solely on your goals.',
+        href: '/hire-dedicated-developers',
+        icon: '/images/header/howItsWork.svg',
+      },
+      {
+        name: 'Offshore Development Center',
+        description:
+          'Scale your operations globally with our cost-effective offshore development solutions.',
+        href: '/offshore-development-center',
+        icon: '/images/header/esparkWiki.svg',
+      },
+      {
+        name: 'Fixed Price Projects',
+        description:
+          'Get clear budgets and timelines with our transparent fixed-price project model.',
+        href: '/fixed-price-projects',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
-
-    // old links
-    // collapse: [
-    //   {
-    //     name: 'Trending',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'UI UX Designer',
-    //         route: '/hire-ui-ux-designers',
-    //       },
-    //       {
-    //         name: 'Full Stack Developer',
-    //         route: '/hire-full-stack-developers',
-    //       },
-    //       {
-    //         name: 'MEAN Stack Developer',
-    //         route: '/hire-mean-stack-developers',
-    //       },
-    //       {
-    //         name: 'MERN Stack Developer',
-    //         route: '/hire-mern-stack-developers',
-    //       },
-    //       {
-    //         name: 'DevOps Engineer',
-    //         route: '/hire-devops-engineers',
-    //       },
-    //       {
-    //         name: 'Fintech Developer',
-    //         route: '/hire-fintech-developers',
-    //       },
-    //       {
-    //         name: 'Software Developer',
-    //         route: '/hire-software-developers',
-    //       },
-    //       {
-    //         name: 'QA Engineer',
-    //         route: '/hire-qa-engineers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Front-End Developers',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'AngularJS Developer',
-    //         route: '/hire-angular-developers',
-    //       },
-    //       {
-    //         name: 'ReactJS Developer',
-    //         route: '/hire-reactjs-developers',
-    //       },
-    //       {
-    //         name: 'JavaScript Developer',
-    //         route: '/hire-javascript-developers',
-    //       },
-    //       {
-    //         name: 'NextJS Developer',
-    //         route: '/hire-nextjs-developers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Mobile App Developers',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'Android Developer',
-    //         route: '/hire-android-developers',
-    //       },
-    //       {
-    //         name: 'Flutter Developer',
-    //         route: '/hire-flutter-developers',
-    //       },
-    //       {
-    //         name: 'React Native Developer',
-    //         route: '/hire-react-native-developers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Back-End Developers',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'ASP .NET Developer',
-    //         route: '/hire-asp-dot-net-developers',
-    //       },
-    //       {
-    //         name: 'PHP Developer',
-    //         route: '/hire-php-developers',
-    //       },
-    //       {
-    //         name: 'Python Developer',
-    //         route: '/hire-python-developers',
-    //       },
-    //       {
-    //         name: 'NodeJS Developer',
-    //         route: '/hire-nodejs-developers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Embedded Developers',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'Firmware Developer',
-    //         route: '/hire-firmware-developers',
-    //       },
-    //       {
-    //         name: 'PCB Designer',
-    //         route: '/hire-pcb-designers',
-    //       },
-    //       {
-    //         name: 'Embedded System Engineer',
-    //         route: '/hire-embedded-system-engineers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Digital Marketer',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'Social Media Expert',
-    //         route: '/hire-social-media-experts',
-    //       },
-    //       {
-    //         name: 'PPC Specialist',
-    //         route: '/hire-ppc-specialists',
-    //       },
-    //       {
-    //         name: 'SEO Expert',
-    //         route: '/hire-seo-experts',
-    //       },
-    //       {
-    //         name: 'Performance Marketer',
-    //         route: '/hire-performance-marketers',
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: 'Ecommerce Developers',
-    //     dropdown: true,
-    //     collapse: [
-    //       {
-    //         name: 'WordPress Developer',
-    //         route: '/hire-wordpress-developers',
-    //       },
-    //       {
-    //         name: 'Shopify Developer',
-    //         route: '/hire-shopify-developers',
-    //       },
-    //     ],
-    //   },
-    // ],
   },
   {
     name: 'Solutions',
@@ -190,14 +35,14 @@ const routes = [
         description:
           'Propel your startup with specialized support with our agile outsourcing assistance.',
         href: '/solutions/business-startup',
-        icon: '/images/header/startup.png',
+        icon: '/images/header/startup.svg',
       },
       {
         name: 'Enterprise',
         description:
           'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
         href: '/solutions/enterprises',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -210,14 +55,14 @@ const routes = [
         description:
           'Go through insightful perspectives and industry trends in our blog hub.All about overview, quick start, license and contents.',
         href: '/blogs',
-        icon: '/images/header/blogs.png',
+        icon: '/images/header/blogs.svg',
       },
       {
         name: 'eSparkWiki',
         description:
           'Explore the section of job description templates and learn about market demands.',
         href: '/esparkwiki',
-        icon: '/images/header/esparkWiki.png',
+        icon: '/images/header/esparkWiki.svg',
       },
     ],
   },
@@ -230,21 +75,21 @@ const routes = [
         description:
           'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
         href: '/what-we-do',
-        icon: '/images/header/whyeSpark.png',
+        icon: '/images/header/whyeSpark.svg',
       },
       {
         name: 'How it Works',
         description:
           'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
         href: '/how-it-works',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Partnership Program',
         description:
           'Collaborate and excel in our referral program for shared achievements and success.',
         href: '/partnership-program',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
@@ -257,14 +102,14 @@ const routes = [
         description:
           'Join a dynamic team and build your career in an innovative environment.',
         href: '/careers',
-        icon: '/images/header/careers.png',
+        icon: '/images/header/careers.svg',
       },
       {
         name: 'Join eSpark Crew',
         description:
           'Get register With eSpark Talent for Future suitable roles.',
         href: '/join-espark-crew',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
@@ -275,158 +120,25 @@ export const Hire_Remote_Routes = [
     icon: '/images/header/arrow.svg',
     collapse: [
       {
-        name: 'Trending',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'UI UX Designer',
-            route: '/hire-ui-ux-designers',
-          },
-          {
-            name: 'Full Stack Developer',
-            route: '/hire-full-stack-developers',
-          },
-          {
-            name: 'MEAN Stack Developer',
-            route: '/hire-mean-stack-developers',
-          },
-          {
-            name: 'MERN Stack Developer',
-            route: '/hire-mern-stack-developers',
-          },
-          {
-            name: 'DevOps Engineer',
-            route: '/hire-devops-engineers',
-          },
-          {
-            name: 'Fintech Developer',
-            route: '/hire-fintech-developers',
-          },
-          {
-            name: 'Software Developer',
-            route: '/hire-software-developers',
-          },
-          {
-            name: 'QA Engineer',
-            route: '/hire-qa-engineers',
-          },
-        ],
+        name: 'Hire Dedicated Developers',
+        description:
+          'Empower your projects with dedicated developers focused solely on your goals.',
+        href: '/hire-dedicated-developers',
+        icon: '/images/header/howItsWork.svg',
       },
       {
-        name: 'Front-End Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'AngularJS Developer',
-            route: '/hire-angular-developers',
-          },
-          {
-            name: 'ReactJS Developer',
-            route: '/hire-reactjs-developers',
-          },
-          {
-            name: 'JavaScript Developer',
-            route: '/hire-javascript-developers',
-          },
-          {
-            name: 'NextJS Developer',
-            route: '/hire-nextjs-developers',
-          },
-        ],
+        name: 'Offshore Development Center',
+        description:
+          'Scale your operations globally with our cost-effective offshore development solutions.',
+        href: '/offshore-development-center',
+        icon: '/images/header/esparkWiki.svg',
       },
       {
-        name: 'Mobile App Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Android Developer',
-            route: '/hire-android-developers',
-          },
-          {
-            name: 'Flutter Developer',
-            route: '/hire-flutter-developers',
-          },
-          {
-            name: 'React Native Developer',
-            route: '/hire-react-native-developers',
-          },
-        ],
-      },
-      {
-        name: 'Back-End Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'ASP .NET Developer',
-            route: '/hire-asp-dot-net-developers',
-          },
-          {
-            name: 'PHP Developer',
-            route: '/hire-php-developers',
-          },
-          {
-            name: 'Python Developer',
-            route: '/hire-python-developers',
-          },
-          {
-            name: 'NodeJS Developer',
-            route: '/hire-nodejs-developers',
-          },
-        ],
-      },
-      {
-        name: 'Embedded Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Firmware Developer',
-            route: '/hire-firmware-developers',
-          },
-          {
-            name: 'PCB Designer',
-            route: '/hire-pcb-designers',
-          },
-          {
-            name: 'Embedded System Engineer',
-            route: '/hire-embedded-system-engineers',
-          },
-        ],
-      },
-      {
-        name: 'Digital Marketer',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'Social Media Expert',
-            route: '/hire-social-media-experts',
-          },
-          {
-            name: 'PPC Specialist',
-            route: '/hire-ppc-specialists',
-          },
-          {
-            name: 'SEO Expert',
-            route: '/hire-seo-experts',
-          },
-          {
-            name: 'Performance Marketer',
-            route: '/hire-performance-marketers',
-          },
-        ],
-      },
-      {
-        name: 'Ecommerce Developers',
-        dropdown: true,
-        collapse: [
-          {
-            name: 'WordPress Developer',
-            route: '/hire-wordpress-developers',
-          },
-          {
-            name: 'Shopify Developer',
-            route: '/hire-shopify-developers',
-          },
-        ],
+        name: 'Fixed Price Projects',
+        description:
+          'Get clear budgets and timelines with our transparent fixed-price project model.',
+        href: '/fixed-price-projects',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -439,14 +151,14 @@ export const Hire_Remote_Routes = [
         description:
           'Propel your startup with specialized support with our agile outsourcing assistance.',
         href: '/solutions/business-startup',
-        icon: '/images/header/startup.png',
+        icon: '/images/header/startup.svg',
       },
       {
         name: 'Enterprise',
         description:
           'Drive enterprise success with our outsourced talent and offer IoT-related expertise.',
         href: '/solutions/enterprises',
-        icon: '/images/header/enterPrice.png',
+        icon: '/images/header/enterPrice.svg',
       },
     ],
   },
@@ -459,21 +171,21 @@ export const Hire_Remote_Routes = [
         description:
           'Elevate success through tailored talent solutions for unparalleled growth and innovation.',
         href: '/what-we-do',
-        icon: '/images/header/whyeSpark.png',
+        icon: '/images/header/whyeSpark.svg',
       },
       {
         name: 'How it Works',
         description:
           'Fast onboarding of IT outsourced team. Hire the world’s top talent in minutes.',
         href: '/how-it-works',
-        icon: '/images/header/howItsWork.png',
+        icon: '/images/header/howItsWork.svg',
       },
       {
         name: 'Partnership Program',
         description:
           'Collaborate and excel in our referral program for shared achievements and success.',
         href: '/partnership-program',
-        icon: '/images/header/partnership.png',
+        icon: '/images/header/partnership.svg',
       },
     ],
   },
