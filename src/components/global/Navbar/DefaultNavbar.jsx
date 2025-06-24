@@ -5,13 +5,10 @@ import Popper from '@mui/material/Popper';
 import Grow from '@mui/material/Grow';
 import { Box } from '@mui/material';
 import DropItems from './DropItems';
-import { HIRE_A_TALENT_MENU } from '@/constants/homepage';
 import GlobalLayout from './GlobalLayout';
 import RemoteLayout from './RemoteLayout';
 import { NAVBAR_STYLE } from '@/constants/global/header';
 import NavbarItems from './NavbarItems';
-import NewHireLinks from '@/components/homepage/NewHireLinks';
-// import HireLinks from '@/components/homepage/HireLinks';
 
 function DefaultNavbar({
   routes,
@@ -130,38 +127,23 @@ function DefaultNavbar({
         dropdown && (
           <Grow {...TransitionProps} sx={growStyle(dropdownName)}>
             <Box borderRadius="lg" sx={{ width: 'auto', boxShadow: 3 }}>
-              <Box borderRadius="lg" sx={growBoxStyle(dropdownName)}>
-                {dropdownName === 'Services' ? (
-                  <>
-                    <NewHireLinks
-                      data={HIRE_A_TALENT_MENU}
-                      setDropdown={setDropdown}
-                    />
-                    {/* // old hiring pages style */}
-                    {/* <HireLinks
-                      data={HIRE_A_TALENT_MENU}
-                      setDropdown={setDropdown}
-                      styles={hireLinkStyle}
-                    /> */}
-                  </>
-                ) : (
-                  routes
-                    ?.find(({ name }) => name === dropdownName)
-                    ?.collapse?.map(
-                      ({ name, icon, description, href }, index) => (
-                        <DropItems
-                          key={index}
-                          name={name}
-                          icon={icon}
-                          description={description}
-                          href={href}
-                          index={index}
-                          setDropdown={setDropdown}
-                          dropdownItemsStyle={dropdownItemsStyle}
-                        />
-                      )
+              <Box borderRadius="lg" sx={growBoxStyle}>
+                {routes
+                  ?.find(({ name }) => name === dropdownName)
+                  ?.collapse?.map(
+                    ({ name, icon, description, href }, index) => (
+                      <DropItems
+                        key={index}
+                        name={name}
+                        icon={icon}
+                        description={description}
+                        href={href}
+                        index={index}
+                        setDropdown={setDropdown}
+                        dropdownItemsStyle={dropdownItemsStyle}
+                      />
                     )
-                )}
+                  )}
               </Box>
             </Box>
           </Grow>
