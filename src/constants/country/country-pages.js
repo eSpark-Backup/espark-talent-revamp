@@ -8,6 +8,31 @@ export const COUNTRY = [
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
+    letsWorkTogether: {
+      title: 'Business in Saudi Arabia Let’s Work Together',
+      text: `Employee Outsourcing in KSA for Your Business <br /> A section highlighting the advantages of choosing our IT outsourcing services in KSA:`,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
+    },
   },
   {
     // Malaysia
@@ -19,6 +44,31 @@ export const COUNTRY = [
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
+    letsWorkTogether: {
+      title: 'Business in Malaysia Let’s Work Together',
+      text: `Employee Outsourcing in Malaysia: Your Competitive Edge <br /> Let our IT outsourcing experts in Malaysia handle your tech, so you don’t have to:`,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
+    },
   },
   {
     // UAE
@@ -28,6 +78,31 @@ export const COUNTRY = [
       text: 'Need skilled professionals (developers, designers, and tech experts) to fuel your growth? Our employee outsourcing services in the UAE help you access the best talent quickly, all while lowering recruitment costs. As a renowned HR solutions provider in the UAE, we make scaling your workforce a hassle-free experience.',
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
+    },
+    letsWorkTogether: {
+      title: 'Business in UAE Let’s Work Together',
+      text: `Employee Outsourcing in UAE - A Smart Move for Your Business <br /> Here’s why choosing our IT outsourcing services in UAE will support your business growth:`,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
     },
   },
   {
@@ -40,6 +115,31 @@ export const COUNTRY = [
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
+    letsWorkTogether: {
+      title: 'Businesses in the United Kingdom Let’s Work Together',
+      text: `The Power of Employee Outsourcing in the UK for Your Business <br /> Explore the strategic advantages of using our IT outsourcing services in the UK: `,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
+    },
   },
   {
     // USA
@@ -49,6 +149,31 @@ export const COUNTRY = [
       text: 'Hire top-tier developers, designers, and engineers from our global talent pool while you focus on growing your business. Based in the U.S.? You get skilled professionals, lower costs, flexible engagement models, and full operational support — all without the hassle of recruitment or infrastructure',
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
+    },
+    letsWorkTogether: {
+      title: 'Businesses in the USA Let’s Work Together',
+      text: `Why Hire from Us While You’re in the USA? A benefit-driven section explaining why U.S. businesses should choose your service.  Include cards/icons with benefits like:`,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
     },
   },
   {
@@ -61,6 +186,31 @@ export const COUNTRY = [
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
+    letsWorkTogether: {
+      title: 'Businesses in the Oman Let’s Work Together',
+      text: `How Employee Outsourcing in Oman Can Benefit Your Business Explore the benefits of opting for our IT outsourcing services in Oman: `,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
+    },
   },
   {
     // Qatar
@@ -72,6 +222,31 @@ export const COUNTRY = [
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
+    letsWorkTogether: {
+      title: 'Businesses in the Qatar Let’s Work Together',
+      text: `Businesses in the Qatar Let’s Work Together`,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
+    },
   },
   {
     // Canada
@@ -82,6 +257,31 @@ export const COUNTRY = [
       text: 'Fuel your business expansion with proven talent - minus the hiring burden. Our employee outsourcing services in Canada connect you with top professionals, streamline your recruitment process, and offer comprehensive remote support. With expert HR solutions in Canada, we help you build agile teams that drive success.',
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
+    },
+    letsWorkTogether: {
+      title: 'Businesses in the Canada Let’s Work Together',
+      text: `Boost Your Business with Employee Outsourcing in Canada What makes our IT outsourcing services in Canada the right fit for you: `,
+      icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      items: [
+        {
+          text: 'Up to 60% Cost Savings',
+        },
+        {
+          text: 'No Recruitments Cost Savings',
+        },
+        {
+          text: 'Pre-Vetted Engineers',
+        },
+        {
+          text: 'Time-Zone Alignment',
+        },
+        {
+          text: 'NDAs & Full IP Protection',
+        },
+        {
+          text: 'Scalable Teams on Demand',
+        },
+      ],
     },
   },
 ];
