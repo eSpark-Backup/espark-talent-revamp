@@ -6,6 +6,7 @@ import {
   LETS_WORK_TOGETHER_STYLE,
 } from '@/styles/countryComponentStyles';
 import LetsWorkTogether from './LetsWorkTogether';
+import ComparisonTable from './ComparisonTable';
 const CountryPage = ({ data }) => {
   // Inject styles into heroSection
   const heroSectionData = {
@@ -16,6 +17,13 @@ const CountryPage = ({ data }) => {
   };
 
   const LetsWorkTogetherData = {
+    ...data?.letsWorkTogether,
+    styles: {
+      ...(LETS_WORK_TOGETHER_STYLE || {}),
+    },
+  };
+
+  const ComparisonTableData = {
     ...data?.letsWorkTogether,
     styles: {
       ...(LETS_WORK_TOGETHER_STYLE || {}),
@@ -35,6 +43,7 @@ const CountryPage = ({ data }) => {
     >
       <DedicatedBanner data={heroSectionData} />
       <LetsWorkTogether data={LetsWorkTogetherData} />
+      <ComparisonTable data={ComparisonTableData} />
     </Box>
   );
 };
