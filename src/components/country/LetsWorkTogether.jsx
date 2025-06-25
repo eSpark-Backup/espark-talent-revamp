@@ -3,7 +3,15 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 
 const LetsWorkTogether = ({ data }) => {
-  const { title, text, icon, items, styles } = data || {};
+  const {
+    leftDesignImage,
+    rightDesignImage,
+    styles,
+    title,
+    items,
+    text,
+    icon,
+  } = data || {};
   const {
     mainBoxStyle,
     contentBoxStyle,
@@ -36,7 +44,7 @@ const LetsWorkTogether = ({ data }) => {
         <Box sx={itemsMainBoxStyle}>
           <Box
             component={'img'}
-            src={'/images/country/lets-work/new-left.png'}
+            src={leftDesignImage}
             sx={leftDesignImageStyle}
           />
           <Box sx={itemBoxStyle}>
@@ -56,7 +64,7 @@ const LetsWorkTogether = ({ data }) => {
           </Box>
           <Box
             component={'img'}
-            src={'/images/country/lets-work/new-right.png'}
+            src={rightDesignImage}
             sx={rightDesignImageStyle}
           />
         </Box>

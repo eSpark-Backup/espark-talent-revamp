@@ -12,6 +12,8 @@ export const COUNTRY = [
       title: 'Business in Saudi Arabia Let’s Work Together',
       text: `Employee Outsourcing in KSA for Your Business <br /> A section highlighting the advantages of choosing our IT outsourcing services in KSA:`,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -48,6 +50,8 @@ export const COUNTRY = [
       title: 'Business in Malaysia Let’s Work Together',
       text: `Employee Outsourcing in Malaysia: Your Competitive Edge <br /> Let our IT outsourcing experts in Malaysia handle your tech, so you don’t have to:`,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -83,6 +87,8 @@ export const COUNTRY = [
       title: 'Business in UAE Let’s Work Together',
       text: `Employee Outsourcing in UAE - A Smart Move for Your Business <br /> Here’s why choosing our IT outsourcing services in UAE will support your business growth:`,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -119,6 +125,8 @@ export const COUNTRY = [
       title: 'Businesses in the United Kingdom Let’s Work Together',
       text: `The Power of Employee Outsourcing in the UK for Your Business <br /> Explore the strategic advantages of using our IT outsourcing services in the UK: `,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -154,6 +162,8 @@ export const COUNTRY = [
       title: 'Businesses in the USA Let’s Work Together',
       text: `Why Hire from Us While You’re in the USA? A benefit-driven section explaining why U.S. businesses should choose your service.  Include cards/icons with benefits like:`,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -188,8 +198,10 @@ export const COUNTRY = [
     },
     letsWorkTogether: {
       title: 'Businesses in the Oman Let’s Work Together',
-      text: `How Employee Outsourcing in Oman Can Benefit Your Business Explore the benefits of opting for our IT outsourcing services in Oman: `,
+      text: `How Employee Outsourcing in Oman Can Benefit Your Business <br /> Explore the benefits of opting for our IT outsourcing services in Oman: `,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -224,8 +236,10 @@ export const COUNTRY = [
     },
     letsWorkTogether: {
       title: 'Businesses in the Qatar Let’s Work Together',
-      text: `Businesses in the Qatar Let’s Work Together`,
+      text: `Employee Outsourcing in Qatar: A Smart Choice <br /> See why businesses trust our IT outsourcing services in Qatar to streamline their operations: `,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
@@ -260,8 +274,10 @@ export const COUNTRY = [
     },
     letsWorkTogether: {
       title: 'Businesses in the Canada Let’s Work Together',
-      text: `Boost Your Business with Employee Outsourcing in Canada What makes our IT outsourcing services in Canada the right fit for you: `,
+      text: `Boost Your Business with Employee Outsourcing in Canada <br /> What makes our IT outsourcing services in Canada the right fit for you: `,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
+      leftDesignImage: '/images/country/lets-work/new-left.png',
+      rightDesignImage: '/images/country/lets-work/new-right.png',
       items: [
         {
           text: 'Up to 60% Cost Savings',
