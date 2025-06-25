@@ -4,93 +4,85 @@ export const COUNTRY = [
     path: 'ksa',
     heroSection: {
       title: 'Top Employee Outsourcing Company in Saudi Arabia for Tech Talent',
-      description:
-        'Focus on growing your business while we handle the hiring. Our employee outsourcing services in Saudi Arabia connect you with skilled professionals, reduce your costs, and provide full support. As a trusted HR solutions provider in KSA, we make building your team simple and efficient. ',
-      btnText: 'Schedule a Call',
-      btnLink: '/book-a-demo',
-      styles: {
-        mainBoxStyle: {
-          width: '100%',
-          height: 'calc(80vh - 127px)',
-          minHeight: '450px',
-          maxHeight: { xs: '450px', md: '700px' },
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          px: 2,
-          py: { xs: 6, md: 8 },
-          backgroundImage: "url('images/country/hero-section/background.png')",
-          borderRadius: '0px 0px 54px 54px',
-          borderBottom: '2px solid rgba(0, 0, 0, 0.04)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          gap: 2,
-          textAlign: 'center',
-          '@media(min-width:1921px)': {
-            maxHeight: '700px',
-            py: 8,
-          },
-        },
-        titleStyle: {
-          fontSize: { xs: '23px', sm: '32px', md: '54px', lg: '74px' },
-          width: '95%',
-          maxWidth: { sm: '420px', md: '950px', lg: '1450px' },
-          fontWeight: 600,
-          lineHeight: 1.2,
-          color: '#0B395A',
-        },
-        textStyle: {
-          width: { xs: '90%', sm: '100%' },
-          maxWidth: { xs: '100%', sm: '90%', md: '740px', lg: '1250px' },
-          fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
-          color: '#26292B',
-        },
-        buttonStyle: {
-          mt: 2,
-          width: '65%',
-          maxWidth: '213px',
-          height: { xs: '38px', md: '44px' },
-          color: '#FFFFFF',
-          background: 'rgba(2, 152, 148, 1)',
-          border: '2px solid rgba(27, 202, 198, 0.47)',
-          borderRadius: '10px',
-          fontSize: { xs: '14px', md: '18px', lg: '21px' },
-          px: 4,
-          py: 1.5,
-          textTransform: 'none',
-          textWrap: 'nowrap',
-        },
-      },
+      text: 'Focus on growing your business while we handle the hiring. Our employee outsourcing services in Saudi Arabia connect you with skilled professionals, reduce your costs, and provide full support. As a trusted HR solutions provider in KSA, we make building your team simple and efficient. ',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
     },
   },
   {
     // Malaysia
-    path: 'my',
+    path: 'malaysia',
+    heroSection: {
+      title:
+        'Hire Faster, Smarter - Employee Outsourcing Company Malaysia at Your Service',
+      text: 'Let your business flourish with the right team in place. eSpark Talent’s employee outsourcing services in Malaysia bring you access to skilled professionals, optimize hiring costs, and furnish dedicated support. We are a strategic HR solutions provider in Malaysia, helping businesses hire smarter for sustainable growth and long-term impact.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // UAE
     path: 'uae',
+    heroSection: {
+      title: 'Employee Outsourcing Company in UAE That Builds Tech Legends',
+      text: 'Need skilled professionals (developers, designers, and tech experts) to fuel your growth? Our employee outsourcing services in the UAE help you access the best talent quickly, all while lowering recruitment costs. As a renowned HR solutions provider in the UAE, we make scaling your workforce a hassle-free experience.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // United Kingdom
     path: 'uk',
+    heroSection: {
+      title:
+        'Employee Outsourcing Company in the United Kingdom - Global or Local, Done Right!',
+      text: 'Need skilled professionals (developers, designers, and tech experts) to fuel your growth? Our employee outsourcing services in the UAE help you access the best talent quickly, all while lowering recruitment costs. As a renowned HR solutions provider in the UAE, we make scaling your workforce a hassle-free experience.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // USA
     path: 'usa',
+    heroSection: {
+      title: 'Build Your Dream Tech Team from the USA — Without the Overhead',
+      text: 'Hire top-tier developers, designers, and engineers from our global talent pool while you focus on growing your business. Based in the U.S.? You get skilled professionals, lower costs, flexible engagement models, and full operational support — all without the hassle of recruitment or infrastructure',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // Oman
-    path: 'om',
+    path: 'oman',
+    heroSection: {
+      title:
+        'Employee Outsourcing Company in Oman Helping You Hire Smarter, Faster',
+      text: 'Expand with ease by tapping into skilled professionals (developers, designers, and engineers) through our employee outsourcing services in Oman. We cut down your hiring costs and make sure you have the right talent in place. As a leading HR solutions provider in Oman, we help you stay ahead of the competition.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // Qatar
-    path: 'qa',
+    path: 'qatar',
+    heroSection: {
+      title:
+        'Employee Outsourcing in Company in Qatar That Accelerates Your Business Success',
+      text: 'Make smarter hiring decisions with employee outsourcing services in Qatar. We connect you to top talent, reduce your HR costs, and provide full remote-based support. eSpark Talent is your reliable HR partner in Qatar, making hiring easy for lasting success.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
   {
     // Canada
-    path: 'ca',
+    path: 'canada',
+    heroSection: {
+      title:
+        'Your Go-To Employee Outsourcing Company in Canada for Tech & Beyond!',
+      text: 'Fuel your business expansion with proven talent - minus the hiring burden. Our employee outsourcing services in Canada connect you with top professionals, streamline your recruitment process, and offer comprehensive remote support. With expert HR solutions in Canada, we help you build agile teams that drive success.',
+      buttonText: 'Schedule a Call',
+      link: '/book-a-demo',
+    },
   },
 ];
 
