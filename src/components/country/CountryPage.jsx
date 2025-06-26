@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import DedicatedBanner from '../global/DedicatedBanner';
 import {
+  COMPARISON_TABLE_STYLE,
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
 } from '@/styles/countryComponentStyles';
@@ -24,9 +25,9 @@ const CountryPage = ({ data }) => {
   };
 
   const ComparisonTableData = {
-    ...data?.letsWorkTogether,
+    ...data?.comparisonTable,
     styles: {
-      ...(LETS_WORK_TOGETHER_STYLE || {}),
+      ...(COMPARISON_TABLE_STYLE || {}),
     },
   };
 
