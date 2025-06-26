@@ -168,6 +168,39 @@ export const COUNTRY = [
         },
       ],
     },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in Saudi Arabia Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
+        },
+      ],
+    },
   },
   {
     // Malaysia
@@ -339,6 +372,39 @@ export const COUNTRY = [
         },
       ],
     },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in Malaysia Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
+        },
+      ],
+    },
   },
   {
     // UAE
@@ -505,6 +571,39 @@ export const COUNTRY = [
         {
           title: 'Data Security',
           icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services UAE Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
         },
       ],
     },
@@ -679,6 +778,39 @@ export const COUNTRY = [
         },
       ],
     },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in UK Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
+        },
+      ],
+    },
   },
   {
     // USA
@@ -845,6 +977,39 @@ export const COUNTRY = [
         {
           title: 'Data Security',
           icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in USA Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
         },
       ],
     },
@@ -1018,6 +1183,39 @@ export const COUNTRY = [
         },
       ],
     },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in Oman Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
+        },
+      ],
+    },
   },
   {
     // Qatar
@@ -1188,6 +1386,39 @@ export const COUNTRY = [
         },
       ],
     },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in Qatar Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
+        },
+      ],
+    },
   },
   {
     // Canada
@@ -1355,6 +1586,39 @@ export const COUNTRY = [
         {
           title: 'Data Security',
           icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
+    outSourcingWork: {
+      title: 'Why Our Outsourcing Services in Canada Work for You',
+      cards: [
+        {
+          title: '24/7 Expert Tech Talent',
+          description:
+            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+          image: '/images/country/out-sourcing-work/01.svg',
+          maxWidth: 361,
+        },
+        {
+          title: 'Latest Technologies, Remotely',
+          description:
+            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          image: '/images/country/out-sourcing-work/02.svg',
+          maxWidth: 383,
+        },
+        {
+          title: 'Onshore & Offshore Flexibility',
+          description:
+            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+          image: '/images/country/out-sourcing-work/03.svg',
+          maxWidth: 443,
+        },
+        {
+          title: 'No Language Gaps, Just Teamwork',
+          description:
+            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          image: '/images/country/out-sourcing-work/04.svg',
+          maxWidth: 361,
         },
       ],
     },

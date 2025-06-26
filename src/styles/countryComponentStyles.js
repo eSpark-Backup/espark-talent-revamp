@@ -58,8 +58,11 @@ const LETS_WORK_TOGETHER_STYLE = {
   titleStyle: {
     mx: 'auto',
     width: '95%',
-    fontSize: { xs: '23px', sm: '32px', md: '42px', lg: '66px' },
-    maxWidth: { xs: '90%', sm: '450px', md: '600px', lg: '1000px' },
+    fontSize: 'clamp(23px, 5vw, 66px)',
+    //   fontSize: { xs: '23px', sm: '32px', md: '42px', lg: '66px' },
+    maxWidth: { xs: '90%', sm: '600px', md: '800px', lg: '1000px' },
+    // fontSize: { xs: '23px', sm: '32px', md: '42px', lg: '66px' },
+    // maxWidth: { xs: '90%', sm: '450px', md: '600px', lg: '1000px' },
     fontWeight: 600,
     lineHeight: 1.2,
     color: '#0B395A',
@@ -355,10 +358,59 @@ const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
   },
 };
 
+const OUT_SOURCING_SERVICES_STYLE = {
+  mainBoxStyle: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 5,
+  },
+  titleStyle: {
+    mx: 'auto',
+    width: '95%',
+    fontSize: 'clamp(23px, 5vw, 52px)',
+    maxWidth: { xs: '90%', sm: '600px', md: '1000px', lg: '1100px' },
+    textAlign: 'center',
+    color: '#0B395A',
+    fontWeight: 600,
+  },
+  cardStyle: {
+    mx: 'auto',
+    width: { xs: '90%', md: '100%' },
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: { xs: '420px', md: '591px' },
+    background:
+      'linear-gradient(170deg, rgba(0, 28, 99, 1) 25%, rgba(4, 16, 44, 1) 100%)',
+    borderRadius: { xs: '40px', md: '50px' },
+    gap: 3,
+    p: { xs: 4, md: 6 },
+    pb: { xs: 0, md: 0 },
+  },
+  cardTitleStyle: {
+    fontSize: { xs: '16px', sm: '19px', md: '23px', lg: '30px' },
+    fontWeight: 600,
+    color: '#fff',
+  },
+  descriptionStyle: {
+    fontSize: { xs: '13px', sm: '14px', md: '17px', lg: '20px' },
+    fontWeight: 400,
+    color: '#fff',
+  },
+  cardImageStyle: (maxWidth) => ({
+    mx: 'auto',
+    width: '100%',
+    maxWidth: maxWidth,
+  }),
+};
+
 export {
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
   COMPARISON_TABLE_STYLE,
   SALARY_DATA_TABLE_STYLE,
   RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
+  OUT_SOURCING_SERVICES_STYLE,
 };
