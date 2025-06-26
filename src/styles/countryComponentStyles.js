@@ -313,9 +313,52 @@ const SALARY_DATA_TABLE_STYLE = {
   },
 };
 
+const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
+  mainBoxStyle: {
+    mx: 'auto',
+    width: '100%',
+    maxWidth: '1500px',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: 5,
+  },
+  titleStyle: {
+    fontWeight: 600,
+    color: '#0B395A',
+    fontSize: { xs: '18px', sm: '22px', md: '26px', lg: '36px' },
+    textAlign: 'center',
+    width: { xs: '85%', sm: '80%', lg: '100%' },
+  },
+  gridStyle: { xs: '90%', md: '98%' },
+  cardStyle: {
+    width: '100%',
+    maxWidth: { xs: '90%', sm: '85%', md: '354px' },
+    minHeight: { xs: '70px', md: '80px', lg: '100px' },
+    borderRadius: '6.9px',
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: 'rgba(232, 244, 253, 1)',
+    boxShadow: '0px 3.4px 6.45px rgba(135, 128, 128, 0.29)',
+    border: '1px solid rgba(17, 24, 69, 0.10)',
+    gap: 1,
+    py: 0.8,
+    px: 1.5,
+    mb: 0.8,
+  },
+  imageStyle: { width: { xs: '45px', md: '58px' }, height: 'auto' },
+  cardTitleStyle: {
+    fontSize: { xs: 'clamp(15px, 1.4vw, 20px)' },
+    fontWeight: 500,
+    color: 'rgba(11, 57, 90, 1)',
+  },
+};
+
 export {
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
   COMPARISON_TABLE_STYLE,
   SALARY_DATA_TABLE_STYLE,
+  RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
 };
