@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import FlaxibleSlider from './FlexibleSlider';
+import FlaxibleSlider from '../new-home/FlexibleSlider';
 
-const ProductJourney = ({ data }) => {
+const CompaniesTrust = ({ data }) => {
   const { title, description, cards, styles } = data || {};
   const {
     mainBoxStyle,
@@ -44,7 +44,7 @@ const ProductJourney = ({ data }) => {
         justifyContent={'center'}
         maxWidth={'1440px'}
         mx={'auto'}
-        gap={2}
+        gap={4.5}
       >
         {cards?.map(({ title, image, description }, index) => (
           <ODCCard
@@ -72,4 +72,4 @@ const ProductJourney = ({ data }) => {
   );
 };
 
-export default ProductJourney;
+export default CompaniesTrust;
