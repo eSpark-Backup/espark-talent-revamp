@@ -5,11 +5,13 @@ import {
   COMPARISON_TABLE_STYLE,
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
+  SALARY_DATA_TABLE_STYLE,
 } from '@/styles/countryComponentStyles';
 import LetsWorkTogether from './LetsWorkTogether';
 import ComparisonTable from './ComparisonTable';
+import SalaryDataTable from './SalaryDataTable';
 const CountryPage = ({ data }) => {
-  // Inject styles into heroSection
+  // Inject styles
   const heroSectionData = {
     ...data?.heroSection,
     styles: {
@@ -31,6 +33,13 @@ const CountryPage = ({ data }) => {
     },
   };
 
+  const SalaryDataTableData = {
+    ...data?.salaryDataTable,
+    styles: {
+      ...(SALARY_DATA_TABLE_STYLE || {}),
+    },
+  };
+
   return (
     <Box
       sx={{
@@ -45,6 +54,7 @@ const CountryPage = ({ data }) => {
       <DedicatedBanner data={heroSectionData} />
       <LetsWorkTogether data={LetsWorkTogetherData} />
       <ComparisonTable data={ComparisonTableData} />
+      <SalaryDataTable data={SalaryDataTableData} />
     </Box>
   );
 };

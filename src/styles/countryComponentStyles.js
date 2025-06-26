@@ -95,7 +95,7 @@ const LETS_WORK_TOGETHER_STYLE = {
     mx: 'auto',
     px: { md: 2, lg: 1 },
     width: { xs: '100%' },
-    maxWidth: '1480px',
+    maxWidth: '1500px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -114,16 +114,15 @@ const LETS_WORK_TOGETHER_STYLE = {
     flexGrow: 1,
     display: 'flex',
     justifyContent: 'center',
-    borderTop: {
-      xs: '8px solid rgba(183, 175, 175, 0.15)',
-      lg: '8px solid rgba(183, 175, 175, 0.15)',
-    },
+    borderTop: '5px solid rgba(183, 175, 175, 0.15)',
+    borderBottom: '5px solid rgba(183, 175, 175, 0.15)',
     borderLeft: 0,
     borderRight: 0,
     width: '100%',
     maxWidth: '1400px',
     mx: 'auto',
     '@media(min-width: 1024px)': {
+      borderTop: '8px solid rgba(183, 175, 175, 0.15)',
       borderBottom: '8px solid rgba(183, 175, 175, 0.15)',
     },
   },
@@ -204,11 +203,12 @@ const LETS_WORK_TOGETHER_STYLE = {
 
 const COMPARISON_TABLE_STYLE = {
   mainBoxStyle: {
-    py: 5,
-    px: 7,
+    pt: { xs: 4, md: 5 },
+    pb: 3,
+    px: { xs: 4, md: 7 },
     borderRadius: '43px',
     color: '#fff',
-    width: '90%',
+    width: '92%',
     maxWidth: '1400px',
     mx: 'auto',
     background:
@@ -235,7 +235,7 @@ const COMPARISON_TABLE_STYLE = {
   },
   tableCellStyle: (index) => ({
     color: '#fff',
-    pb: index === 3 ? 0 : 'auto',
+    pb: 'auto',
     borderBottom: index === 3 ? 0 : '1px solid rgba(255,255,255,0.3)',
   }),
   columnStyle: {
@@ -250,4 +250,72 @@ const COMPARISON_TABLE_STYLE = {
   },
 };
 
-export { COUNTRY_HERO_STYLE, LETS_WORK_TOGETHER_STYLE, COMPARISON_TABLE_STYLE };
+const SALARY_DATA_TABLE_STYLE = {
+  componentBoxStyle: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: '#EDF3FF',
+    py: 6,
+  },
+  mainBoxStyle: {
+    width: '92%',
+    maxWidth: '1400px',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  titleAndDescriptionBoxStyle: { px: 6, pb: 4 },
+  titleStyle: {
+    color: '#0B395A',
+    fontSize: { xs: '18px', sm: '23px', md: 'clamp(25px, 1.8vw, 40px)' },
+    fontWeight: 600,
+    '@media(min-width: 1921px)': {
+      fontSize: '40px',
+    },
+  },
+  textStyle: {
+    fontSize: { xs: '15.5px', sm: 'clamp(18px, 1.75vw, 31px)' },
+    fontWeight: 300,
+    color: '#0B395A',
+  },
+  tebleBoxStyle: {
+    width: '100%',
+    backgroundColor: '#fff',
+    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.25)',
+    borderRadius: '43px',
+    p: { xs: 2, lg: 4 },
+  },
+  tableContainerStyle: {
+    mx: 'auto',
+    width: '95%',
+    color: '#0B395A',
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+  },
+  tableCellStyle: (rowIndex, colIndex) => ({
+    color: '#0B395A',
+    pt: { xs: rowIndex === 1 ? 2 : 1, lg: rowIndex === 1 ? 3 : 1.5 },
+    pb: { xs: 1, lg: 1.5 },
+    textAlign: colIndex === 0 ? 'left' : 'center',
+    borderBottom: rowIndex === 0 ? '2px solid rgba(179, 170, 170, 0.5)' : 0,
+  }),
+  columnStyle: {
+    fontSize: {
+      fontWeight: 500,
+      xs: 'clamp(15px, 1.3vw, 33px)',
+    },
+  },
+  rowStyle: {
+    fontSize: {
+      xs: 'clamp(15px, 1.3vw, 33px)',
+    },
+  },
+};
+
+export {
+  COUNTRY_HERO_STYLE,
+  LETS_WORK_TOGETHER_STYLE,
+  COMPARISON_TABLE_STYLE,
+  SALARY_DATA_TABLE_STYLE,
+};
