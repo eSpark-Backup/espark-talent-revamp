@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import DedicatedBanner from '../global/DedicatedBanner';
 import {
+  COMPANIES_TRUST_STYLE,
   COMPARISON_TABLE_STYLE,
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
@@ -14,6 +15,7 @@ import ComparisonTable from './ComparisonTable';
 import SalaryDataTable from './SalaryDataTable';
 import RightChoiceForEmployers from './RightChoiceForEmployers';
 import OutSourcingWork from './OutSourcingWork';
+import CompaniesTrust from './CompaniesTrust';
 const CountryPage = ({ data }) => {
   // Inject styles
   const heroSectionData = {
@@ -58,6 +60,13 @@ const CountryPage = ({ data }) => {
     },
   };
 
+  const CompaniesTrustData = {
+    ...data?.companiesTrust,
+    styles: {
+      ...(COMPANIES_TRUST_STYLE || {}),
+    },
+  };
+
   return (
     <Box
       sx={{
@@ -75,7 +84,7 @@ const CountryPage = ({ data }) => {
       <SalaryDataTable data={SalaryDataTableData} />
       <RightChoiceForEmployers data={RightChoiceForEmployersData} />
       <OutSourcingWork data={OutSourcingWorkData} />
-      
+      <CompaniesTrust data={CompaniesTrustData} />
     </Box>
   );
 };

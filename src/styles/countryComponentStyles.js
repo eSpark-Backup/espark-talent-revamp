@@ -406,6 +406,86 @@ const OUT_SOURCING_SERVICES_STYLE = {
   }),
 };
 
+const COMPANIES_TRUST_STYLE = {
+  mainBoxStyle: {
+    width: '90%',
+    mx: 'auto',
+    maxWidth: '1400px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: { xs: 0, md: 4 },
+  },
+  contentBoxStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 1,
+    textAlign: 'center',
+  },
+  titleStyle: {
+    fontSize: { xs: '18px', sm: '23px', md: '30px', lg: '40px' },
+    fontWeight: 600,
+    color: '#222324',
+  },
+  descriptionStyle: {
+    fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
+    fontWeight: 400,
+    width: { xs: '80%', md: 'auto' },
+    mx: 'auto',
+    color: '#111845',
+    '@media(min-width: 769px) and (max-width: 1426px)': {
+      width: '85%',
+    },
+  },
+  slideStyle: {
+    width: '90%',
+    maxWidth: '350px',
+    paddingBottom: '20px',
+  },
+  cardStyle: {
+    display: { xs: 'none', md: 'flex' },
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: { xs: 'center', md: 'center' },
+    width: '100%',
+    maxWidth: '408px',
+    minHeight: { xs: '235px', md: '240px', lg: '303px' },
+    backgroundColor: '#FFFFFF',
+    boxShadow: '0px 3.7px 6.96px rgba(135, 128, 128, 0.29)',
+    border: '1px #11184530',
+    borderRadius: '20px',
+    textAlign: 'center',
+    py: 1.5,
+    px: 2,
+    '@media(min-width: 400px) and (max-width: 481px)': {
+      minHeight: '215px',
+    },
+  },
+  titleAndDescripitonBoxStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 0.8,
+    mt: 0.8,
+  },
+  imageStyle: { width: { xs: '55px', lg: 'auto' }, height: 'auto' },
+  cardTitleStyle: {
+    fontSize: '18px',
+    fontWeight: 500,
+    color: '#111845',
+    minHeight: '55px',
+  },
+  cardDescriptionStyle: {
+    fontSize: { xs: '11px', md: '13px' },
+    fontWeight: 400,
+    color: '#57585C',
+    minHeight: '85px',
+    '@media(min-width: 0px) and (max-width: 424px)': {
+      minHeight: '120px',
+    },
+  },
+};
+
 export {
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
@@ -413,4 +493,5 @@ export {
   SALARY_DATA_TABLE_STYLE,
   RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
   OUT_SOURCING_SERVICES_STYLE,
+  COMPANIES_TRUST_STYLE,
 };

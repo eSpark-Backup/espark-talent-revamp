@@ -201,6 +201,55 @@ export const COUNTRY = [
         },
       ],
     },
+    companiesTrust: {
+      title: 'Turn Your Vision into Reality with Our Expert ODC Solutions',
+      description:
+        'We combine innovation, precision, & effective strategies to deliver results that make a lasting impact.',
+      cards: [
+        {
+          title: ' UI/UX Design Services',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
+          description:
+            'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
+        },
+        {
+          title: 'Custom Software Development',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
+          description:
+            'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
+        },
+        {
+          title: 'Mobile App Development',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
+          description:
+            'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
+        },
+        {
+          title: 'Embedded Systems Development',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
+          description:
+            'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
+        },
+        {
+          title: 'Mechanical Design and Engineering',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
+          description:
+            'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
+        },
+        {
+          title: 'Digital Marketing & Growth Support',
+          image:
+            '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
+          description:
+            'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
+        },
+      ],
+    },
   },
   {
     // Malaysia
