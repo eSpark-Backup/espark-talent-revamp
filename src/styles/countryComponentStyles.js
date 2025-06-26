@@ -202,4 +202,52 @@ const LETS_WORK_TOGETHER_STYLE = {
   },
 };
 
-export { COUNTRY_HERO_STYLE, LETS_WORK_TOGETHER_STYLE };
+const COMPARISON_TABLE_STYLE = {
+  mainBoxStyle: {
+    py: 5,
+    px: 7,
+    borderRadius: '43px',
+    color: '#fff',
+    width: '90%',
+    maxWidth: '1400px',
+    mx: 'auto',
+    background:
+      'linear-gradient(170deg, rgba(0, 28, 99, 1) 25%, rgba(4, 16, 44, 1) 100%)',
+  },
+  titleStyle: {
+    fontSize: { xs: '18px', sm: '23px', md: 'clamp(25px, 1.8vw, 40px)' },
+    fontWeight: 600,
+    '@media(min-width: 1921px)': {
+      fontSize: '35px',
+    },
+  },
+  textStyle: {
+    fontSize: { xs: '15.5px', sm: 'clamp(18px, 1.75vw, 31px)' },
+    fontWeight: 400,
+    color: '#d0d6f9',
+    mb: 3.5,
+  },
+  tableContainerStyle: {
+    mx: 'auto',
+    width: '95%',
+    background: 'transparent',
+    boxShadow: 'none',
+  },
+  tableCellStyle: (index) => ({
+    color: '#fff',
+    pb: index === 3 ? 0 : 'auto',
+    borderBottom: index === 3 ? 0 : '1px solid rgba(255,255,255,0.3)',
+  }),
+  columnStyle: {
+    fontSize: {
+      xs: 'clamp(15px, 1.3vw, 33px)',
+    },
+  },
+  rowStyle: {
+    fontSize: {
+      xs: 'clamp(15px, 1.3vw, 33px)',
+    },
+  },
+};
+
+export { COUNTRY_HERO_STYLE, LETS_WORK_TOGETHER_STYLE, COMPARISON_TABLE_STYLE };

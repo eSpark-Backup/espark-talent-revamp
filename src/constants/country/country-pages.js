@@ -35,6 +35,21 @@ export const COUNTRY = [
         },
       ],
     },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (KSA) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
+      ],
+    },
   },
   {
     // Malaysia
@@ -73,6 +88,22 @@ export const COUNTRY = [
         },
       ],
     },
+    comparisonTable: {
+      title:
+        'Compare: In-House Hiring (Malaysia) vs Offshore with eSpark Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
+      ],
+    },
   },
   {
     // UAE
@@ -108,6 +139,21 @@ export const COUNTRY = [
         {
           text: 'Scalable Teams on Demand',
         },
+      ],
+    },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (UAE) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
       ],
     },
   },
@@ -148,6 +194,21 @@ export const COUNTRY = [
         },
       ],
     },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (UK) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
+      ],
+    },
   },
   {
     // USA
@@ -183,6 +244,21 @@ export const COUNTRY = [
         {
           text: 'Scalable Teams on Demand',
         },
+      ],
+    },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (USA) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
       ],
     },
   },
@@ -223,6 +299,21 @@ export const COUNTRY = [
         },
       ],
     },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (Oman) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
+      ],
+    },
   },
   {
     // Qatar
@@ -261,6 +352,21 @@ export const COUNTRY = [
         },
       ],
     },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (Qatar) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
+      ],
+    },
   },
   {
     // Canada
@@ -297,6 +403,21 @@ export const COUNTRY = [
         {
           text: 'Scalable Teams on Demand',
         },
+      ],
+    },
+    comparisonTable: {
+      title: 'Compare: In-House Hiring (Canada) VS Offshore with eSprak Talent',
+      text: 'A visual Comparison table showing',
+      columns: [
+        { label: 'Criteria' },
+        { label: 'In-House ( KSA)' },
+        { label: 'Offshore with Us' },
+      ],
+      rows: [
+        { label: 'Hiring Time', inHouse: '6–12 Weeks', offshore: '3–6 Days' },
+        { label: 'Cost per Hire', inHouse: '$$$$$', offshore: '$$' },
+        { label: 'Admin/Legal Overhead', inHouse: 'High', offshore: 'Zero' },
+        { label: 'Flexibility', inHouse: 'Low', offshore: 'High' },
       ],
     },
   },
