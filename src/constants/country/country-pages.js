@@ -122,6 +122,52 @@ export const COUNTRY = [
         },
       ],
     },
+    rightChoiceForEmployers: {
+      title:
+        'Why eSpark Talent is the Right Choice for Employers in Saudi Arabia ',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
   },
   {
     // Malaysia
@@ -248,6 +294,51 @@ export const COUNTRY = [
         },
       ],
     },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in Malaysia',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
   },
   {
     // UAE
@@ -369,6 +460,51 @@ export const COUNTRY = [
           country_salary: '8,000',
           usd_salary: '$1,800',
           savings: '80%',
+        },
+      ],
+    },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in UAE',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
         },
       ],
     },
@@ -497,6 +633,52 @@ export const COUNTRY = [
         },
       ],
     },
+    rightChoiceForEmployers: {
+      title:
+        'Why eSpark Talent is the Right Choice for Employers in United Kingdom',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
   },
   {
     // USA
@@ -618,6 +800,51 @@ export const COUNTRY = [
           country_salary: '$10,615',
           usd_salary: '$1,800',
           savings: '83%',
+        },
+      ],
+    },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in USA',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
         },
       ],
     },
@@ -746,6 +973,51 @@ export const COUNTRY = [
         },
       ],
     },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in Oman',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
   },
   {
     // Qatar
@@ -871,6 +1143,51 @@ export const COUNTRY = [
         },
       ],
     },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in Qatar',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
+        },
+      ],
+    },
   },
   {
     // Canada
@@ -993,6 +1310,51 @@ export const COUNTRY = [
           country_salary: '7,500',
           usd_salary: '$1,800',
           savings: '80%',
+        },
+      ],
+    },
+    rightChoiceForEmployers: {
+      title: 'Why eSpark Talent is the Right Choice for Employers in Canada',
+      features: [
+        {
+          title: 'Pre-Vetted Talent',
+          icon: '/images/country/right-choice-for-employers/pre-vetted.png',
+        },
+        {
+          title: 'Rapid Hiring',
+          icon: '/images/country/right-choice-for-employers/rapid-hiring.png',
+        },
+        {
+          title: 'Fast Talent Replacement',
+          icon: '/images/country/right-choice-for-employers/fast-talent.png',
+        },
+        {
+          title: 'Compliance Management',
+          icon: '/images/country/right-choice-for-employers/compliance-management.png',
+        },
+        {
+          title: 'Payroll Management',
+          icon: '/images/country/right-choice-for-employers/payroll-managemant.png',
+        },
+        {
+          title: 'Performance Monitoring',
+          icon: '/images/country/right-choice-for-employers/performance-monitoring.png',
+        },
+        {
+          title: 'Employee Management Tool',
+          icon: '/images/country/right-choice-for-employers/employee-management.png',
+        },
+        {
+          title: 'Flexible Contract',
+          icon: '/images/country/right-choice-for-employers/flexible-contract.png',
+        },
+        {
+          title: 'Scalable ODC model',
+          icon: '/images/country/right-choice-for-employers/scalable-odc.png',
+        },
+        {
+          title: 'Data Security',
+          icon: '/images/country/right-choice-for-employers/data-security.png',
         },
       ],
     },
