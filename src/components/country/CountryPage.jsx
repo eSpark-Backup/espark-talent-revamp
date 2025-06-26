@@ -5,6 +5,7 @@ import {
   COMPARISON_TABLE_STYLE,
   COUNTRY_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
+  OUT_SOURCING_SERVICES_STYLE,
   RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
   SALARY_DATA_TABLE_STYLE,
 } from '@/styles/countryComponentStyles';
@@ -12,6 +13,7 @@ import LetsWorkTogether from './LetsWorkTogether';
 import ComparisonTable from './ComparisonTable';
 import SalaryDataTable from './SalaryDataTable';
 import RightChoiceForEmployers from './RightChoiceForEmployers';
+import OutSourcingWork from './OutSourcingWork';
 const CountryPage = ({ data }) => {
   // Inject styles
   const heroSectionData = {
@@ -49,6 +51,13 @@ const CountryPage = ({ data }) => {
     },
   };
 
+  const OutSourcingWorkData = {
+    ...data?.outSourcingWork,
+    styles: {
+      ...(OUT_SOURCING_SERVICES_STYLE || {}),
+    },
+  };
+
   return (
     <Box
       sx={{
@@ -65,6 +74,8 @@ const CountryPage = ({ data }) => {
       <ComparisonTable data={ComparisonTableData} />
       <SalaryDataTable data={SalaryDataTableData} />
       <RightChoiceForEmployers data={RightChoiceForEmployersData} />
+      <OutSourcingWork data={OutSourcingWorkData} />
+      
     </Box>
   );
 };
