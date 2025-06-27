@@ -37,7 +37,6 @@ const CompaniesTrust = ({ data }) => {
     <Box id="pricing-difference" sx={mainBoxStyle}>
       <Box sx={contentBoxStyle}>
         <Typography sx={titleStyle}>{title}</Typography>
-        <Typography sx={descriptionStyle}>{description}</Typography>
       </Box>
       <Grid
         container
