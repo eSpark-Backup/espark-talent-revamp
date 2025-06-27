@@ -1,5 +1,3 @@
-import { maxWidth } from '@mui/system';
-
 const COUNTRY_HERO_STYLE = {
   mainBoxStyle: {
     width: '100%',
@@ -8,7 +6,7 @@ const COUNTRY_HERO_STYLE = {
     alignItems: 'center',
     justifyContent: 'center',
     px: 2,
-    py: { xs: 6, md: 13, lg: 18 },
+    py: { xs: 6, md: 13, lg: 19 },
     maxHeight: '700px',
     backgroundImage: "url('images/country/hero-section/background.png')",
     borderRadius: '0px 0px 54px 54px',
@@ -19,9 +17,9 @@ const COUNTRY_HERO_STYLE = {
     textAlign: 'center',
   },
   titleStyle: {
-    fontSize: { xs: '23px', sm: '32px', md: '51px', lg: '71px' },
+    fontSize: 'clamp(23px, 5vw, 71px)',
     width: '95%',
-    maxWidth: { sm: '420px', md: '1050px', lg: '1480px' },
+    maxWidth: '1480px',
     fontWeight: 600,
     lineHeight: 1.2,
     color: '#0B395A',
@@ -59,12 +57,9 @@ const LETS_WORK_TOGETHER_STYLE = {
   },
   titleStyle: {
     mx: 'auto',
-    width: '95%',
+    width: { xs: '90%', sm: '80%' },
     fontSize: 'clamp(23px, 5vw, 66px)',
-    //   fontSize: { xs: '23px', sm: '32px', md: '42px', lg: '66px' },
-    maxWidth: { xs: '90%', sm: '600px', md: '800px', lg: '1000px' },
-    // fontSize: { xs: '23px', sm: '32px', md: '42px', lg: '66px' },
-    // maxWidth: { xs: '90%', sm: '450px', md: '600px', lg: '1000px' },
+    maxWidth: '1000px',
     fontWeight: 600,
     lineHeight: 1.2,
     color: '#0B395A',
@@ -332,7 +327,7 @@ const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
   titleStyle: {
     fontWeight: 600,
     color: '#0B395A',
-    fontSize: { xs: '18px', sm: '22px', md: '26px', lg: '36px' },
+    fontSize: 'clamp(18px, 5vw, 36px)',
     textAlign: 'center',
     width: { xs: '85%', sm: '80%', lg: '100%' },
   },
@@ -372,8 +367,10 @@ const OUT_SOURCING_SERVICES_STYLE = {
   titleStyle: {
     mx: 'auto',
     width: '95%',
+    // width: '95%',
     fontSize: 'clamp(23px, 5vw, 52px)',
-    maxWidth: { xs: '90%', sm: '600px', md: '1000px', lg: '1100px' },
+    maxWidth: '1250px',
+    // maxWidth: { xs: '90%', sm: '600px', md: '1000px', lg: '1100px' },
     textAlign: 'center',
     color: '#0B395A',
     fontWeight: 600,
@@ -383,11 +380,8 @@ const OUT_SOURCING_SERVICES_STYLE = {
     width: { xs: '90%', md: '100%' },
     display: 'flex',
     flexDirection: 'column',
-    // alignItems: 'flex-end',
-    justifyContent: { xs: 'start', md: 'flex-end' },
-    // maxWidth: { xs: '420px', md: '591px' },
-    minHeight: { xs: '340px', md: '440px', lg: '525px' },
-    // maxHeight: '540px',
+    justifyContent: { xs: 'start', md: 'space-between', lg: 'space-between' },
+    minHeight: { xs: '340px', md: '440px', lg: '540px' },
     background:
       'linear-gradient(170deg, rgba(0, 28, 99, 1) 25%, rgba(4, 16, 44, 1) 100%)',
     borderRadius: { xs: '40px', lg: '50px' },
@@ -399,18 +393,14 @@ const OUT_SOURCING_SERVICES_STYLE = {
     },
   },
   cardTitleStyle: {
-    // maxWidth: '380px',
-    display: 'flex',
-    alignItems: 'center',
     fontSize: 'clamp(20px, 2.3vw, 32px)',
-    minHeight: 'clamp(64px, 6vw, 105px)',
-    // fontSize: { xs: '16px', sm: '19px', md: '28px', lg: '34px' },
+    minHeight: 'clamp(78px, 6vw, 105px)',
     fontWeight: 600,
     color: '#fff',
+    mb: 0.5,
   },
   descriptionStyle: {
     fontSize: 'clamp(14px, 1.8vw, 20px)',
-    // fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
     fontWeight: 400,
     color: '#fff',
   },
@@ -418,7 +408,6 @@ const OUT_SOURCING_SERVICES_STYLE = {
     mx: 'auto',
     width: '100%',
     maxWidth: maxWidth,
-    maxHeight: '203px',
   }),
 };
 
@@ -493,9 +482,6 @@ const COMPANIES_TRUST_STYLE = {
     fontWeight: 500,
     color: '#111845',
     minHeight: '25px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     '@media(min-width: 0px) and (max-width: 383px)': {
       minHeight: '50px',
     },
@@ -505,9 +491,43 @@ const COMPANIES_TRUST_STYLE = {
     fontWeight: 400,
     color: '#57585C',
     minHeight: '85px',
-    '@media(min-width: 0px) and (max-width: 424px)': {
-      // minHeight: '120px',
-    },
+  },
+};
+
+const DASHBOARD_HERO_STYLE = {
+  mainBoxStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    gap: 4,
+    px: 3,
+  },
+  titleStyle: {
+    mx: 'auto',
+    width: '95%',
+    fontSize: 'clamp(23px, 5vw, 52px)',
+    maxWidth: '1000px',
+    fontWeight: 600,
+    color: '#222324',
+  },
+  imageBoxStyle: {
+    mx: 'auto',
+    width: 'auto',
+    backgroundColor: 'rgba(130, 141, 215, 0.44)',
+    display: 'flex',
+    justifyContent: 'center',
+    borderRadius: { xs: '15px', sm: '26px 26px 12px 12px' },
+    px: { xs: 1, sm: 1.5 },
+    pt: { xs: 2, sm: 3 },
+    boxShadow: '-5px 4px 59.8px rgba(24, 84, 153, 0.3)',
+  },
+  imageStyle: {
+    width: '100%',
+    mx: 'auto',
+    maxWidth: '1082px',
+    height: 'auto',
+    display: 'block',
   },
 };
 
@@ -519,4 +539,5 @@ export {
   RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
   OUT_SOURCING_SERVICES_STYLE,
   COMPANIES_TRUST_STYLE,
+  DASHBOARD_HERO_STYLE,
 };

@@ -206,47 +206,45 @@ export const COUNTRY = [
       cards: [
         {
           title: 'Consulting & IT Services Firms',
-          image:
-            '/images/country/companies-trust/01.svg',
+          image: '/images/country/companies-trust/01.svg',
           description:
             'IT staffing solutions in Saudi Arabia help firms scale faster. Add skilled professionals to meet project deadlines without holding up client delivery.',
         },
         {
           title: 'Tech Startups',
-          image:
-            '/images/country/companies-trust/02.svg',
+          image: '/images/country/companies-trust/02.svg',
           description:
             'With a solid talent outsourcing partner in Saudi Arabia, you stay lean, move fast, and launch new features without slowing down the core vision.',
         },
         {
           title: 'Small & Medium Businesses',
-          image:
-            '/images/country/companies-trust/03.svg',
+          image: '/images/country/companies-trust/03.svg',
           description:
             'Skip long hiring processes and still get qualified people who help your team do more, faster. Cost-effective staffing in Saudi Arabia cuts the wait.',
         },
         {
           title: 'Enterprises',
-          image:
-            '/images/country/companies-trust/04.svg',
+          image: '/images/country/companies-trust/04.svg',
           description:
             'Offs. It’s a shore development teams in KSA allow large companies to expand without overloading internal teamsmart way to handle growth and consistency.',
         },
         {
           title: 'Digital Marketing Agencies',
-          image:
-            '/images/country/companies-trust/05.svg',
+          image: '/images/country/companies-trust/05.svg',
           description:
             'Projects don’t stop because hiring takes too long. Our HR outsourcing company in Saudi Arabia supports tight deadlines with ready-to-go creatives and coders. ',
         },
         {
           title: 'E-commerce Brands',
-          image:
-            '/images/country/companies-trust/06.svg',
+          image: '/images/country/companies-trust/06.svg',
           description:
             'HR outsourcing in Saudi Arabia helps keep the tech side stable. Your store stays live, responsive, and well-supported even during late-night spikes.',
         },
       ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -420,37 +418,82 @@ export const COUNTRY = [
       ],
     },
     outSourcingWork: {
-      title: 'Why Our Outsourcing Services in Malaysia Work for You',
+      title: 'Why Our Outsourcing Services in Malaysia Work for You ',
       cards: [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'When projects don’t sleep, neither should your support. Tech talent hiring across Malaysia gives you consistent delivery, round-the-clock availability, and momentum that matches your working hours and pace.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
           description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+            ' Hiring remote developers in Malaysia gives you hands-on experience with the right tech stacks. It’s not just about speed, it’s about using tools that match today’s real-world projects.',
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' Need help locally but want global reach? Outsourcing services in Malaysia let you build agile teams that adjust quickly without burning resources. It’s team growth without red tape.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
           description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+            'Good work flows from good communication. Employee outsourcing in Malaysia connects you with talent who speak your language, share your timelines, and know how to keep collaboration moving.',
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            ' IT staffing solutions in Malaysia help fill project roles fast. You get the right talent without stalling delivery cycles.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            'Outsourcing partners in Malaysia let your team stay lean and dev-focused. Features ship quicker, and pivots get easier.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            'With cost-effective staffing in Malaysia, you skip overhead and scale when the workload hits, no stress.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            ' Offshore development teams in Malaysia let you expand ops without exhausting your in-house bandwidth.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            'Campaign windows are tight. Malaysia-based HR outsourcing brings you creative and tech help exactly when needed.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            'When traffic spikes, backend stability matters. HR outsourcing in Malaysia keeps your stack tight and customer-ready.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -627,32 +670,77 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'Tech teams don’t need to pause when your business keeps moving. With tech talent hiring in the UAE, you get reliable hands on deck anytime you need to deliver, fix, or build.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
           description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+            ' Remote developers for UAE companies bring in-demand skills and tools that actually work in fast-moving environments. No fluff, just smart solutions that keep up with what your team is building today.',
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' Outsourcing services in the UAE give you space to adapt. You can plug in help where needed, scale with control, and keep operations steady without overextending your team.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
           description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+            'Employee outsourcing across the UAE clicks when teams understand each other. Clear chats, shared goals, and fast feedback help you keep projects moving without losing momentum.',
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            'Need skilled help fast? IT staffing solutions in the UAE connect you with ready engineers who match the pace of your client work.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            'Growth moves fast. UAE outsourcing partners make it easier to build features and ship updates without slowing your core team down.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            'Cost-effective staffing in the UAE keeps your momentum going. Get the support you need without dragging through long hiring cycles.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            'Offshore development teams in the UAE help large companies scale projects smartly, without putting pressure on internal capacity or delivery.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            'When client deadlines close in, HR outsourcing in the UAE gets you creative and tech talent with zero lag and full focus.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            'UAE-based outsourcing helps your store run smooth. Keep systems responsive and tech covered, even when traffic hits hard.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -831,32 +919,77 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'You won’t lose hours chasing support. Tech talent hiring stays active across UK time zones, helping teams push through blockers without waiting for the next working window to open.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
           description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+            'Skilled remote developers join UK teams with zero hand-holding. They work in familiar stacks, solve problems fast, and integrate with your environment without pausing your sprint or slowing your build.',
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            'Outsourcing services offer UK companies space to grow without overbuilding. You expand when needed, combining nearby collaboration with offshore reach that adjusts to how your business scales.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
           description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+            'Employee outsourcing in the UK keeps communication clean. Teams interact smoothly, feedback flows in real time, and collaboration clicks without wasted messages or endless clarification rounds.',
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            ' Extra developers slot into live projects quickly, backed by IT staffing solutions that help UK delivery teams stay sharp.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            ' Outsourcing partners give early-stage UK teams the breathing room to build fast without deep hiring cycles or unnecessary lag.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            'Scalable support lets SMBs handle new demand confidently through cost-effective staffing available across the UK.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            ' UK-based companies keep projects moving by adding offshore development teams instead of stretching core teams thin.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            ' HR outsourcing plugs creative and tech talent into UK campaigns right when deliverables stack up.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            ' Your online store stays active during busy periods, supported by employee outsourcing designed to meet UK-level demand.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -1033,32 +1166,76 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'No need to lose momentum. Tech talent hiring in the USA connects you with teams that match your schedule and help keep projects moving without missing key hours or slowing things down overnight.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
-          description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          description: `Remote developers familiar with USA workflows bring real-time solutions, not tutorials. They know the platforms you're already using, and they help move builds faster without weighing down your internal stack.`,
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' With outsourcing services in the USA, you get full control. Local support for insight, offshore teams for scale, and a model that fits what your growth actually needs today.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
           description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+            ' Employee outsourcing in the USA makes collaboration smoother. Feedback hits clearly, updates land on time, and the workflow feels natural, especially when teams are working across locations or functions.',
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            ' Project leads fill developer gaps faster without stalling timelines, supported by smart resourcing through IT staffing solutions across the USA.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            'Founders avoid hiring drag and move quicker with lean teams, thanks to outsourcing partners working inside U.S. startup ecosystems.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            'Fast, cost-effective staffing allows SMBs to stay focused on growth while accessing skilled help across the USA without overhead stress.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            ' Large organizations scale faster by adding offshore development teams, reducing pressure on core U.S. departments without slowing delivery.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            'Campaign timelines stay tight, and creative flows better with support from HR outsourcing services available throughout the USA.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            'Platform stability matters during traffic spikes, and employee outsourcing ensures uptime and coverage across U.S. operations when sales ramp up.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -1236,32 +1413,76 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'Deadlines don’t always wait. With tech talent hiring in Oman, you gain reliable coverage across work cycles, so delivery keeps moving and your team doesn’t pause when critical tasks hit.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
-          description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          description: `Omani businesses working with remote developers benefit from engineers who know current stacks and tools. They join the workflow quickly and contribute clean, focused work where your team needs it most.`,
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' When your hiring model needs to shift, outsourcing services in Oman give you that breathing room. Local insight, global reach, and freedom to expand without adding stress to operations.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
           description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+            'Employee outsourcing in Oman isn’t just about talent. It’s about rhythm, collaboration, and fast feedback that lands clearly. That’s how teams stay sharp and projects roll forward.',
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            'IT staffing solutions help Omani firms stay on pace. Skilled devs jump in without slowing your current team or client deliverables.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            'Outsourcing partners in Oman help you build fast without hiring slow. Launch new features while staying lean and experimental.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            ' Cost-effective staffing in Oman helps teams stay flexible. You get great people without spending weeks on onboarding or paperwork.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            'With offshore development teams in Oman, enterprises expand operations without draining resources or overloading internal capacity.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            ' HR outsourcing gives Omani agencies quick access to creatives and coders who keep campaigns on track when timelines shrink.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            'Revenue uplifts need solid tech. Employee outsourcing in Oman supports your platform when speed, uptime, and response matter most.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -1439,32 +1660,75 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'You get consistent support and real-time updates from teams that move when you do. With tech talent hiring in Qatar, delivery isn’t tied to a clock. It keeps flowing.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
-          description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          description: `The right tools only matter when they’re in the right hands. Qatar-based remote developers join your stack quickly and contribute with skills that match real-world tasks, not just code lists.`,
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' You don’t always need a full team in-house. Outsourcing services in Qatar give you the freedom to scale with blended support, local for context and remote for reach.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
-          description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          description: `The best projects rely on clean communication. Employee outsourcing in Qatar means you’re not spending time translating tasks or clarifying feedback. Everyone's already on the same page.`,
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            'Projects move faster when IT staffing solutions slot into active workflows. In Qatar, that means no wait time, just engineers ready to build.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            ' Focus stays on growth, not recruitment. With outsourcing support in Qatar, your dev team scales while your roadmap stays in motion.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            ' Hiring full-time isn’t always the answer. Cost-effective staffing in Qatar lets you get quality support without long-term overhead or delay.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            ' You don’t need to stretch internal teams thin. Offshore development teams help Qatar enterprises stay agile during large-scale rollouts and growth phases.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            ' Campaign demands shift fast. HR outsourcing adds creative and technical talent to Qatari agencies right when deadlines start stacking up.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            ' Sales surges test infrastructure. Employee outsourcing in Qatar brings backend stability when your store needs to stay live and responsive.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
   {
@@ -1642,32 +1906,75 @@ export const COUNTRY = [
         {
           title: '24/7 Expert Tech Talent',
           description:
-            'Tech talent hiring in Saudi Arabia is available around the clock. You get dedicated support on your terms, no delays, just steady progress when you need it. No more waiting games, just real results every day.',
+            'Work doesn’t always follow the clock. With tech talent hiring in Canada, your team stays productive across time zones, keeping things moving without slowing internal priorities.',
           image: '/images/country/out-sourcing-work/01.svg',
           maxWidth: 361,
         },
         {
           title: 'Latest Technologies, Remotely',
-          description:
-            'You get speed, clarity, and the output that actually matters. Remote developers for Saudi companies work with updated tools and real skills. Stay ahead with people who actually know what today’s platforms require.',
+          description: `Remote developers for Canadian businesses bring skills that match real-world projects. From frameworks to cloud tools, they’re ready to jump in and start contributing where it counts.`,
           image: '/images/country/out-sourcing-work/02.svg',
           maxWidth: 383,
         },
         {
           title: 'Onshore & Offshore Flexibility',
           description:
-            'No extra pressure, just scale smart with what works. Outsourcing services in KSA built to give you options. Combine regional presence with global reach, so your team setup fits the way your business moves.',
+            ' Need to shift quickly? Outsourcing services in Canada give you local context and offshore scale, making it easier to meet demands without missing the mark.',
           image: '/images/country/out-sourcing-work/03.svg',
           maxWidth: 443,
         },
         {
           title: 'No Language Gaps, Just Teamwork',
-          description:
-            'Employee outsourcing in Saudi Arabia works. Clear communication, no confusion, and real collaboration that fits right into your day. Everyone’s on the same page, and the vibe stays strong.  ',
+          description: `Employee outsourcing in Canada makes communication natural. The team fits your workflow, so collaboration feels smooth and fast, not forced or slow.`,
           image: '/images/country/out-sourcing-work/04.svg',
           maxWidth: 361,
         },
       ],
+    },
+    companiesTrust: {
+      title: 'Who We Help - Companies That Trust Our Process',
+      cards: [
+        {
+          title: 'Consulting & IT Services Firms',
+          image: '/images/country/companies-trust/01.svg',
+          description:
+            ' IT staffing solutions in Canada offer quick access to experts who can jump into your current stack without dragging delivery off course.',
+        },
+        {
+          title: 'Tech Startups',
+          image: '/images/country/companies-trust/02.svg',
+          description:
+            ' Startups move fast. An outsourcing partner in Canada helps you build, test, and ship new updates without breaking momentum.',
+        },
+        {
+          title: 'Small & Medium Businesses',
+          image: '/images/country/companies-trust/03.svg',
+          description:
+            ' With cost-effective staffing in Canada, you can handle sudden demand or internal gaps without restarting the entire hiring cycle.',
+        },
+        {
+          title: 'Enterprises',
+          image: '/images/country/companies-trust/04.svg',
+          description:
+            'Canadian offshore development teams help manage high-volume projects while keeping your in-house crew focused on strategy and leadership.',
+        },
+        {
+          title: 'Digital Marketing Agencies',
+          image: '/images/country/companies-trust/05.svg',
+          description:
+            'When schedules shrink, HR outsourcing in Canada helps fill creative and technical roles without adding friction to your flow.',
+        },
+        {
+          title: 'E-commerce Brands',
+          image: '/images/country/companies-trust/06.svg',
+          description:
+            ' Spikes in traffic need solid support. Outsourcing in Canada helps you stay online and running smoothly, even when volume jumps.',
+        },
+      ],
+    },
+    dashboardHero: {
+      title: 'Global Talent Onboarding at Your Fingertips',
+      image: '/images/country/dashboard-hero/dashboard.png',
     },
   },
 ];
