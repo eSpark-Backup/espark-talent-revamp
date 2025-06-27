@@ -4,12 +4,11 @@ import { Box, Grid, Typography } from '@mui/material';
 import FlaxibleSlider from '../new-home/FlexibleSlider';
 
 const CompaniesTrust = ({ data }) => {
-  const { title, description, cards, styles } = data || {};
+  const { title, cards, styles } = data || {};
   const {
     mainBoxStyle,
     contentBoxStyle,
     titleStyle,
-    descriptionStyle,
     slideStyle,
     cardStyle,
     imageStyle,

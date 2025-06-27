@@ -19,8 +19,10 @@ const OutSourcingWork = ({ data }) => {
         {cards?.map(({ title, description, image, maxWidth }, index) => (
           <Grid xs={12} md={5.5} key={index}>
             <Box sx={cardStyle}>
-              <Typography sx={cardTitleStyle}>{title}</Typography>
-              <Typography sx={descriptionStyle}>{description}</Typography>
+              <Box>
+                <Typography sx={cardTitleStyle}>{title}</Typography>
+                <Typography sx={descriptionStyle}>{description}</Typography>
+              </Box>
               <Box
                 src={image}
                 component={'img'}

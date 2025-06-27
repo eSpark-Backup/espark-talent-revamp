@@ -5,6 +5,7 @@ import {
   COMPANIES_TRUST_STYLE,
   COMPARISON_TABLE_STYLE,
   COUNTRY_HERO_STYLE,
+  DASHBOARD_HERO_STYLE,
   LETS_WORK_TOGETHER_STYLE,
   OUT_SOURCING_SERVICES_STYLE,
   RIGHT_CHOICE_FOR_EMPLOYERS_STYLE,
@@ -68,6 +69,13 @@ const CountryPage = ({ data }) => {
     },
   };
 
+  const DashboardHeroData = {
+    ...data?.dashboardHero,
+    styles: {
+      ...(DASHBOARD_HERO_STYLE || {}),
+    },
+  };
+
   return (
     <Box>
       <Box
@@ -76,8 +84,8 @@ const CountryPage = ({ data }) => {
           flexDirection: 'column',
           alignItems: 'center',
           backgroundColor: 'rgba(247, 247, 249, 1)',
-          gap: { xs: 5, sm: 7, lg: 8 },
-          pb: { xs: 5, sm: 7, lg: 8 },
+          gap: { xs: 5, sm: 11, lg: 14 },
+          pb: { xs: 5, sm: 11, lg: 14 },
         }}
       >
         <DedicatedBanner data={heroSectionData} />
@@ -88,7 +96,13 @@ const CountryPage = ({ data }) => {
         <OutSourcingWork data={OutSourcingWorkData} />
         <CompaniesTrust data={CompaniesTrustData} />
       </Box>
-      <DashboardHero />
+      <Box
+        sx={{
+          backgroundColor: 'rgba(247, 247, 249, 1)',
+        }}
+      >
+        <DashboardHero data={DashboardHeroData} />
+      </Box>
     </Box>
   );
 };
