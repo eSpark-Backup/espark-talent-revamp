@@ -1,3 +1,5 @@
+import { maxWidth } from '@mui/system';
+
 const COUNTRY_HERO_STYLE = {
   mainBoxStyle: {
     width: '100%',
@@ -381,21 +383,34 @@ const OUT_SOURCING_SERVICES_STYLE = {
     width: { xs: '90%', md: '100%' },
     display: 'flex',
     flexDirection: 'column',
-    maxWidth: { xs: '420px', md: '591px' },
+    // alignItems: 'flex-end',
+    justifyContent: { xs: 'start', md: 'flex-end' },
+    // maxWidth: { xs: '420px', md: '591px' },
+    minHeight: { xs: '340px', md: '440px', lg: '525px' },
+    // maxHeight: '540px',
     background:
       'linear-gradient(170deg, rgba(0, 28, 99, 1) 25%, rgba(4, 16, 44, 1) 100%)',
-    borderRadius: { xs: '40px', md: '50px' },
+    borderRadius: { xs: '40px', lg: '50px' },
     gap: 3,
-    p: { xs: 4, md: 6 },
-    pb: { xs: 0, md: 0 },
+    p: { xs: 4, md: 5, lg: 4.5 },
+    pb: { xs: 0, md: 0, lg: 0 },
+    '@media(min-width: 1024px) and (max-width:1439px)': {
+      minHeight: '530px',
+    },
   },
   cardTitleStyle: {
-    fontSize: { xs: '16px', sm: '19px', md: '23px', lg: '30px' },
+    // maxWidth: '380px',
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 'clamp(20px, 2.3vw, 32px)',
+    minHeight: 'clamp(64px, 6vw, 105px)',
+    // fontSize: { xs: '16px', sm: '19px', md: '28px', lg: '34px' },
     fontWeight: 600,
     color: '#fff',
   },
   descriptionStyle: {
-    fontSize: { xs: '13px', sm: '14px', md: '17px', lg: '20px' },
+    fontSize: 'clamp(14px, 1.8vw, 20px)',
+    // fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
     fontWeight: 400,
     color: '#fff',
   },
@@ -403,6 +418,7 @@ const OUT_SOURCING_SERVICES_STYLE = {
     mx: 'auto',
     width: '100%',
     maxWidth: maxWidth,
+    maxHeight: '203px',
   }),
 };
 
@@ -424,7 +440,7 @@ const COMPANIES_TRUST_STYLE = {
     textAlign: 'center',
   },
   titleStyle: {
-    mx: "auto",
+    mx: 'auto',
     width: '95%',
     fontSize: 'clamp(23px, 5vw, 52px)',
     maxWidth: '1000px',
@@ -479,7 +495,7 @@ const COMPANIES_TRUST_STYLE = {
     minHeight: '25px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: "center",
+    justifyContent: 'center',
     '@media(min-width: 0px) and (max-width: 383px)': {
       minHeight: '50px',
     },
