@@ -16,6 +16,7 @@ import SalaryDataTable from './SalaryDataTable';
 import RightChoiceForEmployers from './RightChoiceForEmployers';
 import OutSourcingWork from './OutSourcingWork';
 import CompaniesTrust from './CompaniesTrust';
+import DashboardHero from './DashboardHero';
 const CountryPage = ({ data }) => {
   // Inject styles
   const heroSectionData = {
@@ -68,23 +69,26 @@ const CountryPage = ({ data }) => {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: 'rgba(247, 247, 249, 1)',
-        gap: { xs: 5, sm: 7, lg: 8 },
-        pb: { xs: 5, sm: 7, lg: 8 },
-      }}
-    >
-      <DedicatedBanner data={heroSectionData} />
-      <LetsWorkTogether data={LetsWorkTogetherData} />
-      <ComparisonTable data={ComparisonTableData} />
-      <SalaryDataTable data={SalaryDataTableData} />
-      <RightChoiceForEmployers data={RightChoiceForEmployersData} />
-      <OutSourcingWork data={OutSourcingWorkData} />
-      <CompaniesTrust data={CompaniesTrustData} />
+    <Box>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          backgroundColor: 'rgba(247, 247, 249, 1)',
+          gap: { xs: 5, sm: 7, lg: 8 },
+          pb: { xs: 5, sm: 7, lg: 8 },
+        }}
+      >
+        <DedicatedBanner data={heroSectionData} />
+        <LetsWorkTogether data={LetsWorkTogetherData} />
+        <ComparisonTable data={ComparisonTableData} />
+        <SalaryDataTable data={SalaryDataTableData} />
+        <RightChoiceForEmployers data={RightChoiceForEmployersData} />
+        <OutSourcingWork data={OutSourcingWorkData} />
+        <CompaniesTrust data={CompaniesTrustData} />
+      </Box>
+      <DashboardHero />
     </Box>
   );
 };

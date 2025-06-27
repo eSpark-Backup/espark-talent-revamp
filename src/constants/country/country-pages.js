@@ -202,51 +202,49 @@ export const COUNTRY = [
       ],
     },
     companiesTrust: {
-      title: 'Turn Your Vision into Reality with Our Expert ODC Solutions',
-      description:
-        'We combine innovation, precision, & effective strategies to deliver results that make a lasting impact.',
+      title: 'Who We Help - Companies That Trust Our Process',
       cards: [
         {
-          title: ' UI/UX Design Services',
+          title: 'Consulting & IT Services Firms',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/ui-ux-design.png',
+            '/images/country/companies-trust/01.svg',
           description:
-            'Our designers don’t just make things look good—they make them work beautifully. We create intuitive, user-centered interfaces that enhance experiences and drive results.',
+            'IT staffing solutions in Saudi Arabia help firms scale faster. Add skilled professionals to meet project deadlines without holding up client delivery.',
         },
         {
-          title: 'Custom Software Development',
+          title: 'Tech Startups',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/custom-software-development.png',
+            '/images/country/companies-trust/02.svg',
           description:
-            'From web applications to enterprise systems, we create custom software solutions built around your specific business goals, not off-the-shelf templates.',
+            'With a solid talent outsourcing partner in Saudi Arabia, you stay lean, move fast, and launch new features without slowing down the core vision.',
         },
         {
-          title: 'Mobile App Development',
+          title: 'Small & Medium Businesses',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/mobile-app-development.png',
+            '/images/country/companies-trust/03.svg',
           description:
-            'Whether you need an iOS, Android, or cross-platform app, our mobile experts design and develop user-friendly, high-performance applications that help you reach and engage your audience.',
+            'Skip long hiring processes and still get qualified people who help your team do more, faster. Cost-effective staffing in Saudi Arabia cuts the wait.',
         },
         {
-          title: 'Embedded Systems Development',
+          title: 'Enterprises',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/embedded-systems-development.png',
+            '/images/country/companies-trust/04.svg',
           description:
-            'Our embedded engineers design reliable, secure, and efficient hardware-software solutions for industries like automotive, healthcare, and IoT, helping you innovate in a connected world.',
+            'Offs. It’s a shore development teams in KSA allow large companies to expand without overloading internal teamsmart way to handle growth and consistency.',
         },
         {
-          title: 'Mechanical Design and Engineering',
+          title: 'Digital Marketing Agencies',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/mechanical-design.png',
+            '/images/country/companies-trust/05.svg',
           description:
-            'We support your hardware projects with mechanical design services, covering everything from product development to prototyping and manufacturability improvements.',
+            'Projects don’t stop because hiring takes too long. Our HR outsourcing company in Saudi Arabia supports tight deadlines with ready-to-go creatives and coders. ',
         },
         {
-          title: 'Digital Marketing & Growth Support',
+          title: 'E-commerce Brands',
           image:
-            '/images/new-home/fixed-price-projects/product-journey/digital-marketing-support.png',
+            '/images/country/companies-trust/06.svg',
           description:
-            'Beyond development, we help you launch and grow with digital marketing services including SEO, PPC, social media management, and email marketing to build your brand and generate real results.',
+            'HR outsourcing in Saudi Arabia helps keep the tech side stable. Your store stays live, responsive, and well-supported even during late-night spikes.',
         },
       ],
     },
