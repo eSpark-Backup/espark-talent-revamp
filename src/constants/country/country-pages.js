@@ -290,7 +290,7 @@ export const COUNTRY = [
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( Malaysia )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -537,7 +537,7 @@ export const COUNTRY = [
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( UAE )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -749,7 +749,7 @@ export const COUNTRY = [
     heroSection: {
       title:
         'Employee Outsourcing Company in the United Kingdom - Global or Local, Done Right!',
-      text: 'Need skilled professionals (developers, designers, and tech experts) to fuel your growth? Our employee outsourcing services in the UAE help you access the best talent quickly, all while lowering recruitment costs. As a renowned HR solutions provider in the UAE, we make scaling your workforce a hassle-free experience.',
+      text: 'Talent acquisition just got easier - hire coders, creatives, and builders in no time. Employee outsourcing services in the United Kingdom bring you skilled professionals, reduce your HR costs, and support your business growth. With your trusted HR solutions provider in the UK, your hiring process is in expert hands.',
       buttonText: 'Schedule a Call',
       link: '/book-a-demo',
     },
@@ -781,11 +781,11 @@ export const COUNTRY = [
       ],
     },
     comparisonTable: {
-      title: 'Compare: In-House Hiring (UK) VS Offshore with eSprak Talent',
+      title: 'Compare: In-House Hiring ( UK ) VS Offshore with eSprak Talent',
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( UK )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -1003,7 +1003,7 @@ export const COUNTRY = [
     },
     letsWorkTogether: {
       title: 'Businesses in the USA Let’s Work Together',
-      text: `Why Hire from Us While You’re in the USA? A benefit-driven section explaining why U.S. businesses should choose your service.  Include cards/icons with benefits like:`,
+      text: `Why Hire from Us While You’re in the USA? A benefit-driven section explaining why U.S businesses should choose your service.  Include cards/icons with benefits like:`,
       icon: '/images/new-home/offshore-development-center/doorstep/ellipse.png',
       leftDesignImage: '/images/country/lets-work/new-left.png',
       rightDesignImage: '/images/country/lets-work/new-right.png',
@@ -1029,11 +1029,11 @@ export const COUNTRY = [
       ],
     },
     comparisonTable: {
-      title: 'Compare: In-House Hiring (USA) VS Offshore with eSprak Talent',
+      title: 'Compare: In-House Hiring ( USA ) VS Offshore with eSprak Talent',
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( USA )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -1276,11 +1276,11 @@ export const COUNTRY = [
       ],
     },
     comparisonTable: {
-      title: 'Compare: In-House Hiring (Oman) VS Offshore with eSprak Talent',
+      title: 'Compare: In-House Hiring ( Oman ) VS Offshore with eSprak Talent',
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( Oman )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -1523,11 +1523,12 @@ export const COUNTRY = [
       ],
     },
     comparisonTable: {
-      title: 'Compare: In-House Hiring (Qatar) VS Offshore with eSprak Talent',
+      title:
+        'Compare: In-House Hiring ( Qatar ) VS Offshore with eSprak Talent',
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( Qatar )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
@@ -1769,11 +1770,12 @@ export const COUNTRY = [
       ],
     },
     comparisonTable: {
-      title: 'Compare: In-House Hiring (Canada) VS Offshore with eSprak Talent',
+      title:
+        'Compare: In-House Hiring ( Canada ) VS Offshore with eSprak Talent',
       text: 'A visual Comparison table showing',
       columns: [
         { label: 'Criteria' },
-        { label: 'In-House ( KSA)' },
+        { label: 'In-House ( Canada )' },
         { label: 'Offshore with Us' },
       ],
       rows: [
