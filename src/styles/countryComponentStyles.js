@@ -17,7 +17,7 @@ const COUNTRY_HERO_STYLE = {
     textAlign: 'center',
   },
   titleStyle: {
-    fontSize: 'clamp(23px, 5vw, 71px)',
+    fontSize: 'clamp(18px, 5vw, 71px)',
     width: '95%',
     maxWidth: '1480px',
     fontWeight: 600,
@@ -57,8 +57,8 @@ const LETS_WORK_TOGETHER_STYLE = {
   },
   titleStyle: {
     mx: 'auto',
-    width: { xs: '90%', sm: '80%' },
-    fontSize: 'clamp(23px, 5vw, 66px)',
+    width: { xs: '89%', sm: '80%' },
+    fontSize: { xs: 'clamp(18px, 5vw, 66px)' },
     maxWidth: '1000px',
     fontWeight: 600,
     lineHeight: 1.2,
@@ -366,11 +366,9 @@ const OUT_SOURCING_SERVICES_STYLE = {
   },
   titleStyle: {
     mx: 'auto',
-    width: '95%',
-    // width: '95%',
-    fontSize: 'clamp(23px, 5vw, 52px)',
+    width: '92%',
+    fontSize: { xs: '18px', sm: 'clamp(23px, 5vw, 52px)' },
     maxWidth: '1250px',
-    // maxWidth: { xs: '90%', sm: '600px', md: '1000px', lg: '1100px' },
     textAlign: 'center',
     color: '#0B395A',
     fontWeight: 600,
@@ -393,7 +391,7 @@ const OUT_SOURCING_SERVICES_STYLE = {
     },
   },
   cardTitleStyle: {
-    fontSize: 'clamp(20px, 2.3vw, 32px)',
+    fontSize: { xs: '17px', sm: 'clamp(20px, 2.3vw, 32px)' },
     minHeight: 'clamp(78px, 6vw, 105px)',
     fontWeight: 600,
     color: '#fff',
@@ -431,10 +429,10 @@ const COMPANIES_TRUST_STYLE = {
   titleStyle: {
     mx: 'auto',
     width: '95%',
-    fontSize: 'clamp(23px, 5vw, 52px)',
+    fontSize: { xs: '18px', sm: 'clamp(23px, 5vw, 52px)' },
     maxWidth: '1000px',
     fontWeight: 600,
-    color: '#222324',
+    color: '#0B395A',
   },
   descriptionStyle: {
     fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '20px' },
@@ -506,10 +504,10 @@ const DASHBOARD_HERO_STYLE = {
   titleStyle: {
     mx: 'auto',
     width: '95%',
-    fontSize: 'clamp(23px, 5vw, 52px)',
+    fontSize: { xs: '18px', sm: 'clamp(23px, 5vw, 52px)' },
     maxWidth: '1000px',
     fontWeight: 600,
-    color: '#222324',
+    color: '#0B395A',
   },
   imageBoxStyle: {
     mx: 'auto',
@@ -517,7 +515,7 @@ const DASHBOARD_HERO_STYLE = {
     backgroundColor: 'rgba(130, 141, 215, 0.44)',
     display: 'flex',
     justifyContent: 'center',
-    borderRadius: { xs: '15px', sm: '26px 26px 12px 12px' },
+    borderRadius: { xs: '15px 15px 0px 0px', sm: '26px 26px 0px 0px' },
     px: { xs: 1, sm: 1.5 },
     pt: { xs: 2, sm: 3 },
     boxShadow: '-5px 4px 59.8px rgba(24, 84, 153, 0.3)',

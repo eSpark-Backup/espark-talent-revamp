@@ -50,7 +50,7 @@ const LetsWorkTogether = ({ data }) => {
           <Box sx={itemBoxStyle}>
             <Grid container justifyContent={'center'} sx={gridContainerStyle}>
               {items?.map(({ text }, index) => (
-                <Grid xs={10} sm={5.2} md={3.6} lg={3.7} key={index}>
+                <Grid item xs={10} sm={5.2} md={3.6} lg={3.7} key={index}>
                   <Box sx={cardStyle}>
                     <Box sx={innerCardStyle}>
                       <Box component={'img'} sx={ellipseStyle} src={icon} />

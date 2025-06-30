@@ -17,7 +17,7 @@ const OutSourcingWork = ({ data }) => {
       <Typography sx={titleStyle}>{title}</Typography>
       <Grid container gap={1.5} justifyContent={'center'} maxWidth={'1300px'}>
         {cards?.map(({ title, description, image, maxWidth }, index) => (
-          <Grid xs={12} md={5.5} key={index}>
+          <Grid item xs={12} md={5.5} key={index}>
             <Box sx={cardStyle}>
               <Box>
                 <Typography sx={cardTitleStyle}>{title}</Typography>
