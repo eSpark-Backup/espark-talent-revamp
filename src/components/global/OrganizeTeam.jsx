@@ -17,7 +17,7 @@ const OrganizeTeam = ({ data }) => {
 
   return (
     <Box sx={mainBoxStyle}>
-      <Typography sx={titleStyle}>
+      <Box sx={titleStyle}>
         {title_1}
         <Box sx={titleAndImagesBoxStyle}>
           <Box sx={imagesBoxStyle}>
@@ -27,7 +27,7 @@ const OrganizeTeam = ({ data }) => {
           </Box>
           {title_2}
         </Box>
-      </Typography>
+      </Box>
       <Typography sx={textStyle}>{text}</Typography>
       <Button sx={buttonStyle} onClick={() => window?.open(link, '_blank')}>
         {buttonText}
