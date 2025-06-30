@@ -64,7 +64,7 @@ export const COUNTRY = [
           label: 'Software Developer',
           country_salary: '6,000',
           usd_salary: '$2,000',
-          savings: '-25.02%',
+          savings: '0%',
         },
         {
           label: 'Frontend Developer',
