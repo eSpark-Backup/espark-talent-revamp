@@ -25,9 +25,9 @@ const COUNTRY_HERO_STYLE = {
     color: '#0B395A',
   },
   textStyle: {
-    width: { xs: '90%', sm: '100%' },
-    maxWidth: { xs: '100%', sm: '90%', md: '740px', lg: '1270px' },
-    fontSize: { xs: '14px', sm: '16px', md: '18px', lg: '22px' },
+    width: { xs: '90%' },
+    fontSize: 'clamp(14px, 5vw, 22px)',
+    maxWidth: '1270px',
     color: '#26292B',
   },
   buttonStyle: {
@@ -68,7 +68,7 @@ const LETS_WORK_TOGETHER_STYLE = {
   textStyle: {
     mx: 'auto',
     width: { xs: '90%', sm: '100%' },
-    maxWidth: { xs: '100%', sm: '80%', md: '740px', lg: '1270px' },
+    maxWidth: { xs: '100%', sm: '80%', md: '740px', lg: '1350px' },
     fontSize: { xs: '14px', sm: '16px', md: '20px', lg: '29px' },
     color: '#29292A',
     textAlign: 'center',
@@ -187,7 +187,7 @@ const LETS_WORK_TOGETHER_STYLE = {
     fontWeight: 500,
     color: '#111845',
     textAlign: 'center',
-    fontSize: { xs: 'clamp(14px, 1.3vw, 21px)' },
+    fontSize: { xs: 'clamp(14px, 1.3vw, 20px)' },
     '@media(max-width:1023px)': {
       width: 'calc(90% - 28px)',
     },
@@ -349,7 +349,7 @@ const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
   },
   imageStyle: { width: { xs: '45px', md: '58px' }, height: 'auto' },
   cardTitleStyle: {
-    fontSize: { xs: 'clamp(15px, 1.4vw, 20px)' },
+    fontSize: { xs: 'clamp(15px, 1.4vw, 18px)' },
     fontWeight: 500,
     color: 'rgba(11, 57, 90, 1)',
   },
