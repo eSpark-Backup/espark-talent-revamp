@@ -22,6 +22,7 @@ import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';
+import Link from 'next/link';
 
 const HomeTop = () => {
   return (
@@ -69,7 +70,7 @@ const HomeTop = () => {
             Test Link (Click Me)
           </Link>
         </Box>
-        <GlobalTeams data={GLOBAL_TEAMS} />
+        {/* <GlobalTeams data={GLOBAL_TEAMS} /> */}
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />
       </Box>
