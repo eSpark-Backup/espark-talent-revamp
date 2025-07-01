@@ -37,7 +37,7 @@ const GlobalTeams = ({ data }) => {
         onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
         onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}
       >
-        {showSwiper && (
+        {/* {showSwiper && (
           <Swiper
             modules={[Autoplay]}
             spaceBetween={30}
@@ -56,12 +56,12 @@ const GlobalTeams = ({ data }) => {
                 spaceBetween: 30,
               },
             }}
-          >
+          > */}
             {slides?.map((slide, i) => (
-              <SwiperSlide
-                key={i}
-                style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
-              >
+              // <SwiperSlide
+              //   key={i}
+              //   style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+              // >
                 <Link
                   href={slide?.link}
                   passHref
@@ -112,10 +112,10 @@ const GlobalTeams = ({ data }) => {
                     </Box>
                   </Box>
                 </Link>
-              </SwiperSlide>
+              // </SwiperSlide>
             ))}
-          </Swiper>
-        )}
+          {/* </Swiper>
+        )} */}
       </Box>
     );
   };
