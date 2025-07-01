@@ -41,9 +41,9 @@ export default async function RootLayout({ children }) {
                   <AllpagesHeader />
                   {children}
                   <Footer data={FOOTER_DATA} />
-                  {/* <GoogleTagManager gtmId="GTM-5JWLG8J2" />
+                  <GoogleTagManager gtmId="GTM-5JWLG8J2" />
                   <GoogleTagManager gtmId="G-N43EVHZHXM" />
-                  <GoogleTag gtmId="G-N43EVHZHXM" /> */}
+                  <GoogleTag gtmId="G-N43EVHZHXM" />
                 </Loading>
               </ThemeProvider>
             </ToastProvider>
