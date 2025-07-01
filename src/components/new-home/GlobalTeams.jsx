@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
@@ -40,16 +41,24 @@ const GlobalTeams = ({ data }) => {
         >
           {slides?.map((slide, i) => (
             <SwiperSlide key={i} style={swiperSlideStyle}>
-              <Box
-                component="img"
-                src={slide?.image}
-                alt={`logo-${i}`}
-                sx={slideImageStyle}
-              />
-              <Box sx={flagBoxStyle}>
-                <Box component={'img'} src={slide?.flag} sx={flagImageStyle} />
-                <Typography sx={countryTextStyle}>{slide?.country}</Typography>
-              </Box>
+              <Link href={slide?.link} style={{ textDecoration: 'none' }}>
+                <Box
+                  component="img"
+                  src={slide?.image}
+                  alt={`logo-${i}`}
+                  sx={slideImageStyle}
+                />
+                <Box sx={flagBoxStyle}>
+                  <Box
+                    component={'img'}
+                    src={slide?.flag}
+                    sx={flagImageStyle}
+                  />
+                  <Typography sx={countryTextStyle}>
+                    {slide?.country}
+                  </Typography>
+                </Box>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
