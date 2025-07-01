@@ -22,6 +22,7 @@ import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';
+import Link from 'next/link';
 
 const HomeTop = () => {
   return (
