@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
@@ -10,7 +10,6 @@ import Image from 'next/image';
 
 const GlobalTeams = ({ data }) => {
   const swiperRef = useRef(null);
-  const [showSwiper, setShowSwiper] = useState(false);
   const { title, text, slides, styles } = data || {};
 
   const {
@@ -23,11 +22,7 @@ const GlobalTeams = ({ data }) => {
     flagImageStyle,
     countryTextStyle,
   } = styles || {};
-  
-  useEffect(() => {
-    setShowSwiper(true);
-  }, []);
-  
+
   const BreakBorderSlider = () => {
     return (
       <Box
@@ -57,64 +52,70 @@ const GlobalTeams = ({ data }) => {
               },
             }}
           > */}
-            {slides?.map((slide, i) => (
-              // <SwiperSlide
-              //   key={i}
-              //   style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
-              // >
-                <Link
-                  href={slide?.link}
-                  passHref
+        {slides?.map((slide, i) => (
+          // <SwiperSlide
+          //   key={i}
+          //   style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+          // >
+          <Link
+            href={slide?.link}
+            style={{
+              border: '2px solid red',
+              display: 'block',
+              textDecoration: 'none',
+              zIndex: 10,
+              position: 'relative',
+            }}
+          >
+            <Box sx={slideImageStyle}>
+              <Image
+                src={slide?.image}
+                alt={`logo-${i}`}
+                width={297}
+                height={407}
+                placeholder="blur"
+                priority
+                style={{
+                  objectFit: 'cover',
+                  borderRadius: '30px',
+                  display: 'block',
+                  margin: '0 auto',
+                  zIndex: 1,
+                  position: 'relative',
+                  pointerEvents: 'none',
+                }}
+              />
+
+              <Box sx={flagBoxStyle} style={{ pointerEvents: 'none' }}>
+                <Box
+                  sx={flagImageStyle}
                   style={{
-                    border: '2px solid red',
-                    display: 'block',
-                    textDecoration: 'none',
-                    zIndex: 10,
                     position: 'relative',
+                    width: '32px',
+                    height: '32px',
+                    pointerEvents: 'none',
                   }}
                 >
-                  <Box sx={slideImageStyle}>
-                    <Image
-                      src={slide?.image}
-                      alt={`logo-${i}`}
-                      width={297}
-                      height={407}
-                      placeholder="blur"
-                      priority
-                      style={{
-                        objectFit: 'cover',
-                        borderRadius: '30px',
-                        display: 'block',
-                        margin: '0 auto',
-                        zIndex: 1,
-                        position: 'relative',
-                      }}
-                    />
+                  <Image
+                    src={slide?.flag}
+                    alt={`flag-${i}`}
+                    fill
+                    placeholder="blur"
+                    priority
+                    style={{
+                      objectFit: 'cover',
+                      borderRadius: '100%',
+                    }}
+                  />
+                </Box>
+                <Typography sx={countryTextStyle}>{slide?.country}</Typography>
+              </Box>
+            </Box>
+          </Link>
 
-                    <Box sx={flagBoxStyle}>
-                      <Box sx={flagImageStyle}>
-                        <Image
-                          src={slide?.flag}
-                          alt={`flag-${i}`}
-                          fill
-                          placeholder="blur"
-                          priority
-                          style={{
-                            objectFit: 'cover',
-                            borderRadius: '100%',
-                            zIndex: 2,
-                          }}
-                        />
-                      </Box>
-                      <Typography sx={countryTextStyle}>
-                        {slide?.country}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Link>
-              // </SwiperSlide>
-            ))}
-          {/* </Swiper>
+          // </SwiperSlide>
+        ))}
+        {/* </Swiper>
         )} */}
       </Box>
     );
