@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
@@ -7,6 +8,7 @@ import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 
 const GlobalTeams = ({ data }) => {
+  const swiperRef = useRef(null);
   const { title, text, slides, styles } = data || {};
 
   const {
@@ -22,14 +24,21 @@ const GlobalTeams = ({ data }) => {
 
   const BreakBorderSlider = () => {
     return (
-      <Box maxWidth={1400} mx="auto" my={3}>
+      <Box
+        maxWidth={1400}
+        mx="auto"
+        my={3}
+        onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
+        onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}
+      >
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
-          slidesPerView={'auto'}
+          slidesPerView="auto"
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           speed={3000}
           grabCursor={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             0: {
               spaceBetween: 20,
@@ -46,12 +55,15 @@ const GlobalTeams = ({ data }) => {
                   component="img"
                   src={slide?.image}
                   alt={`logo-${i}`}
+                  loading="eager" // Preload image
                   sx={slideImageStyle}
                 />
                 <Box sx={flagBoxStyle}>
                   <Box
-                    component={'img'}
+                    component="img"
                     src={slide?.flag}
+                    alt={`flag-${i}`}
+                    loading="eager" // Preload flag
                     sx={flagImageStyle}
                   />
                   <Typography sx={countryTextStyle}>
