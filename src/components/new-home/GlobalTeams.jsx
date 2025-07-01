@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
@@ -10,6 +10,7 @@ import Image from 'next/image';
 
 const GlobalTeams = ({ data }) => {
   const swiperRef = useRef(null);
+  const [autoplay, setAutoplay] = useState(false);
   const { title, text, slides, styles } = data || {};
 
   const {
@@ -22,6 +23,10 @@ const GlobalTeams = ({ data }) => {
     flagImageStyle,
     countryTextStyle,
   } = styles || {};
+
+  useEffect(() => {
+    setAutoplay(true);
+  }, []);
 
   const BreakBorderSlider = () => {
     return (
@@ -36,7 +41,9 @@ const GlobalTeams = ({ data }) => {
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView="auto"
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          autoplay={
+            autoplay ? { delay: 1000, disableOnInteraction: false } : false
+          }
           speed={3000}
           grabCursor={true}
           observer={true}
@@ -59,7 +66,6 @@ const GlobalTeams = ({ data }) => {
               <Link
                 href={slide?.link}
                 passHref
-                legacyBehavior
                 style={{
                   textDecoration: 'none',
                   position: 'relative',
