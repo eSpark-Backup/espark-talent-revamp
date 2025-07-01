@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,6 +18,10 @@ const GlobalTeams = ({ data }) => {
     flagImageStyle,
     countryTextStyle,
   } = styles || {};
+  useEffect(() => {
+  console.log('Page is hydrated');
+});
+
 
   const BreakBorderSlider = () => {
     return (
@@ -97,7 +101,7 @@ const GlobalTeams = ({ data }) => {
       <Box>
         <BreakBorderSlider />
       </Box>
-      <Box>
+      {/* <Box>
         <Link
           href="/uae"
           style={{
@@ -112,7 +116,7 @@ const GlobalTeams = ({ data }) => {
         >
           Test Link (Click Me)
         </Link>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
