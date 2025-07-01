@@ -37,7 +37,7 @@ const HomeTop = () => {
           py: { xs: 3, sm: 4, md: 7 },
         }}
       > */}
-        <PricingDefference
+        {/* <PricingDefference
           data={DIFFERENCE_DATA}
           cardStyle={cardStyleForHomePage}
           titleColor={'#222324'}
@@ -48,7 +48,7 @@ const HomeTop = () => {
               backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
             },
           }}
-        />
+        /> */}
         <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
         <HomePageHiringModel data={HIRING_DATA} />
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
