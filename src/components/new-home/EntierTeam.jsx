@@ -38,6 +38,10 @@ const EntierTeam = ({ data }) => {
             <Box
               component={'img'}
               src={image}
+              loading="eager"
+              fetchPriority="high"
+              priority={true}
+              placeholder="blur"
               sx={{
                 width: 'auto',
                 height: 'auto',

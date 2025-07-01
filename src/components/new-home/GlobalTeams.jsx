@@ -55,7 +55,10 @@ const GlobalTeams = ({ data }) => {
                   component="img"
                   src={slide?.image}
                   alt={`logo-${i}`}
-                  loading="eager" // Preload image
+                  loading="eager"
+                  fetchPriority="high"
+                  priority={true}
+                  placeholder="blur"
                   sx={slideImageStyle}
                 />
                 <Box sx={flagBoxStyle}>
@@ -64,6 +67,9 @@ const GlobalTeams = ({ data }) => {
                     src={slide?.flag}
                     alt={`flag-${i}`}
                     loading="eager" // Preload flag
+                    fetchPriority="high"
+                    priority={true}
+                    placeholder="blur"
                     sx={flagImageStyle}
                   />
                   <Typography sx={countryTextStyle}>
