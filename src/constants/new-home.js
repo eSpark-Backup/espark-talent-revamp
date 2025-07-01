@@ -1456,7 +1456,7 @@ export const POWER_PROJECT_DATA = {
 export const ENTIRE_TEAM = {
   title: 'Keep track of your entire team in one place!',
   text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
-  image: '/images/new-home/entire-team/laptop.svg',
+  image: '/images/new-home/entire-team/laptop.png',
   points: [
     {
       title: 'Real-Time Hiring & Interview Updates',
