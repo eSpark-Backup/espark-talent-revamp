@@ -39,6 +39,8 @@ const GlobalTeams = ({ data }) => {
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           speed={3000}
           grabCursor={true}
+          observer={true}
+          observeParents={true}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             0: {
@@ -56,10 +58,13 @@ const GlobalTeams = ({ data }) => {
             >
               <Link
                 href={slide?.link}
+                passHref
+                legacyBehavior
                 style={{
                   textDecoration: 'none',
                   position: 'relative',
-                  zIndex: 1,
+                  zIndex: 100,
+                  pointerEvents: 'auto',
                 }}
               >
                 <Box sx={slideImageStyle}>
