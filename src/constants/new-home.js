@@ -1,3 +1,20 @@
+import usaImage from '@/assets/images/new-home/global-teams/usa.png';
+import canadaImage from '@/assets/images/new-home/global-teams/canada.png';
+import ukImage from '@/assets/images/new-home/global-teams/uk.png';
+import ksaImage from '@/assets/images/new-home/global-teams/ksa.png';
+import qatarImage from '@/assets/images/new-home/global-teams/qatar.png';
+import uaeImage from '@/assets/images/new-home/global-teams/uae.png';
+import omanImage from '@/assets/images/new-home/global-teams/oman.png';
+import malaysiaImage from '@/assets/images/new-home/global-teams/malaysia.png';
+import usaFlag from '@/assets/images/new-home/global-teams/usa-flag.png';
+import canadaFlag from '@/assets/images/new-home/global-teams/canada-flag.png';
+import ukFlag from '@/assets/images/new-home/global-teams/united-kingdom-flag.png';
+import ksaFlag from '@/assets/images/new-home/global-teams/saudi-arabia-flag.png';
+import qatarFlag from '@/assets/images/new-home/global-teams/qatar-flag.png';
+import uaeFlag from '@/assets/images/new-home/global-teams/uae-flag.png';
+import omanFlag from '@/assets/images/new-home/global-teams/oman-flag.png';
+import malaysiaFlag from '@/assets/images/new-home/global-teams/malaysia-flag.png';
+
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -1577,50 +1594,50 @@ export const GLOBAL_TEAMS = {
   slides: [
     {
       country: 'USA',
-      image: 'images/new-home/global-teams/usa.png',
-      flag: 'images/new-home/global-teams/usa-flag.png',
+      image: usaImage,
+      flag: usaFlag,
       link: '/usa',
     },
     {
       country: 'Canada',
-      image: 'images/new-home/global-teams/canada.png',
-      flag: 'images/new-home/global-teams/canada-flag.png',
+      image: canadaImage,
+      flag: canadaFlag,
       link: '/canada',
     },
     {
       country: 'United Kingdom',
-      image: 'images/new-home/global-teams/uk.png',
-      flag: 'images/new-home/global-teams/united-kingdom-flag.png',
+      image: ukImage,
+      flag: ukFlag,
       link: '/uk',
     },
     {
       country: 'Saudi Arabia',
-      image: 'images/new-home/global-teams/ksa.png',
-      flag: 'images/new-home/global-teams/saudi-arabia-flag.png',
+      image: ksaImage,
+      flag: ksaFlag,
       link: '/ksa',
     },
     {
       country: 'Qatar',
-      image: 'images/new-home/global-teams/qatar.png',
-      flag: 'images/new-home/global-teams/qatar-flag.png',
+      image: qatarImage,
+      flag: qatarFlag,
       link: '/qatar',
     },
     {
       country: 'UAE',
-      image: 'images/new-home/global-teams/uae.png',
-      flag: 'images/new-home/global-teams/uae-flag.png',
+      image: uaeImage,
+      flag: usaFlag,
       link: '/uae',
     },
     {
       country: 'Oman',
-      image: 'images/new-home/global-teams/oman.png',
-      flag: 'images/new-home/global-teams/oman-flag.png',
+      image: omanImage,
+      flag: omanFlag,
       link: '/oman',
     },
     {
       country: 'Malaysia',
-      image: 'images/new-home/global-teams/malaysia.png',
-      flag: 'images/new-home/global-teams/malaysia-flag.png',
+      image: malaysiaImage,
+      flag: malaysiaFlag,
       link: '/malaysia',
     },
   ],
@@ -1655,37 +1672,41 @@ export const GLOBAL_TEAMS = {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
+      height: '100%'
     },
     slideImageStyle: {
       width: { xs: '96%', md: 297 },
       height: { xs: 'auto', md: 407 },
-      objectFit: 'cover',
       borderRadius: '30px',
       position: 'relative',
       mx: 'auto',
+      overflow: 'hidden',
     },
+
     flagBoxStyle: {
       display: 'flex',
       alignItems: 'center',
       position: 'absolute',
-      bottom: { xs: 15, md: 20 },
+      bottom: { xs: 15, sm: 15, md: 20 },
       left: { xs: 15, md: 20 },
       gap: 1.2,
+        flexWrap: 'nowrap',
     },
     flagImageStyle: {
       width: { xs: 30, md: 45 },
       height: { xs: 30, md: 45 },
+      position: 'relative',
     },
-    countryTextStyle: {
-      fontSize: {
-        xs: '15px',
-        sm: '17px',
-        md: '19px',
-        lg: '22px',
-      },
-      fontWeight: 400,
-      color: '#fff',
-    },
+  countryTextStyle: {
+  fontSize: {
+    xs: '15px',
+    sm: '17px',
+    md: '19px',
+    lg: '22px',
+  },
+  fontWeight: 400,
+  color: '#fff',
+},
   },
 };
 
