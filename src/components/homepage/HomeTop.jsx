@@ -27,8 +27,8 @@ import Link from 'next/link';
 const HomeTop = () => {
   return (
     <>
-      {/* <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
-      <Box
+      <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
+      {/* <Box
         sx={{
           width: '100%',
           display: 'flex',
@@ -37,7 +37,7 @@ const HomeTop = () => {
           py: { xs: 3, sm: 4, md: 7 },
         }}
       > */}
-        {/* <PricingDefference
+        <PricingDefference
           data={DIFFERENCE_DATA}
           cardStyle={cardStyleForHomePage}
           titleColor={'#222324'}
@@ -48,12 +48,12 @@ const HomeTop = () => {
               backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
             },
           }}
-        /> */}
-        <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
+        />
+        {/* <HomePageExpertTeam data={EXPERT_TEAM_DATA} /> */}
         <HomePageHiringModel data={HIRING_DATA} />
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
-        <EntierTeam data={ENTIRE_TEAM} />
+        {/* <EntierTeam data={ENTIRE_TEAM} /> */}
         <Link
           href="/uae"
           style={{
