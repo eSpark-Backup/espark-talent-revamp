@@ -6,6 +6,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 const GlobalTeams = ({ data }) => {
   const swiperRef = useRef(null);
@@ -51,30 +52,40 @@ const GlobalTeams = ({ data }) => {
           {slides?.map((slide, i) => (
             <SwiperSlide key={i} style={swiperSlideStyle}>
               <Link href={slide?.link} style={{ textDecoration: 'none' }}>
-                <Box
-                  component="img"
-                  src={slide?.image}
-                  alt={`logo-${i}`}
-                  loading="eager"
-                  fetchPriority="high"
-                  priority={true}
-                  placeholder="blur"
-                  sx={slideImageStyle}
-                />
-                <Box sx={flagBoxStyle}>
-                  <Box
-                    component="img"
-                    src={slide?.flag}
-                    alt={`flag-${i}`}
-                    loading="eager" // Preload flag
-                    fetchPriority="high"
-                    priority={true}
+                <Box sx={slideImageStyle}>
+                  <Image
+                    src={slide?.image}
+                    alt={`logo-${i}`}
+                    width={297}
+                    height={407}
                     placeholder="blur"
-                    sx={flagImageStyle}
+                    priority
+                    style={{
+                      objectFit: 'cover',
+                      borderRadius: '30px',
+                      display: 'block',
+                      margin: '0 auto',
+                    }}
                   />
-                  <Typography sx={countryTextStyle}>
-                    {slide?.country}
-                  </Typography>
+
+                  <Box sx={flagBoxStyle}>
+                    <Box sx={flagImageStyle}>
+                      <Image
+                        src={slide?.flag}
+                        alt={`flag-${i}`}
+                        fill
+                        placeholder="blur"
+                        priority
+                        style={{
+                          objectFit: 'cover',
+                          borderRadius: '100%',
+                        }}
+                      />
+                    </Box>
+                    <Typography sx={countryTextStyle}>
+                      {slide?.country}
+                    </Typography>
+                  </Box>
                 </Box>
               </Link>
             </SwiperSlide>
