@@ -1,11 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { Box, Typography } from '@mui/material';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 const GlobalTeams = ({ data }) => {
@@ -32,32 +28,9 @@ const GlobalTeams = ({ data }) => {
         onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
         onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}
       >
-        {/* {showSwiper && (
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={30}
-            slidesPerView="auto"
-            autoplay={false}
-            speed={0}
-            grabCursor={true}
-            observer={true}
-            observeParents={true}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            breakpoints={{
-              0: {
-                spaceBetween: 20,
-              },
-              769: {
-                spaceBetween: 30,
-              },
-            }}
-          > */}
         {slides?.map((slide, i) => (
-          // <SwiperSlide
-          //   key={i}
-          //   style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
-          // >
           <Link
+            key={i}
             href={slide?.link}
             style={{
               border: '2px solid red',
@@ -73,7 +46,7 @@ const GlobalTeams = ({ data }) => {
                 alt={`logo-${i}`}
                 width={297}
                 height={407}
-                placeholder="blur"
+                placeholder="empty"
                 priority
                 style={{
                   objectFit: 'cover',
@@ -82,25 +55,23 @@ const GlobalTeams = ({ data }) => {
                   margin: '0 auto',
                   zIndex: 1,
                   position: 'relative',
-                  pointerEvents: 'none',
                 }}
               />
 
-              <Box sx={flagBoxStyle} style={{ pointerEvents: 'none' }}>
+              <Box sx={flagBoxStyle}>
                 <Box
                   sx={flagImageStyle}
                   style={{
                     position: 'relative',
                     width: '32px',
                     height: '32px',
-                    pointerEvents: 'none',
                   }}
                 >
                   <Image
                     src={slide?.flag}
                     alt={`flag-${i}`}
                     fill
-                    placeholder="blur"
+                    placeholder="empty"
                     priority
                     style={{
                       objectFit: 'cover',
@@ -112,11 +83,7 @@ const GlobalTeams = ({ data }) => {
               </Box>
             </Box>
           </Link>
-
-          // </SwiperSlide>
         ))}
-        {/* </Swiper>
-        )} */}
       </Box>
     );
   };
@@ -129,6 +96,22 @@ const GlobalTeams = ({ data }) => {
       </Box>
       <Box>
         <BreakBorderSlider />
+      </Box>
+      <Box>
+        <Link
+          href="/uae"
+          style={{
+            display: 'inline-block',
+            marginBottom: '20px',
+            padding: '10px 15px',
+            backgroundColor: '#0070f3',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '6px',
+          }}
+        >
+          Test Link (Click Me)
+        </Link>
       </Box>
     </Box>
   );
