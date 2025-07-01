@@ -1,11 +1,16 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import Link from 'next/link';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 const GlobalTeams = ({ data }) => {
   const swiperRef = useRef(null);
+  const [autoplay, setAutoplay] = useState(false);
   const { title, text, slides, styles } = data || {};
 
   const {
@@ -18,10 +23,10 @@ const GlobalTeams = ({ data }) => {
     flagImageStyle,
     countryTextStyle,
   } = styles || {};
-  useEffect(() => {
-  console.log('Page is hydrated');
-});
 
+  useEffect(() => {
+    setAutoplay(true);
+  }, []);
 
   const BreakBorderSlider = () => {
     return (
@@ -32,62 +37,81 @@ const GlobalTeams = ({ data }) => {
         onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
         onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}
       >
-        {slides?.map((slide, i) => (
-          <Link
-            key={i}
-            href={slide?.link}
-            style={{
-              border: '2px solid red',
-              display: 'block',
-              textDecoration: 'none',
-              zIndex: 10,
-              position: 'relative',
-            }}
-          >
-            <Box sx={slideImageStyle}>
-              <Image
-                src={slide?.image}
-                alt={`logo-${i}`}
-                width={297}
-                height={407}
-                placeholder="empty"
-                priority
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView="auto"
+          autoplay={
+            autoplay ? { delay: 1000, disableOnInteraction: false } : false
+          }
+          speed={3000}
+          grabCursor={true}
+          observer={true}
+          observeParents={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          breakpoints={{
+            0: {
+              spaceBetween: 20,
+            },
+            769: {
+              spaceBetween: 30,
+            },
+          }}
+        >
+          {slides?.map((slide, i) => (
+            <SwiperSlide
+              key={i}
+              style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+            >
+              <Link
+                href={slide?.link}
+                passHref
                 style={{
-                  objectFit: 'cover',
-                  borderRadius: '30px',
-                  display: 'block',
-                  margin: '0 auto',
-                  zIndex: 1,
+                  textDecoration: 'none',
                   position: 'relative',
+                  zIndex: 100,
+                  pointerEvents: 'auto',
                 }}
-              />
-
-              <Box sx={flagBoxStyle}>
-                <Box
-                  sx={flagImageStyle}
-                  style={{
-                    position: 'relative',
-                    width: '32px',
-                    height: '32px',
-                  }}
-                >
+              >
+                <Box sx={slideImageStyle}>
                   <Image
-                    src={slide?.flag}
-                    alt={`flag-${i}`}
-                    fill
-                    placeholder="empty"
+                    src={slide?.image}
+                    alt={`logo-${i}`}
+                    width={297}
+                    height={407}
+                    placeholder="blur"
                     priority
                     style={{
                       objectFit: 'cover',
-                      borderRadius: '100%',
+                      borderRadius: '30px',
+                      display: 'block',
+                      margin: '0 auto',
                     }}
                   />
+
+                  <Box sx={flagBoxStyle}>
+                    <Box sx={flagImageStyle}>
+                      <Image
+                        src={slide?.flag}
+                        alt={`flag-${i}`}
+                        fill
+                        placeholder="blur"
+                        priority
+                        style={{
+                          objectFit: 'cover',
+                          borderRadius: '100%',
+                        }}
+                      />
+                    </Box>
+                    <Typography sx={countryTextStyle}>
+                      {slide?.country}
+                    </Typography>
+                  </Box>
                 </Box>
-                <Typography sx={countryTextStyle}>{slide?.country}</Typography>
-              </Box>
-            </Box>
-          </Link>
-        ))}
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
     );
   };
@@ -101,22 +125,6 @@ const GlobalTeams = ({ data }) => {
       <Box>
         <BreakBorderSlider />
       </Box>
-      {/* <Box>
-        <Link
-          href="/uae"
-          style={{
-            display: 'inline-block',
-            marginBottom: '20px',
-            padding: '10px 15px',
-            backgroundColor: '#0070f3',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: '6px',
-          }}
-        >
-          Test Link (Click Me)
-        </Link>
-      </Box> */}
     </Box>
   );
 };

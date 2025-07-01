@@ -68,9 +68,9 @@ const HomeTop = () => {
         >
           Test Link (Click Me)
         </Link>
-        {/* <GlobalTeams data={GLOBAL_TEAMS} /> */}
-        {/* <TrustedPlatform data={TRUSTED_PLATFORM} />
-        <HomeBlogs /> */}
+        <GlobalTeams data={GLOBAL_TEAMS} />
+        <TrustedPlatform data={TRUSTED_PLATFORM} />
+        <HomeBlogs />
       {/* </Box> */}
     </>
   );
