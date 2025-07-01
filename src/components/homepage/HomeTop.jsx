@@ -53,6 +53,22 @@ const HomeTop = () => {
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
         <EntierTeam data={ENTIRE_TEAM} />
+        <Box>
+          <Link
+            href="/uae"
+            style={{
+              display: 'inline-block',
+              marginBottom: '20px',
+              padding: '10px 15px',
+              backgroundColor: '#0070f3',
+              color: 'white',
+              textDecoration: 'none',
+              borderRadius: '6px',
+            }}
+          >
+            Test Link (Click Me)
+          </Link>
+        </Box>
         <GlobalTeams data={GLOBAL_TEAMS} />
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />
