@@ -50,8 +50,18 @@ const GlobalTeams = ({ data }) => {
           }}
         >
           {slides?.map((slide, i) => (
-            <SwiperSlide key={i} style={swiperSlideStyle}>
-              <Link href={slide?.link} style={{ textDecoration: 'none' }}>
+            <SwiperSlide
+              key={i}
+              style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+            >
+              <Link
+                href={slide?.link}
+                style={{
+                  textDecoration: 'none',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
                 <Box sx={slideImageStyle}>
                   <Image
                     src={slide?.image}
