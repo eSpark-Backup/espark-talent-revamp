@@ -41,10 +41,8 @@ const GlobalTeams = ({ data }) => {
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView="auto"
-          autoplay={
-            autoplay ? { delay: 1000, disableOnInteraction: false } : false
-          }
-          speed={3000}
+          autoplay={false}
+          speed={0}
           grabCursor={true}
           observer={true}
           observeParents={true}
@@ -67,10 +65,11 @@ const GlobalTeams = ({ data }) => {
                 href={slide?.link}
                 passHref
                 style={{
+                  border: '2px solid red',
+                  display: 'block',
                   textDecoration: 'none',
+                  zIndex: 10,
                   position: 'relative',
-                  zIndex: 100,
-                  pointerEvents: 'auto',
                 }}
               >
                 <Box sx={slideImageStyle}>
@@ -86,6 +85,8 @@ const GlobalTeams = ({ data }) => {
                       borderRadius: '30px',
                       display: 'block',
                       margin: '0 auto',
+                      zIndex: 1,
+                      position: 'relative',
                     }}
                   />
 
@@ -100,6 +101,7 @@ const GlobalTeams = ({ data }) => {
                         style={{
                           objectFit: 'cover',
                           borderRadius: '100%',
+                          zIndex: 2,
                         }}
                       />
                     </Box>
