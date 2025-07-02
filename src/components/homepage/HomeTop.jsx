@@ -2,7 +2,7 @@ import React from 'react';
 import {
   cardStyleForHomePage,
   DIFFERENCE_DATA,
-  EMPLOYEE_HERO_DATA,
+  // EMPLOYEE_HERO_DATA,
   ENTIRE_TEAM,
   EXPERT_TEAM_DATA,
   EXPERTIES_DATA,
@@ -13,7 +13,7 @@ import {
 } from '@/constants/new-home';
 import HomePageExperties from '../new-home/HomePageExperties';
 import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
-import EmployeeBanner from '../employment/EmployeeBanner';
+// import EmployeeBanner from '../employment/EmployeeBanner';
 import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
@@ -27,7 +27,7 @@ import Link from 'next/link';
 const HomeTop = () => {
   return (
     <>
-      <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
+      {/* <EmployeeBanner data={EMPLOYEE_HERO_DATA} /> */}
       <Box
         sx={{
           width: '100%',
