@@ -225,7 +225,7 @@ export const ORGANIZE_TEAM_DATA = {
         backgroundColor: '#001C63',
         boxShadow: `
             0 4px 12px rgba(0, 0, 0, 0.3),         /* outer shadow */
-            inset -2px 2.5px 5px 2px rgba(27, 232, 208, 1)  /* inner shadow */
+           inset -2px 2.5px 12px 3px rgba(0, 255, 242, 1)  /* inner shadow */
           `,
       },
     },
