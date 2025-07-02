@@ -1672,7 +1672,7 @@ export const GLOBAL_TEAMS = {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100%'
+      height: '100%',
     },
     slideImageStyle: {
       width: { xs: '96%', md: 297 },
@@ -1690,23 +1690,23 @@ export const GLOBAL_TEAMS = {
       bottom: { xs: 15, sm: 15, md: 20 },
       left: { xs: 15, md: 20 },
       gap: 1.2,
-        flexWrap: 'nowrap',
+      flexWrap: 'nowrap',
     },
     flagImageStyle: {
       width: { xs: 30, md: 45 },
       height: { xs: 30, md: 45 },
       position: 'relative',
     },
-  countryTextStyle: {
-  fontSize: {
-    xs: '15px',
-    sm: '17px',
-    md: '19px',
-    lg: '22px',
-  },
-  fontWeight: 400,
-  color: '#fff',
-},
+    countryTextStyle: {
+      fontSize: {
+        xs: '15px',
+        sm: '17px',
+        md: '19px',
+        lg: '22px',
+      },
+      fontWeight: 400,
+      color: '#fff',
+    },
   },
 };
 
