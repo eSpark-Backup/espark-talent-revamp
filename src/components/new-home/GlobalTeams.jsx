@@ -65,12 +65,13 @@ const GlobalTeams = ({ data }) => {
             >
               <Link
                 href={slide?.link}
-                passHref
+                // passHref
+                prefetch={true}
                 style={{
                   textDecoration: 'none',
-                  position: 'relative',
-                  zIndex: 100,
-                  pointerEvents: 'auto',
+                  // position: 'relative',
+                  // zIndex: 100,
+                  // pointerEvents: 'auto',
                 }}
               >
                 <Box sx={slideImageStyle}>

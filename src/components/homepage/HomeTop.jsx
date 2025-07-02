@@ -56,6 +56,7 @@ const HomeTop = () => {
         <EntierTeam data={ENTIRE_TEAM} />
         <Link
           href="/uae"
+          prefetch={true}
           style={{
             display: 'inline-block',
             marginBottom: '20px',
