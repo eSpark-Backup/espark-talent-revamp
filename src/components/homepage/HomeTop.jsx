@@ -27,7 +27,7 @@ import Link from 'next/link';
 const HomeTop = () => {
   return (
     <>
-      {/* <EmployeeBanner data={EMPLOYEE_HERO_DATA} /> */}
+      <EmployeeBanner data={EMPLOYEE_HERO_DATA} />
       <Box
         sx={{
           width: '100%',
