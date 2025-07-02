@@ -1,23 +1,23 @@
 import React from 'react';
 import {
-  cardStyleForHomePage,
-  DIFFERENCE_DATA,
+  // cardStyleForHomePage,
+  // DIFFERENCE_DATA,
   // EMPLOYEE_HERO_DATA,
-  ENTIRE_TEAM,
-  EXPERT_TEAM_DATA,
-  EXPERTIES_DATA,
+  // ENTIRE_TEAM,
+  // EXPERT_TEAM_DATA,
+  // EXPERTIES_DATA,
   GLOBAL_TEAMS,
-  HIRING_DATA,
-  POWER_PROJECT_DATA,
+  // HIRING_DATA,
+  // POWER_PROJECT_DATA,
   TRUSTED_PLATFORM,
 } from '@/constants/new-home';
-import HomePageExperties from '../new-home/HomePageExperties';
-import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
+// import HomePageExperties from '../new-home/HomePageExperties';
+// import HomePageExpertTeam from '../new-home/HomePageExpertTeam';
 // import EmployeeBanner from '../employment/EmployeeBanner';
-import PricingDefference from '../pricing/PricingDefference';
-import HomePageHiringModel from '../new-home/HomePageHiringModel';
-import PowerProjects from '../new-home/PowerProjects';
-import EntierTeam from '../new-home/EntierTeam';
+// import PricingDefference from '../pricing/PricingDefference';
+// import HomePageHiringModel from '../new-home/HomePageHiringModel';
+// import PowerProjects from '../new-home/PowerProjects';
+// import EntierTeam from '../new-home/EntierTeam';
 import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
@@ -37,7 +37,7 @@ const HomeTop = () => {
           py: { xs: 3, sm: 4, md: 7 },
         }}
       >
-        <PricingDefference
+        {/* <PricingDefference
           data={DIFFERENCE_DATA}
           cardStyle={cardStyleForHomePage}
           titleColor={'#222324'}
@@ -53,7 +53,7 @@ const HomeTop = () => {
         <HomePageHiringModel data={HIRING_DATA} />
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
-        <EntierTeam data={ENTIRE_TEAM} />
+        <EntierTeam data={ENTIRE_TEAM} /> */}
         <Link
           href="/uae"
           prefetch={true}
