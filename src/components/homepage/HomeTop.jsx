@@ -28,7 +28,7 @@ const HomeTop = () => {
   return (
     <>
       {/* <EmployeeBanner data={EMPLOYEE_HERO_DATA} /> */}
-      {/* <Box
+      <Box
         sx={{
           width: '100%',
           display: 'flex',
@@ -36,7 +36,7 @@ const HomeTop = () => {
           gap: { xs: 4, sm: 6, md: 8, lg: 10 },
           py: { xs: 3, sm: 4, md: 7 },
         }}
-      > */}
+      >
         <PricingDefference
           data={DIFFERENCE_DATA}
           cardStyle={cardStyleForHomePage}
@@ -49,7 +49,7 @@ const HomeTop = () => {
             },
           }}
         />
-        {/* <HomePageExpertTeam data={EXPERT_TEAM_DATA} /> */}
+        <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
         <HomePageHiringModel data={HIRING_DATA} />
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
@@ -71,7 +71,7 @@ const HomeTop = () => {
         <GlobalTeams data={GLOBAL_TEAMS} />
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />
-      {/* </Box> */}
+      </Box>
     </>
   );
 };
