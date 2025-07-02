@@ -96,6 +96,7 @@ const HomePageHiringModel = ({ data }) => {
               breakpoints={{
                 0: {
                   slidesPerView: 1,
+                  spaceBetween: 20,
                 },
                 768: {
                   slidesPerView: 2,

@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 
 const DedicatedBanner = ({ data }) => {
-  const { title, text, buttonText, link, styles } = data || {};
+  const { title, text, backgroundImage, buttonText, link, styles } = data || {};
   const {
     mainBoxStyle,
     overlayImageStyle,
@@ -14,13 +14,24 @@ const DedicatedBanner = ({ data }) => {
 
   return (
     <Box sx={mainBoxStyle}>
+      {backgroundImage && (
+        <Box
+          component="img"
+          alt="Background"
+          sx={overlayImageStyle}
+          src={backgroundImage}
+        />
+      )}
       <Box
-        component="img"
-        alt="Background"
-        sx={overlayImageStyle}
-        src="/images/country/hero-section/background.png"
-      />
-      <Box sx={{ position: 'relative', zIndex: 1 }}>
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
         <Typography
           sx={titleStyle}
           dangerouslySetInnerHTML={{ __html: title }}

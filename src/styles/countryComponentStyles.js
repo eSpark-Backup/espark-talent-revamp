@@ -29,7 +29,7 @@ const COUNTRY_HERO_STYLE = {
   },
   titleStyle: {
     mx: 'auto',
-    fontSize: 'clamp(18px, 5vw, 71px)',
+    fontSize: 'clamp(20px, 5vw, 71px)',
     width: '95%',
     maxWidth: '1480px',
     fontWeight: 600,
