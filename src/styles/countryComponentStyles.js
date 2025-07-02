@@ -28,18 +28,22 @@ const COUNTRY_HERO_STYLE = {
     zIndex: 0,
   },
   titleStyle: {
+    mx: 'auto',
     fontSize: 'clamp(18px, 5vw, 71px)',
     width: '95%',
     maxWidth: '1480px',
     fontWeight: 600,
     lineHeight: { xs: 'auto', sm: 1.4 },
     color: '#0B395A',
+    mb: 3,
   },
   textStyle: {
+    mx: 'auto',
     width: { xs: '90%' },
     fontSize: { xs: '14px', sm: '16px', md: 'clamp(12px, 5vw, 22px)' },
     maxWidth: '1270px',
     color: '#26292B',
+    mb: 2,
   },
   buttonStyle: {
     mt: 2,
