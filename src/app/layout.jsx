@@ -7,10 +7,10 @@ import dynamic from 'next/dynamic';
 import theme from './theme';
 import { FOOTER_DATA } from '@/constants/global/footer';
 import { SkeletonTheme } from 'react-loading-skeleton';
-import { GoogleTagManager } from '@next/third-parties/google';
+// import { GoogleTagManager } from '@next/third-parties/google';
 import { GLOBAL_SEO } from '@/constants/seo-data';
 import { getPageSeo } from '@/sanity/sanity.quries';
-import GoogleTag from '@/components/global/Header/GoogleTag';
+// import GoogleTag from '@/components/global/Header/GoogleTag';
 import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
 import { getMetadata } from '@/components/global/seo';
@@ -41,9 +41,9 @@ export default async function RootLayout({ children }) {
                   <AllpagesHeader />
                   {children}
                   <Footer data={FOOTER_DATA} />
-                  <GoogleTagManager gtmId="GTM-5JWLG8J2" />
-                  <GoogleTagManager gtmId="G-N43EVHZHXM" />
-                  <GoogleTag gtmId="G-N43EVHZHXM" />
+                  {/* <GoogleTagManager gtmId="GTM-5JWLG8J2" /> */}
+                  {/* <GoogleTagManager gtmId="G-N43EVHZHXM" /> */}
+                  {/* <GoogleTag gtmId="G-N43EVHZHXM" /> */}
                 </Loading>
               </ThemeProvider>
             </ToastProvider>
