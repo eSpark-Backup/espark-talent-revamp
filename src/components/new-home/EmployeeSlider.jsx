@@ -7,22 +7,7 @@ import Image from 'next/image';
 const EmployeeSlider = ({ data }) => {
   const { slides, styles: styleData } = data || {};
   const { swiperSlideStyle, videoStyle } = styleData || {};
-  const duplicatedSlides = [
-    ...slides,
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-    ...duplicateSlides(slides),
-  ];
+  const duplicatedSlides = [...slides];
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -53,7 +38,7 @@ const EmployeeSlider = ({ data }) => {
               <Box key={index} className={'slide'} style={swiperSlideStyle}>
                 <Image
                   alt=""
-                  src={slide?.thumbnailUrl}
+                  src={slide?.videoUrl || slide?.thumbnailUrl}
                   width={100}
                   height={100}
                   style={videoStyle}
