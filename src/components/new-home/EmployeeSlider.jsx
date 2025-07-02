@@ -53,7 +53,7 @@ const EmployeeSlider = ({ data }) => {
               <Box key={index} className={'slide'} style={swiperSlideStyle}>
                 <Image
                   alt=""
-                  src={slide?.videoUrl || slide?.thumbnailUrl}
+                  src={slide?.thumbnailUrl}
                   width={100}
                   height={100}
                   style={videoStyle}
