@@ -49,7 +49,7 @@ const HomeTop = () => {
             },
           }}
         /> */}
-        <HomePageExpertTeam data={EXPERT_TEAM_DATA} />
+        {/* <HomePageExpertTeam data={EXPERT_TEAM_DATA} /> */}
         <HomePageHiringModel data={HIRING_DATA} />
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
