@@ -31,7 +31,7 @@ const EmployeeBanner = ({ data }) => {
   return (
     <>
       <Box sx={mainBoxStyle(bgImage)}>
-        <Box sx={innerBoxStyle}>
+        {/* <Box sx={innerBoxStyle}>
           <Box sx={contentBoxStyle}>
             <Box sx={subTitleBoxStyle}>
               <Typography
@@ -62,7 +62,7 @@ const EmployeeBanner = ({ data }) => {
           <Box sx={imageBoxStyle} id="webm-video">
             <Box component={'img'} sx={imageStyle} src={animatedGif} />
           </Box>
-        </Box>
+        </Box> */}
         <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>
           <EmployeeSlider data={EMPLOYEE_SLIDER_DATA} />
         </Box>
