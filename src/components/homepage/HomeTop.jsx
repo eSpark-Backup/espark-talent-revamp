@@ -22,7 +22,6 @@ import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';
-import Link from 'next/link';
 
 const HomeTop = () => {
   return (
@@ -54,21 +53,6 @@ const HomeTop = () => {
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
         <EntierTeam data={ENTIRE_TEAM} />
-        <Link
-          href="/uae"
-          prefetch={true}
-          style={{
-            display: 'inline-block',
-            marginBottom: '20px',
-            padding: '10px 15px',
-            backgroundColor: '#0070f3',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: '6px',
-          }}
-        >
-          Test Link (Click Me)
-        </Link>
         <GlobalTeams data={GLOBAL_TEAMS} />
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />

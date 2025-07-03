@@ -64,14 +64,10 @@ const GlobalTeams = ({ data }) => {
               style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
             >
               <Link
-                href={slide?.link}
-                // passHref
                 prefetch={true}
+                href={slide?.link}
                 style={{
                   textDecoration: 'none',
-                  // position: 'relative',
-                  // zIndex: 100,
-                  // pointerEvents: 'auto',
                 }}
               >
                 <Box sx={slideImageStyle}>
@@ -93,11 +89,11 @@ const GlobalTeams = ({ data }) => {
                   <Box sx={flagBoxStyle}>
                     <Box sx={flagImageStyle}>
                       <Image
+                        fill
+                        priority
                         src={slide?.flag}
                         alt={`flag-${i}`}
-                        fill
                         placeholder="blur"
-                        priority
                         style={{
                           objectFit: 'cover',
                           borderRadius: '100%',

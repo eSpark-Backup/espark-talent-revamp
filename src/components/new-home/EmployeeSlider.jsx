@@ -7,8 +7,24 @@ import Image from 'next/image';
 const EmployeeSlider = ({ data }) => {
   const { slides, styles: styleData } = data || {};
   const { swiperSlideStyle, videoStyle } = styleData || {};
-  const duplicatedSlides = [...slides];
   const [loading, setLoading] = useState(true);
+
+  const duplicatedSlides = [
+    ...slides,
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+    ...duplicateSlides(slides),
+  ];
 
   useEffect(() => {
     if (data) {
@@ -38,11 +54,11 @@ const EmployeeSlider = ({ data }) => {
               <Box key={index} className={'slide'} style={swiperSlideStyle}>
                 <Image
                   alt=""
-                  src={slide?.videoUrl || slide?.thumbnailUrl}
                   width={100}
                   height={100}
                   style={videoStyle}
                   priority={index === 0}
+                  src={slide?.videoUrl || slide?.thumbnailUrl}
                 />
               </Box>
             ))}
