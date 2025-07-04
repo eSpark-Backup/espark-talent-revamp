@@ -12,6 +12,7 @@ import {
   slideStyle,
   titleStyle,
 } from '@/constants/new-home';
+import Image from 'next/image';
 
 const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
   const [loading, setLoading] = useState(true);
@@ -34,7 +35,16 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
   const renderSlide = (card, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Card sx={cardStyle}>
-        <Box src={card?.icon} component={'img'} sx={imageStyle} />
+        <Box sx={imageStyle}>
+          <Image
+            width={1200}
+            height={600}
+            alt="Hero GIF"
+            src={card?.icon}
+            style={{ width: '100%', height: 'auto' }}
+            priority
+          />
+        </Box>
         <Box sx={typoBoxStyle}>
           <Typography variant="h3" sx={titleStyle}>
             {card?.title}

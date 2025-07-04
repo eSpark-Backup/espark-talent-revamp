@@ -8,6 +8,7 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 
 const EntierTeam = ({ data }) => {
@@ -33,23 +34,19 @@ const EntierTeam = ({ data }) => {
         <Typography sx={textStyle}>{text}</Typography>
       </Box>
       <Grid container pt={5} alignItems={'center'}>
-        <Grid xs={12} md={6} lg={6.5}>
+        <Grid item xs={12} md={6} lg={6.5}>
           <Box sx={imageBoxStyle}>
-            <Box
-              component={'img'}
+            <Image
+              width={1200}
+              height={600}
+              style={{ width: '100%', height: 'auto' }}
               src={image}
-              loading="eager"
-              fetchPriority="high"
-              priority={true}
-              placeholder="blur"
-              sx={{
-                width: 'auto',
-                height: 'auto',
-              }}
+              priority
+              alt=""
             />
           </Box>
         </Grid>
-        <Grid xs={12} md={6} lg={5.5}>
+        <Grid item xs={12} md={6} lg={5.5}>
           <Box sx={listBoxStyle}>
             <List>
               {points?.map((item, index) => (

@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { open } from '@/utils';
+import Image from 'next/image';
 
 const HomePageHiringModel = ({ data }) => {
   const { title, icon, items, image, styles } = data || {};
@@ -37,7 +38,16 @@ const HomePageHiringModel = ({ data }) => {
     <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
         <Box>
-          <Box component="img" src={image} sx={cardImageStyle} />
+          <Box sx={cardImageStyle}>
+            <Image
+              width={1200}
+              height={600}
+              src={image}
+              style={{ width: '100%', height: 'auto' }}
+              priority
+              alt=""
+            />
+          </Box>
           <Typography
             sx={cardHeaderStyle}
             dangerouslySetInnerHTML={{ __html: eachItem?.title }}
@@ -59,7 +69,16 @@ const HomePageHiringModel = ({ data }) => {
             sx={buttonStyle}
           >
             {eachItem?.buttonText}
-            <Box component="img" src={icon} sx={buttonBoxStyle} />
+            <Box sx={buttonBoxStyle}>
+              <Image
+                width={1200}
+                height={600}
+                src={icon}
+                style={{ width: '100%', height: 'auto' }}
+                priority
+                alt=""
+              />
+            </Box>
           </Button>
         </Box>
       </Box>
