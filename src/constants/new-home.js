@@ -1789,10 +1789,11 @@ export const TRUSTED_PLATFORM = {
       alignItems: 'center',
     },
     slideImageStyle: {
-      width: { xs: '85%', md: 183 },
+      width: { xs: '85%', sm: '100%' },
+      maxWidth: '183px',
       height: { xs: 'auto', md: 'auto' },
       objectFit: 'cover',
-      position: 'relative',
+      // position: 'relative',
       mx: 'auto',
     },
   },
