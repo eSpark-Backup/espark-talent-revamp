@@ -1,9 +1,9 @@
-import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 const TrustedPlatform = ({ data }) => {
@@ -31,7 +31,7 @@ const TrustedPlatform = ({ data }) => {
           grabCursor={true}
           breakpoints={{
             0: {
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
             769: {
               spaceBetween: 50,
@@ -41,6 +41,12 @@ const TrustedPlatform = ({ data }) => {
           {images?.map((image, i) => (
             <SwiperSlide key={i} style={swiperSlideStyle}>
               <Box sx={slideImageStyle}>
+                {/* <Box
+                  component="img"
+                  src={image}
+                  alt={`logo-${i}`}
+                  sx={slideImageStyle}
+                /> */}
                 <Image
                   width={1200}
                   height={600}
