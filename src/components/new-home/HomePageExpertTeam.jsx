@@ -11,6 +11,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 const HomePageExpertTeam = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -49,13 +50,16 @@ const HomePageExpertTeam = ({ data }) => {
         </Box>
         {item?.employees?.map((emp, empIndex) => (
           <Box key={empIndex} sx={employeeBoxStyle(empIndex)}>
-            <Box
-              component={'img'}
-              src={emp?.image || ''}
-              width={50}
-              height={50}
-              sx={imageStyle(empIndex)}
-            />
+            <Box sx={imageStyle(empIndex)}>
+              <Image
+                width={1200}
+                height={600}
+                alt="Hero GIF"
+                src={emp?.image || ''}
+                style={{ width: '100%', height: 'auto' }}
+                priority
+              />
+            </Box>
             <Box>
               <Typography sx={nameTypogrphyStyle}>{emp?.name || ''}</Typography>
               <Typography sx={positionTypographyStyle}>

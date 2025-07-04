@@ -2,6 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 import EmployeeSlider from '../new-home/EmployeeSlider';
 import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home';
+import Image from 'next/image';
 
 const EmployeeBanner = ({ data }) => {
   const {
@@ -49,9 +50,11 @@ const EmployeeBanner = ({ data }) => {
               onClick={() => window?.open(btnLink, '_blank')}
               endIcon={
                 <Box sx={endIconStyle}>
-                  <Box
-                    component={'img'}
+                  <Image
                     src="/images/header/topbar/rc-right.png"
+                    style={{ objectFit: 'contain' }}
+                    alt="icon"
+                    fill
                   />
                 </Box>
               }
@@ -60,7 +63,14 @@ const EmployeeBanner = ({ data }) => {
             </Button>
           </Box>
           <Box sx={imageBoxStyle} id="webm-video">
-            <Box component={'img'} sx={imageStyle} src={animatedGif} />
+            <Image
+              src={animatedGif}
+              style={imageStyle}
+              alt="Animated GIF"
+              width={1200}
+              height={600}
+              priority
+            />
           </Box>
         </Box>
         <Box sx={{ mt: { xs: 2.5, lg: 0 } }}>
