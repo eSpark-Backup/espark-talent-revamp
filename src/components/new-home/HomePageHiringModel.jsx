@@ -24,16 +24,6 @@ const HomePageHiringModel = ({ data }) => {
     listStyle,
     cardImageStyle,
   } = styles || {};
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (data) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
-  }, [data]);
-
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
@@ -93,56 +83,43 @@ const HomePageHiringModel = ({ data }) => {
             <Typography sx={titleStyle}>{title || ''}</Typography>
           </Box>
         )}
-        {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
+        <>
+          <Swiper
+            grabCursor={true}
+            speed={3000}
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              800: {
+                slidesPerView: 2.2,
+                spaceBetween: 25,
+              },
+              868: {
+                slidesPerView: 2.5,
+                spaceBetween: 25,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+              },
+              1440: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+              },
             }}
           >
-            <CircularProgress />
-          </Box>
-        ) : (
-          <>
-            <Swiper
-              grabCursor={true}
-              speed={3000}
-              pagination={{ clickable: true }}
-              modules={[Autoplay, Pagination]}
-              autoplay={{ delay: 1000, disableOnInteraction: false }}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                800: {
-                  slidesPerView: 2.2,
-                  spaceBetween: 25,
-                },
-                868: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 25,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 25,
-                },
-                1440: {
-                  slidesPerView: 3,
-                  spaceBetween: 35,
-                },
-              }}
-            >
-              {items?.map(renderSlide)}
-            </Swiper>
-          </>
-        )}
+            {items?.map(renderSlide)}
+          </Swiper>
+        </>
       </Box>
     </Box>
   );
