@@ -649,6 +649,9 @@ export const HIRING_DATA = {
     buttonBoxStyle: {
       ml: 1.5,
       width: { xs: '15px', sm: '16px' },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     buttonStyle: {
       width: '100%',

@@ -394,7 +394,7 @@ const OUT_SOURCING_SERVICES_STYLE = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: { xs: 'start', md: 'space-between', lg: 'space-between' },
-    minHeight: { xs: '340px', md: '475px', lg: '540px' },
+    minHeight: { xs: '340px', md: '475px', lg: '570px' },
     background:
       'linear-gradient(170deg, rgba(0, 28, 99, 1) 25%, rgba(4, 16, 44, 1) 100%)',
     borderRadius: { xs: '40px', lg: '50px' },
