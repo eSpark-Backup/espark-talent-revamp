@@ -277,11 +277,14 @@ export const EMPLOYEE_HERO_DATA = {
     },
     endIconStyle: {
       display: 'flex',
+      position: 'relative',
       alignItems: 'center',
       justifyContent: 'center',
       p: 0.5,
       backgroundColor: '#175A59',
       borderRadius: '100%',
+      width: '30px',
+      height: '30px',
       '@media(min-width:1024px) and (max-width:1249px)': {
         width: '30px',
         height: '30px',
@@ -301,8 +304,7 @@ export const EMPLOYEE_HERO_DATA = {
       },
     },
     imageStyle: {
-      position: 'relative',
-      objectFit: 'contain',
+      // objectFit: 'contain',
       width: { xs: 'auto', md: '580px', lg: '650px', xl: '704px' },
       height: { xs: 'auto', lg: 'auto', xl: '650px' },
     },
@@ -523,6 +525,8 @@ export const EXPERT_TEAM_DATA = {
     }),
     imageStyle: (empIndex) => ({
       opacity: empIndex === 0 ? 1 : empIndex === 1 ? 0.6 : 0.4,
+      width: '50px',
+      height: '50px',
     }),
     nameTypogrphyStyle: {
       fontSize: {
@@ -645,6 +649,9 @@ export const HIRING_DATA = {
     buttonBoxStyle: {
       ml: 1.5,
       width: { xs: '15px', sm: '16px' },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     buttonStyle: {
       width: '100%',
@@ -1084,110 +1091,110 @@ export const POWER_PROJECT_DATA = {
   first_text: {
     text: 'Power Your',
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
@@ -1195,110 +1202,110 @@ export const POWER_PROJECT_DATA = {
   second_text: {
     text: 'Projects with a',
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
@@ -1306,110 +1313,110 @@ export const POWER_PROJECT_DATA = {
   third_text: {
     text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
@@ -1466,6 +1473,7 @@ export const POWER_PROJECT_DATA = {
       height: { xs: '33px', lg: '36px' },
       backgroundColor: '#fff',
       borderRadius: '24px',
+      py: 1,
     },
   },
 };
@@ -1714,12 +1722,12 @@ export const TRUSTED_PLATFORM = {
   title:
     'eSpark Talent is the Global Outsourcing Platform trusted by industry leaders',
   images: [
-    'images/new-home/trusted-platform/01.png',
-    'images/new-home/trusted-platform/02.png',
-    'images/new-home/trusted-platform/03.png',
-    'images/new-home/trusted-platform/04.png',
-    'images/new-home/trusted-platform/05.png',
-    'images/new-home/trusted-platform/06.png',
+    '/images/new-home/trusted-platform/01.png',
+    '/images/new-home/trusted-platform/02.png',
+    '/images/new-home/trusted-platform/03.png',
+    '/images/new-home/trusted-platform/04.png',
+    '/images/new-home/trusted-platform/05.png',
+    '/images/new-home/trusted-platform/06.png',
   ],
   review: [
     {
@@ -1784,10 +1792,11 @@ export const TRUSTED_PLATFORM = {
       alignItems: 'center',
     },
     slideImageStyle: {
-      width: { xs: '85%', md: 183 },
+      width: { xs: '85%', sm: '100%' },
+      maxWidth: '183px',
       height: { xs: 'auto', md: 'auto' },
       objectFit: 'cover',
-      position: 'relative',
+      // position: 'relative',
       mx: 'auto',
     },
   },

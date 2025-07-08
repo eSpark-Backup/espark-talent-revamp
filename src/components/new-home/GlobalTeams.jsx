@@ -1,16 +1,13 @@
-'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import Link from 'next/link';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import Link from 'next/link';
+import 'swiper/css/autoplay';
+import 'swiper/css';
 
 const GlobalTeams = ({ data }) => {
-  const swiperRef = useRef(null);
-  const [autoplay, setAutoplay] = useState(false);
   const { title, text, slides, styles } = data || {};
 
   const {
@@ -24,38 +21,21 @@ const GlobalTeams = ({ data }) => {
     countryTextStyle,
   } = styles || {};
 
-  useEffect(() => {
-    setAutoplay(true);
-  }, []);
-
   const BreakBorderSlider = () => {
     return (
-      <Box
-        maxWidth={1400}
-        mx="auto"
-        my={3}
-        onMouseEnter={() => swiperRef.current?.swiper?.autoplay?.stop()}
-        onMouseLeave={() => swiperRef.current?.swiper?.autoplay?.start()}
-      >
+      <Box maxWidth={1400} mx="auto" my={3}>
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={30}
-          slidesPerView="auto"
-          autoplay={
-            autoplay ? { delay: 1000, disableOnInteraction: false } : false
-          }
           speed={3000}
-          grabCursor={true}
           observer={true}
+          spaceBetween={30}
+          grabCursor={true}
+          slidesPerView="auto"
           observeParents={true}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
           breakpoints={{
-            0: {
-              spaceBetween: 20,
-            },
-            769: {
-              spaceBetween: 30,
-            },
+            0: { spaceBetween: 20 },
+            769: { spaceBetween: 30 },
           }}
         >
           {slides?.map((slide, i) => (
@@ -66,9 +46,7 @@ const GlobalTeams = ({ data }) => {
               <Link
                 prefetch={true}
                 href={slide?.link}
-                style={{
-                  textDecoration: 'none',
-                }}
+                style={{ textDecoration: 'none' }}
               >
                 <Box sx={slideImageStyle}>
                   <Image

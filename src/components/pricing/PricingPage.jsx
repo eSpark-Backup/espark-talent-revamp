@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import ServiceFaq from '../service/ServiceFaq';
 import { FAQ_DATA } from '@/constants/home-page/faq-section';

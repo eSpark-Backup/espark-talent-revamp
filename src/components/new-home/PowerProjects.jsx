@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Chip, Typography } from '@mui/material';
 import { keyframes } from '@mui/system';
+import Image from 'next/image';
 
 const PowerProjects = ({ data }) => {
   const { first_text, second_text, third_text, styles } = data || {};
@@ -51,10 +52,23 @@ const PowerProjects = ({ data }) => {
                 label={
                   <Box sx={chipBoxStyle}>
                     <Box
-                      component={'img'}
-                      src={logo?.src}
-                      sx={{ width: '30px', height: 'auto' }}
-                    />
+                      sx={{
+                        width: '30px',
+                        height: '30px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Image
+                        width={1200}
+                        height={600}
+                        style={{ width: '100%', height: 'auto' }}
+                        src={logo?.src}
+                        priority
+                        alt=""
+                      />
+                    </Box>
                     <Typography
                       sx={{
                         fontSize: { xs: '16px', md: '20px' },

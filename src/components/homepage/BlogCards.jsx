@@ -153,7 +153,16 @@ const BlogCards = ({ data }) => {
               my: 0,
             }}
           >
-            <Box component={'img'} src="/images/no_data.png" />
+            <Box>
+              <Image
+                width={1200}
+                height={600}
+                style={{ width: '100%', height: 'auto' }}
+                src={'/images/no_data.png'}
+                priority
+                alt=""
+              />
+            </Box>
           </Box>
         ) : (
           <>
