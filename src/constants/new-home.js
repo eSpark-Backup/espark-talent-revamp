@@ -11,7 +11,6 @@ import canadaFlag from '@/assets/images/new-home/global-teams/canada-flag.png';
 import ukFlag from '@/assets/images/new-home/global-teams/united-kingdom-flag.png';
 import ksaFlag from '@/assets/images/new-home/global-teams/saudi-arabia-flag.png';
 import qatarFlag from '@/assets/images/new-home/global-teams/qatar-flag.png';
-import uaeFlag from '@/assets/images/new-home/global-teams/uae-flag.png';
 import omanFlag from '@/assets/images/new-home/global-teams/oman-flag.png';
 import malaysiaFlag from '@/assets/images/new-home/global-teams/malaysia-flag.png';
 
@@ -1978,32 +1977,37 @@ export const EMPLOYEE_SLIDER_DATA = {
   slides: [
     {
       id: 1,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+      // videoUrl:
+      //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF1.gif',
+      thumbnailUrl: '/images/homepage/hero/compressed-gif/thmb-1.svg',
     },
     {
       id: 2,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      // videoUrl:
+      //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF2.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
     },
     {
       id: 3,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      // videoUrl:
+      //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF3.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
     },
     {
       id: 4,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      // videoUrl:
+      //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF4.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
     },
     {
       id: 5,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      // videoUrl:
+      //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF5.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
     },
   ],
