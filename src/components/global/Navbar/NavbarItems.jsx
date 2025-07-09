@@ -56,6 +56,7 @@ function NavbarItems({
             component={'img'}
             src={icon}
             sx={imageStyle(dropdownName, name)}
+            alt="ar"
           />
         )}
       </Box>

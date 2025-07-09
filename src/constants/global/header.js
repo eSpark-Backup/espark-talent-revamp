@@ -230,6 +230,8 @@ export const NAVBAR_STYLE = {
     ulStyle: {
       height: '100%',
       display: 'none',
+      minHeight: '40px',
+      whiteSpace: 'noWrap',
       '@media(min-width: 1024px)': {
         display: 'flex',
         ml: 'auto',
@@ -265,11 +267,14 @@ export const NAVBAR_STYLE = {
     },
     endIconStyle: {
       display: 'flex',
+      position: 'relative',
       alignItems: 'center',
       justifyContent: 'center',
       p: 0.5,
       backgroundColor: '#175A59',
       borderRadius: '100%',
+      width: '30px',
+      height: '30px',
       '@media(min-width:1024px) and (max-width:1249px)': {
         width: '30px',
         height: '30px',
