@@ -15,6 +15,7 @@ import AllpagesHeader from '@/components/global/Navbar/AllpagesHeader';
 import ToastProvider from '@/components/global/ToastContainer';
 import { getMetadata } from '@/components/global/seo';
 import Loading from '@/components/global/loading';
+import { Poppins } from 'next/font/google';
 
 const Footer = dynamic(() => import('@/components/global/footer/Footer'), {
   ssr: false,
@@ -28,9 +29,25 @@ const filteredData =
 
 export const metadata = getMetadata(filteredData);
 
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
+
 export default async function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins?.className}>
+      <head>
+        {/* ✅ Preload your custom font */}
+        <link
+          rel="preload"
+          href="/fonts/your-font.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <SkeletonTheme baseColor="#000" highlightColor="#000">
           <AppRouterCacheProvider>

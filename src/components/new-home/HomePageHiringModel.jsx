@@ -80,7 +80,9 @@ const HomePageHiringModel = ({ data }) => {
       <Box sx={innerBoxStyle} id="flexible-hiring-models">
         {title && (
           <Box sx={titleBoxStyle}>
-            <Typography sx={titleStyle}>{title || ''}</Typography>
+            <Typography variant="h1" sx={titleStyle}>
+              {title || ''}
+            </Typography>
           </Box>
         )}
         <>

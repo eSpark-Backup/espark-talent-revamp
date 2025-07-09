@@ -28,14 +28,26 @@ const EmployeeSlider = ({ data }) => {
       <Box className="sliderTrack">
         {duplicatedSlides?.map((slide, index) => (
           <Box key={index} className="slide" style={swiperSlideStyle}>
-            <Image
+            {/* <Image
               alt=""
               width={100}
               height={100}
               style={videoStyle}
               src={slide?.videoUrl || slide?.thumbnailUrl}
               priority
-            />
+            /> */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              width={100}
+              height={100}
+              src={slide?.videoUrl}
+              style={videoStyle} // use same styling as before
+            >
+              <source src={slide?.videoUrl} type="video/mp4" />
+            </video>
           </Box>
         ))}
       </Box>

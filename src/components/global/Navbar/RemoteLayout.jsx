@@ -69,7 +69,7 @@ const RemoteLayout = ({
           <Box sx={logoAndItemBoxStyle}>
             <Box sx={linkBoxStyle}>
               <Link href="/" style={linkStyle}>
-                <Box component={'img'} src={'/images/header/logo.png'} />
+                <Box component={'img'} src={'/images/header/logo.svg'} />
               </Link>
             </Box>
             <Box component="ul" sx={ulStyle}>
