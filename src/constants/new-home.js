@@ -1979,35 +1979,35 @@ export const EMPLOYEE_SLIDER_DATA = {
       id: 1,
       // videoUrl:
       //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
-      videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+      videoUrl: '/images/homepage/hero/compressed-gif/test.mp4',
       thumbnailUrl: '/images/homepage/hero/compressed-gif/thmb-1.svg',
     },
     {
       id: 2,
       // videoUrl:
       //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
-      videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+      videoUrl: '/images/homepage/hero/compressed-gif/test.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
     },
     {
       id: 3,
       // videoUrl:
       //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
-      videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+      videoUrl: '/images/homepage/hero/compressed-gif/test.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
     },
     {
       id: 4,
       // videoUrl:
       //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
-      videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+      videoUrl: '/images/homepage/hero/compressed-gif/test.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
     },
     {
       id: 5,
       // videoUrl:
       //   'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
-      videoUrl: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+      videoUrl: '/images/homepage/hero/compressed-gif/test.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
     },
   ],
