@@ -5,6 +5,7 @@ import DefaultNavbarMobile from './DefaultNavbarMobile';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const RemoteLayout = ({
   sticky,
@@ -69,7 +70,13 @@ const RemoteLayout = ({
           <Box sx={logoAndItemBoxStyle}>
             <Box sx={linkBoxStyle}>
               <Link href="/" style={linkStyle}>
-                <Box component={'img'} src={'/images/header/logo.png'} />
+                <Image
+                  src="/images/header/logo.svg"
+                  alt="Company logo"
+                  width={150}
+                  height={50}
+                  priority
+                />
               </Link>
             </Box>
             <Box component="ul" sx={ulStyle}>

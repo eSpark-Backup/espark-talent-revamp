@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-import Image from 'next/image';
 import { duplicateSlides } from '@/utils';
 
 const EmployeeSlider = ({ data }) => {
@@ -28,14 +27,18 @@ const EmployeeSlider = ({ data }) => {
       <Box className="sliderTrack">
         {duplicatedSlides?.map((slide, index) => (
           <Box key={index} className="slide" style={swiperSlideStyle}>
-            <Image
-              alt=""
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
               width={100}
               height={100}
+              src={slide?.videoUrl}
               style={videoStyle}
-              src={slide?.videoUrl || slide?.thumbnailUrl}
-              priority
-            />
+            >
+              <source src={slide?.videoUrl} type="video/mp4" />
+            </video>
           </Box>
         ))}
       </Box>

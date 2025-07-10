@@ -71,7 +71,7 @@ const HomePageExperties = ({ data, titleColor }) => {
                   ? service?.activeIcon
                   : service?.icon
               }
-              alt={service?.heading}
+              alt={'icon'}
               priority
             />
           </Box>

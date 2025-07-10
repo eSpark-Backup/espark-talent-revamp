@@ -1,3 +1,6 @@
+/* app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --mainColor: #029894;
   --optionalColor: #6f76a8;
@@ -11,6 +14,11 @@
   --card-heading: 22px;
   --main-heading-description: 20px;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 ::selection {
   background: #029894;
   color: #ffffff;
@@ -1965,6 +1973,8 @@ input {
   white-space: nowrap;
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .sliderTrack {
@@ -2283,6 +2293,11 @@ input {
   animation: scroll 25s linear infinite;
 }
 
+#short-slider {
+  min-height: 250px; /* Set a stable height */
+  overflow: hidden;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(1.5%);
@@ -2378,6 +2393,7 @@ input {
 .sliderContainer {
   margin: 0px auto;
   display: flex;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
   white-space: nowrap;

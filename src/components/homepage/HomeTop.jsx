@@ -44,7 +44,7 @@ const HomeTop = () => {
             '@media(min-width:1024px)': {
               backgroundSize: '100%',
               backgroundPosition: 'bottom',
-              backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
+              backgroundImage: `url(${'/images/homepage/hero/hero-image.webp'})`,
             },
           }}
         />

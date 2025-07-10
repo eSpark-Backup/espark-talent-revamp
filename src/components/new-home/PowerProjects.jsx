@@ -34,14 +34,14 @@ const PowerProjects = ({ data }) => {
       <Box sx={containerStyle(maxWidth)}>
         <Box sx={{ position: 'relative' }}>
           <Typography
-            variant="h5"
+            variant="h1"
+            component={'h1'}
             textAlign="center"
             sx={titleSyle}
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-
           <Box
             sx={logosBoxStyle(scrollDirection, scrollRight, scrollLeft, top)}
           >
