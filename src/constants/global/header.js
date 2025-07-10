@@ -244,17 +244,16 @@ export const NAVBAR_STYLE = {
     buttonStyle: {
       width: '238px',
       height: '44px',
-      background: '#029894',
+      backgroundColor: '#029894',
+      color: '#ffffff',
       justifyContent: 'space-between',
-      color: '#fff',
       pl: 3,
       pr: 1.5,
       fontSize: '17px',
       borderRadius: '36px',
       '&:hover': {
         backgroundColor: '#029894',
-        background: '#029894',
-        color: '#fff',
+        color: '#ffffff',
       },
       '@media(min-width:1024px) and (max-width:1249px)': {
         fontSize: '12px',
@@ -366,11 +365,11 @@ export const NAVBAR_STYLE = {
       height: { xs: '44px', md: '46px', lg: '48px' },
       backgroundColor: '#101828',
       borderRadius: '100px',
-      color: '#fff',
+      color: '#ffffff',
       fontSize: '20px',
       '&:hover': {
         backgroundColor: '#1c4e72',
-        color: '#fff',
+        color: '#ffffff',
       },
     },
     buttonBoxStyle: {

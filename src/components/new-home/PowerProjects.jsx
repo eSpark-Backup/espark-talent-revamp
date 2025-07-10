@@ -35,13 +35,13 @@ const PowerProjects = ({ data }) => {
         <Box sx={{ position: 'relative' }}>
           <Typography
             variant="h1"
+            component={'h1'}
             textAlign="center"
             sx={titleSyle}
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-
           <Box
             sx={logosBoxStyle(scrollDirection, scrollRight, scrollLeft, top)}
           >

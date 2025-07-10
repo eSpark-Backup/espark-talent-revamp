@@ -71,7 +71,7 @@ const Footer = ({ data }) => {
           <Typography sx={lebelStyle}>{mp?.label}</Typography>
           <Typography sx={ulStyle} component="ul">
             {mp?.label === 'Contact Us' ? (
-              <>
+              <Box component={'li'}>
                 {mp?.info?.map((_text, _textIndex) => (
                   <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
                     <Typography
@@ -85,7 +85,7 @@ const Footer = ({ data }) => {
                     />
                   </Box>
                 ))}
-              </>
+              </Box>
             ) : (
               mp?.pages?.map((_page, _pIndex) => (
                 <Typography

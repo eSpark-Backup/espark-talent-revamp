@@ -256,9 +256,9 @@ export const EMPLOYEE_HERO_DATA = {
     btnStyle: {
       width: '246px',
       height: '44px',
-      background: '#029894',
+      backgroundColor: '#029894',
+      color: '#ffffff',
       justifyContent: 'space-between',
-      color: '#fff',
       pl: 3,
       pr: 1.5,
       mt: 3,
@@ -266,8 +266,7 @@ export const EMPLOYEE_HERO_DATA = {
       borderRadius: '36px',
       '&:hover': {
         backgroundColor: '#029894',
-        background: '#029894',
-        color: '#fff',
+        color: '#ffffff',
       },
       '@media(min-width:0) and (max-width:1249px)': {
         fontSize: '12px',
