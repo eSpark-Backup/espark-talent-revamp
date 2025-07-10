@@ -7,7 +7,6 @@ import Image from 'next/image';
 const EmployeeBanner = ({ data }) => {
   const {
     title,
-    subTitle,
     description,
     bgImage,
     animatedGif,
@@ -35,12 +34,10 @@ const EmployeeBanner = ({ data }) => {
         <Box sx={innerBoxStyle}>
           <Box sx={contentBoxStyle}>
             <Box sx={subTitleBoxStyle}>
-              <Typography
-                sx={subTitleStyle}
-                dangerouslySetInnerHTML={{
-                  __html: subTitle,
-                }}
-              />
+              <Typography sx={subTitleStyle}>
+                75% of <span style={{ color: '#029894' }}>Employers</span> Face
+                Talent Shortages
+              </Typography>
               <Typography sx={titleStyle}>{title}</Typography>
             </Box>
             <Typography sx={descriptionStyle}>{description}</Typography>
