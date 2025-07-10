@@ -2,6 +2,7 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import FlaxibleSlider from './FlexibleSlider';
+import Image from 'next/image';
 const ExpertDeveloper = ({ data }) => {
   const { title, text, cards, styles, icon } = data || {};
 
@@ -42,7 +43,7 @@ const ExpertDeveloper = ({ data }) => {
         }}
       >
         <Box sx={iconStyle}>
-          <img src={icon} alt="Icon" objectFit="contain" />
+          <Image src={icon} alt="icon" objectFit="contain" />
         </Box>
         <Box sx={titleAndTextBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>

@@ -7,7 +7,6 @@ import Image from 'next/image';
 const EmployeeBanner = ({ data }) => {
   const {
     title,
-    subTitle,
     description,
     bgImage,
     animatedGif,
