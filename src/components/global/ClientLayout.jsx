@@ -1,8 +1,5 @@
-// components/global/ClientLayout.jsx
-'use client';
-
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { SkeletonTheme } from 'react-loading-skeleton';
@@ -17,22 +14,24 @@ import { FOOTER_DATA } from '@/constants/global/footer';
 
 export default function ClientLayout({ children }) {
   return (
-    <SkeletonTheme baseColor="#000" highlightColor="#000">
-      <AppRouterCacheProvider>
-        <ToastProvider>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Loading>
-              <AllpagesHeader />
-              {children}
-              <FooterClient data={FOOTER_DATA} />
-              <GoogleTagManager gtmId="GTM-5JWLG8J2" />
-              <GoogleTagManager gtmId="G-N43EVHZHXM" />
-              <GoogleTag gtmId="G-N43EVHZHXM" />
-            </Loading>
-          </ThemeProvider>
-        </ToastProvider>
-      </AppRouterCacheProvider>
-    </SkeletonTheme>
+    <div>
+      <SkeletonTheme baseColor="#000" highlightColor="#000">
+        <AppRouterCacheProvider>
+          <ToastProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <Loading>
+                <AllpagesHeader />
+                {children}
+                <FooterClient data={FOOTER_DATA} />
+                <GoogleTagManager gtmId="GTM-5JWLG8J2" />
+                <GoogleTagManager gtmId="G-N43EVHZHXM" />
+                <GoogleTag gtmId="G-N43EVHZHXM" />
+              </Loading>
+            </ThemeProvider>
+          </ToastProvider>
+        </AppRouterCacheProvider>
+      </SkeletonTheme>
+    </div>
   );
 }
