@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   cardStyleForHomePage,
@@ -18,7 +19,7 @@ import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
 import EntierTeam from '../new-home/EntierTeam';
-import GlobalTeams from '../new-home/GlobalTeams';
+// import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';

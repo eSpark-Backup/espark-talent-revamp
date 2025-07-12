@@ -25,6 +25,7 @@ const GlobalTeams = ({ data }) => {
     return (
       <Box maxWidth={1400} mx="auto" my={3}>
         <Swiper
+          ssr={false}
           modules={[Autoplay]}
           speed={3000}
           observer={true}
@@ -44,7 +45,7 @@ const GlobalTeams = ({ data }) => {
               style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
             >
               <Link
-                prefetch={false}
+                // prefetch={false}
                 href={slide?.link}
                 style={{ textDecoration: 'none' }}
               >
