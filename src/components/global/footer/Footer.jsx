@@ -76,7 +76,6 @@ const Footer = ({ data }) => {
                   <Box key={_textIndex} sx={textIconAndValueBoxStyle}>
                     <Typography
                       sx={valueStyle(_textIndex)}
-                      component="li"
                       dangerouslySetInnerHTML={{
                         __html: _text?.link
                           ? `<a href="${_text?.link}" style="text-decoration: underline; color: inherit;">${_text?.value}</a>`
