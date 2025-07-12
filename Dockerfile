@@ -5,7 +5,7 @@ ENV HUSKY=0
 WORKDIR /usr/src/app
 
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --omit=dev --silent --ignore-scripts
+RUN npm install --omit=dev --ignore-scripts
 
 COPY . .
 RUN npm run build
