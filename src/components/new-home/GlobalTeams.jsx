@@ -44,7 +44,7 @@ const GlobalTeams = ({ data }) => {
               style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
             >
               <Link
-                prefetch={true}
+                prefetch={false}
                 href={slide?.link}
                 style={{ textDecoration: 'none' }}
               >

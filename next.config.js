@@ -49,7 +49,6 @@ const nextConfig = {
       },
     ];
   },
-  swcMinify: true, // Enable SWC minification for improved performance
   reactStrictMode: true, // Enable React Strict Mode for catching potential issues
 };
 

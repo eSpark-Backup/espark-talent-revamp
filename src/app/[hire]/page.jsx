@@ -10,32 +10,31 @@ import Script from 'next/script';
 import { getHireMetadata } from '@/components/global/seo';
 import StructuredData from '@/components/global/StructuredData';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }) {
-  const slug = params.hire;
+    const { hire: slug } = await params;
   const hire = await getSingleHire(slug);
   const filteredData = hire || GLOBAL_SEO[0];
   return getHireMetadata(filteredData);
 }
 
 export default async function Page({ params }) {
-  const path = params.hire;
-  const hire = await getSingleHire(path);
-  const filteredData = hire || GLOBAL_SEO[0];
+  const { hire: slug } = await params;
 
-  const slug = params.hire;
-  const data = HIRE_DEVELOPERS?.find((item) => item?.path === slug);
-
-  if (!params || !params?.hire) {
-    return (
-      <div>
-        <NotFoundPage data={NOT_FOUND_DATA} />
-      </div>
-    );
+  if (!slug) {
+    return <NotFoundPage data={NOT_FOUND_DATA} />;
   }
+
   try {
+    const hire = await getSingleHire(slug);
+    const filteredData = hire || GLOBAL_SEO[0];
+    const data = HIRE_DEVELOPERS?.find((item) => item?.path === slug);
+
     if (!data) {
       return <NotFoundPage data={NOT_FOUND_DATA} />;
     }
+
     return (
       <>
         <StructuredData data={data.jsonLd} />
@@ -63,14 +62,12 @@ export default async function Page({ params }) {
     );
   } catch (error) {
     console.error('Error fetching data:', error);
-    return (
-      <div>
-        <NotFoundPage data={NOT_FOUND_DATA} />
-      </div>
-    );
+    return <NotFoundPage data={NOT_FOUND_DATA} />;
   }
 }
 
 Page.propTypes = {
-  params: PropTypes.object.isRequired,
+  params: PropTypes.shape({
+    hire: PropTypes.string,
+  }).isRequired,
 };
