@@ -40,12 +40,13 @@ const GlobalTeams = ({ data }) => {
           }}
         >
           {slides?.map((slide, i) => (
+            console.log("slide?.link...!...",slide?.link),
             <SwiperSlide
               key={i}
               style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
             >
               <Link
-                // prefetch={false}
+                prefetch={false}
                 href={slide?.link}
                 style={{ textDecoration: 'none' }}
               >
@@ -55,7 +56,7 @@ const GlobalTeams = ({ data }) => {
                     alt={`logo-${i}`}
                     width={297}
                     height={407}
-                    placeholder="blur"
+                    // placeholder="blur"
                     priority
                     style={{
                       objectFit: 'cover',
@@ -72,7 +73,7 @@ const GlobalTeams = ({ data }) => {
                         priority
                         src={slide?.flag}
                         alt={`flag-${i}`}
-                        placeholder="blur"
+                        // placeholder="blur"
                         style={{
                           objectFit: 'cover',
                           borderRadius: '100%',
