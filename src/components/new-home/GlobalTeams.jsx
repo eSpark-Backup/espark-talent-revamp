@@ -25,7 +25,6 @@ const GlobalTeams = ({ data }) => {
     return (
       <Box maxWidth={1400} mx="auto" my={3}>
         <Swiper
-          ssr={false}
           modules={[Autoplay]}
           speed={3000}
           observer={true}
