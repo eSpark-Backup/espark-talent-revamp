@@ -22,6 +22,7 @@ import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';
+import ClientGlobalTeams from '../new-home/ClientGlobalTeams';
 
 const HomeTop = () => {
   return (
@@ -53,7 +54,7 @@ const HomeTop = () => {
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
         <EntierTeam data={ENTIRE_TEAM} />
-        <GlobalTeams data={GLOBAL_TEAMS} />
+        <ClientGlobalTeams data={GLOBAL_TEAMS} />
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />
       </Box>
