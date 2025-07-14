@@ -15,7 +15,8 @@ const poppins = Poppins({
 
 const pathname = '/';
 const seo = await getPageSeo();
-const filteredData = seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
+const filteredData =
+  seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
 
 export const metadata = getMetadata(filteredData);
 
