@@ -38,55 +38,59 @@ const GlobalTeams = ({ data }) => {
             769: { spaceBetween: 30 },
           }}
         >
-          {slides?.map((slide, i) => (
-            console.log("slide?.link...!...",slide?.link),
-            <SwiperSlide
-              key={i}
-              style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
-            >
-              <Link
-                prefetch={false}
-                href={slide?.link}
-                style={{ textDecoration: 'none' }}
-              >
-                <Box sx={slideImageStyle}>
-                  <Image
-                    src={slide?.image}
-                    alt={`logo-${i}`}
-                    width={297}
-                    height={407}
-                    // placeholder="blur"
-                    priority
-                    style={{
-                      objectFit: 'cover',
-                      borderRadius: '30px',
-                      display: 'block',
-                      margin: '0 auto',
-                    }}
-                  />
-
-                  <Box sx={flagBoxStyle}>
-                    <Box sx={flagImageStyle}>
+          {slides?.map(
+            (slide, i) => (
+              console.log('slide?.link...!...', slide?.link),
+              (
+                <SwiperSlide
+                  key={i}
+                  style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+                >
+                  <Link
+                    prefetch={false}
+                    href={slide?.link}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Box sx={slideImageStyle}>
                       <Image
-                        fill
+                        src={slide?.image}
+                        alt={`logo-${i}`}
+                        width={297}
+                        height={407}
+                        placeholder="blur"
                         priority
-                        src={slide?.flag}
-                        alt={`flag-${i}`}
-                        // placeholder="blur"
                         style={{
                           objectFit: 'cover',
-                          borderRadius: '100%',
+                          borderRadius: '30px',
+                          display: 'block',
+                          margin: '0 auto',
                         }}
                       />
+
+                      <Box sx={flagBoxStyle}>
+                        <Box sx={flagImageStyle}>
+                          <Image
+                            fill
+                            priority
+                            src={slide?.flag}
+                            alt={`flag-${i}`}
+                            placeholder="blur"
+                            style={{
+                              objectFit: 'cover',
+                              borderRadius: '100%',
+                            }}
+                          />
+                        </Box>
+                        <Typography sx={countryTextStyle}>
+                          {slide?.country}
+                        </Typography>
+                      </Box>
                     </Box>
-                    <Typography sx={countryTextStyle}>
-                      {slide?.country}
-                    </Typography>
-                  </Box>
-                </Box>
-              </Link>
-            </SwiperSlide>
-          ))}
+                  </Link>
+                </SwiperSlide>
+              )
+            )
+          )}
         </Swiper>
       </Box>
     );

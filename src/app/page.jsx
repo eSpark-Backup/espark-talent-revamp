@@ -6,12 +6,6 @@ import ScrollToTop from '@/components/ScrollToTop';
 const Page = () => {
   return (
     <>
-      <Link href="/about">
-        <span style={{ color: 'blue', textDecoration: 'underline' }}>
-          Go to About
-        </span>
-      </Link>
-
       <ScrollToTop />
       <HomeTop />
     </>

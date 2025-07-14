@@ -3,7 +3,6 @@ import CountryPage from '@/components/country/CountryPage';
 import NotFoundPage from '@/components/global/NotFound';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 
-
 const countryModules = {
   oman: () => import('@/constants/country/oman'),
   uae: () => import('@/constants/country/uae'),
@@ -13,7 +12,6 @@ const countryModules = {
   qatar: () => import('@/constants/country/qatar'),
   malaysia: () => import('@/constants/country/malaysia'),
   ksa: () => import('@/constants/country/ksa'),
-  
 };
 
 export default async function Page({ params }) {

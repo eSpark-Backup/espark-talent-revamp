@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
 import GlobalTeams from './GlobalTeams';
 
 export default function ClientGlobalTeams({ data }) {
-  return <GlobalTeams data={data} />
+  return <GlobalTeams data={data} />;
 }

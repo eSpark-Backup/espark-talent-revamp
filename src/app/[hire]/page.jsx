@@ -13,7 +13,7 @@ import StructuredData from '@/components/global/StructuredData';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
-    const { hire: slug } = await params;
+  const { hire: slug } = await params;
   const hire = await getSingleHire(slug);
   const filteredData = hire || GLOBAL_SEO[0];
   return getHireMetadata(filteredData);
