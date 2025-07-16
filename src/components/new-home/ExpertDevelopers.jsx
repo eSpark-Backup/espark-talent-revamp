@@ -43,7 +43,7 @@ const ExpertDeveloper = ({ data }) => {
         }}
       >
         <Box sx={iconStyle}>
-          <Image src={icon} alt="icon" objectFit="contain" />
+          <Image src={icon} alt="icon" objectFit="contain" fill />
         </Box>
         <Box sx={titleAndTextBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>
