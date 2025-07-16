@@ -1,5 +1,3 @@
-import { COUNTRY } from '../country/country-pages';
-
 export const HIRE_DEVELOPERS = [
   {
     path: 'hire-remote-developers',
@@ -27010,7 +27008,6 @@ and frameworks for this technology.`,
       ],
     },
   },
-  // ...COUNTRY,
 ];
 
 // hire remote page

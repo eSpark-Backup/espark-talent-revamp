@@ -49,10 +49,6 @@ const nextConfig = {
       },
     ];
   },
-  experimental: {
-    ppr: false,
-  },
-  reactStrictMode: true, // Enable React Strict Mode for catching potential issues
 };
 
 module.exports = nextConfig;
