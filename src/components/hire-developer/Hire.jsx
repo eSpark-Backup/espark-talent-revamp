@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import CountryPage from '../country/CountryPage';
-import { countryPath } from '@/constants/country/country-pages';
 const HireDeveloper = React?.lazy(() => import('./HireDeveloper'));
 const ServiceSinglePage = React?.lazy(
   () => import('../service/ServiceSinglePage')
@@ -16,8 +14,6 @@ const Hire = ({ data, slug }) => {
     return <HireDeveloper data={data} />;
   } else if (slug === 'hire-remote-developers') {
     return <HireRemote data={data} />;
-  } else if (countryPath?.includes(slug)) {
-    return <CountryPage data={data} />;
   } else {
     return <ServiceSinglePage data={data} />;
   }
