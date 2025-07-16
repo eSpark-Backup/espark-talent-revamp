@@ -1,14 +1,17 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+'use client';
+import React, { useState } from 'react';
+import { Box, Typography, CircularProgress } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css';
 
 const GlobalTeams = ({ data }) => {
   const { title, text, slides, styles } = data || {};
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const {
     mainBoxStyle,
@@ -21,89 +24,111 @@ const GlobalTeams = ({ data }) => {
     countryTextStyle,
   } = styles || {};
 
-  const BreakBorderSlider = () => {
-    return (
-      <Box maxWidth={1400} mx="auto" my={3}>
-        <Swiper
-          modules={[Autoplay]}
-          speed={3000}
-          observer={true}
-          spaceBetween={30}
-          grabCursor={true}
-          slidesPerView="auto"
-          observeParents={true}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
-          breakpoints={{
-            0: { spaceBetween: 20 },
-            769: { spaceBetween: 30 },
-          }}
-        >
-          {slides?.map(
-            (slide, i) => (
-              console.log('slide?.link...!...', slide?.link),
-              (
-                <SwiperSlide
-                  key={i}
-                  style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
-                >
-                  <Link
-                    prefetch={false}
-                    href={slide?.link}
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <Box sx={slideImageStyle}>
-                      <Image
-                        src={slide?.image}
-                        alt={`logo-${i}`}
-                        width={297}
-                        height={407}
-                        placeholder="blur"
-                        priority
-                        style={{
-                          objectFit: 'cover',
-                          borderRadius: '30px',
-                          display: 'block',
-                          margin: '0 auto',
-                        }}
-                      />
-
-                      <Box sx={flagBoxStyle}>
-                        <Box sx={flagImageStyle}>
-                          <Image
-                            fill
-                            priority
-                            src={slide?.flag}
-                            alt={`flag-${i}`}
-                            placeholder="blur"
-                            style={{
-                              objectFit: 'cover',
-                              borderRadius: '100%',
-                            }}
-                          />
-                        </Box>
-                        <Typography sx={countryTextStyle}>
-                          {slide?.country}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Link>
-                </SwiperSlide>
-              )
-            )
-          )}
-        </Swiper>
-      </Box>
-    );
+  const handleClick = (e, link) => {
+    e.preventDefault();
+    if (!link) return;
+    setLoading(true);
+    router?.push(link);
   };
 
+  const BreakBorderSlider = () => (
+    <Box maxWidth={1400} mx="auto" my={3}>
+      <Swiper
+        modules={[Autoplay]}
+        speed={3000}
+        observer={true}
+        spaceBetween={30}
+        grabCursor={true}
+        slidesPerView="auto"
+        observeParents={true}
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
+        breakpoints={{
+          0: { spaceBetween: 20 },
+          769: { spaceBetween: 30 },
+        }}
+      >
+        {slides?.map((slide, i) => (
+          <SwiperSlide
+            key={i}
+            style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
+          >
+            <a
+              href={slide?.link || '#'}
+              onClick={(e) => handleClick(e, slide?.link)}
+              style={{ textDecoration: 'none' }}
+            >
+              <Box sx={slideImageStyle}>
+                <Image
+                  src={slide?.image}
+                  alt={`logo-${i}`}
+                  width={297}
+                  height={407}
+                  placeholder="blur"
+                  priority
+                  style={{
+                    objectFit: 'cover',
+                    borderRadius: '30px',
+                    display: 'block',
+                    margin: '0 auto',
+                  }}
+                />
+
+                <Box sx={flagBoxStyle}>
+                  <Box sx={flagImageStyle}>
+                    <Image
+                      fill
+                      priority
+                      src={slide?.flag}
+                      alt={`flag-${i}`}
+                      placeholder="blur"
+                      style={{
+                        objectFit: 'cover',
+                        borderRadius: '100%',
+                      }}
+                    />
+                  </Box>
+                  <Typography sx={countryTextStyle}>
+                    {slide?.country}
+                  </Typography>
+                </Box>
+              </Box>
+            </a>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Box>
+  );
+
   return (
-    <Box sx={mainBoxStyle}>
-      <Box>
-        <Typography sx={titleStyle}>{title}</Typography>
-        <Typography sx={textStyle}>{text}</Typography>
-      </Box>
-      <Box>
-        <BreakBorderSlider />
+    <Box sx={{ position: 'relative' }}>
+      {/* Loading Overlay */}
+      {loading && (
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(255,255,255,0.7)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 9999,
+          }}
+        >
+          <CircularProgress color="primary" size={60} />
+        </Box>
+      )}
+
+      <Box sx={mainBoxStyle}>
+        <Box>
+          <Typography sx={titleStyle}>{title}</Typography>
+          <Typography sx={textStyle}>{text}</Typography>
+        </Box>
+        <Box>
+          <BreakBorderSlider />
+        </Box>
       </Box>
     </Box>
   );

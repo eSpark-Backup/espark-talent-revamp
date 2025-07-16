@@ -61,8 +61,8 @@ const PowerProjects = ({ data }) => {
                       }}
                     >
                       <Image
-                        width={1200}
-                        height={600}
+                        width={100}
+                        height={100}
                         style={{ width: '100%', height: 'auto' }}
                         src={logo?.src}
                         priority
@@ -102,14 +102,14 @@ const PowerProjects = ({ data }) => {
         logos={second_text?.logos}
         maxWidth={{ xs: '550px', md: '800px', lg: '1150px' }}
         scrollDirection={'left'}
-        top={'82%'}
+        top={'80%'}
       />
       <RenderText
         title={third_text?.text}
         logos={third_text?.logos}
         maxWidth={'1400px'}
         scrollDirection={'right'}
-        top={{ xs: '95%', md: '82%' }}
+        top={{ xs: '95%', md: '80%' }}
       />
     </Box>
   );
