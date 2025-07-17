@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css';
-import Loading from '../global/loading';
+import GlobalTeamsLoader from '../global/GlobalTeamsLoader';
 
 const GlobalTeams = ({ data }) => {
   const { title, text, slides, styles } = data || {};
@@ -102,7 +102,6 @@ const GlobalTeams = ({ data }) => {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      {/* Loading Overlay */}
       {loading && (
         <Box
           sx={{
@@ -118,7 +117,7 @@ const GlobalTeams = ({ data }) => {
             zIndex: 9999,
           }}
         >
-          <Loading />
+          <GlobalTeamsLoader time={5000} />
         </Box>
       )}
 
