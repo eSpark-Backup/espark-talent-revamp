@@ -1,20 +1,19 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { Box, Card, Typography, CircularProgress } from '@mui/material';
+import React from 'react';
+import { Box, Card, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
 import {
   paragraphStyle,
   PricingDefferenceStyles,
   slideStyle,
   titleStyle,
 } from '@/constants/new-home';
+import Image from 'next/image';
 
 const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
-  const [loading, setLoading] = useState(true);
   const {
     cardStyle,
     imageStyle,
@@ -23,18 +22,19 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
     mainTitleStyle,
   } = PricingDefferenceStyles || {};
 
-  useEffect(() => {
-    if (data) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
-  }, [data]);
-
   const renderSlide = (card, index) => (
     <SwiperSlide key={index} style={slideStyle}>
       <Card sx={cardStyle}>
-        <Box src={card?.icon} component={'img'} sx={imageStyle} />
+        <Box sx={imageStyle}>
+          <Image
+            width={1200}
+            height={600}
+            alt="Hero GIF"
+            src={card?.icon}
+            style={{ width: '100%', height: 'auto' }}
+            priority
+          />
+        </Box>
         <Box sx={typoBoxStyle}>
           <Typography variant="h3" sx={titleStyle}>
             {card?.title}
@@ -63,18 +63,7 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
             </Typography>
           </Box>
         )}
-        {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
-            }}
-          >
-            <CircularProgress />
-          </Box>
-        ) : (
+        {
           <Swiper
             grabCursor={true}
             speed={3000}
@@ -95,7 +84,7 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
           >
             {data?.items?.map(renderSlide)}
           </Swiper>
-        )}
+        }
       </Box>
     </Box>
   );

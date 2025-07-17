@@ -2,6 +2,7 @@
 import Collapse from '@mui/material/Collapse';
 import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 function NavbarItems({
   name,
@@ -31,7 +32,7 @@ function NavbarItems({
   };
 
   return (
-    <>
+    <Box component={'li'}>
       <Box
         {...rest}
         display="flex"
@@ -52,10 +53,12 @@ function NavbarItems({
           </Typography>
         </Box>
         {collapse && (
-          <Box
-            component={'img'}
+          <Image
             src={icon}
-            sx={imageStyle(dropdownName, name)}
+            alt="ar"
+            width={12}
+            height={12}
+            style={imageStyle(dropdownName, name)}
           />
         )}
       </Box>
@@ -68,7 +71,7 @@ function NavbarItems({
           {children}
         </Collapse>
       )}
-    </>
+    </Box>
   );
 }
 

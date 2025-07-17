@@ -221,12 +221,10 @@ export const ORGANIZE_TEAM_DATA = {
       color: '#fff',
       borderRadius: '14px',
       transition: 'all 0.3s ease-in-out',
+      border: '1.65px solid rgba(0, 0, 0, 0.16)',
       '&:hover': {
         backgroundColor: '#001C63',
-        boxShadow: `
-            0 4px 12px rgba(0, 0, 0, 0.3),         /* outer shadow */
-            inset -2px 2.5px 5px 2px rgba(27, 232, 208, 1)  /* inner shadow */
-          `,
+        boxShadow: 'inset 0px 4px 4px rgba(82, 156, 251, 0.51)',
       },
     },
   },
