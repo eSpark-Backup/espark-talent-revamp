@@ -117,7 +117,7 @@ const GlobalTeams = ({ data }) => {
             zIndex: 9999,
           }}
         >
-          <GlobalTeamsLoader time={5000} />
+          <GlobalTeamsLoader loading={loading} />
         </Box>
       )}
 
