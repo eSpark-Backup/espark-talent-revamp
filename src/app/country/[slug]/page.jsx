@@ -2,6 +2,9 @@ import React from 'react';
 import CountryPage from '@/components/country/CountryPage';
 import NotFoundPage from '@/components/global/NotFound';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
+import { GLOBAL_SEO } from '@/constants/seo-data';
+import { getCountryMetadata } from '@/components/global/Seo';
+import { getSingleCountry } from '@/sanity/sanity.quries';
 
 const countryModules = {
   oman: () => import('@/constants/country/oman'),
@@ -13,6 +16,12 @@ const countryModules = {
   malaysia: () => import('@/constants/country/malaysia'),
   ksa: () => import('@/constants/country/ksa'),
 };
+export async function generateMetadata({ params }) {
+  const slug = params.slug;
+  const country = await getSingleCountry(slug);
+  const filteredData = country || GLOBAL_SEO[0];
+  return getCountryMetadata(filteredData);
+}
 
 export default async function Page({ params }) {
   const { slug } = await params;
