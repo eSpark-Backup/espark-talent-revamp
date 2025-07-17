@@ -1,12 +1,13 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Typography, CircularProgress } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css';
+import Loading from '../global/loading';
 
 const GlobalTeams = ({ data }) => {
   const { title, text, slides, styles } = data || {};
@@ -117,7 +118,7 @@ const GlobalTeams = ({ data }) => {
             zIndex: 9999,
           }}
         >
-          <CircularProgress color="primary" size={60} />
+          <Loading />
         </Box>
       )}
 

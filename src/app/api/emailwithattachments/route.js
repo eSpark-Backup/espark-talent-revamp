@@ -31,7 +31,7 @@ async function handler(req, res) {
       }
       // Sending emails
       setTimeout(() => {
-        (sgMail.send({
+        sgMail.send({
           to: toAdmin,
           from: toAdmin,
           templateId: adminTemplateId,
@@ -45,7 +45,7 @@ async function handler(req, res) {
             },
           ],
         }),
-          2000);
+          2000;
       });
 
       // Success response
