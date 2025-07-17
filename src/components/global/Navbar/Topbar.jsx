@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -23,7 +24,12 @@ const Topbar = ({ data }) => {
       <Box sx={topBarBoxStyle}>
         <Link href={`mailto:${mailText}`}>
           <Box sx={mailBoxStyle}>
-            <Box component={'img'} src={mailIcon || '/'} alt="mail-icon" />
+            <Image
+              src={mailIcon || '/'}
+              alt="mail-icon"
+              width={20}
+              height={20}
+            />
             <Typography sx={mailTextStyle}>{mailText}</Typography>
           </Box>
         </Link>

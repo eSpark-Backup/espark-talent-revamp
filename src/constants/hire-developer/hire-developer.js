@@ -27009,6 +27009,7 @@ and frameworks for this technology.`,
     },
   },
 ];
+
 // hire remote page
 export const hireRemoteimageStyle = (index) => {
   return {

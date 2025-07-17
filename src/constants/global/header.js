@@ -230,6 +230,8 @@ export const NAVBAR_STYLE = {
     ulStyle: {
       height: '100%',
       display: 'none',
+      minHeight: '40px',
+      whiteSpace: 'noWrap',
       '@media(min-width: 1024px)': {
         display: 'flex',
         ml: 'auto',
@@ -242,17 +244,16 @@ export const NAVBAR_STYLE = {
     buttonStyle: {
       width: '238px',
       height: '44px',
-      background: '#029894',
+      backgroundColor: '#029894',
+      color: '#ffffff',
       justifyContent: 'space-between',
-      color: '#fff',
       pl: 3,
       pr: 1.5,
       fontSize: '17px',
       borderRadius: '36px',
       '&:hover': {
         backgroundColor: '#029894',
-        background: '#029894',
-        color: '#fff',
+        color: '#ffffff',
       },
       '@media(min-width:1024px) and (max-width:1249px)': {
         fontSize: '12px',
@@ -265,11 +266,14 @@ export const NAVBAR_STYLE = {
     },
     endIconStyle: {
       display: 'flex',
+      position: 'relative',
       alignItems: 'center',
       justifyContent: 'center',
       p: 0.5,
       backgroundColor: '#175A59',
       borderRadius: '100%',
+      width: '30px',
+      height: '30px',
       '@media(min-width:1024px) and (max-width:1249px)': {
         width: '30px',
         height: '30px',
@@ -361,11 +365,11 @@ export const NAVBAR_STYLE = {
       height: { xs: '44px', md: '46px', lg: '48px' },
       backgroundColor: '#101828',
       borderRadius: '100px',
-      color: '#fff',
+      color: '#ffffff',
       fontSize: '20px',
       '&:hover': {
         backgroundColor: '#1c4e72',
-        color: '#fff',
+        color: '#ffffff',
       },
     },
     buttonBoxStyle: {

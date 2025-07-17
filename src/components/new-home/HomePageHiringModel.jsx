@@ -1,12 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { Box, Typography, CircularProgress, Button } from '@mui/material';
+import React from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { open } from '@/utils';
+import Image from 'next/image';
 
 const HomePageHiringModel = ({ data }) => {
   const { title, icon, items, image, styles } = data || {};
@@ -23,21 +24,20 @@ const HomePageHiringModel = ({ data }) => {
     listStyle,
     cardImageStyle,
   } = styles || {};
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (data) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
-  }, [data]);
-
   const renderSlide = (eachItem, index) => (
     <SwiperSlide key={index}>
       <Box key={index} sx={cardStyle}>
         <Box>
-          <Box component="img" src={image} sx={cardImageStyle} />
+          <Box sx={cardImageStyle}>
+            <Image
+              width={1200}
+              height={600}
+              src={image}
+              style={{ width: '100%', height: 'auto' }}
+              priority
+              alt=""
+            />
+          </Box>
           <Typography
             sx={cardHeaderStyle}
             dangerouslySetInnerHTML={{ __html: eachItem?.title }}
@@ -59,7 +59,16 @@ const HomePageHiringModel = ({ data }) => {
             sx={buttonStyle}
           >
             {eachItem?.buttonText}
-            <Box component="img" src={icon} sx={buttonBoxStyle} />
+            <Box sx={buttonBoxStyle}>
+              <Image
+                width={1200}
+                height={600}
+                src={icon}
+                style={{ width: '100%', height: 'auto' }}
+                priority
+                alt=""
+              />
+            </Box>
           </Button>
         </Box>
       </Box>
@@ -71,58 +80,48 @@ const HomePageHiringModel = ({ data }) => {
       <Box sx={innerBoxStyle} id="flexible-hiring-models">
         {title && (
           <Box sx={titleBoxStyle}>
-            <Typography sx={titleStyle}>{title || ''}</Typography>
+            <Typography variant="h1" sx={titleStyle}>
+              {title || ''}
+            </Typography>
           </Box>
         )}
-        {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '200px',
+        <>
+          <Swiper
+            grabCursor={true}
+            speed={3000}
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              800: {
+                slidesPerView: 2.2,
+                spaceBetween: 25,
+              },
+              868: {
+                slidesPerView: 2.5,
+                spaceBetween: 25,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+              },
+              1440: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+              },
             }}
           >
-            <CircularProgress />
-          </Box>
-        ) : (
-          <>
-            <Swiper
-              grabCursor={true}
-              speed={3000}
-              pagination={{ clickable: true }}
-              modules={[Autoplay, Pagination]}
-              autoplay={{ delay: 1000, disableOnInteraction: false }}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                800: {
-                  slidesPerView: 2.2,
-                  spaceBetween: 25,
-                },
-                868: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 25,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 25,
-                },
-                1440: {
-                  slidesPerView: 3,
-                  spaceBetween: 35,
-                },
-              }}
-            >
-              {items?.map(renderSlide)}
-            </Swiper>
-          </>
-        )}
+            {items?.map(renderSlide)}
+          </Swiper>
+        </>
       </Box>
     </Box>
   );

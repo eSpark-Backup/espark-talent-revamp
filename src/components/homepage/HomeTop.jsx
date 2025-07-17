@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   cardStyleForHomePage,
@@ -18,10 +19,10 @@ import PricingDefference from '../pricing/PricingDefference';
 import HomePageHiringModel from '../new-home/HomePageHiringModel';
 import PowerProjects from '../new-home/PowerProjects';
 import EntierTeam from '../new-home/EntierTeam';
-import GlobalTeams from '../new-home/GlobalTeams';
 import TrustedPlatform from '../new-home/TrustedPlatform';
 import { Box } from '@mui/material';
 import HomeBlogs from '../blogs/HomeBlogs';
+import ClientGlobalTeams from '../new-home/ClientGlobalTeams';
 
 const HomeTop = () => {
   return (
@@ -44,7 +45,7 @@ const HomeTop = () => {
             '@media(min-width:1024px)': {
               backgroundSize: '100%',
               backgroundPosition: 'bottom',
-              backgroundImage: `url(${'/images/homepage/hero/hero-image.png'})`,
+              backgroundImage: `url(${'/images/homepage/hero/hero-image.webp'})`,
             },
           }}
         />
@@ -53,7 +54,7 @@ const HomeTop = () => {
         <HomePageExperties data={EXPERTIES_DATA} titleColor="#222324" />
         <PowerProjects data={POWER_PROJECT_DATA} />
         <EntierTeam data={ENTIRE_TEAM} />
-        <GlobalTeams data={GLOBAL_TEAMS} />
+        <ClientGlobalTeams data={GLOBAL_TEAMS} />
         <TrustedPlatform data={TRUSTED_PLATFORM} />
         <HomeBlogs />
       </Box>

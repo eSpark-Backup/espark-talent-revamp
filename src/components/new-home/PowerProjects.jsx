@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Chip, Typography } from '@mui/material';
 import { keyframes } from '@mui/system';
+import Image from 'next/image';
 
 const PowerProjects = ({ data }) => {
   const { first_text, second_text, third_text, styles } = data || {};
@@ -33,14 +34,14 @@ const PowerProjects = ({ data }) => {
       <Box sx={containerStyle(maxWidth)}>
         <Box sx={{ position: 'relative' }}>
           <Typography
-            variant="h5"
+            variant="h1"
+            component={'h1'}
             textAlign="center"
             sx={titleSyle}
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-
           <Box
             sx={logosBoxStyle(scrollDirection, scrollRight, scrollLeft, top)}
           >
@@ -51,10 +52,23 @@ const PowerProjects = ({ data }) => {
                 label={
                   <Box sx={chipBoxStyle}>
                     <Box
-                      component={'img'}
-                      src={logo?.src}
-                      sx={{ width: '30px', height: 'auto' }}
-                    />
+                      sx={{
+                        width: '30px',
+                        height: '30px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Image
+                        width={100}
+                        height={100}
+                        style={{ width: '100%', height: 'auto' }}
+                        src={logo?.src}
+                        priority
+                        alt=""
+                      />
+                    </Box>
                     <Typography
                       sx={{
                         fontSize: { xs: '16px', md: '20px' },
@@ -88,14 +102,14 @@ const PowerProjects = ({ data }) => {
         logos={second_text?.logos}
         maxWidth={{ xs: '550px', md: '800px', lg: '1150px' }}
         scrollDirection={'left'}
-        top={'82%'}
+        top={'80%'}
       />
       <RenderText
         title={third_text?.text}
         logos={third_text?.logos}
         maxWidth={'1400px'}
         scrollDirection={'right'}
-        top={{ xs: '95%', md: '82%' }}
+        top={{ xs: '95%', md: '80%' }}
       />
     </Box>
   );

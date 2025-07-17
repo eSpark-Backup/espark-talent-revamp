@@ -16,6 +16,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { checkingExpendedAccordion, handleChangeAccordion } from '@/utils';
+import Image from 'next/image';
 
 const HomePageExperties = ({ data, titleColor }) => {
   const pathName = usePathname();
@@ -60,16 +61,20 @@ const HomePageExperties = ({ data, titleColor }) => {
           aria-controls={`panel${index}bh-content`}
           id={`panel${index}bh-header`}
         >
-          <Box
-            component={'img'}
-            src={
-              checkingExpendedAccordion(expandedAccordion, index)
-                ? service?.activeIcon
-                : service?.icon
-            }
-            alt={service?.heading}
-            sx={imageStyle}
-          />
+          <Box sx={imageStyle}>
+            <Image
+              width={1200}
+              height={600}
+              style={{ width: '100%', height: 'auto' }}
+              src={
+                checkingExpendedAccordion(expandedAccordion, index)
+                  ? service?.activeIcon
+                  : service?.icon
+              }
+              alt={'icon'}
+              priority
+            />
+          </Box>
           <Typography sx={serviceTypographyStyle(expandedAccordion, index)}>
             {service?.heading}
           </Typography>

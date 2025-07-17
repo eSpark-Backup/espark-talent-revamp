@@ -1,19 +1,14 @@
-'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import HomeTop from '@/components/homepage/HomeTop';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Page = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  });
-
   return (
     <>
+      <ScrollToTop />
       <HomeTop />
     </>
   );
 };
+
 export default Page;

@@ -249,3 +249,31 @@ export async function getSingleHire(slug) {
     }
   );
 }
+export async function getSingleCountry(slug) {
+  return client.fetch(
+    `*[_type == "country" && slug.current == $slug][0]
+    {
+      _id,
+      "slug": slug.current,
+      'metaTitle':seo.metaTitle,
+      "metaDescription":seo.metaDescription,
+      "url":seo.url,
+      "metaImage":seo.metaImage.asset->url,
+      "index":seo.index,
+      "follow":seo.follow,
+      "ratingName":rating.name,
+      "ratingImage":rating.image.asset->url,
+      "worstRating":rating.worstRating,
+      "bestRating":rating.bestRating,
+      "ratingValue":rating.ratingValue,
+      "ratingCount":rating.ratingCount,
+      "jsonLd": seo.jsonLd,
+    }`,
+    { slug },
+    {
+      next: {
+        revalidate: 1800,
+      },
+    }
+  );
+}

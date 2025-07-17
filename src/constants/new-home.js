@@ -1,3 +1,19 @@
+import usaImage from '@/assets/images/new-home/global-teams/usa.png';
+import canadaImage from '@/assets/images/new-home/global-teams/canada.png';
+import ukImage from '@/assets/images/new-home/global-teams/uk.png';
+import ksaImage from '@/assets/images/new-home/global-teams/ksa.png';
+import qatarImage from '@/assets/images/new-home/global-teams/qatar.png';
+import uaeImage from '@/assets/images/new-home/global-teams/uae.png';
+import omanImage from '@/assets/images/new-home/global-teams/oman.png';
+import malaysiaImage from '@/assets/images/new-home/global-teams/malaysia.png';
+import usaFlag from '@/assets/images/new-home/global-teams/usa-flag.png';
+import canadaFlag from '@/assets/images/new-home/global-teams/canada-flag.png';
+import ukFlag from '@/assets/images/new-home/global-teams/united-kingdom-flag.png';
+import ksaFlag from '@/assets/images/new-home/global-teams/saudi-arabia-flag.png';
+import qatarFlag from '@/assets/images/new-home/global-teams/qatar-flag.png';
+import omanFlag from '@/assets/images/new-home/global-teams/oman-flag.png';
+import malaysiaFlag from '@/assets/images/new-home/global-teams/malaysia-flag.png';
+
 export const HERO_DATA = {
   subTitle: 'Need to Grow Your Team?',
   title: `Hire Top Talent On-Demand In`,
@@ -116,7 +132,7 @@ export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
   title: `Hire Top Talent Now`,
   description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
-  bgImage: '/images/homepage/hero/emp-hero.png',
+  bgImage: '/images/homepage/hero/emp-hero.webp',
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
   animatedVideo: '/images/homepage/hero/eSpark-New.webm',
@@ -240,9 +256,9 @@ export const EMPLOYEE_HERO_DATA = {
     btnStyle: {
       width: '246px',
       height: '44px',
-      background: '#029894',
+      backgroundColor: '#029894',
+      color: '#ffffff',
       justifyContent: 'space-between',
-      color: '#fff',
       pl: 3,
       pr: 1.5,
       mt: 3,
@@ -250,8 +266,7 @@ export const EMPLOYEE_HERO_DATA = {
       borderRadius: '36px',
       '&:hover': {
         backgroundColor: '#029894',
-        background: '#029894',
-        color: '#fff',
+        color: '#ffffff',
       },
       '@media(min-width:0) and (max-width:1249px)': {
         fontSize: '12px',
@@ -260,11 +275,14 @@ export const EMPLOYEE_HERO_DATA = {
     },
     endIconStyle: {
       display: 'flex',
+      position: 'relative',
       alignItems: 'center',
       justifyContent: 'center',
       p: 0.5,
       backgroundColor: '#175A59',
       borderRadius: '100%',
+      width: '30px',
+      height: '30px',
       '@media(min-width:1024px) and (max-width:1249px)': {
         width: '30px',
         height: '30px',
@@ -284,8 +302,7 @@ export const EMPLOYEE_HERO_DATA = {
       },
     },
     imageStyle: {
-      position: 'relative',
-      objectFit: 'contain',
+      // objectFit: 'contain',
       width: { xs: 'auto', md: '580px', lg: '650px', xl: '704px' },
       height: { xs: 'auto', lg: 'auto', xl: '650px' },
     },
@@ -506,6 +523,8 @@ export const EXPERT_TEAM_DATA = {
     }),
     imageStyle: (empIndex) => ({
       opacity: empIndex === 0 ? 1 : empIndex === 1 ? 0.6 : 0.4,
+      width: '50px',
+      height: '50px',
     }),
     nameTypogrphyStyle: {
       fontSize: {
@@ -628,6 +647,9 @@ export const HIRING_DATA = {
     buttonBoxStyle: {
       ml: 1.5,
       width: { xs: '15px', sm: '16px' },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     buttonStyle: {
       width: '100%',
@@ -1067,110 +1089,110 @@ export const POWER_PROJECT_DATA = {
   first_text: {
     text: 'Power Your',
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
@@ -1178,221 +1200,222 @@ export const POWER_PROJECT_DATA = {
   second_text: {
     text: 'Projects with a',
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
   },
   third_text: {
-    text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
+    // text: `<span style={{ color: '#029894', fontWeight: 700 }}>Multi-Talent</span> Squad`,
+    text: `Multi-Talent Squad`,
     logos: [
-      { src: 'images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
-      { src: 'images/new-home/power-projects/figma.png', text: 'Figma' },
+      { src: '/images/new-home/power-projects/xd.png', text: 'ADOBE XD' },
+      { src: '/images/new-home/power-projects/figma.png', text: 'Figma' },
       {
-        src: 'images/new-home/power-projects/acf.png',
+        src: '/images/new-home/power-projects/acf.png',
         text: 'Advance Custom Field',
       },
       {
-        src: 'images/new-home/power-projects/electron.png',
+        src: '/images/new-home/power-projects/electron.png',
         text: 'Electron JS',
       },
       {
-        src: 'images/new-home/power-projects/shopify.png',
+        src: '/images/new-home/power-projects/shopify.png',
         text: 'Shopify',
       },
       {
-        src: 'images/new-home/power-projects/cpt.png',
+        src: '/images/new-home/power-projects/cpt.png',
         text: 'Custom Post Type',
       },
       {
-        src: 'images/new-home/power-projects/git.png',
+        src: '/images/new-home/power-projects/git.png',
         text: 'GIT',
       },
       {
-        src: 'images/new-home/power-projects/react.png',
+        src: '/images/new-home/power-projects/react.png',
         text: 'React',
       },
       {
-        src: 'images/new-home/power-projects/next-js.png',
+        src: '/images/new-home/power-projects/next-js.png',
         text: 'Next.JS',
       },
       {
-        src: 'images/new-home/power-projects/es6.png',
+        src: '/images/new-home/power-projects/es6.png',
         text: 'JavaScript ES6',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/oop.png',
+        src: '/images/new-home/power-projects/oop.png',
         text: 'Object Oriented Programming',
       },
       {
-        src: 'images/new-home/power-projects/apachea.png',
+        src: '/images/new-home/power-projects/apachea.png',
         text: 'Apache',
       },
       {
-        src: 'images/new-home/power-projects/python.png',
+        src: '/images/new-home/power-projects/python.png',
         text: 'Python',
       },
       {
-        src: 'images/new-home/power-projects/react-native.png',
+        src: '/images/new-home/power-projects/react-native.png',
         text: 'React Native ',
       },
       {
-        src: 'images/new-home/power-projects/jquery.png',
+        src: '/images/new-home/power-projects/jquery.png',
         text: 'JQuery',
       },
       {
-        src: 'images/new-home/power-projects/state.png',
+        src: '/images/new-home/power-projects/state.png',
         text: 'State Management libraries',
       },
       {
-        src: 'images/new-home/power-projects/javascript.png',
+        src: '/images/new-home/power-projects/javascript.png',
         text: 'Javascript',
       },
       {
-        src: 'images/new-home/power-projects/sql.png',
+        src: '/images/new-home/power-projects/sql.png',
         text: 'SQL',
       },
       {
-        src: 'images/new-home/power-projects/html.png',
+        src: '/images/new-home/power-projects/html.png',
         text: 'HTML',
       },
       {
-        src: 'images/new-home/power-projects/wp-cli.png',
+        src: '/images/new-home/power-projects/wp-cli.png',
         text: 'Wordpress CLI',
       },
       {
-        src: 'images/new-home/power-projects/restful.png',
+        src: '/images/new-home/power-projects/restful.png',
         text: 'RESTful APIs',
       },
       {
-        src: 'images/new-home/power-projects/bootstrap.png',
+        src: '/images/new-home/power-projects/bootstrap.png',
         text: 'Bootstrap',
       },
       {
-        src: 'images/new-home/power-projects/css.png',
+        src: '/images/new-home/power-projects/css.png',
         text: 'CSS',
       },
       {
-        src: 'images/new-home/power-projects/typescript.png',
+        src: '/images/new-home/power-projects/typescript.png',
         text: 'TypeScript',
       },
       {
-        src: 'images/new-home/power-projects/github.png',
+        src: '/images/new-home/power-projects/github.png',
         text: 'GITHUB CLA',
       },
       {
-        src: 'images/new-home/power-projects/php.png',
+        src: '/images/new-home/power-projects/php.png',
         text: 'PHP',
       },
       {
-        src: 'images/new-home/power-projects/woocommerce.png',
+        src: '/images/new-home/power-projects/woocommerce.png',
         text: 'COMMERCE',
       },
     ],
@@ -1449,6 +1472,7 @@ export const POWER_PROJECT_DATA = {
       height: { xs: '33px', lg: '36px' },
       backgroundColor: '#fff',
       borderRadius: '24px',
+      py: 1,
     },
   },
 };
@@ -1456,7 +1480,7 @@ export const POWER_PROJECT_DATA = {
 export const ENTIRE_TEAM = {
   title: 'Keep track of your entire team in one place!',
   text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
-  image: '/images/new-home/entire-team/laptop.svg',
+  image: '/images/new-home/entire-team/laptop.png',
   points: [
     {
       title: 'Real-Time Hiring & Interview Updates',
@@ -1577,43 +1601,51 @@ export const GLOBAL_TEAMS = {
   slides: [
     {
       country: 'USA',
-      image: 'images/new-home/global-teams/usa.svg',
-      flag: 'images/new-home/global-teams/usa-flag.png',
+      image: usaImage,
+      flag: usaFlag,
+      link: '/country/usa',
     },
     {
       country: 'Canada',
-      image: 'images/new-home/global-teams/canada.svg',
-      flag: 'images/new-home/global-teams/canada-flag.png',
+      image: canadaImage,
+      flag: canadaFlag,
+      link: '/country/canada',
     },
     {
       country: 'United Kingdom',
-      image: 'images/new-home/global-teams/united-kingdom.svg',
-      flag: 'images/new-home/global-teams/united-kingdom-flag.png',
+      image: ukImage,
+      flag: ukFlag,
+      link: '/country/uk',
     },
     {
       country: 'Saudi Arabia',
-      image: 'images/new-home/global-teams/saudi-arabia.svg',
-      flag: 'images/new-home/global-teams/saudi-arabia-flag.png',
+      image: ksaImage,
+      flag: ksaFlag,
+      link: '/country/ksa',
     },
     {
       country: 'Qatar',
-      image: 'images/new-home/global-teams/qatar.svg',
-      flag: 'images/new-home/global-teams/qatar-flag.png',
+      image: qatarImage,
+      flag: qatarFlag,
+      link: '/country/qatar',
     },
     {
       country: 'UAE',
-      image: 'images/new-home/global-teams/uae.svg',
-      flag: 'images/new-home/global-teams/uae-flag.png',
+      image: uaeImage,
+      flag: usaFlag,
+      link: '/country/uae',
     },
     {
       country: 'Oman',
-      image: 'images/new-home/global-teams/oman.svg',
-      flag: 'images/new-home/global-teams/oman-flag.png',
+      image: omanImage,
+      flag: omanFlag,
+      link: '/country/oman',
     },
     {
       country: 'Malaysia',
-      image: 'images/new-home/global-teams/malaysia.svg',
-      flag: 'images/new-home/global-teams/malaysia-flag.png',
+      image: malaysiaImage,
+      flag: malaysiaFlag,
+      link: '/country/malaysia',
     },
   ],
 
@@ -1647,26 +1679,30 @@ export const GLOBAL_TEAMS = {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
+      height: '100%',
     },
     slideImageStyle: {
       width: { xs: '96%', md: 297 },
       height: { xs: 'auto', md: 407 },
-      objectFit: 'cover',
       borderRadius: '30px',
       position: 'relative',
       mx: 'auto',
+      overflow: 'hidden',
+      cursor: 'pointer',
     },
     flagBoxStyle: {
       display: 'flex',
       alignItems: 'center',
       position: 'absolute',
-      bottom: { xs: 15, md: 20 },
+      bottom: { xs: 15, sm: 15, md: 20 },
       left: { xs: 15, md: 20 },
       gap: 1.2,
+      flexWrap: 'nowrap',
     },
     flagImageStyle: {
       width: { xs: 30, md: 45 },
       height: { xs: 30, md: 45 },
+      position: 'relative',
     },
     countryTextStyle: {
       fontSize: {
@@ -1685,12 +1721,12 @@ export const TRUSTED_PLATFORM = {
   title:
     'eSpark Talent is the Global Outsourcing Platform trusted by industry leaders',
   images: [
-    'images/new-home/trusted-platform/01.png',
-    'images/new-home/trusted-platform/02.png',
-    'images/new-home/trusted-platform/03.png',
-    'images/new-home/trusted-platform/04.png',
-    'images/new-home/trusted-platform/05.png',
-    'images/new-home/trusted-platform/06.png',
+    '/images/new-home/trusted-platform/01.png',
+    '/images/new-home/trusted-platform/02.png',
+    '/images/new-home/trusted-platform/03.png',
+    '/images/new-home/trusted-platform/04.png',
+    '/images/new-home/trusted-platform/05.png',
+    '/images/new-home/trusted-platform/06.png',
   ],
   review: [
     {
@@ -1755,10 +1791,11 @@ export const TRUSTED_PLATFORM = {
       alignItems: 'center',
     },
     slideImageStyle: {
-      width: { xs: '85%', md: 183 },
+      width: { xs: '85%', sm: '100%' },
+      maxWidth: '183px',
       height: { xs: 'auto', md: 'auto' },
       objectFit: 'cover',
-      position: 'relative',
+      // position: 'relative',
       mx: 'auto',
     },
   },
