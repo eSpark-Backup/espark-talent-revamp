@@ -3,8 +3,8 @@ import CountryPage from '@/components/country/CountryPage';
 import NotFoundPage from '@/components/global/NotFound';
 import { NOT_FOUND_DATA } from '@/constants/global/notfound';
 import { GLOBAL_SEO } from '@/constants/seo-data';
-import { getCountryMetadata } from '@/components/global/Seo';
 import { getSingleCountry } from '@/sanity/sanity.quries';
+import { getCountryMetadata } from '@/components/global/seo';
 
 const countryModules = {
   oman: () => import('@/constants/country/oman'),
@@ -31,8 +31,8 @@ export default async function Page({ params }) {
     return <NotFoundPage data={NOT_FOUND_DATA} />;
   }
 
-  const module = await loader();
-  const data = module.default;
+  const load = await loader();
+  const data = load.default;
 
   return <CountryPage data={data} />;
 }
