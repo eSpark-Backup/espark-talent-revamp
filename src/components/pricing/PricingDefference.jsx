@@ -30,7 +30,7 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
             width={1200}
             height={600}
             alt="Hero GIF"
-            src={card?.icon}
+            src={card?.icon || '/'}
             style={{ width: '100%', height: 'auto' }}
             priority
           />

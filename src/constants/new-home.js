@@ -316,19 +316,19 @@ export const DIFFERENCE_DATA = {
       id: 1,
       title: `Scale faster`,
       description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
-      icon: `images/new-home/differnce/scale_faster.svg`,
+      icon: `/images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
       title: `Increase Quality & Efficiency`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
-      icon: `images/new-home/differnce/increase_quality.svg`,
+      icon: `/images/new-home/differnce/increase_quality.svg`,
     },
     {
       id: 3,
       title: `Reduce costs`,
       description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
-      icon: `images/new-home/differnce/reduce_costs.svg`,
+      icon: `/images/new-home/differnce/reduce_costs.svg`,
     },
   ],
 };
@@ -723,8 +723,8 @@ export const EXPERTIES_DATA = {
   services: [
     {
       id: 2,
-      icon: 'images/new-home/experties/icon2.svg',
-      activeIcon: 'images/new-home/experties/activeIcon2.svg',
+      icon: '/images/new-home/experties/icon2.svg',
+      activeIcon: '/images/new-home/experties/activeIcon2.svg',
       heading: 'Front-End Developers',
       listItems: [
         {
@@ -747,8 +747,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 3,
-      icon: 'images/new-home/experties/icon3.svg',
-      activeIcon: 'images/new-home/experties/activeIcon3.svg',
+      icon: '/images/new-home/experties/icon3.svg',
+      activeIcon: '/images/new-home/experties/activeIcon3.svg',
       heading: 'Back-End Developers',
       listItems: [
         {
@@ -762,8 +762,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 4,
-      icon: 'images/new-home/experties/icon4.svg',
-      activeIcon: 'images/new-home/experties/activeIcon4.svg',
+      icon: '/images/new-home/experties/icon4.svg',
+      activeIcon: '/images/new-home/experties/activeIcon4.svg',
       heading: 'Digital Marketer',
       listItems: [
         {
@@ -780,8 +780,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 5,
-      icon: 'images/new-home/experties/icon5.svg',
-      activeIcon: 'images/new-home/experties/activeIcon5.svg',
+      icon: '/images/new-home/experties/icon5.svg',
+      activeIcon: '/images/new-home/experties/activeIcon5.svg',
       heading: 'Embedded Developers',
       listItems: [
         {
@@ -797,8 +797,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 6,
-      icon: 'images/new-home/experties/icon6.svg',
-      activeIcon: 'images/new-home/experties/activeIcon6.svg',
+      icon: '/images/new-home/experties/icon6.svg',
+      activeIcon: '/images/new-home/experties/activeIcon6.svg',
       heading: 'Ecommerce Developers',
       listItems: [
         {
@@ -813,8 +813,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 7,
-      icon: 'images/new-home/experties/icon7.svg',
-      activeIcon: 'images/new-home/experties/activeIcon7.svg',
+      icon: '/images/new-home/experties/icon7.svg',
+      activeIcon: '/images/new-home/experties/activeIcon7.svg',
       heading: 'Mobile App Developers',
       listItems: [
         {
@@ -833,8 +833,8 @@ export const EXPERTIES_DATA = {
     },
     {
       id: 1,
-      icon: 'images/new-home/experties/icon1.svg',
-      activeIcon: 'images/new-home/experties/activeIcon1.svg',
+      icon: '/images/new-home/experties/icon1.svg',
+      activeIcon: '/images/new-home/experties/activeIcon1.svg',
       heading: 'Trending',
       listItems: [
         { title: 'UI UX Designer', link: '/hire-ui-ux-designers' },
