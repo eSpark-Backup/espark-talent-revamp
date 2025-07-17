@@ -1,6 +1,5 @@
 'use client';
 import { Box } from '@mui/material';
-import { useState, useEffect } from 'react';
 import { keyframes } from '@emotion/react';
 import { LOADING_DATA } from '@/constants/global/notfound';
 
@@ -24,20 +23,7 @@ const smokeAnimation = keyframes`
   100% { transform: translateY(20px) scale(2); opacity: 0; }
 `;
 
-function useDelayedRender(delay) {
-  const [isDelayed, setIsDelayed] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsDelayed(false);
-    }, delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-  return isDelayed;
-}
-
-const GlobalTeamsLoader = ({ children }) => {
-  const isDelayed = useDelayedRender(5000);
-
+const GlobalTeamsLoader = ({ children, loading }) => {
   const {
     loadingFallBackBoxStyle,
     dotAnimationStyle,
@@ -79,7 +65,7 @@ const GlobalTeamsLoader = ({ children }) => {
     </Box>
   );
 
-  if (isDelayed) {
+  if (loading) {
     return <LoadingFallback />;
   }
 
