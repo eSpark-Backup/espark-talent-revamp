@@ -16,10 +16,6 @@ const nextConfig = {
         hostname: '**',
         pathname: '**',
       },
-      {
-        protocol: 'https',
-        hostname: 'talent-main.s3.us-east-005.backblazeb2.com',
-      },
     ],
   },
   async headers() {
