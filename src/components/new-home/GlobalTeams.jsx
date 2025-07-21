@@ -121,7 +121,6 @@ import { useLinkStatus } from 'next/link';
 const GlobalTeams = ({ data }) => {
   const { title, text, slides, styles } = data || {};
   const { pending } = useLinkStatus();
-  console.log(pending, 'pending');
   const {
     mainBoxStyle,
     titleStyle,
@@ -151,8 +150,7 @@ const GlobalTeams = ({ data }) => {
           }}
         >
           {pending
-            ? // 👉 pending true ہو تو skeletons
-              Array.from(new Array(5)).map((_, i) => (
+            ? Array.from(new Array(5)).map((_, i) => (
                 <SwiperSlide key={`skeleton-${i}`} style={swiperSlideStyle}>
                   <Box sx={{ ...slideImageStyle, p: 2 }}>
                     <Skeleton
@@ -173,8 +171,7 @@ const GlobalTeams = ({ data }) => {
                   </Box>
                 </SwiperSlide>
               ))
-            : // 👉 pending false ہو تو اصل slides
-              slides?.map((slide, i) => (
+            : slides?.map((slide, i) => (
                 <SwiperSlide
                   key={i}
                   style={{ ...swiperSlideStyle, pointerEvents: 'auto' }}
