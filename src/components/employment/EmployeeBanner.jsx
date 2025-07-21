@@ -1,4 +1,5 @@
-import { Box, Button, Typography } from '@mui/material';
+// 'use client';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 import EmployeeSlider from '../new-home/EmployeeSlider';
 import { EMPLOYEE_SLIDER_DATA } from '@/constants/new-home';
@@ -10,8 +11,8 @@ const EmployeeBanner = ({ data }) => {
     description,
     bgImage,
     animatedGif,
-    btnTitle,
-    btnLink,
+    // btnTitle,
+    // btnLink,
     styles,
   } = data || {};
   const {
@@ -22,10 +23,10 @@ const EmployeeBanner = ({ data }) => {
     subTitleStyle,
     titleStyle,
     descriptionStyle,
-    btnStyle,
+    // btnStyle,
     imageBoxStyle,
     imageStyle,
-    endIconStyle,
+    // endIconStyle,
   } = styles || {};
 
   return (
@@ -41,7 +42,7 @@ const EmployeeBanner = ({ data }) => {
               <Typography sx={titleStyle}>{title}</Typography>
             </Box>
             <Typography sx={descriptionStyle}>{description}</Typography>
-            <Button
+            {/* <Button
               disableRipple
               sx={btnStyle}
               onClick={() => window?.open(btnLink, '_blank')}
@@ -57,7 +58,7 @@ const EmployeeBanner = ({ data }) => {
               }
             >
               {btnTitle}
-            </Button>
+            </Button> */}
           </Box>
           <Box sx={imageBoxStyle} id="webm-video">
             <Image

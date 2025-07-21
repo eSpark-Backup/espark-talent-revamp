@@ -33,7 +33,7 @@ const EmployeeSlider = ({ data }) => {
               width={100}
               height={100}
               style={videoStyle}
-              src={slide?.videoUrl || slide?.thumbnailUrl}
+              src={slide?.thumbnailUrl}
               priority
             />
           </Box>

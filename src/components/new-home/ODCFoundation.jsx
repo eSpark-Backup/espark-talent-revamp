@@ -28,38 +28,40 @@ const ODCFoundation = ({ data }) => {
     extraSx = {},
   }) => (
     <Grid md={'auto'} position={'relative'}>
-      <Box
-        component={'img'}
-        src={vector}
-        sx={{
-          ...vectorStyle,
-          display: {
-            xs: 'none',
-            md: index === 2 ? 'none' : 'flex',
-            lg: 'flex',
-          },
-          top: {
-            md:
-              index === 0
-                ? '60%'
-                : index === 2
+      {vector && (
+        <Box
+          component="img"
+          src={vector}
+          sx={{
+            ...vectorStyle,
+            display: {
+              xs: 'none',
+              md: index === 2 ? 'none' : 'flex',
+              lg: 'flex',
+            },
+            top: {
+              md:
+                index === 0
                   ? '60%'
-                  : index === 3
-                    ? '35.5%'
-                    : '35.5%',
-            lg:
-              index === 0
-                ? '60%'
-                : index === 2
+                  : index === 2
+                    ? '60%'
+                    : index === 3
+                      ? '35.5%'
+                      : '35.5%',
+              lg:
+                index === 0
                   ? '60%'
-                  : index === 3
-                    ? '35.5%'
-                    : '35.5%',
-          },
-          left: index === 0 ? '95%' : '94%',
-          transform: 'translate(-50%, -50%)',
-        }}
-      />
+                  : index === 2
+                    ? '60%'
+                    : index === 3
+                      ? '35.5%'
+                      : '35.5%',
+            },
+            left: index === 0 ? '95%' : '94%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+      )}
       <Box sx={{ ...stepStyle, ...extraSx }}>
         <Typography sx={stepTextStyle}>{title}</Typography>
         <Box

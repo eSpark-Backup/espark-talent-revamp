@@ -22,7 +22,7 @@ const TalentRoster = ({ data }) => {
         <Box sx={titleAndTextBoxStyle}>
           <Typography sx={titleStyle}>
             <Typography component={'span'} sx={iconStyle}>
-              <img src={icon} alt="Icon" objectFit="contain" />
+              <img src={icon} alt="Icon" />
             </Typography>
             {title}
           </Typography>
