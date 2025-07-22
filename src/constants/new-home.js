@@ -1977,32 +1977,27 @@ export const EMPLOYEE_SLIDER_DATA = {
   slides: [
     {
       id: 1,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF1.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
     },
     {
       id: 2,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF2.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
     },
     {
       id: 3,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF3.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
     },
     {
       id: 4,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF4.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
     },
     {
       id: 5,
-      videoUrl:
-        'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
+      videoUrl: '/images/homepage/hero/compressed-gif/GIF5.mp4',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
     },
   ],
