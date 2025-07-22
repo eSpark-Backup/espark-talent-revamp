@@ -1,4 +1,14 @@
-import { urls } from '@/utils/cors';
+import { getBlog, getHire, getPageSeo, getWiki } from '@/sanity/sanity.quries';
+
+export const urlsPromise = (async () => {
+  const blogs = await getBlog();
+  const hires = await getHire();
+  const pages = await getPageSeo();
+  const wikis = await getWiki();
+  return [...pages, ...wikis, ...hires, ...blogs];
+})();
+
+const urls = await urlsPromise;
 
 export default function sitemap() {
   const today = new Date();

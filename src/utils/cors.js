@@ -1,12 +1,4 @@
 // utils/cors.js
-
-import { getBlog, getHire, getPageSeo, getWiki } from '@/sanity/sanity.quries';
-const blogs = await getBlog();
-const hires = await getHire();
-const pages = await getPageSeo();
-const wikis = await getWiki();
-export const urls = [...pages, ...wikis, ...hires, ...blogs];
-
 export function runMiddleware(req, res, fn) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result) => {
@@ -17,7 +9,6 @@ export function runMiddleware(req, res, fn) {
     });
   });
 }
-
 export function capitalizeFirstLetter(text) {
   return text.replace(/\b\w/g, (match) => match.toUpperCase());
 }
