@@ -17,7 +17,7 @@ const countryModules = {
   ksa: () => import('@/constants/country/ksa'),
 };
 export async function generateMetadata({ params }) {
-  const slug = params.slug;
+  const { slug } = await params;
   const country = await getSingleCountry(slug);
   const filteredData = country || GLOBAL_SEO[0];
   return getCountryMetadata(filteredData);
