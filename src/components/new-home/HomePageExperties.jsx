@@ -37,7 +37,9 @@ const HomePageExperties = ({ data, titleColor }) => {
   const renderServiceText = (item, idx) => (
     <Grid item key={idx}>
       <Typography sx={titleStyle(hire_remote_developers)}>
-        <Link href={item.link}>{item?.title}</Link>
+        <Link href={item?.link} prefetch>
+          {item?.title}
+        </Link>
       </Typography>
     </Grid>
   );
