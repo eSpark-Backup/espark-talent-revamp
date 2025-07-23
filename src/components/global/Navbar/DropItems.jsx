@@ -22,7 +22,7 @@ const DropItems = ({
     descriptionStyle,
   } = dropdownItemsStyle || {};
   return (
-    <Link href={href || '#'}>
+    <Link href={href || '#'} prefetch>
       <Box onClick={() => setDropdown(null)} key={'1'} sx={mainBoxStyle}>
         <Box sx={iconBoxStyle}>
           {icon && (
