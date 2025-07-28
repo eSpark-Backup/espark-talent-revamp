@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 const ModernTechnologies = ({ data }) => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,6 @@ const ModernTechnologies = ({ data }) => {
     cardTitleStyle,
     chipsBoxStyle,
     chipStyle,
-    chipIconStyle,
     chipTextStyle,
   } = styles || {};
 
@@ -40,7 +40,18 @@ const ModernTechnologies = ({ data }) => {
         <Box py={{ xs: '5px', sm: '10px' }} sx={chipsBoxStyle}>
           {card?.items?.map((chip, idx) => (
             <Box key={idx} sx={chipStyle}>
-              <Box component={'img'} sx={chipIconStyle} src={chipIcon || '/'} />
+              <Image
+                src={chipIcon || '/'}
+                alt="chipIcon"
+                width={25}
+                height={25}
+                priority
+                style={{
+                  objectFit: 'contain',
+                  display: 'block',
+                  margin: '0 auto',
+                }}
+              />
               <Typography
                 variant="h3"
                 sx={chipTextStyle}
@@ -82,21 +93,11 @@ const ModernTechnologies = ({ data }) => {
           ) : (
             <Box id="modern-technologies-slider" sx={swiperBoxStyle}>
               <Swiper
-                pagination={{
-                  clickable: true,
-                }}
+                pagination={{ clickable: true }}
                 breakpoints={{
-                  0: {
-                    slidesPerView: 1,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 5,
-                  },
-                  1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                  },
+                  0: { slidesPerView: 1 },
+                  768: { slidesPerView: 2, spaceBetween: 5 },
+                  1024: { slidesPerView: 3, spaceBetween: 20 },
                 }}
                 modules={[Navigation, Pagination]}
               >

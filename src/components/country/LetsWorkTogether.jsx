@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
 
 const LetsWorkTogether = ({ data }) => {
   const {
@@ -53,9 +54,35 @@ const LetsWorkTogether = ({ data }) => {
                 <Grid item xs={10} sm={5.2} md={3.6} lg={3.7} key={index}>
                   <Box sx={cardStyle}>
                     <Box sx={innerCardStyle}>
-                      <Box component={'img'} sx={ellipseStyle} src={icon} />
+                      <Box sx={ellipseStyle}>
+                        <Image
+                          src={icon}
+                          alt="ellipse"
+                          width={31}
+                          height={31}
+                          priority
+                          style={{
+                            objectFit: 'contain',
+                            display: 'block',
+                            margin: '0 auto',
+                          }}
+                        />
+                      </Box>
                       <Typography sx={cardTextStyle}>{text}</Typography>
-                      <Box component={'img'} sx={ellipseStyle} src={icon} />
+                      <Box sx={ellipseStyle}>
+                        <Image
+                          src={icon}
+                          alt="ellipse"
+                          width={31}
+                          height={31}
+                          priority
+                          style={{
+                            objectFit: 'contain',
+                            display: 'block',
+                            margin: '0 auto',
+                          }}
+                        />
+                      </Box>
                     </Box>
                   </Box>
                 </Grid>

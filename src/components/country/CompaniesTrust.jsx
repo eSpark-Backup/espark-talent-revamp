@@ -2,6 +2,7 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import FlaxibleSlider from '../new-home/FlexibleSlider';
+import Image from 'next/image';
 
 const CompaniesTrust = ({ data }) => {
   const { title, cards, styles } = data || {};
@@ -18,13 +19,17 @@ const CompaniesTrust = ({ data }) => {
   } = styles || {};
 
   const ODCCard = ({ title, image, description, extraSx = {} }) => (
-    <Box
-      sx={{
-        ...cardStyle,
-        ...extraSx,
-      }}
-    >
-      <Box component={'img'} src={image} sx={imageStyle} />
+    <Box sx={{ ...cardStyle, ...extraSx }}>
+      <Box sx={imageStyle}>
+        <Image
+          src={image}
+          alt="item-image"
+          width={95}
+          height={95}
+          priority
+          style={{ objectFit: 'contain', display: 'block', margin: '0 auto' }}
+        />
+      </Box>
       <Box sx={titleAndDescripitonBoxStyle}>
         <Typography sx={cardTitleStyle}>{title}</Typography>
         <Typography sx={cardDescriptionStyle}>{description}</Typography>

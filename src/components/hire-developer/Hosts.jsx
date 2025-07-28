@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
 import { frontendContentBoxStyle } from '@/constants/hire-developer/hire-developer';
+import Image from 'next/image';
 
 const Hosts = ({ data }) => {
   const {
@@ -30,21 +31,34 @@ const Hosts = ({ data }) => {
         <Box sx={{ py: 0 }}>
           <Box sx={mainBoxStyle}>
             {leftImage && (
-              <Box
-                component={'img'}
-                sx={imageStyle}
-                src={`${leftImage || ''}`}
-              />
+              <Box sx={imageStyle}>
+                <Image
+                  src={`${leftImage || ''}`}
+                  alt="vector"
+                  width={111}
+                  height={129}
+                  priority
+                  style={{
+                    objectFit: 'contain',
+                    display: 'block',
+                    margin: '0 auto',
+                  }}
+                />
+              </Box>
             )}
             {image !== undefined && (
               <Box sx={imageBoxStyle}>
-                <Box
-                  component={'img'}
-                  sx={{
-                    width: 'auto',
-                    height: 'auto',
+                <Image
+                  src={`${image || '/'}`}
+                  alt="vector"
+                  width={913}
+                  height={681}
+                  priority
+                  style={{
+                    objectFit: 'contain',
+                    display: 'block',
+                    margin: '0 auto',
                   }}
-                  src={`${image || ''}`}
                 />
               </Box>
             )}
@@ -52,9 +66,7 @@ const Hosts = ({ data }) => {
               <Box sx={titleDiscriptionBoxStyle}>
                 <Typography
                   sx={titleTextStyle}
-                  dangerouslySetInnerHTML={{
-                    __html: `${title || ''}`,
-                  }}
+                  dangerouslySetInnerHTML={{ __html: `${title || ''}` }}
                 />
                 <Typography sx={descriptionTextStyle}>
                   {descrcipton || ''}

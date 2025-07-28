@@ -9,6 +9,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography } from '@mui/material';
 import { extendClients, getImagePath } from '@/utils';
 import { CLIENTS_SLIDER_STYLES } from '@/constants/homepage';
+import Image from 'next/image';
 
 const ClientSlider = ({
   bgColor,
@@ -34,22 +35,21 @@ const ClientSlider = ({
     imageBoxStyle = {},
     imageStyle = {},
   } = CLIENTS_SLIDER_STYLES || {};
-  const extendedData = {
-    clients: extendClients(clients, length),
-  };
+  const extendedData = { clients: extendClients(clients, length) };
 
   const renderSlide = (item, index) => (
     <SwiperSlide key={index} style={swiperSlideStyle}>
       <Box sx={imageBoxStyle(pb)}>
-        {
-          <Box
-            component={'img'}
+        <Box sx={imageStyle}>
+          <Image
             src={getImagePath(item?.image, bgColor)}
-            alt={item?.image}
-            height={'37px'}
-            sx={imageStyle}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            width={500}
+            height={500}
           />
-        }
+        </Box>
       </Box>
     </SwiperSlide>
   );
@@ -76,10 +76,7 @@ const ClientSlider = ({
         spaceBetween={0}
         centeredSlides={true}
         slidesPerView={'auto'}
-        autoplay={{
-          delay: 500,
-          disableOnInteraction: false,
-        }}
+        autoplay={{ delay: 500, disableOnInteraction: false }}
         navigation={false}
         loop={true}
         speed={2000}

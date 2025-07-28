@@ -50,18 +50,14 @@ export const BOOK_A_MEETING = {
         flexDirection: 'column !important',
         gap: 10,
       },
-      '@media(max-width: 425px)': {
-        gap: 6,
-      },
+      '@media(max-width: 425px)': { gap: 6 },
     },
     parentContentBoxStyle: {
       display: 'flex',
       flexDirection: 'column',
       order: { xs: 2, sm: 0 },
       gap: { xs: 2, sm: 3, md: 5, lg: 7 },
-      '@media(min-width: 280px) and (max-width:1259px)': {
-        mx: 'auto',
-      },
+      '@media(min-width: 280px) and (max-width:1259px)': { mx: 'auto' },
     },
     linkBoxStyle: {
       display: { xs: 'none', sm: 'flex' },
@@ -69,6 +65,8 @@ export const BOOK_A_MEETING = {
       alignItems: 'center',
     },
     imageStyle: {
+      display: 'flex',
+      alignItems: 'center',
       width: { xs: 122, sm: 132, md: 142, lg: 162 },
       height: { xs: 50, sm: 60, md: 80, lg: 100 },
     },
@@ -85,58 +83,27 @@ export const BOOK_A_MEETING = {
       pr: { xs: 0, md: 4 },
     },
     titleStyle: {
-      fontSize: {
-        xs: '22px',
-        sm: '30px',
-        md: '43px',
-        lg: '48px',
-      },
+      fontSize: { xs: '22px', sm: '30px', md: '43px', lg: '48px' },
       textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
       fontWeight: 600,
       lineHeight: { sm: '40px', lg: '56px' },
     },
     subTitleBoxStyle: {
       mx: { xs: 'auto', md: 0 },
-      maxWidth: {
-        xs: '350px',
-        sm: '450px',
-        md: '650px',
-        lg: '700px',
-      },
+      maxWidth: { xs: '350px', sm: '450px', md: '650px', lg: '700px' },
     },
     subTitleStyle: {
-      fontSize: {
-        xs: '21px',
-        sm: '25px',
-        md: '40px',
-        lg: '45px',
-      },
+      fontSize: { xs: '21px', sm: '25px', md: '40px', lg: '45px' },
       textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
       fontWeight: 500,
-      lineHeight: {
-        xs: '30px',
-        sm: '38px',
-        md: '45px',
-        lg: '56px',
-      },
+      lineHeight: { xs: '30px', sm: '38px', md: '45px', lg: '56px' },
     },
     descriptionBoxStyle: {
       mx: { xs: 'auto', md: 0 },
-      maxWidth: {
-        xs: '400px',
-        sm: '450px',
-        md: '650px',
-        lg: '700px',
-      },
+      maxWidth: { xs: '400px', sm: '450px', md: '650px', lg: '700px' },
     },
     descriptionStyle: {
-      fontSize: {
-        xs: '14px',
-        sm: '15px',
-        md: '18px',
-        lg: '20px',
-        xl: '20px',
-      },
+      fontSize: { xs: '14px', sm: '15px', md: '18px', lg: '20px', xl: '20px' },
       color: '#0E1155',
       fontWeight: 500,
       lineHeight: { xs: 'auto', lg: '37px' },
@@ -147,19 +114,11 @@ export const BOOK_A_MEETING = {
       alignItems: 'center',
       gap: { sm: 2, md: 6, lg: 5 },
       pr: { md: 3 },
-      '@media(max-width: 722px)': {
-        flexWrap: 'wrap',
-        gap: 3,
-      },
+      '@media(max-width: 722px)': { flexWrap: 'wrap', gap: 3 },
     },
     itemBoxStyle: {
       display: 'flex',
-      maxWidth: {
-        xs: '180px',
-        sm: '180px',
-        md: '210px',
-        lg: '245px',
-      },
+      maxWidth: { xs: '180px', sm: '180px', md: '210px', lg: '245px' },
       mx: { xs: 'auto', sm: 'auto', md: 0 },
       alignItems: { xs: 'center', md: 'start' },
       textAlign: { xs: 'center', md: 'start' },
@@ -168,23 +127,13 @@ export const BOOK_A_MEETING = {
     },
     iconStyle: { mx: { xs: 'auto', sm: 0 } },
     itemTitleStyle: {
-      fontSize: {
-        xs: '11px',
-        sm: '12px',
-        md: '18px',
-        lg: '20px',
-      },
+      fontSize: { xs: '11px', sm: '12px', md: '18px', lg: '20px' },
       maxWidth: { sm: '140px', md: '200px', lg: '227px' },
       fontWeight: 600,
     },
     itemDescriptionStyle: {
       color: `#1D4E72`,
-      fontSize: {
-        xs: '10px',
-        sm: '11px',
-        md: '13px',
-        lg: '15px',
-      },
+      fontSize: { xs: '10px', sm: '11px', md: '13px', lg: '15px' },
       fontWeight: 400,
       maxHeight: { md: '65px', lg: '90px' },
     },
@@ -198,9 +147,7 @@ export const BOOK_A_MEETING = {
       px: 0.8,
       boxShadow: '0 0 9px 0 rgba(0,0,0,0.29)',
       order: { xs: 0, sm: 1 },
-      '@media(min-width: 280px) and (max-width:1259px)': {
-        mx: 'auto',
-      },
+      '@media(min-width: 280px) and (max-width:1259px)': { mx: 'auto' },
     },
   },
 };

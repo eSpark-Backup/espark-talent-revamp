@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { useState, useEffect, Suspense } from 'react';
 import { keyframes } from '@emotion/react';
 import { LOADING_DATA } from '@/constants/global/notfound';
+import Image from 'next/image';
 
 const dotAnimation = keyframes`
   0% { transform: translateX(0); }
@@ -55,13 +56,24 @@ const Loading = ({ children }) => {
   const Rocket = () => (
     <Box sx={rocketBoxStyle}>
       <Box sx={logoBoxStyle}>
-        <Box
-          component={'img'}
-          src={rocketImage || '/'}
-          sx={rocketImageStyle(rocketAnimation)}
-          className="rocket"
-        ></Box>
-        <Box component={'img'} src={titleImage}></Box>
+        <Box sx={rocketImageStyle(rocketAnimation)}>
+          <Image
+            src={rocketImage || '/'}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto', minWidth: '45px' }}
+            width={500}
+            height={500}
+          />
+        </Box>
+        <Image
+          src={titleImage}
+          alt="title"
+          sizes="100vw"
+          style={{ width: 'auto', height: 'auto', minWidth: '80px' }}
+          width={500}
+          height={500}
+        />
       </Box>
       {smokes?.map((_, index) => (
         <Box key={index} sx={smokeAnimationStyle(smokeAnimation, index)} />

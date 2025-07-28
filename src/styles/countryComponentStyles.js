@@ -101,9 +101,7 @@ const LETS_WORK_TOGETHER_STYLE = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     zIndex: 0,
-    '@media(min-width: 1024px)': {
-      display: 'flex',
-    },
+    '@media(min-width: 1024px)': { display: 'flex' },
   },
   itemsMainBoxStyle: {
     pt: 3.5,
@@ -120,9 +118,7 @@ const LETS_WORK_TOGETHER_STYLE = {
   leftDesignImageStyle: {
     width: { md: '110px', lg: '120px' },
     height: { md: '268px', lg: '288px' },
-    '@media(max-width: 1023px)': {
-      display: 'none',
-    },
+    '@media(max-width: 1023px)': { display: 'none' },
   },
   itemBoxStyle: {
     py: 4,
@@ -184,10 +180,7 @@ const LETS_WORK_TOGETHER_STYLE = {
   innerCardStyle: {
     width: '99%',
     display: 'flex',
-    justifyContent: {
-      xs: 'space-evenly',
-      md: 'space-between',
-    },
+    justifyContent: { xs: 'space-evenly', md: 'space-between' },
     alignItems: 'center',
   },
   ellipseStyle: {
@@ -195,24 +188,17 @@ const LETS_WORK_TOGETHER_STYLE = {
     display: { xs: 'flex', md: 'flex' },
   },
   cardTextStyle: {
-    width: {
-      xs: 'calc(80% - 28px)',
-      lg: 'calc(100% - 64px)',
-    },
+    width: { xs: 'calc(80% - 28px)', lg: 'calc(100% - 64px)' },
     fontWeight: 500,
     color: '#111845',
     textAlign: 'center',
     fontSize: { xs: '12px', md: 'clamp(12px, 1.3vw, 20px)' },
-    '@media(max-width:1023px)': {
-      width: 'calc(90% - 28px)',
-    },
+    '@media(max-width:1023px)': { width: 'calc(90% - 28px)' },
   },
   rightDesignImageStyle: {
     width: { md: '110px', lg: '120px' },
     height: { md: '268px', lg: '288px' },
-    '@media(max-width: 1023px)': {
-      display: 'none',
-    },
+    '@media(max-width: 1023px)': { display: 'none' },
   },
 };
 
@@ -232,9 +218,7 @@ const COMPARISON_TABLE_STYLE = {
   titleStyle: {
     fontSize: { xs: '18px', sm: '23px', md: 'clamp(25px, 1.8vw, 40px)' },
     fontWeight: 600,
-    '@media(min-width: 1921px)': {
-      fontSize: '35px',
-    },
+    '@media(min-width: 1921px)': { fontSize: '35px' },
   },
   textStyle: {
     fontSize: { xs: '15.5px', sm: 'clamp(18px, 1.75vw, 31px)' },
@@ -253,16 +237,8 @@ const COMPARISON_TABLE_STYLE = {
     pb: 'auto',
     borderBottom: index === 3 ? 0 : '1px solid rgba(255,255,255,0.3)',
   }),
-  columnStyle: {
-    fontSize: {
-      xs: 'clamp(15px, 1.3vw, 33px)',
-    },
-  },
-  rowStyle: {
-    fontSize: {
-      xs: 'clamp(15px, 1.3vw, 33px)',
-    },
-  },
+  columnStyle: { fontSize: { xs: 'clamp(15px, 1.3vw, 33px)' } },
+  rowStyle: { fontSize: { xs: 'clamp(15px, 1.3vw, 33px)' } },
 };
 
 const SALARY_DATA_TABLE_STYLE = {
@@ -285,9 +261,7 @@ const SALARY_DATA_TABLE_STYLE = {
     color: '#0B395A',
     fontSize: { xs: '18px', sm: '23px', md: 'clamp(25px, 1.8vw, 40px)' },
     fontWeight: 600,
-    '@media(min-width: 1921px)': {
-      fontSize: '40px',
-    },
+    '@media(min-width: 1921px)': { fontSize: '40px' },
   },
   textStyle: {
     fontSize: { xs: '15.5px', sm: 'clamp(18px, 1.75vw, 31px)' },
@@ -316,16 +290,9 @@ const SALARY_DATA_TABLE_STYLE = {
     borderBottom: rowIndex === 0 ? '2px solid rgba(179, 170, 170, 0.5)' : 0,
   }),
   columnStyle: {
-    fontSize: {
-      fontWeight: 500,
-      xs: 'clamp(15px, 1.3vw, 33px)',
-    },
+    fontSize: { fontWeight: 500, xs: 'clamp(15px, 1.3vw, 33px)' },
   },
-  rowStyle: {
-    fontSize: {
-      xs: 'clamp(15px, 1.3vw, 33px)',
-    },
-  },
+  rowStyle: { fontSize: { xs: 'clamp(15px, 1.3vw, 33px)' } },
 };
 
 const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
@@ -362,7 +329,12 @@ const RIGHT_CHOICE_FOR_EMPLOYERS_STYLE = {
     px: 1.5,
     mb: 0.8,
   },
-  imageStyle: { width: { xs: '45px', md: '58px' }, height: 'auto' },
+  imageStyle: {
+    display: 'flex',
+    alignItems: 'center',
+    width: { xs: '45px', md: '58px' },
+    height: 'auto',
+  },
   cardTitleStyle: {
     fontSize: { xs: 'clamp(15px, 1.4vw, 18px)' },
     fontWeight: 500,
@@ -400,13 +372,9 @@ const OUT_SOURCING_SERVICES_STYLE = {
     borderRadius: { xs: '40px', lg: '50px' },
     gap: 3,
     pb: { xs: 0, md: 0, lg: 0 },
-    '@media(min-width: 1024px) and (max-width:1439px)': {
-      minHeight: '570px',
-    },
+    '@media(min-width: 1024px) and (max-width:1439px)': { minHeight: '570px' },
   },
-  cardContentBoxStyle: {
-    p: { xs: 4, md: 5, lg: 4.5 },
-  },
+  cardContentBoxStyle: { p: { xs: 4, md: 5, lg: 4.5 } },
   cardTitleStyle: {
     fontSize: { xs: '17px', sm: 'clamp(20px, 2.3vw, 32px)' },
     minHeight: 'clamp(78px, 6vw, 105px)',
@@ -429,6 +397,8 @@ const OUT_SOURCING_SERVICES_STYLE = {
   },
   cardImageStyle: (maxWidth, origin = 'top left', scale = '1.56') => ({
     mx: 'auto',
+    display: 'flex',
+    alignItems: 'flex-end',
     width: { xs: '90%', md: '100%' },
     maxWidth: maxWidth,
     overflow: 'hidden',
@@ -437,9 +407,7 @@ const OUT_SOURCING_SERVICES_STYLE = {
     height: '100%',
     objectFit: 'cover',
     position: 'relative',
-    '&:hover': {
-      transform: `scale(${scale})`,
-    },
+    '&:hover': { transform: `scale(${scale})` },
   }),
 };
 
@@ -474,15 +442,9 @@ const COMPANIES_TRUST_STYLE = {
     width: { xs: '80%', md: 'auto' },
     mx: 'auto',
     color: '#111845',
-    '@media(min-width: 769px) and (max-width: 1426px)': {
-      width: '85%',
-    },
+    '@media(min-width: 769px) and (max-width: 1426px)': { width: '85%' },
   },
-  slideStyle: {
-    width: '90%',
-    maxWidth: '350px',
-    paddingBottom: '20px',
-  },
+  slideStyle: { width: '90%', maxWidth: '350px', paddingBottom: '20px' },
   cardStyle: {
     display: { xs: 'none', md: 'flex' },
     flexDirection: 'column',
@@ -498,9 +460,7 @@ const COMPANIES_TRUST_STYLE = {
     textAlign: 'center',
     py: 1.5,
     px: 2,
-    '@media(min-width: 400px) and (max-width: 481px)': {
-      minHeight: '215px',
-    },
+    '@media(min-width: 400px) and (max-width: 481px)': { minHeight: '215px' },
   },
   titleAndDescripitonBoxStyle: {
     display: 'flex',
@@ -514,9 +474,7 @@ const COMPANIES_TRUST_STYLE = {
     fontWeight: 500,
     color: '#111845',
     minHeight: '25px',
-    '@media(min-width: 0px) and (max-width: 383px)': {
-      minHeight: '50px',
-    },
+    '@media(min-width: 0px) and (max-width: 383px)': { minHeight: '50px' },
   },
   cardDescriptionStyle: {
     fontSize: { xs: '11px', sm: '13px', lg: '17px' },

@@ -34,7 +34,7 @@ const HireRemoteBanner = ({ data, handleOpen, styles }) => {
               {data?.btnText || ''}
             </Button>
             <Typography component={'span'} sx={spanStyle}>
-              <Box component={'img'} src={data?.icon || ''} />{' '}
+              <Box component={'img'} src={data?.icon || ''} />
               <Typography sx={textStyle}>{data?.text || ''}</Typography>
             </Typography>
             <Box>

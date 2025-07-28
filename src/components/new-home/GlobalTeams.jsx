@@ -144,10 +144,7 @@ const GlobalTeams = ({ data }) => {
           slidesPerView="auto"
           observeParents={true}
           autoplay={{ delay: 1000, disableOnInteraction: false }}
-          breakpoints={{
-            0: { spaceBetween: 20 },
-            769: { spaceBetween: 30 },
-          }}
+          breakpoints={{ 0: { spaceBetween: 20 }, 769: { spaceBetween: 30 } }}
         >
           {pending
             ? Array.from(new Array(5)).map((_, i) => (
@@ -201,7 +198,6 @@ const GlobalTeams = ({ data }) => {
                           margin: '0 auto',
                         }}
                       />
-
                       <Box sx={flagBoxStyle}>
                         <Box sx={flagImageStyle}>
                           <Image
@@ -210,10 +206,7 @@ const GlobalTeams = ({ data }) => {
                             src={slide?.flag}
                             alt={`flag-${i}`}
                             placeholder="blur"
-                            style={{
-                              objectFit: 'cover',
-                              borderRadius: '100%',
-                            }}
+                            style={{ objectFit: 'cover', borderRadius: '100%' }}
                           />
                         </Box>
                         <Typography sx={countryTextStyle}>

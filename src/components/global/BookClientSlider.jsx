@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Container, Box, Typography, useMediaQuery } from '@mui/material';
 import { extendClients, getImagePath } from '@/utils';
-import 'swiper/css';
 import { BOOK_CLIENT_SLIDER_STYLES } from '@/constants/homepage';
+import Image from 'next/image';
+import 'swiper/css';
 
 const BookClientSlider = ({
   bgColor = '#029894',
@@ -36,15 +37,16 @@ const BookClientSlider = ({
   const renderSlide = (item, index) => (
     <SwiperSlide key={index} style={swiperSlideStyle}>
       <Box sx={imageBoxStyle(pb)}>
-        {
-          <Box
-            component={'img'}
+        <Box sx={imageStyle}>
+          <Image
             src={getImagePath(item?.image)}
-            alt={item?.image}
-            height={'37px'}
-            sx={imageStyle}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            width={500}
+            height={500}
           />
-        }
+        </Box>
       </Box>
     </SwiperSlide>
   );

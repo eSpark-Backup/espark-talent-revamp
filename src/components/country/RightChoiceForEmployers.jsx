@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const RightChoiceForEmployers = ({ data }) => {
   const { title, features, styles } = data || {};
@@ -18,7 +19,16 @@ const RightChoiceForEmployers = ({ data }) => {
       <Grid gap={2.2} container justifyContent={'center'} width={gridStyle}>
         {features?.map(({ title, icon }, index) => (
           <Box key={index} sx={cardStyle}>
-            <Box component={'img'} src={icon} sx={imageStyle} />
+            <Box sx={imageStyle}>
+              <Image
+                src={icon}
+                alt="icon"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                width={58}
+                height={58}
+              />
+            </Box>
             <Typography sx={cardTitleStyle}>{title}</Typography>
           </Box>
         ))}

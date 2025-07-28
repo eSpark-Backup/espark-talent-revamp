@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { Book_A_Demo_Data } from '@/constants/book-a-demo';
 import BookADemoForm from '../book-a-demo/BookADemoForm';
+import Image from 'next/image';
 
 const BookAMeeting = ({ data }) => {
   const { form } = Book_A_Demo_Data;
@@ -24,7 +25,6 @@ const BookAMeeting = ({ data }) => {
     descriptionStyle,
     parentItemBoxStyle,
     itemBoxStyle,
-    iconStyle,
     itemTitleStyle,
     itemDescriptionStyle,
     parentFormBoxStyle,
@@ -33,13 +33,13 @@ const BookAMeeting = ({ data }) => {
 
   const renderService = (item, index) => (
     <Box key={index} sx={itemBoxStyle}>
-      <Box
-        component={'img'}
-        src={item?.image || ''}
+      <Image
+        src={item?.image || '/'}
         alt={`${item?.alt || ''}`}
-        sx={iconStyle}
         width={28}
         height={28}
+        priority
+        style={{ objectFit: 'contain', maxHeight: '28px' }}
       />
       <Typography sx={itemTitleStyle}>{item?.title || ''}</Typography>
       <Typography sx={itemDescriptionStyle}>
@@ -55,12 +55,20 @@ const BookAMeeting = ({ data }) => {
           <Box sx={parentContentBoxStyle}>
             <Box sx={linkBoxStyle}>
               <Link href="/">
-                <Box
-                  component={'img'}
-                  sx={imageStyle}
-                  src="/images/eSpark Talent Logo.svg"
-                  alt="eSpark Talent logo"
-                />
+                <Box sx={imageStyle}>
+                  <Image
+                    src="/images/eSpark Talent Logo.svg"
+                    alt="eSpark Talent logo"
+                    width={162}
+                    height={200}
+                    priority
+                    style={{
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto',
+                    }}
+                  />
+                </Box>
               </Link>
             </Box>
             <Box sx={contentAndItemsBoxStyle}>

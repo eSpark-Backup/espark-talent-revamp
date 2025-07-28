@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const OutSourcingWork = ({ data }) => {
   const { title, cards, styles } = data || {};
@@ -27,11 +28,16 @@ const OutSourcingWork = ({ data }) => {
                   <Typography sx={descriptionStyle}>{description}</Typography>
                 </Box>
                 <Box sx={cardImageBoxStyle}>
-                  <Box
-                    src={image}
-                    component={'img'}
-                    sx={cardImageStyle(maxWidth, origin, scale)}
-                  />
+                  <Box sx={cardImageStyle(maxWidth, origin, scale)}>
+                    <Image
+                      src={image}
+                      alt="dashboard images"
+                      sizes="100vw"
+                      style={{ width: '100%', height: '100%' }}
+                      width={500}
+                      height={500}
+                    />
+                  </Box>
                 </Box>
               </Box>
             </Grid>

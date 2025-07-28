@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NavbarItemsMobile = ({
   item,
@@ -51,7 +52,16 @@ const NavbarItemsMobile = ({
         <Box onClick={handleClose} key={key} sx={nameAndDescriptionBoxStyle}>
           <Link key={key} href={href || '#'}>
             <Box sx={iconBoxStyle}>
-              <Box component={'img'} src={icon} sx={iconStyle} />
+              <Box sx={iconStyle}>
+                <Image
+                  src={icon}
+                  alt="slider image"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  width={500}
+                  height={500}
+                />
+              </Box>
             </Box>
           </Link>
           <Box sx={{ width: 'auto' }}>

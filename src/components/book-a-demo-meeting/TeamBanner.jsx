@@ -1,5 +1,6 @@
 'use client';
 import { Box, Typography, useMediaQuery } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -29,13 +30,16 @@ export const TeamBanner = ({ data }) => {
   );
 
   const awardImage = (img, index) => (
-    <Box
-      key={index}
-      alt={img?.alt || ''}
-      component={'img'}
-      src={img?.image || ''}
-      sx={awardImageStyle}
-    />
+    <Box sx={awardImageStyle} key={index}>
+      <Image
+        alt={img?.alt || ''}
+        src={img?.image || '/'}
+        width={132}
+        height={114}
+        priority
+        style={{ objectFit: 'contain', display: 'block', margin: '0 auto' }}
+      />
+    </Box>
   );
 
   return (
@@ -43,7 +47,20 @@ export const TeamBanner = ({ data }) => {
       {images?.map(employeeImage)}
       <Box sx={contentBoxStyle}>
         <Link href={data?.logoLink || ''}>
-          <Box component={'img'} src={data?.logo || ''} sx={logoImageStyle} />
+          <Box sx={logoImageStyle}>
+            <Image
+              src={data?.logo || '/'}
+              alt={'logo'}
+              width={159}
+              height={78}
+              priority
+              style={{
+                objectFit: 'contain',
+                display: 'block',
+                margin: '0 auto',
+              }}
+            />
+          </Box>
         </Link>
         <Typography sx={subTitleStyle}>{data?.subTitle || ''}</Typography>
         <Typography
@@ -69,7 +86,16 @@ export const TeamBanner = ({ data }) => {
           <Typography sx={btnStyle}>{data?.btnText || ''}</Typography>
         </Link>
       </Box>
-      <Box component={'img'} src={data?.group_img || ''} sx={groupImageStyle} />
+      <Box sx={groupImageStyle}>
+        <Image
+          src={data?.group_img || ''}
+          alt={'logo'}
+          width={685}
+          height={332}
+          priority
+          style={{ objectFit: 'contain', display: 'block', margin: '0 auto' }}
+        />
+      </Box>
       <Box sx={awardBoxStyle}>
         <Typography sx={awardTitleStyle}>{data?.awardTitle || ''}</Typography>
         <Box sx={awardImageBoxStyle}>

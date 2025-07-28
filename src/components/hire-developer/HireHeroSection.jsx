@@ -1,6 +1,7 @@
 'use client';
 import { frontendHeroSectionMainBoxStyle } from '@/constants/hire-developer/hire-developer';
 import { Box, Button, Container, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -22,11 +23,17 @@ const HireHeroSection = ({ data }) => {
           <Box sx={containerBoxStyle}>
             <Box sx={imageBoxStyle}>
               <Link href={'/'}>
-                <Box
-                  component={'img'}
+                <Image
                   src={data?.logo}
-                  sx={{ width: 'auto', height: 'auto' }}
                   alt="Thankyou - eSpark Talent"
+                  width={159}
+                  height={78}
+                  priority
+                  style={{
+                    objectFit: 'contain',
+                    display: 'block',
+                    margin: '0 auto',
+                  }}
                 />
               </Link>
             </Box>
@@ -48,11 +55,17 @@ const HireHeroSection = ({ data }) => {
               </Link>
             </Box>
             <Box justifyContent={'center'} textAlign="center" pt={3}>
-              <Box
-                component={'img'}
+              <Image
                 src={data?.image}
-                alt={'Hire A Developer Cover Art'}
-                sx={{ width: 'auto', height: 'auto' }}
+                alt="Hire A Developer Cover Art"
+                width={1200}
+                height={584}
+                priority
+                style={{
+                  objectFit: 'contain',
+                  display: 'block',
+                  margin: '0 auto',
+                }}
               />
             </Box>
           </Box>

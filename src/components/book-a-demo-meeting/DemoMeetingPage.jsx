@@ -39,7 +39,7 @@ const DemoMeetingPage = ({ data }) => {
       <Box sx={{ position: 'relative' }}>
         <Box
           component={'img'}
-          src={data?.bgImage}
+          src={data?.bgImage || ''}
           sx={{
             width: '100%',
             position: 'absolute',
@@ -48,9 +48,7 @@ const DemoMeetingPage = ({ data }) => {
             display: 'none',
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
-            '@media(min-width: 1300px)': {
-              display: 'flex',
-            },
+            '@media(min-width: 1300px)': { display: 'flex' },
           }}
         />
         <PricingWorks data={data?.howItWorks} />

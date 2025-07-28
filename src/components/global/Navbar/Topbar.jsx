@@ -15,7 +15,16 @@ const Topbar = ({ data }) => {
 
   const SocialIcon = ({ img, path }, index) => (
     <Link href={path || '#'} target="_blank" key={index}>
-      <Box component={'img'} src={img} alt="social-icon" />
+      <Box src={img}>
+        <Image
+          src={img}
+          alt="social-icon"
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          width={500}
+          height={500}
+        />
+      </Box>
     </Link>
   );
 

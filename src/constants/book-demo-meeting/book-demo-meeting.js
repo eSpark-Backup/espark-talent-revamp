@@ -130,15 +130,16 @@ export const DEMO_MEETING_DATA = {
       awardTitleStyle: { fontSize: '18px', fontWeight: 500, color: '#212123' },
       awardImageBoxStyle: {
         display: 'flex',
+        alignItems: 'center',
         gap: { xs: 0.5, md: 2 },
         flexDirection: { xs: 'row', sm: 'row' },
       },
       awardImageStyle: {
-        width: { xs: '80px', sm: '77px', md: 'auto' },
+        width: { xs: '70px', sm: '77px', md: 'auto' },
         height: { xs: '70px', sm: '77px', md: 'auto' },
-        '@media(min-width:280px) and (max-width:319px)': {
-          width: '50px',
-          height: '50px',
+        '@media(min-width:280px) and (max-width:352px)': {
+          width: '60px',
+          height: '60px',
         },
       },
       allImagesStyles: [

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import { eachCardForCustomizeSolution } from '@/constants/hire-developer/hire-developer';
+import Image from 'next/image';
 
 const CustomSection = ({ items, mainLayoutStyle }) => {
   const pathName = usePathname();
@@ -23,14 +24,17 @@ const CustomSection = ({ items, mainLayoutStyle }) => {
     } = eachCardForCustomizeSolution(index, pathName);
     return (
       <Box sx={cardLayoutStyle} key={index}>
+        <Box sx={startPoint}>
+          <Image
+            src={eachItem?.start_point || '/'}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: 'auto', height: 'auto' }}
+            width={500}
+            height={500}
+          />
+        </Box>
         <Box
-          component={'img'}
-          src={eachItem?.start_point || ''}
-          sx={startPoint}
-        />
-        <Box
-          component={'img'}
-          src={eachItem?.horizontal || ''}
           sx={
             pathName?.includes(demo_meeting) &&
             index !== allHorizontalImageStyles?.length - 2
@@ -39,25 +43,50 @@ const CustomSection = ({ items, mainLayoutStyle }) => {
                 ? allHorizontalImageStyles[index]
                 : { display: 'none' }
           }
-        />
-        <Box
-          component={'img'}
-          src={eachItem?.vertical || ''}
-          sx={allVerticalImageStyles[index]}
-        />
-        <Box
-          component={'img'}
-          src={eachItem?.end_point || ''}
-          sx={pathName?.includes(demo_meeting) ? endPoint[1] : endPoint[0]}
-        />
+        >
+          <Image
+            src={eachItem?.horizontal || '/'}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: 'auto', height: 'auto' }}
+            width={500}
+            height={500}
+          />
+        </Box>
+        <Box sx={allVerticalImageStyles[index]}>
+          <Image
+            src={eachItem?.vertical || '/'}
+            alt="slider image"
+            sizes="100vw"
+            style={{ width: 'auto', height: 'auto' }}
+            width={500}
+            height={500}
+          />
+        </Box>
+        <Box sx={pathName?.includes(demo_meeting) ? endPoint[1] : endPoint[0]}>
+          {eachItem?.end_point && (
+            <Image
+              src={eachItem?.end_point || '/'}
+              alt="slider image"
+              sizes="100vw"
+              style={{ width: 'auto', height: 'auto' }}
+              width={500}
+              height={500}
+            />
+          )}
+        </Box>
         <Box sx={allCardBoxStyles[index]}>
           <Box sx={titleBoxStyle}>
-            <Box
-              component={'img'}
-              src={eachItem?.icon || ''}
-              alt={eachItem?.alt || ''}
-              sx={iconImageStyle}
-            />
+            <Box sx={iconImageStyle}>
+              <Image
+                src={eachItem?.icon || '/'}
+                alt={eachItem?.alt || '/'}
+                sizes="100vw"
+                style={{ width: 'auto', height: 'auto' }}
+                width={500}
+                height={500}
+              />
+            </Box>
             <Typography
               component={'h4'}
               color="secondary"
