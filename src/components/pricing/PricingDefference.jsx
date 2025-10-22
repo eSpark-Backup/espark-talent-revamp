@@ -39,7 +39,10 @@ const PricingDefference = ({ data, backgroundColorStyle, titleColor }) => {
           <Typography variant="h3" sx={titleStyle}>
             {card?.title}
           </Typography>
-          <Typography sx={paragraphStyle}>{card?.description}</Typography>
+          <Typography
+            sx={paragraphStyle}
+            dangerouslySetInnerHTML={{ __html: card?.description }}
+          />
         </Box>
       </Card>
     </SwiperSlide>

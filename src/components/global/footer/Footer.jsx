@@ -128,7 +128,10 @@ const Footer = ({ data }) => {
               <Image alt="" src={logo} style={imageStyle} quality={80} fill />
             </Link>
           </Box>
-          <Typography sx={descriptionStyle}>{description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: description || '' }}
+          />
           <Box sx={socialMediaIconBoxStyle}>
             {socialMedia?.map(renderSocialMediaIcons)}
           </Box>

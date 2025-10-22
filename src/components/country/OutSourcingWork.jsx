@@ -24,7 +24,10 @@ const OutSourcingWork = ({ data }) => {
               <Box sx={cardStyle}>
                 <Box sx={cardContentBoxStyle}>
                   <Typography sx={cardTitleStyle}>{title}</Typography>
-                  <Typography sx={descriptionStyle}>{description}</Typography>
+                  <Typography
+                    sx={descriptionStyle}
+                    dangerouslySetInnerHTML={{ __html: description || '' }}
+                  />
                 </Box>
                 <Box sx={cardImageBoxStyle}>
                   <Box

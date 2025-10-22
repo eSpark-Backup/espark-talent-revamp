@@ -36,9 +36,11 @@ const BenefitsWorks = ({ data }) => {
           alt={item?.title}
           sx={iconStyle}
         />
-        <Typography color="#000" sx={itemParagraphStyle}>
-          {item?.paragraph}
-        </Typography>
+        <Typography
+          color="#000"
+          sx={itemParagraphStyle}
+          dangerouslySetInnerHTML={{ __html: item?.paragraph }}
+        />
       </Box>
     </Grid>
   );
@@ -51,9 +53,11 @@ const BenefitsWorks = ({ data }) => {
             <Typography variant="h2" sx={titleStyle}>
               {title}
             </Typography>
-            <Typography component={'p'} sx={paragraphStyle}>
-              {paragraph}
-            </Typography>
+            <Typography
+              component={'p'}
+              sx={paragraphStyle}
+              danggerouslySetInnerHTML={{ __html: paragraph }}
+            />
           </Box>
           <Grid container spacing={[5, 6, 2, 2]} sx={gridContainerStyle}>
             {vectorImages?.map(renderImage)}

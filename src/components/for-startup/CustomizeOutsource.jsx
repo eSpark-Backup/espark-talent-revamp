@@ -42,9 +42,10 @@ const CustomizeOutsource = ({ data }) => {
                   <ListItemIcon sx={listItemIconStyle}>
                     <TaskAltIcon fontSize="small" sx={taskAltIconStyle} />
                   </ListItemIcon>
-                  <Typography sx={listItemTypographyStyle}>
-                    {item?.description}
-                  </Typography>
+                  <Typography
+                    sx={listItemTypographyStyle}
+                    dagergerouslySetInnerHTML={{ __html: item?.description }}
+                  />
                 </Box>
               </Grid>
             ))}

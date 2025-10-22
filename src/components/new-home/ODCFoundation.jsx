@@ -72,7 +72,10 @@ const ODCFoundation = ({ data }) => {
             mr: { xs: index === 0 ? 0.9 : -0.5, md: index === 4 ? -2.2 : 0 },
           }}
         />
-        <Typography sx={stepDescriptionStyle}>{description}</Typography>
+        <Typography
+          sx={stepDescriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Grid>
   );

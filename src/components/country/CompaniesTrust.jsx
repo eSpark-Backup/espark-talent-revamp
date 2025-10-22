@@ -27,7 +27,10 @@ const CompaniesTrust = ({ data }) => {
       <Box component={'img'} src={image} sx={imageStyle} />
       <Box sx={titleAndDescripitonBoxStyle}>
         <Typography sx={cardTitleStyle}>{title}</Typography>
-        <Typography sx={cardDescriptionStyle}>{description}</Typography>
+        <Typography
+          sx={cardDescriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Box>
   );

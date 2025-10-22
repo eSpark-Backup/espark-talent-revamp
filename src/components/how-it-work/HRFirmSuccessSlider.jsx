@@ -113,9 +113,8 @@ const HRFirmSuccessSlider = ({ card }) => {
                         xs: '13.548px ',
                       },
                     }}
-                  >
-                    {item.description}
-                  </Typography>
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
                 </Grid>
               </Grid>
             </Box>

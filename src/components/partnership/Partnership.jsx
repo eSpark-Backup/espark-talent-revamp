@@ -71,9 +71,8 @@ const Partnership = ({ partnership }) => {
                       fontWeight: 400,
                       lineHeight: { xs: '17px', md: '45.766px' },
                     }}
-                  >
-                    {item?.description}
-                  </Typography>
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
                   {item?.items?.map((list, itemIndex) => (
                     <Box
                       key={itemIndex}

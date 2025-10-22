@@ -30,9 +30,11 @@ const PricingCard = ({ data, handleOpen }) => {
           <Typography variant="h1" sx={bothHeadingsStyle}>
             {data?.heading} {data?.subHeading}
           </Typography>
-          <Typography variant="body1" sx={paragraphStyle}>
-            {data?.paragraph}
-          </Typography>
+          <Typography
+            variant="body1"
+            sx={paragraphStyle}
+            dangerouslySetInnerHTML={{ __html: data?.paragraph }}
+          />
         </Box>
       </Box>
       <Container sx={blueCardContainerStyle}>

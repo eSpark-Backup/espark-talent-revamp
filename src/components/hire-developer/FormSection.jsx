@@ -48,9 +48,8 @@ const FormSection = ({ data }) => {
                     pathName,
                     book_a_demo_meeting
                   )}
-                >
-                  {description}
-                </Typography>
+                  dangerouslySetInnerHTML={{ __html: description }}
+                />
               </Box>
             </Box>
           </Box>

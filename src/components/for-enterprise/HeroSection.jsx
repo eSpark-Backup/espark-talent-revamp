@@ -145,9 +145,11 @@ const HeroSection = ({ data }) => {
                   </Typography>
                 )}
                 {data?.description && (
-                  <Typography component={'p'} sx={descriptionTypographyStyle}>
-                    {data?.description}
-                  </Typography>
+                  <Typography
+                    component={'p'}
+                    sx={descriptionTypographyStyle}
+                    dangerouslySetInnerHTML={{ __html: data?.description }}
+                  />
                 )}
                 {data?.button?.link && data?.button?.label && (
                   <Link href={data?.button.link} target="_blank">

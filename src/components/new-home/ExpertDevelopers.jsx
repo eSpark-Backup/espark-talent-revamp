@@ -27,7 +27,10 @@ const ExpertDeveloper = ({ data }) => {
         {top ? <Typography sx={cardTitleStyle}>{title}</Typography> : null}
         <Box component={'img'} src={image} sx={imageStyle} />
         {top ? null : <Typography sx={cardTitleStyle}>{title}</Typography>}
-        <Typography sx={cardDescriptionStyle}>{description}</Typography>
+        <Typography
+          sx={cardDescriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Grid>
   );

@@ -61,7 +61,12 @@ const ProfessionalTeamCard = ({ teamData }) => {
           }
         />
         <CardContent sx={contentStyle}>
-          <Typography sx={paragraphStyle}>{card?.paragraph}</Typography>
+          <Typography
+            sx={paragraphStyle}
+            dangerouslySetInnerHTML={{
+              __html: card?.paragraph,
+            }}
+          />
         </CardContent>
       </Card>
     </SwiperSlide>

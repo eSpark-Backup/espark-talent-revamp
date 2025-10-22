@@ -85,14 +85,16 @@ const InnerHero = ({ data, innerData }) => {
                     lg: 'left',
                     xl: 'left',
                   }}
+                  dangerouslySetInnerHTML={
+                    !isLoading
+                      ? { __html: parsedWiki.shortDescription }
+                      : undefined
+                  }
                 >
-                  {isLoading ? (
-                    <Skeleton count={3} />
-                  ) : (
-                    parsedWiki.shortDescription
-                  )}
+                  {isLoading && <Skeleton count={3} />}
                 </Typography>
               )}
+
               {data?.button && (
                 <Box
                   py={{

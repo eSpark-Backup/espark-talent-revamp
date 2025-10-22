@@ -40,9 +40,10 @@ const OurOutsourcing = ({ data }) => {
               <Typography variant="h3" sx={titleTypographyStyle}>
                 {data?.title}
               </Typography>
-              <Typography sx={descriptionTypographyStyle}>
-                {data?.description}
-              </Typography>
+              <Typography
+                sx={descriptionTypographyStyle}
+                dangerouslySetInnerHTML={{ __html: data?.description }}
+              />
             </Box>
             <Box sx={listBoxStyle}>
               {listItem?.map((item, index) => (
@@ -51,9 +52,10 @@ const OurOutsourcing = ({ data }) => {
                     <ListItemIcon sx={listItemIconStyle}>
                       <TaskAltIcon fontSize="small" sx={taskAltIconStyle} />
                     </ListItemIcon>
-                    <Typography sx={listItemTypographyStyle}>
-                      {item?.description}
-                    </Typography>
+                    <Typography
+                      sx={listItemTypographyStyle}
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </Box>
                 </Grid>
               ))}

@@ -80,9 +80,8 @@ const ServiceFaq = ({ data, color }) => {
                   lineHeight: { xs: '15px', md: '23.69px' },
                   pr: '50px',
                 }}
-              >
-                {item?.description}
-              </Typography>
+                dangerouslySetInnerHTML={{ __html: item?.description }}
+              />
             </AccordionDetails>
           </Accordion>
         );

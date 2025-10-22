@@ -47,7 +47,10 @@ const ProjectContract = ({ data }) => {
           <Box sx={firstGridBoxStyle}>
             <Box sx={titleAndDescriptionBoxStyle}>
               <Typography sx={textStyle}>{title}</Typography>
-              <Typography sx={descriptionStyle}>{description}</Typography>
+              <Typography
+                sx={descriptionStyle}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
+              />
             </Box>
             <Box sx={imageBoxStyle}>
               <Box component={'img'} src={image} sx={imageStyle} />

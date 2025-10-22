@@ -82,9 +82,8 @@ const Faq = ({ data }) => {
                         },
                         lineHeight: '23.69px',
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </AccordionDetails>
                 </Accordion>
               );
@@ -148,9 +147,8 @@ const Faq = ({ data }) => {
                         },
                         lineHeight: '23.69px',
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </AccordionDetails>
                 </Accordion>
               );

@@ -111,9 +111,8 @@ const OurService = ({ ourService }) => {
                         lineHeight: { xs: '23.344px', md: '26.979px' },
                         mt: { lg: 1 },
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </Box>
                 </Box>
               </Box>

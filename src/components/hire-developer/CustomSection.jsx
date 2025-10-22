@@ -71,9 +71,8 @@ const CustomSection = ({ items, mainLayoutStyle }) => {
               component="p"
               sx={descriptionTypographyStyle}
               color="initial"
-            >
-              {eachItem?.paragraph || ''}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: eachItem?.paragraph || '' }}
+            />
           </Box>
         </Box>
       </Box>

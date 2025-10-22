@@ -56,7 +56,10 @@ const FooterCTA = () => {
       <Box sx={innerBoxStyle}>
         <Box sx={contentBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>
-          <Typography sx={descriptionStyle}>{description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: description || '' }}
+          />
           <Button disableRipple onClick={handleButtonClick} sx={buttonStyle}>
             {buttonLabel}
           </Button>

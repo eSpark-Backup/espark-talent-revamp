@@ -46,7 +46,10 @@ const OutSourcingSolution = ({ data }) => {
                   >
                     {item?.title}
                   </Typography>
-                  <Typography variant="body1">{item?.paragraph}</Typography>
+                  <Typography
+                    variant="body1"
+                    dangerouslySetInnerHTML={{ __html: item?.paragraph }}
+                  />
                 </Box>
               </Grid>
             ))}

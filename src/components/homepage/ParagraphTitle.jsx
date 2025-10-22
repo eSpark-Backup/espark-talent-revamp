@@ -36,9 +36,8 @@ const ParagraphTitle = ({
           variant={pVar || 'body1'}
           color={pColor || 'secondary'}
           sx={{ textAlign: pAlign || 'center' }}
-        >
-          {paragraph}
-        </Typography>
+          dangerouslySetInnerHTML={{ __html: paragraph }}
+        />
       </Box>
     </>
   );
