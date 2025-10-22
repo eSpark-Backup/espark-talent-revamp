@@ -64,7 +64,10 @@ const Doorstep = ({ data }) => {
                     src={icon}
                     sx={leftExpertiseFirstIconStyle}
                   />
-                  <Typography sx={expertiseTextStyle}>{text}</Typography>
+                  <Typography
+                    sx={expertiseTextStyle}
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  />
                   <Box
                     component={'img'}
                     src={icon}
@@ -112,7 +115,10 @@ const Doorstep = ({ data }) => {
                     src={icon}
                     sx={rightExpertiseFirstIconStyle}
                   />
-                  <Typography sx={expertiseTextStyle}>{text}</Typography>
+                  <Typography
+                    sx={expertiseTextStyle}
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  />
                   <Box
                     component={'img'}
                     src={icon}

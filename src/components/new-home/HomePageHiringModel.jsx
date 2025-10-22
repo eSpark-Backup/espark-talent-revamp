@@ -46,9 +46,9 @@ const HomePageHiringModel = ({ data }) => {
         <Box sx={{ flexGrow: 1, my: 2 }}>
           <Typography component={'ul'} sx={ulStyle}>
             {eachItem?.points?.map((item, pointIndex) => (
-              <Typography key={pointIndex} component={'li'} sx={listStyle}>
-                {item?.text}
-              </Typography>
+              <Typography key={pointIndex} component={'li'} sx={listStyle}
+              dangerouslySetInnerHTML={{ __html: item?.text }}
+               />
             ))}
           </Typography>
         </Box>

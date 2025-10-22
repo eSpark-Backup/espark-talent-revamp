@@ -50,7 +50,10 @@ const ExpertDeveloper = ({ data }) => {
         </Box>
         <Box sx={titleAndTextBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>
-          <Typography sx={textStyle}>{text}</Typography>
+          <Typography
+            sx={textStyle}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         </Box>
       </Box>
       <Grid

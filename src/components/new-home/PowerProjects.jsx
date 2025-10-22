@@ -75,9 +75,8 @@ const PowerProjects = ({ data }) => {
                         fontWeight: 400,
                         color: '#000000',
                       }}
-                    >
-                      {logo?.text}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: logo?.text }}
+                    />
                   </Box>
                 }
               />

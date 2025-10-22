@@ -84,7 +84,7 @@ const ODCFoundation = ({ data }) => {
     <Box sx={mainBoxStyle} id="pricing-difference">
       <Box sx={subTitleAndTitleBoxStyle}>
         <Typography sx={titleStyle}>{title}</Typography>
-        <Typography sx={textStyle}>{text}</Typography>
+        <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       </Box>
       <Grid
         container

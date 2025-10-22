@@ -47,9 +47,9 @@ const ServiceProcessMobile = ({ data }) => {
                 __html: capitalizeFirstLetter(process?.title),
               }}
             />
-            <Typography sx={responsiveProcessCardTitleTextStyle()}>
-              {process?.text}
-            </Typography>
+            <Typography sx={responsiveProcessCardTitleTextStyle()}
+            dangerouslySetInnerHTML={{ __html: process?.text }}
+            />
           </Box>
         </Box>
       ))}

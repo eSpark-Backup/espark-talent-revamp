@@ -19,7 +19,7 @@ const OurAreaOfExpertise = ({ data }) => {
       <Typography variant="h4" fontWeight="bold" sx={titleStyle}>
         {title}
       </Typography>
-      <Typography sx={textStyle}>{text}</Typography>
+      <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       <Grid
         container
         justifyContent={'center'}

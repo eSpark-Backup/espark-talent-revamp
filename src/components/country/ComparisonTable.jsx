@@ -28,7 +28,7 @@ const ComparisonTable = ({ data }) => {
       <Typography gutterBottom sx={titleStyle}>
         {title}
       </Typography>
-      <Typography sx={textStyle}>{text}</Typography>
+      <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       <TableContainer component={Paper} sx={tableContainerStyle}>
         <Table sx={{ minWidth: 650 }} aria-label="comparison table">
           <TableHead>

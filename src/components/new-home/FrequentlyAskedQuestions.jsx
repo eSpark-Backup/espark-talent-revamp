@@ -22,6 +22,7 @@ const FrequetlyAskedQuestions = ({ data }) => {
 
   const renderCard = (startIndex, endIndex) => (
     <Grid
+      item
       xs={12}
       sm={12}
       md={5}

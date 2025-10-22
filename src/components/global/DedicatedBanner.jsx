@@ -36,7 +36,7 @@ const DedicatedBanner = ({ data }) => {
           sx={titleStyle}
           dangerouslySetInnerHTML={{ __html: title }}
         />
-        <Typography sx={textStyle}>{text}</Typography>
+        <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
         <Button
           variant="contained"
           onClick={() => window?.open(link, '_blank')}

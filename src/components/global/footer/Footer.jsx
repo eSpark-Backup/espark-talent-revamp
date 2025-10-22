@@ -105,7 +105,9 @@ const Footer = ({ data }) => {
   const renderCopyRightLinks = (link, linkIndex) => (
     <Box key={linkIndex} sx={termsAndConditionBoxStyle(linkIndex)}>
       <Link href={link?.link || '#'} style={termsAndConditionLinkStyle}>
-        <Typography sx={termsAndConditionTextStyle}>{link?.text}</Typography>
+        <Typography sx={termsAndConditionTextStyle}
+        dangerouslySetInnerHTML={{ __html: link?.text }}
+        />
       </Link>
     </Box>
   );

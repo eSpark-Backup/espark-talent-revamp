@@ -10,7 +10,7 @@ import 'swiper/css';
 import GlobalTeamsLoader from '../global/GlobalTeamsLoader';
 
 const GlobalTeams = ({ data }) => {
-  const { title, text, slides, styles } = data || {};
+  const { title, text, slides, styles, description } = data || {};
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -124,7 +124,14 @@ const GlobalTeams = ({ data }) => {
       <Box sx={mainBoxStyle}>
         <Box>
           <Typography sx={titleStyle}>{title}</Typography>
-          <Typography sx={textStyle}>{text}</Typography>
+          <Typography
+            sx={textStyle}
+            dangerouslySetInnerHTML={{ __html: text }}
+          /> 
+          <Typography
+            sx={textStyle}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </Box>
         <Box>
           <BreakBorderSlider />
