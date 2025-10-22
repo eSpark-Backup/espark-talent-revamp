@@ -68,8 +68,9 @@ const ProjectContract = ({ data }) => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography sx={listItemTextStyle}
-                      dangerouslySetInnerHTML={{ __html: text }}
+                      <Typography
+                        sx={listItemTextStyle}
+                        dangerouslySetInnerHTML={{ __html: text }}
                       />
                     }
                   />

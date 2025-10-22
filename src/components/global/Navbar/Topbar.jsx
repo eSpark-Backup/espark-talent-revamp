@@ -30,8 +30,9 @@ const Topbar = ({ data }) => {
               width={20}
               height={20}
             />
-            <Typography sx={mailTextStyle}
-            dangerouslySetInnerHTML={{ __html: mailText }}
+            <Typography
+              sx={mailTextStyle}
+              dangerouslySetInnerHTML={{ __html: mailText }}
             />
           </Box>
         </Link>

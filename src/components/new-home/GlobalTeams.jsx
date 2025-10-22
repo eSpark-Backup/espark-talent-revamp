@@ -127,7 +127,7 @@ const GlobalTeams = ({ data }) => {
           <Typography
             sx={textStyle}
             dangerouslySetInnerHTML={{ __html: text }}
-          /> 
+          />
           <Typography
             sx={textStyle}
             dangerouslySetInnerHTML={{ __html: description }}

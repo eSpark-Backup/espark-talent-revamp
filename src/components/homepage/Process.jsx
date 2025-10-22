@@ -32,8 +32,11 @@ const Process = ({ data }) => {
           {process?.title}
         </Typography>
         <Typography component="div" sx={textBoxStyle(process)}>
-          <Typography component={'p'} variant="p" sx={textStyle}
-          dangerouslySetInnerHTML={{ __html: process?.text }}
+          <Typography
+            component={'p'}
+            variant="p"
+            sx={textStyle}
+            dangerouslySetInnerHTML={{ __html: process?.text }}
           />
         </Typography>
       </Box>

@@ -1598,7 +1598,8 @@ export const ENTIRE_TEAM = {
 export const GLOBAL_TEAMS = {
   title: 'Break Borders, Build Global Teams',
   text: 'Connect with world-class talent, no matter where you are.',
-  description: '<b>eSpark Talent</b> is the global outsourcing platform trusted by industry leaders, providing scalable <b>software development solutions</b> and specialized <b>embedded systems design</b> worldwide.',
+  description:
+    '<b>eSpark Talent</b> is the global outsourcing platform trusted by industry leaders, providing scalable <b>software development solutions</b> and specialized <b>embedded systems design</b> worldwide.',
   slides: [
     {
       country: 'USA',

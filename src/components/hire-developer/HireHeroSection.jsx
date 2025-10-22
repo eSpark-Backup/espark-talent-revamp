@@ -43,9 +43,7 @@ const HireHeroSection = ({ data }) => {
             <Box justifyContent={'center'} textAlign="center" py={3}>
               <Link href={data?.btnLink}>
                 <Button variant="contained" sx={buttonStyle}>
-                  <Typography sx={btnTextStyle}
-                  dangerouslySetInnerHTML={{ __html: data?.btnText }}
-                  >
+                  <Typography sx={btnTextStyle}>{data?.btnText}</Typography>
                 </Button>
               </Link>
             </Box>

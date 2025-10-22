@@ -25,8 +25,10 @@ export default function BasicModal({ text, open, handleClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}
-          dangeriouslySetInnerHTML={{ __html: text }}
+          <Typography
+            id="modal-modal-description"
+            sx={{ mt: 2 }}
+            dangeriouslySetInnerHTML={{ __html: text }}
           />
         </Box>
       </Modal>

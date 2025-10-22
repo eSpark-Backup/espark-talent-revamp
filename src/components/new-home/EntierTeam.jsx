@@ -63,8 +63,9 @@ const EntierTeam = ({ data }) => {
                         <Typography sx={listHeadingStyle}>
                           {item?.title}
                         </Typography>
-                        <Typography sx={listParagraphStyle}
-                        dangerouslySetInnerHTML={{ __html: item?.text }}
+                        <Typography
+                          sx={listParagraphStyle}
+                          dangerouslySetInnerHTML={{ __html: item?.text }}
                         />
                       </Box>
                     }
