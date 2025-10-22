@@ -131,7 +131,7 @@ export const HERO_DATA = {
 export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
   title: `Hire Top Talent Now`,
-  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talents.`,
+  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talent with <b>eSpark Talent.</b>`,
   bgImage: '/images/homepage/hero/emp-hero.webp',
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
@@ -315,19 +315,19 @@ export const DIFFERENCE_DATA = {
     {
       id: 1,
       title: `Scale faster`,
-      description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
+      description: `<b>eSpark Talent</b> offers offshore operations to help scale quickly, meet demand, combat rising labor costs, and access specialty talent all without the overheads.`,
       icon: `/images/new-home/differnce/scale_faster.svg`,
     },
     {
       id: 2,
       title: `Increase Quality & Efficiency`,
-      description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
+      description: `Our remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools, delivering industry-leading <b>software development solutions.</b>`,
       icon: `/images/new-home/differnce/increase_quality.svg`,
     },
     {
       id: 3,
       title: `Reduce costs`,
-      description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
+      description: `<b>eSpark Talent</b> outsourcing allows your organization to be more competitive, sustainable, and profitable with 70% employee cost savings, while leveraging advanced <b>embedded systems design</b> capabilities.`,
       icon: `/images/new-home/differnce/reduce_costs.svg`,
     },
   ],
@@ -1496,11 +1496,11 @@ export const ENTIRE_TEAM = {
     },
     {
       title: 'Clear Payment & Inventory Records',
-      text: 'View salary disbursements, invoices, and allocated inventory in one dashboard.',
+      text: 'View salary disbursements, invoices, and allocated inventory with the support of software development solutions tools.',
     },
     {
       title: 'Easy Contract & NDA Access',
-      text: 'Keep all employee contracts and signed NDAs organized and just a click away.',
+      text: 'Keep all employee contracts and signed NDAs organized and just a click away, supported by advanced <b>embedded systems design</b> for seamless management.',
     },
   ],
 
@@ -1598,6 +1598,7 @@ export const ENTIRE_TEAM = {
 export const GLOBAL_TEAMS = {
   title: 'Break Borders, Build Global Teams',
   text: 'Connect with world-class talent, no matter where you are.',
+  description: '<b>eSpark Talent</b> is the global outsourcing platform trusted by industry leaders, providing scalable <b>software development solutions</b> and specialized <b>embedded systems design</b> worldwide.',
   slides: [
     {
       country: 'USA',
