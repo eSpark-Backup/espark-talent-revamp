@@ -1086,6 +1086,12 @@ export const OFFSHORE_DATA = {
 };
 
 export const POWER_PROJECT_DATA = {
+  paragraph: `
+    All skills above are integrated for comprehensive <b>software development solutions</b> 
+    and <b>embedded systems design</b>.<br/>
+    These capabilities ensure that businesses working with <b>eSpark Talent</b> 
+    gain unmatched technical expertise and operational efficiency.
+  `,
   first_text: {
     text: 'Power Your',
     logos: [
