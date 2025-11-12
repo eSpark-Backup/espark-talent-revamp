@@ -27,9 +27,10 @@ const HireRemoteBanner = ({ data, handleOpen, styles }) => {
             <Box sx={titleBoxStyle}>
               <Typography sx={titleTextStyle}>{data?.title || ''}</Typography>
             </Box>
-            <Typography sx={descriptionTextStyle}>
-              {data?.description || ''}
-            </Typography>
+            <Typography
+              sx={descriptionTextStyle}
+              dangerouslySetInnerHTML={{ __html: data?.description || '' }}
+            />
             <Button disableRipple onClick={handleOpen} sx={buttonStyle}>
               {data?.btnText || ''}
             </Button>

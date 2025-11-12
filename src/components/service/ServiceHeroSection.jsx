@@ -57,7 +57,10 @@ const ServiceHeroSection = ({ data }) => {
                   />
                 )}
                 {description && (
-                  <Typography sx={descriptionStyle}>{description}</Typography>
+                  <Typography
+                    sx={descriptionStyle}
+                    dangerouslySetInnerHTML={{ __html: description || '' }}
+                  />
                 )}
                 <Grid container>
                   <Grid item xs={14} lg={4}>

@@ -28,7 +28,7 @@ const OrganizeTeam = ({ data }) => {
           {title_2}
         </Box>
       </Box>
-      <Typography sx={textStyle}>{text}</Typography>
+      <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       <Button sx={buttonStyle} onClick={() => window?.open(link, '_blank')}>
         {buttonText}
       </Button>

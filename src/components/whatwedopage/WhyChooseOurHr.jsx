@@ -68,9 +68,8 @@ const WhyChooseOurHr = ({ data }) => {
                     textAlign: 'start',
                   },
                 }}
-              >
-                {data?.paragraph}
-              </Typography>
+                dangerouslySetInnerHTML={{ __html: data?.paragraph }}
+              />
             </Box>
           </Box>
           <Box

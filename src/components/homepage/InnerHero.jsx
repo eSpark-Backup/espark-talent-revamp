@@ -63,7 +63,7 @@ const InnerHero = ({ data, innerData }) => {
                   {isLoading ? (
                     <Skeleton width={200} height={24} />
                   ) : (
-                    parsedWiki.title
+                    (parsedWiki?.heading ?? parsedWiki?.title)
                   )}
                 </Typography>
               )}
@@ -93,6 +93,7 @@ const InnerHero = ({ data, innerData }) => {
                   )}
                 </Typography>
               )}
+
               {data?.button && (
                 <Box
                   py={{
@@ -147,8 +148,13 @@ const InnerHero = ({ data, innerData }) => {
                   <Image
                     quality="85"
                     priority={true}
-                    src={parsedWiki.heroImage}
-                    alt={`${parsedWiki.title}`}
+                    src={parsedWiki.heroImagePath ?? parsedWiki.heroImage}
+                    alt={
+                      parsedWiki?.heroImageAlt ??
+                      parsedWiki?.heading ??
+                      parsedWiki?.title ??
+                      'Wiki image'
+                    }
                     width={data?.imageWidth}
                     height={data?.imageHeight}
                   />

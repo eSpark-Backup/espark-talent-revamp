@@ -68,7 +68,10 @@ const ClientSaysSlider = ({ data, styles }) => {
               <StarRating stars={card?.rating} />
             </Box>
           </Box>
-          <Typography sx={descriptionStyle}>{card?.description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: card?.description }}
+          />
         </Box>
       </Card>
     </SwiperSlide>

@@ -23,7 +23,10 @@ const BookADemoContent = ({ content, styles }) => {
               sx={titleStyle}
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <Typography sx={descriptionStyle}>{description}</Typography>
+            <Typography
+              sx={descriptionStyle}
+              dangerouslySetInnerHTML={{ __html: description || '' }}
+            />
           </Box>
           <Box component={'img'} src={image} sx={imageStyle} alt={alt} />
           <BookClientSlider

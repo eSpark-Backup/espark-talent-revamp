@@ -4,7 +4,7 @@ import { keyframes } from '@mui/system';
 import Image from 'next/image';
 
 const PowerProjects = ({ data }) => {
-  const { first_text, second_text, third_text, styles } = data || {};
+  const { paragraph, first_text, second_text, third_text, styles } = data || {};
   const {
     mainBoxStyle,
     containerStyle,
@@ -75,9 +75,8 @@ const PowerProjects = ({ data }) => {
                         fontWeight: 400,
                         color: '#000000',
                       }}
-                    >
-                      {logo?.text}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: logo?.text }}
+                    />
                   </Box>
                 }
               />
@@ -89,29 +88,43 @@ const PowerProjects = ({ data }) => {
   };
 
   return (
-    <Box sx={mainBoxStyle}>
-      <RenderText
-        title={first_text?.text}
-        logos={first_text?.logos}
-        maxWidth={{ xs: '400px', md: '680px', lg: '850px' }}
-        scrollDirection={'right'}
-        top={'73%'}
-      />
-      <RenderText
-        title={second_text?.text}
-        logos={second_text?.logos}
-        maxWidth={{ xs: '550px', md: '800px', lg: '1150px' }}
-        scrollDirection={'left'}
-        top={'80%'}
-      />
-      <RenderText
-        title={third_text?.text}
-        logos={third_text?.logos}
-        maxWidth={'1400px'}
-        scrollDirection={'right'}
-        top={{ xs: '95%', md: '80%' }}
-      />
-    </Box>
+    <>
+      <Box sx={mainBoxStyle}>
+        <RenderText
+          title={first_text?.text}
+          logos={first_text?.logos}
+          maxWidth={{ xs: '400px', md: '680px', lg: '850px' }}
+          scrollDirection={'right'}
+          top={'73%'}
+        />
+        <RenderText
+          title={second_text?.text}
+          logos={second_text?.logos}
+          maxWidth={{ xs: '550px', md: '800px', lg: '1150px' }}
+          scrollDirection={'left'}
+          top={'80%'}
+        />
+        <RenderText
+          title={third_text?.text}
+          logos={third_text?.logos}
+          maxWidth={'1400px'}
+          scrollDirection={'right'}
+          top={{ xs: '95%', md: '80%' }}
+        />
+        <Box
+          sx={{
+            px: 2,
+            pt: 5,
+            color: '#000000',
+            textAlign: 'center',
+            fontSize: { xs: '18px', md: '20px' },
+            fontWeight: 400,
+            maxWidth: '1400px',
+          }}
+          dangerouslySetInnerHTML={{ __html: paragraph }}
+        />
+      </Box>
+    </>
   );
 };
 

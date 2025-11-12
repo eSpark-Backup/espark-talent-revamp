@@ -59,9 +59,10 @@ const NavbarItemsMobile = ({
               <Typography textTransform="capitalize" sx={collapseNameStyle}>
                 {name}
               </Typography>
-              <Typography sx={collapseDescriptionStyle}>
-                {description}
-              </Typography>
+              <Typography
+                sx={collapseDescriptionStyle}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
+              />
             </Link>
           </Box>
         </Box>

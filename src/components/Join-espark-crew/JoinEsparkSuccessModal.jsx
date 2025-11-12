@@ -48,9 +48,8 @@ export default function JoinEsparkSuccessModal({ open, handleClose }) {
               textAlign: 'center',
               color: 'black',
             }}
-          >
-            {description}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
 
           {/* MUI button here */}
           <Box sx={{ mt: 2 }}>

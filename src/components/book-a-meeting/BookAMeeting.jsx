@@ -42,9 +42,10 @@ const BookAMeeting = ({ data }) => {
         height={28}
       />
       <Typography sx={itemTitleStyle}>{item?.title || ''}</Typography>
-      <Typography sx={itemDescriptionStyle}>
-        {item?.description || ''}
-      </Typography>
+      <Typography
+        sx={itemDescriptionStyle}
+        dangerouslySetInnerHTML={{ __html: item?.description || '' }}
+      />
     </Box>
   );
 
@@ -82,7 +83,10 @@ const BookAMeeting = ({ data }) => {
                   </Typography>
                 </Box>
                 <Box sx={descriptionBoxStyle}>
-                  <Typography sx={descriptionStyle}>{description}</Typography>
+                  <Typography
+                    sx={descriptionStyle}
+                    dangerouslySetInnerHTML={{ __html: description || '' }}
+                  />
                 </Box>
               </Box>
               <Box sx={parentItemBoxStyle}>{services?.map(renderService)}</Box>

@@ -35,9 +35,10 @@ const OutSourcingAdvantage = ({ data }) => {
                 variant="body1"
                 color="secondary"
                 sx={paragraphTypographyStyle}
-              >
-                {data?.paragraph || 'Paragraph not available'}
-              </Typography>
+                dangerouslySetInnerHTML={{
+                  __html: data?.paragraph || 'Paragraph not available',
+                }}
+              />
               <Grid container sx={itemsGridContainerStyle}>
                 {data?.items?.length > 0 ? (
                   data?.items.map((list, itemIndex) => (

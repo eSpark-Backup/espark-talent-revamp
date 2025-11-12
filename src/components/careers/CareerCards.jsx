@@ -110,9 +110,12 @@ const CareerCards = ({ data }) => {
               <Skeleton key={i} variant="text" sx={{ fontSize: '1rem' }} />
             ))
         ) : (
-          <Typography color="#000" variant="body1" sx={jobDiscriptionTextStyle}>
-            {item?.description}
-          </Typography>
+          <Typography
+            color="#000"
+            variant="body1"
+            sx={jobDiscriptionTextStyle}
+            dangerouslySetInnerHTML={{ __html: item?.description }}
+          />
         )}
       </Box>
       <Box sx={applyButtonBoxStyle}>

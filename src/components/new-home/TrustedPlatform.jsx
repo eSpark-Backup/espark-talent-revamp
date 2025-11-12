@@ -83,7 +83,10 @@ const TrustedPlatform = ({ data }) => {
           <Grid item xs={12} sm={6} md={3.5} lg={3} key={index}>
             <Box sx={reviewBoxStyle}>
               <Typography sx={reviewTitleStyle}>{item?.title}</Typography>
-              <Typography sx={reviewTextStyle}>{item?.text}</Typography>
+              <Typography
+                sx={reviewTextStyle}
+                dangerouslySetInnerHTML={{ __html: item?.text }}
+              />
             </Box>
           </Grid>
         ))}

@@ -22,6 +22,7 @@ const FrequetlyAskedQuestions = ({ data }) => {
 
   const renderCard = (startIndex, endIndex) => (
     <Grid
+      item
       xs={12}
       sm={12}
       md={5}
@@ -55,9 +56,11 @@ const FrequetlyAskedQuestions = ({ data }) => {
                   </Button>
                 </Box>
                 {hasDescription && isOpen && (
-                  <Typography sx={cardDescriptionStyle} mt={1}>
-                    {description}
-                  </Typography>
+                  <Typography
+                    sx={cardDescriptionStyle}
+                    mt={1}
+                    dangerouslySetInnerHTML={{ __html: description || '' }}
+                  />
                 )}
               </Box>
             </Grid>

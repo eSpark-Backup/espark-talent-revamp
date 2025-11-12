@@ -96,9 +96,8 @@ const PricingWorks = ({ data }) => {
           component={'p'}
           color={'secondary'}
           sx={worksSubHeadingtextStyle}
-        >
-          {data?.description}
-        </Typography>
+          dangerouslySetInnerHTML={{ __html: data?.description }}
+        />
       </Box>
       {loading ? (
         <Box

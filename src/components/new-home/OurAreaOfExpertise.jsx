@@ -19,7 +19,7 @@ const OurAreaOfExpertise = ({ data }) => {
       <Typography variant="h4" fontWeight="bold" sx={titleStyle}>
         {title}
       </Typography>
-      <Typography sx={textStyle}>{text}</Typography>
+      <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       <Grid
         container
         justifyContent={'center'}
@@ -32,7 +32,10 @@ const OurAreaOfExpertise = ({ data }) => {
             <Box sx={cardStyle}>
               <Box component={'img'} src={image} sx={imageStyle} />
               <Typography sx={cardTitleStyle}>{title}</Typography>
-              <Typography sx={cardDescriptionStyle}>{description}</Typography>
+              <Typography
+                sx={cardDescriptionStyle}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
+              />
             </Box>
           </Grid>
         ))}

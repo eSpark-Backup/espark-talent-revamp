@@ -24,7 +24,10 @@ const ChooseAnOffshoreDevelopmentCenter = ({ data }) => {
     >
       <Box component="img" src={image} sx={imageStyle} />
       <Typography sx={cardTitleStyle}>{title}</Typography>
-      <Typography sx={cardDescriptionStyle}>{description}</Typography>
+      <Typography
+        sx={cardDescriptionStyle}
+        dangerouslySetInnerHTML={{ __html: description || '' }}
+      />
     </Box>
   );
 

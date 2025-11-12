@@ -57,7 +57,10 @@ const ExpertTeamCard = ({ teamData }) => {
           <Typography variant="h3" sx={titleStyle}>
             {card?.title || ''}
           </Typography>
-          <Typography sx={paragraphStyle}>{card?.paragraph}</Typography>
+          <Typography
+            sx={paragraphStyle}
+            dangerouslySetInnerHTML={{ __html: card?.paragraph }}
+          />
         </CardContent>
       </Card>
     </SwiperSlide>

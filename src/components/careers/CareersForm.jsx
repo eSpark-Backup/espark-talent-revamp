@@ -210,18 +210,19 @@ const CareersForm = ({ form, jobData, handleCloseModal }) => {
               color: '#001C63',
               fontSize: {
                 xl: '15px',
-                lg: 'calc(15px*.8)',
-                md: 'calc(15px*.7)',
-                sm: 'calc(15px*.6)',
-                xs: 'calc(15px*.5)',
+                lg: 'calc(15px * .8)',
+                md: 'calc(15px * .7)',
+                sm: 'calc(15px * .6)',
+                xs: 'calc(15px * .5)',
               },
               fontStyle: 'normal',
               fontWeight: 400,
               lineHeight: 1.6,
             }}
-          >
-            {jobData.description?.substring(0, 150)}...
-          </Typography>
+            dangerouslySetInnerHTML={{
+              __html: `${jobData.description?.substring(0, 150) || ''}...`,
+            }}
+          />
         </Box>
         <Box component={'form'}>
           {fields &&

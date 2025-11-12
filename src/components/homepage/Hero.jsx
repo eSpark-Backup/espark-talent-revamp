@@ -55,9 +55,10 @@ const Hero = ({ data }) => {
               </Typography>
             )}
             {description && (
-              <Typography sx={descStyle(data, isHome)}>
-                {data?.description}
-              </Typography>
+              <Typography
+                sx={descStyle(data, isHome)}
+                dangerouslySetInnerHTML={{ __html: data?.description }}
+              />
             )}
             {button && (
               <Box sx={buttonBoxStyle}>

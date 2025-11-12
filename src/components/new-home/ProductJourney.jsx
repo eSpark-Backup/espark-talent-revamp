@@ -28,7 +28,10 @@ const ProductJourney = ({ data }) => {
       <Box component={'img'} src={image} sx={imageStyle} />
       <Box sx={titleAndDescripitonBoxStyle}>
         <Typography sx={cardTitleStyle}>{title}</Typography>
-        <Typography sx={cardDescriptionStyle}>{description}</Typography>
+        <Typography
+          sx={cardDescriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Box>
   );
@@ -37,7 +40,10 @@ const ProductJourney = ({ data }) => {
     <Box id="pricing-difference" sx={mainBoxStyle}>
       <Box sx={contentBoxStyle}>
         <Typography sx={titleStyle}>{title}</Typography>
-        <Typography sx={descriptionStyle}>{description}</Typography>
+        <Typography
+          sx={descriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
       <Grid
         container

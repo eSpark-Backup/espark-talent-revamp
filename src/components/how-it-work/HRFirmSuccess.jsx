@@ -78,9 +78,8 @@ const HRFirmSuccess = ({ hrFirm }) => {
                         fontStyle: 'normal',
                         lineHeight: { lg: '27.896px', md: '27.896px' },
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </Box>
                 </Grid>
               </Grid>

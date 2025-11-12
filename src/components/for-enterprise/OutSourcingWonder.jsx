@@ -158,9 +158,13 @@ const OutSourcingWonder = ({ data }) => {
                         >
                           {item?.title || 'Title not available'}
                         </Typography>
-                        <Typography sx={itemParagraphTypographyStyle}>
-                          {item?.paragraph || 'Paragraph not available'}
-                        </Typography>
+                        <Typography
+                          sx={itemParagraphTypographyStyle}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              item?.paragraph || 'Paragraph not available',
+                          }}
+                        />
                       </Grid>
                     </SwiperSlide>
                   ))

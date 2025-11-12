@@ -40,7 +40,11 @@ const EmployeeBanner = ({ data }) => {
               </Typography>
               <Typography sx={titleStyle}>{title}</Typography>
             </Box>
-            <Typography sx={descriptionStyle}>{description}</Typography>
+            <Typography
+              sx={descriptionStyle}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+
             <Button
               disableRipple
               sx={btnStyle}
