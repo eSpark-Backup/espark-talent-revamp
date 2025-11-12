@@ -59,7 +59,10 @@ const Perks = ({ data, btnText, btnLink, target, styles, title }) => {
       <Grow in={checked} timeout={{ enter: 450, exit: 450 }}>
         <Box sx={perksContentBoxStyle}>
           <Typography sx={perksContentHeadingStyle}>{heading}</Typography>
-          <Typography sx={perksContentParagraphStyle}>{paragraph}</Typography>
+          <Typography
+            sx={perksContentParagraphStyle}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
           <Typography component={'ul'} sx={perksContentUlStyle}>
             {list?.map(perksLisItems)}
           </Typography>

@@ -27,7 +27,10 @@ const ExpertDeveloper = ({ data }) => {
         {top ? <Typography sx={cardTitleStyle}>{title}</Typography> : null}
         <Box component={'img'} src={image} sx={imageStyle} />
         {top ? null : <Typography sx={cardTitleStyle}>{title}</Typography>}
-        <Typography sx={cardDescriptionStyle}>{description}</Typography>
+        <Typography
+          sx={cardDescriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Grid>
   );
@@ -47,7 +50,10 @@ const ExpertDeveloper = ({ data }) => {
         </Box>
         <Box sx={titleAndTextBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>
-          <Typography sx={textStyle}>{text}</Typography>
+          <Typography
+            sx={textStyle}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         </Box>
       </Box>
       <Grid

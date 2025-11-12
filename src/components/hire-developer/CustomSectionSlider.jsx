@@ -41,7 +41,10 @@ const CustomSectionSlider = ({ items, customSectionSliderStyles }) => {
           <Typography sx={titleStyle}>{card?.title}</Typography>
         </Box>
         <Box sx={descriptionBoxStyle}>
-          <Typography sx={descriptionTextStyle}>{card?.paragraph}</Typography>
+          <Typography
+            sx={descriptionTextStyle}
+            dangerouslySetInnerHTML={{ __html: card?.paragraph }}
+          />
         </Box>
       </Card>
     </SwiperSlide>

@@ -36,7 +36,10 @@ const JoinCrewCTA = ({ handleClick }) => {
       <Box sx={innerBoxStyle}>
         <Box sx={contentBoxStyle}>
           <Typography sx={titleStyle}>{title}</Typography>
-          <Typography sx={descriptionStyle}>{description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: description || '' }}
+          />
           <Button disableRipple onClick={handleClick} sx={buttonStyle}>
             {buttonLabel}
           </Button>

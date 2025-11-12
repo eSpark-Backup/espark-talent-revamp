@@ -26,7 +26,10 @@ const EasySteps = ({ data }) => {
           sx={titleStyle}
           dangerouslySetInnerHTML={{ __html: title }}
         />
-        <Typography sx={descriptionStyle}>{description}</Typography>
+        <Typography
+          sx={descriptionStyle}
+          dangerouslySetInnerHTML={{ __html: description || '' }}
+        />
       </Box>
     </Box>
   );

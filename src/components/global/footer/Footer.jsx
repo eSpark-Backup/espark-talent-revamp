@@ -105,7 +105,10 @@ const Footer = ({ data }) => {
   const renderCopyRightLinks = (link, linkIndex) => (
     <Box key={linkIndex} sx={termsAndConditionBoxStyle(linkIndex)}>
       <Link href={link?.link || '#'} style={termsAndConditionLinkStyle}>
-        <Typography sx={termsAndConditionTextStyle}>{link?.text}</Typography>
+        <Typography
+          sx={termsAndConditionTextStyle}
+          dangerouslySetInnerHTML={{ __html: link?.text }}
+        />
       </Link>
     </Box>
   );
@@ -128,7 +131,10 @@ const Footer = ({ data }) => {
               <Image alt="" src={logo} style={imageStyle} quality={80} fill />
             </Link>
           </Box>
-          <Typography sx={descriptionStyle}>{description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: description || '' }}
+          />
           <Box sx={socialMediaIconBoxStyle}>
             {socialMedia?.map(renderSocialMediaIcons)}
           </Box>

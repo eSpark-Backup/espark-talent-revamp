@@ -31,7 +31,7 @@ const EntierTeam = ({ data }) => {
     <Box sx={mainBoxStyle}>
       <Box>
         <Typography sx={titleStyle}>{title}</Typography>
-        <Typography sx={textStyle}>{text}</Typography>
+        <Typography sx={textStyle} dangerouslySetInnerHTML={{ __html: text }} />
       </Box>
       <Grid container pt={5} alignItems={'center'}>
         <Grid item xs={12} md={6} lg={6.5}>
@@ -63,9 +63,10 @@ const EntierTeam = ({ data }) => {
                         <Typography sx={listHeadingStyle}>
                           {item?.title}
                         </Typography>
-                        <Typography sx={listParagraphStyle}>
-                          {item?.text}
-                        </Typography>
+                        <Typography
+                          sx={listParagraphStyle}
+                          dangerouslySetInnerHTML={{ __html: item?.text }}
+                        />
                       </Box>
                     }
                   />

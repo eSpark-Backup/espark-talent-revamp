@@ -97,9 +97,8 @@ const EnterpriseFaq = ({ data }) => {
                         fontSize: '12px',
                         lineHeight: '23.69px',
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </AccordionDetails>
                 </Accordion>
               );
@@ -167,9 +166,8 @@ const EnterpriseFaq = ({ data }) => {
                         fontSize: '12px',
                         lineHeight: '23.69px',
                       }}
-                    >
-                      {item?.description}
-                    </Typography>
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    />
                   </AccordionDetails>
                 </Accordion>
               );

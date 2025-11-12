@@ -22,7 +22,10 @@ const HighStakesProjects = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-            <Typography sx={descriptionStyle}>{description}</Typography>
+            <Typography
+              sx={descriptionStyle}
+              dangerouslySetInnerHTML={{ __html: description || '' }}
+            />
             <Typography sx={descriptionStyle}>{description2}</Typography>
             <Typography sx={descriptionStyle}>{description3}</Typography>
           </Box>

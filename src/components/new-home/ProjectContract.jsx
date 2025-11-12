@@ -43,18 +43,21 @@ const ProjectContract = ({ data }) => {
         justifyContent={'center'}
         gap={{ xs: 3, md: 0 }}
       >
-        <Grid xs={12} md={5.5} lg={5.5}>
+        <Grid item xs={12} md={5.5} lg={5.5}>
           <Box sx={firstGridBoxStyle}>
             <Box sx={titleAndDescriptionBoxStyle}>
               <Typography sx={textStyle}>{title}</Typography>
-              <Typography sx={descriptionStyle}>{description}</Typography>
+              <Typography
+                sx={descriptionStyle}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
+              />
             </Box>
             <Box sx={imageBoxStyle}>
               <Box component={'img'} src={image} sx={imageStyle} />
             </Box>
           </Box>
         </Grid>
-        <Grid xs={12} md={5} lg={6}>
+        <Grid item xs={12} md={5} lg={6}>
           <Box sx={secondGridBoxStyle}>
             <List sx={listStyle}>
               {listItems?.map(({ icon, text, vector, vector_right }, index) => (
@@ -65,7 +68,10 @@ const ProjectContract = ({ data }) => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography sx={listItemTextStyle}>{text} </Typography>
+                      <Typography
+                        sx={listItemTextStyle}
+                        dangerouslySetInnerHTML={{ __html: text }}
+                      />
                     }
                   />
                   {vector_right && (

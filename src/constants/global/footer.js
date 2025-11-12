@@ -97,7 +97,7 @@ export const FOOTER_DATA = {
 export const ORGANIZE_TEAM_DATA = {
   title_1: 'Organise your Team',
   title_2: 'with eSpark Talent',
-  text: 'Build your dream tech team with experts, ready when you are.',
+  text: `Build your dream tech team with experts, ready when you are. With <b>eSpark Talent's</b> next-level automation and in-house team, quality always comes first for our customers.`,
   buttonText: 'Schedule a Call',
   link: '/book-a-demo',
   images: [

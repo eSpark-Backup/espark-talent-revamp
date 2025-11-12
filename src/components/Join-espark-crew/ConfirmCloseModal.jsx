@@ -50,9 +50,8 @@ export default function ConfirmCloseModal({
               color: 'black',
               my: 3,
             }}
-          >
-            {description}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
 
           <Stack
             direction="row"

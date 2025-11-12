@@ -30,9 +30,13 @@ const OutStaffings = ({ data }) => {
             <Typography color={'secondary'} sx={headingTypographyStyle}>
               {data?.heading || 'Heading not available'}
             </Typography>
-            <Typography color={'secondary'} sx={descriptionTypographyStyle}>
-              {data?.description || 'Description not available'}
-            </Typography>
+            <Typography
+              color={'secondary'}
+              sx={descriptionTypographyStyle}
+              dangerouslySetInnerHTML={{
+                __html: data?.description || 'Description not available',
+              }}
+            />
           </Box>
           <Grid container sx={gridContainerStyle}>
             {data?.items?.length > 0 ? (
@@ -61,9 +65,10 @@ const OutStaffings = ({ data }) => {
                     <Typography
                       variant="body1"
                       sx={itemParagraphTypographyStyle}
-                    >
-                      {list?.paragraph || 'Paragraph not available'}
-                    </Typography>
+                      dangerouslySetInnerHTML={{
+                        __html: list?.paragraph || 'Paragraph not available',
+                      }}
+                    />
                   </Box>
                 </Grid>
               ))

@@ -41,7 +41,10 @@ const ServiceExperties = ({ data }) => {
         <Typography sx={titleStyle}>{card?.title}</Typography>
       </Box>
       <Box sx={descriptionBoxStyle}>
-        <Typography sx={descriptionTextStyle}>{card?.paragraph}</Typography>
+        <Typography
+          sx={descriptionTextStyle}
+          dangerouslySetInnerHTML={{ __html: card?.paragraph }}
+        />
       </Box>
     </Card>
   );
@@ -66,9 +69,8 @@ const ServiceExperties = ({ data }) => {
                 fontWeight: 400,
                 color: '#001C63',
               }}
-            >
-              {paragraph || ''}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: paragraph || '' }}
+            />
           </Box>
         </Box>
         {items && (

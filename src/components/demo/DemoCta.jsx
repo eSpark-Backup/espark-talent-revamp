@@ -36,7 +36,10 @@ const DemoCta = ({ data, link, target }) => {
           </Typography>
           <Link href={link} target={target}>
             <Button size={size} sx={buttonStyle}>
-              <Typography sx={linkTextStyle}>{linkText}</Typography>
+              <Typography
+                sx={linkTextStyle}
+                dangerouslySetInnerHTML={{ __html: linkText }}
+              />
             </Button>
           </Link>
         </Box>

@@ -41,9 +41,8 @@ const PricingStrip = ({ key, feature, index }) => {
             fontWeight={400}
             textAlign={{ xs: index % 2 !== 0 ? 'left' : 'right' }}
             sx={stripeDiscriptionStyle}
-          >
-            {feature?.description}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: feature?.description }}
+          />
         </Box>
       </Stack>
     </Grid>

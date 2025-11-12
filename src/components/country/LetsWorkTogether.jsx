@@ -54,7 +54,10 @@ const LetsWorkTogether = ({ data }) => {
                   <Box sx={cardStyle}>
                     <Box sx={innerCardStyle}>
                       <Box component={'img'} sx={ellipseStyle} src={icon} />
-                      <Typography sx={cardTextStyle}>{text}</Typography>
+                      <Typography
+                        sx={cardTextStyle}
+                        dangerouslySetInnerHTML={{ __html: text }}
+                      />
                       <Box component={'img'} sx={ellipseStyle} src={icon} />
                     </Box>
                   </Box>

@@ -31,7 +31,10 @@ const SalaryDataTable = ({ data }) => {
         <Box width={'100%'}>
           <Box sx={titleAndDescriptionBoxStyle}>
             <Typography sx={titleStyle}>{title}</Typography>
-            <Typography sx={textStyle}>{text}</Typography>
+            <Typography
+              sx={textStyle}
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           </Box>
           <Box sx={tebleBoxStyle}>
             <TableContainer component={Paper} sx={tableContainerStyle}>

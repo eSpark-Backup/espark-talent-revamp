@@ -841,5 +841,5 @@ export const DEMO_MEETING_DATA = {
       },
     },
   ],
-  bgImage: 'images/book-a-demo-metting/background.svg',
+  bgImage: '/images/book-a-demo-metting/background.svg',
 };

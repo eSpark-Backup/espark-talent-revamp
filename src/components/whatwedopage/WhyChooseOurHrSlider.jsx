@@ -59,7 +59,10 @@ const WhyChooseOurHrSlider = ({ data }) => {
           }
         />
         <CardContent sx={contentStyle}>
-          <Typography sx={paragraphStyle}>{card?.description}</Typography>
+          <Typography
+            sx={paragraphStyle}
+            dangerouslySetInnerHTML={{ __html: card?.description }}
+          />
         </CardContent>
       </Card>
     </SwiperSlide>

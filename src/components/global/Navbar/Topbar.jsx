@@ -30,7 +30,10 @@ const Topbar = ({ data }) => {
               width={20}
               height={20}
             />
-            <Typography sx={mailTextStyle}>{mailText}</Typography>
+            <Typography
+              sx={mailTextStyle}
+              dangerouslySetInnerHTML={{ __html: mailText }}
+            />
           </Box>
         </Link>
         <Box sx={socialIconBoxStyle}>{socialIcons?.map(SocialIcon)}</Box>

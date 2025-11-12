@@ -1,9 +1,10 @@
 export const GLOBAL_SEO = [
   {
     path: '/',
-    title: 'eSpark Talent: Get Modern Employee Outsourcing Solutions.',
+    title:
+      'Build World-Class Teams with eSpark Talent - Top Offshore Solutions',
     description:
-      'Welcome to eSpark Talent’s expert employee outsourcing services. Connect with us and find out how our IT specialists make outstaffing easy.',
+      'Connect with top-tier talent worldwide through eSpark Talent. Find offshore staffing, and software development solutions to scale your business efficiently.',
     url: 'https://www.esparktalent.com/',
     image:
       'https://www.esparktalent.com/_next/image?url=%2Fimages%2Fhomepage%2Fhero-section%2Fhero-section-image.png&w=640&q=85',

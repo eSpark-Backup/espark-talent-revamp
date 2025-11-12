@@ -47,9 +47,8 @@ const Faqs = ({ data }) => {
                       fontWeight: '400',
                       color: '#000000',
                     }}
-                  >
-                    {item?.description}
-                  </Typography>
+                    dangerouslySetInnerHTML={{ __html: item?.description }}
+                  />
                 </AccordionDetails>
               </Accordion>
             </Grid>

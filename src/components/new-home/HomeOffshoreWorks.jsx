@@ -60,7 +60,10 @@ const HomeOffshoreWorks = ({ data }) => {
         <Box sx={innerCardStyle(index)}>
           <Typography sx={cardTitleStyle}>{eachItem?.title}</Typography>
           <Divider variant="middle" sx={dividerStyle} />
-          <Typography sx={descriptionStyle}>{eachItem?.description}</Typography>
+          <Typography
+            sx={descriptionStyle}
+            dangerouslySetInnerHTML={{ __html: eachItem?.description }}
+          />
         </Box>
       </Box>
     </SwiperSlide>
