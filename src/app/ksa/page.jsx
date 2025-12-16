@@ -8,7 +8,6 @@ const pathname = '/ksa';
 const seo = await getPageSeo();
 const filteredData =
   seo?.find((item) => item?.path === pathname) || GLOBAL_SEO[0];
-console.log('filteredData', filteredData);
 
 export const metadata = getMetadata(filteredData);
 
