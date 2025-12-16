@@ -22,7 +22,6 @@ import EntierTeam from '@/components/new-home/EntierTeam';
 import TrustedPlatform from '@/components/new-home/TrustedPlatform';
 import HomeBlogs from '@/components/blogs/HomeBlogs';
 import ClientGlobalTeams from '@/components/new-home/ClientGlobalTeams';
-import ScrollToTop from '@/components/ScrollToTop';
 import HomePageExperties from '@/components/new-home/HomePageExperties';
 
 const Ksa = () => {
