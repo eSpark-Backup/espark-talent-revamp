@@ -130,8 +130,8 @@ export const HERO_DATA = {
 };
 export const EMPLOYEE_HERO_DATA = {
   subTitle: `75% of <span style="color: #029894">Employers</span> Face Talent Shortages`,
-  title: `Hire Top Talent Now`,
-  description: `Connect with top-tier talent through our technical recruiting services. Struggling with HR tasks and finding tech talent? We’ve got you covered! Our HR outsourcing handles processes, and our specialized recruiters find exceptional top talent with <b>eSpark Talent.</b>`,
+  title: `Hire Top Sparking Talent Now in KSA`,
+  description: `<b>Connect with Saudi Arabia’s Top Tech Talent Through Expert Recruitment</b> Struggling to find skilled developers or manage HR tasks efficiently in Saudi Arabia? eSpark Talent has you covered! Our <b>HR outsourcing solutions</b> streamline your company’s operations, while our <b>specialized technical recruiters</b> help Saudi businesses find exceptional, pre-vetted tech professionals — quickly and cost-effectively. Whether you’re based in <b>Riyadh, Jeddah, or Dammam,</b> we help you <b>build world-class remote and local teams</b> aligned with your goals.`,
   bgImage: '/images/homepage/hero/emp-hero.webp',
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
@@ -310,7 +310,7 @@ export const EMPLOYEE_HERO_DATA = {
 };
 
 export const DIFFERENCE_DATA = {
-  title: `Why eSpark Talent Outsourcing Model is Different`,
+  title: `Why KSA Companies Choose eSpark Talent’s Outsourcing Model`,
   items: [
     {
       id: 1,
@@ -333,7 +333,7 @@ export const DIFFERENCE_DATA = {
   ],
 };
 export const DIFFERENCE_DATA_FOR_REMOTE = {
-  title: `Why eSpark Talent Outsourcing Model is Different`,
+  title: `Why KSA Companies Choose eSpark Talent’s Outsourcing Model`,
   items: [
     {
       id: 1,
@@ -381,7 +381,7 @@ export const WORKS_DATA = {
   ],
 };
 export const EXPERT_TEAM_DATA = {
-  title: `Build A World-Class Experts Team For Your Business`,
+  title: `Empower Your KSA Business with a World-Class Team of Experts`,
   btnTitle: `Book your demo`,
   btnLink: `/book-a-demo`,
   dapartment: [
@@ -577,7 +577,7 @@ export const EXPERT_TEAM_DATA = {
 };
 
 export const HIRING_DATA = {
-  title: 'Choose from Our Flexible Models',
+  title: 'Flexible Outsourcing Models Designed for KSA Companies',
   icon: '/images/new-home/flexible-models/right-arrow.png',
   image: '/images/new-home/flexible-models/underline.png',
   items: [
@@ -1485,7 +1485,7 @@ export const POWER_PROJECT_DATA = {
 
 export const ENTIRE_TEAM = {
   title: 'Keep track of your entire team in one place!',
-  text: `We give you the tools to manage your team with ease. From smart hiring workflows to day-to-day team tracking and attendance management, everything is in one place so you can focus on growing your business.`,
+  text: `<b>Manage Your KSA Team with Ease and Efficiency</b> We empower Saudi businesses with the right tools to manage their teams effortlessly. From <b>smart hiring workflows to daily performance tracking</b> and <b>attendance management</b>, everything is centralized in one powerful platform — so you can focus on <b>growing your company across Saudi Arabia and the GCC.</b>`,
   image: '/images/new-home/entire-team/laptop.png',
   points: [
     {
