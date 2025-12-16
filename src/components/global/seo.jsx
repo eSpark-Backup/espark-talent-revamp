@@ -2,7 +2,11 @@ export const getMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  keywords: filteredData?.metaKeywords || [
+    `eSpark Talent`,
+    `eSpark Solution`,
+    `eSpark Consultants`,
+  ],
   author: `eSpark Talent`,
   alternates: {
     canonical: `https://www.esparktalent.com${filteredData?.path}`,
@@ -48,7 +52,11 @@ export const getHireMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  keywords: filteredData?.metaKeywords || [
+    `eSpark Talent`,
+    `eSpark Solution`,
+    `eSpark Consultants`,
+  ],
   author: `eSpark Talent`,
   alternates: {
     canonical: `https://www.esparktalent.com/${filteredData?.slug}`,
@@ -94,7 +102,11 @@ export const getBlogsMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  keywords: filteredData?.metaKeywords || [
+    `eSpark Talent`,
+    `eSpark Solution`,
+    `eSpark Consultants`,
+  ],
   author: `eSpark Talent`,
   alternates: {
     canonical: `https://www.esparktalent.com/blogs/${filteredData?.slug}`,
@@ -139,7 +151,11 @@ export const getCountryMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  keywords: filteredData?.metaKeywords || [
+    `eSpark Talent`,
+    `eSpark Solution`,
+    `eSpark Consultants`,
+  ],
   author: `eSpark Talent`,
   alternates: {
     canonical: `https://www.esparktalent.com/country/${filteredData?.slug}`,
@@ -184,7 +200,11 @@ export const getWikisMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: [`eSpark Talent`, `eSpark Solution`, `eSpark Consultants`],
+  keywords: filteredData?.metaKeywords || [
+    `eSpark Talent`,
+    `eSpark Solution`,
+    `eSpark Consultants`,
+  ],
   author: `eSpark Talent`,
   alternates: {
     canonical: `https://www.esparktalent.com/wiki/${filteredData?.slug}`,
