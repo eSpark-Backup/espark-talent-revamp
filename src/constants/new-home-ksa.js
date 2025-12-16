@@ -135,6 +135,7 @@ export const EMPLOYEE_HERO_DATA = {
   bgImage: '/images/homepage/hero/emp-hero.webp',
   textureImage: '/images/homepage/hero/texture-img.png',
   animatedGif: '/images/homepage/hero/65.gif',
+  alt: 'eSpark KSA Talent',
   animatedVideo: '/images/homepage/hero/eSpark-New.webm',
   btnTitle: `Schedule a Call`,
   btnLink: `/book-a-demo`,
@@ -317,18 +318,21 @@ export const DIFFERENCE_DATA = {
       title: `Scale faster`,
       description: `<b>eSpark Talent</b> offers offshore operations to help scale quickly, meet demand, combat rising labor costs, and access specialty talent all without the overheads.`,
       icon: `/images/new-home/differnce/scale_faster.svg`,
+      alt: 'eSpark Talent KSA Scale Faster',
     },
     {
       id: 2,
       title: `Increase Quality & Efficiency`,
       description: `Our remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools, delivering industry-leading <b>software development solutions.</b>`,
       icon: `/images/new-home/differnce/increase_quality.svg`,
+      alt: 'eSpark Talent KSA Quality and Efficiency',
     },
     {
       id: 3,
       title: `Reduce costs`,
       description: `<b>eSpark Talent</b> outsourcing allows your organization to be more competitive, sustainable, and profitable with 70% employee cost savings, while leveraging advanced <b>embedded systems design</b> capabilities.`,
       icon: `/images/new-home/differnce/reduce_costs.svg`,
+      alt: 'eSpark Talent KSA Friendly Cost Budget',
     },
   ],
 };
@@ -340,19 +344,21 @@ export const DIFFERENCE_DATA_FOR_REMOTE = {
       title: `Scale faster`,
       description: `eSpark Talent offers offshore operations to help scale quickly, meet demand, combat rising labor costs and access specialty talent all without the overheads.`,
       icon: `images/new-home/differnce/scale_faster.svg`,
+      alt: 'eSpark Talent KSA Scale Faster',
     },
     {
       id: 2,
       title: `Increase quality`,
       description: `eSpark Talent remote staffing solutions rectify skills shortages and improve internal processes by accessing expert talent pools.`,
       icon: `images/new-home/differnce/increase_quality.svg`,
+      alt: 'eSpark Talent KSA Quality and Efficiency',
     },
-
     {
       id: 3,
       title: `Reduce costs`,
       description: `eSpark Talent Outsourcing allows your organization to be more competitive, sustainable and profitable with 70% employee cost savings.`,
       icon: `images/new-home/differnce/reduce_costs.svg`,
+      alt: 'eSpark Talent KSA Friendly Cost Budget',
     },
   ],
 };
@@ -1487,6 +1493,7 @@ export const ENTIRE_TEAM = {
   title: 'Keep track of your entire team in one place!',
   text: `<b>Manage Your KSA Team with Ease and Efficiency</b> We empower Saudi businesses with the right tools to manage their teams effortlessly. From <b>smart hiring workflows to daily performance tracking</b> and <b>attendance management</b>, everything is centralized in one powerful platform — so you can focus on <b>growing your company across Saudi Arabia and the GCC.</b>`,
   image: '/images/new-home/entire-team/laptop.png',
+  alt: 'eSpark Talent KSA Track Your Team',
   points: [
     {
       title: 'Real-Time Hiring & Interview Updates',
@@ -1988,30 +1995,35 @@ export const EMPLOYEE_SLIDER_DATA = {
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+      alt: 'eSpark Talent KSA Developer',
     },
     {
       id: 2,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+      alt: 'eSpark Talent KSA Digital Marketing',
     },
     {
       id: 3,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+      alt: 'eSpark Talent KSA PPC and SEO',
     },
     {
       id: 4,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+      alt: 'eSpark Talent KSA Freelancer',
     },
     {
       id: 5,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+      alt: 'eSpark Talent KSA Human Resource HR',
     },
   ],
   styles: {
