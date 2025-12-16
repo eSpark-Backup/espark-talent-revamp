@@ -176,8 +176,8 @@ export async function getPageSeo() {
     url,
     jsonLd,
     "metaImage":metaImage.asset->url,
-    "index":seo.index,
-    "follow":seo.follow,
+    index,
+    follow,
   }`,
     {
       next: {

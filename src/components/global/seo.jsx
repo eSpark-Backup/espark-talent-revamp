@@ -2,7 +2,7 @@ export const getMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: filteredData?.metaKeywords || [
+  keywords: filteredData?.metaKeywords?.split(',') || [
     `eSpark Talent`,
     `eSpark Solution`,
     `eSpark Consultants`,
@@ -52,7 +52,7 @@ export const getHireMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: filteredData?.metaKeywords || [
+  keywords: filteredData?.metaKeywords?.split(',') || [
     `eSpark Talent`,
     `eSpark Solution`,
     `eSpark Consultants`,
@@ -102,7 +102,7 @@ export const getBlogsMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: filteredData?.metaKeywords || [
+  keywords: filteredData?.metaKeywords?.split(',') || [
     `eSpark Talent`,
     `eSpark Solution`,
     `eSpark Consultants`,
@@ -151,7 +151,7 @@ export const getCountryMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: filteredData?.metaKeywords || [
+  keywords: filteredData?.metaKeywords?.split(',') || [
     `eSpark Talent`,
     `eSpark Solution`,
     `eSpark Consultants`,
@@ -200,7 +200,7 @@ export const getWikisMetadata = (filteredData) => ({
   metadataBase: new URL('https://www.esparktalent.com/'),
   title: filteredData?.metaTitle,
   description: filteredData?.metaDescription,
-  keywords: filteredData?.metaKeywords || [
+  keywords: filteredData?.metaKeywords?.split(',') || [
     `eSpark Talent`,
     `eSpark Solution`,
     `eSpark Consultants`,
