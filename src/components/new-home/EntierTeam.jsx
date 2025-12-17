@@ -12,7 +12,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const EntierTeam = ({ data }) => {
-  const { title, text, image, points, styles } = data || {};
+  const { title, text, image, points, alt, styles } = data || {};
 
   const {
     mainBoxStyle,
@@ -42,7 +42,7 @@ const EntierTeam = ({ data }) => {
               style={{ width: '100%', height: 'auto' }}
               src={image}
               priority
-              alt=""
+              alt={alt || ''}
             />
           </Box>
         </Grid>
