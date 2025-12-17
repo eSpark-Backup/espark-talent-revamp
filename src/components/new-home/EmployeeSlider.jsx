@@ -29,7 +29,7 @@ const EmployeeSlider = ({ data }) => {
         {duplicatedSlides?.map((slide, index) => (
           <Box key={index} className="slide" style={swiperSlideStyle}>
             <Image
-              alt=""
+              alt={slide?.alt || 'Employee GIF'}
               width={100}
               height={100}
               style={videoStyle}

@@ -10,6 +10,7 @@ const EmployeeBanner = ({ data }) => {
     description,
     bgImage,
     animatedGif,
+    alt,
     btnTitle,
     btnLink,
     styles,
@@ -67,7 +68,7 @@ const EmployeeBanner = ({ data }) => {
             <Image
               src={animatedGif}
               style={imageStyle}
-              alt="Animated GIF"
+              alt={alt || `Animated GIF`}
               width={1200}
               height={600}
               priority
