@@ -38,7 +38,7 @@ const HomePageExpertTeam = ({ data }) => {
               <Image
                 width={1200}
                 height={600}
-                alt="Hero GIF"
+                alt={emp?.alt || 'Hero GIF'}
                 src={emp?.image || ''}
                 style={{ width: '100%', height: 'auto' }}
                 priority
