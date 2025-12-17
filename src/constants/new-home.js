@@ -1988,30 +1988,35 @@ export const EMPLOYEE_SLIDER_DATA = {
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF1.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-1.svg',
+      alt: 'eSpark Talent KSA Developer',
     },
     {
       id: 2,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF2.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-2.svg',
+      alt: 'eSpark Talent KSA Digital Marketing',
     },
     {
       id: 3,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF3.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-3.svg',
+      alt: 'eSpark Talent KSA PPC and SEO',
     },
     {
       id: 4,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF4.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-4.svg',
+      alt: 'eSpark Talent KSA Freelancer',
     },
     {
       id: 5,
       videoUrl:
         'https://talent-main.s3.us-east-005.backblazeb2.com/GIFs/GIF5.gif',
       thumbnailUrl: '/images/homepage/hero/thumbnails/thmb-5.svg',
+      alt: 'eSpark Talent KSA Human Resource HR',
     },
   ],
   styles: {
