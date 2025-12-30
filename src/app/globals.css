@@ -511,6 +511,10 @@ span {
   color: #001c63;
 }
 
+.blog-content p strong {
+  color: #001c63;
+}
+
 @media only screen and (max-width: 1024px) {
   .blog-content h2 {
     font-size: 22px;
@@ -536,6 +540,10 @@ span {
     font-size: 14px;
     text-align: justify;
     line-height: 20px;
+  }
+
+  .blog-content p strong {
+    color: #001c63;
   }
 }
 
@@ -565,6 +573,10 @@ span {
     text-align: justify;
     line-height: 20px;
   }
+
+  .blog-content p strong {
+    color: #001c63;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -591,6 +603,10 @@ span {
   .blog-content li {
     font-size: 11px;
   }
+
+  .blog-content p strong {
+    color: #001c63;
+  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -616,6 +632,10 @@ span {
 
   .blog-content li {
     font-size: 11px;
+  }
+
+  .blog-content p strong {
+    color: #001c63;
   }
 }
 
@@ -643,6 +663,9 @@ span {
 
   .blog-content li {
     font-size: 11px;
+  }
+  .blog-content p strong {
+    color: #001c63;
   }
 }
 
