@@ -1,13 +1,17 @@
 import { urls } from '@/utils/cors';
 
+export const dynamic = 'force-dynamic';
+
 export default function sitemap() {
-  const today = new Date();
-  const formattedDate = today.toISOString().replace(/\.\d{3}Z$/, '+00:00');
+  const now = new Date().toISOString();
 
   return urls?.map((item) => ({
     url: item.url,
-    lastModified: formattedDate,
+    lastModified: now,
     changeFrequency: 'weekly',
-    priority: item.url === 'https://www.esparktalent.com/' ? 1 : 0.8,
+    priority:
+      item.url === 'https://www.esparktalent.com/'
+        ? 1
+        : 0.8,
   }));
 }
