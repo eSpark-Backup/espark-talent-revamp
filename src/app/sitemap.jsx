@@ -9,9 +9,6 @@ export default function sitemap() {
     url: item.url,
     lastModified: now,
     changeFrequency: 'weekly',
-    priority:
-      item.url === 'https://www.esparktalent.com/'
-        ? 1
-        : 0.8,
+    priority: item.url === 'https://www.esparktalent.com/' ? 1 : 0.8,
   }));
 }
