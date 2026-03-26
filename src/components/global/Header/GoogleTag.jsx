@@ -1,4 +1,4 @@
-const GoogleTag = (gtmId) => {
+const GoogleTag = ({ gtmId }) => {
   return (
     <>
       <script
