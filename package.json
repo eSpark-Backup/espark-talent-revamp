@@ -34,7 +34,7 @@
     "@sendgrid/mail": "^8.1.0",
     "@supabase/supabase-js": "^1.35.6",
     "autoprefixer": "^10.4.16",
-    "axios": "^1.6.7",
+    "axios": "^1.17.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "formik": "^2.4.5",
